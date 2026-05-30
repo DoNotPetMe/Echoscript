@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_PatrolAssigner" leveluid="1" streamedRandomID="447719282">
+  <Task name="CheckIfConvoFinished" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="MercMove">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a5c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcMove" entityStripped="1" bv_a="0:0:0" bv_i="201326620">
+            <ParameterInstance name="Target" data="UID:00000533" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:0000028c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcMove" entityStripped="1" bv_a="0:0:0" bv_i="201326620">
+            <ParameterInstance name="Target" data="UID:0000026c" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="CheckIfConvoFinished" true="MercMove" data="UID:00000482" InUnrealActors="1" TypeDeleted="ConversationPoint">
+    <ExternalEventInstance name="CONVERSATION_FINISHED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="MercMove" true="CheckIfConvoFinished" sequence="LD_PatrolAssigner"/>
+</Sequence>

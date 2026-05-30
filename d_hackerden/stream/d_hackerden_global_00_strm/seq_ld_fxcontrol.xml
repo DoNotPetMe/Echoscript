@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_FXControl" leveluid="1" streamedRandomID="447719282">
+  <Task name="Bats" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a9f" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask_5" true="NewTask_0" data="UID:00000aab" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000a9f" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask_0" true="NewTask_1" sequence="LD_FXControl"/>
+  <Task name="Mouse_Random_1" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000aa1" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="NewTask_12" true="NewTask_3" data="UID:00000aa2" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Mouse_In_Kitchen" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000aa3" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000aa5" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="Mouse_In_Kitchen" true="NewTask" data="UID:00000aa4" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="Bats" true="NewTask_4" sequence="LD_FXControl"/>
+  <Task name="NewTask_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Case 1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_4" true="NewTask_5">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_BatSeq" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Case 2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_7">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Case 3"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Case 4"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_4" true="NewTask_6">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_BatSeq" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyEvent name="NewDependencyEvent_2" start="NewTask_6" true="NewTask_0" data="UID:00000aa0" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_3" start="NewTask_7" true="NewTask_0" data="UID:00000aad" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_4" start="NewTask_8" true="NewTask_9" data="UID:00000aac" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_4" true="NewTask_7">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_BatSeq" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_2" start="NewTask_4" true="NewTask_8">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_BatSeq" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000aae" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_10">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000aae" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_9" true="NewTask_10" sequence="LD_FXControl"/>
+  <Task name="NewTask_11">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_2" start="Mouse_Random_1" true="NewTask_11" sequence="LD_FXControl"/>
+  <Task name="NewTask_12">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Mice B3 Case 1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_3" start="NewTask_11" true="NewTask_12">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_MiceBeat3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_13">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Mice B3 Case 2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_4" start="NewTask_11" true="NewTask_13">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_MiceBeat3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyEvent name="NewDependencyEvent_5" start="NewTask_13" true="NewTask_15" data="UID:00000aaf" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_15">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000ab0" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_16">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Mice B3 Case 3"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_5" start="NewTask_11" true="NewTask_16">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_MiceBeat3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_17">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000ac3" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_6" start="NewTask_16" true="NewTask_17" data="UID:00000ac4" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_18">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Mice B3 Case 4"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_19">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000ac7" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_7" start="NewTask_18" true="NewTask_19" data="UID:00000ac8" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand_6" start="NewTask_11" true="NewTask_18">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_MiceBeat3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_20">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000aa1" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="NewTask_3" true="NewTask_20" sequence="LD_FXControl"/>
+  <Task name="NewTask_21">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000ab0" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="NewTask_15" true="NewTask_21" sequence="LD_FXControl"/>
+  <Task name="NewTask_22">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000ac3" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="NewTask_17" true="NewTask_22" sequence="LD_FXControl"/>
+  <Task name="NewTask_23">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000ac7" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_6" start="NewTask_19" true="NewTask_23" sequence="LD_FXControl"/>
+  <VisualComment name="NewVisualComment" x="-270.000000" y="-270.000000" width="684.384033" height="322.596436" commentDate="12/25/2012 4:33:08 PM"/>
+  <VisualComment name="NewVisualComment_0" x="-270.000000" y="80.000000" width="683.012207" height="630.000000" commentDate="12/25/2012 4:35:29 PM"/>
+  <Task name="Mouse_Random_2" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_24">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="Mouse_Random_2" true="NewTask_24" sequence="LD_FXControl"/>
+  <Task name="NewTask_25">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Mice2_Case1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_26">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Mice2_Case2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_27">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Mice2_Case3"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_7" start="NewTask_24" true="NewTask_25">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_MiceBeat3_2" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_8" start="NewTask_24" true="NewTask_26">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_MiceBeat3_2" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_9" start="NewTask_24" true="NewTask_27">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_MiceBeat3_2" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_28">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000ac9" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_29">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000aca" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_8" start="NewTask_25" true="NewTask_28" data="UID:00000acc" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_30">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000acb" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_9" start="NewTask_26" true="NewTask_29" data="UID:00000acc" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_10" start="NewTask_27" true="NewTask_30" data="UID:00000acc" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_31">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000ac9" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="NewTask_28" true="NewTask_31" sequence="LD_FXControl"/>
+  <Task name="NewTask_32">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000aca" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_9" start="NewTask_29" true="NewTask_32" sequence="LD_FXControl"/>
+  <Task name="NewTask_33">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000acb" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_10" start="NewTask_30" true="NewTask_33" sequence="LD_FXControl"/>
+  <VisualComment name="NewVisualComment_1" x="-270.000000" y="750.000000" width="688.277100" height="250.000000" commentDate="12/26/2012 2:19:01 PM"/>
+</Sequence>

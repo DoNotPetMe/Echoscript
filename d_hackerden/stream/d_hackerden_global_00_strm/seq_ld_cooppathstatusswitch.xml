@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_CoopPathStatusSwitch" leveluid="1" streamedRandomID="447719282">
+  <Task name="CoopUsedCheck_1" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="CoopUsedCheck_1" true="NewTask_0" data="UID:000005c7" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bCoopPathComplete_1"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="HideText_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000729" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="HideText_1" false="Delaying">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bCoopPathComplete_1" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="StopSeq_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_TextDisplay_1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="HideText_1" true="StopSeq_1" sequence="LD_CoopPathStatusSwitch"/>
+  <Task name="CoopUsedCheck_3" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="CoopUsedCheck_3" true="NewTask_2" data="UID:000005c9" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bCoopPathComplete_3"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="HideText_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000731" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSeq_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_TextDisplay_3" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_2" true="HideText_3" false="Delaying3">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bCoopPathComplete_3" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_1" start="HideText_3" true="StopSeq_3" sequence="LD_CoopPathStatusSwitch"/>
+  <Task name="Delaying">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_2" start="Delaying" true="CoopUsedCheck_1" sequence="LD_CoopPathStatusSwitch"/>
+  <Task name="Delaying3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="Delaying3" true="CoopUsedCheck_3" sequence="LD_CoopPathStatusSwitch"/>
+</Sequence>

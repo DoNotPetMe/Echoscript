@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_PatrolRandomizer" leveluid="1" streamedRandomID="447719282">
+  <Task name="Initiate" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="Initiate" true="NewTask" sequence="LD_PatrolRandomizer"/>
+  <Task name="Assign_P_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.500000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Boilling_Floor1_Merc"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000256" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.500000" end="-1.000000">
+          <CommandInstance name="EnableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Roll Dice: Case 1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="Assign_P_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_B2F1Regular" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.500000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Boilling_Floor1_Merc"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000256" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.500000" end="-1.000000">
+          <CommandInstance name="EnableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Roll Dice: Case 2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask" true="NewTask_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_B2F1Regular" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.500000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_ExtMerc"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000a45" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.500000" end="-1.000000">
+          <CommandInstance name="EnableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Roll Dice: Case 3"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask" true="NewTask_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_B2F1Regular" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_4" start="NewTask" true="NewTask_6">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::RollDice_B2F1Regular" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.500000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Boilling_Floor1_Merc"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000a5b" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000251" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.500000" end="-1.000000">
+          <CommandInstance name="EnableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Roll Dice: Case 4"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <VisualComment name="Randomization_Of_Beat1" x="-140.000000" y="-180.000000" width="460.000000" height="394.000000" commentDate="1/25/2013 6:39:23 PM"/>
+</Sequence>

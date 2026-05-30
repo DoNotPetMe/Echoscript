@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_DeathByHeight" leveluid="1" streamedRandomID="447719282">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="NewTask_0" data="UID:00000817" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Currentplayer_Pawn"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Pawn_0" TypeDeleted="Pawn">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Kill" entityStripped="1" dp_i="201326606"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="NewTask_1" false="NewTask_2">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_Currentplayer_Pawn" TypeDeleted="Pawn"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Pawn_0" TypeDeleted="Pawn"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Pawn_0" TypeDeleted="Pawn">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Kill" entityStripped="1" dp_i="201326606"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

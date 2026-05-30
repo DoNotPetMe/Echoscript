@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_StartupVO" leveluid="1" streamedRandomID="447719282">
+  <Task name="MISS_0200_COM_01_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.241729">
+          <CommandInstance name="SetDialog" duration="1.241729" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G03_HKD::0200_COM::16618::54666" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_02_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.143479">
+          <CommandInstance name="SetDialog" duration="1.143479" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G03_HKD::0200_COM::16619::54670" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_01_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="9.644229">
+          <CommandInstance name="SetDialog" duration="9.644229" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G03_HKD::0200_COM::16618::54667" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_02_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="9.675396">
+          <CommandInstance name="SetDialog" duration="9.675396" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G03_HKD::0200_COM::16619::54671" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_02_03">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.557542">
+          <CommandInstance name="SetDialog" duration="4.557542" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G03_HKD::0200_COM::16619::54672" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_02_04">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.429354">
+          <CommandInstance name="SetDialog" duration="1.429354" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G03_HKD::0200_COM::16619::54673" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Mission_Brief" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Mission_Brief" true="MISS_0200_COM_01_01" false="MISS_0200_COM_02_01">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="MISS_0200_COM_01_01" true="MISS_0200_COM_01_02" sequence="LD_StartupVO"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="MISS_0200_COM_02_01" true="MISS_0200_COM_02_02" sequence="LD_StartupVO"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="MISS_0200_COM_02_02" true="MISS_0200_COM_02_03" sequence="LD_StartupVO"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="MISS_0200_COM_02_03" true="MISS_0200_COM_02_04" sequence="LD_StartupVO"/>
+</Sequence>
