@@ -94,9 +94,17 @@ static float PosDist(const float* a, const float* b) {
 
 struct Cand { uintptr_t base; float mat[SNAP_FLOATS]; };  // mat[POS_INDEX..] = position
 
-static void CountdownWalk(const char* what, int secs) {
-    Logger::Info("CamFinder: >>> %s <<< (%d seconds)", what, secs);
-    for (int s = secs; s > 0; --s) { Logger::Info("   ...%d", s); Sleep(1000); }
+// Announce the upcoming action, give the player time to read and get ready
+// with a "get ready" countdown, then an explicit GO window, then STOP.
+static void GuidedPhase(const char* what, int prepSecs, int actionSecs) {
+    Logger::Info(" ");
+    Logger::Info("CamFinder: NEXT STEP -> %s", what);
+    Logger::Info("CamFinder: get ready...");
+    for (int s = prepSecs; s > 0; --s) { Logger::Info("   starting in %d...", s); Sleep(1000); }
+    Logger::Info("CamFinder: *** GO NOW! %s ***", what);
+    for (int s = actionSecs; s > 0; --s) { Logger::Info("   ...%d", s); Sleep(1000); }
+    Logger::Info("CamFinder: *** STOP -- hold still, measuring... ***");
+    Sleep(400);
 }
 
 static DWORD WINAPI ScanThread(LPVOID) {
@@ -143,7 +151,7 @@ static DWORD WINAPI ScanThread(LPVOID) {
     // ---- Phase 2: LOOK AROUND without moving ----
     // The camera's rotation sweeps hugely while its position stays put. Bones
     // and world objects don't do this. This is the strongest discriminator.
-    CountdownWalk("STAND STILL and LOOK AROUND with the mouse (turn a lot)", 4);
+    GuidedPhase("STAND STILL and LOOK AROUND with the mouse (turn a lot)", 5, 6);
 
     constexpr float kRotChanged   = 0.40f;  // rotation must change clearly
     constexpr float kPosStayedPut = 30.0f;  // but position must stay roughly fixed
@@ -160,7 +168,7 @@ static DWORD WINAPI ScanThread(LPVOID) {
     Logger::Info("CamFinder: %zu survived the look-around test.", turners.size());
 
     // ---- Phase 3: WALK to confirm the position tracks you ----
-    CountdownWalk("now WALK forward in a straight line (don't turn)", 4);
+    GuidedPhase("WALK forward in a straight line (do NOT turn)", 5, 6);
 
     constexpr float kMinMove = 8.0f;
     constexpr float kMaxMove = 8000.0f;
