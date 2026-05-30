@@ -3,6 +3,7 @@
 #include "object_dumper.h"
 #include "engine_bridge.h"
 #include "level_serialization.h"
+#include "map_catalog.h"
 #include "freecam.h"
 #include "../hooks/d3d11_hook.h"
 #include "../utils/logger.h"
@@ -209,8 +210,23 @@ void RenderMenu() {
 
     // ---- Discovery / dumper ----
     if (ImGui::TreeNode("Discovery (Object Dumper)")) {
+        // Status
+        bool ue3Active = ObjectDumper::IsUE3GObjectsActive();
+        bool found     = ObjectDumper::IsRegistryFound();
+        ImGui::TextColored(
+            ue3Active ? ImVec4(0.4f,1,0.4f,1) :
+            found     ? ImVec4(1,0.9f,0.4f,1) : ImVec4(1,0.5f,0.5f,1),
+            "%s",
+            ue3Active ? "UE3 GObjects path ACTIVE" :
+            found     ? "LEAD anchor path active"   : "Not located — run Re-locate");
+        ImGui::TextDisabled(
+            "Blacklist is UE3 (Engine.GameEngine). Fill GOBJECTS_SIG in\n"
+            "object_dumper.cpp for the preferred UE3 path. Until then the\n"
+            "LEAD string-anchor fallback is used (tune offsets below).");
+
         auto& L = ObjectDumper::g_config.layout;
-        ImGui::TextDisabled("Tune offsets, then Dump until names print correctly.");
+        ImGui::Separator();
+        ImGui::TextDisabled("LEAD fallback node offsets (unused when UE3 path active):");
         ImGui::InputScalar("name ptr off",   ImGuiDataType_U64, &L.node_name_ptr_off);
         ImGui::InputScalar("parent ptr off", ImGuiDataType_U64, &L.node_parent_ptr_off);
         ImGui::InputScalar("next ptr off",   ImGuiDataType_U64, &L.node_next_ptr_off);
@@ -299,15 +315,72 @@ void RenderMenu() {
 
     // ---- Persistence ----
     if (ImGui::TreeNode("Save / Load")) {
+        // Map selector — sets g_config.mapName so the level file carries the map context.
+        // Items are built from MapCatalog; user can also type a raw ID.
+        static int s_mapIdx = -1;   // -1 = custom / not matched
+        static char mapBuf[64] = "";
+        if (mapBuf[0] == '\0' && !g_config.mapName.empty())
+            strncpy_s(mapBuf, g_config.mapName.c_str(), _TRUNCATE);
+
+        // Sync the combo index to whatever mapBuf holds.
+        auto syncIdx = [&]() {
+            s_mapIdx = -1;
+            for (int i = 0; i < MapCatalog::kMapCount; ++i) {
+                if (_stricmp(MapCatalog::kMaps[i].id, mapBuf) == 0) { s_mapIdx = i; break; }
+            }
+        };
+        syncIdx();
+
+        // Combo of known maps
+        const char* preview = (s_mapIdx >= 0)
+            ? MapCatalog::kMaps[s_mapIdx].displayName : "(custom / none)";
+        if (ImGui::BeginCombo("map##sel", preview)) {
+            if (ImGui::Selectable("(none)", s_mapIdx < 0)) {
+                mapBuf[0] = '\0'; g_config.mapName.clear(); s_mapIdx = -1;
+            }
+            for (int i = 0; i < MapCatalog::kMapCount; ++i) {
+                bool sel = (s_mapIdx == i);
+                char lbl[128];
+                snprintf(lbl, sizeof(lbl), "[%s]  %s  (%s)",
+                    MapCatalog::kMaps[i].id,
+                    MapCatalog::kMaps[i].displayName,
+                    MapCatalog::kMaps[i].category);
+                if (ImGui::Selectable(lbl, sel)) {
+                    strncpy_s(mapBuf, MapCatalog::kMaps[i].id, _TRUNCATE);
+                    g_config.mapName = mapBuf;
+                    s_mapIdx = i;
+                }
+                if (sel) ImGui::SetItemDefaultFocus();
+            }
+            ImGui::EndCombo();
+        }
+        ImGui::SameLine();
+        ImGui::TextDisabled("(?)");
+        if (ImGui::IsItemHovered())
+            ImGui::SetTooltip("Set this to the map you are currently on before saving.\n"
+                              "A mismatch warning is shown on load.");
+
+        // Raw map ID text edit (for maps not in the catalog)
+        if (ImGui::InputText("map ID", mapBuf, sizeof(mapBuf))) {
+            g_config.mapName = mapBuf;
+            syncIdx();
+        }
+
+        ImGui::Separator();
+
         static char pathBuf[260];
-        // sync buffer from config once per open
         if (pathBuf[0] == '\0')
             strncpy_s(pathBuf, g_config.levelPath.c_str(), _TRUNCATE);
         if (ImGui::InputText("file", pathBuf, sizeof(pathBuf)))
             g_config.levelPath = pathBuf;
         if (ImGui::Button("Save")) SaveLevel();
         ImGui::SameLine();
-        if (ImGui::Button("Load")) LoadLevel();
+        if (ImGui::Button("Load")) {
+            LoadLevel();
+            // After load, sync the map buffer from config (LoadLevel sets g_config.mapName).
+            strncpy_s(mapBuf, g_config.mapName.c_str(), _TRUNCATE);
+            syncIdx();
+        }
         ImGui::TreePop();
     }
 

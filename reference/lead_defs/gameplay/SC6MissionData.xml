@@ -1,0 +1,1756 @@
+<root>
+  <category name="Single">
+	<mission id="S_AFB" name="LocID_S_MIS_1_Title" itemType="0" initialState="1" contextID="0">
+	  <smi locx="0.8695313" locy="0.6160488" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="S_KOB" />
+	  <unlocks targetid="THREAT01" />
+	  <unlocks targetid="THREAT03" />
+	  <unlocks targetid="THREAT04" />
+	  <unlocks targetid="HUB" />
+	  <string key="MapToLoad" value="_Single\S_AFB\Stream\S_AFB_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_1_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_guam" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_03_0012_SE" />
+	  <NetOnlineStatContext value="cxt_sp01_Prologue" />
+	  <string key="MsnLoadBink" value="01_Intro.bik" />
+	  <NetOnlineStatId value="100" />
+	  <Translation locale="en-US">Blacklist Zero</Translation>
+    <Translation locale="fr-FR">Blacklist Zero</Translation>
+    <Translation locale="ko-KR">블랙리스트 제로</Translation>
+    <Translation locale="ru-RU">Пункт Ноль</Translation>
+    <Translation locale="de-DE">Blacklist Zero</Translation>
+    <Translation locale="it-IT">Blacklist Zero</Translation>
+    <Translation locale="zh-CHT">零號黑名單</Translation>
+    <Translation locale="ja-JP">ブラックリストゼロ</Translation>
+    <Translation locale="pl-PL">Czarna Lista Zero</Translation>
+    <Translation locale="pt-PT">Blacklist Zero</Translation>
+    <Translation locale="es-ES">Lista Negra Cero</Translation>
+	</mission>
+	<mission id="S_KOB" name="LocID_S_MIS_3_Title" itemType="0" initialState="0" contextID="1">
+	  <smi locx="0.5461426" locy="0.4795000" />
+	  <starttime day="16" hour="10" minute="40" second="0" />
+	  <unlocks targetid="S_BAD" />
+	  <unlocks targetid="H01" />
+	  <locks targetid="THREAT01" />
+	  <unlocks targetid="THREAT05" />
+	  <unlocks targetid="UpgradePlane" />
+	  <string key="MapToLoad" value="_Single\S_KOB\Stream\S_KOB_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_03_0100_SE" />
+	  <string key="AcceptSequence" value="Play_03_0125_SE" />
+	  <string key="CancelSequence" value="Play_03_0135_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_3_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_01" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_03_2300_SE" />
+	  <string key="RecommendedLoadoutSequence" value="KOB_LOADOUT" />
+	  <string key="BreadcrumbTo" value="GI_Grenade_Smoke;GI_Grenade_Flashbang" />
+	  <string key="SMIInterceptSequence1" value="KOB_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="KOB_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="KOB_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp03_Kobin" />
+	  <NetOnlineStatId value="101" />
+	  <Translation locale="en-US">Safehouse</Translation>
+	  <Translation locale="fr-FR">Planque</Translation>
+	  <Translation locale="ko-KR">은신처</Translation>
+	  <Translation locale="ru-RU">Убежище</Translation>
+	  <Translation locale="de-DE">Versteck</Translation>
+	  <Translation locale="it-IT">Rifugio</Translation>
+	  <Translation locale="zh-CHT">安全屋</Translation>
+	  <Translation locale="ja-JP">セーフハウス</Translation>
+	  <Translation locale="pl-PL">Kryjówka</Translation>
+	  <Translation locale="pt-PT">Casa-forte</Translation>
+	  <Translation locale="es-ES">Piso franco</Translation>
+	</mission>
+	<mission id="S_BAD" name="LocID_S_MIS_4_Title" itemType="0" initialState="0" contextID="2">
+	  <smi locx="0.6040527" locy="0.4607754" />
+	  <starttime day="3" hour="11" minute="5" second="0" />
+	  <unlocks targetid="S_CON" />
+	  <unlocks targetid="THREAT02" />
+	  <unlocks targetid="THREAT06" />
+	  <string key="MapToLoad" value="_Single\S_BAD\Stream\S_BAD_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_04_0100_SE" />
+	  <string key="AcceptSequence" value="Play_04_0200_SE" />
+	  <string key="CancelSequence" value="Play_04_0300_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_4_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_kurdistan" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_04_1200_SE" />
+	  <string key="RecommendedLoadoutSequence" value="SAD_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Sticky_Camera;GI_Grenade_Smoke" />
+	  <string key="SMIInterceptSequence1" value="SAD_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="SAD_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="SAD_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp04_Sadiq" />
+	  <NetOnlineStatId value="102" />
+	  <Translation locale="en-US">Insurgent Stronghold</Translation>
+	  <Translation locale="fr-FR">Forteresse des insurgés</Translation>
+	  <Translation locale="ko-KR">반란군 요새</Translation>
+	  <Translation locale="ru-RU">База боевиков</Translation>
+	  <Translation locale="de-DE">Rebellenstützpunkt</Translation>
+	  <Translation locale="it-IT">Base ribelle</Translation>
+	  <Translation locale="zh-CHT">叛亂份子堡壘</Translation>
+	  <Translation locale="ja-JP">反乱軍拠点</Translation>
+	  <Translation locale="pl-PL">Twierdza Partyzantów</Translation>
+	  <Translation locale="pt-PT">Fortificação rebelde</Translation>
+	  <Translation locale="es-ES">Fortaleza insurgente</Translation>
+	</mission>
+	<mission id="S_CON" name="LocID_S_MIS_5_Pre-Briefing_Title" itemType="0" initialState="0" contextID="3">
+	  <smi locx="0.2430957" locy="0.4800527" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="S_NOU" />
+	  <unlocks targetid="THREAT07" />
+	  <locks targetid="THREAT03" />
+	  <locks targetid="THREAT02" />
+	  <unlocks targetid="UpgradeEquipment" />
+	  <string key="MapToLoad" value="_Single\S_CON\Stream\S_CON_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_05_0100_SE" />
+	  <string key="AcceptSequence" value="Play_05_0200_SE" />
+	  <string key="CancelSequence" value="Play_05_0300_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_5_Pre-Briefing_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_5_Pre-Briefing_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_05_2000_SE" />
+	  <string key="RecommendedLoadoutSequence" value="CON_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Sticky_Camera;GI_Grenade_TearGas" />
+	  <string key="AltX" value="0.2730957"/>
+	  <string key="AltY" value="0.4200527"/>
+	  <string key="AltMsnDescKey" value="LocID_S_MIS_5_Desc" />
+	  <string key="AltMsnLocationKey" value="LocID_S_MIS_5_Subtitle" />
+	  <string key="AltName" value="LocID_S_MIS_5_Title" />
+	  <string key="SMIInterceptSequence1" value="CON_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="CON_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="CON_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp05_AmericanConsumption" />
+	  <NetOnlineStatId value="103" />
+	  <Translation locale="en-US">American Consumption</Translation>
+	  <Translation locale="fr-FR">American Consumption</Translation>
+	  <Translation locale="ko-KR">미국의 소비</Translation>
+	  <Translation locale="ru-RU">"Американская жизнь"</Translation>
+	  <Translation locale="de-DE">Amerikas Konsum</Translation>
+	  <Translation locale="it-IT">Consumi americani</Translation>
+	  <Translation locale="zh-CHT">美國消費</Translation>
+	  <Translation locale="ja-JP">アメリカンコンサンプション</Translation>
+	  <Translation locale="pl-PL">Amerykańska Konsumpcja</Translation>
+	  <Translation locale="pt-PT">Consumo Americano</Translation>
+	  <Translation locale="es-ES">Consumo Americano</Translation>
+	</mission>
+	<mission id="S_NOU" name="LocID_S_MIS_6_Title" itemType="0" initialState="0" contextID="5">
+	  <smi locx="0.3526367" locy="0.8349941" />
+	  <starttime day="9" hour="23" minute="34" second="0" />
+	  <unlocks targetid="S_CHE" />
+	  <unlocks targetid="THREAT08" />
+	  <locks targetid="THREAT04" />
+	  <string key="MapToLoad" value="_Single\S_NOU\Stream\S_NOU_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_06_0200_SE" />
+	  <string key="AcceptSequence" value="Play_06_0250_SE" />
+	  <string key="CancelSequence" value="Play_06_0300_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_6_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_6_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_01" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_06_1700_SE" />
+	  <string key="RecommendedLoadoutSequence" value="NOU_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Proximity_Mine;GI_Sticky_Camera" />
+	  <string key="SMIInterceptSequence1" value="NOU_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="NOU_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="NOU_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp06_Nouri" />
+	  <NetOnlineStatId value="104" />
+	  <Translation locale="en-US">Private Estate</Translation>
+	  <Translation locale="fr-FR">Propriété privée</Translation>
+	  <Translation locale="ko-KR">사유지</Translation>
+	  <Translation locale="ru-RU">Частное поместье</Translation>
+	  <Translation locale="de-DE">Privates Anwesen</Translation>
+	  <Translation locale="it-IT">Villa privata</Translation>
+	  <Translation locale="zh-CHT">私人莊園</Translation>
+	  <Translation locale="ja-JP">私邸</Translation>
+	  <Translation locale="pl-PL">Prywatna Posiadłość</Translation>
+	  <Translation locale="pt-PT">Propriedade privada</Translation>
+	  <Translation locale="es-ES">Propiedad privada</Translation>
+	</mission>
+	<mission id="S_CHE" name="LocID_S_MIS_7_Title" itemType="0" initialState="0" contextID="6">
+	  <smi locx="0.4941" locy="0.34554" />
+	  <starttime day="7" hour="18" minute="6" second="0" />
+	  <unlocks targetid="S_QOD" />
+	  <unlocks targetid="THREAT08" />
+	  <locks targetid="THREAT05" />
+	  <string key="MapToLoad" value="_Single\S_CHE\Stream\S_CHE_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_07_0100_SE" />
+	  <string key="AcceptSequence" value="Play_07_0200_SE" />
+	  <string key="CancelSequence" value="Play_07_0300_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_7_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_7_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_07_1400_SE" />
+	  <string key="RecommendedLoadoutSequence" value="CHE_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Proximity_Mine;GI_Quadrocopter" />
+	  <string key="SMIInterceptSequence1" value="CHE_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="CHE_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="CHE_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp07_ChemicalLab" />
+	  <NetOnlineStatId value="105" />
+	  <Translation locale="en-US">Abandoned Mill</Translation>
+	  <Translation locale="fr-FR">Usine désaffectée</Translation>
+	  <Translation locale="ko-KR">버려진 공장</Translation>
+	  <Translation locale="ru-RU">Брошенный завод</Translation>
+	  <Translation locale="de-DE">Verlassene Mühle</Translation>
+	  <Translation locale="it-IT">Fabbrica abbandonata</Translation>
+	  <Translation locale="zh-CHT">廢棄工廠</Translation>
+	  <Translation locale="ja-JP">廃工場</Translation>
+	  <Translation locale="pl-PL">Opuszczony Młyn</Translation>
+	  <Translation locale="pt-PT">Moinho abandonado</Translation>
+	  <Translation locale="es-ES">Fábrica abandonada</Translation>
+	</mission>
+	<mission id="S_QOD" name="LocID_S_MIS_8_Title" itemType="0" initialState="0" contextID="7">
+	  <smi locx="0.6235000" locy="0.4670000" />
+	  <starttime day="4" hour="18" minute="15" second="0" />
+	  <unlocks targetid="S_FRE" />
+	  <unlocks targetid="THREAT09" />
+	  <locks targetid="THREAT06" />
+	  <string key="MapToLoad" value="_Single\S_QOD\Stream\S_QOD_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_08_0100_SE" />
+	  <string key="AcceptSequence" value="Play_08_0200_SE" />
+	  <string key="CancelSequence" value="Play_08_0300_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_8_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_8_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_08_1100_SE" />
+	  <string key="RecommendedLoadoutSequence" value="QOD_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Quadrocopter;GI_Grenade_EMP" />
+	  <string key="SMIInterceptSequence1" value="QOD_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="QOD_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="QOD_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp08_QudsHQ" />
+	  <NetOnlineStatId value="106" />
+	  <Translation locale="en-US">Special Missions HQ</Translation>
+	  <Translation locale="fr-FR">QG missions spéciales</Translation>
+	  <Translation locale="ko-KR">특수 임무 본부</Translation>
+	  <Translation locale="ru-RU">Штаб спецопераций</Translation>
+	  <Translation locale="de-DE">Spezialmissionen-HQ</Translation>
+	  <Translation locale="it-IT">QG Missioni speciali</Translation>
+	  <Translation locale="zh-CHT">特戰總部</Translation>
+	  <Translation locale="ja-JP">特殊作戦本部</Translation>
+	  <Translation locale="pl-PL">HQ Wydz. Specjalnego</Translation>
+	  <Translation locale="pt-PT">QG Missões Especiais</Translation>
+	  <Translation locale="es-ES">CG misiones especiales</Translation>
+	</mission>
+	<mission id="S_FRE" name="LocID_S_MIS_9_Title" itemType="0" initialState="0" contextID="8">
+	  <smi locx="0.3029785" locy="0.4352871" />
+	  <starttime day="0" hour="1" minute="18" second="0" />
+	  <unlocks targetid="S_DET" />
+	  <unlocks targetid="THREAT10" />
+	  <locks targetid="THREAT07" />
+	  <string key="MapToLoad" value="_Single\S_FRE\Stream\S_FRE_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_09_0100_SE" />
+	  <string key="AcceptSequence" value="Play_09_0200_SE" />
+	  <string key="CancelSequence" value="Play_09_0300_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_9_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_9_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_09_1000_SE" />
+	  <string key="RecommendedLoadoutSequence" value="FRE_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Grenade_Smoke;GI_Proximity_Mine" />
+	  <string key="SMIInterceptSequence1" value="FRE_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="FRE_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence3" value="FRE_SMI_Intercept_1" />
+	  <NetOnlineStatContext value="cxt_sp09_AmericanFreedom" />
+	  <NetOnlineStatId value="107" />
+	  <Translation locale="en-US">Transit Yards</Translation>
+	  <Translation locale="fr-FR">Dépôt ferroviaire</Translation>
+	  <Translation locale="ko-KR">환승장</Translation>
+	  <Translation locale="ru-RU">Метродепо</Translation>
+	  <Translation locale="de-DE">Bahngelände</Translation>
+	  <Translation locale="it-IT">Rimessa treni</Translation>
+	  <Translation locale="zh-CHT">調車場</Translation>
+	  <Translation locale="ja-JP">車両基地</Translation>
+	  <Translation locale="pl-PL">Transport</Translation>
+	  <Translation locale="pt-PT">Pátio ferroviário</Translation>
+	  <Translation locale="es-ES">Cocheras del tren</Translation>
+	</mission>
+	<mission id="S_DET" name="LocID_S_MIS_10_Title" itemType="0" initialState="0" contextID="9">
+	  <smi locx="0.2959961" locy="0.5626308" />
+	  <starttime day="2" hour="2" minute="20" second="0" />
+	  <unlocks targetid="S_AIR" />
+	  <locks targetid="THREAT08" />
+	  <string key="MapToLoad" value="_Single\S_DET\Stream\S_DET_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_10_0100_SE" />
+	  <string key="AcceptSequence" value="Play_10_0200_SE" />
+	  <string key="CancelSequence" value="Play_10_0300_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_10_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_10_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="RecommendedLoadoutSequence" value="DET_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Grenade_Smoke;GI_Grenade_EMP;GI_Grenade_SleepingGas" />
+	  <string key="SMIInterceptSequence1" value="DET_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="DET_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="DET_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp10_Detention" />
+	  <NetOnlineStatId value="108" />
+	  <Translation locale="en-US">Detention Facility</Translation>
+	  <Translation locale="fr-FR">Centre de détention</Translation>
+	  <Translation locale="ko-KR">수용시설</Translation>
+	  <Translation locale="ru-RU">Военная тюрьма</Translation>
+	  <Translation locale="de-DE">Gefangenenlager</Translation>
+	  <Translation locale="it-IT">Prigione</Translation>
+	  <Translation locale="zh-CHT">拘留所</Translation>
+	  <Translation locale="ja-JP">収容所</Translation>
+	  <Translation locale="pl-PL">Ośrodek Więzienny</Translation>
+	  <Translation locale="pt-PT">Centro de detenção</Translation>
+	  <Translation locale="es-ES">Centro de detención</Translation>
+	</mission>
+	<mission id="S_AIR" name="LocID_S_MIS_11_Title" itemType="0" initialState="0" contextID="38">
+	  <smi locx="0.262695" locy="0.557742" />
+	  <starttime day="0" hour="0" minute="2" second="15" />
+	  <unlocks targetid="S_PAL" />
+	  <locks targetid="THREAT09" />
+	  <string key="MapToLoad" value="_Single\S_AIR\Stream\S_AIR_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_11_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_11_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="DebriefSequence" value="Play_11_0900_SE" />
+	  <string key="RecommendedLoadoutSequence" value="" />
+	  <NetOnlineStatContext value="cxt_sp11_Airstrip" />
+	  <NetOnlineStatId value="109" />
+	  <Translation locale="en-US">Airstrip</Translation>
+	  <Translation locale="fr-FR">Piste d'Atterrissage</Translation>
+	  <Translation locale="ko-KR">활주로</Translation>
+	  <Translation locale="ru-RU">Аэродром</Translation>
+	  <Translation locale="de-DE">Flugfeld</Translation>
+	  <Translation locale="it-IT">Pista di atterraggio</Translation>
+	  <Translation locale="zh-CHT">飛機跑道</Translation>
+	  <Translation locale="ja-JP">飛行場</Translation>
+	  <Translation locale="pl-PL">Lotnisko</Translation>
+	  <Translation locale="pt-PT">Pista Aérea</Translation>
+	  <Translation locale="es-ES">Aeródromo</Translation>
+	</mission>
+	<mission id="S_PAL" name="LocID_S_MIS_12_Title" itemType="0" initialState="0" contextID="10">
+	  <smi locx="0.2571777" locy="0.5244472" />
+	  <starttime day="0" hour="2" minute="15" second="0" />
+	  <unlocks targetid="S_FUE" />
+	  <locks targetid="THREAT10" />
+	  <string key="MapToLoad" value="_Single\S_PAL\Stream\S_PAL_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_12_0100_SE" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_12_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_12_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="" />
+	  <string key="DebriefSequence" value="Play_12_0800_SE" />
+	  <string key="RecommendedLoadoutSequence" value="PAL_Loadout" />
+	  <string key="SMIInterceptSequence1" value="PAL_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="PAL_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="PAL_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp12_Paladin" />
+	  <NetOnlineStatId value="110" />
+	  <Translation locale="en-US">American Fuel</Translation>
+	  <Translation locale="fr-FR">American Fuel</Translation>
+	  <Translation locale="ko-KR">미국의 연료</Translation>
+	  <Translation locale="ru-RU">"Американский огонь"</Translation>
+	  <Translation locale="de-DE">American Fuel</Translation>
+	  <Translation locale="it-IT">Benzina americana</Translation>
+	  <Translation locale="zh-CHT">美國燃料</Translation>
+	  <Translation locale="ja-JP">アメリカンフューエル</Translation>
+	  <Translation locale="pl-PL">Amerykańskie Paliwo</Translation>
+	  <Translation locale="pt-PT">Combustível Americano</Translation>
+	  <Translation locale="es-ES">Combustible Americano</Translation>
+	</mission>
+	<mission id="S_FUE" name="LocID_S_MIS_13_Title" itemType="0" initialState="0" contextID="11">
+	  <smi locx="0.251416" locy="0.5002285" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="S_BLO" />
+	  <string key="MapToLoad" value="_Single\S_FUE\Stream\S_FUE_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_13_0100_SE" />
+	  <!--<string key="AcceptSequence" value="Play_13_0200_SE" />-->
+	  <string key="CancelSequence" value="Play_13_0300_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_13_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_13_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="PostLoadoutSequence" value="Play_13_0400_SE" />
+	  <string key="DebriefSequence" value="Play_13_1600_SE" />
+	  <string key="RecommendedLoadoutSequence" value="FUE_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Grenade_Incendiary;GI_Proximity_Mine;GI_Quadrocopter" />
+	  <string key="SMIInterceptSequence1" value="FUE_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="FUE_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="FUE_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp13_AmericanFuel" />
+	  <NetOnlineStatId value="111" />
+	  <Translation locale="en-US">LNG Terminal</Translation>
+	  <Translation locale="fr-FR">Terminal méthanier</Translation>
+	  <Translation locale="ko-KR">LNG 터미널</Translation>
+	  <Translation locale="ru-RU">Газовый терминал</Translation>
+	  <Translation locale="de-DE">Flüssiggas-Terminal</Translation>
+	  <Translation locale="it-IT">Impianto gas</Translation>
+	  <Translation locale="zh-CHT">液化天然氣工廠</Translation>
+	  <Translation locale="ja-JP">LNGターミナル</Translation>
+	  <Translation locale="pl-PL">Terminal Gazowy</Translation>
+	  <Translation locale="pt-PT">Terminal de GNL</Translation>
+	  <Translation locale="es-ES">Planta gas natural</Translation>
+	</mission>
+	<mission id="S_BLO" name="LocID_S_MIS_14_Title" itemType="0" initialState="0" contextID="12">
+	  <smi locx="0.2278809" locy="0.4352871" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Single\S_BLO\Stream\S_BLO_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Play_14_0100_SE" />
+	  <string key="MsnDescKey" value="LocID_S_MIS_14_Desc" />
+	  <string key="MsnLocationKey" value="LocID_S_MIS_14_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_default" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="0" />
+	  <string key="GrimPostBriefingSequence" value="Play_14_0210_loop_SE" />
+	  <string key="GrimAcceptSequence" value="Play_14_0210_SE" />
+	  <string key="GrimCancelSequence" value="Play_14_0310_SE" />
+	  <string key="CharliePostBriefingSequence" value="Play_14_0220_loop_SE" />
+	  <string key="CharlieAcceptSequence" value="Play_14_0220_SE" />
+	  <string key="CharlieCancelSequence" value="Play_14_0320_SE" />
+	  <string key="BriggsPostBriefingSequence" value="Play_14_0230_loop_SE" />
+	  <string key="BriggsAcceptSequence" value="Play_14_0230_SE" />
+	  <string key="BriggsCancelSequence" value="Play_14_0330_SE" />
+	  <string key="PostLoadoutSequence" value="Play_14_0400_SE" />
+	  <string key="DebriefSequence" value="Play_14_1500_SE" />
+	  <string key="RecommendedLoadoutSequence" value="BLO_Loadout" />
+	  <string key="BreadcrumbTo" value="GI_Quadrocopter;GI_Grenade_SleepingGas" />
+	  <string key="SMIInterceptSequence1" value="BLO_SMI_Intercept_1" />
+	  <string key="SMIInterceptSequence2" value="BLO_SMI_Intercept_2" />
+	  <string key="SMIInterceptSequence3" value="BLO_SMI_Intercept_3" />
+	  <NetOnlineStatContext value="cxt_sp14_AmericanBlood" />
+	  <NetOnlineStatId value="112" />
+	  <Translation locale="en-US">Site F</Translation>
+	  <Translation locale="fr-FR">Site F</Translation>
+	  <Translation locale="ko-KR">F 구역</Translation>
+	  <Translation locale="ru-RU">Зона F</Translation>
+	  <Translation locale="de-DE">Standort F</Translation>
+	  <Translation locale="it-IT">Bunker F</Translation>
+	  <Translation locale="zh-CHT">設施 F</Translation>
+	  <Translation locale="ja-JP">サイトF</Translation>
+	  <Translation locale="pl-PL">Punkt F</Translation>
+	  <Translation locale="pt-PT">Local F</Translation>
+	  <Translation locale="es-ES">Sitio F</Translation>
+	</mission>
+  </category>
+  <category name="Deniable Ops">
+	<mission id="C01" name="LocID_C_MIS_Briggs_1_Title" itemType="3" initialState="1" contextID="13">
+	  <smi locx="0.6874512" locy="0.4900000" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="C02" />
+	  <string key="MapToLoad" value="_DeniableOps\CombinedOps\D_Kargil\Stream\D_Kargil_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Briggs_Coop_C01" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Briggs_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Briggs_1_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_iceland" />
+	  <string key="MsnImageLabel" value="MP_Briggs1" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="4F2ECFAE" />
+	  <NetOnlineStatContext value="cxt_Combined_Kargil" />
+	  <NetOnlineStatId value="113" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="C01_0100_COM" OasisId="16534"/> -->
+	  <Translation locale="en-US">Smugglers Compound</Translation>
+	  <Translation locale="fr-FR">Base des contrebandiers</Translation>
+	  <Translation locale="ko-KR">밀수업자 단지</Translation>
+	  <Translation locale="ru-RU">Лагерь контрабандистов</Translation>
+	  <Translation locale="de-DE">Schmugglerversteck</Translation>
+	  <Translation locale="it-IT">Complesso</Translation>
+	  <Translation locale="zh-CHT">走私者建築</Translation>
+	  <Translation locale="ja-JP">密輸組織のアジト</Translation>
+	  <Translation locale="pl-PL">Kryjówka Przemytników</Translation>
+	  <Translation locale="pt-PT">Contrabandistas</Translation>
+	  <Translation locale="es-ES">Contrabandistas</Translation>
+	</mission>
+	<mission id="C02" name="LocID_C_MIS_Briggs_2_Title" itemType="3" initialState="0" contextID="14">
+	  <smi locx="0.695752" locy="0.6097011" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="C03" />
+	  <string key="MapToLoad" value="_DeniableOps\CombinedOps\D_Bangalore\Stream\D_Bangalore_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Briggs_Coop_C02" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Briggs_2_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Briggs_2_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_mumbai" />
+	  <string key="MsnImageLabel" value="MP_Briggs2" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="57422D32" />
+	  <NetOnlineStatContext value="cxt_Combined_Bangalore" />
+	  <NetOnlineStatId value="114" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="C02_0050_COM" OasisId="17287"/> -->
+	  <Translation locale="en-US">Missile Plant</Translation>
+	  <Translation locale="fr-FR">Base lance-missiles</Translation>
+	  <Translation locale="ko-KR">미사일 기지</Translation>
+	  <Translation locale="ru-RU">Ракетная база</Translation>
+	  <Translation locale="de-DE">Raketenanlage</Translation>
+	  <Translation locale="it-IT">Base missilistica</Translation>
+	  <Translation locale="zh-CHT">飛彈工廠</Translation>
+	  <Translation locale="ja-JP">ミサイル工場</Translation>
+	  <Translation locale="pl-PL">Baza Rakietowa</Translation>
+	  <Translation locale="pt-PT">Fábrica de mísseis</Translation>
+	  <Translation locale="es-ES">Base de misiles</Translation>
+	</mission>
+	<mission id="C03" name="LocID_C_MIS_Briggs_3_Title" itemType="3" initialState="0" contextID="15">
+	  <smi locx="0.730127" locy="0.5472988" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="C04" />
+	  <string key="MapToLoad" value="_DeniableOps\CombinedOps\D_Chittagong\Stream\D_Chittagong_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Briggs_Coop_C03" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Briggs_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Briggs_3_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_beirut" />
+	  <string key="MsnImageLabel" value="MP_Briggs3" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="868F8D40" />
+	  <NetOnlineStatContext value="cxt_Combined_Chittagong" />
+	  <NetOnlineStatId value="115" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="C03_0050_COM" OasisId="16538"/> -->
+	  <Translation locale="en-US">VORON Station</Translation>
+	  <Translation locale="fr-FR">Base de Voron</Translation>
+	  <Translation locale="ko-KR">보론 사무소</Translation>
+	  <Translation locale="ru-RU">База "Ворона"</Translation>
+	  <Translation locale="de-DE">Voron-Abteilung</Translation>
+	  <Translation locale="it-IT">Stazione VORON</Translation>
+	  <Translation locale="zh-CHT">"VORON"基地</Translation>
+	  <Translation locale="ja-JP">ヴォロンステーション</Translation>
+	  <Translation locale="pl-PL">Placówka WORONu</Translation>
+	  <Translation locale="pt-PT">Estação da VORON</Translation>
+	  <Translation locale="es-ES">Estación de Voron</Translation>
+	</mission>
+	<mission id="C04" name="LocID_C_MIS_Briggs_4_Title" itemType="3" initialState="0" contextID="16">
+	  <smi locx="0.6932129" locy="0.3156582" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\CombinedOps\D_Koltsovo\Stream\D_Koltsovo_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Briggs_Coop_C04" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Briggs_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Briggs_4_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_moscow" />
+	  <string key="MsnImageLabel" value="MP_Briggs4" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="FB05D5A7" />
+	  <string key="DebriefSequence" value="Play_C04_0975_SE" />
+	  <NetOnlineStatContext value="cxt_Combined_Koltsovo" />
+	  <NetOnlineStatId value="116" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="C04_0100_COM" OasisId="16540"/> -->
+	  <Translation locale="en-US">Abandoned City</Translation>
+	  <Translation locale="fr-FR">Ville abandonnée</Translation>
+	  <Translation locale="ko-KR">버려진 도시</Translation>
+	  <Translation locale="ru-RU">"Город-призрак"</Translation>
+	  <Translation locale="de-DE">Geisterstadt</Translation>
+	  <Translation locale="it-IT">Città abbandonata</Translation>
+	  <Translation locale="zh-CHT">棄城</Translation>
+	  <Translation locale="ja-JP">ゴーストタウン</Translation>
+	  <Translation locale="pl-PL">Opuszczone Miasto</Translation>
+	  <Translation locale="pt-PT">Cidade abandonada</Translation>
+	  <Translation locale="es-ES">Ciudad abandonada</Translation>
+	</mission>
+	<mission id="E01" name="LocID_C_MIS_Charlie_1_Title" itemType="5" initialState="1" contextID="25">
+	  <smi locx="0.6085449" locy="0.5919276" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="E02" />
+	  <string key="MapToLoad" value="_DeniableOps\Extraction\D_Sanaa\Stream\D_Sanaa_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Charlie_Coop_E01" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Charlie_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Charlie_1_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_iceland" />
+	  <string key="MsnImageLabel" value="MP_Charlie1" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="995CEB02" />
+	  <NetOnlineStatContext value="cxt_Extraction_Sanaa" />
+	  <NetOnlineStatId value="117" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="E01_0100_COM" OasisId="65218"/> -->
+	  <Translation locale="en-US">Pakistani Embassy</Translation>
+	  <Translation locale="fr-FR">Ambassade pakistanaise</Translation>
+	  <Translation locale="ko-KR">파키스탄 대사관</Translation>
+	  <Translation locale="ru-RU">Посольство Пакистана</Translation>
+	  <Translation locale="de-DE">Pakistan. Botschaft</Translation>
+	  <Translation locale="it-IT">Ambasciata pakistana</Translation>
+	  <Translation locale="zh-CHT">巴基斯坦大使館</Translation>
+	  <Translation locale="ja-JP">パキスタン大使館</Translation>
+	  <Translation locale="pl-PL">Ambasada Pakistanu</Translation>
+	  <Translation locale="pt-PT">Embaixada paquistanesa</Translation>
+	  <Translation locale="es-ES">Embajada de Pakistán</Translation>
+	</mission>
+	<mission id="E02" name="LocID_C_MIS_Charlie_2_Title" itemType="5" initialState="0" contextID="26">
+	  <smi locx="0.5860000" locy="0.4960000" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="E03" />
+	  <string key="MapToLoad" value="_DeniableOps\Extraction\D_Amman\Stream\D_Amman_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Charlie_Coop_E02" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Charlie_2_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Charlie_2_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_mumbai" />
+	  <string key="MsnImageLabel" value="MP_Charlie2" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="278028B7" />
+	  <NetOnlineStatContext value="cxt_Extraction_Amman" />
+	  <NetOnlineStatId value="118" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="E02_0100_COM" OasisId="65220"/> -->
+	  <Translation locale="en-US">Swiss Embassy</Translation>
+	  <Translation locale="fr-FR">Ambassade suisse</Translation>
+	  <Translation locale="ko-KR">스위스 대사관</Translation>
+	  <Translation locale="ru-RU">Посольство Швейцарии</Translation>
+	  <Translation locale="de-DE">Schweizer Botschaft</Translation>
+	  <Translation locale="it-IT">Ambasciata svizzera</Translation>
+	  <Translation locale="zh-CHT">瑞士大使館</Translation>
+	  <Translation locale="ja-JP">スイス大使館</Translation>
+	  <Translation locale="pl-PL">Ambasada Szwajcarii</Translation>
+	  <Translation locale="pt-PT">Embaixada suíça</Translation>
+	  <Translation locale="es-ES">Embajada de Suiza</Translation>
+	</mission>
+	<mission id="E03" name="LocID_C_MIS_Charlie_3_Title" itemType="5" initialState="0" contextID="27">
+	  <smi locx="0.534668" locy="0.3766933" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="E04" />
+	  <string key="MapToLoad" value="_DeniableOps\Extraction\D_Bratislava\Stream\D_Bratislava_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Charlie_Coop_E03" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Charlie_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Charlie_3_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_beirut" />
+	  <string key="MsnImageLabel" value="MP_Charlie3" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="2E283083" />
+	  <NetOnlineStatContext value="cxt_Extraction_Bratislava" />
+	  <NetOnlineStatId value="119" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="E03_0100_COM" OasisId="65222"/> -->
+	  <Translation locale="en-US">Egyptian Embassy</Translation>
+	  <Translation locale="fr-FR">Ambassade égyptienne</Translation>
+	  <Translation locale="ko-KR">이집트 대사관</Translation>
+	  <Translation locale="ru-RU">Посольство Египта</Translation>
+	  <Translation locale="de-DE">Ägyptische Botschaft</Translation>
+	  <Translation locale="it-IT">Ambasciata egiziana</Translation>
+	  <Translation locale="zh-CHT">埃及大使館</Translation>
+	  <Translation locale="ja-JP">エジプト大使館</Translation>
+	  <Translation locale="pl-PL">Ambasada Egiptu</Translation>
+	  <Translation locale="pt-PT">Embaixada egípcia</Translation>
+	  <Translation locale="es-ES">Embajada de Egipto</Translation>
+	</mission>
+	<mission id="E04" name="LocID_C_MIS_Charlie_4_Title" itemType="5" initialState="0" contextID="28">
+	  <smi locx="0.5716308" locy="0.7014004" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Extraction\D_Kigali\Stream\D_Kigali_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Charlie_Coop_E04" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Charlie_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Charlie_4_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_moscow" />
+	  <string key="MsnImageLabel" value="MP_Charlie4" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="D10888B4" />
+	  <NetOnlineStatContext value="cxt_Extraction_Kigali" />
+	  <NetOnlineStatId value="120" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="E04_0100_COM" OasisId="65224"/> -->
+	  <Translation locale="en-US">Russian Embassy</Translation>
+	  <Translation locale="fr-FR">Ambassade russe</Translation>
+	  <Translation locale="ko-KR">러시아 대사관</Translation>
+	  <Translation locale="ru-RU">Посольство России</Translation>
+	  <Translation locale="de-DE">Russische Botschaft</Translation>
+	  <Translation locale="it-IT">Ambasciata russa</Translation>
+	  <Translation locale="zh-CHT">俄羅斯大使館</Translation>
+	  <Translation locale="ja-JP">ロシア大使館</Translation>
+	  <Translation locale="pl-PL">Ambasada Rosji</Translation>
+	  <Translation locale="pt-PT">Embaixada russa</Translation>
+	  <Translation locale="es-ES">Embajada de Rusia</Translation>
+	</mission>
+	<mission id="G01" name="LocID_C_MIS_Grim_1_Title" itemType="1" initialState="1" contextID="17">
+	  <smi locx="0.4785" locy="0.3689" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="G02" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Grim_Coop_G01" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Grim_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Grim_1_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_iceland" />
+	  <string key="MsnImageLabel" value="MP_Grim1" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="D54A0746" />
+	  <NetOnlineStatContext value="cxt_Ghost_SeaFort" />
+	  <NetOnlineStatId value="121" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="G01_0100_COM" OasisId="16541"/> -->
+	  <Translation locale="en-US">Hawkins Seafort</Translation>
+	  <Translation locale="fr-FR">Fort Hawkins</Translation>
+	  <Translation locale="ko-KR">호킨스 해상요새</Translation>
+	  <Translation locale="ru-RU">Морской форт Хоукинс</Translation>
+	  <Translation locale="de-DE">Seefestung Hawkins</Translation>
+	  <Translation locale="it-IT">Fortezza di Hawkins</Translation>
+	  <Translation locale="zh-CHT">霍金斯海堡</Translation>
+	  <Translation locale="ja-JP">ホーキンスシーフォート</Translation>
+	  <Translation locale="pl-PL">Fort Morski Hawkinsa</Translation>
+	  <Translation locale="pt-PT">Forte marítimo Hawkins</Translation>
+	  <Translation locale="es-ES">Fuerte costero Hawkins</Translation>
+	</mission>
+	<mission id="G02" name="LocID_C_MIS_Grim_2_Title" itemType="1" initialState="0" contextID="18">
+	  <smi locx="0.6060058" locy="0.4149746" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="G03" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_BorderCross\Stream\D_BorderCross_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Grim_Coop_G02" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Grim_2_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Grim_2_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_mumbai" />
+	  <string key="MsnImageLabel" value="MP_Grim2" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="51F08114" />
+	  <NetOnlineStatContext value="cxt_Ghost_BorderCrossing" />
+	  <NetOnlineStatId value="122" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="G02_0100_COM" OasisId="16563"/> -->
+	  <Translation locale="en-US">Border Crossing</Translation>
+	  <Translation locale="fr-FR">Passage de frontière</Translation>
+	  <Translation locale="ko-KR">국경 교차지점</Translation>
+	  <Translation locale="ru-RU">Переход границы</Translation>
+	  <Translation locale="de-DE">Grenzregion</Translation>
+	  <Translation locale="it-IT">Oltre il confine</Translation>
+	  <Translation locale="zh-CHT">邊境交界</Translation>
+	  <Translation locale="ja-JP">国境検問所</Translation>
+	  <Translation locale="pl-PL">Przejście Graniczne</Translation>
+	  <Translation locale="pt-PT">Passagem da fronteira</Translation>
+	  <Translation locale="es-ES">Cruce fronterizo</Translation>
+	</mission>
+	<mission id="G03" name="LocID_C_MIS_Grim_3_Title" itemType="1" initialState="0" contextID="19">
+	  <smi locx="0.5474121" locy="0.3015957" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="G04" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_HackerDen\Stream\D_HackerDen_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Grim_Coop_G03" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Grim_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Grim_3_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_beirut" />
+	  <string key="MsnImageLabel" value="MP_Grim3" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="2BAA41A7" />
+	  <NetOnlineStatContext value="cxt_Ghost_HackersDen" />
+	  <NetOnlineStatId value="123" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="G03_0100_COM" OasisId="16616"/> -->
+	  <Translation locale="en-US">Hackers' Den</Translation>
+	  <Translation locale="fr-FR">Repaire des pirates</Translation>
+	  <Translation locale="ko-KR">해커 소굴</Translation>
+	  <Translation locale="ru-RU">Логово хакеров</Translation>
+	  <Translation locale="de-DE">Hackerversteck</Translation>
+	  <Translation locale="it-IT">Tana degli hacker</Translation>
+	  <Translation locale="zh-CHT">駭客巢穴</Translation>
+	  <Translation locale="ja-JP">ハッカーの隠れ家</Translation>
+	  <Translation locale="pl-PL">Kryjówka Hakerów</Translation>
+	  <Translation locale="pt-PT">Central dos hackers</Translation>
+	  <Translation locale="es-ES">Refugio de hackers</Translation>
+	</mission>
+	<mission id="G04" name="LocID_C_MIS_Grim_4_Title" itemType="1" initialState="0" contextID="20">
+	  <smi locx="0.8803223" locy="0.8070644" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_Yacht\Stream\D_Yacht_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Grim_Coop_G04" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Grim_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Grim_4_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_moscow" />
+	  <string key="MsnImageLabel" value="MP_Grim4" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="3E75EB6A" />
+	  <NetOnlineStatContext value="cxt_Ghost_Yacht" />
+	  <NetOnlineStatId value="124" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="G04_0100_COM" OasisId="16597"/> -->
+	  <Translation locale="en-US">Billionaire's Yacht</Translation>
+	  <Translation locale="fr-FR">Terror. milliardaire</Translation>
+	  <Translation locale="ko-KR">억만장자의 요트</Translation>
+	  <Translation locale="ru-RU">Яхта миллиардера</Translation>
+	  <Translation locale="de-DE">Milliardärsjacht</Translation>
+	  <Translation locale="it-IT">Yacht del miliardario</Translation>
+	  <Translation locale="zh-CHT">億萬富翁的遊艇</Translation>
+	  <Translation locale="ja-JP">大富豪のヨット</Translation>
+	  <Translation locale="pl-PL">Jacht Miliardera</Translation>
+	  <Translation locale="pt-PT">Iate do bilionário</Translation>
+	  <Translation locale="es-ES">Yate del millonario</Translation>
+	</mission>
+	<mission id="H01" name="LocID_C_MIS_Kobin_1_Title" itemType="4" initialState="0" contextID="21">
+	  <smi locx="0.6556152" locy="0.4500000" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="H02" />
+	  <string key="MapToLoad" value="_DeniableOps\Hunter\D_OpiumFarm\Stream\D_OpiumFarm_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Kobin_Coop_H01" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Kobin_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Kobin_1_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_iceland" />
+	  <string key="MsnImageLabel" value="MP_Kobin1" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="04DEDD40" />
+	  <NetOnlineStatContext value="cxt_Hunter_OpiumFarm" />
+	  <NetOnlineStatId value="125" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="H01_0100_COM" OasisId="47820"/> -->
+	  <Translation locale="en-US">Opium Farm</Translation>
+	  <Translation locale="fr-FR">Production d'opium</Translation>
+	  <Translation locale="ko-KR">아편 농장</Translation>
+	  <Translation locale="ru-RU">Плантация опия</Translation>
+	  <Translation locale="de-DE">Opiumfarm</Translation>
+	  <Translation locale="it-IT">Piantagione d'oppio</Translation>
+	  <Translation locale="zh-CHT">鴉片農場</Translation>
+	  <Translation locale="ja-JP">アヘン農園</Translation>
+	  <Translation locale="pl-PL">Plantacja Opium</Translation>
+	  <Translation locale="pt-PT">Fazenda de ópio</Translation>
+	  <Translation locale="es-ES">Granja de opio</Translation>
+	</mission>
+	<mission id="H02" name="LocID_C_MIS_Kobin_2_Title" itemType="4" initialState="0" contextID="22">
+	  <smi locx="0.5657000" locy="0.4270000" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="H03" />
+	  <string key="MapToLoad" value="_DeniableOps\Hunter\D_FishMarket\Stream\D_FishMarket_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Kobin_Coop_H02" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Kobin_2_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Kobin_2_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_mumbai" />
+	  <string key="MsnImageLabel" value="MP_Kobin2" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="2C35D271" />
+	  <NetOnlineStatContext value="cxt_Hunter_FishMarket" />
+	  <NetOnlineStatId value="126" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="H02_0100_COM" OasisId="16491"/> -->
+	  <Translation locale="en-US">Fish Market</Translation>
+	  <Translation locale="fr-FR">Marché au poisson</Translation>
+	  <Translation locale="ko-KR">어시장</Translation>
+	  <Translation locale="ru-RU">Рыбный рынок</Translation>
+	  <Translation locale="de-DE">Fischmarkt</Translation>
+	  <Translation locale="it-IT">Mercato del pesce</Translation>
+	  <Translation locale="zh-CHT">魚市場</Translation>
+	  <Translation locale="ja-JP">魚市場</Translation>
+	  <Translation locale="pl-PL">Targ Rybny</Translation>
+	  <Translation locale="pt-PT">Mercado de peixe</Translation>
+	  <Translation locale="es-ES">Lonja de pescado</Translation>
+	</mission>
+	<mission id="H03" name="LocID_C_MIS_Kobin_3_Title" itemType="4" initialState="0" contextID="23">
+	  <smi locx="0.5207031" locy="0.6746425" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="H04" />
+	  <string key="MapToLoad" value="_DeniableOps\Hunter\D_DiamondMine\Stream\D_DiamondMine_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Kobin_Coop_H03" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Kobin_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Kobin_3_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_beirut" />
+	  <string key="MsnImageLabel" value="MP_Kobin3" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="798E4E17" />
+	  <NetOnlineStatContext value="cxt_Hunter_DiamondMine" />
+	  <NetOnlineStatId value="127" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="H03_0100_COM" OasisId="16512"/> -->
+	  <Translation locale="en-US">Blood Diamond Mine</Translation>
+	  <Translation locale="fr-FR">Mine de diamants</Translation>
+	  <Translation locale="ko-KR">블러드 다이아 광산</Translation>
+	  <Translation locale="ru-RU">Алмазная шахта</Translation>
+	  <Translation locale="de-DE">Blutdiamantenmine</Translation>
+	  <Translation locale="it-IT">Miniera di diamanti</Translation>
+	  <Translation locale="zh-CHT">血鑽石礦區</Translation>
+	  <Translation locale="ja-JP">ブラッドダイヤモンド鉱山</Translation>
+	  <Translation locale="pl-PL">Kopalnia Diamentów</Translation>
+	  <Translation locale="pt-PT">Mina de diamantes</Translation>
+	  <Translation locale="es-ES">Mina de diamantes</Translation>
+	</mission>
+	<mission id="H04" name="LocID_C_MIS_Kobin_4_Title" itemType="4" initialState="0" contextID="24">
+	  <smi locx="0.6450000" locy="0.3800000" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Hunter\D_DirtyBomb\Stream\D_FPP_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="Intra_Kobin_Coop_H04" />
+	  <string key="AcceptSequence" value="COOP_NoGo" />
+	  <string key="CancelSequence" value="COOP_NoGo" />
+	  <string key="PostBriefingSequence" value="SE_030A" />
+	  <string key="MsnDescKey" value="LocID_C_MIS_Kobin_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_C_MIS_Kobin_4_Subtitle" />
+	  <string key="MsnGPSKey" value="gps_moscow" />
+	  <string key="MsnImageLabel" value="MP_Kobin4" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="F19E884F" />
+	  <NetOnlineStatId value="128" />
+	  <!-- <VoiceOver OasisMap="MENU" OasisSeq="H04_0100_COM" OasisId="14206"/> -->
+	  <Translation locale="en-US">Dead Coast</Translation>
+	  <Translation locale="fr-FR">Littoral meurtrier</Translation>
+	  <Translation locale="ko-KR">죽은 해안</Translation>
+	  <Translation locale="ru-RU">Мертвый берег</Translation>
+	  <Translation locale="de-DE">Tödliche Küste</Translation>
+	  <Translation locale="it-IT">Mar Morto</Translation>
+	  <Translation locale="zh-CHT">死湖</Translation>
+	  <Translation locale="ja-JP">死の海岸</Translation>
+	  <Translation locale="pl-PL">Martwe Wybrzeże</Translation>
+	  <Translation locale="pt-PT">Costa seca</Translation>
+	  <Translation locale="es-ES">Costa seca del Aral</Translation>
+	</mission>
+  </category>
+  <category name="Adversarial">
+	<mission id="A01" name="LocID_MAP_1" itemType="2" initialState="2" contextID="29">
+	  <smi locx="0.7" locy="0.95" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_01\ADV_01.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_1_Loc" />
+	  <string key="MsnGPSKey" value="gps_shibuya" />
+	  <string key="MsnImageLabel" value="SyrianHitJob" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="05F69010" />
+	  <Translation locale="en-US">Virus Vault</Translation>
+	  <Translation locale="fr-FR">Zone de quarantaine</Translation>
+	  <Translation locale="ko-KR">바이러스 보관소</Translation>
+	  <Translation locale="ru-RU">Хранилище вирусов</Translation>
+	  <Translation locale="de-DE">Viren-Tresor</Translation>
+	  <Translation locale="it-IT">Contenimento virale</Translation>
+	  <Translation locale="zh-CHT">病毒庫</Translation>
+	  <Translation locale="ja-JP">ウィルス保管庫</Translation>
+	  <Translation locale="pl-PL">Bank Wirusów</Translation>
+	  <Translation locale="pt-PT">Cofre de vírus</Translation>
+	  <Translation locale="es-ES">Cámara del virus</Translation>
+	</mission>
+	<mission id="A02" name="LocID_MAP_2" itemType="2" initialState="2" contextID="30">
+	  <smi locx="0.2864258" locy="0.4123378" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_02\ADV_02.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_2_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_2_Loc" />
+	  <string key="MsnGPSKey" value="gps_panana" />
+	  <string key="MsnImageLabel" value="Pirates" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_01" />
+	  <string key="NetOnlineMapId" value="B3AA421F" />
+	</mission>
+	<mission id="A03" name="LocID_MAP_3" itemType="2" initialState="2" contextID="31">
+	  <smi locx="0.2959961" locy="0.623666" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_03\ADV_03.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_3_Loc" />
+	  <string key="MsnGPSKey" value="gps_minovka" />
+	  <string key="MsnImageLabel" value="Guantanamo" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="575293CC" />
+	  <Translation locale="en-US">Cartel</Translation>
+	  <Translation locale="fr-FR">Cartel</Translation>
+	  <Translation locale="ko-KR">카르텔</Translation>
+	  <Translation locale="ru-RU">Картель</Translation>
+	  <Translation locale="de-DE">Kartell</Translation>
+	  <Translation locale="it-IT">Cartello</Translation>
+	  <Translation locale="zh-CHT">卡特爾</Translation>
+	  <Translation locale="ja-JP">カルテル</Translation>
+	  <Translation locale="pl-PL">Kartel</Translation>
+	  <Translation locale="pt-PT">Cartel</Translation>
+	  <Translation locale="es-ES">Cártel</Translation>
+	</mission>
+	<mission id="A04" name="LocID_MAP_4" itemType="2" initialState="2" contextID="32">
+	  <smi locx="0.534668" locy="0.8184901" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_04\ADV_04.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_4_Loc" />
+	  <string key="MsnGPSKey" value="gps_davos" />
+	  <string key="MsnImageLabel" value="TerrorCamp" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="C67A5C7C" />
+	  <Translation locale="en-US">Uranium Mine</Translation>
+	  <Translation locale="fr-FR">Mine d'uranium</Translation>
+	  <Translation locale="ko-KR">우라늄 광산</Translation>
+	  <Translation locale="ru-RU">Урановый рудник</Translation>
+	  <Translation locale="de-DE">Uranmine</Translation>
+	  <Translation locale="it-IT">Miniera di uranio</Translation>
+	  <Translation locale="zh-CHT">鈾礦場</Translation>
+	  <Translation locale="ja-JP">ウラン鉱山</Translation>
+	  <Translation locale="pl-PL">Kopalnia Uranu</Translation>
+	  <Translation locale="pt-PT">Mina de urânio</Translation>
+	  <Translation locale="es-ES">Mina de uranio</Translation>
+	</mission>
+	<mission id="A05" name="LocID_MAP_5" itemType="2" initialState="2" contextID="33">
+	  <smi locx="0.3067871" locy="0.4534511" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_05\ADV_05.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_5_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_5_Loc" />
+	  <string key="MsnGPSKey" value="gps_shibuya" />
+	  <string key="MsnImageLabel" value="SyrianHitJob" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="24AD16A7" />
+	  <Translation locale="en-US">Silo</Translation>
+	  <Translation locale="fr-FR">Silo</Translation>
+	  <Translation locale="ko-KR">곡물 저장고</Translation>
+	  <Translation locale="ru-RU">Элеватор</Translation>
+	  <Translation locale="de-DE">Silo</Translation>
+	  <Translation locale="it-IT">Silo</Translation>
+	  <Translation locale="zh-CHT">飛彈井</Translation>
+	  <Translation locale="ja-JP">サイロ</Translation>
+	  <Translation locale="pl-PL">Silos</Translation>
+	  <Translation locale="pt-PT">Silo</Translation>
+	  <Translation locale="es-ES">Silo</Translation>
+	</mission>
+	<mission id="A06" name="LocID_MAP_6" itemType="2" initialState="2" contextID="34">
+	  <smi locx="0.5824219" locy="0.4836269" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_06\ADV_06.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_6_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_6_Loc" />
+	  <string key="MsnGPSKey" value="gps_panana" />
+	  <string key="MsnImageLabel" value="Pirates" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_01" />
+	  <string key="NetOnlineMapId" value="9DD424B3" />
+	  <Translation locale="en-US">Lebanese Hospital</Translation>
+	  <Translation locale="fr-FR">Hôpital libanais</Translation>
+	  <Translation locale="ko-KR">레바논 병원</Translation>
+	  <Translation locale="ru-RU">Ливанский госпиталь</Translation>
+	  <Translation locale="de-DE">Liban. Krankenhaus</Translation>
+	  <Translation locale="it-IT">Ospedale libanese</Translation>
+	  <Translation locale="zh-CHT">黎巴嫩醫院</Translation>
+	  <Translation locale="ja-JP">レバノンの病院</Translation>
+	  <Translation locale="pl-PL">Libański Szpital</Translation>
+	  <Translation locale="pt-PT">Hospital libanês</Translation>
+	  <Translation locale="es-ES">Hospital libanés</Translation>
+	</mission>
+	<mission id="A07" name="LocID_MAP_7" itemType="2" initialState="2" contextID="35">
+	  <smi locx="0.19" locy="0.47" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_07\ADV_07.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_7_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_7_Loc" />
+	  <string key="MsnGPSKey" value="gps_minovka" />
+	  <string key="MsnImageLabel" value="Guantanamo" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="0BF3AA83" />
+	  <Translation locale="en-US">Particle Accelerator</Translation>
+	  <Translation locale="fr-FR">Accélérateur</Translation>
+	  <Translation locale="ko-KR">입자가속기</Translation>
+	  <Translation locale="ru-RU">Ускоритель частиц</Translation>
+	  <Translation locale="de-DE">Teilchenbeschleuniger</Translation>
+	  <Translation locale="it-IT">Acceleratore</Translation>
+	  <Translation locale="zh-CHT">粒子加速器</Translation>
+	  <Translation locale="ja-JP">粒子加速器</Translation>
+	  <Translation locale="pl-PL">Przyspieszacz Cząstek</Translation>
+	  <Translation locale="pt-PT">Acelerador</Translation>
+	  <Translation locale="es-ES">Acelerador</Translation>
+	</mission>
+	<mission id="A08" name="LocID_MAP_8" itemType="2" initialState="2" contextID="36">
+	  <smi locx="0.5111328" locy="0.6250332" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_08\ADV_08.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_8_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_8_Loc" />
+	  <string key="MsnGPSKey" value="gps_davos" />
+	  <string key="MsnImageLabel" value="TerrorCamp" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="BC31552A" />
+	</mission>
+  <mission id="A01_Classic" name="LocID_MAP_1_CLASSIC" itemType="2" initialState="2" contextID="29">
+	  <smi locx="0.7" locy="0.95" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_01\ADV_01_Classic.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_1_Loc" />
+	  <string key="MsnGPSKey" value="gps_shibuya" />
+	  <string key="MsnImageLabel" value="SyrianHitJob" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="A3F973DD" />
+	  <Translation locale="en-US">Virus Vault</Translation>
+	  <Translation locale="fr-FR">Zone de quarantaine</Translation>
+	  <Translation locale="ko-KR">바이러스 보관소</Translation>
+	  <Translation locale="ru-RU">Хранилище вирусов</Translation>
+	  <Translation locale="de-DE">Viren-Tresor</Translation>
+	  <Translation locale="it-IT">Contenimento virale</Translation>
+	  <Translation locale="zh-CHT">病毒庫</Translation>
+	  <Translation locale="ja-JP">ウィルス保管庫</Translation>
+	  <Translation locale="pl-PL">Bank Wirusów</Translation>
+	  <Translation locale="pt-PT">Cofre de vírus</Translation>
+	  <Translation locale="es-ES">Cámara del virus</Translation>
+  </mission>
+  <mission id="A02_Classic" name="LocID_MAP_2_CLASSIC" itemType="2" initialState="2" contextID="30">
+	  <smi locx="0.2864258" locy="0.4123378" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_02\ADV_02_Classic.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_2_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_2_Loc" />
+	  <string key="MsnGPSKey" value="gps_panana" />
+	  <string key="MsnImageLabel" value="Pirates" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_01" />
+	  <string key="NetOnlineMapId" value="B3AA421F" />
+  </mission>
+  <mission id="A03_Classic" name="LocID_MAP_3_CLASSIC" itemType="2" initialState="2" contextID="31">
+	  <smi locx="0.2959961" locy="0.623666" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_03\ADV_03_Classic.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_3_Loc" />
+	  <string key="MsnGPSKey" value="gps_minovka" />
+	  <string key="MsnImageLabel" value="Guantanamo" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="98931ADC" />
+	  <Translation locale="en-US">Cartel</Translation>
+	  <Translation locale="fr-FR">Cartel</Translation>
+	  <Translation locale="ko-KR">카르텔</Translation>
+	  <Translation locale="ru-RU">Картель</Translation>
+	  <Translation locale="de-DE">Kartell</Translation>
+	  <Translation locale="it-IT">Cartello</Translation>
+	  <Translation locale="zh-CHT">卡特爾</Translation>
+	  <Translation locale="ja-JP">カルテル</Translation>
+	  <Translation locale="pl-PL">Kartel</Translation>
+	  <Translation locale="pt-PT">Cartel</Translation>
+	  <Translation locale="es-ES">Cártel</Translation>
+  </mission>
+  <mission id="A04_Classic" name="LocID_MAP_4_CLASSIC" itemType="2" initialState="2" contextID="32">
+	  <smi locx="0.534668" locy="0.8184901" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_04\ADV_04_Classic.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_4_Loc" />
+	  <string key="MsnGPSKey" value="gps_davos" />
+	  <string key="MsnImageLabel" value="TerrorCamp" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="545F5ED4" />
+	  <Translation locale="en-US">Uranium Mine</Translation>
+	  <Translation locale="fr-FR">Mine d'uranium</Translation>
+	  <Translation locale="ko-KR">우라늄 광산</Translation>
+	  <Translation locale="ru-RU">Урановый рудник</Translation>
+	  <Translation locale="de-DE">Uranmine</Translation>
+	  <Translation locale="it-IT">Miniera di uranio</Translation>
+	  <Translation locale="zh-CHT">鈾礦場</Translation>
+	  <Translation locale="ja-JP">ウラン鉱山</Translation>
+	  <Translation locale="pl-PL">Kopalnia Uranu</Translation>
+	  <Translation locale="pt-PT">Mina de urânio</Translation>
+	  <Translation locale="es-ES">Mina de uranio</Translation>
+  </mission>
+  <mission id="A05_Classic" name="LocID_MAP_5_CLASSIC" itemType="2" initialState="2" contextID="33">
+      <smi locx="0.3067871" locy="0.4534511" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_05\ADV_05_Classic.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_5_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_5_Loc" />
+	  <string key="MsnGPSKey" value="gps_shibuya" />
+	  <string key="MsnImageLabel" value="SyrianHitJob" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_03" />
+	  <string key="NetOnlineMapId" value="9072AC00" />
+	  <Translation locale="en-US">Silo</Translation>
+	  <Translation locale="fr-FR">Silo</Translation>
+	  <Translation locale="ko-KR">곡물 저장고</Translation>
+	  <Translation locale="ru-RU">Элеватор</Translation>
+	  <Translation locale="de-DE">Silo</Translation>
+	  <Translation locale="it-IT">Silo</Translation>
+	  <Translation locale="zh-CHT">飛彈井</Translation>
+	  <Translation locale="ja-JP">サイロ</Translation>
+	  <Translation locale="pl-PL">Silos</Translation>
+	  <Translation locale="pt-PT">Silo</Translation>
+	  <Translation locale="es-ES">Silo</Translation>
+  </mission>
+  <mission id="A06_Classic" name="LocID_MAP_6_CLASSIC" itemType="2" initialState="2" contextID="34">
+	  <smi locx="0.5824219" locy="0.4836269" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_06\ADV_06_Classic.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_6_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_6_Loc" />
+	  <string key="MsnGPSKey" value="gps_panana" />
+	  <string key="MsnImageLabel" value="Pirates" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_01" />
+	  <string key="NetOnlineMapId" value="D68E3BB8" />
+	  <Translation locale="en-US">Lebanese Hospital</Translation>
+	  <Translation locale="fr-FR">Hôpital libanais</Translation>
+	  <Translation locale="ko-KR">레바논 병원</Translation>
+	  <Translation locale="ru-RU">Ливанский госпиталь</Translation>
+	  <Translation locale="de-DE">Liban. Krankenhaus</Translation>
+	  <Translation locale="it-IT">Ospedale libanese</Translation>
+	  <Translation locale="zh-CHT">黎巴嫩醫院</Translation>
+	  <Translation locale="ja-JP">レバノンの病院</Translation>
+	  <Translation locale="pl-PL">Libański Szpital</Translation>
+	  <Translation locale="pt-PT">Hospital libanês</Translation>
+	  <Translation locale="es-ES">Hospital libanés</Translation>
+  </mission>
+  <mission id="A07_Classic" name="LocID_MAP_7_CLASSIC" itemType="2" initialState="2" contextID="35">
+	  <smi locx="0.19" locy="0.47" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_07\ADV_07_Classic.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_7_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_7_Loc" />
+	  <string key="MsnGPSKey" value="gps_minovka" />
+	  <string key="MsnImageLabel" value="Guantanamo" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="04541E64" />
+	  <Translation locale="en-US">Particle Accelerator</Translation>
+	  <Translation locale="fr-FR">Accélérateur</Translation>
+	  <Translation locale="ko-KR">입자가속기</Translation>
+	  <Translation locale="ru-RU">Ускоритель частиц</Translation>
+	  <Translation locale="de-DE">Teilchenbeschleuniger</Translation>
+	  <Translation locale="it-IT">Acceleratore</Translation>
+	  <Translation locale="zh-CHT">粒子加速器</Translation>
+	  <Translation locale="ja-JP">粒子加速器</Translation>
+	  <Translation locale="pl-PL">Przyspieszacz Cząstek</Translation>
+	  <Translation locale="pt-PT">Acelerador</Translation>
+	  <Translation locale="es-ES">Acelerador</Translation>
+  </mission>
+  <mission id="A08_Classic" name="LocID_MAP_8_CLASSIC" itemType="2" initialState="2" contextID="36">
+	  <smi locx="0.5111328" locy="0.6250332" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_Adversarial\ADV_08\ADV_08_Classic.unr" />
+	  <string key="BriefingSequence" value="SE_010_M00_Hub_KingmakerBrief" />
+	  <string key="AcceptSequence" value="None" />
+	  <string key="CancelSequence" value="None" />
+	  <string key="MsnDescKey" value="LocID_MAP_8_Desc" />
+	  <string key="MsnLocationKey" value="LocID_MAP_8_Loc" />
+	  <string key="MsnGPSKey" value="gps_davos" />
+	  <string key="MsnImageLabel" value="TerrorCamp" />
+	  <string key="MsnSound" value="DareStudio.Play_Menu_SMI_Radio_US_02" />
+	  <string key="NetOnlineMapId" value="BC31552A" />
+  </mission>
+  </category>
+  <category name="HUB">
+	<mission id="HUB" name="LocID_MIS_HUB" itemType="9" initialState="1" contextID="-1">
+	  <smi locx="0.40" locy="0.2" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <unlocks targetid="SMIFirstUse" />
+	  <unlocks targetid="SMIMapFirstUse" />
+	  <unlocks targetid="SMIPostBriefingFirstUse" />
+	  <unlocks targetid="SMILoadoutFirstUse" />
+	  <string key="MsnLocationKey" value="LocID_MIS_HUB_Subtitle"/>
+	  <string key="MapToLoad" value="_HUB\Stream\HUB_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="TorontoByTheBeach" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	  <string key="MsnLoadBink" value="02_Post_GamePlay.bik" />
+	</mission>
+	<mission id="SMIFirstUse" name="SMIFirstUse" itemType="9" initialState="1" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="Play_03_0020_SE" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="TorontoByTheBeach" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="SMIMapFirstUse" name="SMIMapFirstUse" itemType="9" initialState="1" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="TorontoByTheBeach" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="SMIPostBriefingFirstUse" name="SMIPostBriefingFirstUse" itemType="9" initialState="1" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="TorontoByTheBeach" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="SMILoadoutFirstUse" name="SMILoadoutFirstUse" itemType="9" initialState="1" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="TorontoByTheBeach" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="UpgradeEquipment" name="UpgradeEquipment" itemType="9" initialState="0" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	  <string key="BreadcrumbTo" value="SPHelmetSuitI" />
+	</mission>
+	<mission id="UpgradePlane" name="UpgradePlane" itemType="9" initialState="0" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	  <string key="BreadcrumbTo" value="eUpgradableHubCockpit_Lvl2" />
+	</mission>
+	<mission id="CallSarah" name="CallSarah" itemType="9" initialState="1" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+  </category>
+  <category name="SYSTEM">
+	<mission id="LOBBY" name="Lobby" itemType="8" initialState="2" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="lobby.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="TorontoByTheBeach" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="MENU" name="MENU" itemType="8" initialState="2" contextID="-1">
+	  <smi locx="-1" locy="-1" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="menu.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="TorontoByTheBeach" />
+	  <string key="MsnDescKey" value="" />
+	  <string key="MsnLocationKey" value="" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+  </category>
+  <category name="Multiplayer">
+	<mission id="MP" name="LocID_MAP_Satellite_Title" itemType="7" initialState="1" contextID="37">
+	  <smi locx="0.390625" locy="0.58333331" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="TorontoByTheBeach" />
+	  <string key="MsnDescKey" value="LocID_MAP_Satellite_Description" />
+	  <string key="MsnLocationKey" value="LocID_MAP_Satellite_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	  <Translation locale="en-US">In Multiplayer Lobby</Translation>
+	  <Translation locale="fr-FR">À l'accueil multi</Translation>
+	  <Translation locale="ko-KR">멀티플레이 로비</Translation>
+	  <Translation locale="ru-RU">В лобби сетевой игры</Translation>
+	  <Translation locale="de-DE">In Multiplayer-Lobby</Translation>
+	  <Translation locale="it-IT">In sala d'attesa</Translation>
+	  <Translation locale="zh-CHT">在多人大廳</Translation>
+	  <Translation locale="ja-JP">マルチプレイロビー</Translation>
+	  <Translation locale="pl-PL">W lobby wieloosobowym</Translation>
+	  <Translation locale="pt-PT">No lobby Multijogador</Translation>
+	  <Translation locale="es-ES">En la sala de espera</Translation>
+	</mission>
+  </category>
+  <category name="THREATS">
+	<mission id="THREAT01" name="LocID_FLAVR_Threat_1_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.2007813" locy="0.3902778" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_1_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT02" name="LocID_FLAVR_Threat_2_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.6375" locy="0.4875" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_2_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_2_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT03" name="LocID_FLAVR_Threat_3_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.2101562" locy="0.45" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_3_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT04" name="LocID_FLAVR_Threat_4_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.2429688" locy="0.4319445" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_4_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT05" name="LocID_FLAVR_Threat_5_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.3140625" locy="0.4111111" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_5_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_5_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT06" name="LocID_FLAVR_Threat_6_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.3132813" locy="0.4097222" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_6_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_6_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT07" name="LocID_FLAVR_Threat_7_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.4734375" locy="0.4097222" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_7_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_7_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT08" name="LocID_FLAVR_Threat_8_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.28125" locy="0.3847222" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_8_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_8_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT09" name="LocID_FLAVR_Threat_9_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.7875" locy="0.4361111" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_9_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_9_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="THREAT10" name="LocID_FLAVR_Threat_10_Title" itemType="6" initialState="0" contextID="-1">
+	  <smi locx="0.6570312" locy="0.2569444" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm.unr" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_FLAVR_Threat_10_Desc" />
+	  <string key="MsnLocationKey" value="LocID_FLAVR_Threat_10_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+  </category>
+  <category name="GONEDARK">
+	<mission id="GONEDARK_PH_01" name="LocID_GoneDark_1_Title" itemType="10" initialState="0" contextID="-1">
+	  <smi locx="0.2430957" locy="0.3500332" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_GoneDark_1_Desc" />
+	  <string key="MsnLocationKey" value="LocID_GoneDark_1_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="GONEDARK_PH_02" name="LocID_GoneDark_2_Title" itemType="10" initialState="0" contextID="-1">
+	  <smi locx="0.2630957" locy="0.3500332" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_GoneDark_2_Desc" />
+	  <string key="MsnLocationKey" value="LocID_GoneDark_2_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="GONEDARK_PH_03" name="LocID_GoneDark_3_Title" itemType="10" initialState="0" contextID="-1">
+	  <smi locx="0.2430957" locy="0.3700332" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_GoneDark_3_Desc" />
+	  <string key="MsnLocationKey" value="LocID_GoneDark_3_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="GONEDARK_PH_04" name="LocID_GoneDark_4_Title" itemType="10" initialState="0" contextID="-1">
+	  <smi locx="0.2630957" locy="0.3700332" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_GoneDark_4_Desc" />
+	  <string key="MsnLocationKey" value="LocID_GoneDark_4_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="GONEDARK_PH_05" name="LocID_GoneDark_5_Title" itemType="10" initialState="0" contextID="-1">
+	  <smi locx="0.2430957" locy="0.3900332" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_GoneDark_5_Desc" />
+	  <string key="MsnLocationKey" value="LocID_GoneDark_5_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="GONEDARK_PH_06" name="LocID_GoneDark_6_Title" itemType="10" initialState="0" contextID="-1">
+	  <smi locx="0.3132813" locy="0.4097222" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_GoneDark_6_Desc" />
+	  <string key="MsnLocationKey" value="LocID_GoneDark_6_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="GONEDARK_PH_07" name="LocID_GoneDark_7_Title" itemType="10" initialState="0" contextID="-1">
+	  <smi locx="0.3132813" locy="0.4397222" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_GoneDark_7_Desc" />
+	  <string key="MsnLocationKey" value="LocID_GoneDark_7_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	<mission id="GONEDARK_PH_08" name="LocID_GoneDark_8_Title" itemType="10" initialState="0" contextID="-1">
+	  <smi locx="0.3132813" locy="0.4397222" />
+	  <starttime day="0" hour="0" minute="0" second="0" />
+	  <string key="MapToLoad" value="" />
+	  <string key="BriefingSequence" value="" />
+	  <string key="AcceptSequence" value="" />
+	  <string key="CancelSequence" value="" />
+	  <string key="MsnDescKey" value="LocID_GoneDark_7_Desc" />
+	  <string key="MsnLocationKey" value="LocID_GoneDark_7_Subtitle" />
+	  <string key="MsnGPSKey" value="" />
+	  <string key="MsnImageLabel" value="" />
+	  <string key="MsnSound" value="" />
+	  <string key="NetOnlineMapId" value="" />
+	</mission>
+	</category>
+ </root>

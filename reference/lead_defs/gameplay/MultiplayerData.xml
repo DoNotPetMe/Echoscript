@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets version="65536" formatVersion="65536" typeDefinitionVersion="4825101EB6DEDC3474713A870E12E5A5" dataVersion="0">
+	<Map name="ADV_Testbox_Main" id="C5D3CB3B">
+		<name value="ADV_TestBox_Main - TEST ONLY! " />
+		<path value="GYMs\_Adversarial\ADV_TestBox_Main" />
+		<gameModes value="32" />
+		<imageSubstring value="" />
+	</Map>
+	<Map name="DrugCartel" id="575293CC">
+		<name value="LocID_MAP_3" />
+		<path value="_Adversarial\ADV_03\ADV_03" />
+		<gameModes value="432" />
+		<imageSubstring value="Cartel" />
+	</Map>
+	<Map name="DrugCartelClassic" id="98931ADC">
+		<name value="LocID_MAP_3_CLASSIC" />
+		<path value="_Adversarial\ADV_03_Classic\ADV_03_Classic" />
+		<gameModes value="64" />
+		<imageSubstring value="Cartel" />
+	</Map>
+	<Map name="HadronCollider" id="0BF3AA83">
+		<name value="LocID_MAP_7" />
+		<path value="_Adversarial\ADV_07\ADV_07" />
+		<gameModes value="432" />
+		<imageSubstring value="Hadron" />
+	</Map>
+	<Map name="HadronColliderClassic" id="04541E64">
+		<name value="LocID_MAP_7_CLASSIC" />
+		<path value="_Adversarial\ADV_07_Classic\ADV_07_Classic" />
+		<gameModes value="64" />
+		<imageSubstring value="Hadron" />
+	</Map>
+	<Map name="LebaneseHospital" id="9DD424B3">
+		<name value="LocID_MAP_6" />
+		<path value="_Adversarial\ADV_06\ADV_06" />
+		<gameModes value="432" />
+		<imageSubstring value="Hospital" />
+	</Map>
+	<Map name="LebaneseHospitalClassic" id="D68E3BB8">
+		<name value="LocID_MAP_6_CLASSIC" />
+		<path value="_Adversarial\ADV_06_Classic\ADV_06_Classic" />
+		<gameModes value="64" />
+		<imageSubstring value="Hospital" />
+	</Map>
+	<Map name="Silo" id="24AD16A7">
+		<name value="LocID_MAP_5" />
+		<path value="_Adversarial\ADV_05\ADV_05" />
+		<gameModes value="432" />
+		<imageSubstring value="Silo" />
+	</Map>
+	<Map name="SiloClassic" id="9072AC00">
+		<name value="LocID_MAP_5_CLASSIC" />
+		<path value="_Adversarial\ADV_05_Classic\ADV_05_Classic" />
+		<gameModes value="64" />
+		<imageSubstring value="Silo" />
+	</Map>
+	<Map name="UraniumMine" id="C67A5C7C">
+		<name value="LocID_MAP_4" />
+		<path value="_Adversarial\ADV_04\ADV_04" />
+		<gameModes value="432" />
+		<imageSubstring value="Uranium" />
+	</Map>
+	<Map name="UraniumMineClassic" id="545F5ED4">
+		<name value="LocID_MAP_4_CLASSIC" />
+		<path value="_Adversarial\ADV_04_Classic\ADV_04_Classic" />
+		<gameModes value="64" />
+		<imageSubstring value="Uranium" />
+	</Map>
+	<Map name="VirusVault" id="05F69010">
+		<name value="LocID_MAP_1" />
+		<path value="_Adversarial\ADV_01\ADV_01" />
+		<gameModes value="432" />
+		<imageSubstring value="Virus" />
+	</Map>
+	<Map name="VirusVaultClassic" id="A3F973DD">
+		<name value="LocID_MAP_1_CLASSIC" />
+		<path value="_Adversarial\ADV_01_Classic\ADV_01_Classic" />
+		<gameModes value="64" />
+		<imageSubstring value="Virus" />
+	</Map>
+	<Map name="Bangalore" id="57422D32">
+		<name value="LocID_C_MIS_Briggs_2" />
+		<path value="_DeniableOps\CombinedOps\D_Bangalore\Stream\D_Bangalore_Global_00_strm" />
+		<gameModes value="8" />
+		<imageSubstring value="MP_Briggs2" />
+	</Map>
+	<Map name="Chittagong" id="868F8D40">
+		<name value="LocID_C_MIS_Briggs_3" />
+		<path value="_DeniableOps\CombinedOps\D_Chittagong\Stream\D_Chittagong_Global_00_strm" />
+		<gameModes value="8" />
+		<imageSubstring value="MP_Briggs3" />
+	</Map>
+	<Map name="Kargil" id="4F2ECFAE">
+		<name value="LocID_C_MIS_Briggs_1" />
+		<path value="_DeniableOps\CombinedOps\D_Kargil\Stream\D_Kargil_Global_00_strm" />
+		<gameModes value="8" />
+		<imageSubstring value="MP_Briggs1" />
+	</Map>
+	<Map name="Kostsovo" id="FB05D5A7">
+		<name value="LocID_C_MIS_Briggs_4" />
+		<path value="_DeniableOps\CombinedOps\D_Koltsovo\Stream\D_Koltsovo_Global_00_strm" />
+		<gameModes value="8" />
+		<imageSubstring value="MP_Briggs4" />
+	</Map>
+	<Map name="Amman" id="278028B7">
+		<name value="LocID_C_MIS_Charlie_2" />
+		<path value="_DeniableOps\Extraction\D_Amman\Stream\D_Amman_Global_00_strm" />
+		<gameModes value="4" />
+		<imageSubstring value="MP_Charlie2" />
+	</Map>
+	<Map name="Bratislava" id="2E283083">
+		<name value="LocID_C_MIS_Charlie_3" />
+		<path value="_DeniableOps\Extraction\D_Bratislava\Stream\D_Bratislava_Global_00_strm" />
+		<gameModes value="4" />
+		<imageSubstring value="MP_Charlie3" />
+	</Map>
+	<Map name="Kigali" id="D10888B4">
+		<name value="LocID_C_MIS_Charlie_4" />
+		<path value="_DeniableOps\Extraction\D_Kigali\Stream\D_Kigali_Global_00_strm" />
+		<gameModes value="4" />
+		<imageSubstring value="MP_Charlie4" />
+	</Map>
+	<Map name="Sanaa" id="995CEB02">
+		<name value="LocID_C_MIS_Charlie_1" />
+		<path value="_DeniableOps\Extraction\D_Sanaa\Stream\D_Sanaa_Global_00_strm" />
+		<gameModes value="4" />
+		<imageSubstring value="MP_Charlie1" />
+	</Map>
+	<Map name="Border Crossing" id="51F08114">
+		<name value="LocID_C_MIS_Grim_2" />
+		<path value="_DeniableOps\Ghost\D_BorderCross\Stream\D_BorderCross_Global_00_strm" />
+		<gameModes value="2" />
+		<imageSubstring value="MP_Grim2" />
+	</Map>
+	<Map name="Hackers Den" id="2BAA41A7">
+		<name value="LocID_C_MIS_Grim_3" />
+		<path value="_DeniableOps\Ghost\D_HackerDen\Stream\D_HackerDen_Global_00_strm" />
+		<gameModes value="2" />
+		<imageSubstring value="MP_Grim3" />
+	</Map>
+	<Map name="Sea Fort" id="D54A0746">
+		<name value="LocID_C_MIS_Grim_1" />
+		<path value="_DeniableOps\Ghost\D_SeaFort\Stream\D_SeaFort_Global_00_strm" />
+		<gameModes value="2" />
+		<imageSubstring value="MP_Grim1" />
+	</Map>
+	<Map name="Yacht" id="3E75EB6A">
+		<name value="LocID_C_MIS_Grim_4" />
+		<path value="_DeniableOps\Ghost\D_Yacht\Stream\D_Yacht_Global_00_strm" />
+		<gameModes value="2" />
+		<imageSubstring value="MP_Grim4" />
+	</Map>
+	<Map name="Diamond Mine" id="798E4E17">
+		<name value="LocID_C_MIS_Kobin_3" />
+		<path value="_DeniableOps\Hunter\D_DiamondMine\Stream\D_DiamondMine_Global_00_strm" />
+		<gameModes value="1" />
+		<imageSubstring value="MP_Kobin3" />
+	</Map>
+	<Map name="Dirty Bomb" id="F19E884F">
+		<name value="LocID_C_MIS_Kobin_4" />
+		<path value="_DeniableOps\Hunter\D_DirtyBomb\Stream\D_FPP_Global_00_strm" />
+		<gameModes value="1" />
+		<imageSubstring value="MP_Kobin4" />
+	</Map>
+	<Map name="Fish Market" id="2C35D271">
+		<name value="LocID_C_MIS_Kobin_2" />
+		<path value="_DeniableOps\Hunter\D_FishMarket\Stream\D_FishMarket_Global_00_strm" />
+		<gameModes value="1" />
+		<imageSubstring value="MP_Kobin2" />
+	</Map>
+	<Map name="Opium Farm" id="04DEDD40">
+		<name value="LocID_C_MIS_Kobin_1" />
+		<path value="_DeniableOps\Hunter\D_OpiumFarm\Stream\D_OpiumFarm_Global_00_strm" />
+		<gameModes value="1" />
+		<imageSubstring value="MP_Kobin1" />
+	</Map>
+	<MatchmakingSettings name="Default" id="58F60C94">
+		<natModerateCanHost value="true" />
+		<natUnknownCanHost value="true" />
+		<nbSessionsToQos value="5" />
+		<qosTimeout value="2" />
+		<maxSearchRetryCount value="2" />
+		<maxSearchRetryCountCannotHost value="10" />
+		<hostingTimeout value="180" />
+		<maxRoutedPeers value="2" />
+		<minPlayerCountBeforeAcceptingStricts value="0" />
+		<maxSearchDelay value="0" />
+		<probabilityImmediateHosting value="0" />
+		<probabilityAnotherSearch value="0.15" />
+		<numPingsPerPlayer value="1" />
+		<weightQoSPing_multiplier value="600.0" />
+		<weightQoSPing_lowerLimit value="300.0" />
+		<weightQoSPing_upperLimit value="40.0" />
+		<weightQoSConnectionPercentage_multiplier value="0.0" />
+		<weightQoSConnectionPercentage_lowerLimit value="0.0" />
+		<weightQoSConnectionPercentage_upperLimit value="1.0" />
+		<weightServerOrder_multiplier value="0.0" />
+		<weightServerOrder_lowerLimit value="0.0" />
+		<weightServerOrder_upperLimit value="7.0" />
+		<weightNumStrictNATs_multiplier value="0.0" />
+		<weightNumStrictNATs_lowerLimit value="0.0" />
+		<weightNumStrictNATs_upperLimit value="7.0" />
+		<weightNumParticipants_multiplier value="1000.0" />
+		<weightNumParticipants_lowerLimit value="7.0" />
+		<weightNumParticipants_upperLimit value="1.0" />
+		<weightRandomNumber_multiplier value="0.0" />
+		<weightRandomNumber_lowerLimit value="0.0" />
+		<weightRandomNumber_upperLimit value="1.0" />
+		<minWeightToAttemptJoin value="0.0" />
+	</MatchmakingSettings>
+	<TDMVariant name="Default TDM" id="6C05830C">
+		<name value="DEFAULT TDM" />
+		<teamComposition value="0" />
+		<maxTime value="600" />
+		<maxScore value="40" />
+		<classicMode value="false" />
+		<killCam value="true" />
+		<randomLoadout value="false" />
+		<RLPerRespawn value="false" />
+	</TDMVariant>
+	<Match name="TG_Silo" id="2B82DFC0">
+		<map value="24AD16A7" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="TG_UraniumMine" id="62F4C867">
+		<map value="C67A5C7C" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Playlist name="Training Grounds" id="5162A81A">
+		<name value="LocID_PLIST_Training" />
+		<description value="LocID_PLIST_Training_Desc" />
+		<image value="MP_TRAINING" />
+		<minPlayers value="4" />
+		<maxPlayers value="8" />
+		<maxPartySize value="8" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="50" />
+		<voting value="true" />
+		<matches>
+			<item ref="2B82DFC0" />
+			<item ref="62F4C867" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<FLDVariant name="Default FLD" id="5767501D">
+		<name value="DEFAULT FLD" />
+		<teamComposition value="0" />
+		<maxTime value="600" />
+		<maxScore value="5" />
+		<classicMode value="false" />
+		<killCam value="true" />
+		<randomLoadout value="false" />
+		<RLPerRespawn value="false" />
+		<timeToCapture value="2" />
+	</FLDVariant>
+	<Match name="FD_ADV04" id="6030C1F2">
+		<map value="C67A5C7C" />
+		<gameMode value="8" />
+		<svmRules value="0" />
+		<fldRules value="5767501D" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="FD_ADV07" id="6030C1F1">
+		<map value="0BF3AA83" />
+		<gameMode value="8" />
+		<svmRules value="0" />
+		<fldRules value="5767501D" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<SvMVariant name="Default SvM" id="329A3C05">
+		<name value="DEFAULT SvM" />
+		<teamComposition value="1" />
+		<maxTime value="600" />
+		<maxScore value="3" />
+		<classicMode value="false" />
+		<killCam value="false" />
+		<randomLoadout value="false" />
+		<RLPerRespawn value="false" />
+		<numberOfTerminals value="3" />
+		<timeToCompleteHack value="2" />
+		<timeIrrelevantForVictory value="true" />
+		<keepComputerActivePostHack value="false" />
+		<keepPlayingAfterWin value="false" />
+		<consecutiveHacks value="false" />
+		<hackProgressReset value="true" />
+	</SvMVariant>
+	<Match name="SvM_ADV04" id="797DCDE0">
+		<map value="C67A5C7C" />
+		<gameMode value="7" />
+		<svmRules value="329A3C05" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="SvM_ADV01" id="7978CDE0">
+		<map value="05F69010" />
+		<gameMode value="7" />
+		<svmRules value="329A3C05" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<CTIVariant name="Default CTI" id="5DF8F251">
+		<name value="DEFAULT CTI" />
+		<teamComposition value="1" />
+		<maxTime value="480" />
+		<maxScore value="5" />
+		<classicMode value="false" />
+		<killCam value="true" />
+		<randomLoadout value="false" />
+		<RLPerRespawn value="false" />
+		<courierPenalty value="true" />
+	</CTIVariant>
+	<Match name="CTI_ADV06" id="22710C0A">
+		<map value="9DD424B3" />
+		<gameMode value="9" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="5DF8F251" />
+	</Match>
+	<Match name="CTI_ADV03" id="226C0C0A">
+		<map value="575293CC" />
+		<gameMode value="9" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="5DF8F251" />
+	</Match>
+	<Match name="TDM_ADV05" id="8F688C5A">
+		<map value="24AD16A7" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="TDM_ADV01" id="8F6C8C5A">
+		<map value="05F69010" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="SvM_ADV05" id="797CCDE0">
+		<map value="24AD16A7" />
+		<gameMode value="7" />
+		<svmRules value="329A3C05" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="FD_ADV01" id="6030C1F7">
+		<map value="05F69010" />
+		<gameMode value="8" />
+		<svmRules value="0" />
+		<fldRules value="5767501D" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Playlist name="FridayPlaytest" id="1E738928">
+		<name value="Splinter Dev (hardcore) Playtest" />
+		<description value="Playtest maps for friday ADV session" />
+		<image value="" />
+		<minPlayers value="6" />
+		<maxPlayers value="8" />
+		<maxPartySize value="8" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="50" />
+		<voting value="true" />
+		<matches>
+			<item ref="6030C1F2" />
+			<item ref="6030C1F1" />
+			<item ref="797DCDE0" />
+			<item ref="7978CDE0" />
+			<item ref="22710C0A" />
+			<item ref="226C0C0A" />
+			<item ref="8F688C5A" />
+			<item ref="8F6C8C5A" />
+			<item ref="797CCDE0" />
+			<item ref="6030C1F7" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Match name="CTI_ADV05" id="226E0C0A">
+		<map value="24AD16A7" />
+		<gameMode value="9" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="5DF8F251" />
+	</Match>
+	<Match name="FD_ADV05" id="6030C1F3">
+		<map value="24AD16A7" />
+		<gameMode value="8" />
+		<svmRules value="0" />
+		<fldRules value="5767501D" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Playlist name="Perf_Silo_All_Modes" id="B88EEFC3">
+		<name value="PerfTest - SILO - ALL MODES" />
+		<description value="Silo Only - Rotating all game modes" />
+		<image value="" />
+		<minPlayers value="8" />
+		<maxPlayers value="8" />
+		<maxPartySize value="8" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="50" />
+		<voting value="false" />
+		<matches>
+			<item ref="797CCDE0" />
+			<item ref="8F688C5A" />
+			<item ref="226E0C0A" />
+			<item ref="6030C1F3" />
+		</matches>
+		<shuffle value="false" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Match name="Match_01" id="248B6C29">
+		<map value="24AD16A7" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="Match_02" id="24886C29">
+		<map value="05F69010" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="Match_03" id="24896C29">
+		<map value="575293CC" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Playlist name="OnlineTest" id="CEA896FF">
+		<name value="Online Test" />
+		<description value="Online Test" />
+		<image value="" />
+		<minPlayers value="2" />
+		<maxPlayers value="8" />
+		<maxPartySize value="4" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="50" />
+		<voting value="true" />
+		<matches>
+			<item ref="248B6C29" />
+			<item ref="24886C29" />
+			<item ref="24896C29" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<SvMVariant name="Classic SvM" id="ADD2A425">
+		<name value="CLASSIC SvM" />
+		<teamComposition value="1" />
+		<maxTime value="600" />
+		<maxScore value="3" />
+		<classicMode value="true" />
+		<killCam value="false" />
+		<randomLoadout value="false" />
+		<RLPerRespawn value="false" />
+		<numberOfTerminals value="3" />
+		<timeToCompleteHack value="2" />
+		<timeIrrelevantForVictory value="true" />
+		<keepComputerActivePostHack value="false" />
+		<keepPlayingAfterWin value="false" />
+		<consecutiveHacks value="false" />
+		<hackProgressReset value="true" />
+	</SvMVariant>
+	<Match name="ClassicSvM_ADV01" id="CDF0F6D3">
+		<map value="A3F973DD" />
+		<gameMode value="10" />
+		<svmRules value="ADD2A425" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="ClassicSvM_ADV03" id="CDF0F6D1">
+		<map value="98931ADC" />
+		<gameMode value="10" />
+		<svmRules value="ADD2A425" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="ClassicSvM_ADV04" id="CDF0F6D8">
+		<map value="545F5ED4" />
+		<gameMode value="10" />
+		<svmRules value="ADD2A425" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="ClassicSvM_ADV05" id="CDF0F6D7">
+		<map value="9072AC00" />
+		<gameMode value="10" />
+		<svmRules value="ADD2A425" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="ClassicSvM_ADV06" id="CDF0F6D6">
+		<map value="D68E3BB8" />
+		<gameMode value="10" />
+		<svmRules value="ADD2A425" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="ClassicSvM_ADV07" id="CDF0F6D5">
+		<map value="04541E64" />
+		<gameMode value="10" />
+		<svmRules value="ADD2A425" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="CTI_ADV01" id="226A0C0A">
+		<map value="05F69010" />
+		<gameMode value="9" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="5DF8F251" />
+	</Match>
+	<Match name="CTI_ADV04" id="226F0C0A">
+		<map value="C67A5C7C" />
+		<gameMode value="9" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="5DF8F251" />
+	</Match>
+	<Match name="CTI_ADV07" id="22700C0A">
+		<map value="0BF3AA83" />
+		<gameMode value="9" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="5DF8F251" />
+	</Match>
+	<Match name="FD_ADV03" id="6030C1F5">
+		<map value="575293CC" />
+		<gameMode value="8" />
+		<svmRules value="0" />
+		<fldRules value="5767501D" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="FD_ADV06" id="6030C1F0">
+		<map value="9DD424B3" />
+		<gameMode value="8" />
+		<svmRules value="0" />
+		<fldRules value="5767501D" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="SvM_ADV03" id="797ACDE0">
+		<map value="575293CC" />
+		<gameMode value="7" />
+		<svmRules value="329A3C05" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="SvM_ADV06" id="797FCDE0">
+		<map value="9DD424B3" />
+		<gameMode value="7" />
+		<svmRules value="329A3C05" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="SvM_ADV07" id="797ECDE0">
+		<map value="0BF3AA83" />
+		<gameMode value="7" />
+		<svmRules value="329A3C05" />
+		<fldRules value="0" />
+		<tdmRules value="0" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="TDM_ADV03" id="8F6A8C5A">
+		<map value="575293CC" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="TDM_ADV04" id="8F678C5A">
+		<map value="C67A5C7C" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="TDM_ADV06" id="8F658C5A">
+		<map value="9DD424B3" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Match name="TDM_ADV07" id="8F668C5A">
+		<map value="0BF3AA83" />
+		<gameMode value="6" />
+		<svmRules value="0" />
+		<fldRules value="0" />
+		<tdmRules value="6C05830C" />
+		<ctiRules value="0" />
+	</Match>
+	<Playlist name="Serge_Classic" id="811259F4">
+		<name value="LocID_PLIST_SVMC" />
+		<description value="LocID_PLIST_SVMC_Desc" />
+		<image value="MP_SVMC" />
+		<minPlayers value="4" />
+		<maxPlayers value="4" />
+		<maxPartySize value="2" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="56" />
+		<voting value="true" />
+		<matches>
+			<item ref="CDF0F6D7" />
+			<item ref="CDF0F6D3" />
+			<item ref="CDF0F6D8" />
+			<item ref="CDF0F6D1" />
+			<item ref="CDF0F6D6" />
+			<item ref="CDF0F6D5" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Playlist name="Serge_CTI" id="270ED263">
+		<name value="LocID_PLIST_Capture" />
+		<description value="LocID_PLIST_Capture_Desc" />
+		<image value="MP_CAPTURE" />
+		<minPlayers value="6" />
+		<maxPlayers value="8" />
+		<maxPartySize value="4" />
+		<requiresPassport value="true" />
+		<minRank value="5" />
+		<maxRank value="56" />
+		<voting value="true" />
+		<matches>
+			<item ref="226F0C0A" />
+			<item ref="226C0C0A" />
+			<item ref="22710C0A" />
+			<item ref="226A0C0A" />
+			<item ref="22700C0A" />
+			<item ref="226E0C0A" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Playlist name="Serge_FD" id="F31F88B3">
+		<name value="LocID_PLIST_Frontline" />
+		<description value="LocID_PLIST_Frontline_Desc" />
+		<image value="MP_FRONTLINE" />
+		<minPlayers value="4" />
+		<maxPlayers value="6" />
+		<maxPartySize value="3" />
+		<requiresPassport value="true" />
+		<minRank value="5" />
+		<maxRank value="56" />
+		<voting value="true" />
+		<matches>
+			<item ref="6030C1F5" />
+			<item ref="6030C1F1" />
+			<item ref="6030C1F7" />
+			<item ref="6030C1F2" />
+			<item ref="6030C1F3" />
+			<item ref="6030C1F0" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Playlist name="Serge_SvM" id="EEF04EF9">
+		<name value="LocID_PLIST_SVM" />
+		<description value="LocID_PLIST_SVM_Desc" />
+		<image value="MP_SVM" />
+		<minPlayers value="6" />
+		<maxPlayers value="8" />
+		<maxPartySize value="4" />
+		<requiresPassport value="false" />
+		<minRank value="5" />
+		<maxRank value="56" />
+		<voting value="true" />
+		<matches>
+			<item ref="797CCDE0" />
+			<item ref="797FCDE0" />
+			<item ref="797ACDE0" />
+			<item ref="797DCDE0" />
+			<item ref="797ECDE0" />
+			<item ref="7978CDE0" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings>
+			<item ref="58F60C94" />
+		</MatchmakingSettings>
+	</Playlist>
+	<Playlist name="Serge_TDM" id="2A4288B3">
+		<name value="LocID_PLIST_TDM" />
+		<description value="LocID_PLIST_TDM_Desc" />
+		<image value="MP_TDM" />
+		<minPlayers value="6" />
+		<maxPlayers value="8" />
+		<maxPartySize value="4" />
+		<requiresPassport value="true" />
+		<minRank value="5" />
+		<maxRank value="56" />
+		<voting value="true" />
+		<matches>
+			<item ref="8F658C5A" />
+			<item ref="8F688C5A" />
+			<item ref="8F6A8C5A" />
+			<item ref="8F6C8C5A" />
+			<item ref="8F678C5A" />
+			<item ref="8F668C5A" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Playlist name="PressTour_SvM" id="177D302F">
+		<name value="Press Tour Spy vs Merc" />
+		<description value="Press Tour Demo" />
+		<image value="" />
+		<minPlayers value="6" />
+		<maxPlayers value="8" />
+		<maxPartySize value="8" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="50" />
+		<voting value="false" />
+		<matches>
+			<item ref="797CCDE0" />
+			<item ref="7978CDE0" />
+			<item ref="797ACDE0" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Playlist name="SPIES VS MERCS BLACKLIST" id="A429089D">
+		<name value="SmokeTest - Spies vs. Mercs Blacklist" />
+		<description value="Press Tour Demo (Blacklist)" />
+		<image value="MP_SvMC" />
+		<minPlayers value="8" />
+		<maxPlayers value="8" />
+		<maxPartySize value="8" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="50" />
+		<voting value="false" />
+		<matches>
+			<item ref="797CCDE0" />
+			<item ref="797ACDE0" />
+			<item ref="7978CDE0" />
+		</matches>
+		<shuffle value="false" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Playlist name="SPIES VS MERCS CLASSIC" id="D4B6B4A7">
+		<name value="SmokeTest - Spies vs. Mercs (Classic)" />
+		<description value="Press Tour Demo (Classic)" />
+		<image value="MP_SVM" />
+		<minPlayers value="4" />
+		<maxPlayers value="4" />
+		<maxPartySize value="4" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="50" />
+		<voting value="false" />
+		<matches>
+			<item ref="CDF0F6D3" />
+			<item ref="CDF0F6D7" />
+		</matches>
+		<shuffle value="false" />
+		<MatchmakingSettings />
+	</Playlist>
+	<Playlist name="Training Grounds" id="58A5664D">
+		<name value="LocID_PLIST_Training" />
+		<description value="LocID_PLIST_Training_Desc" />
+		<image value="MP_Training" />
+		<minPlayers value="2" />
+		<maxPlayers value="6" />
+		<maxPartySize value="3" />
+		<requiresPassport value="false" />
+		<minRank value="1" />
+		<maxRank value="4" />
+		<voting value="true" />
+		<matches>
+			<item ref="797ACDE0" />
+			<item ref="797DCDE0" />
+			<item ref="797CCDE0" />
+		</matches>
+		<shuffle value="true" />
+		<MatchmakingSettings />
+	</Playlist>
+	<CTIVariant name="Classic CTI" id="D9315A71">
+		<name value="CLASSIC CTI" />
+		<teamComposition value="1" />
+		<maxTime value="600" />
+		<maxScore value="5" />
+		<classicMode value="true" />
+		<killCam value="true" />
+		<randomLoadout value="false" />
+		<RLPerRespawn value="false" />
+		<courierPenalty value="true" />
+	</CTIVariant>
+	<TDMVariant name="Classic TDM" id="AAB12F8A">
+		<name value="CLASSIC TDM" />
+		<teamComposition value="0" />
+		<maxTime value="600" />
+		<maxScore value="40" />
+		<classicMode value="true" />
+		<killCam value="true" />
+		<randomLoadout value="false" />
+		<RLPerRespawn value="false" />
+	</TDMVariant>
+	<Config name="Config" id="D3F14D80">
+		<playlists>
+			<item ref="58A5664D" />
+			<item ref="811259F4" />
+			<item ref="EEF04EF9" />
+			<item ref="270ED263" />
+			<item ref="F31F88B3" />
+			<item ref="2A4288B3" />
+		</playlists>
+		<adversarialMaps>
+			<item ref="575293CC" />
+			<item ref="0BF3AA83" />
+			<item ref="9DD424B3" />
+			<item ref="24AD16A7" />
+			<item ref="C67A5C7C" />
+			<item ref="05F69010" />
+			<item ref="98931ADC" />
+			<item ref="04541E64" />
+			<item ref="D68E3BB8" />
+			<item ref="9072AC00" />
+			<item ref="545F5ED4" />
+			<item ref="A3F973DD" />
+		</adversarialMaps>
+		<combinedOpsMaps>
+			<item ref="4F2ECFAE" />
+			<item ref="57422D32" />
+			<item ref="868F8D40" />
+			<item ref="FB05D5A7" />
+			<item ref="995CEB02" />
+			<item ref="278028B7" />
+			<item ref="2E283083" />
+			<item ref="D10888B4" />
+			<item ref="D54A0746" />
+			<item ref="51F08114" />
+			<item ref="2BAA41A7" />
+			<item ref="3E75EB6A" />
+			<item ref="04DEDD40" />
+			<item ref="2C35D271" />
+			<item ref="798E4E17" />
+			<item ref="F19E884F" />
+		</combinedOpsMaps>
+		<intermissionTime value="45.0" />
+		<countdownTime value="5" />
+		<defaultCoopMap value="D54A0746" />
+		<defaultCoopGameMode value="3" />
+		<defaultAdversarialMap value="24AD16A7" />
+		<defaultAdversarialGameMode value="7" />
+		<rogueAgentPlaylists>
+			<item ref="811259F4" />
+			<item ref="EEF04EF9" />
+		</rogueAgentPlaylists>
+	</Config>
+</assets>

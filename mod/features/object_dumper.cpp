@@ -10,12 +10,58 @@
 #include <cstdio>
 #include <cstring>
 
+// -----------------------------------------------------------------------
+//  UE3 GObjects signature stubs — fill these via IDA/x64dbg once confirmed.
+//
+//  GObjects is a TArray<FObjectItem> (or FUObjectArray in UE4-style builds).
+//  The pattern below should resolve to the global GObjects pointer.
+//  This IS standard UE3; Blacklist uses Engine.GameEngine and Package.Class
+//  naming (see System/Blacklist.ini: GameEngine=Engine.GameEngine).
+//
+//  ScanGame() returns a RIP-relative resolved address pointing at GObjects.
+//  After resolving, GObjects[i].Object is a UObject*; read Object->Class
+//  (at UObject+0x??) and Object->Name (FName at UObject+0x??) to find UClass*.
+//
+//  Recommended bring-up order:
+//   1. Find GObjects via signature → confirm it walks recognisable class names.
+//   2. Find the "Mesh" or "Actor" UClass* — that becomes the typeNode for spawn.
+//   3. Locate UWorld::SpawnActor virtual at a known vtable slot (standard UE3).
+// -----------------------------------------------------------------------
+
+// <<< FILL via IDA/x64dbg — see engine_bridge.h for the same pattern style.
+static constexpr const char* GOBJECTS_SIG =
+    "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??";   // placeholder
+static constexpr int GOBJECTS_REL32_OFF   = 3;
+static constexpr int GOBJECTS_INSTR_SIZE  = 7;
+
+static constexpr const char* GNAMES_SIG =
+    "?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ??";   // placeholder
+static constexpr int GNAMES_REL32_OFF     = 3;
+static constexpr int GNAMES_INSTR_SIZE    = 7;
+
+// Known UObject layout offsets in Blacklist (UE3 — tune these live).
+// These are the standard UE3 UObject fields:
+//   +0x00  VTable ptr
+//   +0x08  ObjectFlags (uint64 in 64-bit UE3)
+//   +0x10  Index (int32 in GObjects)
+//   +0x18  UClass* Class     ← the class node pointer we want
+//   +0x28  FName Name        ← {Index:int32, Number:int32}
+//   +0x30  UObject* Outer
+// All of the above are HYPOTHESES for Blacklist; tune live in the menu.
+struct UObjectOffsets {
+    size_t classPtr = 0x18;   // UClass* Class at this offset within UObject
+    size_t nameIdx  = 0x28;   // FName.Index (int32)
+};
+static UObjectOffsets s_ue3Off{};
+
 namespace ObjectDumper {
 
 Config g_config{};
 
 // Resolved registry walk root (first node), discovered in Init().
 static uintptr_t g_registryHead = 0;
+// Resolved UE3 GObjects base pointer (TArray<FObjectItem>*), or 0.
+static uintptr_t g_gobjectsPtr  = 0;
 
 // -----------------------------------------------------------------------
 //  Find the address of a literal ANSI string inside the game module's
@@ -113,39 +159,93 @@ static bool ReadNodeName(uintptr_t node, std::string& out) {
 }
 
 // -----------------------------------------------------------------------
-//  Init — anchor the registry using the "Actor" type-name string.
+//  TryScanUE3GObjects — attempt to locate GObjects via signature.
+//  Since Blacklist is UE3, this is the preferred path; it gives UClass*
+//  pointers directly.
+// -----------------------------------------------------------------------
+static bool TryScanUE3GObjects() {
+    g_gobjectsPtr = 0;
+
+    // GOBJECTS_SIG is a placeholder until the real signature is found via RE.
+    // When the placeholder is "?? ?? ..." it will scan but never match real bytes
+    // (all-wildcard scan results in no useful hit) — treated as "not found".
+    // Fill GOBJECTS_SIG with a real IDA-style pattern to activate this path.
+    bool allWild = true;
+    {
+        const char* p = GOBJECTS_SIG;
+        while (*p) {
+            if (*p != '?' && *p != ' ') { allWild = false; break; }
+            ++p;
+        }
+    }
+    if (allWild) {
+        Logger::Info("ObjectDumper: GObjects sig is placeholder — UE3 path skipped. "
+                     "Fill GOBJECTS_SIG in object_dumper.cpp after RE.");
+        return false;
+    }
+
+    uintptr_t hit = PatternScan::ScanGame(GOBJECTS_SIG);
+    if (!hit) {
+        Logger::Warn("ObjectDumper: GOBJECTS_SIG not found in image.");
+        return false;
+    }
+    g_gobjectsPtr = PatternScan::ResolveRIPSimple(hit, GOBJECTS_REL32_OFF, GOBJECTS_INSTR_SIZE);
+    if (!g_gobjectsPtr) {
+        Logger::Warn("ObjectDumper: GObjects RIP resolve failed.");
+        return false;
+    }
+    Logger::Info("ObjectDumper: GObjects @ 0x%p (UE3 path active).",
+                 reinterpret_cast<void*>(g_gobjectsPtr));
+    return true;
+}
+
+// -----------------------------------------------------------------------
+//  Init — try UE3 GObjects first, fall back to LEAD string-anchor.
 // -----------------------------------------------------------------------
 bool Init() {
     g_registryHead = 0;
+    g_gobjectsPtr  = 0;
 
+    // Path 1: UE3 GObjects (preferred — standard UE3 structure).
+    if (TryScanUE3GObjects()) {
+        g_registryHead = g_gobjectsPtr;  // reuse registryHead as the anchor
+        Logger::Info("ObjectDumper: using UE3 GObjects path.");
+        return true;
+    }
+
+    // Path 2: LEAD string-anchor fallback — scan data sections for the
+    // literal "Actor" string that LEAD type-registration code bakes in,
+    // then find the registry node that references it.
     uintptr_t actorStr = FindString("Actor");
     if (!actorStr) {
         Logger::Warn("ObjectDumper: 'Actor' string not found in image — "
-                     "type registry anchor failed.");
+                     "both UE3 and LEAD anchor paths failed.");
         return false;
     }
-    Logger::Info("ObjectDumper: 'Actor' string @ 0x%p", reinterpret_cast<void*>(actorStr));
+    Logger::Info("ObjectDumper: 'Actor' string @ 0x%p (LEAD anchor path).",
+                 reinterpret_cast<void*>(actorStr));
 
-    // Find a node that points at the "Actor" name string at the configured
-    // name-pointer offset.  FindPointerTo returns the address of the field;
-    // the node base is that address minus node_name_ptr_off.
     uintptr_t nameField = FindPointerTo(actorStr);
     if (!nameField) {
-        Logger::Warn("ObjectDumper: no node references the 'Actor' string. "
+        Logger::Warn("ObjectDumper: no node references 'Actor' string. "
                      "Adjust layout offsets and retry.");
         return false;
     }
 
     g_registryHead = nameField - g_config.layout.node_name_ptr_off;
-    Logger::Info("ObjectDumper: candidate registry node @ 0x%p",
+    Logger::Info("ObjectDumper: candidate LEAD registry node @ 0x%p",
                  reinterpret_cast<void*>(g_registryHead));
-    Logger::Info("ObjectDumper: verify the node layout offsets in the menu, "
+    Logger::Info("ObjectDumper: verify node layout offsets in menu, "
                  "then Dump to confirm names walk correctly.");
     return true;
 }
 
 bool IsRegistryFound() {
     return g_registryHead != 0;
+}
+
+bool IsUE3GObjectsActive() {
+    return g_gobjectsPtr != 0;
 }
 
 // -----------------------------------------------------------------------

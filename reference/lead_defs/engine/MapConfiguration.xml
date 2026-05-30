@@ -1,0 +1,77 @@
+<!--
+    This files defines the configuration data for the maps which will ship with the game.
+	See http://mdc-web-tomcat17.ubisoft.org/confluence/display/Blacklistprog/MapSetupMP
+    for useage information.
+-->
+
+<maps>
+
+  <!-- For reference
+  
+  <!-- *** C01 *** -->
+  <map name="ST. PETERSBURG BANYA" bbid="0" description="MafiaClubDesc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub" SIR="1">
+
+    <!-- Game mode list -->
+    <mode name="Hunter" enabled="1"/>
+    <mode name="Ghost" enabled="1"/>
+    <mode name="Extraction" enabled="1"/>
+    <mode name="CombinedOps" enabled="1"/>
+
+    <!-- Black box list -->
+    <!-- STORY -->
+    <blackbox name="STPETERSBURG_1" bbid="0" description="MafiaClub01Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub" SIR="1" IsChapter="1">
+      <mode name="Hunter" enabled="0"/>
+      <mode name="FaceOff" enabled="0"/>
+      <mode name="PureStealth" enabled="0"/>
+    </blackbox>
+
+    <blackbox name="STPETERSBURG_2" bbid="1" description="MafiaClub01Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub" SIR="1" IsChapter="1">
+      <mode name="Hunter" enabled="0"/>
+      <mode name="FaceOff" enabled="0"/>
+      <mode name="PureStealth" enabled="0"/>
+    </blackbox>
+
+    <blackbox name="STPETERSBURG_3" bbid="2" bbcount="2" description="MafiaClub02Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub" SIR="1" IsChapter="1">
+      <mode name="Hunter" enabled="0"/>
+      <mode name="FaceOff" enabled="0"/>
+      <mode name="PureStealth" enabled="0"/>
+    </blackbox>
+
+    <blackbox name="STPETERSBURG_4" bbid="4" description="MafiaClub04Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub" SIR="1" IsChapter="1">
+      <mode name="Hunter" enabled="0"/>
+      <mode name="FaceOff" enabled="0"/>
+      <mode name="PureStealth" enabled="0"/>
+    </blackbox>
+
+    <!-- Deniable Ops -->
+    <blackbox name="C01_01" bbid="1" description="MafiaClub01Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub">
+      <mode name="CoopStory" enabled="0"/>
+    </blackbox>
+    
+    <blackbox name="C01_02" bbid="2" description="MafiaClub02Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub">
+      <mode name="CoopStory" enabled="0"/>
+    </blackbox>
+
+    <blackbox name="C01_03" bbid="3" description="MafiaClub03Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub">
+      <mode name="CoopStory" enabled="0"/>
+    </blackbox>
+
+    <blackbox name="C01_04" bbid="4" description="MafiaClub04Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub">
+      <mode name="CoopStory" enabled="0"/>
+    </blackbox>
+  </map>
+  
+  <!-- C01 LAST STAND -->
+  <map name="ST. PETERSBURG BANYA 1" bbid="0" description="MafiaClubDesc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub" SIR="1">
+    <!-- Game mode list -->
+    <mode name="LastStand" enabled="1"/>
+
+    <!-- Black box list -->
+    <blackbox name="ST. PETERSBURG BANYA 2" bbid="2" description="MafiaClub02Desc" thumbnail="" file="_COOP\C01_MafiaClub.unr" linfile="C01_MafiaClub" SIR="1">
+    </blackbox>
+
+  </map>
+
+  -->
+   
+</maps>
