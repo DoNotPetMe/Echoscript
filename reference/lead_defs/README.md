@@ -8,6 +8,7 @@ used to drive the mod's level editor / prop spawner.
 | File | What it is | How it's used |
 |------|------------|---------------|
 | `definitions.xml` | LEAD type registry — 174 types, full `Actor` hierarchy | Source of `mod/features/prop_catalog.inc` (the 62 placeable types). Regenerate with the script below. |
+| `flash_ui/*.xml` | Scaleform/Flash UI layouts — menu/HUD widget trees (`Button`, `Label`, `ListBox`, `ListView`, `DropDown`, progress/spinner/timer) with tweens, event command bindings, focus-transfer nav | Not used by prop spawning (2D UI, not world props). Reference for the `Flash*` actor types and the LEAD `Command`/`Tween`/event scripting model. Potential basis for custom HUD injection later. |
 
 (More XML batches land here as they're shared — command/event/parameter
 definitions for the scripting layer, per-type field layouts for the engine
