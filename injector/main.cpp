@@ -98,6 +98,32 @@ static std::wstring DllPathNextToInjector() {
     return path;
 }
 
+// Returns true if the target process is 32-bit (running under WOW64). The
+// injector and BlacklistMod.dll are built x64, so a 32-bit target is a hard
+// incompatibility: a 64-bit DLL cannot be loaded into a 32-bit process.
+static bool TargetIsWow64(HANDLE proc) {
+    BOOL wow64 = FALSE;
+    IsWow64Process(proc, &wow64);
+    return wow64 != FALSE;
+}
+
+// Returns true if a module with the given base name is loaded in the target.
+static bool IsModuleLoaded(HANDLE proc, const wchar_t* moduleName) {
+    HMODULE mods[1024];
+    DWORD needed = 0;
+    if (!EnumProcessModulesEx(proc, mods, sizeof(mods), &needed, LIST_MODULES_ALL))
+        return false;
+
+    const DWORD count = needed / sizeof(HMODULE);
+    for (DWORD i = 0; i < count; ++i) {
+        wchar_t name[MAX_PATH]{};
+        if (GetModuleBaseNameW(proc, mods[i], name, MAX_PATH) &&
+            _wcsicmp(name, moduleName) == 0)
+            return true;
+    }
+    return false;
+}
+
 // Inject dllPath into the process via CreateRemoteThread + LoadLibraryW.
 static bool InjectDll(DWORD pid, const std::wstring& dllPath) {
     HANDLE proc = OpenProcess(
@@ -107,6 +133,18 @@ static bool InjectDll(DWORD pid, const std::wstring& dllPath) {
     if (!proc) {
         std::wcerr << L"OpenProcess failed (" << GetLastError()
                    << L"). Run the injector as Administrator.\n";
+        return false;
+    }
+
+    // Bail early on an architecture mismatch — it would otherwise look like a
+    // mysterious "LoadLibrary returned NULL" failure.
+    if (TargetIsWow64(proc)) {
+        std::wcerr <<
+            L"\nERROR: the game is a 32-bit process, but this injector and\n"
+            L"BlacklistMod.dll are 64-bit. A 64-bit DLL cannot be injected into\n"
+            L"a 32-bit game. The mod would have to be rebuilt for 32-bit (x86)\n"
+            L"to attach to this game.\n";
+        CloseHandle(proc);
         return false;
     }
 
@@ -145,17 +183,19 @@ static bool InjectDll(DWORD pid, const std::wstring& dllPath) {
     }
 
     WaitForSingleObject(thread, INFINITE);
-
-    DWORD remoteModule = 0;
-    GetExitCodeThread(thread, &remoteModule);
-
     CloseHandle(thread);
     VirtualFreeEx(proc, remote, 0, MEM_RELEASE);
+
+    // Don't trust GetExitCodeThread here: it only returns the low 32 bits of
+    // LoadLibraryW's 64-bit HMODULE, so a successful load can look like NULL.
+    // Verify by checking whether the module is actually present in the target.
+    bool loaded = IsModuleLoaded(proc, kDllName);
     CloseHandle(proc);
 
-    if (remoteModule == 0) {
-        std::wcerr << L"LoadLibraryW returned NULL inside the game — the DLL "
-                      L"failed to load (check it sits next to the injector).\n";
+    if (!loaded) {
+        std::wcerr << L"The DLL did not load into the game. Common causes:\n"
+                      L"  - architecture mismatch (game vs DLL bitness)\n"
+                      L"  - a missing dependency next to BlacklistMod.dll\n";
         return false;
     }
     return true;
