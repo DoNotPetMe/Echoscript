@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<core version="10">
+  <repository>
+    <List name="Repository" mutable="1" listtype="data">
+      <View name="O_MainView" usercreated="1" scoped="1" type="Operator" secondarytype="View">
+        <CommandInstance name="GetCinematicView" dp_i="67108865"/>
+      </View>
+      <Camera name="O_Camera" usercreated="1" scoped="1" type="Operator" secondarytype="Camera">
+        <CommandInstance name="GetCamera">
+          <ParameterInstance name="View" data="Repository::O_MainView" TypeDeleted="View"/>
+        </CommandInstance>
+      </Camera>
+      <Character name="O_Sam_Character" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Character name="O_Briggs_Character" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" bv_a="1073741824" bv_i="67108865"/>
+      </Character>
+      <Pawn name="O_Sam_Pawn" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <Pawn name="O_Briggs_Pawn" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Briggs_Character" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <ObjectiveManager name="O_Obj_Manager" usercreated="1" scoped="1" type="Operator" secondarytype="ObjectiveManager">
+        <CommandInstance name="GetObjectiveManager">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character" TypeDeleted="Character"/>
+        </CommandInstance>
+      </ObjectiveManager>
+      <eInputType name="Ref_Controller_Action" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="eInputType" value=""/>
+      <Character name="Ref_Sam" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Character name="Ref_Briggs" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Camera name="Ref_Camera" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Camera" value=""/>
+      <Actor name="Ref_SamPawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Actor" value=""/>
+      <Actor name="Ref_BriggsPawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Actor" value=""/>
+      <SequenceList name="Sequences">
+        <file name="seq_LD_SaveInitCheckpoint"/>
+        <file name="seq_MasterSequence"/>
+        <file name="seq_SEQ_IntroCam"/>
+        <file name="seq_LD_HelicopterManager"/>
+        <file name="seq_VO Intro"/>
+        <file name="seq_VO"/>
+        <file name="seq_LD_Extract"/>
+        <file name="seq_LD_Wave_Waypoints"/>
+        <file name="seq_LD_Flares"/>
+        <file name="seq_LD_Metal_detector"/>
+        <file name="seq_LD_ExtractionVO_Wave5"/>
+        <file name="seq_LD_ExtractionVO_Wave10"/>
+        <file name="seq_LD_ExtractionVO_Wave15"/>
+        <file name="seq_LD_CeilingFans"/>
+        <file name="seq_LD_CeilingFan_13"/>
+        <file name="seq_LD_CeilingFan_19"/>
+        <file name="seq_LD_CeilingFan_20"/>
+        <file name="seq_LD_CeilingFan_21"/>
+        <file name="seq_LD_CeilingFan_25"/>
+      </SequenceList>
+      <CoopObjectiveManager name="O_CoopObjectiveManager" usercreated="1" scoped="1" type="Operator" secondarytype="CoopObjectiveManager">
+        <CommandInstance name="CoopGetCoopObjectiveManager"/>
+      </CoopObjectiveManager>
+      <Objective name="B_Vault_1" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="Vault1" localid="9902"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="9904"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="9906"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <ObjectiveManager name="O_Obj_Manager_0" usercreated="1" scoped="1" type="Operator" secondarytype="ObjectiveManager">
+        <CommandInstance name="GetObjectiveManager">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+        </CommandInstance>
+      </ObjectiveManager>
+      <Character name="O_Sam_Character_0" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Pawn name="O_Sam_Pawn_0" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <number name="B_Wave_ID" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <number name="B_Vault_Counter" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <number name="B_Wave_Timer_Counter" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <TriggerVolume name="Ref_Vault_Volume" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="TriggerVolume" value=""/>
+      <Light name="Ref_Vault_Light" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Light" value=""/>
+      <number name="B_Wave_Objective_Completeted" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <Objective name="B_Hack_1" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="Hack_1" localid="13806"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="13808"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="13810"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <Objective name="B_Hack_2" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="Hack_2" localid="13817"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="13819"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="13821"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <Objective name="B_Hack_3" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="Hack_3" localid="13828"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="13830"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="13832"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <number name="B_Hack_Timer_Seconds" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <Character name="Ref_Sam_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Character name="Ref_Briggs_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <eInputType name="Ref_Button_Press" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="eInputType" value=""/>
+      <number name="B_Hack_Counter" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <Objective name="Ref_Objective_Active_Sam" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Objective" value=""/>
+      <GameItem name="Ref_GI_Active_Sam" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="GameItem" value=""/>
+      <GameItem name="Ref_GI_A" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="GameItem" value=""/>
+      <GameItem name="Ref_GI_B" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="GameItem" value=""/>
+      <GameItem name="Ref_GI_C" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="GameItem" value=""/>
+      <Objective name="Ref_Objective_A" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Objective" value=""/>
+      <Objective name="Ref_Objective_B" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Objective" value=""/>
+      <Objective name="Ref_Objective_C" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Objective" value=""/>
+      <Objective name="B_Intel_1" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="Intel_1" localid="18454"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="18456"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="18458"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <Objective name="B_Intel_2" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="Intel_2" localid="18465"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="18467"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="18469"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <Objective name="B_Intel_Extraction" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="Intel_Extraction" localid="19033"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="19035"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="19037"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <Character name="Ref_CurrentPlayer" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Character name="O_Briggs_Character_0" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" bv_a="1073741824" bv_i="67108865"/>
+      </Character>
+      <Character name="Ref_Character" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Camera name="Ref_Camera_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Camera" value=""/>
+      <View name="O_MainView_0" usercreated="1" scoped="1" type="Operator" secondarytype="View">
+        <CommandInstance name="GetCinematicView" dp_i="67108865"/>
+      </View>
+      <Camera name="O_Camera_0" usercreated="1" scoped="1" type="Operator" secondarytype="Camera">
+        <CommandInstance name="GetCamera">
+          <ParameterInstance name="View" data="Repository::O_MainView_0" TypeDeleted="View"/>
+        </CommandInstance>
+      </Camera>
+      <Pawn name="Ref_Pawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Pawn" value=""/>
+      <Pawn name="O_Briggs_Pawn_0" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Briggs_Character_0" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <Character name="O_CurrentPlayer" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="MPGetLocalPlayer"/>
+      </Character>
+      <number name="O_CheckpointID" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="GetCheckPointID"/>
+      </number>
+      <List name="List_ACT_D_Sanaa_Helicopter_Extract" mutable="1" usercreated="1" scoped="1" listtype="GameItem"/>
+      <AI name="O_GrimAI" usercreated="1" scoped="1" type="Operator" secondarytype="AI">
+        <CommandInstance name="CoopGetNPCFromTag" bv_a="1092616192" bv_i="67108865"/>
+      </AI>
+      <AI name="Ref_Grim" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="AI" value=""/>
+      <number name="TimingNumber" mutable="1" usercreated="1" scoped="1" value="15.000000"/>
+      <Boolean name="B_StayAndFight" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <List name="List_ACT_D_Sanaa_Helicopter_Extract_In" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:00000946" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000947" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000948" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000949" type2="GameItem"/>
+      </List>
+      <List name="List_ACT_D_Sanaa_Helicopter_Extract_Loop" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:0000094a" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:0000094b" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:0000094c" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:0000094d" type2="GameItem"/>
+      </List>
+      <List name="List_ACT_D_Sanaa_Helicopter_Extract_Out" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:0000094f" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000950" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000951" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000952" type2="GameItem"/>
+      </List>
+      <List name="List_MetalDetector_Green" mutable="1" usercreated="1" scoped="1" listtype="Light">
+        <element name="Repository::Unreal::Actors::UID:0000096a" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:0000096b" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:0000096c" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:0000096d" type2="Light"/>
+      </List>
+      <List name="List_MetalDetector_Red" mutable="1" usercreated="1" scoped="1" listtype="Light">
+        <element name="Repository::Unreal::Actors::UID:00000969" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:0000096e" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:0000096f" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00000970" type2="Light"/>
+      </List>
+      <List name="List_HelicopterLightGroup2" mutable="1" usercreated="1" scoped="1" listtype="Light">
+        <element name="Repository::Unreal::Actors::UID:00000af8" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00000af9" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00000afa" type2="Light"/>
+      </List>
+      <List name="List_HelicopterLightGroup1" mutable="1" usercreated="1" scoped="1" listtype="Light">
+        <element name="Repository::Unreal::Actors::UID:00000afb" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00000afc" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00000afd" type2="Light"/>
+      </List>
+      <List name="List_HelicopterLightGroup3" mutable="1" usercreated="1" scoped="1" listtype="Light">
+        <element name="Repository::Unreal::Actors::UID:00000afe" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00000aff" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00000b00" type2="Light"/>
+      </List>
+      <Boolean name="B_PlayingSound" mutable="1" usercreated="1" scoped="1" value="0"/>
+    </List>
+  </repository>
+</core>

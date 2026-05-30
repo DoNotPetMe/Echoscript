@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_CeilingFan_25" leveluid="1" streamedRandomID="15872874">
+  <Task name="25 Fan_0" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="Rotate Fans" entity="UID:00000d0b" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

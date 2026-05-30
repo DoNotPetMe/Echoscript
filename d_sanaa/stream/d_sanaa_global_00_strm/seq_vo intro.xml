@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="VO Intro" leveluid="1" streamedRandomID="15872874">
+  <Task name="Intro" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Single Intro 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.755938">
+          <CommandInstance name="SetDialog" duration="2.755938" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16974::123441" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Coop Intro 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_0" end="3.001625">
+          <CommandInstance name="SetDialog" duration="3.001625" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16975::123446" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Intro" true="Single Intro 1" false="Coop Intro 1">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <Task name="Single Intro 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_0" end="3.818083">
+          <CommandInstance name="SetDialog" duration="3.818083" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16974::123442" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Single Intro 4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_2" end="6.021104">
+          <CommandInstance name="SetDialog" duration="6.021104" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16974::123444" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Single Intro 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_1" end="0.917167">
+          <CommandInstance name="SetDialog" duration="0.917167" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16974::123443" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Single Intro 1" true="Single Intro 2" sequence="VO Intro"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="Single Intro 2" true="Single Intro 3" sequence="VO Intro"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="Single Intro 3" true="Single Intro 4" sequence="VO Intro"/>
+  <Task name="Coop Intro 4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_2" end="6.771521">
+          <CommandInstance name="SetDialog" duration="6.771521" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16975::123449" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Coop Intro 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_0" end="4.181355">
+          <CommandInstance name="SetDialog" duration="4.181355" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16975::123447" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Coop Intro 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_1" end="1.257167">
+          <CommandInstance name="SetDialog" duration="1.257167" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16975::123448" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_2" start="Coop Intro 1" true="Coop Intro 2" sequence="VO Intro"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="Coop Intro 2" true="Coop Intro 3" sequence="VO Intro"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Coop Intro 3" true="Coop Intro 4" sequence="VO Intro"/>
+  <Task name="Single Intro 5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_3" end="0.714667">
+          <CommandInstance name="SetDialog" duration="0.714667" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16974::123445" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="Single Intro 4" true="Single Intro 5" sequence="VO Intro"/>
+  <Task name="Coop Intro 5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_3" end="0.857958">
+          <CommandInstance name="SetDialog" duration="0.857958" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0150_COM::16975::123450" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_6" start="Coop Intro 4" true="Coop Intro 5" sequence="VO Intro"/>
+  <Task name="Disable Grim">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="Single Intro 5" true="Disable Grim" sequence="VO Intro"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="Coop Intro 5" true="Disable Grim" sequence="VO Intro"/>
+</Sequence>
