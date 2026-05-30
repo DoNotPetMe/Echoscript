@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VoiceOverManager" leveluid="1" streamedRandomID="32642577">
+  <Task name="VoiceOverManger" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_5" entity="Repository::Sequences::LD_VO_0250_BothPlayersExterior" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0700_DeadDrop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_VO_0600_Laptop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::Sequences::LD_VO_0500_HVT" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::Sequences::LD_VO_0400_ObjCountdown1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::Sequences::LD_VO_0400_ObjCountdown2" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="Repository::Sequences::LD_VO_0300_CoopSplit" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="Repository::Sequences::LD_VO_0800_ObjStart1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="Repository::Sequences::LD_VO_0850_ObjStart2" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_11" entity="Repository::Sequences::LD_VO_0900_ObjStart3" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

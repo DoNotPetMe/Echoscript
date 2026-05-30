@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0400_ObjCountdown3" leveluid="1" streamedRandomID="32642577">
+  <Task name="AllObjDoneEventCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0400_COM_03_01ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="4.877104">
+          <CommandInstance name="SetDialog" duration="3.877104" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0400_COM::16607::54699" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0400_ObjCountdown3" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="B_MISS_0400_COM_03_01ANNA_DRY" true="StopSequence" sequence="LD_VO_0400_ObjCountdown3"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="AllObjDoneEventCheck" true="B_MISS_0400_COM_03_01ANNA_DRY" sequence="LD_VO_0400_ObjCountdown3"/>
+</Sequence>

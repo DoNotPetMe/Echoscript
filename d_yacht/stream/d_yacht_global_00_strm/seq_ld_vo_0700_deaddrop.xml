@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0700_DeadDrop" leveluid="1" streamedRandomID="32642577">
+  <Task name="VolumnEnterEventCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0700_COM_01_01SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="4.936646">
+          <CommandInstance name="SetDialog" duration="3.936646" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0700_COM::16615::54710" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0700_COM_01_02ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.473063">
+          <CommandInstance name="SetDialog" duration="1.473063" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0700_COM::16615::54711" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="2.473000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Sam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0700_DeadDrop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="B_MISS_0700_COM_01_01SAM_DRY" false="B_MISS_0700_COM_02_01ISAACB">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_Var_CurrentPlayer" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyEvent name="NewDependencyEvent" start="VolumnEnterEventCheck" true="NewTask_0" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="DEADDROP_PICKEDUP" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Var_CurrentPlayer"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="B_MISS_0700_COM_02_01ISAACB">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.328417">
+          <CommandInstance name="SetDialog" duration="1.328417" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0700_COM::48230::129213" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0700_COM_02_02ANNA">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="3.996188">
+          <CommandInstance name="SetDialog" duration="2.996188" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0700_COM::48230::129214" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="3.996000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequenceBriggs">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0700_DeadDrop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="B_MISS_0700_COM_01_02ANNA_DRY" true="StopSequence_Sam" sequence="LD_VO_0700_DeadDrop"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="B_MISS_0700_COM_02_02ANNA" true="StopSequenceBriggs" sequence="LD_VO_0700_DeadDrop"/>
+  <DependencyComplete name="NewDependencyComplete" start="B_MISS_0700_COM_01_01SAM_DRY" true="B_MISS_0700_COM_01_02ANNA_DRY" sequence="LD_VO_0700_DeadDrop"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="B_MISS_0700_COM_02_01ISAACB" true="B_MISS_0700_COM_02_02ANNA" sequence="LD_VO_0700_DeadDrop"/>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_0" true="NewTask" false="Wait_For_Recheck">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::B_PlayingSound" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Wait_For_Recheck">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="Wait_For_Recheck" true="NewTask_0" sequence="LD_VO_0700_DeadDrop"/>
+</Sequence>

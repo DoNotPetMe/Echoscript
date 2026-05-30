@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0400_ObjCountdown2" leveluid="1" streamedRandomID="32642577">
+  <Task name="TwoObjDoneEventCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="GrimOnFake">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0400_ObjCountdown2" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="TwoObjDoneEventCheck" true="GrimOnFake" false="Wait">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_Var_ObjFinishedCount" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="B_MISS_0400_COM_02_01ANNA">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="5.142666">
+          <CommandInstance name="SetDialog" duration="4.142666" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0400_COM::16606::54698" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="GrimOnFake" true="B_MISS_0400_COM_02_01ANNA" sequence="LD_VO_0400_ObjCountdown2"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="B_MISS_0400_COM_02_01ANNA" true="StopSequence" sequence="LD_VO_0400_ObjCountdown2"/>
+  <Task name="Wait">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="Wait" true="TwoObjDoneEventCheck" sequence="LD_VO_0400_ObjCountdown2"/>
+</Sequence>
