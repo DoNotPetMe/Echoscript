@@ -10,6 +10,7 @@
 #define NOMINMAX
 #endif
 #include <Windows.h>
+#include <Xinput.h>
 
 #include "imgui.h"
 
@@ -20,17 +21,50 @@ bool g_menuOpen = false;
 // Toggle key
 static constexpr int TOGGLE_KEY = VK_INSERT;
 
-static bool s_wasToggleDown = false;
+static bool s_wasToggleDown           = false;
+static bool s_wasControllerToggleDown = false;
+
+// Show/hide the cursor and ImGui software cursor when the menu state changes.
+// Called whenever g_menuOpen is toggled.
+static void ApplyCursorState(bool menuOpen) {
+    ImGuiIO& io = ImGui::GetIO();
+    if (menuOpen) {
+        // Draw ImGui's built-in software cursor so the mouse is visible even
+        // when the game has hidden the Windows hardware cursor.
+        io.MouseDrawCursor = true;
+        // Un-confine the cursor so it can reach any corner of the overlay.
+        ClipCursor(nullptr);
+    } else {
+        io.MouseDrawCursor = false;
+    }
+}
 
 // -----------------------------------------------------------------------
 //  Tick — runs every frame
 // -----------------------------------------------------------------------
 void Tick(float dt) {
-    // Edge-triggered INSERT toggle
-    bool down = (GetAsyncKeyState(TOGGLE_KEY) & 0x8000) != 0;
-    if (down && !s_wasToggleDown)
+    // Edge-triggered INSERT toggle (keyboard)
+    bool kbDown = (GetAsyncKeyState(TOGGLE_KEY) & 0x8000) != 0;
+    if (kbDown && !s_wasToggleDown) {
         g_menuOpen = !g_menuOpen;
-    s_wasToggleDown = down;
+        ApplyCursorState(g_menuOpen);
+    }
+    s_wasToggleDown = kbDown;
+
+    // Edge-triggered L3+R3 toggle (XInput controller)
+    XINPUT_STATE xi{};
+    for (DWORD i = 0; i < XUSER_MAX_COUNT; ++i) {
+        if (XInputGetState(i, &xi) == ERROR_SUCCESS) {
+            constexpr WORD kChord = XINPUT_GAMEPAD_LEFT_THUMB | XINPUT_GAMEPAD_RIGHT_THUMB;
+            bool ctrlDown = (xi.Gamepad.wButtons & kChord) == kChord;
+            if (ctrlDown && !s_wasControllerToggleDown) {
+                g_menuOpen = !g_menuOpen;
+                ApplyCursorState(g_menuOpen);
+            }
+            s_wasControllerToggleDown = ctrlDown;
+            break; // use first active controller only
+        }
+    }
 
     // Mouse wheel changes free-cam speed when camera is active and menu is closed
     if (FreeCam::g_config.enabled && !g_menuOpen) {

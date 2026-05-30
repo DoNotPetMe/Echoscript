@@ -54,10 +54,13 @@ target_compile_definitions(BlacklistMod PRIVATE
     _UNICODE
 )
 
+target_compile_options(BlacklistMod PRIVATE /utf-8)
+
 target_link_libraries(BlacklistMod PRIVATE
     d3d11
     dxgi
     dxguid
+    xinput
 )
 
 set_target_properties(BlacklistMod PROPERTIES
