@@ -35,6 +35,7 @@ add_library(BlacklistMod SHARED
     features/gizmo.cpp
     features/level_serialization.cpp
     menu/menu.cpp
+    utils/cam_finder.cpp
     ${IMGUI_SOURCES}
 )
 
@@ -54,10 +55,13 @@ target_compile_definitions(BlacklistMod PRIVATE
     _UNICODE
 )
 
+target_compile_options(BlacklistMod PRIVATE /utf-8)
+
 target_link_libraries(BlacklistMod PRIVATE
     d3d11
     dxgi
     dxguid
+    xinput
 )
 
 set_target_properties(BlacklistMod PROPERTIES

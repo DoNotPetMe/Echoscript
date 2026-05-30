@@ -79,8 +79,10 @@ bool Init() {
         return false;
     }
 
-    // Resolve the RIP-relative pointer baked into the instruction
-    uintptr_t ptrAddr = PatternScan::ResolveRIPSimple(instr, CAM_SIG_REL32_OFFSET, CAM_SIG_INSTR_SIZE);
+    // Resolve the pointer baked into the instruction. x64 uses a RIP-relative
+    // displacement; x86 embeds the absolute address directly. ResolvePtrOperand
+    // picks the right mode for the build architecture.
+    uintptr_t ptrAddr = PatternScan::ResolvePtrOperand(instr, CAM_SIG_REL32_OFFSET, CAM_SIG_INSTR_SIZE);
     uintptr_t camPtr  = 0;
     if (!Memory::SafeRead(ptrAddr, camPtr) || !camPtr) {
         Logger::Warn("FreeCam: camera pointer resolved to null — is the game fully loaded?");
@@ -202,6 +204,11 @@ void Toggle() {
 void Shutdown() {
     g_config.enabled  = false;
     g_camStatePtr     = 0;
+}
+
+void ForceBase(uintptr_t addr) {
+    g_camStatePtr = addr;
+    Logger::Info("FreeCam: camera base forced to 0x%08X -- enable freecam and move to verify.", addr);
 }
 
 // -----------------------------------------------------------------------

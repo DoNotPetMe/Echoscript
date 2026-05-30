@@ -23,6 +23,11 @@
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "dxgi.lib")
 
+// imgui_impl_win32.h keeps this declaration behind a `#if 0`, so declare it
+// here at global scope. It must stay outside namespace D3D11Hook so it refers
+// to the handler the ImGui backend actually defines.
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND, UINT, WPARAM, LPARAM);
+
 namespace D3D11Hook {
 
 // -----------------------------------------------------------------------
@@ -52,12 +57,13 @@ static std::chrono::high_resolution_clock::time_point s_lastFrame{};
 // -----------------------------------------------------------------------
 
 static WNDPROC s_origWndProc = nullptr;
-extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND, UINT, WPARAM, LPARAM);
 
 static LRESULT CALLBACK HookedWndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
     if (g_imguiReady) {
-        // Let ImGui consume the event first
-        if (ImGui_ImplWin32_WndProcHandler(hwnd, msg, wp, lp))
+        // Let ImGui consume the event first. Qualify with :: so this resolves
+        // to the global handler declared by imgui_impl_win32.h, not a symbol
+        // inside namespace D3D11Hook.
+        if (::ImGui_ImplWin32_WndProcHandler(hwnd, msg, wp, lp))
             return 1;
 
         // Block keyboard/mouse from reaching the game when the menu is open
@@ -107,7 +113,7 @@ static HRESULT STDMETHODCALLTYPE HookedPresent(IDXGISwapChain* pSwapChain,
         IMGUI_CHECKVERSION();
         ImGui::CreateContext();
         ImGuiIO& io = ImGui::GetIO();
-        io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+        io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard | ImGuiConfigFlags_NavEnableGamepad;
         io.IniFilename  = nullptr;  // don't write imgui.ini
 
         ImGui::StyleColorsDark();

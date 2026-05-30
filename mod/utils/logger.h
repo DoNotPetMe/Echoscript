@@ -15,8 +15,9 @@ namespace Logger {
 
     inline void Init() {
         AllocConsole();
+        SetConsoleOutputCP(CP_UTF8);
         freopen_s(&g_log, "CONOUT$", "w", stdout);
-        SetConsoleTitleA("Blacklist Mod — Debug Console");
+        SetConsoleTitleA("Blacklist Mod -- Debug Console");
         printf("[BlacklistMod] Console initialised\n");
     }
 

@@ -23,13 +23,25 @@ namespace FreeCam {
     // Signatures (IDA-style, update if the game patches)
     // ----------------------------------------------------------------
 
-    // Signature that leads to the camera state pointer (x64 RIP-relative).
-    // Found by looking for a write to the view matrix in the renderer.
+    // Signature that leads to the camera state pointer, plus the offset of the
+    // 4-byte address field inside the matched instruction and (x64 only) the
+    // total instruction size. See REVERSE_ENGINEERING.md for how to find these.
+#ifdef _WIN64
+    // ---- 64-bit build (RIP-relative; e.g. `48 8B 0D <rel32>` mov rcx,[rip+x]) ----
     static constexpr const char* CAM_MATRIX_SIG =
         "48 8B 0D ?? ?? ?? ?? 48 85 C9 74 ?? F3 0F 11 41";
-
     static constexpr int CAM_SIG_REL32_OFFSET = 3;   // offset of the rel32 inside the instruction
     static constexpr int CAM_SIG_INSTR_SIZE   = 7;   // total instruction size
+#else
+    // ---- 32-bit build (absolute; e.g. `8B 0D <imm32>` mov ecx,[imm32]) ----
+    // PLACEHOLDER — replace with a real x86 pattern from your game. The bytes
+    // here will NOT match anything (freecam stays disabled until you fill it).
+    // REL32_OFFSET here means "offset of the 4-byte absolute address field".
+    static constexpr const char* CAM_MATRIX_SIG =
+        "00 00 00 00 00 00 00 00 00 00 00 00";
+    static constexpr int CAM_SIG_REL32_OFFSET = 2;   // operand offset (e.g. after `8B 0D`)
+    static constexpr int CAM_SIG_INSTR_SIZE   = 6;   // unused on x86, kept for the API
+#endif
 
     // ----------------------------------------------------------------
     // Config knobs exposed to the mod menu
@@ -62,6 +74,11 @@ namespace FreeCam {
     void Update(float dt);  // called every frame; applies camera when enabled
     void Toggle();
     void Shutdown();
+
+    // Directly set the camera struct base (for testing cam_finder results).
+    // If the freecam position tracks your in-game position after calling this,
+    // the address is correct.  Use the 'Force Cam Base' box in the menu.
+    void ForceBase(uintptr_t addr);
 
     // ----------------------------------------------------------------
     //  Accessors used by the level editor's gizmo (world-to-screen).
