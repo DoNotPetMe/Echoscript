@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+
+  <!-- SP Mission End achievements -->
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_KOB" Desc="A_MissionComplete_KOB_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10001">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_KOB" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="0" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_BAD" Desc="A_MissionComplete_BAD_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10002">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_BAD" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="1" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_CON" Desc="A_MissionComplete_CON_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10003">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_CON" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="2" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_NOU" Desc="A_MissionComplete_NOU_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10004">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_NOU" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="3" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_CHE" Desc="A_MissionComplete_CHE_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10005">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_CHE" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="4" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_QOD" Desc="A_MissionComplete_QOD_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10006">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_QOD" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="5" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_FRE" Desc="A_MissionComplete_FRE_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10007">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_FRE" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="6" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_DET" Desc="A_MissionComplete_DET_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10008">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_DET" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="7" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_PAL" Desc="A_MissionComplete_PAL_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10009">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_PAL" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="8" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_FUE" Desc="A_MissionComplete_FUE_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10010">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_FUE" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="9" />
+    </StepReward>
+  </Challenge>
+  
+  
+  <!-- SP Campaign End achievements -->
+  
+  <Challenge Category="ChallengeAchievement" Name="A_CampaignComplete_EasyNormal" Desc="A_CampaignComplete_EasyNormal_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10011">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <CampaignProgress>
+            <IsCompleted Op="Equal" Value="true" />
+          </CampaignProgress>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="10" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_CampaignComplete_Realistic" Desc="A_CampaignComplete_Realistic_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10012">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <CampaignProgress>
+            <IsCompleted Op="Equal" Value="true" />
+            <LowestDifficultyLevel Op="Equal">
+              <Value>eDifficultyLevel_Realistic</Value>
+              <Value>eDifficultyLevel_Perfectionist</Value>
+            </LowestDifficultyLevel>
+          </CampaignProgress>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="11" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Category="ChallengeAchievement" Name="A_CampaignComplete_Perfectonist" Desc="A_CampaignComplete_Perfectonist_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10013">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <CampaignProgress>
+            <IsCompleted Op="Equal" Value="true" />
+            <LowestDifficultyLevel Op="Equal" Value="eDifficultyLevel_Perfectionist"/>
+          </CampaignProgress>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="12" />
+    </StepReward>
+  </Challenge>
+  
+  
+  <!-- Capture all High Value Targets -->
+  <Challenge Category="ChallengeAchievement" Name="A_CaptureAllHVT" Desc="A_CaptureAllHVT_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10014">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <SecondaryObjectivesCompleted>
+            <AllHighValueTargets Op="Equal" Value="true" />
+          </SecondaryObjectivesCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="13" />
+    </StepReward>
+  </Challenge>
+  
+  <!-- Collect all Dead Drops -->
+  <Challenge Category="ChallengeAchievement" Name="A_CollectAllDeadDrops" Desc="A_CollectAllDeadDrops_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10015">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <SecondaryObjectivesCompleted>
+            <AllDeadDrops Op="Equal" Value="true" />
+          </SecondaryObjectivesCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="14" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Steal [$50000000] of terrorist funding from Blacklist laptops -->
+  <Challenge Category="ChallengeAchievement" Name="A_HackAllLaptops" Desc="A_HackAllLaptops_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10016">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <SecondaryObjectivesCompleted>
+            <AllLaptops Op="Equal" Value="true" />
+          </SecondaryObjectivesCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="15" />
+    </StepReward>
+  </Challenge>
+  
+  <!-- Fully upgrade one weapon -->
+  <Challenge Category="ChallengeAchievement" Name="A_UpgradeGadgetAndWeapon" Desc="A_UpgradeGadgetAndWeapon_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10017">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>        
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="16" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Fully upgrade the the plane -->
+  <Challenge Category="ChallengeAchievement" Name="A_UpgradeCommandAndControlRoom" Desc="A_UpgradeCommandAndControlRoom_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10018">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" Value="eUpgradableHubCabin" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="3" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" Value="eUpgradableHubCockpit" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="3" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" Value="eUpgradableHubCommand" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="3" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" Value="eUpgradableHubMedic" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="3" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" Value="eUpgradableHubQuarters" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="3" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" Value="eUpgradableHubWorkshop" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="3" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" Value="eUpgradableHubVehicleBay" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="2" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+      </All>>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="17" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Master at least [7] levels as a ghost player -->
+  <Challenge Category="ChallengeAchievement" Name="A_HighGhostScore" Desc="A_HighGhostScore_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10019">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionMastery>
+            <GhostMastery Op="GreaterOrEqual" Value="7" />
+          </MissionMastery>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="18" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Achieve Master at least [7] levels as a panther player -->
+  <Challenge Category="ChallengeAchievement" Name="A_HighPantherScore" Desc="A_HighPantherScore_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10020">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionMastery>
+            <PantherMastery Op="GreaterOrEqual" Value="7" />
+          </MissionMastery>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="19" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Master at least [7] levels as an assault player -->
+  <Challenge Category="ChallengeAchievement" Name="A_HighKillerScore" Desc="A_HighKillerScore_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10021">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionMastery>
+            <AssaultMastery Op="GreaterOrEqual" Value="7" />
+          </MissionMastery>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="20" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Hide one enemy body in a trash container -->
+  <Challenge Category="ChallengeAchievement" Name="A_HideBodyInTrash" Desc="A_HideBodyInTrash_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10022">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnPutInTrashBin>
+            <Pawn Op="Equal" ValueGroup="AnyNPC" />
+            <Player Op="Equal" Value="LocalPlayer" />
+          </PawnPutInTrashBin>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Achievement ID="21" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Copmlete SP campaign undetected as Sam -->
+  <Challenge Category="ChallengeAchievement" Name="A_CampaignComplete_NonLethally" Desc="A_CampaignComplete_NonLethally_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10023">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <CampaignProgress>
+            <IsSPCompletedNonLethally Op="Equal" Value="true" />
+          </CampaignProgress>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="22" />
+    </StepReward>
+  </Challenge>
+  
+  <!-- Use whistle/attract to call an enemy over, then take them down undetected -->
+  <Challenge Category="ChallengeAchievement" Name="A_TakeDownEnemyAfterWhistle" Desc="A_TakeDownEnemyAfterWhistle_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10024">
+    <Definition>
+      <All>
+        <GameEvent>
+          <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+          <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+          <Event>
+            <PawnKilled>
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsInvestigatingWhistle Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="23" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Use your tri-rotor to disable a security system -->
+  <Challenge Category="ChallengeAchievement" Name="A_TrirotorDisableSecurity" Desc="A_TrirotorDisableSecurity_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10026">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <SecurityDeviceShocked>
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsTrirotor Op="Equal" Value="true" />
+          </SecurityDeviceShocked>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="24" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Take out [6] enemies using Mark and Execute ability in less than [10]sec -->
+  <Challenge Category="ChallengeAchievement" Name="A_FastMarkAndExecute" Desc="A_FastMarkAndExecute_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10027">
+    <Definition>
+      <All>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <TimeComponent Max="14" />
+        <GameEvent>          
+          <RepeatComponent Count="6" />
+          <Event>
+            <PawnKilled>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />              
+              <WasMarked Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="25" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Takedown a Heavy undetected and steal his shield -->
+  <Challenge Category="ChallengeAchievement" Name="A_TakedownHeavyStealShield" Desc="A_TakedownHeavyStealShield_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10028">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PickedUpShield>
+            <Pawn Op="Equal" Value="LocalPlayer" />
+            <OwnerKilledByTakedown Op="Equal" Value="true" />
+            <OwnerKilledByLocalPlayer Op="Equal" Value="true" />
+          </PickedUpShield>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="26" />
+    </StepReward>
+  </Challenge>
+
+  <Challenge Category="ChallengeAchievement" Name="A_HostagesSavedFreedom" Desc="A_HostagesSavedFreedom_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10029">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <HostagesSaved>
+            <Player Op="Equal" Value="LocalPlayer" />            
+          </HostagesSaved>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="27" />
+    </StepReward>
+  </Challenge>
+
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_MissionFootprintZero" Desc="A_MissionComplete_MissionFootprintZero_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10030">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <MissionCompleted>            
+            <Success Op="Equal" Value="true" />
+            <WasDetected Op="Equal" Value="false" />
+            <IsSPMission Op="Equal" Value="true" />
+            <SC6MissionName Op="Not" Value="S_AFB" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="28" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Complete your first COOP mission with a partner -->
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_COOPWithPartner" Desc="A_MissionComplete_COOPWithPartner_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10031">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal">
+              <Value>C01</Value>
+              <Value>C02</Value>
+              <Value>C03</Value>
+              <Value>C04</Value>
+              <Value>E01</Value>
+              <Value>E02</Value>
+              <Value>E03</Value>
+              <Value>E04</Value>
+              <Value>G01</Value>
+              <Value>G02</Value>
+              <Value>G03</Value>
+              <Value>G04</Value>
+              <Value>H01</Value>
+              <Value>H02</Value>
+              <Value>H03</Value>
+              <Value>H04</Value>
+            </SC6MissionName>
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="29" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Complete all Kobin Missions -->
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_AllKobin" Desc="A_MissionComplete_AllKobin_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10032">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="H01" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="H02" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="H03" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="30" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Complete all Grim Missions -->
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_AllGrim" Desc="A_MissionComplete_AllGrim_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10033">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="G01" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="G02" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="G03" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="31" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Complete all Cole Missions -->
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_AllCole" Desc="A_MissionComplete_AllCole_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10034">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="E01" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="E02" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="E03" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="E04" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="32" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Complete all Briggs Missions -->
+  <Challenge Category="ChallengeAchievement" Name="A_MissionComplete_AllBriggs" Desc="A_MissionComplete_AllBriggs_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10035">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="C01" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="C02" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="C03" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionCompleted>
+              <SC6MissionName Op="Equal" Value="C04" />
+              <Success Op="Equal" Value="true" />
+            </MissionCompleted>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="33" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Dual execute a helmeted enemy -->
+  <Challenge Category="ChallengeAchievement" Name="A_DualExecuteHelmet" Desc="A_DualExecuteHelmet_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10036">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <MAEPawnExecuted>
+              <IsTargetAnyNPC Op="Equal" Value="true" />
+              <IsSuccessful Op="Equal" Value="true" />              
+              <WasHelmetPopped Op="Equal" Value="true" />
+              <IsCoopGame Op="Equal" Value="true" />
+            </MAEPawnExecuted>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="34" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Win the COOP interrogation in [Mission] -->
+  <Challenge Category="ChallengeAchievement" Name="A_WinCoopInterrogation" Desc="A_WinCoopInterrogation_Desc" Reset="complete" ShortDesc="UNDEFINED" Guid="10037">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <WinCoopInterrogation>
+            <Player Op="Equal" Value="LocalPlayer" />
+          </WinCoopInterrogation>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="35" />
+    </StepReward>
+  </Challenge>
+
+  <!-- #36  Shadownet Online -->
+  <Challenge Category="ChallengeAchievement" Name="36" Desc="UNKNOWN" Reset="complete" Guid="10038" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ShadownetAccessed />
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="36" />
+    </StepReward>
+  </Challenge>
+
+  <!-- #37  1 Daily-->
+  <Challenge Category="ChallengeAchievement" Name="37" Desc="UNKNOWN" Reset="complete" Guid="10039" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <EconomyRewardCompleted>
+            <IsDailyChallenge Op="Equal" Value="true" />
+          </EconomyRewardCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="37" />
+    </StepReward>
+  </Challenge>
+
+  <!-- #38  1 Weekly-->
+  <Challenge Category="ChallengeAchievement" Name="38" Desc="UNKNOWN" Reset="complete" Guid="10040" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <EconomyRewardCompleted>
+            <IsWeeklyChallenge Op="Equal" Value="true" />
+          </EconomyRewardCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="38" />
+    </StepReward>
+  </Challenge>
+
+  <!-- #40 Team Player: Get 10 objective assists in Spies vs Mercs-->
+  <Challenge Category="ChallengeAchievement" Name="39" Desc="UNKNOWN" Reset="complete" Guid="10041" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsAssist Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Achievement ID="39" />
+    </StepReward>
+  </Challenge>
+  
+  <!--#41 Win a match in all ADV game modes-->
+  <Challenge Category="ChallengeAchievement" Name="40" Desc="UNKNOWN" Reset="complete" Guid="10042" ShortDesc="UNKNOWN" >
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <ObjectiveReward>
+              <IsVictorySVM Op="Equal" Value="true" />
+            </ObjectiveReward>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <ObjectiveReward>
+              <IsVictoryClassicSVM Op="Equal" Value="true" />
+            </ObjectiveReward>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <ObjectiveReward>
+              <IsVictoryCTI Op="Equal" Value="true" />
+            </ObjectiveReward>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <ObjectiveReward>
+              <IsVictoryTDM Op="Equal" Value="true" />
+            </ObjectiveReward>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <ObjectiveReward>
+              <IsVictoryFrontline Op="Equal" Value="true" />
+            </ObjectiveReward>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="40" />
+    </StepReward>
+  </Challenge>
+
+  <!--#42 Unlock one Multiplayer Merc LMG-->
+  <Challenge Category="ChallengeAchievement" Name="41" Desc="UNKNOWN" Reset="complete" Guid="10043" ShortDesc="UNKNOWN" >
+    <Definition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <WeaponPurchased>
+              <WeaponArchetype Op="Equal" Value="ADV_Merc_LMG_HKMG4" />
+            </WeaponPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponPurchased>
+              <WeaponArchetype Op="Equal" Value="ADV_Merc_LMG_U100" />
+            </WeaponPurchased>
+          </Event>
+        </GameEvent>
+      </Any>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="41" />
+    </StepReward>
+  </Challenge>
+  
+  <!--#43 Purchase one custom loadout slot in Multiplayer-->
+  <Challenge Category="ChallengeAchievement" Name="42" Desc="UNKNOWN" Reset="complete" Guid="10044" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <LoadoutSlotPurchasedADV />
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="42" />
+    </StepReward>
+  </Challenge>
+  
+  <!--#44 Get to level 10 -->
+  <Challenge Category="ChallengeAchievement" Name="43" Desc="UNKNOWN" Reset="complete" Guid="10045" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ADVRankEarned>
+            <Rank Op="Equal" Value="10" />
+          </ADVRankEarned>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="43" />
+    </StepReward>
+  </Challenge>
+
+  <!--#45 Start & complete a terminal hack in Spies Vs Mercs (normal or classic) -->
+  <Challenge Category="ChallengeAchievement" Name="44" Desc="UNKNOWN" Reset="complete" Guid="10046" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsHacker Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="44" />
+    </StepReward>
+  </Challenge>
+
+  <!-- #46  Carry the intel to the drop-off zone in Capture the Intel-->
+  <Challenge Category="ChallengeAchievement" Name="45" Desc="UNKNOWN" Reset="complete" Guid="10047" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsCaptureIntel Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="45" />
+    </StepReward>
+  </Challenge>
+
+  <!-- #47  Capture a Control Point (as the lead capturer) in Frontline Domination-->
+  <Challenge Category="ChallengeAchievement" Name="46" Desc="UNKNOWN" Reset="complete" Guid="10048" ShortDesc="UNKNOWN" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsCaptureTerritory Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Achievement ID="46" />
+    </StepReward>
+  </Challenge>
+
+  <!-- #48  Meta trophy-->
+  <!-- #49  NONE-->
+  <!-- #50  NONE-->
+
+</Challenges>

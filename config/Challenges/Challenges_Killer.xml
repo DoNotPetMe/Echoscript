@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+  <!-- Head Shots : Get [n] unsilenced headshots (Mark and Execute is Non Applicable) -->
+  <Challenge Name="LocId_SNN_OD_LoudHeadshotKills" Desc="LocId_SNDES_OD_LoudHeadshotKillsDesc" Reset="Never" Guid="142" ShortDesc="LocId_SNSD_OD_AssaultHeadShot" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <WasMarked Op="Equal" Value="false" />
+            <IsSilencedWeapon Op="Equal" Value="false" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Not" ValueGroup="Weapons_UAV" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="300">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Head Shots : Get [n] unsilenced Head Shots in a row without dying (Mark and Execute is Non Applicable) -->
+  <Challenge Name="LocId_SNN_OD_LoudHeadshotKillsInRow" Desc="LocId_SNDES_OD_LoudHeadshotKillsInRowDesc" Reset="Never" Guid="143" ShortDesc="LocId_SNSD_OD_AssaultHeadShotStreak" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <WasMarked Op="Equal" Value="false" />
+            <IsSilencedWeapon Op="Equal" Value="false" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Not" ValueGroup="Weapons_UAV" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <PillType Op="Not" Value="PillHead" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <WasMarked Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsSilencedWeapon Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsPawnLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionRestarted />
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionStarted />
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="2">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Head Shots : Get [n] unsilenced Helmet Pops (Mark and Execute is Non Applicable) -->
+  <Challenge Name="LocId_SNN_OD_LoudHelmetPops" Desc="LocId_SNDES_OD_LoudHelmetPopsDesc" Reset="Never" Guid="144" ShortDesc="LocId_SNSD_OD_AssaultHelmetPop" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <AIHelmetPop>
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsFromLoudGun Op="Equal" Value="true" />
+            <IsFromMarkExecute Op="Equal" Value="false" />
+          </AIHelmetPop>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Mark & Execute : Mark & Execute [n] enemies with unsilenced weapons -->
+  <Challenge Name="LocId_SNN_OD_LoudMarkExecuteKills" Desc="LocId_SNDES_OD_LoudMarkExecuteKillsDesc" Reset="Never" Guid="145" ShortDesc="LocId_SNSD_OD_AssaultMarkandExecuteLoud" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <WasMarked Op="Equal" Value="true" />
+            <IsSilencedWeapon Op="Equal" Value="false" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="15">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Human Shield : Kill [n] enemies with an unsilenced weapon while holding an NPC in Human Shield -->
+  <Challenge Name="LocId_SNN_OD_LoudKillsWithHumanShield" Desc="LocId_SNDES_OD_LoudKillsWithHumanShieldDesc" Reset="Never" Guid="146" ShortDesc="LocId_SNSD_OD_AssaultKillsWithHumanShield" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_HasHumanShield" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <WasHumanShield Op="Equal" Value="false" />
+            <IsSilencedWeapon Op="Equal" Value="false" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Human Shield : Kill [n] enemies in a row with an unsilenced weapon while holding a Human Shield -->
+  <Challenge Name="LocId_SNN_OD_LoudKillsWithHumanShieldInRow" Desc="LocId_SNDES_OD_LoudKillsWithHumanShieldInRowDesc" Reset="Never" Guid="147" ShortDesc="LocId_SNSD_OD_AssaultKillsWithHumanShieldStreak" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_HasHumanShield" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <WasHumanShield Op="Equal" Value="false" />
+            <IsSilencedWeapon Op="Equal" Value="false" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <Class Name="Echelon.ECustomChallenge_HasHumanShield" Op="Not" />
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsSilencedWeapon Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsPawnLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionRestarted />
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionStarted />
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="2">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="15">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- H2H Lethal : In combat kill [n] enemies using lethal H2H (detected state) -->
+  <Challenge Name="LocId_SNN_OD_H2HLethalKills" Desc="LocId_SNDES_OD_H2HLethalKillsDesc" Reset="Never" Guid="148" ShortDesc="LocId_SNSD_OD_AssaultLethalH2H" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="false" />
+            <AwarenessLevel Op="Equal" ValueGroup="AIState_Combat" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- H2H Lethal : In combat kill [n] enemies in a row using lethal H2H (detected state) -->
+  <Challenge Name="LocId_SNN_OD_H2HLethalKillsInRow" Desc="LocId_SNDES_OD_H2HLethalKillsInRowDesc" Reset="Never" Guid="149" ShortDesc="LocId_SNSD_OD_AssaultLethalH2HStreak" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="false" />
+            <AwarenessLevel Op="Equal" ValueGroup="AIState_Combat" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <IsNonLethal Op="Equal" Value="true" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <AwarenessLevel Op="Not" ValueGroup="AIState_Combat" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsPawnLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilledType>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <FromH2H Op="Equal" Value="false" />
+            </PawnKilledType>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionRestarted />
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionStarted />
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="3">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- H2H Lethal Archetypes : In combat kill [n] Heavies / Shielded Heavies using lethal H2H (detected state) -->
+  <Challenge Name="LocId_SNN_OD_H2HLethalKillsHeavy" Desc="LocId_SNDES_OD_H2HLethalKillsHeavyDesc" Reset="Never" Guid="150" ShortDesc="LocId_SNSD_OD_AssaultLethalH2HHeavy" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnH2HDamage>
+            <Pawn Op="Equal">
+              <Value>Heavy</Value>
+              <Value>ShieldedHeavy</Value>
+            </Pawn>
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="false" />
+            <AwarenessLevel Op="Equal" ValueGroup="AIState_Combat" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="3">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="30">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadget Frag : Kill [n] enemies using a single FRAG Grenade -->
+  <Challenge Name="LocId_SNN_OD_FragKillsSingle" Desc="LocId_SNDES_OD_FragKillsSingleDesc" Reset="Never" Guid="152" ShortDesc="LocId_SNSD_OD_AssaultFragKillsStreak" Category="ChallengeAssault" SimultaneousRequirement="3" Icon="assault" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="3" />
+          <Event>
+            <PawnExplosionDamage>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <GadgetType Op="Equal" Value="GDT_FragGrenade" />
+            </PawnExplosionDamage>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>  
+  <!-- Gadget Incendiary : Kill [n] enemies using a single Incendiary Grenade -->
+  <Challenge Name="LocId_SNN_OD_IncendiaryKillsSingle" Desc="LocId_SNDES_OD_IncendiaryKillsSingleDesc" Reset="Never" Guid="154" ShortDesc="LocId_SNSD_OD_AssaultIncendiaryKillsStreak" Category="ChallengeAssault" Icon="assault" SimultaneousRequirement="3" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="3.0" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="3" />
+          <Event>
+            <PawnGadgetDamage>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <GadgetType Op="Equal" Value="GDT_Incendiary" />
+            </PawnGadgetDamage>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>  
+  <!-- Gadget Proxy Mine : Kill [n] enemies using a single Proxy Mine -->
+  <Challenge Name="LocId_SNN_OD_ProxyMineKillsSingle" Desc="LocId_SNDES_OD_ProxyMineKillsSingleDesc" Reset="Never" Guid="156" ShortDesc="LocId_SNSD_OD_AssaultProxyMineKillsStreak" Category="ChallengeAssault" Icon="assault" SimultaneousRequirement="3" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="3" />
+          <Event>
+            <PawnExplosionDamage>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <GadgetType Op="Equal" Value="GDT_ProximityMine" />
+            </PawnExplosionDamage>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadget Sticky Cam : Kill [n] enemies using a single Sticky Cam Explosive -->
+  <Challenge Name="LocId_SNN_OD_StickyCamKillsSingle" Desc="LocId_SNDES_OD_StickyCamKillsSingleDesc" Reset="Never" Guid="158" ShortDesc="LocId_SNSD_OD_AssaultStickyCamKillsStreak" Category="ChallengeAssault" Icon="assault" SimultaneousRequirement="3" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="3" />
+          <Event>
+            <PawnExplosionDamage>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <GadgetType Op="Equal" Value="GDT_StickyCam" />
+            </PawnExplosionDamage>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadget Breaching Charge : Kill [n] enemies using Breaching Charge -->
+  <Challenge Name="LocId_SNN_OD_BreachChargeKills" Desc="LocId_SNDES_OD_BreachChargeKillsDesc" Reset="Never" Guid="159" ShortDesc="LocId_SNSD_OD_AssaultBreachChargeKills" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_DoorBreach" />
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="2">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadget Breaching Charge : Kill [n] enemies using a single Breaching Charge -->
+  <Challenge Name="LocId_SNN_OD_BreachChargeKillsSingle" Desc="LocId_SNDES_OD_BreachChargeKillsSingleDesc" Reset="Never" Guid="160" ShortDesc="LocId_SNSD_OD_AssaultBreachChargeKillsStreak" Category="ChallengeAssault" Icon="assault" SimultaneousRequirement="3" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="3" />
+          <Event>
+            <PawnExplosionDamage>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <GadgetType Op="Equal" Value="GDT_DoorBreach" />
+            </PawnExplosionDamage>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="SingleSmall" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadget Tri-Rotor Air : Kill [n] enemies using Tri-Rotor Explosives -->
+  <Challenge Name="LocId_SNN_OD_TriRotorKills" Desc="LocId_SNDES_OD_TriRotorKillsDesc" Reset="Never" Guid="161" ShortDesc="LocId_SNSD_OD_AssaultTriRotorKills" Icon="assault" Category="ChallengeAssault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsTriRotor Op="Equal" Value="true" />
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadget Tri-Rotor Air : Kill [n] enemies using a single Tri-Rotar Explosive  -->
+  <Challenge Name="LocId_SNN_OD_TriRotorKillsSingle" Desc="LocId_SNDES_OD_TriRotorKillsSingleDesc" Reset="Never" Guid="162" ShortDesc="LocId_SNSD_OD_AssaultTriRotorKillsStreak" Category="ChallengeAssault" Icon="assault" SimultaneousRequirement="3" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="3" />
+          <Event>
+            <PawnExplosionDamage>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <IsTriRotor Op="Equal" Value="true" />
+            </PawnExplosionDamage>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- Berzerker : Kill [n] enemies with a two handed weapon with out using ADS -->
+  <Challenge Name="LocId_SNN_OD_SecondaryNoADSKills" Desc="LocId_SNDES_OD_SecondaryNoADSKillsDesc" Reset="Never" Guid="163" ShortDesc="LocId_SNSD_OD_AssaultNoADS" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsAiming Op="Equal" Value="false" />
+            <IsSecondaryWeapon Op="Equal" Value="true" />
+            <WeaponArchetype Op="Not" ValueGroup="Weapons_UAV" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Berzerker : Kill [n] enemies in a row with a two handed weapon with out using ADS -->
+  <Challenge Name="LocId_SNN_OD_SecondaryNoADSKillsInRow" Desc="LocId_SNDES_OD_SecondaryNoADSKillsInRowDesc" Reset="Never" Guid="164" ShortDesc="LocId_SNSD_OD_AssaultNoADSStreak" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsAiming Op="Equal" Value="false" />
+            <IsSecondaryWeapon Op="Equal" Value="true" />
+	    <WeaponArchetype Op="Not" ValueGroup="Weapons_UAV" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <PawnBulletDamage>
+              <IsAiming Op="Equal" Value="true" />
+            </PawnBulletDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnBulletDamage>
+              <IsSecondaryWeapon Op="Equal" Value="false" />
+            </PawnBulletDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsPawnLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilledType>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <FromBullet Op="Equal" Value="false" />
+            </PawnKilledType>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionRestarted />
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionStarted />
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- Human Grenade : Kill [n] enemies with a single Human Grenade -->
+  <Challenge Name="LocId_SNN_OD_HumanGrenadeKills_SingleA" Desc="LocId_SNDES_OD_HumanGrenadeKills_SingleADesc" Reset="Never" Guid="165" ShortDesc="LocId_SNSD_OD_AssaultHumanGrenade" Category="ChallengeAssault" Icon="assault" SimultaneousRequirement="2" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="2" />
+          <Event>
+            <PawnExplosionDamage>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <IsHumanGrenade Op="Equal" Value="true" />
+            </PawnExplosionDamage>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- Tech : Kill [n] Tech by blowing up his own drone -->
+  <Challenge Name="LocId_SNN_OD_TechSuicideExplosionKills" Desc="LocId_SNDES_OD_TechSuicideExplosionKillsDesc" Reset="Never" Guid="168" ShortDesc="LocId_SNSD_OD_AssaultTechKills" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <Pawn Op="Equal" Value="Tech" />
+            <IsDead Op="Equal" Value="true" />
+            <IsReconDrone Op="Equal" Value="true" />
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="2">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="15">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Riot Shield : Kill [n] enemy while holding a riot shield -->
+  <Challenge Name="LocId_SNN_OD_RiotShieldKills" Desc="LocId_SNDES_OD_RiotShieldKillsDesc" Reset="Never" Guid="169" ShortDesc="LocId_SNSD_OD_AssaultRiotShield" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_HasRiotShield" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="15">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="40">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Mark & Execute : Trigger an explosive and kill at least [n] enemies in a single execute action -->
+  <Challenge Name="LocId_SNN_OD_ExplosiveExecuteKills" Desc="LocId_SNDES_OD_ExplosiveExecuteKillsDesc" Reset="Never" Guid="170" ShortDesc="LocId_SNSD_OD_AssaultExplosiveExecute" Category="ChallengeAssault" Icon="assault" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="2" />
+          <Event>            
+            <PawnExplosionDamage>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <IsFromExecute Op="Equal" Value="true" />
+            </PawnExplosionDamage>
+          </Event>
+      </GameEvent>
+      </All>
+    </Definition>
+    <RestartDefinition>
+      <GameEvent>
+        <Event>
+          <MAEExecuteCycleCompleted>
+            <Player Op="Equal" Value="LocalPlayer" />
+          </MAEExecuteCycleCompleted>
+        </Event>
+      </GameEvent>
+      <GameEvent>
+        <Event>
+          <MissionRestarted />
+        </Event>
+      </GameEvent>
+      <GameEvent>
+        <Event>
+          <MissionStarted />
+        </Event>
+      </GameEvent>
+    </RestartDefinition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+</Challenges>

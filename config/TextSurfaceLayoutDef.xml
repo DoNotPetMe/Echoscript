@@ -1,0 +1,374 @@
+<Root>
+
+	<asset layoutID="Generic_SingleLine" oasisID="101" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line03" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<CenterOneLineVertically lineIdx="0"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="SingleLine_BotAlign" oasisID="103" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line03" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<BottomAlignOneLine lineIdx="0" space="5"/>
+		</Operations>
+	</asset>
+	
+		<asset layoutID="SingleLine_TopAlign" oasisID="105" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line03" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<TopAlignOneLine lineIdx="0" space="5"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="SingleLine_BotAlignRevLR" oasisID="104" sceneid="PTT_Generic" reveal="RevealLR" hide="HideLR">
+		<Fields>
+			<field name="Line03" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<BottomAlignOneLine lineIdx="0" space="5"/>
+		</Operations>
+	</asset>
+	
+
+	<asset layoutID="Generic_TwoLines" oasisID="102" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ShrinkWideLineToNarrowLineWidth lineIdx1="0" lineIdx2="1"/>
+			<!-- <ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="60" /> -->
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_BotShort10" oasisID="310" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="10" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_BotShort20" oasisID="320" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="20" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+
+	<asset layoutID="TwoLines_BotShort30" oasisID="330" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="30" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+
+	<asset layoutID="TwoLines_BotShort40" oasisID="340" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="40" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+
+	<asset layoutID="TwoLines_BotShort50" oasisID="350" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="50" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_BotShort60" oasisID="360" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="60" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_BotShort70" oasisID="370" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="70" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_BotShort80" oasisID="380" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="80" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_BotShort90" oasisID="390" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="1" referenceLineIdx="0" percent="90" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_TopShort10" oasisID="210" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="10" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_TopShort20" oasisID="220" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="20" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_TopShort30" oasisID="230" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="30" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_TopShort40" oasisID="240" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="40" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	
+	<asset layoutID="TwoLines_TopShort50" oasisID="250" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="50" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	
+	<asset layoutID="TwoLines_TopShort60" oasisID="260" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="60" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_TopShort70" oasisID="270" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="70" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_TopShort80" oasisID="280" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="80" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+	<asset layoutID="TwoLines_TopShort90" oasisID="290" sceneid="PTT_Generic" reveal="RevealBT" hide="HideTB">
+		<Fields>
+			<field name="Line01" duplicates="1"/>
+			<field name="Line02" duplicates="1"/>
+		</Fields>
+		<Operations>
+			<MakeSingleLine lineIdx="0"/>
+			<MakeSingleLine lineIdx="1"/>
+			<FitTextToLineSize lineIdx="0"/>
+			<FitTextToLineSize lineIdx="1"/>
+			<ResizeLineRelative lineToResizeIdx="0" referenceLineIdx="1" percent="90" />
+			<AlignLinesOnMinX  lineIdx1="0" lineIdx2="1" MinX="5"/>
+			<SetSpaceBetweenLines space="10" lineIdx1="0" lineIdx2="1"/>
+			<CenterTwoLinesVertically lineIdx1="0" lineIdx2="1"/>
+		</Operations>
+	</asset>
+	
+</Root>

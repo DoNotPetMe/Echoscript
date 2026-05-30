@@ -1,0 +1,1291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Challenges>  
+  <!-- Grenadier Frag COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyGrenadier1" Desc="LocId_SNDES_OnlineChallengeDailyGrenadier1" Reset="Never" Guid="20000" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_FragGrenade" />
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Grenadier Incendiary SP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyGrenadier2" Desc="LocId_SNDES_OnlineChallengeDailyGrenadier2" Reset="Never" Guid="20001" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="assault" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnGadgetDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_Incendiary" />
+          </PawnGadgetDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Grenadier Incendiary COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyGrenadier2" Desc="LocId_SNDES_OnlineChallengeDailyGrenadier2" Reset="Never" Guid="20002" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnGadgetDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_Incendiary" />
+          </PawnGadgetDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Gas Man SP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyGasMan" Desc="LocId_SNDES_OnlineChallengeDailyGasMan" Reset="Never" Guid="20003" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="ghost" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnOtherDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsSleepingGas Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+          </PawnOtherDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Gas Man COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyGasMan" Desc="LocId_SNDES_OnlineChallengeDailyGasMan" Reset="Never" Guid="20004" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="ghost" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnOtherDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsSleepingGas Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+          </PawnOtherDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadgets Proxy Mine SP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyGadget2" Desc="LocId_SNDES_OnlineChallengeDailyGadget2" Reset="Never" Guid="20007" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="assault" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_ProximityMine" />
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadgets Proxy Mine COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyGadget2" Desc="LocId_SNDES_OnlineChallengeDailyGadget2" Reset="Never" Guid="20008" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_ProximityMine" />
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- High Score -->
+  <!-- May have to create one for each map -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyHighScore" Desc="LocId_SNDES_OnlineChallengeDailyHighScore" Reset="Never" Guid="20009" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Map="H_RAND" Icon="ghost" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <MissionCompleted>
+            <Success Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Head Shots -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyHeadshots" Desc="LocId_SNDES_OnlineChallengeDailyHeadshots" Reset="Never" Guid="20010" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Rifleman Pro SP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyRiflemanPro" Desc="LocId_SNDES_OnlineChallengeDailyRiflemanPro" Reset="Never" Guid="20011" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="assault" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Assault" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Rifleman Pro COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyRiflemanPro" Desc="LocId_SNDES_OnlineChallengeDailyRiflemanPro" Reset="Never" Guid="20012" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Assault" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Pistolier Pro SP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyPistolierPro" Desc="LocId_SNDES_OnlineChallengeDailyPistolierPro" Reset="Never" Guid="20013" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="assault" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Pistol" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Pistolier Pro COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyPistolierPro" Desc="LocId_SNDES_OnlineChallengeDailyPistolierPro" Reset="Never" Guid="20014" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="assault" Map="E_RAND">
+    <Definition>      
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Pistol" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Shotgunner Pro SP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyShotgunnerPro" Desc="LocId_SNDES_OnlineChallengeDailyShotgunnerPro" Reset="Never" Guid="20015" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="assault" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Shotgun" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Shotgunner Pro COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyShotgunnerPro" Desc="LocId_SNDES_OnlineChallengeDailyShotgunnerPro" Reset="Never" Guid="20016" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Shotgun" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- SMG Pro SP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySMGPro" Desc="LocId_SNDES_OnlineChallengeDailySMGPro" Reset="Never" Guid="20017" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="assault" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_SMG" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- SMG Pro COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySMGPro" Desc="LocId_SNDES_OnlineChallengeDailySMGPro" Reset="Never" Guid="20018" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_SMG" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Sniper Pro SP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySniperPro" Desc="LocId_SNDES_OnlineChallengeDailySniperPro" Reset="Never" Guid="20019" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="panther" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Sniper" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Sniper Pro COOP -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySniperPro" Desc="LocId_SNDES_OnlineChallengeDailySniperPro" Reset="Never" Guid="20020" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="panther" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <PillType Op="Equal" Value="PillHead" />
+            <FromBullet Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Sniper" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>  
+  <!-- Timed Takedowns -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyTimedTakedowns" Desc="LocId_SNDES_OnlineChallengeDailyTimedTakedowns" Reset="Never" Guid="20023" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="panther" Map="E_RAND" TimeSpan="10" SequenceRequirement="5">
+    <Definition>
+      <All>        
+        <TimeComponent Max="10.0" />
+        <GameEvent>
+          <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+          <RepeatComponent Count="5" />
+          <Event>
+            <PawnKilled>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>  
+  <!-- Complete mission without being detected -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySilence" Desc="LocId_SNDES_OnlineChallengeDailySilence" Reset="Never" Guid="20026" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Icon="ghost" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <MissionCompleted>
+            <Success Op="Equal" Value="true" />
+            <WasDetected Op="Equal" Value="false" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>    
+    <StepReward Count="1">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Beat a Mission on Realistic or Perfectionist -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyDifficulty" Desc="LocId_SNDES_OnlineChallengeDailyDifficulty" Reset="Never" Guid="20027" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="ghost" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <MissionCompleted>
+            <Success Op="Equal" Value="true" />
+              <DifficultyLevel Op="Equal">
+                <Value>eDifficultyLevel_Realistic</Value>
+                <Value>eDifficultyLevel_Perfectionist</Value>
+              </DifficultyLevel>
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>  
+  <!--Destroy or disable [n] security systems -->
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySecurityExpert" Desc="LocId_SNDES_OnlineChallengeDailySecurityExpert1" Reset="Never" Guid="20029" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Icon="ghost" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <SecurityDeviceShocked>
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+          </SecurityDeviceShocked>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="15">
+      <Economy ValueTag="DailyLarge" />
+    </StepReward>
+  </Challenge>
+  
+  
+  
+  
+  
+  
+  <!-- 
+  ////////////////////////////////////////////
+  // Weekly Challenges
+  ///////////////////////////////////////////
+  -->
+  <!-- Earn 50 Kills in TDM -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyKillsTDM" Desc="LocId_SNDES_OnlineChallengeWeeklyKillsTDM" Reset="Never" Guid="30000" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" Icon="assault" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsGameModeTDM Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="100">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Earn 50 Kills in FD -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyKillsFrontline" Desc="LocId_SNDES_OnlineChallengeWeeklyKillsFrontline" Reset="Never" Guid="30001" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsGameModeFrontline Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="100">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Earn 50 Kills in CTI -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyKillsCTI" Desc="LocId_SNDES_OnlineChallengeWeeklyKillsCTI" Reset="Never" Guid="30002" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsGameModeCTI Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="100">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Earn 50 Kills in SvM -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyKillsSvM" Desc="LocId_SNDES_OnlineChallengeWeeklyKillsSvM" Reset="Never" Guid="30003" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsGameModeSVM Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="100">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill 15 Spies as a merc -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyMercKillSpy" Desc="LocId_SNDES_OnlineChallengeWeeklyMercKillSpy" Reset="Never" Guid="30004" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsVictimSpy Op="Equal" Value="true" />
+            <IsKillerMerc Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill 15 Mercs as a spy -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklySpyKillMerc" Desc="LocId_SNDES_OnlineChallengeWeeklySpyKillMerc" Reset="Never" Guid="30005" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsVictimMerc Op="Equal" Value="true" />
+            <IsKillerSpy Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!--Capture 5 points in FD -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyFDCapture" Desc="LocId_SNDES_OnlineChallengeWeeklyFDCapture" Reset="Never" Guid="30006" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="ghost" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsCaptureTerritory Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!--Capture 5 cases in CTI -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyCTICapture" Desc="LocId_SNDES_OnlineChallengeWeeklyCTICapture" Reset="Never" Guid="30007" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="ghost" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsCaptureIntel Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!--Stop 5 captures in CTI -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyCTIStopCapture" Desc="LocId_SNDES_OnlineChallengeWeeklyCTIStopCapture" Reset="Never" Guid="30008" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="ghost" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsCourier Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Win 10 rounds in TDM -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyTDM" Desc="LocId_SNDES_OnlineChallengeWeeklyTDM" Reset="Never" Guid="30009" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictoryTDM Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Win 10 rounds in CTI -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyCTI" Desc="LocId_SNDES_OnlineChallengeWeeklyCTI" Reset="Never" Guid="30010" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="ghost" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictoryCTI Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Win 10 rounds in SvM -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklySvM" Desc="LocId_SNDES_OnlineChallengeWeeklySvM" Reset="Never" Guid="30011" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictorySVM Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Win 10 rounds in Frontline -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyFrontline" Desc="LocId_SNDES_OnlineChallengeWeeklyFrontline" Reset="Never" Guid="30012" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictoryFrontline Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- earn [x] Hand to Hand kills -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyH2H" Desc="LocId_SNDES_OnlineChallengeWeeklyH2H" Reset="Never" Guid="30014" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="panther" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="false" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill [x] enemies with frag grenades -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyFragKills" Desc="LocId_SNDES_OnlineChallengeWeeklyFragKills" Reset="Never" Guid="30015" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsFragKill Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill [x] enemies with proxy mines -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyProxyMine" Desc="LocId_SNDES_OnlineChallengeWeeklyProxyMine" Reset="Never" Guid="30016" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsProxyMineKill Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill [x] enemies with tear gas -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyTearGas" Desc="LocId_SNDES_OnlineChallengeWeeklyTearGas" Reset="Never" Guid="30017" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsTearGasKill Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Neutralize [x] territories in frontline -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyFDStopCapture" Desc="LocId_SNDES_OnlineChallengeWeeklyFDStopCapture" Reset="Never" Guid="30018" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsNeutralizeTerritory Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- WEarn [x] kills with the drone -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyDrone" Desc="LocId_SNDES_OnlineChallengeWeeklyDrone" Reset="Never" Guid="30020" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="panther" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsDroneKill Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+
+  <!-- Stop the hack on [x] consoles in SvM -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklySvMStopHack" Desc="LocId_SNDES_OnlineChallengeWeeklySvMStopHack" Reset="Never" Guid="30021" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsHackStopped Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Earn [x] kills with the sticky cam -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklySticky" Desc="LocId_SNDES_OnlineChallengeWeeklySticky" Reset="Never" Guid="30022" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsStickyCamKill Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill [x] enemies blinded by a flashbang -->
+  <!-- We have the assist for flashbangs, but getting the kill is tricky. -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyFlash" Desc="LocId_SNDES_OnlineChallengeWeeklyFlash" Reset="Never" Guid="30023" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="panther" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsFlashbangAssist Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill [x] enemies stunned by a stun grenade -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyStun" Desc="LocId_SNDES_OnlineChallengeWeeklyStun" Reset="Never" Guid="30024" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="panther" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsStunAssist Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill[x] enemies tagged with a tagging device -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyTagDevice" Desc="LocId_SNDES_OnlineChallengeWeeklyTagDevice" Reset="Never" Guid="30025" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="panther" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsTagAssist Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Earn [x] kill assists -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyAssists" Desc="LocId_SNDES_OnlineChallengeWeeklyAssists" Reset="Never" Guid="30026" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsKillAssist Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="200">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Disrupt [x] cloaks with the disruptor -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyDisruptor" Desc="LocId_SNDES_OnlineChallengeWeeklyDisruptor" Reset="Never" Guid="30027" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="ghost" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsDisruptorAssist Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+  
+  <!-- Earn the first kill in TDM [x] times -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeekly" Desc="LocId_SNDES_OnlineChallengeWeeklyTDMFirst" Reset="Never" Guid="30028" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="assault" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsFirstBlood Op="Equal" Value="true" />
+            <IsGameModeTDM Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Tag [x] enemies which are then killed by teammates -->
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyTagging" Desc="LocId_SNDES_OnlineChallengeWeeklyTagging" Reset="Never" Guid="30029" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Icon="ghost" Category="OnlineChallengeWeekly" Map="A01">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsTagAssist Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="100">
+      <Economy ValueTag="WeeklyLarge" />
+    </StepReward>
+  </Challenge>
+
+
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Cut for design reasons
+  ////////////////////////////////////////////////////////////////////
+  -->
+
+  <!--Actual Online Challenges -->
+  <!-- Pistolier SP -Need ability for random map -->
+  <!-- CUT for design reasons
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyPistolier" Desc="LocId_SNDES_OnlineChallengeDailyPistolier" Reset="Never" Guid="1000" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Pistol" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!--Pistolier COOP -->
+  <!-- CUT for design reasons
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyPistolier" Desc="LocId_SNDES_OnlineChallengeDailyPistolier" Reset="Never" Guid="1001" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Pistol" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+
+  <!-- Shotgunner SP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyShotgunner" Desc="LocId_SNDES_OnlineChallengeDailyShotgunner" Reset="Never" Guid="1002" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Shotgun" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Shotgunner COOP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyShotgunner" Desc="LocId_SNDES_OnlineChallengeDailyShotgunner" Reset="Never" Guid="1003" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Shotgun" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Rifleman SP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyRifleman" Desc="LocId_SNDES_OnlineChallengeDailyRifleman" Reset="Never" Guid="1004" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Assault" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Rifleman COOP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyRifleman" Desc="LocId_SNDES_OnlineChallengeDailyRifleman" Reset="Never" Guid="1005" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Assault" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- SMG SP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySMG" Desc="LocId_SNDES_OnlineChallengeDailySMG" Reset="Never" Guid="1006" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_SMG" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- SMG COOP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySMG" Desc="LocId_SNDES_OnlineChallengeDailySMG" Reset="Never" Guid="1007" ShortDesc="LocId_SNSD_OnlineChallengeDaily2" Category="OnlineChallengeDaily" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_SMG" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Sniper SP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySniper" Desc="LocId_SNDES_OnlineChallengeDailySniper" Reset="Never" Guid="1008" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Sniper" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Sniper COOP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailySniper" Desc="LocId_SNDES_OnlineChallengeDailySniper" Reset="Never" Guid="1009" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Sniper" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="30">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Grenadier Frag SP
+  <Challenge Name="LocId_SNN_OnlineChallengeDailyGrenadier1" Desc="LocId_SNDES_OnlineChallengeDailyGrenadier1" Reset="Never" Guid="1010" ShortDesc="LocId_SNSD_OnlineChallengeDaily1" Category="OnlineChallengeDaily" Map="S_RAND">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_FragGrenade" />
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+
+
+
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Cut for tech reasons
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <!-- Win [x] Rounds as spy in CTI -->
+
+  <!-- IMPOSSIBLE WITHOUT NEW EVENTS
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklySpyCTI" Desc="LocId_SNDES_OnlineChallengeWeeklySpyCTI" Reset="Never" Guid="1056" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictoryCTI Op="Equal" Value="true" />
+            <IsSpy  Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+  </Challenge>
+-->
+  <!-- Win [x] Rounds as Merc in CTI -->
+  <!-- IMPOSSIBLE WITHOUT NEW EVENTS
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyMercCTI" Desc="LocId_SNDES_OnlineChallengeWeeklyMercCTI" Reset="Never" Guid="1057" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+-->
+
+  <!-- Win [x] Rounds as spy in SvM -->
+  <!-- IMPOSSIBLE WITHOUT NEW EVENTS
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklySpySvM" Desc="LocId_SNDES_OnlineChallengeWeeklySpySvM" Reset="Never" Guid="1058" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+-->
+
+  <!-- Win [x] Rounds as Merc in SvM-->
+  <!-- IMPOSSIBLE WITHOUT NEW EVENTS
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyMercSvM" Desc="LocId_SNDES_OnlineChallengeWeeklyMercSvM" Reset="Never" Guid="1059" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+-->
+
+  <!-- Win [x] Rounds as spy in Frontline -->
+  <!-- IMPOSSIBLE WITHOUT NEW EVENTS
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklySpyFrontline" Desc="LocId_SNDES_OnlineChallengeWeeklySpyFrontline" Reset="Never" Guid="1060" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+-->
+
+  <!-- Win [x] Rounds as merc in Frontline -->
+  <!-- IMPOSSIBLE WITHOUT NEW EVENTS
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyMercFrontline" Desc="LocId_SNDES_OnlineChallengeWeeklyMercFrontline" Reset="Never" Guid="1061" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+-->
+
+
+
+  <!-- Earn [x] XP in MP -->
+  <!--  This doesn't actually work like this.  We can't do this without having a way to increment stepcount by the Amount
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyEarnings" Desc="LocId_SNDES_OnlineChallengeWeeklyEarnings" Reset="Never" Guid="1069" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+    <Definition>
+      <GameEvent>
+        <Event>
+          <XPEarned>
+            <Amount Op="GreaterOrEqual" Value="1" />
+          </XPEarned>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10000">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+  </Challenge>
+  -->
+
+
+  <!-- Start the hack on [x] consoles in SvM -->
+  <!-- Not easy to do; can we change this to Complete the hack or assist the hack?
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklySvMHackConsole" Desc="LocId_SNDES_OnlineChallengeWeeklySvMHackConsole" Reset="Never" Guid="1070" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+
+  <!-- Execute [x] enemies with the executioner ability -->
+  <!-- HARD: no rewards specific to executioner
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyExecution" Desc="LocId_SNDES_OnlineChallengeWeeklyExecution" Reset="Never" Guid="1084" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+  <!-- Heal [x] hit points with heal ability -->
+  <!-- CUT!
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyHeal" Desc="LocId_SNDES_OnlineChallengeWeeklyHeal" Reset="Never" Guid="1085" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+  <!-- Win [x] matches with a party of 2 or more -->
+  <!-- CUT
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyPartyWins" Desc="LocId_SNDES_OnlineChallengeWeeklyPartyWins" Reset="Never" Guid="1086" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+  <!-- Earn [x] kills as a party -->
+  <!-- CUT!
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyPartyKills" Desc="LocId_SNDES_OnlineChallengeWeeklyPartyKills" Reset="Never" Guid="1087" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+  <!-- finish a match as MVP [x] times -->
+  <!-- Too much effort for now
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyMVP" Desc="LocId_SNDES_OnlineChallengeWeeklyMVP" Reset="Never" Guid="1088" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+  <!-- Play [x] hours of MP -->
+  <!-- CUT!
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyPlaytime" Desc="LocId_SNDES_OnlineChallengeWeeklyPlaytime" Reset="Never" Guid="1089" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+
+  <!-- Play [x] hours in playlist [x] -->
+  <!-- CUT!
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyTimePlaylist" Desc="LocId_SNDES_OnlineChallengeWeeklyTimePlaylist" Reset="Never" Guid="1080" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+  <!-- Finish the week with a KDR of [x] -->
+  <!-- CUT!
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyKDR" Desc="LocId_SNDES_OnlineChallengeWeeklyKDR" Reset="Never" Guid="1082" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+  <!-- Earn [x] DFAs -->
+  <!--  I'm tired...
+  <Challenge Name="LocId_SNN_OnlineChallengeWeekly" Desc="LocId_SNDES_OnlineChallengeWeeklyDFA" Reset="Never" Guid="1077" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+
+  <!-- destroy [x] grenades with the AGS -->
+  <!--  I'm tired...
+  <Challenge Name="LocId_SNN_OnlineChallengeWeeklyAntiGrenade" Desc="LocId_SNDES_OnlineChallengeWeeklyAntiGrenade" Reset="Never" Guid="1079" ShortDesc="LocId_SNSD_OnlineChallengeWeekly" Category="OnlineChallengeWeekly" >
+  </Challenge>
+  -->
+  
+</Challenges>

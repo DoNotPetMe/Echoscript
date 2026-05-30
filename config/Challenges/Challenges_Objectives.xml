@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // HVT
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <!-- Bag and Tag a HVT -->
+  <Challenge Name="LocID_SNN_OD_BagTagHVT" Desc="LocID_SNDES_OD_BagTagHVTDesc" Reset="map" Guid="171" ShortDesc="UNDEFINED" Icon="ghost" Category="UNDEFINED">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <HVTCaptured />
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1" Reset="ResetOnly">
+      <Economy Value="30000" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Laptop Hacking
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <!-- Hack a laptop -->
+  <Challenge Name="LocID_SNN_OD_HackLaptop" Desc="LocID_SNDES_OD_HackLaptop" Reset="map" Guid="172" ShortDesc="UNDEFINED" Icon="ghost" Category="UNDEFINED">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <LaptopHacked>
+            <Pawn Op="Equal" ValueGroup="HumanPlayer" />
+          </LaptopHacked>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1" Reset="ResetOnly">
+      <Economy Value="40000" />
+    </StepReward>
+  </Challenge>
+
+  <Challenge Name="LocID_SNN_OD_CollectDeadDrop" Desc="LocID_SNDES_OD_CollectDeadDropDesc" Reset="map" Guid="173" ShortDesc="UNDEFINED" Icon="ghost" Category="UNDEFINED">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <DeadDropPickedUp>
+            <Pawn Op="Equal" ValueGroup="HumanPlayer" />
+          </DeadDropPickedUp>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1" Reset="ResetOnly">
+      <Economy Value="10000" SoundClip="1" />
+    </StepReward>
+  </Challenge>
+
+</Challenges>

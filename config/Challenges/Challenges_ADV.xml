@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+  <!-- Challenge lines for Adversarial Challenges -->
+
+  <!-- All Challenges include a step count, see the master challenge sheet for steps -->
+
+  <!-- Earn <x> kills with a drone in multiplayer -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_DroneKills" Desc="LocId_SNDES_OD_ADVChallenge_DroneKills" Reset="Never" Guid="600" ShortDesc="LocId_SNSD_OD_ADVChallenge_DroneKills" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsDroneKill Op="Equal" Value="true" />
+            <IsChallengeTrackableKill Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- affect <x> enemies or gadgets with the EMP backpack -->
+  <!--  CUT!
+<Challenge Name="LocId_SNN_OD_ADVChallenge_EMP" Desc="LocId_SNDES_OD_ADVChallenge_EMP" Reset="Never" Guid="100" ShortDesc="LocId_SNSD_OD_ADVChallenge_EMP" Category="ChallengeAdversarial">
+</Challenge>
+-->
+
+  <!-- Tag <x> enemies with the intel suit -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Intel" Desc="LocId_SNDES_OD_ADVChallenge_Intel" Reset="Never" Guid="602" ShortDesc="LocId_SNSD_OD_ADVChallenge_Intel" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <TagEnemyPlayer>
+            <IsUsingIntelSuit Op="Equal" Value="true" />
+          </TagEnemyPlayer>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- regen from under 10% health <x> times with the peacemaker suit in multiplayer -->
+  <!--  CUT!
+<Challenge Name="LocId_SNN_OD_ADVChallenge_Survival" Desc="LocId_SNDES_OD_ADVChallenge_Survival" Reset="Never" Guid="100" ShortDesc="LocId_SNSD_OD_ADVChallenge_Survival" Category="ChallengeAdversarial">
+</Challenge>
+-->
+
+  <!-- Disrupt <x> enemies or gadgets with the disruptor ability -->
+  <!--  CUT!
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Disruptor" Desc="LocId_SNDES_OD_ADVChallenge_Disruptor" Reset="Never" Guid="603" ShortDesc="LocId_SNSD_OD_ADVChallenge_DroneKills" Category="ChallengeAdversarial">
+  </Challenge>
+  -->
+
+  <!-- Win <x> matches in TDM -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_TDM" Desc="LocId_SNDES_OD_ADVChallenge_TDM" Reset="Never" Guid="604" ShortDesc="LocId_SNSD_OD_ADVChallenge_TDM" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictoryTDM Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Win <x> matches in SvM -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_SVM" Desc="LocId_SNDES_OD_ADVChallenge_SVM" Reset="Never" Guid="605" ShortDesc="LocId_SNSD_OD_ADVChallenge_SVM" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictorySVM Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Win <x> matches in capture the intel -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_CTI" Desc="LocId_SNDES_OD_ADVChallenge_CTI" Reset="Never" Guid="606" ShortDesc="LocId_SNSD_OD_ADVChallenge_CTI" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictoryCTI Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- win <x> matches in frontline -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_FD" Desc="LocId_SNDES_OD_ADVChallenge_FD" Reset="Never" Guid="607" ShortDesc="LocId_SNSD_OD_ADVChallenge_FD" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsVictoryFrontline Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Successfully hack <x> terminals as a spy in SvM -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Hacker" Desc="LocId_SNDES_OD_ADVChallenge_Hacker" Reset="Never" Guid="608" ShortDesc="LocId_SNSD_OD_ADVChallenge_Hacker" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsHacker Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill the hacker <x> times as the merc in SvM  CUT Redundant challenge -->
+  <!--
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_SpyKiller" Desc="LocId_SNDES_OD_ADVChallenge_SpyKiller" Reset="Never" Guid="609" ShortDesc="LocId_SNSD_OD_ADVChallenge_SpyKiller" Category="ChallengeAdversarial">
+  </Challenge>
+  -->
+
+  <!-- capture <x> intel cases in CTI -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_ExtractionExpert" Desc="LocId_SNDES_OD_ADVChallenge_ExtractionExpert" Reset="Never" Guid="609" ShortDesc="LocId_SNSD_OD_ADVChallenge_ExtractionExpert" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsCaptureIntel Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- reset the intel <x> times in CTI -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Protector" Desc="LocId_SNDES_OD_ADVChallenge_Protector" Reset="Never" Guid="610" ShortDesc="LocId_SNSD_OD_ADVChallenge_Protector" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsResetIntel Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- capture <x> territories in Frontline -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Conqueror" Desc="LocId_SNDES_OD_ADVChallenge_Conqueror" Reset="Never" Guid="611" ShortDesc="LocId_SNSD_OD_ADVChallenge_Conqueror" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsCaptureTerritory Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- get <x> objective assists in multiplayer -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_ObjAssist" Desc="LocId_SNDES_OD_ADVChallenge_ObjAssist" Reset="Never" Guid="612" ShortDesc="LocId_SNSD_OD_ADVChallenge_ObjAssist" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsAssist Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- refill ammo <x> times for you or your teammates -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_AmmoPack" Desc="LocId_SNDES_OD_ADVChallenge_AmmoPack" Reset="Never" Guid="613" ShortDesc="LocId_SNSD_OD_ADVChallenge_AmmoPack" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <ObjectiveReward>
+            <IsAmmoPack Op="Equal" Value="true" />
+          </ObjectiveReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+
+  </Challenge>
+
+  <!-- Tag <x> enemies with the tagging device -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Tagging" Desc="LocId_SNDES_OD_ADVChallenge_Tagging" Reset="Never" Guid="614" ShortDesc="LocId_SNSD_OD_ADVChallenge_Tagging" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <TagEnemyPlayer>
+            <IsUsingDevice Op="Equal" Value="true" />
+          </TagEnemyPlayer>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill <x> enemies with the longshot bonus in multiplayer -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Longshot" Desc="LocId_SNDES_OD_ADVChallenge_Longshot" Reset="Never" Guid="615" ShortDesc="LocId_SNSD_OD_ADVChallenge_Longshot" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsLongshot Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- kill <x> enemies with headshots in multiplayer -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Headshot" Desc="LocId_SNDES_OD_ADVChallenge_Headshot" Reset="Never" Guid="616" ShortDesc="LocId_SNSD_OD_ADVChallenge_Headshot" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsHeadshot Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill <x> enemies while hanging from a ledge(gun) -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Hangshot" Desc="LocId_SNDES_OD_ADVChallenge_Hangshot" Reset="Never" Guid="617" ShortDesc="LocId_SNSD_OD_ADVChallenge_Hangshot" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsHanged Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill <x> enemies that are currently hacking -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_SpyKiller" Desc="LocId_SNDES_OD_ADVChallenge_SpyKiller" Reset="Never" Guid="618" ShortDesc="LocId_SNSD_OD_ADVChallenge_SpyKiller" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsHackerSpy Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Kill <x> enemies that are couriers -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_CourierKill" Desc="LocId_SNDES_ADVChallenge_CourierKill" Reset="Never" Guid="619" ShortDesc="LocId_SNSD_ADVChallenge_CourierKill" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsCourier Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+
+
+  <!-- travel <x> m on the ground in multiplayer -->
+  <!-- CUT!
+<Challenge Name="LocId_SNN_OD_ADVChallenge_Trailblazer" Desc="LocId_SNDES_OD_ADVChallenge_Trailblazer" Reset="Never" Guid="100" ShortDesc="LocId_SNSD_OD_ADVChallenge_Trailblazer" Category="ChallengeAdversarial">
+</Challenge>
+-->
+
+  <!-- Travel <x> m on ledges in multiplayer -->
+  <!-- CUT!
+<Challenge Name="LocId_SNN_OD_ADVChallenge_Ledges" Desc="LocId_SNDES_OD_ADVChallenge_Ledges" Reset="Never" Guid="100" ShortDesc="LocId_SNSD_OD_ADVChallenge_Ledges" Category="ChallengeAdversarial">
+</Challenge>
+-->
+
+  <!-- Travel <x> m on pipes in multiplayer -->
+  <!-- CUT!
+<Challenge Name="LocId_SNN_OD_ADVChallenge_Crawler" Desc="LocId_SNDES_OD_ADVChallenge_Crawler" Reset="Never" Guid="100" ShortDesc="LocId_SNSD_OD_ADVChallenge_Crawler" Category="ChallengeAdversarial">
+</Challenge>
+-->
+  <!-- Travel <x> m on ziplines in multiplayer -->
+  <!-- CUT!
+<Challenge Name="LocId_SNN_OD_ADVChallenge_Zipline" Desc="LocId_SNDES_OD_ADVChallenge_Zipline" Reset="Never" Guid="100" ShortDesc="LocId_SNSD_OD_ADVChallenge_Zipline" Category="ChallengeAdversarial">
+</Challenge>
+-->
+
+  <!-- affect 2 or more enemies with flashbangs <x> times in multiplayer -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Flashbang" Desc="LocId_SNDES_OD_ADVChallenge_Flashbang" Reset="Never" Guid="620" ShortDesc="LocId_SNSD_OD_ADVChallenge_Flashbang" Category="ChallengeAdversarial">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <GameEvent>
+          <RepeatComponent Count="2" />
+          <Event>
+            <PawnStunned>
+              <IsPawnAnyEnemy Op="Equal" Value="true" />
+              <IsPawnAnyNPC Op="Equal" Value="false" />
+              <IsFlashbang Op="Equal" Value="true" />
+            </PawnStunned>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- affect 2 or more enemies with an emp grenade <x> times  -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_EMPG" Desc="LocId_SNDES_OD_ADVChallenge_EMPG" Reset="Never" Guid="622" ShortDesc="LocId_SNSD_OD_ADVChallenge_EMPG" Category="ChallengeAdversarial">
+    <Definition>
+      <All>
+        <TimeComponent Max="0.5" />
+        <GameEvent>
+          <RepeatComponent Count="2" />
+          <Event>
+            <PawnStunned>
+              <IsPawnAnyEnemy Op="Equal" Value="true" />
+              <IsPawnAnyNPC Op="Equal" Value="false" />
+              <IsEMP Op="Equal" Value="true" />
+            </PawnStunned>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Survive an explosion <x> times in multiplayer -->
+  <!--
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_SurviveBlast" Desc="LocId_SNDES_OD_ADVChallenge_SurviveBlast" Reset="Never" Guid="100" ShortDesc="LocId_SNSD_OD_ADVChallenge_SurviveBlast" Category="ChallengeAdversarial">
+  </Challenge>
+-->
+
+  <!-- Kill with a DFA <x> times in multiplayer -->
+  <!--  Cut - low pri
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_DFA" Desc="LocId_SNDES_OD_ADVChallenge_DFA" Reset="Never" Guid="623" ShortDesc="LocId_SNSD_OD_ADVChallenge_DFA" Category="ChallengeAdversarial">
+  </Challenge>
+  -->
+
+  <!-- earn a killstreak <x> times in multiplayer -->
+  <Challenge Name="LocId_SNN_OD_ADVChallenge_Streak" Desc="LocId_SNDES_OD_ADVChallenge_Streak" Reset="Never" Guid="623" ShortDesc="LocId_SNSD_OD_ADVChallenge_Streak" Category="ChallengeAdversarial">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <KillReward>
+            <IsKillstreak Op="Equal" Value="true" />
+          </KillReward>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+
+
+
+  <!-- SC6ACTION01: Finish the safehouse mission (S_KOB) -->
+  <Challenge Category="ChallengeUplay" Name="LocId_SNN_UplayOnlineAction1" Desc="LocId_SNDES_UplayOnlineAction1" Reset="Never" ShortDesc="LocId_SNSD_UplayOnlineAction1" Guid="10100">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="S_KOB" />
+            <Success Op="Equal" Value="true" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Uplay Id="SC6ACTION01"  Index="0" Points="10" Delay="5.0"/>
+    </StepReward>
+  </Challenge>
+
+  <!-- SC6ACTION02: Complete an entire coop mode Note: Implementation here is complex, we may need to fix this... -->
+  <Challenge Category="ChallengeUplay" Name="LocId_SNN_UplayOnlineAction2" Desc="LocId_SNDES_UplayOnlineAction2" Reset="Never" ShortDesc="LocId_SNSD_UplayOnlineAction2" Guid="10101">
+    <Definition>
+      <Any>
+        <All>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="C01" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="C02" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="C03" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="C04" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+        </All>
+        <All>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="E01" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="E02" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="E03" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="E04" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+        </All>
+        <All>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="H01" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="H02" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="H03" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+        </All>
+        <All>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="G01" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="G02" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <MissionCompleted>
+                <SC6MissionName Op="Equal" Value="G03" />
+                <Success Op="Equal" Value="true" />
+              </MissionCompleted>
+            </Event>
+          </GameEvent>
+        </All>
+      </Any>
+    </Definition>
+    <StepReward Count="1">
+      <Uplay Id="SC6ACTION02"  Index="1" Points="20" Delay="5.0"/>
+    </StepReward>
+  </Challenge>
+
+
+  <!-- SC6ACTION03: Finish 1 Daily Challenges -->
+  <Challenge Category="ChallengeUplay" Name="LocId_SNN_UplayOnlineAction3" Desc="LocId_SNDES_UplayOnlineAction3" Reset="Never" ShortDesc="LocId_SNSD_UplayOnlineAction3" Guid="10102">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <EconomyRewardCompleted>
+            <IsDailyChallenge Op="Equal" Value="true" />
+          </EconomyRewardCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Uplay Id="SC6ACTION03"  Index="2" Points="30" />
+    </StepReward>
+  </Challenge>
+
+  <!-- SC6ACTION03: Finish a weekly challenge -->
+  <Challenge Category="ChallengeUplay" Name="LocId_SNN_UplayOnlineAction4" Desc="LocId_SNDES_UplayOnlineAction4" Reset="Never" ShortDesc="LocId_SNSD_UplayOnlineAction4" Guid="10103">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <EconomyRewardCompleted>
+            <IsWeeklyChallenge Op="Equal" Value="true" />
+          </EconomyRewardCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Uplay Id="SC6ACTION04"  Index="3" Points="40" />
+    </StepReward>
+  </Challenge>
+
+</Challenges>

@@ -1,0 +1,1546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+  <!-- Pistol : Get [n] Kills with any pistol -->
+  <Challenge Name="LocId_SNN_OD_PistolKills" Desc="LocId_SNDES_OD_PistolKillsDesc" Reset="Never" Guid="220" ShortDesc="LocId_SNSD_OD_PistolKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Pistol" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="2000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- Pistol : Get [n] Kills with specific pistols -->
+  <Challenge Name="LocId_SNN_OD_PistolKills_57" Desc="LocId_SNDES_OD_PistolKills_57Desc" Reset="Never" Guid="221" ShortDesc="LocId_SNSD_OD_PistolKills_57" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Pistol_5-7</Value>
+              <Value>ADV_Spy_Pistol_FiveSeven</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- DLC weapon removal
+  <Challenge Name="LocId_SNN_OD_PistolKills_USP45" Desc="LocId_SNDES_OD_PistolKills_USP45Desc" Reset="Never" Guid="222" ShortDesc="LocId_SNSD_OD_PistolKills_USP45" Category="ChallengeGear" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Pistol_USP45</Value>
+              <Value>ADV_Spy_Pistol_USP45</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  -->
+  <Challenge Name="LocId_SNN_OD_PistolKills_PX4" Desc="LocId_SNDES_OD_PistolKills_PX4Desc" Reset="Never" Guid="223" ShortDesc="LocId_SNSD_OD_PistolKills_PX4" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Pistol_PX4</Value>
+              <Value>ADV_Merc_Pistol_Px4</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_PistolKills_F40" Desc="LocId_SNDES_OD_PistolKills_F40Desc" Reset="Never" Guid="224" ShortDesc="LocId_SNSD_OD_PistolKills_F40" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Pistol_F40</Value>
+              <Value>ADV_Spy_Pistol_F40</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_PistolKills_Proto" Desc="LocId_SNDES_OD_PistolKills_ProtoDesc" Reset="Never" Guid="225" ShortDesc="LocId_SNSD_OD_PistolKills_Proto" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Pistol_Proto</Value>
+              <Value>ADV_Spy_Pistol_Proto</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_PistolKills_DesertEagle" Desc="LocId_SNDES_OD_PistolKills_DesertEagleDesc" Reset="Never" Guid="226" ShortDesc="LocId_SNSD_OD_PistolKills_DesertEagle" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Pistol_DesertEagle</Value>
+              <Value>ADV_Merc_Pistol_DesertEagle</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>  
+  <!-- Assault : Get [n] Kills with any assault rifle -->
+  <Challenge Name="LocId_SNN_OD_AssaultKills" Desc="LocId_SNDES_OD_AssaultKillsDesc" Reset="Never" Guid="229" ShortDesc="LocId_SNSD_OD_AssaultKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Assault" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="2000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- Assault : Get [n] Kills with specific assault rifles -->
+  <Challenge Name="LocId_SNN_OD_AssaultKills_FAMAS" Desc="LocId_SNDES_OD_AssaultKills_FAMASDesc" Reset="Never" Guid="230" ShortDesc="LocId_SNSD_OD_AssaultKills_FAMAS" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_FAMAS</Value>
+              <Value>ADV_Merc_Assault_FAMASG2</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_AssaultKills_M416" Desc="LocId_SNDES_OD_AssaultKills_M416Desc" Reset="Never" Guid="232" ShortDesc="LocId_SNSD_OD_AssaultKills_M416" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_M416</Value>
+              <Value>ADV_Merc_Assault_M416</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_AssaultKills_HoneyBadger" Desc="LocId_SNDES_OD_AssaultKills_HoneyBadgerDesc" Reset="Never" Guid="233" ShortDesc="LocId_SNSD_OD_AssaultKills_HoneyBadger" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_HoneyBadger</Value>
+              <Value>ADV_Merc_Assault_HoneyBadger</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_AssaultKills_Proto" Desc="LocId_SNDES_OD_AssaultKills_ProtoDesc" Reset="Never" Guid="234" ShortDesc="LocId_SNSD_OD_AssaultKills_Proto" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_Proto</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- ARX Kills -->
+  <Challenge Name="LocId_SNN_OD_AssaultKills_ARX" Desc="LocId_SNDES_OD_AssaultKills_ARXDesc" Reset="Never" Guid="235" ShortDesc="LocId_SNSD_OD_AssaultKills_ARX" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_ARX</Value>
+              <Value>ADV_Merc_Assault_ARX160</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+ 
+  <Challenge Name="LocId_SNN_OD_AssaultKills_AK47" Desc="LocId_SNDES_OD_AssaultKills_AK47Desc" Reset="Never" Guid="236" ShortDesc="LocId_SNSD_OD_AssaultKills_AK47" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_AK47</Value>
+              <Value>ADV_Merc_Assault_AK47</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_AssaultKills_AKS74U" Desc="LocId_SNDES_OD_AssaultKills_AKS74UDesc" Reset="Never" Guid="237" ShortDesc="LocId_SNSD_OD_AssaultKills_AKS74U" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_AKS74U</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- SA58 Kills -->
+  <Challenge Name="LocId_SNN_OD_AssaultKills_SA58" Desc="LocId_SNDES_OD_AssaultKills_SA58Desc" Reset="Never" Guid="238" ShortDesc="LocId_SNSD_OD_AssaultKills_SA58" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_SA58</Value>
+              <Value>ADV_Merc_Assault_SA58</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  
+  <Challenge Name="LocId_SNN_OD_AssaultKills_Goblin" Desc="LocId_SNDES_OD_AssaultKills_GoblinDesc" Reset="Never" Guid="239" ShortDesc="LocId_SNSD_OD_AssaultKills_Goblin" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Rifle_Goblin</Value>
+              <Value>ADV_Merc_Assault_Goblin</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>  
+  <!-- SMG : Get [n] Kills with any SMG -->
+  <Challenge Name="LocId_SNN_OD_SMGKills" Desc="LocId_SNDES_OD_SMGKillsDesc" Reset="Never" Guid="243" ShortDesc="LocId_SNSD_OD_SMGKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_SMG" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="2000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- SMG : Get [n] Kills with specific SMGs -->
+  <Challenge Name="LocId_SNN_OD_SMGKills_MP7A2" Desc="LocId_SNDES_OD_SMGKills_MP7A2Desc" Reset="Never" Guid="244" ShortDesc="LocId_SNSD_OD_SMGKills_MP7A2" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>SMG_MP7A2</Value>
+              <Value>ADV_Spy_SMG_MP7</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_SMGKills_Vector" Desc="LocId_SNDES_OD_SMGKills_VectorDesc" Reset="Never" Guid="245" ShortDesc="LocId_SNSD_OD_SMGKills_Vector" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>SMG_Vector</Value>
+              <Value>ADV_Spy_SMG_Vector</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_SMGKills_UMP45" Desc="LocId_SNDES_OD_SMGKills_UMP45Desc" Reset="Never" Guid="246" ShortDesc="LocId_SNSD_OD_SMGKills_UMP45" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>SMG_UMP45</Value>
+              <Value>ADV_Spy_SMG_UMP45</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_SMGKills_Proto" Desc="LocId_SNDES_OD_SMGKills_ProtoDesc" Reset="Never" Guid="247" ShortDesc="LocId_SNSD_OD_SMGKills_Proto" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>SMG_Proto</Value>
+              <Value>ADV_Spy_SMG_Proto</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>  
+  <Challenge Name="LocId_SNN_OD_SMGKills_MAC11" Desc="LocId_SNDES_OD_SMGKills_MAC11Desc" Reset="Never" Guid="249" ShortDesc="LocId_SNSD_OD_SMGKills_MAC11" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>SMG_MAC11</Value>
+              <Value>ADV_Spy_SMG_MAC11</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>  
+  <Challenge Name="LocId_SNN_OD_SMGKills_PP2000" Desc="LocId_SNDES_OD_SMGKills_PP2000Desc" Reset="Never" Guid="251" ShortDesc="LocId_SNSD_OD_SMGKills_PP2000" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>SMG_PP2000</Value>
+              <Value>ADV_Spy_SMG_PP2000</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_SMGKills_Scorpion" Desc="LocId_SNDES_OD_SMGKills_ScorpionDesc" Reset="Never" Guid="252" ShortDesc="LocId_SNSD_OD_SMGKills_Scorpion" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>SMG_Scorpion</Value>
+              <Value>ADV_Spy_SMG_Scorpion</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- Sniper : Get [n] Kills with any sniper rifle -->
+  <Challenge Name="LocId_SNN_OD_SniperKills" Desc="LocId_SNDES_OD_SniperKillsDesc" Reset="Never" Guid="253" ShortDesc="LocId_SNSD_OD_SniperKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Sniper" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="2000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- Sniper : Get [n] Kills with a specific sniper rifle -->
+  <Challenge Name="LocId_SNN_OD_SniperKills_SR25" Desc="LocId_SNDES_OD_SniperKills_SR25Desc" Reset="Never" Guid="254" ShortDesc="LocId_SNSD_OD_SniperKills_SR25" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Sniper_SR25</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_SniperKills_Proto" Desc="LocId_SNDES_OD_SniperKills_ProtoDesc" Reset="Never" Guid="255" ShortDesc="LocId_SNSD_OD_SniperKills_Proto" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Sniper_Proto</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_SniperKills_SVU" Desc="LocId_SNDES_OD_SniperKills_SVUDesc" Reset="Never" Guid="256" ShortDesc="LocId_SNSD_OD_SniperKills_SVU" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Sniper_SVU</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_SniperKills_VSS" Desc="LocId_SNDES_OD_SniperKills_VSSDesc" Reset="Never" Guid="257" ShortDesc="LocId_SNSD_OD_SniperKills_VSS" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Sniper_VSS</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>  
+  <!-- Shotgun : Get [n] Kills with any shotgun -->
+  <Challenge Name="LocId_SNN_OD_ShotgunKills" Desc="LocId_SNDES_OD_ShotgunKillsDesc" Reset="Never" Guid="261" ShortDesc="LocId_SNSD_OD_ShotgunKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Shotgun" />
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="50">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="2000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- Shotgun : Get [n] Kills with a specific shotgun -->
+  <Challenge Name="LocId_SNN_OD_ShotgunKills_M1014" Desc="LocId_SNDES_OD_ShotgunKills_M1014Desc" Reset="Never" Guid="262" ShortDesc="LocId_SNSD_OD_ShotgunKills_M1014" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Shotgun_M1014</Value>
+              <Value>ADV_Merc_Shotgun_M1014</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_ShotgunKills_Proto" Desc="LocId_SNDES_OD_ShotgunKills_ProtoDesc" Reset="Never" Guid="263" ShortDesc="LocId_SNSD_OD_ShotgunKills_Proto" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Shotgun_Proto</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_ShotgunKills_RMB93" Desc="LocId_SNDES_OD_ShotgunKills_RMB93Desc" Reset="Never" Guid="264" ShortDesc="LocId_SNSD_OD_ShotgunKills_RMB93" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Shotgun_RMB93</Value>
+              <Value>ADV_Merc_Shotgun_RMB93</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_ShotgunKills_Saiga12" Desc="LocId_SNDES_OD_ShotgunKills_Saiga12Desc" Reset="Never" Guid="265" ShortDesc="LocId_SNSD_OD_ShotgunKills_Saiga12" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Shotgun_Saiga12</Value>
+              <Value>ADV_Merc_Shotgun_Saiga12</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_ShotgunKills_AA12" Desc="LocId_SNDES_OD_ShotgunKills_AA12Desc" Reset="Never" Guid="266" ShortDesc="LocId_SNSD_OD_ShotgunKills_AA12" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnBulletDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Shotgun_AA12</Value>
+              <Value>ADV_Merc_Shotgun_AA12</Value>
+            </WeaponArchetype>
+          </PawnBulletDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- Shotgun : Get [n] Kills within [x] seconds using any shotgun -->
+  <Challenge Name="LocId_SNN_OD_ShotgunKillsSpecial" Desc="LocId_SNDES_OD_ShotgunKillsSpecialDesc" Reset="Never" Guid="267" ShortDesc="LocId_SNSD_OD_ShotgunKillsSpecial" Icon="assault" Category="ChallengeGear" SequenceRequirement="2" TimeSpan="4" Map="E_RAND">
+    <Definition>
+      <All>
+        <TimeComponent Max="4.0" />
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <GameEvent>
+          <RepeatComponent Count="2" />
+          <Event>
+            <PawnBulletDamage>
+              <IsPawnAnyEnemy Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <IsDead Op="Equal" Value="true" />
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_Shotgun" />
+            </PawnBulletDamage>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="SingleLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Crossbow : Get [n] takedowns -->
+  <Challenge Name="LocId_SNN_OD_CrossbowKills" Desc="LocId_SNDES_OD_CrossbowKillsDesc" Reset="Never" Guid="270" ShortDesc="LocId_SNSD_OD_CrossbowKills" Category="ChallengeGear" Icon="ghost" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnElectricDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Crossbow_1H</Value>
+              <Value>Crossbow_1H_DLC</Value>
+              <Value>ADV_Spy_CrossBow</Value>
+              <Value>ADV_Spy_CrossBow_Classic</Value>
+            </WeaponArchetype>
+        </PawnElectricDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="StandardTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="StandardTier5" />
+    </StepReward>
+  </Challenge>
+  <!-- Stun Gun : Get [n] takedowns -->
+  <Challenge Name="LocId_SNN_OD_StunGunKills" Desc="LocId_SNDES_OD_StunGunKillsDesc" Reset="Never" Guid="271" ShortDesc="LocId_SNSD_OD_StunGunKills" Category="ChallengeGear" Icon="ghost" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnElectricDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <WeaponArchetype Op="Equal">
+              <Value>Tazer</Value>
+              <Value>Tazer_DET</Value>
+            </WeaponArchetype>
+          </PawnElectricDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="75">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  
+  <!-- Forgotten Gadget Challs -->
+  <!-- Frag Grenade kills -->
+   <Challenge Name="LocId_SNN_OD_FragKills" Desc="LocId_SNDES_OD_FragKillsDesc" Reset="Never" Guid="151" ShortDesc="LocId_SNSD_OD_AssaultFragKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal">
+              <Value>GDT_FragGrenade</Value>
+              <Value>GDT_Adv_FragGrenade</Value>
+            </GadgetType>
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+	  <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+	  <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  
+  <!-- Incendiary Kills -->
+  <Challenge Name="LocId_SNN_OD_IncendiaryKills" Desc="LocId_SNDES_OD_IncendiaryKillsDesc" Reset="Never" Guid="153" ShortDesc="LocId_SNSD_OD_AssaultIncendiaryKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnGadgetDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_Incendiary" />
+          </PawnGadgetDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+	<StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+	<StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge> 
+  
+  <!-- Sticky Cam Kills -->
+  <Challenge Name="LocId_SNN_OD_StickyCamKills" Desc="LocId_SNDES_OD_StickyCamKillsDesc" Reset="Never" Guid="157" ShortDesc="LocId_SNSD_OD_AssaultStickyCamKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal">
+              <Value>GDT_StickyCam</Value>
+              <Value>GDT_Adv_StickyCam</Value>
+            </GadgetType>
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="20">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="200">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+	  <StepReward Count="500">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+	  <StepReward Count="1000">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  
+  <!-- Proxy Mine Kills -->
+  <Challenge Name="LocId_SNN_OD_ProxyMineKills" Desc="LocId_SNDES_OD_ProxyMineKillsDesc" Reset="Never" Guid="155" ShortDesc="LocId_SNSD_OD_AssaultProxyMineKills" Category="ChallengeGear" Icon="assault" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnExplosionDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal">
+              <Value>GDT_ProximityMine</Value>
+              <Value>GDT_Adv_ProximityMine</Value>
+            </GadgetType>
+          </PawnExplosionDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+	  <StepReward Count="250">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+	  <StepReward Count="500">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+  
+  <!-- Sleeping Gas KOs -->
+  <Challenge Name="LocId_SNN_OD_SleepingGasKillsUndetected" Desc="LocId_SNDES_OD_SleepingGasKillsUndetectedDesc" Reset="Never" Guid="127" ShortDesc="LocId_SNSD_OD_SleepingGasKillsUndetected" Icon="ghost" Category="ChallengeGear" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnOtherDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsSleepingGas Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <GadgetType Op="Equal" Value="GDT_SleepingGas" />
+          </PawnOtherDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+	  <StepReward Count="250">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+	  <StepReward Count="500">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Tear Gas Stuns -->
+  <Challenge Name="LocId_SNN_OD_TearGasStuns" Desc="LocId_SNDES_OD_TearGasStuns" Reset="Never" Guid="272" ShortDesc="LocId_SNSD_OD_TearGasStuns" Category="ChallengeGear" Icon="panther" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnStunned>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsTearGas Op="Equal" Value="true" />
+          </PawnStunned>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Flashbang Stuns -->
+  <Challenge Name="LocId_SNN_OD_FlashbangStuns" Desc="LocId_SNDES_OD_FlashbangStuns" Reset="Never" Guid="273" ShortDesc="LocId_SNSD_OD_FlashbangStuns" Category="ChallengeGear" Icon="panther" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnStunned>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsFlashbang Op="Equal" Value="true" />
+          </PawnStunned>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Proxy Shocker Kills -->
+  <Challenge Name="LocId_SNN_OD_ProxyShockerKnockouts" Desc="LocId_SNDES_OD_ProxyShockerKnockouts" Reset="Never" Guid="274" ShortDesc="LocId_SNSD_OD_ProxyShockerKnockouts" Icon="ghost" Category="ChallengeGear" Map="E_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnElectricDamage>
+            <IsPawnAnyEnemy Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsShockMine Op="Equal" Value="true" />
+          </PawnElectricDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="WeaponTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="WeaponTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="WeaponTier3" />
+    </StepReward>
+    <StepReward Count="250">
+      <Economy ValueTag="WeaponTier4" />
+    </StepReward>
+    <StepReward Count="500">
+      <Economy ValueTag="WeaponTier5" />
+    </StepReward>
+  </Challenge>
+
+</Challenges>

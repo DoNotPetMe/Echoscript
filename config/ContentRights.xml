@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<ContentRights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Packages>
+    <Package type="sku" name="ULC Japan">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="3E Eclipse Suit" id="2003" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Sound Reduction Boots" id="2006" />
+      <Unlock name="Exclusive Merc Skin" id="2007" />
+      <Unlock name="Exclusive Spy Skin" id="2008" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (fully customized)" id="2011" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Early access to VSS Sniper Rifle" id="2013" />
+      <Unlock name="Early access to Kriss Vector, not customized" id="2014" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="Glows White" id="2017" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package type="ulc" name="Upper Echelon Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="Premium Edition Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="Premium Addition Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="3E Eclipse Suit" id="2003" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Exclusive Merc Skin" id="2007" />
+      <Unlock name="Exclusive Spy Skin" id="2008" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="Sound Reduction Boots" id="2006" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (not customized)" id="2020" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package type="ulc" name="GameStop Pre-Order Exclusive Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="GameStop Exclusive Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Sound Reduction Boots" id="2006" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package name="Wal-Mart Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="Early Access M1014" id="2021" />
+      <Unlock name="Tactical Shotgun" id="2022" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package name="Best Buy Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Early access to VSS Sniper Rifle" id="2013" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="Amazon Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early Access HK 416 Assault rifle (not customized)" id="2020" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="Amazon Pre-Order Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early Access HK 416 Assault rifle (not customized)" id="2020" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="PS3 Digital Gold Pre-Order">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="3E Eclipse Suit" id="2003" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (fully customized)" id="2011" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Early access to VSS Sniper Rifle" id="2013" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="Glows White" id="2017" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="PS3 Digital Pre-Order">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="3E Eclipse Suit" id="2003" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (fully customized)" id="2011" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="Glows White" id="2017" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="Digital DELUXE Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="3E Eclipse Suit" id="2003" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Exclusive Merc Skin" id="2007" />
+      <Unlock name="Exclusive Spy Skin" id="2008" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="Sound Reduction Boots" id="2006" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (not customized)" id="2020" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package type="ulc" name="Digital Standard Pack Pre-order">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Sound Reduction Boots" id="2006" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package type="ulc" name="Digital Standard Pack">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package type="ulc" name="PC Digital Deluxe Edition">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (not customized)" id="2020" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Burgundy" id="2016" />
+    </Package>
+    <Package type="ulc" name="UbiShop Deluxe Edition Pre-Order">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (not customized)" id="2020" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package type="ulc" name="UbiShop Deluxe Edition">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (not customized)" id="2020" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package type="ulc" name="PC Digital Deluxe">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="3E Eclipse Suit" id="2003" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (fully customized)" id="2011" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="Glows White" id="2017" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="PC Digital Deluxe Pre-Order">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="3E Eclipse Suit" id="2003" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Early Access F.40 Pistol (fully customized)" id="2009" />
+      <Unlock name="Exclusive Crossbow with gas arrows" id="2010" />
+      <Unlock name="Early Access HK 416 Assault rifle (not customized)" id="2020" />
+      <Unlock name="Early Access M1014 Tactical Shotgun" id="2012" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+    </Package>
+    <Package type="ulc" name="DLC Season Pass Pre-Order">
+      <Unlock name="Heavy Gunner Merc Suit" id="2023" />
+      <Unlock name="Early Access HK 416 Assault rifle (fully customized)" id="2011" />
+      <Unlock name="Glows White" id="2017" />
+    </Package>
+    <Package type="dlc" name="DLC1">
+      <Unlock name="Upper Echelon Suit" id="2000" />
+      <Unlock name="Early access to Prestige Predator/Spy Suit" id="2001" />
+      <Unlock name="Early access to Prestige Peacemaker/Merc Suit" id="2002" />
+      <Unlock name="3E Eclipse Suit" id="2003" />
+      <Unlock name="DMG Reduction Gloves" id="2004" />
+      <Unlock name="DMG Reduction Boots" id="2005" />
+      <Unlock name="Sound Reduction Boots" id="2006" />
+      <Unlock name="Exclusive Merc Skin" id="2007" />
+      <Unlock name="Exclusive Spy Skin" id="2008" />
+      <Unlock name="Exclusive Texture Tactical Crossbow (early access to gas arrows)" id="2024" />
+      <Unlock name="Glows Gold" id="2015" />
+      <Unlock name="Glows Burgundy" id="2016" />
+      <Unlock name="Glows White" id="2017" />
+      <Unlock name="COOP Hunter - Aral Sea" id="2018" />
+      <Unlock name="COOP Ghost - Yacht" id="2019" />
+    </Package>
+    <Package type="dlc" name="DLC2">
+      <Unlock name="USP45 Handgun (SP + MP Spies)" id="2025" />
+      <Unlock name="G36C Rifle (SP + MP Mercs)" id="2026" />
+      <Unlock name="MP5-10 SMG (SP + MP Spies)" id="2027" />
+      <Unlock name="ACS-12 Shotgun (SP + MP Mercs)" id="2028" />
+      <Unlock name="PP-19 Black Market SMG  (SP + MP Spies)" id="2029" />
+    </Package>
+    <Package type="dlc" name="DLC3">
+      <Unlock name="Kestrel Op Suit" id="2030" />
+      <Unlock name="SA-58 OSW" id="2031" />
+    </Package>
+    <Package type="dlc" name="DLC4">
+      <Unlock name="ARX160 Rifle (SP + MP Mercs)" id="2032" />
+      <Unlock name="75-Sp1 Pistol (SP + MP Spies)" id="2033" />
+    </Package>
+    <Package type="ulc" name="Passport">
+      <Unlock name="Passport" id="2034" />
+    </Package>
+    <Package type="uplay" name="Uplay Reward 1" unlockmethod="UPlayPoints">
+      <Unlock name="Dashboard Theme" id="2035" />
+    </Package>
+    <Package type="uplay" name="Uplay Reward 2" unlockmethod="UPlayPoints">
+      <Unlock name="Glows Blue" id="2036" />
+      <Unlock name="Currency Reward" id="2037" />
+    </Package>
+    <Package type="uplay" name="Uplay Reward 3" unlockmethod="UPlayPoints">
+      <Unlock name="Transmedia Suit - Torso Piece" id="2038" />
+    </Package>
+    <Package type="uplay" name="Uplay Reward 4" unlockmethod="UPlayPoints">
+      <Unlock name="Voron Suit" id="2039" />
+    </Package>
+    <Package type="ulc" name="Mobile App Reward" unlockmethod="MobileApp">
+      <Unlock name="Transmedia Suit - Boots Piece" id="2040" />
+      <Unlock name="Transmedia Suit - Goggle Piece" id="2041" />
+    </Package>
+    <Package type="ulc" name="Web App Reward" unlockmethod="WebApp">
+      <Unlock name="Transmedia Suit - Gloves Piece" id="2042" />
+    </Package>
+  </Packages>
+</ContentRights>

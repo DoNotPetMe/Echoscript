@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ToolVersion="1.4.9.0">
+  <Services>
+    <!-- Starting generated section; SC6StatTableWarpingPlayground on 2013-6-25_at_11h47m3s -->
+    <PlayerStats Hash="1385470583" Version="1.4.9.0">
+      <Properties>
+        <Property Name="m_Kills" ID="100" Type="Int32" Default="0" />
+        <Property Name="m_Deaths" ID="101" Type="Int32" Default="0" />
+        <Property Name="m_KDRatio" ID="102" Type="Double" Default="0" />
+        <Property Name="m_Assists" ID="103" Type="Int32" Default="0" />
+        <Property Name="m_ShotsFired" ID="104" Type="Int32" Default="0" />
+        <Property Name="m_ShotsHit" ID="105" Type="Int32" Default="0" />
+        <Property Name="m_Accuracy" ID="106" Type="Double" Default="0" />
+        <Property Name="m_Headshots" ID="107" Type="Int32" Default="0" />
+        <Property Name="m_HeadshotPercentage" ID="108" Type="Double" Default="0" />
+        <Property Name="m_NumTimesUsed" ID="109" Type="Int32" Default="0" />
+        <Property Name="m_h2hLethal" ID="111" Type="Int32" Default="0" />
+        <Property Name="m_h2hNonLethal" ID="112" Type="Int32" Default="0" />
+        <Property Name="m_DeathFromAbove" ID="113" Type="Int32" Default="0" />
+        <Property Name="m_MarkAndExecute" ID="114" Type="Int32" Default="0" />
+        <Property Name="m_GamesStarted" ID="120" Type="Int32" Default="0" />
+        <Property Name="m_GamesCompleted" ID="121" Type="Int32" Default="0" />
+        <Property Name="m_Wins" ID="122" Type="Int32" Default="0" />
+        <Property Name="m_Ties" ID="123" Type="Int32" Default="0" />
+        <Property Name="m_Losses" ID="124" Type="Int32" Default="0" />
+        <Property Name="m_WLRatio" ID="125" Type="Double" Default="0" />
+        <Property Name="m_TotalTime" ID="126" Type="Int32" Default="0" />
+        <Property Name="m_TotalScore" ID="127" Type="Int32" Default="0" />
+        <Property Name="m_TotalEarnings" ID="129" Type="Int32" Default="0" />
+        <Property Name="m_W2GSuitGoggles" ID="132" Type="Int32" Default="0" />
+        <Property Name="m_W2GSuitBoots" ID="133" Type="Int32" Default="0" />
+        <Property Name="m_W2GSuitGloves" ID="134" Type="Int32" Default="0" />
+        <Property Name="m_W2GTransfer" ID="135" Type="Int32" Default="0" />
+        <Property Name="m_Logins" ID="136" Type="Int32" Default="0" />
+        <!-- GAME WONT HANDLE DATES <Property Name="m_LastStatWrite" ID="137" Type="DateTime" Default="1/1/1" /> -->
+        <Property Name="m_Experience" ID="140" Type="Int32" Default="0" />
+        <Property Name="m_AdvTokensOnHand" ID="142" Type="Int32" Default="0" />
+        <Property Name="m_AdvTokensEarned" ID="143" Type="Int32" Default="0" />
+        <Property Name="m_AdvTokensSpent" ID="144" Type="Int32" Default="0" />
+        <Property Name="m_CashOnHand" ID="145" Type="Int32" Default="0" />
+        <Property Name="m_CashEarned" ID="146" Type="Int32" Default="0" />
+        <Property Name="m_CashSpent" ID="147" Type="Int32" Default="0" />
+        <Property Name="m_HighScore" ID="153" Type="Int32" Default="0" />
+        <Property Name="m_BestTime" ID="154" Type="Int32" Default="2147483647" />
+        <Property Name="m_HSBT_Score" ID="155" Type="Int32" Default="0" />
+        <Property Name="m_HSBT_Time" ID="156" Type="Int32" Default="0" />
+        <Property Name="m_HSBT_Difficulty" ID="157" Type="Int32" Default="0" />
+        <Property Name="m_HSBT_GhostComponent" ID="158" Type="Int32" Default="0" />
+        <Property Name="m_HSBT_PantherComponent" ID="159" Type="Int32" Default="0" />
+        <Property Name="m_HSBT_AssaultComponent" ID="160" Type="Int32" Default="0" />
+        <Property Name="m_LM_MissionID" ID="166" Type="Int32" Default="0" />
+        <Property Name="m_LM_Score" ID="167" Type="Int32" Default="0" />
+        <Property Name="m_LM_Time" ID="168" Type="Int32" Default="0" />
+        <Property Name="m_LM_Difficulty" ID="169" Type="Int32" Default="0" />
+        <Property Name="m_LM_GhostComponent" ID="170" Type="Int32" Default="0" />
+        <Property Name="m_LM_PantherComponent" ID="171" Type="Int32" Default="0" />
+        <Property Name="m_LM_AssaultComponent" ID="172" Type="Int32" Default="0" />
+        <Property Name="m_HighestDifficulty" ID="178" Type="Int32" Default="0" />
+        <Property Name="m_GPA_HighestEverGhost" ID="179" Type="Int32" Default="0" />
+        <Property Name="m_GPA_HighestEverPanther" ID="180" Type="Int32" Default="0" />
+        <Property Name="m_GPA_HighestEverAssault" ID="181" Type="Int32" Default="0" />
+        <Property Name="m_GPA_AccumulatedGhost" ID="182" Type="Int32" Default="0" />
+        <Property Name="m_GPA_AccumulatedPanther" ID="183" Type="Int32" Default="0" />
+        <Property Name="m_GPA_AccumulatedAssault" ID="184" Type="Int32" Default="0" />
+        <Property Name="m_SecondaryObjectivesCount" ID="190" Type="Int32" Default="0" />
+        <Property Name="m_SO_HVTCaptured" ID="191" Type="Int32" Default="0" />
+        <Property Name="m_SO_LaptopHacked" ID="192" Type="Int32" Default="0" />
+        <Property Name="m_SO_DeadDropPickedUp" ID="193" Type="Int32" Default="0" />
+        <Property Name="m_AdvObjectivesCount" ID="199" Type="Int32" Default="0" />
+        <Property Name="m_AO_CTI_Captures" ID="200" Type="Int32" Default="0" />
+        <Property Name="m_AO_CTI_Resets" ID="201" Type="Int32" Default="0" />
+        <Property Name="m_AO_FLD_Captures" ID="202" Type="Int32" Default="0" />
+        <Property Name="m_AO_FLD_Defends" ID="203" Type="Int32" Default="0" />
+        <Property Name="m_AO_SVM_Hacks" ID="204" Type="Int32" Default="0" />
+        <Property Name="m_AO_SVM_Disrupts" ID="205" Type="Int32" Default="0" />
+        <Property Name="m_TimeSpentAlive" ID="211" Type="Int32" Default="0" />
+        <Property Name="m_LongestLife" ID="212" Type="Int32" Default="0" />
+        <Property Name="m_ShortestLife" ID="213" Type="Int32" Default="2147483647" />
+        <Property Name="m_Spawns" ID="214" Type="Int32" Default="0" />
+        <Property Name="m_AverageLife" ID="215" Type="Double" Default="0" />
+        <Property Name="m_LongestKillstreak" ID="216" Type="Int32" Default="0" />
+        <Property Name="m_LongestDeathstreak" ID="217" Type="Int32" Default="0" />
+        <Property Name="m_FarthestKill" ID="218" Type="Int32" Default="0" />
+        <Property Name="m_FarthestHeadshot" ID="219" Type="Int32" Default="0" />
+        <Property Name="m_AMPG_Kills" ID="225" Type="Int32" Default="0" />
+        <Property Name="m_AMPG_Score" ID="226" Type="Int32" Default="0" />
+        <Property Name="m_AMPG_Earnings" ID="227" Type="Int32" Default="0" />
+        <Property Name="m_AMPG_KDR" ID="228" Type="Double" Default="0" />
+        <Property Name="m_AMPG_Acc" ID="229" Type="Double" Default="0" />
+        <Property Name="m_AMPG_Ojectives" ID="230" Type="Int32" Default="0" />
+        <Property Name="m_AMPG_h2h" ID="231" Type="Int32" Default="0" />
+        <Property Name="m_AMPG_DFA" ID="232" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Weapon" ID="238" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Frag" ID="239" Type="Int32" Default="0" />
+        <Property Name="m_Medal_ProxyMine" ID="240" Type="Int32" Default="0" />
+        <Property Name="m_Medal_TearGas" ID="241" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Incendiary" ID="242" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Cam" ID="243" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Drone" ID="244" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Melee" ID="245" Type="Int32" Default="0" />
+        <Property Name="m_Medal_LedgeGrab" ID="246" Type="Int32" Default="0" />
+        <Property Name="m_Medal_DeathFromAbove" ID="247" Type="Int32" Default="0" />
+        <Property Name="m_Medal_CoverGrab" ID="248" Type="Int32" Default="0" />
+        <Property Name="m_Medal_NeckSnap" ID="249" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Assist" ID="250" Type="Int32" Default="0" />
+        <Property Name="m_Medal_MajorAssist" ID="251" Type="Int32" Default="0" />
+        <Property Name="m_Medal_CoopKill" ID="252" Type="Int32" Default="0" />
+        <Property Name="m_Medal_TagAssist" ID="253" Type="Int32" Default="0" />
+        <Property Name="m_Medal_DisruptorAssist" ID="254" Type="Int32" Default="0" />
+        <Property Name="m_Medal_EMPAssist" ID="255" Type="Int32" Default="0" />
+        <Property Name="m_Medal_FlashbangAssist" ID="256" Type="Int32" Default="0" />
+        <Property Name="m_Medal_StunAssist" ID="257" Type="Int32" Default="0" />
+        <Property Name="m_Medal_DroneDestroyed" ID="258" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Headshot" ID="259" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Killstreak3" ID="260" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Killstreak5" ID="261" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Killstreak10" ID="262" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Killstreak15" ID="263" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Killstreak20" ID="264" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Comeback" ID="265" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Defender" ID="266" Type="Int32" Default="0" />
+        <Property Name="m_Medal_HackerKiller" ID="267" Type="Int32" Default="0" />
+        <Property Name="m_Medal_CourierKiller" ID="268" Type="Int32" Default="0" />
+        <Property Name="m_Medal_LongShot" ID="269" Type="Int32" Default="0" />
+        <Property Name="m_Medal_KillstreakDisruption" ID="270" Type="Int32" Default="0" />
+        <Property Name="m_Medal_FromTheGrave" ID="271" Type="Int32" Default="0" />
+        <Property Name="m_Medal_GhostKill" ID="272" Type="Int32" Default="0" />
+        <Property Name="m_Medal_HangedKill" ID="273" Type="Int32" Default="0" />
+        <Property Name="m_Medal_FirstBlood" ID="274" Type="Int32" Default="0" />
+        <Property Name="m_Medal_DoubleKill" ID="275" Type="Int32" Default="0" />
+        <Property Name="m_Medal_TripleKill" ID="276" Type="Int32" Default="0" />
+        <Property Name="m_Medal_MultiKill" ID="277" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Avenger" ID="278" Type="Int32" Default="0" />
+        <Property Name="m_Medal_Nemesis" ID="279" Type="Int32" Default="0" />
+        <Property Name="m_Medal_BlindKill" ID="280" Type="Int32" Default="0" />
+        <!-- I would like to remind you that this file is generated; -->
+        <!-- Changes made here will BREAK THE STATS SYSTEM -->
+      </Properties>
+      <Statboards>
+        <Statboard ID="1" Name="sb_GlobalServer" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="132" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="133" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="134" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="135" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="136" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="137" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="182" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="183" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="184" AggregationType="Add" IsPopulationStat="true" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts />
+        </Statboard>
+        <Statboard ID="2" Name="sb_GlobalLocal" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="140" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="142" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="143" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="144" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="145" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="146" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="147" AggregationType="Overwrite" IsPopulationStat="true" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts />
+        </Statboard>
+        <Statboard ID="10" Name="sb_AdvPerGameMode" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="100" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="101" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="102" AggregationType="Calculate" CalculateLeft="100" CalculateRight="101" IsPopulationStat="false" />
+            <Entry ID="104" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="105" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="106" AggregationType="Calculate" CalculateLeft="105" CalculateRight="104" IsPopulationStat="false" />
+            <Entry ID="107" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="108" AggregationType="Calculate" CalculateLeft="107" CalculateRight="104" IsPopulationStat="false" />
+            <Entry ID="111" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="113" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="120" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="121" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="122" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="123" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="124" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="125" AggregationType="Calculate" CalculateLeft="122" CalculateRight="124" IsPopulationStat="false" />
+            <Entry ID="126" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="127" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="129" AggregationType="Add" IsPopulationStat="true" />
+            <Entry ID="199" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="200" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="201" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="202" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="203" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="204" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="205" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="211" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="212" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="213" AggregationType="Minimum" IsPopulationStat="false" />
+            <Entry ID="214" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="215" AggregationType="Calculate" CalculateLeft="211" CalculateRight="214" IsPopulationStat="false" />
+            <Entry ID="216" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="217" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="218" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="219" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="225" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="226" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="227" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="228" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="229" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="230" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="231" AggregationType="Maximum" IsPopulationStat="false" />
+            <Entry ID="232" AggregationType="Maximum" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="227" Name="cxt_TDM_Standard" />
+            <Context ID="228" Name="cxt_SvM_Standard" />
+            <Context ID="229" Name="cxt_CTI_Standard" />
+            <Context ID="230" Name="cxt_FLD_Standard" />
+            <Context ID="231" Name="cxt_SVM_Classic" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="11" Name="sb_AdvPerWeapon" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="100" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="104" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="105" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="106" AggregationType="Calculate" CalculateLeft="105" CalculateRight="104" IsPopulationStat="false" />
+            <Entry ID="107" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="108" AggregationType="Calculate" CalculateLeft="107" CalculateRight="104" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="129" Name="cxt_ADV_Merc_Pistol_DesertEagle" />
+            <Context ID="130" Name="cxt_ADV_Merc_Pistol_Makarov" />
+            <Context ID="131" Name="cxt_ADV_Merc_Pistol_Px4" />
+            <Context ID="132" Name="cxt_ADV_Merc_Assault_AK47" />
+            <Context ID="133" Name="cxt_ADV_Merc_Assault_ACE" />
+            <Context ID="134" Name="cxt_ADV_Merc_Assault_ARX160" />
+            <Context ID="135" Name="cxt_ADV_Merc_Assault_FAMASG2" />
+            <Context ID="136" Name="cxt_ADV_Merc_Assault_G36C" />
+            <Context ID="137" Name="cxt_ADV_Merc_Assault_Goblin" />
+            <Context ID="138" Name="cxt_ADV_Merc_Assault_HoneyBadger" />
+            <Context ID="139" Name="cxt_ADV_Merc_Assault_M416" />
+            <Context ID="140" Name="cxt_ADV_Merc_Assault_SA58" />
+            <Context ID="141" Name="cxt_ADV_Merc_LMG_HKMG4" />
+            <Context ID="142" Name="cxt_ADV_Merc_LMG_U100" />
+            <Context ID="143" Name="cxt_ADV_Merc_Shotgun_AA12" />
+            <Context ID="144" Name="cxt_ADV_Merc_Shotgun_M1014" />
+            <Context ID="145" Name="cxt_ADV_Merc_Shotgun_RMB93" />
+            <Context ID="146" Name="cxt_ADV_Merc_Shotgun_Saiga12" />
+            <Context ID="147" Name="cxt_ADV_Spy_SMG_MP5" />
+            <Context ID="148" Name="cxt_ADV_Spy_Pistol_F40" />
+            <Context ID="149" Name="cxt_ADV_Spy_Pistol_FiveSeven" />
+            <Context ID="150" Name="cxt_ADV_Spy_Pistol_Proto" />
+            <Context ID="151" Name="cxt_ADV_Spy_Pistol_USP45" />
+            <Context ID="152" Name="cxt_ADV_Spy_Assault_Proto" />
+            <Context ID="153" Name="cxt_ADV_Spy_Shotgun_Proto" />
+            <Context ID="154" Name="cxt_ADV_Spy_SMG_MAC11" />
+            <Context ID="155" Name="cxt_ADV_Spy_SMG_MP7" />
+            <Context ID="156" Name="cxt_ADV_Spy_SMG_PP19" />
+            <Context ID="157" Name="cxt_ADV_Spy_SMG_PP2000" />
+            <Context ID="158" Name="cxt_ADV_Spy_SMG_Proto" />
+            <Context ID="159" Name="cxt_ADV_Spy_SMG_Scorpion" />
+            <Context ID="160" Name="cxt_ADV_Spy_SMG_UMP45" />
+            <Context ID="161" Name="cxt_ADV_Spy_SMG_Vector" />
+            <Context ID="162" Name="cxt_ADV_Spy_CrossBow" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="12" Name="sb_AdvPerGadget" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="100" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="109" AggregationType="Add" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="201" Name="cxt_GI_Adv_Grenade_Flashbang" />
+            <Context ID="202" Name="cxt_GI_Adv_Sticky_Camera" />
+            <Context ID="203" Name="cxt_GI_Adv_Grenade_EMP" />
+            <Context ID="204" Name="cxt_GI_Adv_AntiGrenadeSystem" />
+            <Context ID="205" Name="cxt_GI_Adv_EscBomb" />
+            <Context ID="206" Name="cxt_GI_Adv_Grenade_Concussion" />
+            <Context ID="207" Name="cxt_GI_Adv_Grenade_Frag" />
+            <Context ID="208" Name="cxt_GI_Adv_Grenade_TearGas" />
+            <Context ID="209" Name="cxt_GI_Adv_AmmoPack" />
+            <Context ID="210" Name="cxt_GI_Adv_Proximity_Mine" />
+            <Context ID="211" Name="cxt_GI_Adv_TaggingDevice" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="13" Name="sb_AdvMedals" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="238" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="239" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="240" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="241" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="242" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="243" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="244" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="245" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="246" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="247" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="248" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="249" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="250" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="251" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="252" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="253" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="254" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="255" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="256" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="257" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="258" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="259" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="260" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="261" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="262" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="263" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="264" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="265" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="266" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="267" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="268" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="269" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="270" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="271" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="272" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="273" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="274" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="275" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="276" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="277" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="278" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="279" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="280" AggregationType="Add" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts />
+        </Statboard>
+        <Statboard ID="17" Name="sb_Ladder" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="100" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="111" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="113" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="122" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="126" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="127" AggregationType="Add" IsPopulationStat="false" />
+            <Entry ID="199" AggregationType="Add" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="1" Name="cxt_Ladder_1" />
+            <Context ID="2" Name="cxt_Ladder_2" />
+            <Context ID="3" Name="cxt_Ladder_3" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="20" Name="sb_SoloOverview" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="100" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="101" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="104" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="105" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="106" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="107" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="108" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="111" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="112" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="113" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="114" AggregationType="Overwrite" IsPopulationStat="true" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts />
+        </Statboard>
+        <Statboard ID="21" Name="sb_SoloPerMission" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="120" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="121" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="126" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="127" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="129" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="178" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="179" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="180" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="181" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="190" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="191" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="192" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="193" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="100" Name="cxt_S_AFB" />
+            <Context ID="101" Name="cxt_S_KOB" />
+            <Context ID="102" Name="cxt_S_BAD" />
+            <Context ID="103" Name="cxt_S_CON" />
+            <Context ID="104" Name="cxt_S_NOU" />
+            <Context ID="105" Name="cxt_S_CHE" />
+            <Context ID="106" Name="cxt_S_QOD" />
+            <Context ID="107" Name="cxt_S_FRE" />
+            <Context ID="108" Name="cxt_S_DET" />
+            <Context ID="109" Name="cxt_S_AIR" />
+            <Context ID="110" Name="cxt_S_PAL" />
+            <Context ID="111" Name="cxt_S_FUE" />
+            <Context ID="112" Name="cxt_S_BLO" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="22" Name="sb_SoloHighScore" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="153" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="156" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="157" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="158" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="159" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="160" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="100" Name="cxt_S_AFB" />
+            <Context ID="101" Name="cxt_S_KOB" />
+            <Context ID="102" Name="cxt_S_BAD" />
+            <Context ID="103" Name="cxt_S_CON" />
+            <Context ID="104" Name="cxt_S_NOU" />
+            <Context ID="105" Name="cxt_S_CHE" />
+            <Context ID="106" Name="cxt_S_QOD" />
+            <Context ID="107" Name="cxt_S_FRE" />
+            <Context ID="108" Name="cxt_S_DET" />
+            <Context ID="109" Name="cxt_S_AIR" />
+            <Context ID="110" Name="cxt_S_PAL" />
+            <Context ID="111" Name="cxt_S_FUE" />
+            <Context ID="112" Name="cxt_S_BLO" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="23" Name="sb_SoloBestTime" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="154" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="155" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="157" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="158" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="159" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="160" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="100" Name="cxt_S_AFB" />
+            <Context ID="101" Name="cxt_S_KOB" />
+            <Context ID="102" Name="cxt_S_BAD" />
+            <Context ID="103" Name="cxt_S_CON" />
+            <Context ID="104" Name="cxt_S_NOU" />
+            <Context ID="105" Name="cxt_S_CHE" />
+            <Context ID="106" Name="cxt_S_QOD" />
+            <Context ID="107" Name="cxt_S_FRE" />
+            <Context ID="108" Name="cxt_S_DET" />
+            <Context ID="109" Name="cxt_S_AIR" />
+            <Context ID="110" Name="cxt_S_PAL" />
+            <Context ID="111" Name="cxt_S_FUE" />
+            <Context ID="112" Name="cxt_S_BLO" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="25" Name="sb_CoopOverview" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="100" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="101" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="104" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="105" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="106" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="107" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="108" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="111" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="112" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="113" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="114" AggregationType="Overwrite" IsPopulationStat="true" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts />
+        </Statboard>
+        <Statboard ID="26" Name="sb_CoopPerMission" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="120" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="121" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="126" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="127" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="129" AggregationType="Overwrite" IsPopulationStat="true" />
+            <Entry ID="178" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="179" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="180" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="181" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="190" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="191" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="192" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="193" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="113" Name="cxt_C01" />
+            <Context ID="114" Name="cxt_C02" />
+            <Context ID="115" Name="cxt_C03" />
+            <Context ID="116" Name="cxt_C04" />
+            <Context ID="117" Name="cxt_E01" />
+            <Context ID="118" Name="cxt_E02" />
+            <Context ID="119" Name="cxt_E03" />
+            <Context ID="120" Name="cxt_E04" />
+            <Context ID="121" Name="cxt_G01" />
+            <Context ID="122" Name="cxt_G02" />
+            <Context ID="123" Name="cxt_G03" />
+            <Context ID="124" Name="cxt_G04" />
+            <Context ID="125" Name="cxt_H01" />
+            <Context ID="126" Name="cxt_H02" />
+            <Context ID="127" Name="cxt_H03" />
+            <Context ID="128" Name="cxt_H04" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="27" Name="sb_CoopHighScore" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="153" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="156" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="157" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="158" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="159" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="160" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="113" Name="cxt_C01" />
+            <Context ID="114" Name="cxt_C02" />
+            <Context ID="115" Name="cxt_C03" />
+            <Context ID="116" Name="cxt_C04" />
+            <Context ID="117" Name="cxt_E01" />
+            <Context ID="118" Name="cxt_E02" />
+            <Context ID="119" Name="cxt_E03" />
+            <Context ID="120" Name="cxt_E04" />
+            <Context ID="121" Name="cxt_G01" />
+            <Context ID="122" Name="cxt_G02" />
+            <Context ID="123" Name="cxt_G03" />
+            <Context ID="124" Name="cxt_G04" />
+            <Context ID="125" Name="cxt_H01" />
+            <Context ID="126" Name="cxt_H02" />
+            <Context ID="127" Name="cxt_H03" />
+            <Context ID="128" Name="cxt_H04" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="28" Name="sb_CoopBestTime" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="154" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="155" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="157" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="158" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="159" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="160" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="113" Name="cxt_C01" />
+            <Context ID="114" Name="cxt_C02" />
+            <Context ID="115" Name="cxt_C03" />
+            <Context ID="116" Name="cxt_C04" />
+            <Context ID="117" Name="cxt_E01" />
+            <Context ID="118" Name="cxt_E02" />
+            <Context ID="119" Name="cxt_E03" />
+            <Context ID="120" Name="cxt_E04" />
+            <Context ID="121" Name="cxt_G01" />
+            <Context ID="122" Name="cxt_G02" />
+            <Context ID="123" Name="cxt_G03" />
+            <Context ID="124" Name="cxt_G04" />
+            <Context ID="125" Name="cxt_H01" />
+            <Context ID="126" Name="cxt_H02" />
+            <Context ID="127" Name="cxt_H03" />
+            <Context ID="128" Name="cxt_H04" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="30" Name="sb_SoloAndCoopPerWeapon" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="100" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="104" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="105" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="106" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="107" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="108" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="163" Name="cxt_SnCW_Pistol_FiveSeven" />
+            <Context ID="164" Name="cxt_SnCW_Pistol_CZ75" />
+            <Context ID="165" Name="cxt_SnCW_Pistol_DesertEagle" />
+            <Context ID="166" Name="cxt_SnCW_Pistol_F40" />
+            <Context ID="167" Name="cxt_SnCW_Pistol_Makarov" />
+            <Context ID="168" Name="cxt_SnCW_Pistol_Proto" />
+            <Context ID="169" Name="cxt_SnCW_Pistol_PX4" />
+            <Context ID="170" Name="cxt_SnCW_Pistol_USP45" />
+            <Context ID="171" Name="cxt_SnCW_Rifle_AK47" />
+            <Context ID="172" Name="cxt_SnCW_Rifle_AKS74U" />
+            <Context ID="173" Name="cxt_SnCW_Rifle_ARX" />
+            <Context ID="174" Name="cxt_SnCW_Rifle_FAMAS" />
+            <Context ID="175" Name="cxt_SnCW_Rifle_G36C" />
+            <Context ID="176" Name="cxt_SnCW_Rifle_Goblin" />
+            <Context ID="177" Name="cxt_SnCW_Rifle_HoneyBadger" />
+            <Context ID="178" Name="cxt_SnCW_Rifle_M416" />
+            <Context ID="179" Name="cxt_SnCW_Rifle_Proto" />
+            <Context ID="180" Name="cxt_SnCW_Rifle_SA58" />
+            <Context ID="181" Name="cxt_SnCW_Shotgun_AA12" />
+            <Context ID="182" Name="cxt_SnCW_Shotgun_M1014" />
+            <Context ID="183" Name="cxt_SnCW_Shotgun_Proto" />
+            <Context ID="184" Name="cxt_SnCW_Shotgun_RMB93" />
+            <Context ID="185" Name="cxt_SnCW_Shotgun_Saiga12" />
+            <Context ID="186" Name="cxt_SnCW_SMG_MAC11" />
+            <Context ID="187" Name="cxt_SnCW_SMG_MP5" />
+            <Context ID="188" Name="cxt_SnCW_SMG_MP7A2" />
+            <Context ID="189" Name="cxt_SnCW_SMG_PP19" />
+            <Context ID="190" Name="cxt_SnCW_SMG_PP2000" />
+            <Context ID="191" Name="cxt_SnCW_SMG_Proto" />
+            <Context ID="192" Name="cxt_SnCW_SMG_Scorpion" />
+            <Context ID="193" Name="cxt_SnCW_SMG_UMP45" />
+            <Context ID="194" Name="cxt_SnCW_SMG_Vector" />
+            <Context ID="195" Name="cxt_SnCW_Sniper_Proto" />
+            <Context ID="196" Name="cxt_SnCW_Sniper_SR25" />
+            <Context ID="197" Name="cxt_SnCW_Sniper_SVU" />
+            <Context ID="198" Name="cxt_SnCW_Sniper_VSS" />
+            <Context ID="199" Name="cxt_SnCW_Crossbow_1H" />
+            <Context ID="200" Name="cxt_SnCW_Tazer" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="31" Name="sb_SoloAndCoopPerGadget" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="100" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="109" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts>
+            <Context ID="212" Name="cxt_GI_Sticky_Camera" />
+            <Context ID="213" Name="cxt_GI_Quadrocopter" />
+            <Context ID="214" Name="cxt_GI_DoorBreach" />
+            <Context ID="215" Name="cxt_GI_SnakeCamera" />
+            <Context ID="216" Name="cxt_GI_Proximity_Mine" />
+            <Context ID="217" Name="cxt_GI_Proximity_Shocker_Mine" />
+            <Context ID="218" Name="cxt_GI_Grenade_Frag" />
+            <Context ID="219" Name="cxt_GI_Grenade_Incendiary" />
+            <Context ID="220" Name="cxt_GI_Grenade_EMP" />
+            <Context ID="221" Name="cxt_GI_Grenade_Flashbang" />
+            <Context ID="222" Name="cxt_GI_Grenade_Smoke" />
+            <Context ID="223" Name="cxt_GI_Grenade_SleepingGas" />
+            <Context ID="224" Name="cxt_GI_Grenade_TearGas" />
+            <Context ID="225" Name="cxt_GI_Sticky_Noisemaker" />
+          </Contexts>
+        </Statboard>
+        <Statboard ID="32" Name="sb_LastMission" HistoryEnabled="false" HistoryAggregatedEnabled="false">
+          <Entries>
+            <Entry ID="166" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="167" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="168" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="169" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="170" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="171" AggregationType="Overwrite" IsPopulationStat="false" />
+            <Entry ID="172" AggregationType="Overwrite" IsPopulationStat="false" />
+          </Entries>
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+          <Contexts />
+        </Statboard>
+      </Statboards>
+      <Leaderboards>
+        <Leaderboard ID="1" Name="lb_Solo_HighScore" StatboardID="22" AttributeID="153" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="2" Name="lb_Solo_BestTime" StatboardID="23" AttributeID="154" SortOrder="Ascending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="3" Name="lb_Coop_HighScore" StatboardID="27" AttributeID="153" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="4" Name="lb_Coop_BestTime" StatboardID="28" AttributeID="154" SortOrder="Ascending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="5" Name="lb_Adv_TotalScore" StatboardID="10" AttributeID="127" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="6" Name="lb_Ladder_TotalTime" StatboardID="17" AttributeID="126" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="7" Name="lb_Ladder_Wins" StatboardID="17" AttributeID="122" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="8" Name="lb_Ladder_DeathFromAbove" StatboardID="17" AttributeID="113" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="9" Name="lb_Ladder_h2hLethal" StatboardID="17" AttributeID="111" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="10" Name="lb_Ladder_Kills" StatboardID="17" AttributeID="100" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="11" Name="lb_Ladder_TotalScore" StatboardID="17" AttributeID="127" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+        <Leaderboard ID="12" Name="lb_Ladder_AdvObjectives" StatboardID="17" AttributeID="199" SortOrder="Descending" HistoryEnabled="false">
+          <ResetFrequencies>
+            <ResetFrequency>Never</ResetFrequency>
+          </ResetFrequencies>
+        </Leaderboard>
+      </Leaderboards>
+    </PlayerStats>
+    <!-- Finished generated section; SC6StatTableWarpingPlayground on 2013-6-25_at_11h47m3s -->
+  </Services>
+</Configuration>
