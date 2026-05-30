@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_ExtractionVO_Wave10" leveluid="1" streamedRandomID="190391868">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Play VO 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.761312">
+          <CommandInstance name="SetDialog" duration="2.761312" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::EUL_KGL::0500_COM::58423::149724" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Play VO 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.733125">
+          <CommandInstance name="SetDialog" duration="2.733125" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::EUL_KGL::0500_COM::58423::149723" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Play VO 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.682896">
+          <CommandInstance name="SetDialog" duration="2.682896" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::EUL_KGL::0500_COM::58423::149725" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="Play VO 2" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_STAY_AND_FIGHT" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="Play VO 1" true="Play VO 3" sequence="LD_ExtractionVO_Wave10"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="Play VO 2" true="Play VO 1" sequence="LD_ExtractionVO_Wave10"/>
+</Sequence>

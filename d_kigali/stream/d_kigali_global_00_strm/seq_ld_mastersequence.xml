@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_MasterSequence" startup="1" leveluid="1" streamedRandomID="190391868">
+  <Task name="InitialSequence" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::MovingLignt" TypeDeleted="Sequence"/>
+      <Track name="NewTrack_16" entity="Repository::Sequences::ExtractionObjective" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="Repository::Sequences::LD_Lighting" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="UID:000001c7" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_7" entity="Repository::Sequences::VO_DeadDrop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="Repository::Sequences::VO_Laptop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="UID:00000502" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_12" entity="UID:00000503" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_13" entity="Repository::Ref_Grim" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Assign" entityStripped="1">
+            <ParameterInstance name="Right" data="Repository::O_GrimAI" TypeDeleted="AI"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_14" entity="Repository::Ref_Grim" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="DisableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_15" entity="Repository::Sequences::EMP_FanStart" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_17" entity="UID:000008c1" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_19" entity="UID:000008c2" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_20" entity="UID:000008c3" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_22" entity="UID:000008c4" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_23" entity="Repository::Sequences::SEQ_Headlight" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_24" entity="UID:000009b6" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_25" entity="UID:000009b9" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_26" entity="Repository::List_HelicopterLightGroup1" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_27" entity="UID:000009b5" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_28" entity="UID:000009b2" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_29" entity="Repository::List_HelicopterLightGroup2" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_30" entity="UID:000009bb" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_31" entity="UID:000009ba" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_32" entity="Repository::List_HelicopterLightGroup3" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_33" entity="Repository::Sequences::EMP_FanControl" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_34" entity="UID:0000088a" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent_0" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_35" entity="UID:00000889" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent_0" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="CP=-1 Intro Cam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_10" entity="Repository::Sequences::SEQ_IntroCam" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="No Intro Cam">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="InitialSequence" true="CP=-1 Intro Cam" false="No Intro Cam">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_CheckpointID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="-1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Initial checking" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Player choose stay and fight">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::B_StayAndFight" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial checking" true="Player choose stay and fight" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_STAY_AND_FIGHT" data=""/>
+  </DependencyEvent>
+</Sequence>

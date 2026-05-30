@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Wave_Waypoints" startup="1" leveluid="1" streamedRandomID="190391868">
+  <Task name="Initial Check" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Check Wave">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial Check" true="Check Wave" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_WAVE_STARTED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="WaveId" data="Repository::O_WaveID"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand" start="Check Wave" true="Alley Enable_1" false="NewTask_41">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_0" true="Initial Check" sequence="LD_Wave_Waypoints"/>
+  <Task name="NewTask_6">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_10" start="NewTask_6" true="Garden Enable" false="NewTask_8">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_11" start="NewTask_8" true="Parking Lot Enable_1" false="NewTask_9">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Alley Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Alley_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Alley Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Alley Enable" true="Wait" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Wait" true="Alley Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="Alley Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Alley_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Alley Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="Alley Enable_1" true="Wait_0" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Wait_0" true="Alley Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Garden Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Garden_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Garden Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="Garden Enable" true="Wait_1" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Wait_1" true="Garden Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="Embassy Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Embassy Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="Embassy Enable" true="Wait_2" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="Wait_2" true="Embassy Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_12" start="NewTask_9" true="Embassy &amp; Alley Enable" false="NewTask_11">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_11">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_13" start="NewTask_11" true="Parking Lot &amp; Alley Enable" false="NewTask_13">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="6.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_13">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_14" start="NewTask_13" true="Garden Enable_0" false="NewTask_15">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="7.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_15">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_15" start="NewTask_15" true="Parking Lot Enable_2" false="NewTask_17">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="8.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_17">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_16" start="NewTask_17" true="Garden Enable_1" false="NewTask_19">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_19">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_17" start="NewTask_19" true="Embassy Enable" false="NewTask_21">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_21">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_18" start="NewTask_21" true="Parking Lot Enable_3" false="NewTask_23">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="11.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_23">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_19" start="NewTask_23" true="Garden Enable_2" false="NewTask_25">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="12.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_25">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_20" start="NewTask_25" true="Alley Enable" false="NewTask_27">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="13.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_27">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_21" start="NewTask_27" true="Alley Enable_0" false="NewTask_29">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="14.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_29">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_22" start="NewTask_29" true="Alley &amp; Parking Enable_1" false="NewTask_31">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="15.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_31">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_23" start="NewTask_31" true="Garden &amp; Alley Enable_3" false="NewTask_33">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="16.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_33">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_24" start="NewTask_33" true="Alley Embassy Enable_1" false="NewTask_35">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="17.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_35">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_25" start="NewTask_35" true="Everywhere Enable_4" false="NewTask_37">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="18.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_37">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_26" start="NewTask_37" true="Alley Enable_2" false="NewTask_39">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="19.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_39">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_27" start="NewTask_39" true="Alley &amp; Embassy Enable_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="20.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_41">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_28" start="NewTask_41" true="Parking Lot Enable_0" false="NewTask_6">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Parking Lot Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="ParkingLot" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Parking_Lot_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Parking Lot Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_9" start="Parking Lot Enable_0" true="Wait_3" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="Wait_3" true="Parking Lot Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="Parking Lot Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="ParkingLot" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Parking_Lot_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Parking Lot Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_11" start="Parking Lot Enable_1" true="Wait_4" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_12" start="Wait_4" true="Parking Lot Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Embassy &amp; Alley Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Embassy &amp; Alley Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_13" start="Embassy &amp; Alley Enable" true="Wait_5" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_14" start="Wait_5" true="Embassy &amp; Alley Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="Parking Lot &amp; Alley Enable">
+    <Timeline name="NewTimeline">
+      <Track name="ParkingLot" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Parking_Lot_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Alley_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Parking Lot &amp; Alley Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_15" start="Parking Lot &amp; Alley Enable" true="Wait_6" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_16" start="Wait_6" true="Parking Lot &amp; Alley Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="Garden Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Garden_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Garden Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_7">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_17" start="Garden Enable_0" true="Wait_7" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="Wait_7" true="Garden Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="Parking Lot Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="ParkingLot" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Parking_Lot_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Parking Lot Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_8">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_19" start="Parking Lot Enable_2" true="Wait_8" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_20" start="Wait_8" true="Parking Lot Disable_2" sequence="LD_Wave_Waypoints"/>
+  <Task name="Garden Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Garden_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Garden Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_9">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_21" start="Garden Enable_1" true="Wait_9" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_22" start="Wait_9" true="Garden Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Parking Lot Enable_3">
+    <Timeline name="NewTimeline">
+      <Track name="ParkingLot" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Parking_Lot_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Parking Lot Disable_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_10">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_23" start="Parking Lot Enable_3" true="Wait_10" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_24" start="Wait_10" true="Parking Lot Disable_3" sequence="LD_Wave_Waypoints"/>
+  <Task name="Garden Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Garden_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Garden Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_11">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_25" start="Garden Enable_2" true="Wait_11" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_26" start="Wait_11" true="Garden Disable_2" sequence="LD_Wave_Waypoints"/>
+  <Task name="Alley Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Alley_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Alley Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_12">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_27" start="Alley Enable_0" true="Wait_12" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_28" start="Wait_12" true="Alley Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="Alley &amp; Parking Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Alley &amp; Parking Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_13">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_29" start="Alley &amp; Parking Enable_1" true="Wait_13" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_30" start="Wait_13" true="Alley &amp; Parking Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Garden &amp; Alley Enable_3">
+    <Timeline name="NewTimeline">
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Garden_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Alley_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Garden Alley Disable_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_14">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_31" start="Garden &amp; Alley Enable_3" true="Wait_14" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_32" start="Wait_14" true="Garden Alley Disable_3" sequence="LD_Wave_Waypoints"/>
+  <Task name="Alley Embassy Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Alley_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Embassy" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Alley Embassy Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Embassy" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_15">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_33" start="Alley Embassy Enable_1" true="Wait_15" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_34" start="Wait_15" true="Alley Embassy Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Everywhere Enable_4">
+    <Timeline name="NewTimeline">
+      <Track name="ParkingLot" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Parking_Lot_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Alley_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Embassy" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Garden_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Everywhere Disable_4">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Embassy" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Garden" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="ParkingLot" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_16">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_35" start="Everywhere Enable_4" true="Wait_16" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_36" start="Wait_16" true="Everywhere Disable_4" sequence="LD_Wave_Waypoints"/>
+  <Task name="Alley Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Kigali_Alley_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Alley Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000868" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_17">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_37" start="Alley Enable_2" true="Wait_17" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_38" start="Wait_17" true="Alley Disable_2" sequence="LD_Wave_Waypoints"/>
+  <Task name="Alley &amp; Embassy Enable_3">
+    <Timeline name="NewTimeline">
+      <Track name="Alley" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Alley &amp; Embassy Disable_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_18">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_39" start="Alley &amp; Embassy Enable_3" true="Wait_18" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_40" start="Wait_18" true="Alley &amp; Embassy Disable_3" sequence="LD_Wave_Waypoints"/>
+  <Task name="NewTask_42">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_41" start="Alley &amp; Embassy Disable_3" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_42" start="Alley Disable_2" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_43" start="Everywhere Disable_4" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_44" start="Alley Embassy Disable_1" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_45" start="Garden Alley Disable_3" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_46" start="Alley &amp; Parking Disable_1" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_47" start="Alley Disable_0" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_48" start="Alley Disable" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_49" start="Garden Disable_2" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_50" start="Parking Lot Disable_3" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_51" start="Embassy Disable" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_52" start="Garden Disable_1" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_53" start="Parking Lot Disable_2" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_54" start="Garden Disable_0" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_55" start="Parking Lot &amp; Alley Disable" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_56" start="Embassy &amp; Alley Disable" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_57" start="Parking Lot Disable_1" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_58" start="Garden Disable" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_59" start="Parking Lot Disable_0" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_60" start="Alley Disable_1" true="NewTask_42" sequence="LD_Wave_Waypoints"/>
+  <Task name="NewTask_43">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_61" start="NewTask_42" true="NewTask_43" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_62" start="NewTask_43" true="NewTask_0" sequence="LD_Wave_Waypoints"/>
+</Sequence>

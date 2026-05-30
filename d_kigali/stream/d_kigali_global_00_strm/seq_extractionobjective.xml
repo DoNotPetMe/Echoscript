@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="ExtractionObjective" leveluid="1" streamedRandomID="190391868">
+  <Task name="Initial Check">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Check Wave">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Wave 6">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Wave_10">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_ExtractionVO_Wave5" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wave_15">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_ExtractionVO_Wave10" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Initial checking" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Checking Wave">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Wave 5 End">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_HelicopterManager" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_ExtractionVO_Wave5" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wave 10 End">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_HelicopterManager" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::Sequences::LD_ExtractionVO_Wave10" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wave 15 End">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_HelicopterManager" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::Sequences::LD_ExtractionVO_Wave15" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_5">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_6">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Wave 10">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Return">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_10">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_11">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial Check" true="Check Wave" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_WAVE_STARTED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="WaveId" data="Repository::O_WaveID"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand" start="Check Wave" true="Wave 6" false="NewTask_5">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="6.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="Wave 6" true="NewTask" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask" true="NewTask_0" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_0" true="Initial Check" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Wave_10" true="NewTask" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="Wave_15" true="NewTask" sequence="ExtractionObjective"/>
+  <DependencyEvent name="NewDependencyEvent_0" start="Initial checking" true="Checking Wave" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_WAVE_END" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="WaveId" data="Repository::O_WaveID"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand_2" start="Checking Wave" true="Wave 5 End" false="NewTask_9">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_3" start="NewTask_9" true="Wave 10 End" false="NewTask_10">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_4" start="NewTask_10" true="Wave 15 End" false="NewTask_11">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="15.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_4" start="Wave 5 End" true="NewTask_1" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Wave 10 End" true="NewTask_1" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Wave 15 End" true="NewTask_1" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="NewTask_1" true="NewTask_2" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="NewTask_2" true="Initial checking" sequence="ExtractionObjective"/>
+  <DependencyCommand name="NewDependencyCommand_9" start="NewTask_5" true="Wave_10" false="NewTask_6">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_10" start="NewTask_6" true="Wave_15" false="NewTask_8">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="16.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_11" start="NewTask_8" true="Wave 10" false="Return">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_14" start="Wave 10" true="NewTask" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_15" start="Return" true="NewTask" sequence="ExtractionObjective"/>
+  <DependencyComplete name="NewDependencyComplete_16" start="NewTask_11" true="NewTask_1" sequence="ExtractionObjective"/>
+</Sequence>

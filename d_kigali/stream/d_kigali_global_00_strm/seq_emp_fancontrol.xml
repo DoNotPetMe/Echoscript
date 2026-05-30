@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="EMP_FanControl" leveluid="1" streamedRandomID="190391868">
+  <Task name="EMP Check" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="StopRotating">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::EMP_FanStop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::EMP_FanStart" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="EMP Check" true="StopRotating" data="UID:00000a2e" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <Task name="StartRotating">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::EMP_FanStart" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::EMP_FanStop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="StopRotating" true="StartRotating" data="UID:00000a2e" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="StartRotating" true="EMP Check" sequence="EMP_FanControl"/>
+</Sequence>
