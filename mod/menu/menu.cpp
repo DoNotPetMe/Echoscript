@@ -2,6 +2,7 @@
 #include "../features/freecam.h"
 #include "../features/leveleditor.h"
 #include "../utils/logger.h"
+#include "../utils/cam_finder.h"
 
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
@@ -13,6 +14,7 @@
 #include <Xinput.h>
 
 #include "imgui.h"
+#include <cstdlib>
 
 namespace Menu {
 
@@ -125,6 +127,41 @@ void Render() {
             ImGui::Text("Pos:  %.1f  %.1f  %.1f", st.position.x, st.position.y, st.position.z);
             ImGui::Text("Rot:  pitch %.1f  yaw %.1f", st.pitch, st.yaw);
         }
+
+        ImGui::Spacing();
+        ImGui::Separator();
+        ImGui::TextDisabled("Camera finder (if freecam shows 'pattern not found')");
+        ImGui::Spacing();
+
+        // --- Scan button ---
+        if (CamFinder::IsScanning()) {
+            ImGui::BeginDisabled();
+            ImGui::Button("Scanning... (check console)");
+            ImGui::EndDisabled();
+        } else {
+            if (ImGui::Button("Scan Memory for Camera")) {
+                CamFinder::Scan();
+            }
+            ImGui::SameLine();
+            ImGui::TextDisabled("(~3 sec, logs to console)");
+        }
+
+        // --- Force-base input ---
+        static char s_forceAddr[12] = "";
+        ImGui::SetNextItemWidth(130.f);
+        ImGui::InputText("##forcebase", s_forceAddr, sizeof(s_forceAddr),
+                         ImGuiInputTextFlags_CharsHexadecimal);
+        ImGui::SameLine();
+        if (ImGui::Button("Force Cam Base")) {
+            uintptr_t addr = static_cast<uintptr_t>(
+                std::strtoul(s_forceAddr, nullptr, 16));
+            if (addr)
+                FreeCam::ForceBase(addr);
+            else
+                Logger::Warn("FreeCam: invalid address -- enter hex without 0x prefix.");
+        }
+        ImGui::SameLine();
+        ImGui::TextDisabled("hex, no 0x");
 
         ImGui::Unindent();
     }

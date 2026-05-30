@@ -75,6 +75,11 @@ namespace FreeCam {
     void Toggle();
     void Shutdown();
 
+    // Directly set the camera struct base (for testing cam_finder results).
+    // If the freecam position tracks your in-game position after calling this,
+    // the address is correct.  Use the 'Force Cam Base' box in the menu.
+    void ForceBase(uintptr_t addr);
+
     // ----------------------------------------------------------------
     //  Accessors used by the level editor's gizmo (world-to-screen).
     //  All return false if the camera state pointer is not yet resolved.

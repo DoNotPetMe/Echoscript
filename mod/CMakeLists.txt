@@ -35,6 +35,7 @@ add_library(BlacklistMod SHARED
     features/gizmo.cpp
     features/level_serialization.cpp
     menu/menu.cpp
+    utils/cam_finder.cpp
     ${IMGUI_SOURCES}
 )
 

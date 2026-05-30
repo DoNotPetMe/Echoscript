@@ -206,6 +206,11 @@ void Shutdown() {
     g_camStatePtr     = 0;
 }
 
+void ForceBase(uintptr_t addr) {
+    g_camStatePtr = addr;
+    Logger::Info("FreeCam: camera base forced to 0x%08X -- enable freecam and move to verify.", addr);
+}
+
 // -----------------------------------------------------------------------
 //  Accessors for the level editor's gizmo
 // -----------------------------------------------------------------------
