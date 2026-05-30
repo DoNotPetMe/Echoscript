@@ -63,4 +63,17 @@ namespace FreeCam {
     void Toggle();
     void Shutdown();
 
+    // ----------------------------------------------------------------
+    //  Accessors used by the level editor's gizmo (world-to-screen).
+    //  All return false if the camera state pointer is not yet resolved.
+    // ----------------------------------------------------------------
+    bool GetViewMatrix(DirectX::XMMATRIX& out);
+    bool GetCameraPosition(DirectX::XMFLOAT3& out);
+    bool GetFov(float& outRadians);
+
+    // Builds view * projection. aspect comes from the caller (ImGui display
+    // size); near/far are reasonable defaults overridable here.
+    bool GetViewProjection(DirectX::XMMATRIX& out, float aspect,
+                           float nearZ = 1.0f, float farZ = 100000.0f);
+
 } // namespace FreeCam

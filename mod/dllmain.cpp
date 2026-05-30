@@ -4,6 +4,7 @@
 
 #include "hooks/d3d11_hook.h"
 #include "features/freecam.h"
+#include "features/leveleditor.h"
 #include "utils/logger.h"
 
 // -----------------------------------------------------------------------
@@ -26,6 +27,9 @@ static DWORD WINAPI ModThread(LPVOID param) {
     // Scan for camera patterns
     FreeCam::Init();
 
+    // Bring up the level editor (seeds prop catalog; best-effort engine bridge)
+    LevelEditor::Init();
+
     // Pump a minimal message loop so we can receive WM_QUIT (from the unload button)
     // and also handle the DELETE key unload shortcut.
     MSG msg{};
@@ -44,6 +48,7 @@ static DWORD WINAPI ModThread(LPVOID param) {
 
 unload:
     Logger::Info("BlacklistMod: unloading...");
+    LevelEditor::Shutdown();
     FreeCam::Shutdown();
     D3D11Hook::Uninstall();
     Logger::Shutdown();

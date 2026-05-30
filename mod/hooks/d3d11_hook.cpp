@@ -1,5 +1,6 @@
 #include "d3d11_hook.h"
 #include "../menu/menu.h"
+#include "../features/leveleditor.h"
 #include "../utils/logger.h"
 #include "../utils/memory.h"
 
@@ -142,6 +143,11 @@ static HRESULT STDMETHODCALLTYPE HookedPresent(IDXGISwapChain* pSwapChain,
     ImGui::NewFrame();
 
     Menu::Render();
+
+    // Editor gizmo draws to the background draw list every frame (self-guards
+    // on the editor being enabled), so handles overlay the game with the menu
+    // open or closed.
+    LevelEditor::RenderGizmo();
 
     ImGui::Render();
     g_context->OMSetRenderTargets(1, &s_mainRTV, nullptr);

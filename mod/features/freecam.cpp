@@ -199,4 +199,42 @@ void Shutdown() {
     g_camStatePtr     = 0;
 }
 
+// -----------------------------------------------------------------------
+//  Accessors for the level editor's gizmo
+// -----------------------------------------------------------------------
+bool GetViewMatrix(XMMATRIX& out) {
+    if (!g_camStatePtr) return false;
+    XMFLOAT4X4 m{};
+    if (!Memory::SafeRead(g_camStatePtr + OFF_VIEW_MATRIX, m)) return false;
+    out = XMLoadFloat4x4(&m);
+    return true;
+}
+
+bool GetCameraPosition(XMFLOAT3& out) {
+    if (!g_camStatePtr) return false;
+    return Memory::SafeRead(g_camStatePtr + OFF_POSITION, out);
+}
+
+bool GetFov(float& outRadians) {
+    if (!g_camStatePtr) return false;
+    float fov = 0.f;
+    if (!Memory::SafeRead(g_camStatePtr + OFF_FOV, fov)) return false;
+    // The cam struct stores FOV in degrees; convert to radians for projection.
+    outRadians = ToRad(fov > 0.f ? fov : 75.0f);
+    return true;
+}
+
+bool GetViewProjection(XMMATRIX& out, float aspect, float nearZ, float farZ) {
+    XMMATRIX view;
+    if (!GetViewMatrix(view)) return false;
+
+    float fovRad = ToRad(75.0f);
+    GetFov(fovRad);  // best-effort; falls back to 75° if unavailable
+
+    if (aspect <= 0.f) aspect = 16.0f / 9.0f;
+    XMMATRIX proj = XMMatrixPerspectiveFovLH(fovRad, aspect, nearZ, farZ);
+    out = XMMatrixMultiply(view, proj);
+    return true;
+}
+
 } // namespace FreeCam

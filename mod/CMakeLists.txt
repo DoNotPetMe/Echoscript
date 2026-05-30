@@ -28,6 +28,12 @@ add_library(BlacklistMod SHARED
     dllmain.cpp
     hooks/d3d11_hook.cpp
     features/freecam.cpp
+    features/leveleditor.cpp
+    features/engine_bridge.cpp
+    features/object_dumper.cpp
+    features/prop_database.cpp
+    features/gizmo.cpp
+    features/level_serialization.cpp
     menu/menu.cpp
     ${IMGUI_SOURCES}
 )
@@ -36,6 +42,7 @@ target_include_directories(BlacklistMod PRIVATE
     "${IMGUI_DIR}"
     "${IMGUI_DIR}/backends"
     "${CMAKE_CURRENT_SOURCE_DIR}/../thirdparty/minhook/include"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../thirdparty/json"   # nlohmann/json.hpp (header-only)
     "${CMAKE_CURRENT_SOURCE_DIR}"
 )
 

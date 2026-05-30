@@ -1,5 +1,6 @@
 #include "menu.h"
 #include "../features/freecam.h"
+#include "../features/leveleditor.h"
 #include "../utils/logger.h"
 
 #define WIN32_LEAN_AND_MEAN
@@ -35,6 +36,7 @@ void Tick(float dt) {
 
     // Run feature updates
     FreeCam::Update(dt);
+    LevelEditor::Update(dt);
 }
 
 // -----------------------------------------------------------------------
@@ -91,12 +93,8 @@ void Render() {
 
     ImGui::Spacing();
 
-    // ---- Visual helpers placeholder ----
-    if (ImGui::CollapsingHeader("Visual")) {
-        ImGui::Indent();
-        ImGui::TextDisabled("(more features coming soon)");
-        ImGui::Unindent();
-    }
+    // ---- Level Editor (prop spawner) ----
+    LevelEditor::RenderMenu();
 
     ImGui::Spacing();
     ImGui::Separator();
