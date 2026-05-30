@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SEQ_RotatingLenseFlare" leveluid="3" streamedRandomID="571275100">
+  <Task name="Rotate" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:00001661" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:0000165e" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:0000165f" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" start="0.800000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00001660" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" start="0.800000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Unlock_Doors_Transition" leveluid="3" streamedRandomID="571275100">
+  <Task name="Unlock_Doors" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::List_ACT_LegoKit_Door_Metal_Double" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:000018d2" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000018d3" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_RatSpawn_System" leveluid="3" streamedRandomID="571275100">
+  <Task name="NewTask_0" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="SpawnRats_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001d32" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00001dc1" InUnrealActors="1" TypeDeleted="Target">
+        <Event name="NewEvent" end="2.195271">
+          <CommandInstance name="PlaySound" duration="2.195271" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Hunter_FishMarket_3D_RatFoley" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask_0" true="SpawnRats_1" data="UID:00001d33" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001d74" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00001dc2" InUnrealActors="1" TypeDeleted="Target">
+        <Event name="NewEvent" end="2.195271">
+          <CommandInstance name="PlaySound" duration="2.195271" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Hunter_FishMarket_3D_RatFoley" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_2" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001d75" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00001dc3" InUnrealActors="1" TypeDeleted="Target">
+        <Event name="NewEvent" end="2.195271">
+          <CommandInstance name="PlaySound" duration="2.195271" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Hunter_FishMarket_3D_RatFoley" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="NewTask" true="NewTask_1" data="UID:00001d76" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_1" start="NewTask_2" true="NewTask_3" data="UID:00001d77" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

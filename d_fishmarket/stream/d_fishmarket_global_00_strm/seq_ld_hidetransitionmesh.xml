@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_HideTransitionMesh" playonce="1" leveluid="4" streamedRandomID="571275100">
+  <Task name="Hide Mesh" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_3" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Start Hiding the Meshes***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::List_HideAfterBB2" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_3" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Finish Hiding the Meshes***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Hide Mesh" true="NewTask" sequence="LD_HideTransitionMesh"/>
+</Sequence>

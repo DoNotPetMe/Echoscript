@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_WeaponsDeal" playonce="1" leveluid="3" streamedRandomID="571275100">
+  <Task name="Main Path" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="SP_SAM_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="5.562521">
+          <CommandInstance name="SetDialog" duration="5.562521" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0400_COM::16501::54768" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="SP_SAM_01" false="COOP_SAM_01">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyEvent name="NewDependencyEvent" start="Main Path" true="Disable Other Trigger Volume" data="UID:000015ef" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="COOP_SAM_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.135083">
+          <CommandInstance name="SetDialog" duration="2.135083" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0400_COM::16502::54771" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="SP_ANNA_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.788291">
+          <CommandInstance name="SetDialog" duration="4.788291" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0400_COM::16501::54769" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="SP_SAM_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.935562">
+          <CommandInstance name="SetDialog" duration="1.935562" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0400_COM::16501::54770" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="SP_SAM_01" true="SP_ANNA_01" sequence="LD_VO_WeaponsDeal"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="SP_ANNA_01" true="SP_SAM_02" sequence="LD_VO_WeaponsDeal"/>
+  <Task name="COOP_ANNA_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.264208">
+          <CommandInstance name="SetDialog" duration="4.264208" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0400_COM::16502::54772" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="COOP_BRIGGS_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.303354">
+          <CommandInstance name="SetDialog" duration="3.303354" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0400_COM::16502::54773" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="COOP_ANNA_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.739583">
+          <CommandInstance name="SetDialog" duration="2.739583" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0400_COM::16502::54774" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <VisualComment name="NewVisualComment" x="490.000000" y="-70.000000" width="334.588867" height="96.703918" commentDate="9/13/2012 11:33:01 AM"/>
+  <Task name="COOP_Briggs_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.151125">
+          <CommandInstance name="SetDialog" duration="4.151125" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0400_COM::16502::54775" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="COOP_Sam_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.574708">
+          <CommandInstance name="SetDialog" duration="1.574708" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="COOP_SAM_01" true="COOP_ANNA_01" sequence="LD_VO_WeaponsDeal"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="COOP_ANNA_01" true="COOP_BRIGGS_01" sequence="LD_VO_WeaponsDeal"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="COOP_BRIGGS_01" true="COOP_ANNA_02" sequence="LD_VO_WeaponsDeal"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="COOP_ANNA_02" true="COOP_Briggs_02" sequence="LD_VO_WeaponsDeal"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="COOP_Briggs_02" true="COOP_Sam_02" sequence="LD_VO_WeaponsDeal"/>
+  <VisualComment name="COOP_VO" x="490.000000" y="60.000000" width="540.000000" height="100.000000" commentDate="9/13/2012 11:32:55 AM"/>
+  <Task name="COOP Path" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="COOP Path" true="Disable Other Trigger Volume 2" data="UID:000015f0" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Disable Other Trigger Volume 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000015ef" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Disable Other Trigger Volume">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000015f0" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_6" start="Disable Other Trigger Volume" true="NewTask" sequence="LD_VO_WeaponsDeal"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="Disable Other Trigger Volume 2" true="NewTask" sequence="LD_VO_WeaponsDeal"/>
+</Sequence>

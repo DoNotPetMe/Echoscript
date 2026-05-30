@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SEQ_VO" leveluid="2" streamedRandomID="571275100">
+  <Task name="Laptop" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Laptop" true="NewTask_0" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="LAPTOP_HACKED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Character"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Sam Speaking">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="5.038437">
+          <CommandInstance name="SetDialog" duration="5.038437" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0700_COM::16507::54779" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_2" true="Sam Speaking" false="Briggs Speaking">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_Character" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Character_1" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Briggs Speaking">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.010792">
+          <CommandInstance name="SetDialog" duration="4.010792" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0700_COM::16508::54780" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_0" true="Sam Speaking" false="NewTask_2">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Briggs Speaking/Anna">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.224396">
+          <CommandInstance name="SetDialog" duration="1.224396" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0700_COM::16508::54781" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_6" start="Briggs Speaking" true="Briggs Speaking/Anna" sequence="SEQ_VO"/>
+</Sequence>

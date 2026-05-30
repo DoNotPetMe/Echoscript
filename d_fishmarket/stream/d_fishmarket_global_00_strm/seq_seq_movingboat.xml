@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SEQ_MovingBoat" startup="1" leveluid="0" streamedRandomID="571275100">
+  <Task name="Move" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_2" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="100.000000" condition="1">
+          <CommandInstance name="Move" duration="100.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_9" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_2" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="100.000000" condition="1">
+          <CommandInstance name="Move" duration="100.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_31" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_2" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="100.000000" condition="1">
+          <CommandInstance name="Move" duration="100.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_33" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_2" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="100.000000" condition="1">
+          <CommandInstance name="Move" duration="100.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_43" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="Move_1" true="Move_2" sequence="SEQ_MovingBoat"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="Move_2" true="Move_3" sequence="SEQ_MovingBoat"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Move_3" true="Move" sequence="SEQ_MovingBoat"/>
+  <Task name="Move_4" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_3" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="80.000000" condition="1">
+          <CommandInstance name="Move" duration="80.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_7" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_3" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="80.000000" condition="1">
+          <CommandInstance name="Move" duration="80.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_37" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_3" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="80.000000" condition="1">
+          <CommandInstance name="Move" duration="80.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_39" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move_7">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_3" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="80.000000" condition="1">
+          <CommandInstance name="Move" duration="80.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_41" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="Move_5" true="Move_6" sequence="SEQ_MovingBoat"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Move_6" true="Move_7" sequence="SEQ_MovingBoat"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Move_7" true="Move_4" sequence="SEQ_MovingBoat"/>
+  <Task name="Move_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_2" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="100.000000" condition="1">
+          <CommandInstance name="Move" duration="100.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_29" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Move" true="Move_0" sequence="SEQ_MovingBoat"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="Move_0" true="Move_1" sequence="SEQ_MovingBoat"/>
+  <Task name="Move_8">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_3" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="80.000000" condition="1">
+          <CommandInstance name="Move" duration="80.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="GI_NonInteractiveDynActor_35" InUnrealActors="1" TypeDeleted="GameItem"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="Move_4" true="Move_8" sequence="SEQ_MovingBoat"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="Move_8" true="Move_5" sequence="SEQ_MovingBoat"/>
+</Sequence>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SEQ_VO_Intro" leveluid="2" streamedRandomID="571275100">
+  <Task name="SP_ANNA_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.121812">
+          <CommandInstance name="SetDialog" duration="4.121812" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16493::54745" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::JoinInProgress" TypeDeleted="Boolean">
+        <Event name="1P 2P Sync" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Is SP! Anna Speaking!"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="COOP_ANNA_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.416605">
+          <CommandInstance name="SetDialog" duration="4.416605" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16494::54749" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::JoinInProgress" TypeDeleted="Boolean">
+        <Event name="1P 2P Sync" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Is MP! Anna Speaking!"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="SP_SAM_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.889417">
+          <CommandInstance name="SetDialog" duration="1.889417" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16493::54746" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="SP_ANNA_03">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.977396">
+          <CommandInstance name="SetDialog" duration="4.977396" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16493::54791" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="SP_ANNA_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="5.569958">
+          <CommandInstance name="SetDialog" duration="5.569958" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16493::54747" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="SP_SAM_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="0.887375">
+          <CommandInstance name="SetDialog" duration="0.887375" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16493::54748" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="COOP_SAM_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.652667">
+          <CommandInstance name="SetDialog" duration="1.652667" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16494::54750" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="COOP_ANNA_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="9.113542">
+          <CommandInstance name="SetDialog" duration="9.113542" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16494::54751" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="COOP_BRIGGS_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.948875">
+          <CommandInstance name="SetDialog" duration="1.948875" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0150_COM::16494::54752" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="SP_ANNA_01" false="COOP_ANNA_01">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="SP_ANNA_01" true="SP_SAM_01" sequence="SEQ_VO_Intro"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="SP_SAM_01" true="SP_ANNA_02" sequence="SEQ_VO_Intro"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="SP_ANNA_02" true="SP_SAM_02" sequence="SEQ_VO_Intro"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="SP_SAM_02" true="SP_ANNA_03" sequence="SEQ_VO_Intro"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="COOP_ANNA_01" true="COOP_SAM_01" sequence="SEQ_VO_Intro"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="COOP_SAM_01" true="COOP_ANNA_02" sequence="SEQ_VO_Intro"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="COOP_ANNA_02" true="COOP_BRIGGS_01" sequence="SEQ_VO_Intro"/>
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+</Sequence>

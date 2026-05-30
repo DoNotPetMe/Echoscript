@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SND_StopDockAMB" leveluid="0" streamedRandomID="571275100">
+  <Task name="Stop Dock AMB Sound" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+</Sequence>

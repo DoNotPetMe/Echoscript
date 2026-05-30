@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_DeadDrop" leveluid="3" streamedRandomID="571275100">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Sam Speaks">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.400646">
+          <CommandInstance name="SetDialog" duration="3.400646" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0350_COM::16499::54766" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="3.400000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_3" true="Sam Speaks" false="NewTask_2">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Briggs Speaks">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.205917">
+          <CommandInstance name="SetDialog" duration="3.205917" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H02_FMK::0350_COM::16500::54767" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="3.200000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_2" true="Sam Speaks" false="Briggs Speaks">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_Character_0" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Character_2" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <VisualComment name="NewVisualComment" x="-556.399414" y="-61.618500" width="434.687653" height="50.000000" commentDate="23/10/2012 2:25:01 PM"/>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="NewTask_0" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="DEADDROP_PICKEDUP" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Character_0"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_0" true="NewTask_3" false="Wait_For_Recheck">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::B_PlayingSound" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Wait_For_Recheck">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_1" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Wait_For_Recheck" true="NewTask_0" sequence="LD_VO_DeadDrop"/>
+</Sequence>
