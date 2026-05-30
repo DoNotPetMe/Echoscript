@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LoadoutConfig>
+
+	<LoadoutTypes>
+      <LoadoutType Name="Campaign"    InitialLoadouts="1" MaxLoadouts="7"/>
+      <LoadoutType Name="Spy"         InitialLoadouts="1" MaxLoadouts="7"/>
+      <LoadoutType Name="Merc"        InitialLoadouts="1" MaxLoadouts="7"/>
+      <LoadoutType Name="ClassicSpy"  InitialLoadouts="1" MaxLoadouts="1"/>
+      <LoadoutType Name="ClassicMerc" InitialLoadouts="1" MaxLoadouts="1"/>
+      <LoadoutType Name="RandomSpy"   InitialLoadouts="1" MaxLoadouts="1"/>
+      <LoadoutType Name="RandomMerc"  InitialLoadouts="1" MaxLoadouts="1"/>
+    </LoadoutTypes>
+
+	<!--////////////////////////////////////////////////////////////////////////////
+	LOADOUTS
+	NOTE - These Loadouts represent the base state of loadouts and will be overwritten
+	by the Data in the save game. So, if you specify in a Loadout here that the 5-7
+	is equipped, but the player changes it to an UMP45, that will be saved and will
+	override what is specified here. If you need to force a new version, you can
+	increment the version number of the loadout you are modifying.
+	/////////////////////////////////////////////////////////////////////////////-->
+	<Loadouts>
+		<Loadout NameKey="LOADOUT A" Type="Campaign" Editable="true" Version="6" LocNameKey="LocID_LDOUT_Slot_Campaign_1" >
+			<Item Slot="VisionMode" Archetype="GI_ThermalGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="SPHelmetSuitA"/>
+			<Item Slot="Pants" 		Archetype="SPPantsSuitA"/>
+			<Item Slot="Torso" 		Archetype="SPTorsoSuitA"/>
+			<Item Slot="Gloves" 	Archetype="SPGlovesSuitA"/>
+			<Item Slot="Boots" 		Archetype="SPBootsSuitA"/>
+			<Item Slot="Pistol" 	Archetype="Pistol_PX4"/>
+			<Item Slot="TwoHander" 	Archetype="SMG_MP7A2"/>
+			<Item Slot="NonLethal" 	Archetype="Tazer"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Sticky_Noisemaker"/>
+			<Item Slot="Gadget1" 	Archetype="GI_Grenade_Smoke"/>
+			<Item Slot="Gadget2" 	Archetype="GI_Sticky_Camera"/>			
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="LOADOUT B" Type="Campaign" Editable="true" Version="6" CrewQuarterReqLvl="2" LocNameKey="LocID_LDOUT_Slot_Campaign_2">
+			<Item Slot="VisionMode" Archetype="GI_ThermalGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="SPHelmetSuitA"/>
+			<Item Slot="Pants" 		Archetype="SPPantsSuitA"/>
+			<Item Slot="Torso" 		Archetype="SPTorsoSuitA"/>
+			<Item Slot="Gloves" 	Archetype="SPGlovesSuitA"/>
+			<Item Slot="Boots" 		Archetype="SPBootsSuitA"/>
+			<Item Slot="Pistol" 	Archetype="Pistol_PX4"/>
+			<Item Slot="TwoHander" 	Archetype="SMG_MP7A2"/>
+			<Item Slot="NonLethal" 	Archetype="Tazer"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Sticky_Noisemaker"/>
+			<Item Slot="Gadget1" 	Archetype="GI_Grenade_Smoke"/>
+			<Item Slot="Gadget2" 	Archetype="GI_Sticky_Camera"/>			
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="LOADOUT C" Type="Campaign" Editable="true" Version="6" CrewQuarterReqLvl="3" LocNameKey="LocID_LDOUT_Slot_Campaign_3">
+			<Item Slot="VisionMode" Archetype="GI_ThermalGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="SPHelmetSuitA"/>
+			<Item Slot="Pants" 		Archetype="SPPantsSuitA"/>
+			<Item Slot="Torso" 		Archetype="SPTorsoSuitA"/>
+			<Item Slot="Gloves" 	Archetype="SPGlovesSuitA"/>
+			<Item Slot="Boots" 		Archetype="SPBootsSuitA"/>
+			<Item Slot="Pistol" 	Archetype="Pistol_PX4"/>
+			<Item Slot="TwoHander" 	Archetype="SMG_MP7A2"/>
+			<Item Slot="NonLethal" 	Archetype="Tazer"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Sticky_Noisemaker"/>
+			<Item Slot="Gadget1" 	Archetype="GI_Grenade_Smoke"/>
+			<Item Slot="Gadget2" 	Archetype="GI_Sticky_Camera"/>			
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="INTEL_SCOUT" Type="Spy" Editable="false" RestrictChest="2" Version="13" LocNameKey="LocID_LDOUT_Slot_Spy_Preset_1">
+			<Item Slot="VisionMode" Archetype="GI_MP_ThermalGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetExecutioner"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsExecutioner"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoIntelScout"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesIntelScout"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsIntelScout"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Spy_Pistol_F40"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Spy_SMG_UMP45"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_EMP"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="PREDATOR" Type="Spy" Editable="false" RestrictChest="1" Cost="50000" Version="11" LocNameKey="LocID_LDOUT_Slot_Spy_Preset_2">
+			<Item Slot="VisionMode" Archetype="GI_MP_SonarGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetGhost"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsGhost"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoGhost"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesExecutioner"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsGhost"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Spy_Pistol_FiveSeven"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Spy_Crossbow"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_EscBomb"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="SABOTEUR" Type="Spy" Editable="false" RestrictChest="3" Cost="50000" Version="11" LocNameKey="LocID_LDOUT_Slot_Spy_Preset_3">
+			<Item Slot="VisionMode" Archetype="GI_MP_EMFGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetIntelScout"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsIntelScout"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoSaboteur"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesGhost"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsExecutioner"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Spy_Pistol_Proto"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Spy_SMG_Vector"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_Flashbang"/>
+			<Item Slot="Gadget1" 	Archetype="GI_Adv_Sticky_Camera"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="CUSTOM SPY 1" Type="Spy" Editable="true" Cost="100000" TokenCost="1" Version="4" LocNameKey="LocID_LDOUT_Slot_Spy_Custom_1">
+			<Item Slot="VisionMode" Archetype="GI_MP_SonarGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetSpyDefault"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsSpyDefault"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoIntelScout"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesSpyDefault"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsSpyDefault"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Spy_Pistol_F40"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Spy_SMG_MP7"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_EMP"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="CUSTOM SPY 2" Type="Spy" Editable="true" Cost="100000" TokenCost="1" Version="4" LocNameKey="LocID_LDOUT_Slot_Spy_Custom_2">
+			<Item Slot="VisionMode" Archetype="GI_MP_SonarGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetSpyDefault"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsSpyDefault"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoIntelScout"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesSpyDefault"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsSpyDefault"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Spy_Pistol_F40"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Spy_SMG_MP7"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_EMP"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="CUSTOM SPY 3" Type="Spy" Editable="true" Cost="100000" TokenCost="1" Version="4" LocNameKey="LocID_LDOUT_Slot_Spy_Custom_3">
+			<Item Slot="VisionMode" Archetype="GI_MP_SonarGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetSpyDefault"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsSpyDefault"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoIntelScout"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesSpyDefault"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsSpyDefault"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Spy_Pistol_F40"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Spy_SMG_MP7"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_EMP"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="PEACEMAKER" Type="Merc" Editable="false" RestrictChest="4" Version="14" LocNameKey="LocID_LDOUT_Slot_Merc_Preset_1">
+			<Item Slot="VisionMode" Archetype="GI_MP_BMSensor"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetHeavy"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsHeavy"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoHeavy"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesTech"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsHeavy"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Merc_Pistol_DesertEagle"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Merc_Assault_AK47"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_Frag"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="HUNTER" Type="Merc" Editable="false" RestrictChest="5" Cost="50000" Version="15" LocNameKey="LocID_LDOUT_Slot_Merc_Preset_2">
+			<Item Slot="VisionMode" Archetype="GI_MP_BatsVision"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetTech"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsTech"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoHunter"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesHunter"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsTech"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Merc_Pistol_Makarov"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Merc_Shotgun_RMB93"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_TearGas"/>
+			<Item Slot="Gadget1" 	Archetype="GI_Adv_TaggingDevice"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="TECH" Type="Merc" Editable="false" RestrictChest="6" Cost="50000" Version="15" LocNameKey="LocID_LDOUT_Slot_Merc_Preset_3">
+			<Item Slot="VisionMode" Archetype="GI_MP_RFDetector"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetHunter"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsHunter"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoTech"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesHeavy"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsHunter"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Merc_Pistol_Px4"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Merc_Assault_ACE"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Proximity_Mine"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="CUSTOM MERC 1" Type="Merc" Editable="true" Cost="100000" TokenCost="1" Version="5" LocNameKey="LocID_LDOUT_Slot_Merc_Custom_1">
+			<Item Slot="VisionMode" Archetype="GI_MP_BMSensor"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetMercDefault"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsMercDefault"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoHeavy"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesMercDefault"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsMercDefault"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Merc_Pistol_Makarov"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Merc_Assault_M416"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_Frag"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>      
+    
+		<Loadout NameKey="CUSTOM MERC 2" Type="Merc" Editable="true" Cost="100000" TokenCost="1" Version="5" LocNameKey="LocID_LDOUT_Slot_Merc_Custom_2">
+			<Item Slot="VisionMode" Archetype="GI_MP_BMSensor"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetMercDefault"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsMercDefault"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoHeavy"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesMercDefault"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsMercDefault"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Merc_Pistol_Makarov"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Merc_Assault_M416"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_Frag"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>      
+
+		<Loadout NameKey="CUSTOM MERC 3" Type="Merc" Cost="100000" TokenCost="1" Editable="true" Version="10" LocNameKey="LocID_LDOUT_Slot_Merc_Custom_3">
+			<Item Slot="VisionMode" Archetype="GI_MP_BMSensor"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetMercDefault"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsMercDefault"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoHeavy"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesMercDefault"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsMercDefault"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Merc_Pistol_Makarov"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Merc_Assault_M416"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_Frag"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>      
+
+		<Loadout NameKey="CLASSIC_MERC" Type="ClassicMerc" Editable="false" ClassicMode="true" Version="5" LocNameKey="LocID_LDOUT_Slot_Merc_Classic">
+			<Item Slot="VisionMode" Archetype="GI_MP_BMSensor"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetClassicMerc"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsClassicMerc"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoClassicMerc"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesClassicMerc"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsClassicMerc"/>
+			<Item Slot="Pistol" 	Archetype="ADV_Merc_Pistol_DesertEagle"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Merc_Assault_M416"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_Frag"/>
+			<Item Slot="Gadget1" 	Archetype="GI_Adv_Proximity_Mine"/>
+			<Item Slot="Gadget2" 	Archetype="GI_Adv_Grenade_TearGas"/>
+			<Item Slot="Gadget3" 	Archetype="GI_Adv_AmmoPack"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+		<Loadout NameKey="CLASSIC_SPY" Type="ClassicSpy" Editable="false" ClassicMode="true" Version="5" LocNameKey="LocID_LDOUT_Slot_Spy_Classic">
+			<Item Slot="VisionMode" Archetype="GI_MP_NightVision"/>
+			<Item Slot="HeadGear" 	Archetype="MPArmorHelmetClassicSpy"/>
+			<Item Slot="Pants" 		Archetype="MPArmorPantsClassicSpy"/>
+			<Item Slot="Torso" 		Archetype="MPArmorTorsoClassicSpy"/>
+			<Item Slot="Gloves" 	Archetype="MPArmorGlovesClassicSpy"/>
+			<Item Slot="Boots" 		Archetype="MPArmorBootsClassicSpy"/>
+			<Item Slot="TwoHander" 	Archetype="ADV_Spy_Crossbow"/>
+			<Item Slot="Pistol" 	Archetype=""/>
+			<Item Slot="Gadget0" 	Archetype="GI_Adv_Grenade_Flashbang"/>
+			<Item Slot="Gadget1" 	Archetype="GI_Adv_Grenade_EMP"/>
+			<Item Slot="Gadget2" 	Archetype="GI_Adv_EscBomb"/>
+			<Item Slot="Gadget3" 	Archetype="GI_Adv_Sticky_Camera"/>
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+      <Loadout NameKey="RANDOM SPY" Type="RandomSpy" Editable="false" Randomized="true" Version="1" LocNameKey="LocID_LDOUT_Slot_Spy_Random">
+        <!-- EMPTY! LET'S RANDOMIZE IT AT LOADING -->
+      </Loadout>
+      
+      <Loadout NameKey="RANDOM MERC" Type="RandomMerc" Editable="false" Randomized="true" Version="1" LocNameKey="LocID_LDOUT_Slot_Merc_Random">
+        <!-- EMPTY! LET'S RANDOMIZE IT AT LOADING -->
+      </Loadout>
+
+		<Loadout NameKey="SplitscreenCoop" Type="Campaign" Editable="true" Version="6" LocNameKey="LocID_LDOUT_Slot_Guest" >
+			<Item Slot="VisionMode" Archetype="GI_ThermalGoggles"/>
+			<Item Slot="HeadGear" 	Archetype="SPHelmetSuitA"/>
+			<Item Slot="Pants" 		Archetype="SPPantsSuitA"/>
+			<Item Slot="Torso" 		Archetype="SPTorsoSuitA"/>
+			<Item Slot="Gloves" 	Archetype="SPGlovesSuitA"/>
+			<Item Slot="Boots" 		Archetype="SPBootsSuitA"/>
+			<Item Slot="Pistol" 	Archetype="Pistol_PX4"/>
+			<Item Slot="TwoHander" 	Archetype="SMG_MP7A2"/>
+			<Item Slot="NonLethal" 	Archetype="Tazer"/>
+			<Item Slot="Gadget0" 	Archetype="GI_Sticky_Noisemaker"/>
+			<Item Slot="Gadget1" 	Archetype="GI_Grenade_Smoke"/>
+			<Item Slot="Gadget2" 	Archetype="GI_Sticky_Camera"/>			
+			<Item Slot="Detail" 	Archetype="LightGreen"/>
+		</Loadout>
+
+	</Loadouts>
+</LoadoutConfig>

@@ -1,0 +1,900 @@
+﻿<root>
+
+	<!-- FLARE TTL -->
+	<scene sceneID="HUD_LenseFlareDirt" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareDirt.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" priority="400" />
+	<scene sceneID="HUD_LenseFlareDirt_NIGHT" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareDirt_NIGHT.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILenseFlareDirt_NIGHT.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareWetDirt" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareWetDirt.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILensWetDirt.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareWetDirt_S_BLO" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareWetDirt_BLO.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILensWetDirt_S_BLO.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareWetDirt_S_DET" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareWetDirt_BLO.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILenseFlareDirt_NIGHT_S_DET.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareWetDirt_S_QOD" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareWetDirt_QOD.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILenseFlareDirt_NIGHT_S_QOD.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareWetDirt_S_AFB" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareWetDirt.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILensWetDirt_S_AFB.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareWetDirt_S_FUE" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareWetDirt_FUE.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILensWetDirt_S_FUE.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareDirt_HUB" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareStandardDirt_HUB.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILensDirt_HUB.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareStandardDirt_Spys" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareStandardDirt_Spys.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILensDirt_Spys.ini" priority="400" />
+	<scene sceneID="HUD_LenseFlareStandardDirt_Mercs" alias="HudLenseDirtAlias" assetname="HUD_LenseFlareStandardDirt_Mercs.gfx" scenetype="HudLenseFlareDirt" splitscreen_donotpush="1" config_file="UILensDirt_Mercs.ini" priority="400" />
+
+	<!-- ENVIROMENT TTL -->
+	<scene sceneID="HUD_Environment" alias="HudEnvironmentAlias" assetname="HUD_Environment.gfx" scenetype="HudEnvironment" splitscreen_donotpush="1" config_file="UIEnvironment_Default.ini" priority="300" />
+	<scene sceneID="HUD_Environment_BLO" alias="HudEnvironmentAlias" assetname="HUD_Environment_BLO.gfx" scenetype="HudEnvironment" splitscreen_donotpush="1" config_file="UIEnvironment_Default.ini" priority="300" />
+
+	<!-- HUD -->
+	<scene sceneID="HudMaster" assetname="HUD_Master.gfx" scenetype="Scene" permanent="true"/>
+	<scene sceneID="HudBlood" assetname="HUD_Blood.gfx" scenetype="HudBlood" splitscreen_donotpush="1" priority="200" />
+	<scene sceneID="HudCoopRevive" assetname="Hud_CoopRevive_v2.gfx" scenetype="HudCoopRevive" splitscreen_donotpush="1" priority="2100" />
+	<scene sceneID="HudCoopRevive_SS" assetname="Hud_CoopRevive_v2.gfx" scenetype="HudCoopRevive" splitscreen_pushonly="1" splitscreen_restricttoviewport="left" priority="2200" />
+	<scene sceneID="HudDetection" assetname="HUD_Detection.gfx" scenetype="HudDetection" splitscreen_h_align="center" priority="2600" />
+	<scene sceneID="HudGadgets" assetname="HUD_Gadgets.gfx" scenetype="HudGadgets" splitscreen_h_align="left" priority="5200" />
+	<scene sceneID="HudAdvGadgets" assetname="ADV_Gadgets.gfx" scenetype="HudAdvGadgets" splitscreen_h_align="left" priority="4500" />
+	<scene sceneID="HudAdvGadgets_MERC" assetname="ADV_Gadgets_MERC.gfx" scenetype="HudAdvGadgets" splitscreen_h_align="left" priority="3500" />
+	<scene sceneID="HudHealthFeedback" assetname="HUD_Health_Feedback.gfx" scenetype="HudHealthFeedback" splitscreen_h_align="left" splitscreen_h_scale="50" priority="100" />
+	<scene sceneID="HudMarkAndExecute" assetname="HUD_Mark_And_Execute.gfx" scenetype="HudMarkAndExecute" splitscreen_h_align="right" priority="5400" />
+	<scene sceneID="HudObjectives" assetname="HUD_Objectives.gfx" scenetype="HudObjectives" splitscreen_h_align="center" priority="1900" />
+	<scene sceneID="HudWeapon" assetname="HUD_Weapon.gfx" scenetype="HudWeapon" splitscreen_h_align="right" priority="5300" />
+	<scene sceneID="HudAdvWeapon" assetname="ADV_Weapon.gfx" scenetype="HudAdvWeapon" splitscreen_h_align="right" priority="4400" />
+	<scene sceneID="HudAdvWeapon_MERC" assetname="ADV_Weapon_MERC.gfx" scenetype="HudAdvWeapon" splitscreen_h_align="right" priority="3400" />
+	<scene sceneID="HudObjectivesADV" assetname="ADV_Beacons.gfx" scenetype="HudObjectivesADV" priority="1600" />
+	<scene sceneID="HudObjectiveProgress" assetname="ADV_ObjectiveProgress.gfx" scenetype="HudObjectiveProgress" priority="9000" />
+	<scene sceneID="HudMPFrontlineProgress" assetname="ADV_ObjectiveProgress_Frontline.gfx" scenetype="HudMPFrontlineProgress" priority="2000" />
+	<scene sceneID="HudMPPlayerNames" assetname="ADV_PlayerNames.gfx" scenetype="HudMPPlayerNames" priority="10" />
+	<scene sceneID="HudRadar" assetname="HUD_Radar.gfx" scenetype="HudRadar" splitscreen_donotpush="1" priority="5600" />
+    <scene sceneID="HudMPRadar" assetname="HUD_Radar.gfx" scenetype="HudMPRadar" priority="5600" delayed_textures="0"/>
+	<scene sceneID="HudReticles" assetname="HUD_Reticles.gfx" scenetype="HudReticles" splitscreen_h_align="center" priority="6300" />
+	<scene sceneID="HudMPReticleAddons" assetname="ADV_ReticleAddOn.gfx" scenetype="HudMPReticleAddons" splitscreen_h_align="center" priority="2900" />
+	<scene sceneID="HudSelectionWheel" assetname="HUD_SelectionWheel.gfx" scenetype="HudSelectionWheel" splitscreen_h_align="center" priority="5800" restrict_lifetime_to_hud_mode="1" />
+	<scene sceneID="HudSpyMerc" assetname="HUD_SpyMerc.gfx" scenetype="HudSpyMerc" />
+	<scene sceneID="HudMPActionReward" assetname="ADV_ActionReward.gfx" scenetype="HudMPActionReward" priority="2500" />
+	<scene sceneID="HudMPMessage" assetname="ADV_Message.gfx" scenetype="HudMPMessage" priority="2500" edgeaa_enabled="1" />
+	<scene sceneID="HudMPScoreBarTDM" assetname="ADV_SCORE_TeamDeath.gfx" scenetype="HudMPScoreBarTDM" priority="4800" />
+	<scene sceneID="HudMPScoreBarSVM" assetname="ADV_SCORE_SpyMerc.gfx" scenetype="HudMPScoreBarSVM" priority="4900" />
+	<scene sceneID="HudMPScoreBarFL" assetname="ADV_SCORE_SpyMerc.gfx" scenetype="HudMPScoreBarFL" priority="5000" />
+	<scene sceneID="HudMPScoreBarCTI" assetname="ADV_SCORE_SpyMerc.gfx" scenetype="HudMPScoreBarCTI" priority="5100" />
+	<scene sceneID="HudMPScoreBarTDM_MERC" assetname="ADV_SCORE_TeamDeath_MERC.gfx" scenetype="HudMPScoreBarTDM" priority="3800" />
+	<scene sceneID="HudMPScoreBarSVM_MERC" assetname="ADV_SCORE_SpyMerc_MERC.gfx" scenetype="HudMPScoreBarSVM" priority="3900" />
+	<scene sceneID="HudMPScoreBarFL_MERC" assetname="ADV_SCORE_SpyMerc_MERC.gfx" scenetype="HudMPScoreBarFL" priority="4000" />
+	<scene sceneID="HudMPScoreBarCTI_MERC" assetname="ADV_SCORE_SpyMerc_MERC.gfx" scenetype="HudMPScoreBarCTI" priority="4100" />
+	<scene sceneID="HudMPHealth" assetname="ADV_Health.gfx" scenetype="HudMPHealth" priority="1800" />
+	<scene sceneID="HudMPRFDIcons" assetname="ADV_VISION_RFD.gfx" scenetype="HudMPRFDIcons" priority="3000" />
+	<scene sceneID="HudMPBATSIcons" assetname="ADV_VISION_BATS.gfx" scenetype="HudMPBATSIcons" priority="3100" />
+	<scene sceneID="HudMPBMSRadar" assetname="ADV_VISION_RADAR.gfx" scenetype="HudMPBMSRadar" priority="3200" />
+	<scene sceneID="HudMPKillCam" assetname="ADV_KillCam.gfx" scenetype="HudMPKillCam" priority="180" />
+	<scene sceneID="HudMPKillCamCut" assetname="ADV_KillCamCut.gfx" scenetype="HudMPKillCamCut" priority="180" />
+	<scene sceneID="HudMPCam" assetname="ADV_Cam.gfx" scenetype="HudMPCam" priority="3400" />
+	<scene sceneID="HudSnakeCam" assetname="HUD_SnakeCam.gfx" scenetype="HudSnakeCam" splitscreen_donotpush="1" priority="1000" restrict_lifetime_to_hud_mode="1" />
+	<scene sceneID="HudSnakeCam_SS" assetname="HUD_SnakeCam_SS.gfx" scenetype="HudSnakeCam" splitscreen_pushonly="1" splitscreen_h_align="center" priority="1100" restrict_lifetime_to_hud_mode="1" />
+	<scene sceneID="HudUAV" assetname="HUD_UAV.gfx" scenetype="HudUAV" splitscreen_donotpush="1" priority="800" restrict_lifetime_to_hud_mode="1"  />
+	<scene sceneID="HudUAV_SS" assetname="Hud_UAV_SS.gfx" scenetype="HudUAV" splitscreen_pushonly="1" splitscreen_h_align="center" priority="900" restrict_lifetime_to_hud_mode="1" />
+	<scene sceneID="HudTips" assetname="HUD_Tips.gfx" scenetype="HudTips" splitscreen_h_align="left" priority="5900" />
+	<scene sceneID="HudTips_ADV" assetname="ADV_HUD_Tips.gfx" scenetype="HudTips" splitscreen_h_align="left" priority="5900" />
+	<scene sceneID="HudTrirotor" assetname="HUD_Trirotor.gfx" scenetype="HudTrirotor"  splitscreen_donotpush="1" priority="1200" restrict_lifetime_to_hud_mode="1"  />
+	<scene sceneID="HudTrirotor_SS" assetname="HUD_Trirotor_SS.gfx" scenetype="HudTrirotor"	 splitscreen_pushonly="1" splitscreen_h_align="center" priority="1300" restrict_lifetime_to_hud_mode="1" />
+	<scene sceneID="HudMPDrone" assetname="ADV_Drone.gfx" scenetype="HudMPDrone" priority="4200" restrict_lifetime_to_hud_mode="1" />
+	<scene sceneID="HudTutorial" assetname="HUD_Tutorial.gfx" scenetype="HudTutorial" splitscreen_h_align="center" priority="6000" />
+
+  <!-- UPlay -->
+  <scene sceneID="SceneUPlayLogin" assetname="SceneUplayReg.gfx" scenetype="SceneUPlayLogin" priority="1000"/>
+  <scene sceneID="SceneUPlayRegistration" assetname="SceneUplayReg.gfx" scenetype="SceneUPlayRegistration" priority="1000"/>
+  <scene sceneID="SceneUPlayTOS" assetname="SceneUplayReg.gfx" scenetype="SceneUPlayTOS" priority="1000"/>
+  <scene sceneID="SceneUPlayWelcome" assetname="SceneUplayReg.gfx" scenetype="SceneUPlayWelcome" priority="1000"/>
+
+	<!-- SMI -->
+	<scene sceneID="SMIBackground" assetname="SMIBackground.gfx" scenetype="Scene" priority="0" system="1"/>
+	<scene sceneID="SMIMatchmaking" assetname="SMIMatchmaking.gfx" scenetype="SMIMatchmaking" priority="50" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMIFriends" assetname="SMIFriendsParty.gfx" scenetype="SMIFriendsParty" priority="66" NeverTransfer="1" fullscreen_opaque="1" />
+	<scene sceneID="SMIPartyLobby" assetname="SMIPartyLobby.gfx" scenetype="SMIPartyLobby" priority="65" NeverTransfer="1"/>
+	<scene sceneID="SMIMaster" assetname="SMIMaster.gfx" scenetype="SMIMaster" priority="0"/>
+	<scene sceneID="SMICheapMap" assetname="SMICheapMap.gfx" scenetype="SMIMap" priority="30" fullscreen_opaque="1"/>
+	<scene sceneID="SMIMap" assetname="SMIMap.gfx" scenetype="SMIMap" priority="30" fullscreen_opaque="1"/>
+	<scene sceneID="SMILoadout" assetname="SMILoadout.gfx" scenetype="SMILoadout" priority="82" edgeaa_enabled="1" fullscreen_opaque="1" NeverTransfer="1"/>
+    <scene sceneID="SMIADVLoadout" assetname="ADV_MENU_Loadout.gfx" scenetype="SMIADVLoadout" priority="82" edgeaa_enabled="1" delay="1" delayed_textures="0"/>
+  <!-- PC Exclusive Change: We need to use Farid's version of the SMISHadowNet GFX file, don't take the one from Console -->
+	<scene sceneID="SMIShadownet" assetname="SMIShadowNet_PC.gfx" scenetype="SMIShadowNetTicker" priority="150" NeverTransfer="1"/>
+    <scene sceneID="SMIShadownetMapTicker" assetname="SMIShadowNet_PC.gfx" scenetype="SMIShadowNetTicker" priority="150"/>
+  <!-- End of PC Exclusive Change -->
+  <scene sceneID="SMIMissionSettings" assetname="SMIMissionSettings.gfx" scenetype="Scene" priority="50"/>
+	<scene sceneID="SMICustomization" assetname="SMICustomization.gfx" scenetype="SMIBaseScene" priority="50"/>
+	<scene sceneID="SMIADVAfterActionReport" assetname="ADV_MENU_AfterActionReport.gfx" scenetype="SMIADVAfterActionReport" priority="50" edgeaa_enabled="1"  NeverTransfer="1" fullscreen_opaque="1"/>
+	<scene sceneID="SMIControlRibbon" assetname="SMIControlRibbon.gfx" scenetype="SMIControlRibbon" priority="190" system="1" NeverTransfer="1"/>
+	<scene sceneID="SMIInfoPanel" assetname="SMIInfoPanel.gfx" scenetype="SMIInfoPanel" priority="95" system="1"/>
+	<scene sceneID="SMIADVMatchSettings" assetname="SMIADVMatchSettings.gfx" scenetype="SMIADVMatchSettings" priority="50" NeverTransfer="1" fullscreen_opaque="1"/>
+	<scene sceneID="SMIPause" assetname="SMIPause.gfx" scenetype="SMIPause" priority="8"  fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMIShadownetMain" assetname="SMIShadowNetHome.gfx" scenetype="SMIShadowNetMain" priority="100" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMIDeadDrops" assetName="SMIDeadDrops.gfx" scenetype="SceneDeadDrops" priority="82"  NeverTransfer="1"/>
+	<scene sceneID="SMIADVLobby" assetname="SMIADVLobby.gfx" scenetype="SMIADVLobby" priority="65" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMICOOPLobby" assetname="SMICOOPLobby.gfx" scenetype="SMICOOPLobby" priority="65" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMISpinner" assetname="SMISpinner.gfx" scenetype="SMISpinner" priority="70"/>
+	<scene sceneID="SMIGrid" assetname="SMIReveal.gfx" scenetype="SMIGridReveal" priority="200" system="1" NeverTransfer="1"/>
+	<scene sceneID="SMIAfterActionReport" assetname="SMIAfterActionReport2.gfx" scenetype="SMIAfterActionReport" priority="70" edgeaa_enabled="1" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMIHeaderBar" assetname="SMIHeaderBar.gfx" scenetype="SMIHeaderBar" priority="110" system="1"/>
+	<scene sceneID="SMIHubUpgrade" assetname="SMIHubUpgrade.gfx" scenetype="SMIHubUpgrade" priority="50" NeverTransfer="1"/>
+	<scene sceneID="SMISessionBrowser" assetname="SMISessionBrowser.gfx" scenetype="SMISessionBrowser" priority="50" NeverTransfer="1"/>
+	<scene sceneID="PauseSP" assetname="SMIPause.gfx" scenetype="ScenePauseSP" priority="8" fullscreen_opaque="1"/>
+	<scene sceneID="PauseHUB" assetname="SMIPause.gfx" scenetype="ScenePauseHUB" priority="31" fullscreen_opaque="1"/>
+	<scene sceneID="PauseMP" assetname="SMIPause.gfx" scenetype="ScenePauseMP" priority="10" fullscreen_opaque="1"/>
+	<scene sceneID="PauseCoop" assetname="SMIPause.gfx" scenetype="ScenePauseCoop" priority="10" fullscreen_opaque="1"/>
+	<scene sceneID="SMIGamma" assetname="SMIGamma.gfx" scenetype="SMIGamma" priority="160" fullscreen_opaque="1"  NeverTransfer="1"/>
+	<scene sceneID="MenuGammaSetting" assetname="Menu_Gamma.gfx" scenetype="MenuGammaSetting" priority="160" fullscreen_opaque="1"  NeverTransfer="1"/>
+	<scene sceneID="MenuSafeScreen" assetname="Menu_SafeScreen.gfx" scenetype="MenuSafeScreen" priority="160"  fullscreen_opaque="1"  NeverTransfer="1"/>
+	<scene sceneID="SMICredits" assetname="SMICredits.gfx" scenetype="SMICredits" priority="199" fullscreen_opaque="1"  NeverTransfer="1"/>
+
+	<scene sceneID="SMIPlayerProfile" assetname="SMIPlayerProfile.gfx" scenetype="SMIPlayerProfile" priority="100" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMIOnlineLeaderboard" assetname="SMILeaderboards.gfx" scenetype="SMIOnlineLeaderboard" priority="100" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMIInGameManual" assetname="SMIManual.gfx" scenetype="SMIInGameManual" priority="100" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMIDatabase" assetname="SMIManual.gfx" scenetype="SMIDatabase" priority="100"  fullscreen_opaque="1"  NeverTransfer="1"/>
+	<scene sceneID="SMISvMManual" assetname="SMIManual.gfx" scenetype="SMISvMManual" priority="100" fullscreen_opaque="1" NeverTransfer="1"/>
+	<scene sceneID="SMIConceptArt" assetname="SMIManual.gfx" scenetype="SMIConceptArt" priority="100" fullscreen_opaque="1" NeverTransfer="1"/>
+
+	<!-- TEXTSURFACES -->
+	<scene sceneID="PTT_Generic" assetname="PTT_Generic.gfx" scenetype="SceneTextSurface" edgeaa_enabled="1"/>
+
+	<!-- ONE-OFFS & CUSTOM -->
+	<scene sceneID="Interrogation" assetname="HUD_FaceScan_crosshair.gfx" scenetype="HudBinHir" />
+	<scene sceneID="HubScreens" assetname="SMIHUBScreens.gfx" scenetype="SMIHubScreens"/>
+	<scene sceneID="CineScan" assetname="GridScanLoop.gfx" scenetype="Scene" />
+    <scene sceneID="UAV_COOP" assetname="UAV_COOP.gfx" scenetype="Scene" />
+    <scene sceneID="COOP_UAV" assetname="UAV_COOP.gfx" scenetype="Scene" />
+    <scene sceneID="HUD_SE_Binocular" assetname="HUD_SE_Binocular.gfx" scenetype="Scene" />
+    <scene sceneID="HUD_SE_VideoPlayer" assetname="HUD_SE_VideoPlayer.gfx" scenetype="Scene" />
+
+	<!-- SYSTEM -->
+	<scene sceneID="Cover2Cover" assetname="cover2cover.gfx" scenetype="SceneCover2Cover" flashtexture="ingame\3DText\cover2cover_01.swf" />
+	<scene sceneID="GeoInteractive" assetname="SC6GeoInteractive.gfx" scenetype="SceneGeoTip" />
+	<scene sceneID="Loading" assetname="SMISceneLoading.gfx" scenetype="SceneLoading" priority="90" system="1" NeverTransfer="1" edgeaa_enabled="1" fullscreen_opaque="1"/>
+	<scene sceneID="ADVLoading" assetname="ADV_SceneLoading.gfx" scenetype="SceneLoading" priority="90" system="1" NeverTransfer="1" edgeaa_enabled="1" fullscreen_opaque="1"/>
+	<scene sceneID="MessageBox" assetname="SceneMessageBox.gfx" scenetype="SceneMessageBox" priority="10000" allowmultipleinstances="1" system="1" NeverTransfer="1" permanent="true"/>
+	<scene sceneID="DialogSystem" assetname="DialogSystem.gfx" scenetype="SceneDialogSystem"  NeverTransfer="1"/>
+	<scene sceneID="System" assetname="SceneSystem.gfx" scenetype="SceneSystem" permanent="true"/>
+
+	<!-- COOP & MULTIPLAYER -->
+	<scene sceneID="HudMPChatbox" assetname="ADV_ChatLog.gfx" scenetype="HudMPChatbox" priority="4700" />
+	<scene sceneID="HudMPChatbox_MERC" assetname="ADV_ChatLog_MERC.gfx" scenetype="HudMPChatbox" priority="3700" />
+	<scene sceneID="HudMPSpyScreen" assetname="ADV_SpyScreen.gfx" scenetype="HudMPSpyMercScreen" priority="1500" />
+	<scene sceneID="HudMPChatboxInput" assetname="ADV_ChatInput.gfx" scenetype="HudMPChatboxInput" priority="4701" />
+	<scene sceneID="HudMPChatboxInput_MERC" assetname="ADV_ChatInput_MERC.gfx" scenetype="HudMPChatboxInput" priority="3701" />
+	<scene sceneID="HudMPMercScreen" assetname="ADV_MercScreen.gfx" scenetype="HudMPSpyMercScreen" priority="1400" />
+
+	<scene sceneID="HudMPArmorAbilityBar" assetname="ADV_ArmorAbility.gfx" scenetype="HudMPArmorAbilityBar" priority="4600" />
+	<scene sceneID="HudMPArmorAbilityBar_MERC" assetname="ADV_ArmorAbility_MERC.gfx" scenetype="HudMPArmorAbilityBar" priority="3600" />
+	<scene sceneID="HudAdvGadgetsClassic" assetname="ADV_GadgetsClassic.gfx" scenetype="HudAdvGadgetsClassic" splitscreen_h_align="left" priority="4600" />
+	<scene sceneID="HudAdvGadgetsClassic_MERC" assetname="ADV_GadgetsClassic_MERC.gfx" scenetype="HudAdvGadgetsClassic" splitscreen_h_align="left" priority="3600" />
+	<scene sceneID="SceneFollowCam" assetname="SceneFollowCam.gfx" scenetype="SceneFollowCam" priority="3600" />
+
+	<scene sceneID="MPScoreboard" assetname="ADV_Scoreboard.gfx" scenetype="SceneMPScoreboard" priority="200"/>
+	<scene sceneID="MPResults" assetname="ADV_MENU_Results.gfx" scenetype="SceneMPResults" priority="180" edgeaa_enabled="1"/>
+
+	<!-- DEBUG MENUS -->
+	<scene sceneID="CheatMenu" assetname="SC6CheatMenu.gfx" scenetype="SceneCheats" priority="200" fullscreen_opaque="1" />
+	<scene sceneID="Load" assetname="SceneLoad.gfx" scenetype="SceneLoad" priority="85" fullscreen_opaque="1" />
+
+	<!-- MISC & DEPRECATED -->
+	<scene sceneID="MenuControls" assetname="Menu_Controls.gfx" scenetype="MenuControls" priority="81"/>
+	<scene sceneID="MissionObjectives" assetname="SceneMissionObjectives.gfx" scenetype="SceneMissionObjectives" priority="5700"/>
+	<scene sceneID="WaveRecap" assetname="SceneWaveRecap.gfx" scenetype="SceneWaveRecap" />
+	<scene sceneID="WidgetTest" assetname="WidgetTest.gfx" scenetype="SceneWidgetTest" />
+	<scene sceneID="MenuStart" assetname="Menu_Start.gfx" scenetype="SceneStart" priority="40" fullscreen_opaque="1" />
+	<scene sceneID="MenuInvite" assetname="Menu_Invite.gfx" scenetype="SceneInvite" priority="40" fullscreen_opaque="1"/>
+	<scene sceneID="OpSatStats" assetname="OpSatStats.gfx" scenetype="SceneAAR" priority="100" />
+	<scene sceneID="BlurScene" assetname="BlurScene.gfx" scenetype="Scene" />
+	<scene sceneID="SE90Screen" assetname="SE_090_Badat_Delete_Screen.gfx" scenetype="ScenePele" />
+	<scene sceneID="XMLContainer" assetname="SceneXMLContainer.gfx" scenetype="SceneXMLContainer" allowmultipleinstances="1"/>
+
+	<!-- CHARACTERS -->
+	<scene sceneID="SaeedShirt" assetname="Saeed_shirt_D_1024.gfx" scenetype="SceneCharacter" />
+	<scene sceneID="AsifHead" assetname="Asif_head_damage.gfx" scenetype="SceneCharacter" />
+	<scene sceneID="MissionPrep" assetname="MissionPrep.gfx" scenetype="Scene" />
+
+	<!-- FONTS -->
+
+	<!-- ENGLISH -->
+	<font lang="all" fontname="Tango Charlie HUD XBOX Bold" mappedTo="$SC6MainFont" />
+	<font lang="all" fontname="BanqueGothiqueRR MedExtCond" mappedTo="$SC6SMIFont01" />
+	<font lang="all" fontname="Tango Charlie HUD XBOX Bold" mappedTo="$SC6HeaderFont" />
+	<font lang="all" fontname="Tango Charlie HUD XBOX Bold" mappedTo="$SC6FixedFont" />
+	<font lang="all" fontname="BanqueGothiqueRR MedExtCond" mappedTo="$SC6ProjectedFont01"/>
+	<font lang="all" fontname="Tango Charlie HUD XBOX Bold" mappedTo="$SC6HUDFont" />
+	<font lang="all" fontname="BanqueGothiqueRR MedExtCond" mappedTo="$SC6HUDFont02" />
+	<font lang="all" fontname="BanqueGothiqueRR BoldExtCond" mappedTo="$SC6SMIFont02" />
+	<font lang="all" fontname="Tango Charlie HUD XBOX Bold" mappedTo="$SC6FarsiFont" />
+	<font lang="all" fontname="Tango Charlie HUD XBOX Bold" mappedTo="$SC6SMIBody" />
+
+	<!-- CHINESE -->
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6MainFont" />
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6SMIFont01" />
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6HeaderFont" />
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6FixedFont" />
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6ProjectedFont01"/>
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6HUDFont" />
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6HUDFont02" />
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6SMIFont02" />
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6FarsiFont" />
+	<font lang="cht" fontname="DFPHeiMediumB5" mappedTo="$SC6SMIBody" />
+
+	<!-- JAPANESE -->
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6MainFont" />
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6SMIFont01" />
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6HeaderFont" />
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6FixedFont" />
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6ProjectedFont01"/>
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6HUDFont" />
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6HUDFont02" />
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6SMIFont02" />
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6FarsiFont" />
+	<font lang="jpn" fontname="DFHSGothic-W5" mappedTo="$SC6SMIBody" />
+
+	<!-- KOREAN -->
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6MainFont" />
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6SMIFont01" />
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6HeaderFont" />
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6FixedFont" />
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6ProjectedFont01"/>
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6HUDFont" />
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6HUDFont02" />
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6SMIFont02" />
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6FarsiFont" />
+	<font lang="kor" fontname="MDMorrisM_PS3" mappedTo="$SC6SMIBody" />
+
+	<!-- RUSSIAN -->
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6MainFont" />
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6SMIFont01" />
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6HeaderFont" />
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6FixedFont" />
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6ProjectedFont01"/>
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6HUDFont" />
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6HUDFont02" />
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6SMIFont02" />
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6FarsiFont" />
+	<font lang="rus" fontname="Tango Charlie RU" mappedTo="$SC6SMIBody" />
+
+	<!-- POLISH -->
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6MainFont" />
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6SMIFont01" />
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6HeaderFont" />
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6FixedFont" />
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6ProjectedFont01"/>
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6HUDFont" />
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6HUDFont02" />
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6SMIFont02" />
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6FarsiFont" />
+	<font lang="pol" fontname="Tango Charlie RU" mappedTo="$SC6SMIBody" />
+
+	<!-- CZECH -->
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6MainFont" />
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6SMIFont01" />
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6HeaderFont" />
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6FixedFont" />
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6ProjectedFont01"/>
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6HUDFont" />
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6HUDFont02" />
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6SMIFont02" />
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6FarsiFont" />
+	<font lang="cz" fontname="Tango Charlie RU" mappedTo="$SC6SMIBody" />
+
+	<!-- HUNGARIAN -->
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6MainFont" />
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6SMIFont01" />
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6HeaderFont" />
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6FixedFont" />
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6ProjectedFont01"/>
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6HUDFont" />
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6HUDFont02" />
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6SMIFont02" />
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6FarsiFont" />
+	<font lang="hun" fontname="Tango Charlie RU" mappedTo="$SC6SMIBody" />
+
+	<scenesetupconfigurations>
+
+		<map name="Default">
+
+			<configuration name="Adversarial_Merc">
+
+				<sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HUD_LenseFlareStandardDirt_Mercs" pushcondition="PushConditionIsNotPS3" />
+				<sceneid name="HudMPMercScreen" preload="1"/>
+
+				<sceneid name="HudObjectivesADV" preload="1"/>
+				<sceneid name="HudObjectiveProgress" preload="1"/>
+				<sceneid name="HudMPFrontlineProgress" pushcondition="PushConditionScorebarFLD" />
+				<sceneid name="HudMPHealth" preload="1"/>
+				<sceneid name="HudPlayerTags" preload="1"/>
+				<sceneid name="HudTips_ADV" preload="1"/>
+				<sceneid name="HudTutorial" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudReticles"/>
+				<sceneid name="HudMPReticleAddons"/>
+				<sceneid name="HudMPRFDIcons" pushcondition="PushConditionMercVisionModeRFD"/>
+				<sceneid name="HudMPBATSIcons" pushcondition="PushConditionMercVisionModeBats"/>
+				<sceneid name="HudMPBMSRadar" pushcondition="PushConditionMercVisionModeBMSRadar"/>
+        <sceneid name="HudMPMessage"/>
+				<sceneid name="HudMPCam"/>
+				<sceneid name="HUDAdvWeapon_MERC" preload="1"/>
+				<sceneid name="HudAdvGadgets_MERC" preload="1"/>
+				<sceneid name="HudAdvGadgetsClassic_MERC" pushcondition="PushConditionClassicMode"/>
+				<sceneid name="HudMPArmorAbilityBar_MERC" pushcondition="PushConditionNotClassicMode"/>
+				<sceneid name="HudMPChatboxInput_MERC" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPScoreBarTDM_MERC" pushcondition="PushConditionScorebarTDM"/>
+				<sceneid name="HudMPScoreBarSVM_MERC" pushcondition="PushConditionScorebarSVM"/>
+				<sceneid name="HudMPScoreBarFL_MERC" pushcondition="PushConditionScorebarFLD"/>
+				<sceneid name="HudMPScoreBarCTI_MERC" pushcondition="PushConditionScorebarCTI"/>
+				<sceneid name="HudMPDrone" preload="0"/>
+
+			</configuration>
+
+			<configuration name="Adversarial_Spy">
+
+				<sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HUD_LenseFlareStandardDirt_Spys" pushcondition="PushConditionIsNotPS3"  />
+				<sceneid name="HudMPSpyScreen" preload="1"/>
+				<sceneid name="HudObjectivesADV" preload="1"/>
+				<sceneid name="HudObjectiveProgress" preload="1"/>
+				<sceneid name="HudMPFrontlineProgress" pushcondition="PushConditionScorebarFLD"/>
+				<sceneid name="HudMPHealth" preload="1"/>
+				<sceneid name="HudTips_ADV" preload="1"/>
+				<sceneid name="HudTutorial" pushcondition="PushConditionIsPC"/>
+                <sceneid name="HudReticles"/>
+				<sceneid name="HudMPReticleAddons"/>
+				<sceneid name="HUDAdvWeapon" preload="1"/>
+				<sceneid name="HudAdvGadgets" preload="1"/>
+				<sceneid name="HudAdvGadgetsClassic" pushcondition="PushConditionClassicMode"/>
+				<sceneid name="HudMPArmorAbilityBar" pushcondition="PushConditionNotClassicMode"/>
+        <sceneid name="HudMPMessage"/>
+				<sceneid name="HudMPCam"/>
+				<sceneid name="HudMPChatboxInput" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPScoreBarTDM" pushcondition="PushConditionScorebarTDM"/>
+				<sceneid name="HudMPScoreBarSVM" pushcondition="PushConditionScorebarSVM"/>
+				<sceneid name="HudMPScoreBarFL" pushcondition="PushConditionScorebarFLD"/>
+				<sceneid name="HudMPScoreBarCTI" pushcondition="PushConditionScorebarCTI"/>
+        <sceneid name="HudMPRadar" pushcondition="PushConditionNotClassicMode"/>
+
+			</configuration>
+
+			<configuration name="Coop">
+
+				<sceneid name="HudHealthFeedback" preload="1"/>
+				<sceneid name="HUD_LenseFlareDirt" preload="1"/>
+                <sceneid name="HUD_Environment" preload="1"/>
+                <sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudUAV_SS" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudSnakeCam_SS" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudTrirotor_SS" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives"/>
+				<sceneid name="HUDWeapon" preload="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="0"/>
+				<sceneid name="HudDetection" preload="0"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudCoopRevive" preload="0"/>
+				<sceneid name="HudCoopRevive_SS" preload="0"/>
+				<sceneid name="HudTips" preload="1"/>
+				<sceneid name="HudGadgets" preload="1"/>
+				<sceneid name="HudReticles"/>
+				<sceneid name="HudMPChatBox" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPChatboxInput" pushcondition="PushConditionIsPC"/>
+
+			</configuration>
+
+			<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareDirt" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0" />
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<!-- SP Map Specific CFG -->
+		<map name="HUB">
+
+			<configuration name="SP">
+
+				<sceneid name="HUD_LenseFlareDirt_HUB" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment_BLO" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudTips" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_AFB">
+
+			<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_AFB" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_AIR">
+
+				<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_DET" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_BLO">
+
+			<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_BLO" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment_BLO" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_CHE">
+
+			<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_DET">
+
+				<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_DET" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_FUE">
+
+			<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_FUE" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_KOB">
+
+			<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareDirt" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_NOU">
+
+				<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<SceneID name="HUD_LenseFlareWetDirt_S_DET" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_PAL">
+
+			<configuration name="SP">
+
+				<SceneID name="HUD_LenseFlareDirt" preload="1" UnloadInPauseMenu="1"/>
+				<SceneID name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<SceneID name="HudObjectives" preload="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+				<sceneID name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_POW">
+
+			<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_BLO" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0" />
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="S_QOD">
+
+			<configuration name="SP">
+
+				<sceneid name="HudHealthFeedback" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_QOD" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUD_Environment" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudBlood" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives" preload="1"/>
+				<sceneid name="HUDWeapon" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="1"/>
+				<sceneid name="HudDetection" preload="1"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudTips" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudGadgets" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="HudReticles" preload="1" UnloadInPauseMenu="1"/>
+				<sceneid name="MissionObjectives" preload="1"/>
+
+			</configuration>
+
+		</map>
+
+		<!-- COOP Map Specific CFG -->
+		<map name="D_Bratislava">
+
+			<configuration name="Coop">
+
+				<sceneid name="HudHealthFeedback" preload="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt" preload="1"/>
+                <sceneid name="HUD_Environment" preload="1"/>
+                <sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudUAV_SS" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudSnakeCam_SS" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudTrirotor_SS" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives"/>
+				<sceneid name="HUDWeapon" preload="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="0"/>
+				<sceneid name="HudDetection" preload="0"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudCoopRevive" preload="0"/>
+				<sceneid name="HudCoopRevive_SS" preload="0"/>
+				<sceneid name="HudTips" preload="1"/>
+				<sceneid name="HudGadgets" preload="1"/>
+				<sceneid name="HudReticles"/>
+				<sceneid name="HudMPChatBox" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPChatboxInput" pushcondition="PushConditionIsPC"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="D_Amman">
+
+			<configuration name="Coop">
+
+				<sceneid name="HudHealthFeedback" preload="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_BLO" preload="1"/>
+                <sceneid name="HUD_Environment" preload="1"/>
+                <sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudUAV_SS" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudSnakeCam_SS" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudTrirotor_SS" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives"/>
+				<sceneid name="HUDWeapon" preload="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="0"/>
+				<sceneid name="HudDetection" preload="0"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudCoopRevive" preload="0"/>
+				<sceneid name="HudCoopRevive_SS" preload="0"/>
+				<sceneid name="HudTips" preload="1"/>
+				<sceneid name="HudGadgets" preload="1"/>
+				<sceneid name="HudReticles"/>
+				<sceneid name="HudMPChatBox" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPChatboxInput" pushcondition="PushConditionIsPC"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="D_Kigali">
+
+			<configuration name="Coop">
+
+				<sceneid name="HudHealthFeedback" preload="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_BLO" preload="1"/>
+                <sceneid name="HUD_Environment" preload="1"/>
+                <sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudUAV_SS" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudSnakeCam_SS" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudTrirotor_SS" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives"/>
+				<sceneid name="HUDWeapon" preload="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="0"/>
+				<sceneid name="HudDetection" preload="0"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudCoopRevive" preload="0"/>
+				<sceneid name="HudCoopRevive_SS" preload="0"/>
+				<sceneid name="HudTips" preload="1"/>
+				<sceneid name="HudGadgets" preload="1"/>
+				<sceneid name="HudReticles"/>
+				<sceneid name="HudMPChatBox" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPChatboxInput" pushcondition="PushConditionIsPC"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="D_SeaFort">
+
+			<configuration name="Coop">
+
+				<sceneid name="HudHealthFeedback" preload="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt" preload="1"/>
+                <sceneid name="HUD_Environment" preload="1"/>
+                <sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudUAV_SS" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudSnakeCam_SS" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudTrirotor_SS" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives"/>
+				<sceneid name="HUDWeapon" preload="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="0"/>
+				<sceneid name="HudDetection" preload="0"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudCoopRevive" preload="0"/>
+				<sceneid name="HudCoopRevive_SS" preload="0"/>
+				<sceneid name="HudTips" preload="1"/>
+				<sceneid name="HudGadgets" preload="1"/>
+				<sceneid name="HudReticles"/>
+				<sceneid name="HudMPChatBox" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPChatboxInput" pushcondition="PushConditionIsPC"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="D_Yacht">
+
+			<configuration name="Coop">
+
+				<sceneid name="HudHealthFeedback" preload="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_BLO" preload="1"/>
+                <sceneid name="HUD_Environment" preload="1"/>
+                <sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudUAV_SS" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudSnakeCam_SS" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudTrirotor_SS" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives"/>
+				<sceneid name="HUDWeapon" preload="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="0"/>
+				<sceneid name="HudDetection" preload="0"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudCoopRevive" preload="0"/>
+				<sceneid name="HudCoopRevive_SS" preload="0"/>
+				<sceneid name="HudTips" preload="1"/>
+				<sceneid name="HudGadgets" preload="1"/>
+				<sceneid name="HudReticles"/>
+				<sceneid name="HudMPChatBox" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPChatboxInput" pushcondition="PushConditionIsPC"/>
+
+			</configuration>
+
+		</map>
+
+		<map name="D_FishMarket">
+
+			<configuration name="Coop">
+
+				<sceneid name="HudHealthFeedback" preload="1"/>
+				<sceneid name="HUD_LenseFlareWetDirt_S_BLO" preload="1"/>
+                <sceneid name="HUD_Environment" preload="1"/>
+                <sceneid name="HudBlood" preload="1"/>
+				<sceneid name="HudUAV" preload="0"/>
+				<sceneid name="HudUAV_SS" preload="0"/>
+				<sceneid name="HudSnakeCam" preload="0"/>
+				<sceneid name="HudSnakeCam_SS" preload="0"/>
+				<sceneid name="HudTrirotor" preload="0"/>
+				<sceneid name="HudTrirotor_SS" preload="0"/>
+				<sceneid name="HudSelectionWheel" preload="0"/>
+				<sceneid name="HudTutorial" preload="1"/>
+				<sceneid name="HudObjectives"/>
+				<sceneid name="HUDWeapon" preload="1"/>
+				<sceneid name="HUDMarkAndExecute" preload="0"/>
+				<sceneid name="HudDetection" preload="0"/>
+				<sceneid name="HudRadar" preload="0" pushcondition="PushConditionHudRadar"/>
+				<sceneid name="HudCoopRevive" preload="0"/>
+				<sceneid name="HudCoopRevive_SS" preload="0"/>
+				<sceneid name="HudTips" preload="1"/>
+				<sceneid name="HudGadgets" preload="1"/>
+				<sceneid name="HudReticles"/>
+				<sceneid name="HudMPChatBox" pushcondition="PushConditionIsPC"/>
+				<sceneid name="HudMPChatboxInput" pushcondition="PushConditionIsPC"/>
+
+			</configuration>
+
+		</map>
+
+	</scenesetupconfigurations>
+
+</root>

@@ -1,0 +1,910 @@
+<root>
+
+    <!-- For each Hud mode you can specify a list of VISIBLE Hud scenes; Hud Scenes that are NOT specified in the Hud mode will be HIDDEN -->
+
+    <HudMode name="eHUDMode_AimDownSights">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPSpyScreen"/>
+        <SceneID name="HudAdvGadgets"/>
+        <SceneID name="HudAdvGadgets_MERC"/>
+        <SceneID name="HudAdvWeapon"/>
+        <SceneID name="HudAdvWeapon_MERC"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudGadgets"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPArmorAbilityBar"/>
+        <SceneID name="HudMPArmorAbilityBar_MERC"/>
+        <SceneID name="HudAdvGadgetsClassic"/>
+        <SceneID name="HudAdvGadgetsClassic_MERC"/>
+        <SceneID name="HudMPBATSIcons"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPPlayerNames"/>
+        <SceneID name="HudMPRFDIcons"/>
+        <SceneID name="HudMPScoreBarESP"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL_MERC"/>
+        <SceneID name="HudMPScoreBarSVM_MERC"/>
+        <SceneID name="HudMPScoreBarTDM_MERC"/>
+        <SceneID name="HudMPScoreBarCTI_MERC"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudRadar"/>
+        <SceneID name="HudMPRadar"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+        <SceneID name="HudMPMessage"/>
+    </HudMode>
+
+    <HudMode name="eHudMode_AmericanPower">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_BATSVisionMode">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudMPSpyScreen"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudAdvGadgets"/>
+        <SceneID name="HudAdvGadgets_MERC"/>
+        <SceneID name="HudAdvWeapon"/>
+        <SceneID name="HudAdvWeapon_MERC"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudGadgets"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPArmorAbilityBar"/>
+        <SceneID name="HudMPArmorAbilityBar_MERC"/>
+        <SceneID name="HudAdvGadgetsClassic"/>
+        <SceneID name="HudAdvGadgetsClassic_MERC"/>
+        <SceneID name="HudMPBATSIcons"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPPlayerNames"/>
+        <SceneID name="HudPlayerTags"/>
+        <SceneID name="HudMPRFDIcons"/>
+        <SceneID name="HudMPScoreBarESP"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL_MERC"/>
+        <SceneID name="HudMPScoreBarSVM_MERC"/>
+        <SceneID name="HudMPScoreBarTDM_MERC"/>
+        <SceneID name="HudMPScoreBarCTI_MERC"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+        <SceneID name="HudMPMessage"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_BMSVisionMode">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudMPSpyScreen"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudAdvGadgets"/>
+        <SceneID name="HudAdvGadgets_MERC"/>
+        <SceneID name="HudAdvWeapon"/>
+        <SceneID name="HudAdvWeapon_MERC"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudGadgets"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPArmorAbilityBar"/>
+        <SceneID name="HudMPArmorAbilityBar_MERC"/>
+        <SceneID name="HudAdvGadgetsClassic"/>
+        <SceneID name="HudAdvGadgetsClassic_MERC"/>
+        <SceneID name="HudMPBATSIcons"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPPlayerNames"/>
+        <SceneID name="HudPlayerTags"/>
+        <SceneID name="HudMPRFDIcons"/>
+        <SceneID name="HudMPScoreBarESP"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL_MERC"/>
+        <SceneID name="HudMPScoreBarSVM_MERC"/>
+        <SceneID name="HudMPScoreBarTDM_MERC"/>
+        <SceneID name="HudMPScoreBarCTI_MERC"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+        <SceneID name="HudMPMessage"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Cinematic">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Cinematic_MarkAndExecute">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Disabled">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudMPMessage"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Distorted">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudMPSpyScreen"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPPlayerNames"/>
+        <SceneID name="HudPlayerTags"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudRadar"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudMPMessage"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Executing">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Poisoned">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudWeapon"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_NarrativeWalk">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudCoopRevive"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Hidden">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_KillCam">
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPKillCam"/>
+        <SceneID name="HudMPKillCamCut"/>
+        <SceneID name="HudMPPlayerNames"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Lobby">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPBATSIcons"/>
+        <SceneID name="HudMPRFDIcons"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL_MERC"/>
+        <SceneID name="HudMPScoreBarSVM_MERC"/>
+        <SceneID name="HudMPScoreBarTDM_MERC"/>
+        <SceneID name="HudMPScoreBarCTI_MERC"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Marketing">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_MissionFailed">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudObjectives"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_PostKillCam">
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPHealth"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_PreKillCam">
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPKillCamCut"/>
+        <SceneID name="HudMPMessage"/>
+    </HudMode>
+
+    <HudMode name="eHudMode_Prologue">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Results">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_EndRound">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_EndRound_Dead">
+      <SceneID name="HudEnvironmentAlias"/>
+      <SceneID name="HudLenseDirtAlias"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Dead_PreEndRound">
+      <SceneID name="HudEnvironmentAlias"/>
+      <SceneID name="HudLenseDirtAlias"/>
+    </HudMode>
+
+    <HudMode name="eHudMode_RFDVisionMode">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudMPSpyScreen"/>
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudAdvGadgets"/>
+        <SceneID name="HudAdvGadgets_MERC"/>
+        <SceneID name="HudAdvWeapon"/>
+        <SceneID name="HudAdvWeapon_MERC"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudGadgets"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPArmorAbilityBar"/>
+        <SceneID name="HudMPArmorAbilityBar_MERC"/>
+        <SceneID name="HudAdvGadgetsClassic"/>
+        <SceneID name="HudAdvGadgetsClassic_MERC"/>
+        <SceneID name="HudMPBATSIcons"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPPlayerNames"/>
+        <SceneID name="HudPlayerTags"/>
+        <SceneID name="HudMPRFDIcons"/>
+        <SceneID name="HudMPScoreBarESP"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL_MERC"/>
+        <SceneID name="HudMPScoreBarSVM_MERC"/>
+        <SceneID name="HudMPScoreBarTDM_MERC"/>
+        <SceneID name="HudMPScoreBarCTI_MERC"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Scoreboard">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Scoreboard_Drone">
+      <SceneID name="HudMPDrone" PushIfNotInStack="1"/>
+      <SceneID name="HudLenseDirtAlias"/>
+      <SceneID name="HudEnvironmentAlias"/>
+      <SceneID name="HudMPActionReward"/>
+      <SceneID name="HudMPHealth" />
+      <SceneID name="HudMPChatBox"/>
+      <SceneID name="HudMPChatBox_MERC"/>
+      <SceneID name="HudMPChatboxInput"/>
+      <SceneID name="HudMPChatboxInput_MERC"/>
+    </HudMode>
+  
+    <HudMode name="eHUDMode_Scoreboard_StickyCam">
+      <SceneID name="HudMPSpyScreen"/>
+      <SceneID name="HudLenseDirtAlias"/>
+      <SceneID name="HudMPChatBox"/>
+      <SceneID name="HudMPChatBox_MERC"/>
+      <SceneID name="HudMPChatboxInput"/>
+      <SceneID name="HudMPChatboxInput_MERC"/>
+      <SceneID name="HudEnvironmentAlias"/>
+      <SceneID name="HudMPHealth"/>
+      <SceneID name="HudMPCam"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Paused">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudSnakeCam" />
+        <SceneID name="HudSnakeCam_SS" />
+        <SceneID name="HudTrirotor"/>
+        <SceneID name="HudTrirotor_SS"/>
+        <SceneID name="HudUAV"/>
+        <SceneID name="HudUAV_SS"/>
+    </HudMode>
+
+    <HudMode name="eHuDMode_SelectionWheel">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudSelectionWheel" PushIfNotInStack="1" />
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHudMode_SnakeCamera">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudMPArmorAbilityBar"/>
+        <SceneID name="HudMPArmorAbilityBar_MERC"/>
+        <SceneID name="HudAdvGadgetsClassic"/>
+        <SceneID name="HudAdvGadgetsClassic_MERC"/>
+        <SceneID name="HudMPBATSIcons"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudMPRFDIcons"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL_MERC"/>
+        <SceneID name="HudMPScoreBarSVM_MERC"/>
+        <SceneID name="HudMPScoreBarTDM_MERC"/>
+        <SceneID name="HudMPScoreBarCTI_MERC"/>
+        <SceneID name="HudSnakeCam" PushIfNotInStack="1" />
+        <SceneID name="HudSnakeCam_SS" PushIfNotInStack="1" />
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Sniper">
+        <SceneID name="HudReticlesRemote"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Standard">
+        <SceneID name="HudMPMercScreen"/>
+        <SceneID name="HudMPSpyScreen"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudAdvGadgets"/>
+        <SceneID name="HudAdvGadgets_MERC"/>
+        <SceneID name="HudAdvWeapon"/>
+        <SceneID name="HudAdvWeapon_MERC"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudMPMessage"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudGadgets"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPArmorAbilityBar"/>
+        <SceneID name="HudMPArmorAbilityBar_MERC"/>
+        <SceneID name="HudAdvGadgetsClassic"/>
+        <SceneID name="HudAdvGadgetsClassic_MERC"/>
+        <SceneID name="HudMPBATSIcons"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPPlayerNames"/>
+        <SceneID name="HudPlayerTags"/>
+        <SceneID name="HudMPRFDIcons"/>
+        <SceneID name="HudMPScoreBarESP"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL_MERC"/>
+        <SceneID name="HudMPScoreBarSVM_MERC"/>
+        <SceneID name="HudMPScoreBarTDM_MERC"/>
+        <SceneID name="HudMPScoreBarCTI_MERC"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudRadar"/>
+        <SceneID name="HudMPRadar"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHudMode_StickyCam">
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudSnakeCam" PushIfNotInStack="1" />
+        <SceneID name="HudSnakeCam_SS" PushIfNotInStack="1" />
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+		<SceneID name="HudObjectives"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_TipsOnly">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPArmorAbilityBar"/>
+        <SceneID name="HudMPArmorAbilityBar_MERC"/>
+        <SceneID name="HudAdvGadgetsClassic"/>
+        <SceneID name="HudAdvGadgetsClassic_MERC"/>
+        <SceneID name="HudMPBATSIcons"/>
+        <SceneID name="HudMPBMSRadar"/>
+        <SceneID name="HudMPRFDIcons"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL_MERC"/>
+        <SceneID name="HudMPScoreBarSVM_MERC"/>
+        <SceneID name="HudMPScoreBarTDM_MERC"/>
+        <SceneID name="HudMPScoreBarCTI_MERC"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_UAV">
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudUAV" PushIfNotInStack="1" />
+        <SceneID name="HudUAV_SS" PushIfNotInStack="1" />
+    </HudMode>
+
+    <HudMode name="eHUDMode_AimDownSightsScope">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+		<SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Trirotor">
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudRadar"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTrirotor" PushIfNotInStack="1" />
+        <SceneID name="HudTrirotor_SS" PushIfNotInStack="1" />
+        <SceneID name="HudWeapon"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_ADVDrone">
+        <SceneID name="HudMPDrone" PushIfNotInStack="1"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPPlayerNames"/>
+        <SceneID name="HudPlayerTags"/>
+        <SceneID name="HudMPScoreBarESP"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudMPMessage"/>
+        <SceneID name="HudMPReticleAddons"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_ADVDroneDisabled">
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudMPHealth"/>
+        <SceneID name="HudMPPlayerNames"/>
+        <SceneID name="HudPlayerTags"/>
+        <SceneID name="HudMPScoreBarESP"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudMPScoreBarFL"/>
+        <SceneID name="HudMPScoreBarSVM"/>
+        <SceneID name="HudMPScoreBarTDM"/>
+        <SceneID name="HudMPScoreBarCTI"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudMPMessage"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_ADVStickyCam">
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMPActionReward"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudMPFrontlineProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudObjectivesADV"/>
+        <SceneID name="HudTips_ADV"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudMPCam"/>
+        <SceneID name="HudMPMessage"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_FP_Freedom_Briggs">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudGadgets"/>
+        <SceneID name="HudWeapon"/>
+        <SceneID name="HudReticles"/>
+		<SceneID name="HudRadar"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Interrogation">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Coop_Gate_Instigator">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HUDMarkAndExecute"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudRadar"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudMPReticleAddons"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Coop_Gate_Transition">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudBlood"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Coop_Hostage">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HUDMarkAndExecute"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Coop_Dying">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HUDMarkAndExecute"/>
+		<SceneID name="HudObjectives"/>
+    </HudMode>
+
+    <HudMode name="eHudMode_ThermalVisionMode">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudMPChatBox"/>
+        <SceneID name="HudMPChatBox_MERC"/>
+        <SceneID name="HudMPChatboxInput"/>
+        <SceneID name="HudMPChatboxInput_MERC"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HUDMarkAndExecute"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_Coop_DownShooting">
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudCoopRevive"/>
+        <SceneID name="HudCoopRevive_SS"/>
+        <SceneID name="HUDMarkAndExecute"/>
+        <SceneID name="HudReticles"/>
+		<SceneID name="HudObjectives"/>
+    </HudMode>
+
+	<HudMode name="eHUDMode_CoopFinale">
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudPlayerTags"/>
+        <SceneID name="HudObjectiveProgress"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudRadar"/>
+        <SceneID name="HudMPRadar"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_AFB">
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudGadgets"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_BLO">
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_CHE">
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudRadar"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_DET">
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+        <SceneID name="HudWeapon"/>
+    </HudMode>
+
+    <HudMode name="eHUDMode_PAL">
+        <SceneID name="HudBlood"/>
+        <SceneID name="HudHealthFeedback"/>
+        <SceneID name="HudDetection"/>
+        <SceneID name="HudObjectives"/>
+        <SceneID name="HudEnvironmentAlias"/>
+        <SceneID name="HudLenseDirtAlias"/>
+        <SceneID name="HudMarkAndExecute"/>
+        <SceneID name="HudReticles"/>
+        <SceneID name="HudWeapon"/>
+        <SceneID name="HudTips"/>
+        <SceneID name="HudTutorial"/>
+    </HudMode>
+</root>

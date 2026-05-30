@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root cmdline="-x -sd -i DDS -rescale hi -qp -d5">
+	<swf filename="HUD_Blood.swf" cmdline="-x -sd -i DDS -rescale hi -qp -d5 -pack" />
+	<swf filename="HUD_Detection.swf" cmdline="-x -sd -i DDS -rescale hi -qp -d5 -pack" />
+	<swf filename="HUD_Radar.swf" cmdline="-x -sd -i DDS -rescale hi -qp -d5 -pack" />
+</root>
