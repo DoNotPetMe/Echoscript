@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_T_UnlockFirstDoor" leveluid="2" streamedRandomID="1136646976">
+  <Task name="Unlock" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:00000c91" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000c92" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

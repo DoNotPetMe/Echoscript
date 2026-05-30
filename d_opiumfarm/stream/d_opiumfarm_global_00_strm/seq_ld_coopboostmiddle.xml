@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_CoopBoostMiddle" leveluid="1" streamedRandomID="1136646976">
+  <Task name="Initial Checking" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+</Sequence>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_MasterSequencer" startup="1" leveluid="3" streamedRandomID="1136646976">
+  <Task name="Master Sequence" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_AIState" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_AIInCombat_StealthBroken" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::Sequences::LD_VO_FourthEchelon_BB2Start" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::Sequences::LD_VO_FourthEchelon_SO_Laptop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::Sequences::LD_VO_FourthEchelon_LevelComplete" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="Repository::Sequences::LD_BoneLighting" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="Repository::Sequences::LD_Patrol_Randomizer" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="Repository::Sequences::LD_Tutorial_Mines" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="Repository::Sequences::LD_TransitionDoorUnlock" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_11" entity="Repository::Sequences::LD_BreakablePropsManager" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_14" entity="Repository::Sequences::LD_BB2_Moths" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_15" entity="Repository::Sequences::SEQ_Headlight" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_16" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnterBB" entityStripped="1" bv_a="1065353216" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_17" entity="Repository::Sequences::LD_BB2_ExplorationBonus" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::Sequences::LD_Tutorial_HeavyAI" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_18" entity="Repository::List_TransitionDoors" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_19" entity="Repository::Sequences::LD_CoopBoost" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

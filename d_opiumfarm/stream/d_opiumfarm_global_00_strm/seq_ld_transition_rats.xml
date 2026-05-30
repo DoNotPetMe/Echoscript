@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Transition_Rats" leveluid="2" streamedRandomID="1136646976">
+  <Task name="Dice_Rat = 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Dice_Rat = 1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Spawn Rat Part1 01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d12" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="3.698667">
+          <CommandInstance name="PlaySound" duration="2.698667" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Hunter_OpiumFarm_3D_Rat_Squeak" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rat Part1_01 Spawning"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="Spawn Rat Part1 01" data="UID:00000d13" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Dice_Rat = 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Dice_Rat = 2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Spawn Rat Part3 01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d1b" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rat Part3_01Spawning"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="NewTask_8" true="Spawn Rat Part3 01" data="UID:00000d1c" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Initial" true="NewTask_3" sequence="LD_Transition_Rats"/>
+  <Task name="Spawn Rat Part1 02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d14" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="3.698667">
+          <CommandInstance name="PlaySound" duration="2.698667" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Hunter_OpiumFarm_3D_Rat_Squeak" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rat Part01_02 Spawning"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Spawn Rat Part1 03">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d16" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rat  Part1_03 Spawning"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_2" start="NewTask_5" true="Spawn Rat Part1 02" data="UID:00000d15" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_3" start="NewTask_6" true="Spawn Rat Part1 03" data="UID:00000d17" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Spawn Rat Part2 01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d1a" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000d18" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rat Part2 Spawning"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_4" start="NewTask_4" true="Spawn Rat Part2 01" data="UID:00000d19" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Spawn Rat Part4 01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d1d" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="3.698667">
+          <CommandInstance name="PlaySound" duration="2.698667" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Hunter_OpiumFarm_3D_Rat_Squeak" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rat Part4_01 Spawning"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_5" start="NewTask_7" true="Spawn Rat Part4 01" data="UID:00000d1e" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Spawn Rat Part1 04">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d1f" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="3.698667">
+          <CommandInstance name="PlaySound" duration="2.698667" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Hunter_OpiumFarm_3D_Rat_Squeak" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_1" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rat  Part1_04 Spawning"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_5">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_6">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="Dice_Rat = 1" true="NewTask" sequence="LD_Transition_Rats"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Dice_Rat = 1" true="NewTask_5" sequence="LD_Transition_Rats"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Dice_Rat = 1" true="NewTask_6" sequence="LD_Transition_Rats"/>
+  <Task name="NewTask_7">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_6" start="Dice_Rat = 2" true="NewTask_7" sequence="LD_Transition_Rats"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="Dice_Rat = 2" true="NewTask_8" sequence="LD_Transition_Rats"/>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_6" start="NewTask_9" true="Spawn Rat Part1 04" data="UID:00000d20" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_9" start="Dice_Rat = 1" true="NewTask_4" sequence="LD_Transition_Rats"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="Dice_Rat = 2" true="NewTask_4" sequence="LD_Transition_Rats"/>
+  <DependencyComplete name="NewDependencyComplete_11" start="Dice_Rat = 1" true="NewTask_9" sequence="LD_Transition_Rats"/>
+  <DependencyComplete name="NewDependencyComplete_12" start="Dice_Rat = 2" true="NewTask_9" sequence="LD_Transition_Rats"/>
+  <DependencyComplete name="NewDependencyComplete_13" start="NewTask_3" true="Dice_Rat = 2" sequence="LD_Transition_Rats"/>
+  <DependencyComplete name="NewDependencyComplete_14" start="NewTask_3" true="Dice_Rat = 1" sequence="LD_Transition_Rats"/>
+</Sequence>

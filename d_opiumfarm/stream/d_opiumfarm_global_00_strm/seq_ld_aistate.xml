@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_AIState" leveluid="3" streamedRandomID="1136646976">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Boolean">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::AI_InCombat" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="Boolean" data="Repository::List_InitialAI" TypeDeleted="List">
+    <ExternalEventInstance name="NPC_IN_COMBAT" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

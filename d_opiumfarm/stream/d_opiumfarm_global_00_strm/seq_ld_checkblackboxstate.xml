@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_CheckBlackboxState" leveluid="1" streamedRandomID="1136646976">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Blackbox_ID" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignNumber" entityStripped="1">
+            <ParameterInstance name="Right">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequenceByName" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="SequenceName">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LD_T_UnlockFirstDoor"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="NewTask_0" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="HUNTER_BLACKBOX_COMPLETED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="BlackBoxID" data="Repository::Blackbox_ID"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

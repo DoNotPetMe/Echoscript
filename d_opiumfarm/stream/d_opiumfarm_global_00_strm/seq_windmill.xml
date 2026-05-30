@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="WindMill" leveluid="2" streamedRandomID="1136646976">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+</Sequence>

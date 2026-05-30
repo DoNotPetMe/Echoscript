@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="VO_Transition" leveluid="1" streamedRandomID="1136646976">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="NewTask_0" data="UID:000004ac" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="S_Anna 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="S_Sam 1" end="1.682979">
+          <CommandInstance name="SetDialog" duration="1.682979" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111409" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="C_Anna 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.046291">
+          <CommandInstance name="SetDialog" duration="2.046291" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111418" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="S_Anna 1" false="C_Anna 1">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <Task name="S_Sam 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.626417">
+          <CommandInstance name="SetDialog" duration="2.626417" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111410" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="S_Anna 1" true="S_Sam 1" sequence="VO_Transition"/>
+  <Task name="C_Sam 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.733604">
+          <CommandInstance name="SetDialog" duration="2.733604" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111419" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="C_Anna 1" true="C_Sam 1" sequence="VO_Transition"/>
+  <Task name="S_Anna 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.572813">
+          <CommandInstance name="SetDialog" duration="2.572813" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111411" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="S_Sam 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.599083">
+          <CommandInstance name="SetDialog" duration="1.599083" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111412" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="S_Anna 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="6.041937">
+          <CommandInstance name="SetDialog" duration="6.041937" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111413" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="S_Sam 1" true="S_Anna 2" sequence="VO_Transition"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="S_Anna 2" true="S_Sam 2" sequence="VO_Transition"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="S_Sam 2" true="S_Anna 3" sequence="VO_Transition"/>
+  <Task name="S_Sam 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.605042">
+          <CommandInstance name="SetDialog" duration="1.605042" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111414" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="S_Anna 3" true="S_Sam 3" sequence="VO_Transition"/>
+  <Task name="S_Anna 4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.110729">
+          <CommandInstance name="SetDialog" duration="1.110729" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111415" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="S_Sam 3" true="S_Anna 4" sequence="VO_Transition"/>
+  <Task name="S_Sam 4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.345958">
+          <CommandInstance name="SetDialog" duration="1.345958" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111416" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_6" start="S_Anna 4" true="S_Sam 4" sequence="VO_Transition"/>
+  <Task name="S_Anna 5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.284500">
+          <CommandInstance name="SetDialog" duration="3.284500" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41923::111417" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="S_Sam 4" true="S_Anna 5" sequence="VO_Transition"/>
+  <Task name="C_Anna 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.590688">
+          <CommandInstance name="SetDialog" duration="2.590688" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111420" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="C_Sam 1" true="C_Anna 2" sequence="VO_Transition"/>
+  <Task name="C_Briggs 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.427833">
+          <CommandInstance name="SetDialog" duration="1.427833" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111421" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_9" start="C_Anna 2" true="C_Briggs 1" sequence="VO_Transition"/>
+  <Task name="C_Anna 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="5.762042">
+          <CommandInstance name="SetDialog" duration="5.762042" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111422" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_10" start="C_Briggs 1" true="C_Anna 3" sequence="VO_Transition"/>
+  <Task name="C_Sam 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.057125">
+          <CommandInstance name="SetDialog" duration="1.057125" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111423" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_11" start="C_Anna 3" true="C_Sam 2" sequence="VO_Transition"/>
+  <Task name="C_Anna 4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.423938">
+          <CommandInstance name="SetDialog" duration="2.423938" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111424" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_12" start="C_Sam 2" true="C_Anna 4" sequence="VO_Transition"/>
+  <Task name="C_Briggs 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.821812">
+          <CommandInstance name="SetDialog" duration="2.821812" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111425" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_13" start="C_Anna 4" true="C_Briggs 2" sequence="VO_Transition"/>
+  <Task name="C_Anna 5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.233875">
+          <CommandInstance name="SetDialog" duration="3.233875" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0400_COM::41924::111426" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_14" start="C_Briggs 2" true="C_Anna 5" sequence="VO_Transition"/>
+</Sequence>
