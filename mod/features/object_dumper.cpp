@@ -70,6 +70,8 @@ static uintptr_t g_registryHead = 0;
 static uintptr_t g_gobjectsPtr  = 0;
 // Resolved UE3 GNames TArray address, or 0.
 static uintptr_t g_gnamesPtr    = 0;
+// Diagnostic: how many TArray candidates passed the {data/count/max} shape check.
+static int g_diagCandidates = 0;
 
 uintptr_t GNamesPtr()   { return g_gnamesPtr; }
 uintptr_t GObjectsPtr() { return g_gobjectsPtr; }
@@ -231,9 +233,12 @@ static bool LooksLikeReadablePtr(uintptr_t p) {
     return Memory::SafeRead(p, probe);
 }
 
-// Scan writable data sections for a TArray<T*> { Data, Count, Max } that
-// satisfies `validate(Data, Count)`. Returns the TArray address or 0.
-static uintptr_t FindTArray(bool (*validate)(uintptr_t data, int count)) {
+// Scan PE sections for a TArray<T*> { Data, Count, Max } that satisfies
+// `validate(Data, Count)`. Returns the TArray address or 0.
+// requireWrite=true  → only writable sections (.data, .bss) — first pass
+// requireWrite=false → all readable sections including .rdata — second pass fallback
+static uintptr_t FindTArray(bool (*validate)(uintptr_t data, int count),
+                             bool requireWrite = true) {
     HMODULE mod = GetModuleHandleW(nullptr);
     if (!mod) return 0;
     const auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(mod);
@@ -243,7 +248,7 @@ static uintptr_t FindTArray(bool (*validate)(uintptr_t data, int count)) {
 
     for (WORD i = 0; i < nt->FileHeader.NumberOfSections; ++i, ++sec) {
         if (!(sec->Characteristics & IMAGE_SCN_MEM_READ)) continue;
-        if (!(sec->Characteristics & IMAGE_SCN_MEM_WRITE)) continue;  // globals live in .data
+        if (requireWrite && !(sec->Characteristics & IMAGE_SCN_MEM_WRITE)) continue;
         uintptr_t start = reinterpret_cast<uintptr_t>(mod) + sec->VirtualAddress;
         size_t    size  = sec->Misc.VirtualSize;
 
@@ -265,11 +270,35 @@ static bool ValidateGNames(uintptr_t arr, int count) {
     if (!Memory::SafeRead(arr, data)) return false;
     uintptr_t entry0 = 0;
     if (!Memory::SafeRead(data, entry0) || !LooksLikeReadablePtr(entry0)) return false;
-    // Try a few plausible inline-string offsets; lock in the one that yields "None".
-    static const size_t kCandidates[] = { 0x10, 0x0C, 0x08, 0x14, 0x18 };
+
+    ++g_diagCandidates;
+
+    // Comprehensive list of plausible FNameEntry inline-string offsets for 32-bit UE3.
+    // Standard UDK layout: {int Index; FNameEntry* HashNext; char Name[]} → 0x08.
+    // Some builds add padding or extra fields → try 0x04..0x28.
+    static const size_t kCandidates[] = {
+        0x00, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0E, 0x10, 0x12, 0x14, 0x16, 0x18, 0x1C, 0x20, 0x28
+    };
+
+    // For first few shape-valid candidates, log the raw bytes so we can read the offset
+    // from the log even if none of our guesses match yet.
+    if (g_diagCandidates <= 8) {
+        char byteStr[96] = {};
+        int n = 0;
+        for (int bi = 0; bi < 24 && n + 4 < (int)sizeof(byteStr); ++bi) {
+            uint8_t b = 0;
+            Memory::SafeRead(entry0 + bi, b);
+            n += snprintf(byteStr + n, sizeof(byteStr) - n, "%02X ", b);
+        }
+        Logger::Info("ObjectDumper: GNamesCand#%d 0x%08X cnt=%d e0=0x%08X bytes=[%s]",
+                     g_diagCandidates, static_cast<unsigned>(arr), count,
+                     static_cast<unsigned>(entry0), byteStr);
+    }
+
     for (size_t fo : kCandidates) {
         std::string s;
-        if (ReadAnsiAt(entry0 + fo, s) && s == "None") {
+        // Accept both "None" (standard) and "none" (some builds lowercase it).
+        if (ReadAnsiAt(entry0 + fo, s, 32) && (s == "None" || s == "none")) {
             g_config.layout.fname_str_off = fo;
             (void)count;
             return true;
@@ -283,9 +312,23 @@ bool AutoFindGlobals() {
     g_gobjectsPtr = 0;
 
     // ---- GNames ----
-    uintptr_t gnames = FindTArray(&ValidateGNames);
+    // Pass 1: writable sections only (normal globals live in .data / .bss).
+    g_diagCandidates = 0;
+    uintptr_t gnames = FindTArray(&ValidateGNames, /*requireWrite=*/true);
     if (!gnames) {
-        Logger::Warn("ObjectDumper: GNames not auto-found (no TArray with GNames[0]=='None').");
+        Logger::Info("ObjectDumper: GNames not in writable sections "
+                     "(%d shape-ok candidates). Retrying all readable sections.",
+                     g_diagCandidates);
+        // Pass 2: also search read-only sections — handles unusual section flags.
+        g_diagCandidates = 0;
+        gnames = FindTArray(&ValidateGNames, /*requireWrite=*/false);
+    }
+    if (!gnames) {
+        Logger::Warn("ObjectDumper: GNames not auto-found "
+                     "(%d total shape-ok candidates across all sections). "
+                     "Check the diagnostic log lines (GNamesCand#N) for the "
+                     "actual byte layout and report the offset of 'None'.",
+                     g_diagCandidates);
         return false;
     }
     g_gnamesPtr = gnames;
