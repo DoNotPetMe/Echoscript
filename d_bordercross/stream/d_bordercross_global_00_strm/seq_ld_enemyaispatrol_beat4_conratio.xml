@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_EnemyAIsPatrol_Beat4_ConRatio" leveluid="1" streamedRandomID="2038094029">
+  <Task name="Beat2ConversationRatioInitialization">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B4S1_P1_RegularSettingInitialization">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:000001a1" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001e7" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="StartSequence_Beat4All_PickPoint">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_EnemyAIsPatrol_B4S1P1_PickPoint" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 3"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 4"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 5"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 6"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_7">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 7"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_8">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 8"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_9">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 9"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_10">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 10"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_11">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 11"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_12">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 12"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_13">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 13"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_14">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 14"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_15">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 15"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_16">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 16"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_17">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 17"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_18">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 18"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_19">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 19"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_ConRatioCalc_20">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 Conversation Ratio = 20"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="LevelStartCheckPointCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="ScreenLog_CheckPoint_-1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Checkpoint = -1, Beat4 regular setting starting"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_CheckPoint_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Checkpoint = 0, Beat4 random setting picking"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B4S1_P1_RegularSettingInitialization_S">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000001a1" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001e7" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="EnableNPCs_Beat4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000001a1" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="EnableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Beat2ConversationRatioInitialization" true="NewTask_0" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="ScreenLog_ConRatioCalc_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_0" true="ScreenLog_ConRatioCalc_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_0" true="ScreenLog_ConRatioCalc_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_2" start="NewTask_0" true="ScreenLog_ConRatioCalc_4">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_3" start="NewTask_0" true="ScreenLog_ConRatioCalc_5">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_4" start="NewTask_0" true="ScreenLog_ConRatioCalc_6">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="6.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_5" start="NewTask_0" true="ScreenLog_ConRatioCalc_7">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="7.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_6" start="NewTask_0" true="ScreenLog_ConRatioCalc_8">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="8.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_7" start="NewTask_0" true="ScreenLog_ConRatioCalc_9">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_8" start="NewTask_0" true="ScreenLog_ConRatioCalc_10">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_5" start="ScreenLog_ConRatioCalc_1" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="ScreenLog_ConRatioCalc_2" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_15" start="StartSequence_Beat4All_PickPoint" true="Wait" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_16" start="ScreenLog_ConRatioCalc_3" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_17" start="ScreenLog_ConRatioCalc_4" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="ScreenLog_ConRatioCalc_5" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyCommand name="NewDependencyCommand_9" start="NewTask_0" true="ScreenLog_ConRatioCalc_11">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="11.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_10" start="NewTask_0" true="ScreenLog_ConRatioCalc_12">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="12.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_11" start="NewTask_0" true="ScreenLog_ConRatioCalc_13">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="13.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_12" start="NewTask_0" true="ScreenLog_ConRatioCalc_14">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="14.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_13" start="NewTask_0" true="ScreenLog_ConRatioCalc_15">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="15.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_14" start="NewTask_0" true="ScreenLog_ConRatioCalc_16">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="16.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_15" start="NewTask_0" true="ScreenLog_ConRatioCalc_17">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="17.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_16" start="NewTask_0" true="ScreenLog_ConRatioCalc_18">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="18.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_17" start="NewTask_0" true="ScreenLog_ConRatioCalc_19">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="19.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_18" start="NewTask_0" true="ScreenLog_ConRatioCalc_20">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nConversationRatio" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="20.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_24" start="ScreenLog_ConRatioCalc_11" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_25" start="ScreenLog_ConRatioCalc_12" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_26" start="ScreenLog_ConRatioCalc_13" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_27" start="ScreenLog_ConRatioCalc_14" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_28" start="ScreenLog_ConRatioCalc_15" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_29" start="ScreenLog_ConRatioCalc_16" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_30" start="ScreenLog_ConRatioCalc_17" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_31" start="ScreenLog_ConRatioCalc_18" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_32" start="ScreenLog_ConRatioCalc_19" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_33" start="ScreenLog_ConRatioCalc_20" true="StartSequence_Beat4All_PickPoint" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyCommand name="NewDependencyCommand_19" start="LevelStartCheckPointCheck" true="ScreenLog_CheckPoint_-1" false="ScreenLog_CheckPoint_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_CheckpointID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="-1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_36" start="ScreenLog_CheckPoint_0" true="Beat2ConversationRatioInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_39" start="Wait" true="EnableNPCs_Beat4" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_44" start="ScreenLog_CheckPoint_-1" true="B4S1_P1_RegularSettingInitialization_S" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_46" start="ScreenLog_ConRatioCalc_6" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_47" start="ScreenLog_ConRatioCalc_7" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_48" start="ScreenLog_ConRatioCalc_8" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_49" start="ScreenLog_ConRatioCalc_9" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_50" start="ScreenLog_ConRatioCalc_10" true="B4S1_P1_RegularSettingInitialization" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_51" start="B4S1_P1_RegularSettingInitialization_S" true="Wait" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <DependencyComplete name="NewDependencyComplete_52" start="B4S1_P1_RegularSettingInitialization" true="Wait" sequence="LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+  <VisualComment name="NewVisualComment" x="-1074.647827" y="-399.928101" width="1584.090576" height="341.193359" commentDate="1/23/2013 2:15:12 PM"/>
+  <VisualComment name="NewVisualComment_0" x="-432.346710" y="-24.848858" width="1429.815674" height="1300.609253" commentDate="1/23/2013 2:16:45 PM"/>
+</Sequence>

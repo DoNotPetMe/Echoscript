@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<core version="10">
+  <repository>
+    <List name="Repository" mutable="1" listtype="data">
+      <SequenceList name="Sequences">
+        <file name="seq_LD_SoundTriggerManager"/>
+        <file name="seq_LD_SaveInitCheckpoint"/>
+        <file name="seq_LD_MasterSequence"/>
+        <file name="seq_LD_ObjectiveManager"/>
+        <file name="seq_LD_SecuritySystemManager"/>
+        <file name="seq_LD_ElectricityPower_Beat1"/>
+        <file name="seq_LD_TextSurfaceManager"/>
+        <file name="seq_LD_VoiceOverManager"/>
+        <file name="seq_LD_ElectricityPowerManager"/>
+        <file name="seq_LD_VO_0200_Establish"/>
+        <file name="seq_LD_VO_0300_VistaCallout"/>
+        <file name="seq_LD_VO_0400_ObjCountdown1"/>
+        <file name="seq_LD_VO_0450_Exfil"/>
+        <file name="seq_LD_VO_0500_HVT"/>
+        <file name="seq_LD_VO_0600_Laptop"/>
+        <file name="seq_LD_VO_0700_DeadDrop"/>
+        <file name="seq_LD_VO_0450_Exfil_Coop"/>
+        <file name="seq_LD_VO_0400_ObjCountdown2"/>
+        <file name="seq_LD_VO_0400_ObjCountdown3"/>
+        <file name="seq_LD_SecuritySystem_Beat3_ChiefRoom"/>
+        <file name="seq_LD_TextSurfaceDisplay_Beat1_Intro"/>
+        <file name="seq_LD_TextSurfaceDisplay_Beat1_CoopDoor"/>
+        <file name="seq_LD_TextSurfaceDisplay_Beat2_CoopPath"/>
+        <file name="seq_LD_TextSurfaceDisplay_Beat3_CoopPath"/>
+        <file name="seq_LD_MetalDetectorSimManager"/>
+        <file name="seq_LD_MetalDetectorSim_Beat1_01"/>
+        <file name="seq_LD_MetalDetectorSim_Beat3_01"/>
+        <file name="seq_LD_MetalDetectorSim_Beat3_02"/>
+        <file name="seq_LD_SecuritySystem_Beat3_LockerRoom"/>
+        <file name="seq_LD_DeathVolumeManager"/>
+        <file name="seq_LD_DeathVolume_Beat2"/>
+        <file name="seq_SEQ_IntroCam"/>
+        <file name="seq_LD_IntroCamManager"/>
+        <file name="seq_LD_EnemyAIsPatrolManager"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat1_SubManager"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat1_PickSetting"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat1_ConRatio"/>
+        <file name="seq_LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+        <file name="seq_LD_EnemyAIsPatrol_B1S1P2_PickPoint"/>
+        <file name="seq_LD_EnemyAIsPatrol_B1S1P3_PickPoint"/>
+        <file name="seq_LD_MetalDetectorSim_Beat1_01_EMP"/>
+        <file name="seq_LD_MetalDetectorSim_Beat3_01_EMP"/>
+        <file name="seq_LD_MetalDetectorSim_Beat3_02_EMP"/>
+        <file name="seq_LD_VO_0800_ObjStart1"/>
+        <file name="seq_LD_VO_0850_ObjStart2"/>
+        <file name="seq_LD_VO_0900_ObjStart3"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat2_SubManager"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat3_SubManager"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat4_SubManager"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat2_PickSetting"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat3_PickSetting"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat2_ConRatio"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat3_ConRatio"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat4_ConRatio"/>
+        <file name="seq_LD_EnemyAIsPatrol_B2S1P3_PickPoint"/>
+        <file name="seq_LD_EnemyAIsPatrol_B2S1P1_PickPoint"/>
+        <file name="seq_LD_EnemyAIsPatrol_B2S1P2_PickPoint"/>
+        <file name="seq_LD_EnemyAIsPatrol_B3S1P1_PickPoint"/>
+        <file name="seq_LD_EnemyAIsPatrol_B3S1P2_PickPoint"/>
+        <file name="seq_LD_EnemyAIsPatrol_B4S1P1_PickPoint"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat3_Swap"/>
+        <file name="seq_LD_EnemyAIsPatrol_Beat1_ConFinished"/>
+        <file name="seq_LD_TutorialMessageManager"/>
+        <file name="seq_LD_TM_MinesTutorial_Beat1t2"/>
+        <file name="seq_LD_TM_MinesTutorial_Beat1t4"/>
+        <file name="seq_LD_TM_CameraTutorial_Beat1_ParkS"/>
+        <file name="seq_LD_TM_CameraTutorial_Beat1_ParkB"/>
+        <file name="seq_LD_TM_CameraTutorial_Beat1_GateS"/>
+        <file name="seq_LD_TM_CameraTutorial_Beat1_GateB"/>
+        <file name="seq_LD_RM_SecondaryPath_Beat1t4"/>
+      </SequenceList>
+      <ObjectiveManager name="O_Obj_Manager" usercreated="1" scoped="1" type="Operator" secondarytype="ObjectiveManager"/>
+      <Character name="O_Sam_Character" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <View name="O_MainView" usercreated="1" scoped="1" type="Operator" secondarytype="View">
+        <CommandInstance name="GetCinematicView" dp_i="67108865"/>
+      </View>
+      <Camera name="O_Camera" usercreated="1" scoped="1" type="Operator" secondarytype="Camera">
+        <CommandInstance name="GetCamera">
+          <ParameterInstance name="View" data="Repository::O_MainView" TypeDeleted="View"/>
+        </CommandInstance>
+      </Camera>
+      <Character name="O_Sam_Character_0" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Pawn name="O_Sam_Pawn" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <ObjectiveManager name="O_Obj_Manager_0" usercreated="1" scoped="1" type="Operator" secondarytype="ObjectiveManager">
+        <CommandInstance name="GetObjectiveManager">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+        </CommandInstance>
+      </ObjectiveManager>
+      <eInputType name="Ref_Controller_Action" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="eInputType" value=""/>
+      <Character name="Ref_Sam" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Camera name="Ref_Camera" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Camera" value=""/>
+      <Actor name="Ref_SamPawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Actor" value=""/>
+      <CoopObjectiveManager name="O_CoopObj_Manager" usercreated="1" scoped="1" type="Operator" secondarytype="CoopObjectiveManager">
+        <CommandInstance name="CoopGetCoopObjectiveManager"/>
+      </CoopObjectiveManager>
+      <Objective name="B_PrimaryObjective1" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="LocID_WAY_Border_Crossing_Georgia_Title" localid="11045"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="11047"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="11049"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <Objective name="B_PrimaryObjective2" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="LocID_WAY_Border_Crossing_Vehicle_Title" localid="11056"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="11058"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="11060"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <Objective name="B_PrimaryObjective3" mutable="1" usercreated="1" scoped="1">
+        <LocalText name="Title" mutable="1" usercreated="1" scoped="1" value="LocID_WAY_Border_Crossing_Chechnya_Title" localid="11067"/>
+        <LocalText name="Summary" mutable="1" usercreated="1" scoped="1" value="" localid="11069"/>
+        <LocalText name="Detail" mutable="1" usercreated="1" scoped="1" value="" localid="11071"/>
+        <Actor name="Actor" usercreated="1" scoped="1"/>
+        <Text name="Helper_Oasis_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <Text name="Helper_SWF_FileName" mutable="1" usercreated="1" scoped="1" value=""/>
+        <number name="Priority" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      </Objective>
+      <Character name="O_Briggs_Character" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" bv_a="1073741824" bv_i="67108865"/>
+      </Character>
+      <Character name="Ref_Character" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Pawn name="Ref_Pawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Pawn" value=""/>
+      <Pawn name="O_Briggs_Pawn" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Briggs_Character" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <number name="B_Var_ObjFinishedCount" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <Character name="Ref_Briggs" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Character name="Ref_CurrentPlayer" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Pawn name="Ref_Sta_BriggsPawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Pawn" value=""/>
+      <Pawn name="Ref_Sta_SamPawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Pawn" value=""/>
+      <Pawn name="Ref_Var_CurrentPlayerPawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Pawn" value=""/>
+      <Boolean name="B_Var_bCoopDoorOpenComplete_Beat1" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="B_Var_bCoopBoostComplete_Beat2" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="B_Var_bCoopBoostComplete_Beat3" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <List name="List_EnemyAIs" mutable="1" usercreated="1" scoped="1" listtype="AI">
+        <element name="Repository::Unreal::Actors::UID:0000019c" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:0000019d" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:0000019f" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:000001a0" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:000001a1" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:000001c8" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:000004d5" type2="AI"/>
+      </List>
+      <List name="List_MetalDetectorSim_Beat1_01_Green" mutable="1" usercreated="1" scoped="1" listtype="Light"/>
+      <List name="List_MetalDetectorSim_Beat1_01_Red" mutable="1" usercreated="1" scoped="1" listtype="Light"/>
+      <List name="List_MetalDetectorSim_Beat3_01_Green" mutable="1" usercreated="1" scoped="1" listtype="Light"/>
+      <List name="List_MetalDetectorSim_Beat3_01_Red" mutable="1" usercreated="1" scoped="1" listtype="Light"/>
+      <List name="List_MetalDetectorSim_Beat3_02_Green" mutable="1" usercreated="1" scoped="1" listtype="Light"/>
+      <List name="List_MetalDetectorSim_Beat3_02_Red" mutable="1" usercreated="1" scoped="1" listtype="Light"/>
+      <List name="List_SecuritySystem_Beat3_LockerRoom" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:000004fd" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000500" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000502" type2="GameItem"/>
+      </List>
+      <Pawn name="Ref_Var_CurrentAIPawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Pawn" value=""/>
+      <Character name="O_CurrentPlayer" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="MPGetLocalPlayer"/>
+      </Character>
+      <number name="O_CheckpointID" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="GetCheckPointID"/>
+      </number>
+      <List name="List_EnemyAIs_Beat1" mutable="1" usercreated="1" scoped="1" listtype="AI">
+        <element name="Repository::Unreal::Actors::UID:0000019c" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:0000019d" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:000001a0" type2="AI"/>
+      </List>
+      <List name="List_EnemyAIs_Beat3" mutable="1" usercreated="1" scoped="1" listtype="AI">
+        <element name="Repository::Unreal::Actors::UID:000001c8" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:000004d5" type2="AI"/>
+      </List>
+      <List name="List_EnemyAIs_Beat3_OfficeHall" mutable="1" usercreated="1" scoped="1" listtype="AI">
+        <element name="Repository::Unreal::Actors::UID:000001c8" type2="AI"/>
+        <element name="Repository::Unreal::Actors::UID:00000fab" type2="AI"/>
+      </List>
+      <number name="O_Var_nConversationRatio" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="20.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolSettingNumber" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B1S1P1" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="12.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B1S1P2" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B1S1P3" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nConversationRatioStart" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <List name="List_SecuritySystem_Beat3_CR_Door" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:00000bd1" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000bd3" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000bd5" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000bd7" type2="GameItem"/>
+      </List>
+      <List name="List_SecuritySystem_Beat3_AR_Door" mutable="1" usercreated="1" scoped="1" listtype="GameItem"/>
+      <number name="O_Var_nPatrolPoint_B2S1P3" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B2S1P1" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B2S1P2" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B3S1P1" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B3S1P2" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B3S1P3" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <number name="O_Var_nPatrolPoint_B4S1P1" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="6.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <Boolean name="B_Var_bMainObjectiveComplete_Beat1" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="B_Var_bMainObjectiveComplete_Beat2" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="B_Var_bMainObjectiveComplete_Beat3" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="B_PlayingSound" mutable="1" usercreated="1" scoped="1" value="0"/>
+    </List>
+  </repository>
+</core>

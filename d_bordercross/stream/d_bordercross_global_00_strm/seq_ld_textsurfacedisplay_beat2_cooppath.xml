@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_TextSurfaceDisplay_Beat2_CoopPath" leveluid="1" streamedRandomID="2038094029">
+  <Task name="DisplayTextSurface">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:0000078e" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Show" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="VolumnOccupyEventCheck" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:0000078e" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="HideTextSurface">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:0000078e" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="VolumnOccupyEventCheck" true="DisplayTextSurface" data="UID:000006c3" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_0" start="DisplayTextSurface" true="HideTextSurface" data="UID:000006c3" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISEMPTY" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_0" start="HideTextSurface" true="VolumnOccupyEventCheck" sequence="LD_TextSurfaceDisplay_Beat2_CoopPath"/>
+  <Task name="CoopBoostCompleteCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="HideTextSurface_Forever">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:0000078e" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_TextSurfaceDisplay_Beat2_CoopPath" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="CoopBoostCompleteCheck" true="NewTask" data="UID:00000b7c" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bCoopBoostComplete_Beat2"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_1" start="HideTextSurface_Forever" true="StopSequence" sequence="LD_TextSurfaceDisplay_Beat2_CoopPath"/>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="HideTextSurface_Forever" false="CoopBoostCompleteCheck">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bCoopBoostComplete_Beat2" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <VisualComment name="NewVisualComment" x="-332.677429" y="-157.225815" width="799.677307" height="212.580612" commentDate="10/11/2012 11:05:18 AM"/>
+  <VisualComment name="NewVisualComment_0" x="-332.645203" y="108.483818" width="913.225708" height="238.387054" commentDate="10/11/2012 11:06:26 AM"/>
+</Sequence>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_ElectricityPowerManager" leveluid="1" streamedRandomID="2038094029">
+  <Task name="ElectricityPowerCutEventCheck" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_ElectricityPower_Beat1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <VisualComment name="NewVisualComment" x="-224.752121" y="-58.301758" width="511.726593" height="218.001770" commentDate="9/27/2012 12:08:34 AM"/>
+</Sequence>

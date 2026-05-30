@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0450_Exfil" leveluid="1" streamedRandomID="2038094029">
+  <Task name="SingleOrCoopCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0450_COM_02_01ISAACB_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Briggs_Character" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.998625">
+          <CommandInstance name="SetDialog" duration="1.998625" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0450_COM::16573::54640" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Coop_Briggs">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0450_Exfil" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="B_MISS_0450_COM_02_01ISAACB_DRY" true="StopSequence_Coop_Briggs" sequence="LD_VO_0450_Exfil"/>
+  <Task name="StopSequence_Coop">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0450_Exfil" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0450_COM_01_01SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.134542">
+          <CommandInstance name="SetDialog" duration="1.134542" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0450_COM::16572::54639" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Coop_Sam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0450_Exfil" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="B_MISS_0450_COM_01_01SAM_DRY" true="StopSequence_Coop_Sam" sequence="LD_VO_0450_Exfil"/>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask" true="B_MISS_0450_COM_01_01SAM_DRY" false="B_MISS_0450_COM_02_01ISAACB_DRY">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_Var_CurrentPlayerPawn" TypeDeleted="Pawn"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Pawn" TypeDeleted="Pawn"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="EnableVolumnCollision">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000069d" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="SingleOrCoopCheck" true="StopSequence_Coop" false="EnableVolumnCollision">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyEvent name="NewDependencyEvent" start="EnableVolumnCollision" true="NewTask" data="UID:0000069d" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Var_CurrentPlayerPawn"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <VisualComment name="NewVisualComment" x="-197.279419" y="168.383148" width="1028.387207" height="181.626648" commentDate="9/27/2012 12:36:36 AM"/>
+  <VisualComment name="NewVisualComment_0" x="54.085609" y="381.161438" width="779.867065" height="265.192413" commentDate="9/27/2012 12:39:22 AM"/>
+</Sequence>

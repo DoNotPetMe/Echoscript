@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_TutorialMessageManager" leveluid="1" streamedRandomID="2038094029">
+  <Task name="TutorialMessageEventCheck" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_TM_MinesTutorial_Beat1t2" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_TM_MinesTutorial_Beat1t4" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_TM_CameraTutorial_Beat1_ParkS" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::Sequences::LD_TM_CameraTutorial_Beat1_ParkB" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::Sequences::LD_TM_CameraTutorial_Beat1_GateS" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::Sequences::LD_TM_CameraTutorial_Beat1_GateB" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="Repository::Sequences::LD_RM_SecondaryPath_Beat1t4" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <VisualComment name="NewVisualComment" x="-236.000000" y="-54.000000" width="550.000000" height="188.000000" commentDate="3/20/2013 1:35:14 PM"/>
+</Sequence>

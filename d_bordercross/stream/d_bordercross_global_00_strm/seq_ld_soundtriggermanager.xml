@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_SoundTriggerManager" leveluid="0" streamedRandomID="2038094029">
+  <Task name="StopSound" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="ESoundTrigger_1" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="PlaySound" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Stop_Mtt_Mus_BorderCrossing_Special" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="6.000000" condition="1">
+          <CommandInstance name="Wait" duration="6.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="StopSound" true="Wait" sequence="LD_SoundTriggerManager"/>
+  <Task name="DisableSoundTrigger">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="ESoundTrigger_1" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="ETarget_0" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="Wait" true="DisableSoundTrigger" sequence="LD_SoundTriggerManager"/>
+</Sequence>

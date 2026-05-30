@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_TM_MinesTutorial_Beat1t2" leveluid="1" streamedRandomID="2038094029">
+  <Task name="VolumeEnterEventCheck_Sam" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="VolumeEnterEventCheck_Sam" true="NewTask_0" data="UID:000010e3" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Var_CurrentPlayerPawn"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="DisableVolumeForSam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000010e3" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="DisableVolumeForSam" false="NewTask_2">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_Var_CurrentPlayerPawn" TypeDeleted="Pawn"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Pawn" TypeDeleted="Pawn"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask_2" true="VolumeEnterEventCheck_Sam" sequence="LD_TM_MinesTutorial_Beat1t2"/>
+  <Task name="DisplayMessageForSam">
+    <Timeline name="NewTimeline">
+      <Track name="DisplayMessageForSam" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UISetTutoBox" entityStripped="1" dp_i="134217738">
+            <ParameterInstance name="TextKey">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_H_TUT_Box_Mines_COOP"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="DisableVolumeForSam" true="DisplayMessageForSam" sequence="LD_TM_MinesTutorial_Beat1t2"/>
+  <Task name="VolumeEnterEventCheck_Birggs" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_5">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="DisableVolumeForBriggs">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000010e4" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_7">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="DisplayMessageForBriggs">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UISetTutoBox" entityStripped="1" dp_i="134217738">
+            <ParameterInstance name="TextKey">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_H_TUT_Box_Mines_COOP"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="VolumeEnterEventCheck_Birggs" true="NewTask_5" data="UID:000010e4" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Var_CurrentPlayerPawn"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_5" true="DisableVolumeForBriggs" false="NewTask_7">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_Var_CurrentPlayerPawn" TypeDeleted="Pawn"/>
+      <ParameterInstance name="Right" data="Repository::O_Briggs_Pawn" TypeDeleted="Pawn"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_7" true="VolumeEnterEventCheck_Birggs" sequence="LD_TM_MinesTutorial_Beat1t2"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="DisableVolumeForBriggs" true="DisplayMessageForBriggs" sequence="LD_TM_MinesTutorial_Beat1t2"/>
+  <VisualComment name="NewVisualComment" x="-98.000000" y="-44.000000" width="741.000000" height="225.000000" commentDate="3/20/2013 2:43:07 PM"/>
+  <VisualComment name="NewVisualComment_0" x="-96.000000" y="199.000000" width="739.000000" height="218.000000" commentDate="3/20/2013 2:43:27 PM"/>
+</Sequence>

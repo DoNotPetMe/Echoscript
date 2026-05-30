@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_TextSurfaceDisplay_Beat1_Intro" leveluid="1" streamedRandomID="2038094029">
+  <Task name="DisplayTextSurface_Intro" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000439" InUnrealActors="1" TypeDeleted="TextSurface">
+        <Event name="NewEvent" start="0.500000" end="-1.000000">
+          <CommandInstance name="SurfaceChangeState" entityStripped="1">
+            <ParameterInstance name="NewState"/>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Show" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="HideTextSurface_Intro">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000439" InUnrealActors="1" TypeDeleted="TextSurface">
+        <Event name="NewEvent" start="4.000000" end="-1.000000">
+          <CommandInstance name="SurfaceChangeState" entityStripped="1">
+            <ParameterInstance name="NewState"/>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="DisplayTextSurface_Intro" true="HideTextSurface_Intro" sequence="LD_TextSurfaceDisplay_Beat1_Intro"/>
+  <VisualComment name="NewVisualComment" x="-102.408470" y="12.650335" width="871.116455" height="176.315857" commentDate="9/27/2012 12:43:38 AM"/>
+</Sequence>

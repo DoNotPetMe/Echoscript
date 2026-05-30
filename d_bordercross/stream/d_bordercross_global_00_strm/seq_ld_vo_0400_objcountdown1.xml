@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0400_ObjCountdown1" leveluid="1" streamedRandomID="2038094029">
+  <Task name="OneObjDoneEventCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0400_COM_01_01ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="2.000000" end="4.430417">
+          <CommandInstance name="SetDialog" duration="2.430417" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0400_COM::16569::54635" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0400_ObjCountdown1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="B_MISS_0400_COM_01_01ANNA_DRY" true="StopSequence" sequence="LD_VO_0400_ObjCountdown1"/>
+  <DependencyCommand name="NewDependencyCommand" start="OneObjDoneEventCheck" true="B_MISS_0400_COM_01_01ANNA_DRY" false="WaitForOptimize">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_Var_ObjFinishedCount" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <VisualComment name="NewVisualComment" x="133.997971" y="235.637451" width="719.114929" height="266.093018" commentDate="9/27/2012 12:32:00 AM"/>
+  <Task name="WaitForOptimize">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="WaitForOptimize" true="OneObjDoneEventCheck" sequence="LD_VO_0400_ObjCountdown1"/>
+</Sequence>

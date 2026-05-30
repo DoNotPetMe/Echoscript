@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0500_HVT" leveluid="1" streamedRandomID="2038094029">
+  <Task name="HVT_Capture_EventCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Establish_GetPlayers_Wait">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0500_COM_01_01ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="4.283563">
+          <CommandInstance name="SetDialog" duration="3.283563" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0500_COM::16575::54643" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="4.280000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0500_COM_02_01ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="4.308875">
+          <CommandInstance name="SetDialog" duration="3.308875" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0500_COM::16576::54644" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="4.300000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Sam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0500_HVT" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Briggs">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0500_HVT" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="B_MISS_0500_COM_01_01ANNA_DRY" false="B_MISS_0500_COM_02_01ANNA_DRY">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_CurrentPlayer" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyEvent name="NewDependencyEvent" start="HVT_Capture_EventCheck" true="Establish_GetPlayers_Wait" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="BAGGED_HVT" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_CurrentPlayer"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="B_MISS_0500_COM_01_01ANNA_DRY" true="StopSequence_Sam" sequence="LD_VO_0500_HVT"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="B_MISS_0500_COM_02_01ANNA_DRY" true="StopSequence_Briggs" sequence="LD_VO_0500_HVT"/>
+  <VisualComment name="NewVisualComment" x="-191.874329" y="143.439255" width="1034.381592" height="325.626831" commentDate="9/27/2012 12:27:17 AM"/>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="Establish_GetPlayers_Wait" true="NewTask" false="Wait_For_Recheck">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::B_PlayingSound" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Wait_For_Recheck">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="Wait_For_Recheck" true="Establish_GetPlayers_Wait" sequence="LD_VO_0500_HVT"/>
+</Sequence>

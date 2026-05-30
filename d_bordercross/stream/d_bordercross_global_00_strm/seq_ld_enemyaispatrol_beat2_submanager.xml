@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_EnemyAIsPatrol_Beat2_SubManager" leveluid="1" streamedRandomID="2038094029">
+  <Task name="Beat2EnemyAIsPatrolInitialization" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_EnemyAIsPatrol_Beat2_PickSetting" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <VisualComment name="NewVisualComment" x="-318.731781" y="-27.393702" width="698.343872" height="194.793854" commentDate="1/23/2013 2:11:23 PM"/>
+</Sequence>
