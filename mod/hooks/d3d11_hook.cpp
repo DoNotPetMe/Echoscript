@@ -23,6 +23,11 @@
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "dxgi.lib")
 
+// imgui_impl_win32.h keeps this declaration behind a `#if 0`, so declare it
+// here at global scope. It must stay outside namespace D3D11Hook so it refers
+// to the handler the ImGui backend actually defines.
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND, UINT, WPARAM, LPARAM);
+
 namespace D3D11Hook {
 
 // -----------------------------------------------------------------------
