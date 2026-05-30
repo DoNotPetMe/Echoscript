@@ -136,14 +136,14 @@ void Render() {
         // --- Scan button ---
         if (CamFinder::IsScanning()) {
             ImGui::BeginDisabled();
-            ImGui::Button("Scanning... (check console)");
+            ImGui::Button("Scanning... WALK NOW (see console)");
             ImGui::EndDisabled();
         } else {
             if (ImGui::Button("Scan Memory for Camera")) {
                 CamFinder::Scan();
             }
             ImGui::SameLine();
-            ImGui::TextDisabled("(~3 sec, logs to console)");
+            ImGui::TextDisabled("(then WALK for 4s; logs to console)");
         }
 
         // --- Force-base input ---

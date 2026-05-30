@@ -13,143 +13,153 @@
 #include <atomic>
 #include <cstring>
 
+// -----------------------------------------------------------------------
+//  Camera finder — motion-diff strategy
+//
+//  A static "is this an orthonormal matrix?" test matches thousands of
+//  bone/mesh transforms.  The camera is distinguished by MOTION: when the
+//  player walks, the camera's position changes by a large amount, while
+//  bone/mesh matrices barely translate.  So we:
+//    1. Snapshot every candidate matrix + its position.
+//    2. Ask the player to WALK for a few seconds.
+//    3. Re-read each candidate; keep only those whose position moved within
+//       a "player-like" range (not zero, not teleport-sized).
+//  That collapses the bone arrays and leaves a tiny list.
+// -----------------------------------------------------------------------
+
 namespace CamFinder {
 
 static std::atomic<bool> s_scanning{ false };
 
-// -----------------------------------------------------------------------
-//  Matrix validation
-// -----------------------------------------------------------------------
-
-static float Dot3(float ax, float ay, float az,
-                  float bx, float by, float bz) {
+static float Dot3(float ax, float ay, float az, float bx, float by, float bz) {
     return ax*bx + ay*by + az*bz;
 }
 static float Len2(float x, float y, float z) { return x*x + y*y + z*z; }
 
-// Returns true if the 16-float block looks like a valid 4x4 rotation matrix
-// (row-major OR column-major — we check both because we don't know the game's
-// convention yet).  Tolerance is loose (2 %) to account for floating-point
-// accumulation in animated matrices.
+// True if the 16-float block is an orthonormal 3x3 rotation (row or column major).
 static bool IsViewMatrix(const float* m) {
-    // Every element in the rotation part must be finite and in [-1, 1]
     for (int r = 0; r < 3; ++r)
         for (int c = 0; c < 3; ++c) {
             float v = m[r * 4 + c];
             if (!std::isfinite(v) || fabsf(v) > 1.001f) return false;
         }
-
-    // ---- row-major: rows 0,1,2 are the three basis vectors ----
-    {
+    {   // row-major
         float ax=m[0], ay=m[1], az=m[2];
         float bx=m[4], by=m[5], bz=m[6];
         float cx=m[8], cy=m[9], cz=m[10];
-        if (fabsf(Len2(ax,ay,az)-1.f) < 0.02f &&
-            fabsf(Len2(bx,by,bz)-1.f) < 0.02f &&
-            fabsf(Len2(cx,cy,cz)-1.f) < 0.02f &&
-            fabsf(Dot3(ax,ay,az,bx,by,bz))   < 0.02f &&
-            fabsf(Dot3(ax,ay,az,cx,cy,cz))   < 0.02f &&
-            fabsf(Dot3(bx,by,bz,cx,cy,cz))   < 0.02f)
+        if (fabsf(Len2(ax,ay,az)-1.f) < 0.02f && fabsf(Len2(bx,by,bz)-1.f) < 0.02f &&
+            fabsf(Len2(cx,cy,cz)-1.f) < 0.02f && fabsf(Dot3(ax,ay,az,bx,by,bz)) < 0.02f &&
+            fabsf(Dot3(ax,ay,az,cx,cy,cz)) < 0.02f && fabsf(Dot3(bx,by,bz,cx,cy,cz)) < 0.02f)
             return true;
     }
-
-    // ---- column-major: columns 0,1,2 are the three basis vectors ----
-    {
+    {   // column-major
         float ax=m[0], ay=m[4], az=m[8];
         float bx=m[1], by=m[5], bz=m[9];
         float cx=m[2], cy=m[6], cz=m[10];
-        if (fabsf(Len2(ax,ay,az)-1.f) < 0.02f &&
-            fabsf(Len2(bx,by,bz)-1.f) < 0.02f &&
-            fabsf(Len2(cx,cy,cz)-1.f) < 0.02f &&
-            fabsf(Dot3(ax,ay,az,bx,by,bz))   < 0.02f &&
-            fabsf(Dot3(ax,ay,az,cx,cy,cz))   < 0.02f &&
-            fabsf(Dot3(bx,by,bz,cx,cy,cz))   < 0.02f)
+        if (fabsf(Len2(ax,ay,az)-1.f) < 0.02f && fabsf(Len2(bx,by,bz)-1.f) < 0.02f &&
+            fabsf(Len2(cx,cy,cz)-1.f) < 0.02f && fabsf(Dot3(ax,ay,az,bx,by,bz)) < 0.02f &&
+            fabsf(Dot3(ax,ay,az,cx,cy,cz)) < 0.02f && fabsf(Dot3(bx,by,bz,cx,cy,cz)) < 0.02f)
             return true;
     }
-
     return false;
 }
 
-// -----------------------------------------------------------------------
-//  Background scan thread
-// -----------------------------------------------------------------------
+// Safe read of three floats (position) at an in-process address.
+static bool ReadPos(uintptr_t addr, float out[3]) {
+    SIZE_T got = 0;
+    return ReadProcessMemory(GetCurrentProcess(),
+                             reinterpret_cast<LPCVOID>(addr),
+                             out, sizeof(float) * 3, &got) && got == sizeof(float) * 3;
+}
+
+static bool StillMatrix(uintptr_t base) {
+    float buf[16];
+    SIZE_T got = 0;
+    if (!ReadProcessMemory(GetCurrentProcess(), reinterpret_cast<LPCVOID>(base),
+                           buf, sizeof(buf), &got) || got != sizeof(buf))
+        return false;
+    return IsViewMatrix(buf);
+}
+
+struct Cand { uintptr_t base; float pos[3]; };
 
 static DWORD WINAPI ScanThread(LPVOID) {
-    Logger::Info("CamFinder: walking memory — this takes a few seconds...");
+    Logger::Info("CamFinder: phase 1 -- snapshotting candidate matrices...");
 
-    struct Hit { uintptr_t base; float pos[3]; };
-    std::vector<Hit> hits;
-    hits.reserve(256);
+    std::vector<Cand> cands;
+    cands.reserve(8192);
 
     uintptr_t addr = 0x10000u;
-
     while (addr < 0xFFF00000u) {
         MEMORY_BASIC_INFORMATION mbi{};
         if (VirtualQuery(reinterpret_cast<LPCVOID>(addr), &mbi, sizeof(mbi)) != sizeof(mbi))
             break;
 
-        bool readable =
-            mbi.State   == MEM_COMMIT &&
+        bool readable = mbi.State == MEM_COMMIT &&
             (mbi.Protect & (PAGE_READONLY | PAGE_READWRITE |
                             PAGE_EXECUTE_READ | PAGE_EXECUTE_READWRITE)) &&
-            !(mbi.Protect & PAGE_GUARD) &&
-            mbi.RegionSize >= 80;
+            !(mbi.Protect & PAGE_GUARD) && mbi.RegionSize >= 80;
 
         if (readable) {
-            // Bulk-read the region into a local buffer for cache-friendly scanning
             std::vector<uint8_t> buf(mbi.RegionSize);
             SIZE_T got = 0;
-            if (ReadProcessMemory(GetCurrentProcess(),
-                                  mbi.BaseAddress, buf.data(),
+            if (ReadProcessMemory(GetCurrentProcess(), mbi.BaseAddress, buf.data(),
                                   mbi.RegionSize, &got) && got >= 80) {
-
-                // Scan at 16-byte alignment (view matrices are always aligned)
-                for (size_t i = 0; i + 80 <= got; i += 16) {
+                for (size_t i = 0; i + 0x50 <= got; i += 16) {
                     const float* m = reinterpret_cast<const float*>(buf.data() + i);
                     if (!IsViewMatrix(m)) continue;
-
-                    // Read potential position at offset +0x44 into the struct
-                    if (i + 0x44 + 12 > got) continue;
                     const float* p = reinterpret_cast<const float*>(buf.data() + i + 0x44);
-
                     if (!std::isfinite(p[0]) || !std::isfinite(p[1]) || !std::isfinite(p[2]))
                         continue;
-
                     float mag2 = p[0]*p[0] + p[1]*p[1] + p[2]*p[2];
-                    // Skip all-zero (uninitialised) and astronomically large positions
                     if (mag2 < 1.f || mag2 > 1e12f) continue;
-
-                    Hit h;
-                    h.base   = addr + i;
-                    h.pos[0] = p[0];
-                    h.pos[1] = p[1];
-                    h.pos[2] = p[2];
-                    hits.push_back(h);
+                    Cand c; c.base = addr + i;
+                    c.pos[0] = p[0]; c.pos[1] = p[1]; c.pos[2] = p[2];
+                    cands.push_back(c);
                 }
             }
         }
-
         addr += mbi.RegionSize;
-        if (addr == 0u) break; // 32-bit wrap-around guard
+        if (addr == 0u) break;
     }
 
-    // ---- Report ----
-    Logger::Info("CamFinder: done — %zu candidate(s):", hits.size());
-    Logger::Info("  (look at pos X/Y/Z and find the one that matches where you are standing)");
-    for (auto& h : hits)
-        Logger::Info("  base=0x%08X  pos=(%.1f, %.1f, %.1f)",
-                     h.base, h.pos[0], h.pos[1], h.pos[2]);
+    Logger::Info("CamFinder: %zu candidates captured.", cands.size());
+    Logger::Info("CamFinder: ***WALK in a straight line now*** (4 seconds)...");
+    for (int s = 4; s > 0; --s) {
+        Logger::Info("   ...%d", s);
+        Sleep(1000);
+    }
 
-    Logger::Info("CamFinder: paste a base address into the 'Force Cam Base' box in the menu.");
-    Logger::Info("  Move around — if freecam position tracks you, that is the camera struct.");
+    // ---- Phase 2: keep only candidates that MOVED a player-like distance ----
+    // A walking player moves clearly but not teleport-far in 4 s.
+    constexpr float kMinMove = 8.0f;      // must move at least this far
+    constexpr float kMaxMove = 8000.0f;   // but not absurdly far (cuts garbage)
+
+    std::vector<Cand> movers;
+    for (auto& c : cands) {
+        if (!StillMatrix(c.base)) continue;     // matrix vanished/changed shape -> not camera
+        float now[3];
+        if (!ReadPos(c.base + 0x44, now)) continue;
+        float dx = now[0]-c.pos[0], dy = now[1]-c.pos[1], dz = now[2]-c.pos[2];
+        float dist = std::sqrt(dx*dx + dy*dy + dz*dz);
+        if (dist < kMinMove || dist > kMaxMove) continue;
+        Cand m; m.base = c.base; m.pos[0]=now[0]; m.pos[1]=now[1]; m.pos[2]=now[2];
+        movers.push_back(m);
+    }
+
+    Logger::Info("CamFinder: done -- %zu candidate(s) MOVED while you walked:", movers.size());
+    if (movers.empty()) {
+        Logger::Warn("  None moved. Make sure you actually walked during the countdown,");
+        Logger::Warn("  then run the scan again. (Walking a long, straight path helps.)");
+    }
+    for (auto& m : movers)
+        Logger::Info("  base=0x%08X  pos=(%.1f, %.1f, %.1f)",
+                     m.base, m.pos[0], m.pos[1], m.pos[2]);
+    Logger::Info("CamFinder: type a base into 'Force Cam Base', enable freecam, and verify.");
 
     s_scanning.store(false);
     return 0;
 }
-
-// -----------------------------------------------------------------------
-//  Public API
-// -----------------------------------------------------------------------
 
 void Scan() {
     if (s_scanning.exchange(true)) {
@@ -161,8 +171,6 @@ void Scan() {
     else   s_scanning.store(false);
 }
 
-bool IsScanning() {
-    return s_scanning.load();
-}
+bool IsScanning() { return s_scanning.load(); }
 
 } // namespace CamFinder
