@@ -64,11 +64,18 @@ static bool IsViewMatrix(const float* m) {
     return false;
 }
 
-// Read the 16-float matrix block at base. Returns false if unreadable.
-static bool ReadMat(uintptr_t base, float out[16]) {
+// We snapshot 20 floats (0x00..0x50): the 16-float matrix plus the position
+// at 0x44 (float index 17) and a bit of slack. Indices: rotation = 0..15,
+// position = 17,18,19.
+static constexpr int   SNAP_FLOATS = 20;
+static constexpr int   POS_INDEX   = 0x44 / 4;   // = 17
+
+// Read the matrix+position block at base. Returns false if unreadable.
+static bool ReadMat(uintptr_t base, float out[SNAP_FLOATS]) {
     SIZE_T got = 0;
     return ReadProcessMemory(GetCurrentProcess(), reinterpret_cast<LPCVOID>(base),
-                             out, sizeof(float) * 16, &got) && got == sizeof(float) * 16;
+                             out, sizeof(float) * SNAP_FLOATS, &got)
+           && got == sizeof(float) * SNAP_FLOATS;
 }
 
 // Sum of absolute differences across the 9 rotation elements.
@@ -85,7 +92,7 @@ static float PosDist(const float* a, const float* b) {
     return std::sqrt(dx*dx + dy*dy + dz*dz);
 }
 
-struct Cand { uintptr_t base; float mat[16]; };  // mat[0x44/4..] = position
+struct Cand { uintptr_t base; float mat[SNAP_FLOATS]; };  // mat[POS_INDEX..] = position
 
 static void CountdownWalk(const char* what, int secs) {
     Logger::Info("CamFinder: >>> %s <<< (%d seconds)", what, secs);
@@ -114,10 +121,10 @@ static DWORD WINAPI ScanThread(LPVOID) {
             SIZE_T got = 0;
             if (ReadProcessMemory(GetCurrentProcess(), mbi.BaseAddress, buf.data(),
                                   mbi.RegionSize, &got) && got >= 80) {
-                for (size_t i = 0; i + 0x50 <= got; i += 16) {
+                for (size_t i = 0; i + SNAP_FLOATS * sizeof(float) <= got; i += 16) {
                     const float* m = reinterpret_cast<const float*>(buf.data() + i);
                     if (!IsViewMatrix(m)) continue;
-                    const float* p = reinterpret_cast<const float*>(buf.data() + i + 0x44);
+                    const float* p = m + POS_INDEX;
                     if (!std::isfinite(p[0]) || !std::isfinite(p[1]) || !std::isfinite(p[2]))
                         continue;
                     float mag2 = p[0]*p[0] + p[1]*p[1] + p[2]*p[2];
@@ -143,10 +150,10 @@ static DWORD WINAPI ScanThread(LPVOID) {
 
     std::vector<Cand> turners;
     for (auto& c : cands) {
-        float now[16];
+        float now[SNAP_FLOATS];
         if (!ReadMat(c.base, now) || !IsViewMatrix(now)) continue;
         if (RotDelta(c.mat, now) < kRotChanged)       continue;  // didn't rotate -> not camera
-        if (PosDist(c.mat + 0x44/4, now + 0x44/4) > kPosStayedPut) continue; // moved -> not a still look
+        if (PosDist(c.mat + POS_INDEX, now + POS_INDEX) > kPosStayedPut) continue; // moved -> not a still look
         Cand t; t.base = c.base; std::memcpy(t.mat, now, sizeof(t.mat));
         turners.push_back(t);
     }
@@ -160,9 +167,9 @@ static DWORD WINAPI ScanThread(LPVOID) {
 
     std::vector<Cand> finalists;
     for (auto& c : turners) {
-        float now[16];
+        float now[SNAP_FLOATS];
         if (!ReadMat(c.base, now) || !IsViewMatrix(now)) continue;
-        float d = PosDist(c.mat + 0x44/4, now + 0x44/4);
+        float d = PosDist(c.mat + POS_INDEX, now + POS_INDEX);
         if (d < kMinMove || d > kMaxMove) continue;
         Cand f; f.base = c.base; std::memcpy(f.mat, now, sizeof(f.mat));
         finalists.push_back(f);
@@ -181,7 +188,7 @@ static DWORD WINAPI ScanThread(LPVOID) {
         Logger::Warn("  then WALK in phase 3. Big, deliberate movements work best.");
     }
     for (auto& m : result) {
-        const float* p = m.mat + 0x44/4;
+        const float* p = m.mat + POS_INDEX;
         Logger::Info("  base=0x%08X  pos=(%.1f, %.1f, %.1f)", m.base, p[0], p[1], p[2]);
     }
     Logger::Info("CamFinder: type a base into 'Force Cam Base', enable freecam, and verify.");
