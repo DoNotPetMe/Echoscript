@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_TransitionDoor" leveluid="3" streamedRandomID="1164723781">
+  <Task name="Unlock1stDoor">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001533" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00001534" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="InitialCheck" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_CurrentBlackBoxID_0" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignNumber" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="InitialCheck" true="Unlock1stDoor" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="HUNTER_BLACKBOX_COMPLETED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="BlackBoxID" data="Repository::Ref_CurrentBlackBoxID_0"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="CheckingVolume">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="CountPlus">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::PlayerNumber" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AddAssign" entityStripped="1">
+            <ParameterInstance name="Right">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="CheckingVolume_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="CountMinus">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::PlayerNumber" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AddAssign" entityStripped="1">
+            <ParameterInstance name="Right">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="-1.000000"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="InitialCheck_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Is Single Player">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Is Coop Player">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="LockDoor">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001533" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Close" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="-1.000000">
+          <CommandInstance name="LockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00001534" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Close" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="-1.000000">
+          <CommandInstance name="LockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::n_Waitingtime" TypeDeleted="number">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::n_Waitingtime" TypeDeleted="number">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="LockDoor_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001533" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Close" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="-1.000000">
+          <CommandInstance name="LockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00001534" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Close" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="-1.000000">
+          <CommandInstance name="LockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="CheckingVolume" true="CountPlus" data="UID:00001538" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="CountPlus" true="CheckingVolume" sequence="LD_TransitionDoor"/>
+  <DependencyEvent name="NewDependencyEvent_1" start="CheckingVolume_0" true="CountMinus" data="UID:00001538" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_0" start="CountMinus" true="CheckingVolume_0" sequence="LD_TransitionDoor"/>
+  <DependencyCommand name="NewDependencyCommand" start="InitialCheck_0" true="Is Single Player" false="Is Coop Player">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_0" start="Is Single Player" true="LockDoor" false="Wait">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+      <ParameterInstance name="Right" data="Repository::PlayerNumber" TypeDeleted="number"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="Is Coop Player" true="LockDoor_0" false="Wait_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+      <ParameterInstance name="Right" data="Repository::PlayerNumber" TypeDeleted="number"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_1" start="Wait" true="InitialCheck_0" sequence="LD_TransitionDoor"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Wait_1" true="InitialCheck_0" sequence="LD_TransitionDoor"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="Unlock1stDoor" true="CheckingVolume_0" sequence="LD_TransitionDoor"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Unlock1stDoor" true="CheckingVolume" sequence="LD_TransitionDoor"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Unlock1stDoor" true="InitialCheck_0" sequence="LD_TransitionDoor"/>
+  <Task name="StopCurrentSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_TransitionDoor" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask" logicor="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="LockDoor" true="NewTask" sequence="LD_TransitionDoor"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="LockDoor_0" true="NewTask" sequence="LD_TransitionDoor"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="NewTask" true="StopCurrentSequence" sequence="LD_TransitionDoor"/>
+</Sequence>

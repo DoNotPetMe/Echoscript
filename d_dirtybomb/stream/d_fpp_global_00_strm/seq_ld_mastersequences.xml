@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_MasterSequences" startup="1" leveluid="1" streamedRandomID="1164723781">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_2" entity="Repository::Sequences::LD_CoopText" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::Sequences::LD_PatrolPath" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::Sequences::LD_Animation" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="Repository::Sequences::LD_VOControl" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000309" InUnrealActors="1" TypeDeleted="TextSurface">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SurfaceChangeState" entityStripped="1" bv_a="0" bv_i="67108868">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="hide"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Check CheckpointID" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Intro Cam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_3" entity="Repository::Sequences::SEQ_IntroCam" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="No Intro Cam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Check CheckpointID" true="Intro Cam" false="No Intro Cam">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_CheckpointID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="-1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Exploration Bonus">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TriggerExplorationBonus" entityStripped="1" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Enter volume" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Enter volume" true="Exploration Bonus" data="UID:0000044d" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

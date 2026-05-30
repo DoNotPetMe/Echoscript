@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_PatrolPath" leveluid="1" streamedRandomID="1164723781">
+  <Task name="Insertion" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Patrol1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000002a4" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Patrol_Insertion1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Insertion" true="Patrol1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::n_Roll3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Patrol2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000002a4" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Patrol_Insertion2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000002a4" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Patrol_Insertion3"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="Insertion" true="Patrol2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::n_Roll3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="Insertion" true="Patrol3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::n_Roll3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Diningroom" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Patrol1_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:000002a6" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Patrol_Diningroom"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol2_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:000002a6" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Patrol_Diningroom2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_2" start="Diningroom" true="Patrol1_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::n_Roll2" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_3" start="Diningroom" true="Patrol2_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::n_Roll2" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="TrainingRoom" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Patrol1_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:000002a5" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Patrol_TrainingRoom"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol2_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:000002a5" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Patrol_TrainingRoom2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_4" start="TrainingRoom" true="Patrol1_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::n_Roll2_1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_5" start="TrainingRoom" true="Patrol2_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::n_Roll2_1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+</Sequence>
