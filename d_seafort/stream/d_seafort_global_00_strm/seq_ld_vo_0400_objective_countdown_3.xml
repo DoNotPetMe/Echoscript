@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0400_Objective_Countdown_3" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="MISS_0400_COM_03_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="0.500000" end="5.163772">
+          <CommandInstance name="SetDialog" duration="4.663772" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0400_COM::16554::54583" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0400_COM_03_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="1.955875">
+          <CommandInstance name="SetDialog" duration="0.955875" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0400_COM::16554::54584" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="MISS_0400_COM_03_01" true="MISS_0400_COM_03_02" sequence="LD_VO_0400_Objective_Countdown_3"/>
+  <Task name="MISS_0400_COM_03_03">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="3.510292">
+          <CommandInstance name="SetDialog" duration="2.510292" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0400_COM::16554::54585" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="MISS_0400_COM_03_02" true="MISS_0400_COM_03_03" sequence="LD_VO_0400_Objective_Countdown_3"/>
+  <Task name="MISS_0400_COM_03_04">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.393604">
+          <CommandInstance name="SetDialog" duration="1.393604" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0400_COM::16554::54586" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="MISS_0400_COM_03_03" true="MISS_0400_COM_03_04" sequence="LD_VO_0400_Objective_Countdown_3"/>
+  <Task name="Enable Fake Grim">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_2" start="Enable Fake Grim" true="MISS_0400_COM_03_01" sequence="LD_VO_0400_Objective_Countdown_3"/>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="Enable Fake Grim" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="COOP_ALL_PRIMARY_OBJECTIVES_COMPLETE" data=""/>
+  </DependencyEvent>
+</Sequence>

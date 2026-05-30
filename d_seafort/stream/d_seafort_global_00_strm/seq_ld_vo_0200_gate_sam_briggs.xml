@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0200_Gate_Sam_Briggs" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="NewTask" data="UID:00000f5b" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_INITIATOR_BEGIN" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data="Repository::Ref_WhoInteractive"/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="MISS_0200_COM_02_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="6.852437">
+          <CommandInstance name="SetDialog" duration="6.852437" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0200_COM::16546::54566" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_03_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="6.801813">
+          <CommandInstance name="SetDialog" duration="6.801813" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0200_COM::16547::54568" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_02_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="4.713312">
+          <CommandInstance name="SetDialog" duration="3.713312" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0200_COM::16546::54567" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="MISS_0200_COM_02_01" true="MISS_0200_COM_02_02" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+  <Task name="MISS_0200_COM_03_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="5.002917">
+          <CommandInstance name="SetDialog" duration="4.002917" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0200_COM::16547::54569" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="MISS_0200_COM_03_01" true="MISS_0200_COM_03_02" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+  <Task name="Stop">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0200_Gate_Sam_Briggs" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0200_Gate_Sam_Briggs" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Enable Fake Grim">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="Enable Fake Grim" false="Enable Fake Grim_0">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_WhoInteractive" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Enable Fake Grim_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="Enable Fake Grim" true="MISS_0200_COM_02_01" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Enable Fake Grim_0" true="MISS_0200_COM_03_01" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="MISS_0200_COM_04_01" true="Stop" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="MISS_0200_COM_04_01_1" true="StopSequence" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+  <Task name="MISS_0200_COM_04_01">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="MISS_0200_COM_02_02" true="MISS_0200_COM_04_01" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+  <Task name="MISS_0200_COM_04_01_1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="MISS_0200_COM_03_02" true="MISS_0200_COM_04_01_1" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask" true="NewTask_0" false="Wait">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::B_FirstVOPlaying" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Wait">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_9" start="Wait" true="NewTask" sequence="LD_VO_0200_Gate_Sam_Briggs"/>
+</Sequence>

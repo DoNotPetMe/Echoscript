@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0250_Post_Gate_Coop" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="MISS_0250_COM_01_01">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="MISS_0250_COM_01_01" data="UID:00000f5b" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_CoopDoorIsOpened"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="MISS_0250_COM_01_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.381688">
+          <CommandInstance name="SetDialog" duration="1.381688" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0250_COM::16549::54572" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0250_COM_01_011">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="0.500000" end="1.279312">
+          <CommandInstance name="SetDialog" duration="0.779312" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0250_COM::16549::54571" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="MISS_0250_COM_01_01" true="MISS_0250_COM_01_011" false="NewTask">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+      <ParameterInstance name="Right" data="Repository::B_CoopDoorIsOpened" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="MISS_0250_COM_01_011" true="MISS_0250_COM_01_02" sequence="LD_VO_0250_Post_Gate_Coop"/>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask" true="Initial" sequence="LD_VO_0250_Post_Gate_Coop"/>
+  <Task name="Stop Sequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0250_Post_Gate_Coop" TypeDeleted="Sequence">
+        <Event name="Close Sequence" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="MISS_0250_COM_01_02" true="Stop Sequence" sequence="LD_VO_0250_Post_Gate_Coop"/>
+</Sequence>

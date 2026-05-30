@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_CoopDoorStateSwitch_1" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="SwitchCoopDoorState">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="NewTask" data="UID:00000f5b" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bCoopDoorOpenComplete_1"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="SwitchCoopDoorState" false="NewTask_0">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bCoopDoorOpenComplete_1" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="HideProjectedText">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000007c3" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="SwitchCoopDoorState" true="HideProjectedText" sequence="LD_CoopDoorStateSwitch_1"/>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_ProjectedTextLight_CoopDoor_1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="HideProjectedText" true="StopSequence" sequence="LD_CoopDoorStateSwitch_1"/>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_0" true="Initial" sequence="LD_CoopDoorStateSwitch_1"/>
+</Sequence>

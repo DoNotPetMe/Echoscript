@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_RotatingWindMeter" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Rotate" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000c5f" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="20.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="20.000000" entityStripped="1" dp_i="201326644" bv_a="-998637568:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Rotate_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000c5f" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="10.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="10.000000" entityStripped="1" dp_i="201326644" bv_a="-1008664576:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Rotate_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000c5f" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="10.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="10.000000" entityStripped="1" dp_i="201326644" bv_a="-1015414784:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Rotate_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000c5f" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="10.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="10.000000" entityStripped="1" dp_i="201326644" bv_a="-1008664576:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Rotate" true="Rotate_0" sequence="LD_RotatingWindMeter"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="Rotate_0" true="Rotate_1" sequence="LD_RotatingWindMeter"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="Rotate_1" true="Rotate_2" sequence="LD_RotatingWindMeter"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Rotate_2" true="Rotate" sequence="LD_RotatingWindMeter"/>
+</Sequence>

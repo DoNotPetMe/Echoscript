@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_DeathZone" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Check" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Kill">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_DeadPawn" TypeDeleted="Pawn">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Kill" entityStripped="1" dp_i="201326606"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Check" true="Kill" data="UID:00000653" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_DeadPawn"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="Kill" true="Check" sequence="LD_DeathZone"/>
+</Sequence>

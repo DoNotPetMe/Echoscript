@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0450_Exfil_Sam_Briggs" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Check">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Check" true="NewTask_0" data="UID:00000650" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Currentplayer_Pawn"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="MISS_0450_COM_01_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="0.500000" end="2.163104">
+          <CommandInstance name="SetDialog" duration="1.663104" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0450_COM::16555::54587" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="MISS_0450_COM_01_01" false="MISS_0450_COM_02_01">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_Currentplayer_Pawn" TypeDeleted="Pawn"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Pawn_0" TypeDeleted="Pawn"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="MISS_0450_COM_02_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="0.500000" end="2.303792">
+          <CommandInstance name="SetDialog" duration="1.803792" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0450_COM::16556::54588" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" start="10.000000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="Wait" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="Initial" true="NewTask_1" false="Check">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+</Sequence>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0700_Dead_Drop_Sam_Briggs" leveluid="1" streamedRandomID="1217117223">
+  <Task name="MISS_0700_COM_01_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="0.500000" end="2.559146">
+          <CommandInstance name="SetDialog" duration="2.059146" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0700_COM::16562::54599" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="0.500000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0700_COM_01_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="3.598666">
+          <CommandInstance name="SetDialog" duration="2.598666" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0700_COM::16562::54600" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="3.598000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="MISS_0700_COM_01_01" true="MISS_0700_COM_01_02" sequence="LD_VO_0700_Dead_Drop_Sam_Briggs"/>
+  <Task name="Check" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Is Sam or Briggs">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="MISS_0700_COM_02_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="0.500000" end="1.686042">
+          <CommandInstance name="SetDialog" duration="1.186042" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0700_COM::48227::129204" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="0.500000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0700_COM_02_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="3.880063">
+          <CommandInstance name="SetDialog" duration="2.880063" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0700_COM::48227::129205" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="4.000000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Enable Fake Grim">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Enable Fake Grim_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="Check" true="Is Sam or Briggs" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="DEADDROP_PICKEDUP" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_CurrentPlayer"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_3" start="MISS_0700_COM_02_01" true="MISS_0700_COM_02_02" sequence="LD_VO_0700_Dead_Drop_Sam_Briggs"/>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="Enable Fake Grim" false="Enable Fake Grim_0">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_CurrentPlayer" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_7" start="Enable Fake Grim_0" true="MISS_0700_COM_02_01" sequence="LD_VO_0700_Dead_Drop_Sam_Briggs"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="Enable Fake Grim" true="MISS_0700_COM_01_01" sequence="LD_VO_0700_Dead_Drop_Sam_Briggs"/>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="Is Sam or Briggs" true="NewTask" false="Wait_For_Recheck">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::B_PlayingSound" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Wait_For_Recheck">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_9" start="Wait_For_Recheck" true="Is Sam or Briggs" sequence="LD_VO_0700_Dead_Drop_Sam_Briggs"/>
+</Sequence>
