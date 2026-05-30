@@ -1,0 +1,114 @@
+#include "menu.h"
+#include "../features/freecam.h"
+#include "../utils/logger.h"
+
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+#include <Windows.h>
+
+#include "imgui.h"
+
+namespace Menu {
+
+bool g_menuOpen = false;
+
+// Toggle key
+static constexpr int TOGGLE_KEY = VK_INSERT;
+
+static bool s_wasToggleDown = false;
+
+// -----------------------------------------------------------------------
+//  Tick — runs every frame
+// -----------------------------------------------------------------------
+void Tick(float dt) {
+    // Edge-triggered INSERT toggle
+    bool down = (GetAsyncKeyState(TOGGLE_KEY) & 0x8000) != 0;
+    if (down && !s_wasToggleDown)
+        g_menuOpen = !g_menuOpen;
+    s_wasToggleDown = down;
+
+    // Mouse wheel changes free-cam speed when camera is active and menu is closed
+    if (FreeCam::g_config.enabled && !g_menuOpen) {
+        // Scroll state is polled via raw GetAsyncKeyState trick; actual wheel
+        // delta is passed through the WndProc hook.  Speed changes in real-time.
+    }
+
+    // Run feature updates
+    FreeCam::Update(dt);
+}
+
+// -----------------------------------------------------------------------
+//  Render — ImGui draw calls
+// -----------------------------------------------------------------------
+void Render() {
+    if (!g_menuOpen) return;
+
+    ImGui::SetNextWindowSize(ImVec2(420, 340), ImGuiCond_FirstUseEver);
+    ImGui::SetNextWindowPos(ImVec2(30, 30),    ImGuiCond_FirstUseEver);
+
+    ImGuiWindowFlags flags =
+        ImGuiWindowFlags_NoCollapse |
+        ImGuiWindowFlags_NoScrollbar;
+
+    if (!ImGui::Begin("Splinter Cell: Blacklist — Mod Menu  [INSERT to close]",
+                      &g_menuOpen, flags)) {
+        ImGui::End();
+        return;
+    }
+
+    // ---- Header ----
+    ImGui::TextDisabled("Controls: INSERT = toggle menu   F5 = toggle free-cam");
+    ImGui::Separator();
+    ImGui::Spacing();
+
+    // ---- Free Camera ----
+    if (ImGui::CollapsingHeader("Free Camera", ImGuiTreeNodeFlags_DefaultOpen)) {
+        ImGui::Indent();
+
+        bool& fc = FreeCam::g_config.enabled;
+        if (ImGui::Checkbox("Enable (F5)", &fc)) {
+            if (fc) FreeCam::Toggle(); else FreeCam::Toggle();
+            // Toggle() flips the flag itself, so sync back
+            fc = FreeCam::g_config.enabled;
+        }
+
+        ImGui::SliderFloat("Move Speed",    &FreeCam::g_config.moveSpeed,      0.5f, 200.f, "%.1f u/s");
+        ImGui::SliderFloat("Mouse Sensitivity", &FreeCam::g_config.lookSensitivity, 0.01f, 1.f, "%.3f");
+
+        ImGui::Spacing();
+        ImGui::TextDisabled("W/S/A/D — move   Q/E — up/down   Shift — sprint");
+        ImGui::TextDisabled("Mouse — look around");
+
+        if (FreeCam::g_config.enabled) {
+            ImGui::Spacing();
+            auto& st = FreeCam::g_state;
+            ImGui::Text("Pos:  %.1f  %.1f  %.1f", st.position.x, st.position.y, st.position.z);
+            ImGui::Text("Rot:  pitch %.1f  yaw %.1f", st.pitch, st.yaw);
+        }
+
+        ImGui::Unindent();
+    }
+
+    ImGui::Spacing();
+
+    // ---- Visual helpers placeholder ----
+    if (ImGui::CollapsingHeader("Visual")) {
+        ImGui::Indent();
+        ImGui::TextDisabled("(more features coming soon)");
+        ImGui::Unindent();
+    }
+
+    ImGui::Spacing();
+    ImGui::Separator();
+
+    // ---- Unload ----
+    ImGui::Spacing();
+    if (ImGui::Button("Unload Mod (DELETE)", ImVec2(-1, 0))) {
+        // Signal main thread to eject the DLL
+        PostThreadMessageW(GetCurrentThreadId(), WM_QUIT, 0, 0);
+    }
+
+    ImGui::End();
+}
+
+} // namespace Menu
