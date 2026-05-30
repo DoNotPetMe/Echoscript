@@ -3,10 +3,13 @@
 //  Finds the running Blacklist process and injects BlacklistMod.dll via
 //  CreateRemoteThread + LoadLibraryW.
 // -----------------------------------------------------------------------
+#ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
+#endif
+#ifndef NOMINMAX
 #define NOMINMAX
+#endif
 #include <Windows.h>
-#include <tlhelp32.h>
 #include <psapi.h>
 #include <string>
 #include <vector>
@@ -23,27 +26,44 @@ static const wchar_t* kProcessNamesDX9[] = {
 };
 static const wchar_t* kDllName = L"BlacklistMod.dll";
 
-// Search the snapshot for any of the given process names.
-// Returns the PID, or 0 if none are running.
+// Enumerate running processes and return the PID of the first whose executable
+// name matches any of the given names (case-insensitive), or 0 if none match.
+// Uses EnumProcesses + QueryFullProcessImageNameW rather than the Toolhelp
+// snapshot API for broader toolchain/SDK compatibility.
 static DWORD FindProcessId(const wchar_t* const names[], size_t count) {
-    PROCESSENTRY32W entry{ sizeof(entry) };
-    HANDLE snap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
-    if (snap == INVALID_HANDLE_VALUE)
+    DWORD pids[2048];
+    DWORD bytesReturned = 0;
+    if (!EnumProcesses(pids, sizeof(pids), &bytesReturned))
         return 0;
 
-    DWORD pid = 0;
-    if (Process32FirstW(snap, &entry)) {
-        do {
-            for (size_t i = 0; i < count; ++i) {
-                if (_wcsicmp(entry.szExeName, names[i]) == 0) {
-                    pid = entry.th32ProcessID;
-                    break;
+    const DWORD numProcs = bytesReturned / sizeof(DWORD);
+    for (DWORD i = 0; i < numProcs; ++i) {
+        if (pids[i] == 0)
+            continue;
+
+        HANDLE proc = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, FALSE, pids[i]);
+        if (!proc)
+            continue;
+
+        wchar_t imagePath[MAX_PATH]{};
+        DWORD pathLen = MAX_PATH;
+        if (QueryFullProcessImageNameW(proc, 0, imagePath, &pathLen)) {
+            // Reduce the full path to just the file name for comparison.
+            std::wstring path(imagePath, pathLen);
+            size_t slash = path.find_last_of(L"\\/");
+            const wchar_t* exeName =
+                (slash == std::wstring::npos) ? path.c_str()
+                                              : path.c_str() + slash + 1;
+            for (size_t n = 0; n < count; ++n) {
+                if (_wcsicmp(exeName, names[n]) == 0) {
+                    CloseHandle(proc);
+                    return pids[i];
                 }
             }
-        } while (pid == 0 && Process32NextW(snap, &entry));
+        }
+        CloseHandle(proc);
     }
-    CloseHandle(snap);
-    return pid;
+    return 0;
 }
 
 // Wait up to timeoutSec for the game to appear. Sets *isDX9 if only the DX9
