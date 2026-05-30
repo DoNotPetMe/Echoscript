@@ -143,7 +143,7 @@ void Render() {
                 CamFinder::Scan();
             }
             ImGui::SameLine();
-            ImGui::TextDisabled("(then WALK for 4s; logs to console)");
+            ImGui::TextDisabled("(follow console: LOOK AROUND, then WALK)");
         }
 
         // --- Force-base input ---

@@ -64,30 +64,39 @@ static bool IsViewMatrix(const float* m) {
     return false;
 }
 
-// Safe read of three floats (position) at an in-process address.
-static bool ReadPos(uintptr_t addr, float out[3]) {
+// Read the 16-float matrix block at base. Returns false if unreadable.
+static bool ReadMat(uintptr_t base, float out[16]) {
     SIZE_T got = 0;
-    return ReadProcessMemory(GetCurrentProcess(),
-                             reinterpret_cast<LPCVOID>(addr),
-                             out, sizeof(float) * 3, &got) && got == sizeof(float) * 3;
+    return ReadProcessMemory(GetCurrentProcess(), reinterpret_cast<LPCVOID>(base),
+                             out, sizeof(float) * 16, &got) && got == sizeof(float) * 16;
 }
 
-static bool StillMatrix(uintptr_t base) {
-    float buf[16];
-    SIZE_T got = 0;
-    if (!ReadProcessMemory(GetCurrentProcess(), reinterpret_cast<LPCVOID>(base),
-                           buf, sizeof(buf), &got) || got != sizeof(buf))
-        return false;
-    return IsViewMatrix(buf);
+// Sum of absolute differences across the 9 rotation elements.
+static float RotDelta(const float* a, const float* b) {
+    float d = 0.f;
+    for (int r = 0; r < 3; ++r)
+        for (int c = 0; c < 3; ++c)
+            d += fabsf(a[r * 4 + c] - b[r * 4 + c]);
+    return d;
 }
 
-struct Cand { uintptr_t base; float pos[3]; };
+static float PosDist(const float* a, const float* b) {
+    float dx = a[0]-b[0], dy = a[1]-b[1], dz = a[2]-b[2];
+    return std::sqrt(dx*dx + dy*dy + dz*dz);
+}
+
+struct Cand { uintptr_t base; float mat[16]; };  // mat[0x44/4..] = position
+
+static void CountdownWalk(const char* what, int secs) {
+    Logger::Info("CamFinder: >>> %s <<< (%d seconds)", what, secs);
+    for (int s = secs; s > 0; --s) { Logger::Info("   ...%d", s); Sleep(1000); }
+}
 
 static DWORD WINAPI ScanThread(LPVOID) {
     Logger::Info("CamFinder: phase 1 -- snapshotting candidate matrices...");
 
     std::vector<Cand> cands;
-    cands.reserve(8192);
+    cands.reserve(16384);
 
     uintptr_t addr = 0x10000u;
     while (addr < 0xFFF00000u) {
@@ -114,7 +123,7 @@ static DWORD WINAPI ScanThread(LPVOID) {
                     float mag2 = p[0]*p[0] + p[1]*p[1] + p[2]*p[2];
                     if (mag2 < 1.f || mag2 > 1e12f) continue;
                     Cand c; c.base = addr + i;
-                    c.pos[0] = p[0]; c.pos[1] = p[1]; c.pos[2] = p[2];
+                    std::memcpy(c.mat, m, sizeof(c.mat));
                     cands.push_back(c);
                 }
             }
@@ -122,39 +131,59 @@ static DWORD WINAPI ScanThread(LPVOID) {
         addr += mbi.RegionSize;
         if (addr == 0u) break;
     }
-
     Logger::Info("CamFinder: %zu candidates captured.", cands.size());
-    Logger::Info("CamFinder: ***WALK in a straight line now*** (4 seconds)...");
-    for (int s = 4; s > 0; --s) {
-        Logger::Info("   ...%d", s);
-        Sleep(1000);
-    }
 
-    // ---- Phase 2: keep only candidates that MOVED a player-like distance ----
-    // A walking player moves clearly but not teleport-far in 4 s.
-    constexpr float kMinMove = 8.0f;      // must move at least this far
-    constexpr float kMaxMove = 8000.0f;   // but not absurdly far (cuts garbage)
+    // ---- Phase 2: LOOK AROUND without moving ----
+    // The camera's rotation sweeps hugely while its position stays put. Bones
+    // and world objects don't do this. This is the strongest discriminator.
+    CountdownWalk("STAND STILL and LOOK AROUND with the mouse (turn a lot)", 4);
 
-    std::vector<Cand> movers;
+    constexpr float kRotChanged   = 0.40f;  // rotation must change clearly
+    constexpr float kPosStayedPut = 30.0f;  // but position must stay roughly fixed
+
+    std::vector<Cand> turners;
     for (auto& c : cands) {
-        if (!StillMatrix(c.base)) continue;     // matrix vanished/changed shape -> not camera
-        float now[3];
-        if (!ReadPos(c.base + 0x44, now)) continue;
-        float dx = now[0]-c.pos[0], dy = now[1]-c.pos[1], dz = now[2]-c.pos[2];
-        float dist = std::sqrt(dx*dx + dy*dy + dz*dz);
-        if (dist < kMinMove || dist > kMaxMove) continue;
-        Cand m; m.base = c.base; m.pos[0]=now[0]; m.pos[1]=now[1]; m.pos[2]=now[2];
-        movers.push_back(m);
+        float now[16];
+        if (!ReadMat(c.base, now) || !IsViewMatrix(now)) continue;
+        if (RotDelta(c.mat, now) < kRotChanged)       continue;  // didn't rotate -> not camera
+        if (PosDist(c.mat + 0x44/4, now + 0x44/4) > kPosStayedPut) continue; // moved -> not a still look
+        Cand t; t.base = c.base; std::memcpy(t.mat, now, sizeof(t.mat));
+        turners.push_back(t);
+    }
+    Logger::Info("CamFinder: %zu survived the look-around test.", turners.size());
+
+    // ---- Phase 3: WALK to confirm the position tracks you ----
+    CountdownWalk("now WALK forward in a straight line (don't turn)", 4);
+
+    constexpr float kMinMove = 8.0f;
+    constexpr float kMaxMove = 8000.0f;
+
+    std::vector<Cand> finalists;
+    for (auto& c : turners) {
+        float now[16];
+        if (!ReadMat(c.base, now) || !IsViewMatrix(now)) continue;
+        float d = PosDist(c.mat + 0x44/4, now + 0x44/4);
+        if (d < kMinMove || d > kMaxMove) continue;
+        Cand f; f.base = c.base; std::memcpy(f.mat, now, sizeof(f.mat));
+        finalists.push_back(f);
     }
 
-    Logger::Info("CamFinder: done -- %zu candidate(s) MOVED while you walked:", movers.size());
-    if (movers.empty()) {
-        Logger::Warn("  None moved. Make sure you actually walked during the countdown,");
-        Logger::Warn("  then run the scan again. (Walking a long, straight path helps.)");
+    // If walking eliminated everything (e.g. you didn't move), fall back to the
+    // look-around survivors -- those are already very likely the camera.
+    std::vector<Cand>& result = finalists.empty() ? turners : finalists;
+    const char* label = finalists.empty()
+        ? "look-around survivors (walk phase found none -- did you move?)"
+        : "FINAL candidates (rotated when you looked, moved when you walked)";
+
+    Logger::Info("CamFinder: done -- %zu %s:", result.size(), label);
+    if (result.empty()) {
+        Logger::Warn("  Nothing matched. Re-run and be sure to LOOK AROUND a lot in phase 2,");
+        Logger::Warn("  then WALK in phase 3. Big, deliberate movements work best.");
     }
-    for (auto& m : movers)
-        Logger::Info("  base=0x%08X  pos=(%.1f, %.1f, %.1f)",
-                     m.base, m.pos[0], m.pos[1], m.pos[2]);
+    for (auto& m : result) {
+        const float* p = m.mat + 0x44/4;
+        Logger::Info("  base=0x%08X  pos=(%.1f, %.1f, %.1f)", m.base, p[0], p[1], p[2]);
+    }
     Logger::Info("CamFinder: type a base into 'Force Cam Base', enable freecam, and verify.");
 
     s_scanning.store(false);
