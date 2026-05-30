@@ -1,0 +1,2521 @@
+<Credits name="">
+<Section name=" " fontscale="1.5" delay="0">
+<SingleColumnEntry center="IN MEMORY OF PIERRE GUILLONNEAU"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="MANAGEMENT" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EXECUTIVE PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHADI LEBBOS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRE PARIZEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CREATIVE DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MAXIME BÉLAND"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSOCIATE PRODUCERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AUDREY GOYETTE"/>
+<SingleColumnEntry center="JEAN-FRANCOIS POIRIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSOCIATE PRODUCER - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SÉBASTIEN EBACHER "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCER – SINGLE PLAYER MAPS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ÉMILE LIANG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GAME DIRECTOR - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PATRICK REDDING"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD GAME DESIGNER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEVEN MASTERS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD GAME DESIGNER - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-PASCAL CAMBIOTTI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEVEL DESIGN DIRECTORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAVID CHÂTEAUNEUF"/>
+<SingleColumnEntry center="SÉBASTIEN GALARNEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEVEL DESIGN DIRECTOR - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JASON ARSENAULT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD PROGRAMMER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SIMON TOURANGEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATION &amp; SCRIPTED EVENTS  DIRECTION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GILLES MONTEIL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ART DIRECTORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SIDONIE WEBER"/>
+<SingleColumnEntry center="THE CHINH NGO"/>
+<SingleColumnEntry center="VINCENT JEAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ART DIRECTOR - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRISTIAN DIAZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ART DIRECTOR - PRESENTATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-PHILIPPE RAJOTTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;AUDIO DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FABIEN NOËL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SCRIPTED EVENTS DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SEAN STANEK"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER - AI&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="OLIVIER PETIT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER - ANIMATION &amp; SCRIPTED EVENTS &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SANDRA WARREN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER - GAMEPLAY &amp; PRESENTATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANDRÉANE MEUNIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER –  MANAGEMENT TOOLS &amp; SUPPORT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GABRIEL HERNANDEZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGERS – SINGLE PLAYER MAPS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STÉPHANE CAISSIE"/>
+<SingleColumnEntry center="CATHERINE NOLIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER – SP MAPS, BREAKABLES &amp; VFX&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARC-ANDRE BOIVIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER – COOP MAPS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NICOLAS BLANCHARD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER – ONLINE SERVICES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="KARINE CASTONGUAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER – SCRIPTED EVENTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PHILIPPE HELLOUIN DE MÉNIBUS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD AUDIO DESIGNER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="VINCENT GAGNON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD AUDIO DESIGNER - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="OLIVIER GIRARD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD – CHARACTER MODELING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JACQUES MARCOUX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD QA&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRISTOPHE VIVET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL ARCHITECTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MAXIME MERCIER"/>
+<SingleColumnEntry center="ÉRIC ALLARD"/>
+<SingleColumnEntry center="JEAN-FRANÇOIS DUBÉ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD 3D PROGRAMMER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SAMUEL WATSON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL LEAD - 3D&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEPHEN HILL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL LEAD - AI&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN WALSH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL LEAD - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PATRICK DUQUETTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL ARCHITECT - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JIMMY BOULIANNE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD GAMEPLAY PROGRAMMER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FÉLIX DUCHESNEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL ART DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-SÉBASTIEN GUAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL DIRECTOR BREAKABLES, VFX &amp; ADDITIONAL ART&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DANNY DESLONGCHAMPS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL ART DIRECTOR – COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ROBERT OSBORNE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEVEL DESIGN  TECHNICAL DIRECTORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAMIEN GALIPOT"/>
+<SingleColumnEntry center="ROLAND LÉVESQUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEVEL DESIGN TECHNICAL DIRECTORS - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YANN SYLVESTRE"/>
+<SingleColumnEntry center="MIAO YONG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL DIRECTOR – SCRIPTED EVENTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JAMES CLEMENT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CHARACTERS TECHNICAL DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="HAU-NGHIEP PHAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATION  TECHNICAL DIRECTORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GUILLAUME PLOURDE"/>
+<SingleColumnEntry center="PIERRE-MARC SIMARD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSISTANT TECHNICAL ART DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-PHILIPPE ROY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD – BREAKABLES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="HUGO LEVASSEUR"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD - LEVEL DESIGN - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARC-ANDRÉ CARON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD - TECHNOLOGY GROUP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARC DEMERS "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROJECT CLOSER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS QUIDOZ"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="DESIGN" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SCRIPTWRITERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RICHARD DANSKY"/>
+<SingleColumnEntry center="MIKE LEE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;NARRATIVE DESIGN&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PHILIPPE DEBAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;NARRATIVE DESIGN - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JESSI THIND"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GAME DESIGNERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ADAM ALIM"/>
+<SingleColumnEntry center="DEAN EVANS"/>
+<SingleColumnEntry center="MARC HERNANDEZ"/>
+<SingleColumnEntry center="JULIEN LAMOUREUX"/>
+<SingleColumnEntry center="PATRIK MÉTHÉ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEVEL DESIGNERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SIMON ARSENEAULT"/>
+<SingleColumnEntry center="ALEXANDRE BEAUMONT"/>
+<SingleColumnEntry center="JEAN-EDOUARD BELLINI"/>
+<SingleColumnEntry center="MARC-ANDRE CLERMONT"/>
+<SingleColumnEntry center="HUGO DESMEULES"/>
+<SingleColumnEntry center="PIERRE-LUC GAGNON"/>
+<SingleColumnEntry center="SEBASTIEN GUAY"/>
+<SingleColumnEntry center="BRADLEY HINES"/>
+<SingleColumnEntry center="HUANG HUAI"/>
+<SingleColumnEntry center="SIMON LA SALLE"/>
+<SingleColumnEntry center="JOHN LAWRANCE"/>
+<SingleColumnEntry center="JEAN-CLAUDE ROSAY"/>
+<SingleColumnEntry center="GABRIEL THÉRIEN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEVEL DESIGNERS - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SIMON-ALBERT BOUDREAULT"/>
+<SingleColumnEntry center="VINCENT CADIEUX"/>
+<SingleColumnEntry center="RUI CAMPOS"/>
+<SingleColumnEntry center="JEAN CASPAR"/>
+<SingleColumnEntry center="BENOIT DESCHAMPS"/>
+<SingleColumnEntry center="GEOFF ELLENOR"/>
+<SingleColumnEntry center="NICK KING"/>
+<SingleColumnEntry center="FRANCOIS MESSIER"/>
+<SingleColumnEntry center="JOEY RUSSO"/>
+<SingleColumnEntry center="PATRICK SAUVAGEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SCRIPTED EVENT INTEGRATORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="HAKIM ABBAS"/>
+<SingleColumnEntry center="BENJAMIN WILLIAM ACKERMAN"/>
+<SingleColumnEntry center="FREDERIC BLATTMANN"/>
+<SingleColumnEntry center="PHILIPPE BOURBEAU"/>
+<SingleColumnEntry center="MAXIME CHAPLEAU"/>
+<SingleColumnEntry center="PAUL GREEN"/>
+<SingleColumnEntry center="MATHIEU LAURIN"/>
+<SingleColumnEntry center="ALEX MAYER"/>
+<SingleColumnEntry center="ADRIAN SPIRIDON"/>
+<SingleColumnEntry center="AUDREY ST-PIERRE"/>
+<SingleColumnEntry center="YU SUN"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="PROGRAMMING" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;3D PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LOUIS DE CARUFEL"/>
+<SingleColumnEntry center="NICOLAS JUSPIN"/>
+<SingleColumnEntry center="DAVID LAPOINTE"/>
+<SingleColumnEntry center="JEAN-FRANÇOIS TREMBLAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;AI PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PETER CHAN"/>
+<SingleColumnEntry center="PETER CHUNG"/>
+<SingleColumnEntry center="STEVE GAGNÉ"/>
+<SingleColumnEntry center="MARTIN GUILLEMETTE"/>
+<SingleColumnEntry center="ROMAIN KILLIAN"/>
+<SingleColumnEntry center="FRÉDÉRICK MARTEL-LUPIEN"/>
+<SingleColumnEntry center="COSMIN MIHAI RAIANU"/>
+<SingleColumnEntry center="GRAHAM PARKER"/>
+<SingleColumnEntry center="MARTIN PERREAULT"/>
+<SingleColumnEntry center="PIERRE VIGNON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;COOP PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BENOÎT-PIERRE CHEVALIER"/>
+<SingleColumnEntry center="TERENCE CHIU"/>
+<SingleColumnEntry center="CHRISTIAN DROUIN-PLANTE"/>
+<SingleColumnEntry center="FRANCIS GAUTHIER-FREDETTE"/>
+<SingleColumnEntry center="DENIS LOUTREIN"/>
+<SingleColumnEntry center="LOUIS-PHILIPPE SÉGUIN"/>
+<SingleColumnEntry center="YOHAN PETIOT"/>
+<SingleColumnEntry center="SIMON PICARD"/>
+<SingleColumnEntry center="MARCO ROSATO"/>
+<SingleColumnEntry center="WEI XIANG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ENGINE &amp; PIPELINE PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS DEVIC"/>
+<SingleColumnEntry center="VINCENT BEAUCHEMIN"/>
+<SingleColumnEntry center="MATHIEU LAFORCE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GAMEPLAY PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NICOLAS BEAUDETTE"/>
+<SingleColumnEntry center="LOUIS-PHILIPPE DALLAIRE"/>
+<SingleColumnEntry center="VINCENT DIONNE"/>
+<SingleColumnEntry center="SYLVAIN GRAVEL"/>
+<SingleColumnEntry center="RAPHAËL PARENT"/>
+<SingleColumnEntry center="DAVID THERRIAULT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MENUS &amp; INTERFACES PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAVID BARSAM"/>
+<SingleColumnEntry center="PASCAL RHÉAUME"/>
+<SingleColumnEntry center="CARL TREMBLAY"/>
+<SingleColumnEntry center="FRANCIS TREMBLAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;QA  PROGRAMMER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEFFREY CARTER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DATA MANAGERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS TREMBLAY"/>
+<SingleColumnEntry center="ÉTIENNE VACHON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOLS TESTER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PASCAL DESCHATELETS"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="ART" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAVID BARRETTE WARDANA"/>
+<SingleColumnEntry center="SIMON BLAIS"/>
+<SingleColumnEntry center="MATHIEU BLOUIN"/>
+<SingleColumnEntry center="THOMAS DESTUGUES"/>
+<SingleColumnEntry center="GRÉGOIRE YANNICK DIRAT"/>
+<SingleColumnEntry center="MICHAEL DONNELL"/>
+<SingleColumnEntry center="VALÈRE GAUTHIER"/>
+<SingleColumnEntry center="PHILIPPE GREFFARD"/>
+<SingleColumnEntry center="JONATHAN GUAY"/>
+<SingleColumnEntry center="MARIE-AGNÈS GUY"/>
+<SingleColumnEntry center="PAUL JESPER"/>
+<SingleColumnEntry center="MARC-ANTOINE LAMARCHE"/>
+<SingleColumnEntry center="GUY LAROSE"/>
+<SingleColumnEntry center="JUDITH LAVOIE"/>
+<SingleColumnEntry center="MICHEL LÉVIS"/>
+<SingleColumnEntry center="BÉTINA MARQUIS"/>
+<SingleColumnEntry center="CHRISTINE MARTINEAU"/>
+<SingleColumnEntry center="JEAN-FRANÇOIS MÉTHOT"/>
+<SingleColumnEntry center="PASCAL MIMEAULT"/>
+<SingleColumnEntry center="JOSEPH NASRALLAH"/>
+<SingleColumnEntry center="ALINE SCHLEGER"/>
+<SingleColumnEntry center="FUNNY SCHUTT"/>
+<SingleColumnEntry center="FREDERICK TAYLOR"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CAMERA ANIMATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JUAN-ESTEBAN DIAZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD FACIAL ANIMATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JULIEN JOUBERT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;FACIAL ANIMATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MICHELLE PEREZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CHARACTER MODELERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SYLVIE BEAUCHAMP"/>
+<SingleColumnEntry center="DANIEL BORDELEAU"/>
+<SingleColumnEntry center="CHRISTOPHER CAO"/>
+<SingleColumnEntry center="FRÉDÉRIC JOVET"/>
+<SingleColumnEntry center="MAGER KAMEL AQUINO"/>
+<SingleColumnEntry center="SIMON LACOSTE"/>
+<SingleColumnEntry center="KAVEN PERREAULT"/>
+<SingleColumnEntry center="LEROY-JAMES SIMPSON"/>
+<SingleColumnEntry center="HORIA TRANDAFIR"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;RIGGERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-FRANÇOIS ARSENEAU"/>
+<SingleColumnEntry center="DAVID  PAYNE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CONCEPT ARTISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BRUNO GAUTHIER-LEBLANC"/>
+<SingleColumnEntry center="TRI NGUYEN"/>
+<SingleColumnEntry center="ANDRZEJ TUTAJ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;STORYBOARD ARTISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MEINERT HANSEN"/>
+<SingleColumnEntry center="WAYNE MURRAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEVEL ARTISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GUILLAUME BÉLAND"/>
+<SingleColumnEntry center="FRANÇOIS BELLOTTO"/>
+<SingleColumnEntry center="ÉRIC BOISVERT"/>
+<SingleColumnEntry center="MARC-OLIVIER BOUCHARD"/>
+<SingleColumnEntry center="DANY GILBERT"/>
+<SingleColumnEntry center="MARC-ANTOINE HAMELIN"/>
+<SingleColumnEntry center="ISABELLE HENLEY"/>
+<SingleColumnEntry center="MIGUEL LUSSIER GOSSELIN"/>
+<SingleColumnEntry center="MATTHEW MASSIER"/>
+<SingleColumnEntry center="MARC MEYER"/>
+<SingleColumnEntry center="JOHN O'MALLEY"/>
+<SingleColumnEntry center="VINCENT ROBICHAUD"/>
+<SingleColumnEntry center="ALEXANDRE SABOURIN"/>
+<SingleColumnEntry center="STANLEY SIEBERT"/>
+<SingleColumnEntry center="IAN ST-LOUIS"/>
+<SingleColumnEntry center="EMMANUEL TAVARES"/>
+<SingleColumnEntry center="MING YIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEVEL ARTISTS - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NATASHA BOUCHARD"/>
+<SingleColumnEntry center="JOSHUA COOK"/>
+<SingleColumnEntry center="XAVIER DESCHÊNES"/>
+<SingleColumnEntry center="DANIEL EDWARDS"/>
+<SingleColumnEntry center="JIANG MING HUI"/>
+<SingleColumnEntry center="GABRIEL SOMMA"/>
+<SingleColumnEntry center="JOHN WIKELEY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MODELING - SINGLE PLAYER MAPS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PEDRO FERNANDEZ"/>
+<SingleColumnEntry center="CHRIS HENDRY"/>
+<SingleColumnEntry center="SLOAN HOOD"/>
+<SingleColumnEntry center="KEVIN KOK"/>
+<SingleColumnEntry center="MARIO LETENDRE"/>
+<SingleColumnEntry center="GARY NG THOW HING"/>
+<SingleColumnEntry center="OGNJEN PANIC"/>
+<SingleColumnEntry center="CYRIELLE REY"/>
+<SingleColumnEntry center="DAVID RICHER BRAZEAU"/>
+<SingleColumnEntry center="ARIEL RUBIN"/>
+<SingleColumnEntry center="YANNICK VEILLETTE"/>
+<SingleColumnEntry center="KYU-CHUL YOUN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MODELING - COOP MAPS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JÉRÔME BUSQUE"/>
+<SingleColumnEntry center="MARTIN CHIA-KEN OUNG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MODELING - BREAKABLES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GILBERT ARCAND"/>
+<SingleColumnEntry center="SIMON NADEAU"/>
+<SingleColumnEntry center="YVES ROMUALD MAMA FOUDA"/>
+<SingleColumnEntry center="ANDRÉ PARÉ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SHADER ARTISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PATRICE CÔTÉ"/>
+<SingleColumnEntry center="ALFREDO CRISTINZIANO"/>
+<SingleColumnEntry center="OLIVIER DONATO"/>
+<SingleColumnEntry center="PASCAL SAVIGNAC"/>
+<SingleColumnEntry center="PATRICK SIROIS"/>
+<SingleColumnEntry center="SALOME STRAPPAZZON"/>
+<SingleColumnEntry center="EMI TAKESHITA"/>
+<SingleColumnEntry center="GENSEKI TANAKA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SHADER ARTISTS - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PASCAL BARRIAULT"/>
+<SingleColumnEntry center="DAVID LAJEUNESSE"/>
+<SingleColumnEntry center="DAVID MASSICOTTE"/>
+<SingleColumnEntry center="ISAAC PAPISMADO"/>
+<SingleColumnEntry center="ANDREW WADDINGHAM"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LIGHTING ARTIST -  SINGLE PLAYER MAPS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YAO WEI JUN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LIGHTING ARTIST -  COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-PHILIPPE LEROUX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VISUAL EFFECTS ARTISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MAXIME DELERIS"/>
+<SingleColumnEntry center="GREGORY PICHE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MENUS &amp; INTERFACES GRAPHIC ARTISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NICOLAS BOURGES"/>
+<SingleColumnEntry center="CHRISTIAN CIMON"/>
+<SingleColumnEntry center="OSCAR MAR LEAL"/>
+<SingleColumnEntry center="DANNY POISSANT"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="AUDIO" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;AUDIO ARTIST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TRISTAN BERNIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;AUDIO DESIGNERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LOUIS-PHILIPPE DION"/>
+<SingleColumnEntry center="PAVEL MAXIMYTCHEV"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;AUDIO DESIGNER - COOP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAVID KRISTIAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MUSIC COMPOSED BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="KAVEH COHEN AND MICHAEL NIELSEN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL MUSIC COMPOSED BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AMON TOBIN "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="DJ Shadow – &quot;Building Steam With A Grain Of Salt [Alternate Take without Overdubs]&quot;"/>
+<SingleColumnEntry center="Words and Music by Josh Paul Davis and Jeremy Storch."/>
+<SingleColumnEntry center="Published by Daisy Lou Music (ASCAP)/ Sony/ATV Melody (ASCAP)/ "/>
+<SingleColumnEntry center="Universal Music Corp. on behalf of itself and Mo Wax Music Ltd."/>
+<SingleColumnEntry center="All rights reserved. Used by permission."/>
+<SingleColumnEntry center="Courtesy of Mo’ Wax Records / A&amp;M Records"/>
+<SingleColumnEntry center="under license from Universal Music Enterprises."/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="TRANSITIONS &amp; PROJECTED MOVIES" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSOCIATE PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SÉBASTIEN RACINE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ISABELLE ROCHETTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RICHARD NÉRON"/>
+<SingleColumnEntry center="ALEXANDRE NESZVECSKO"/>
+<SingleColumnEntry center="GHISLAIN OUELLET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SAM ENIOJUKAN"/>
+<SingleColumnEntry center="STÉPHANIE DESFORGES"/>
+<SingleColumnEntry center="PHILIPPE TRUDELLE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VISUAL EFFECTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PATRICK GOSSELIN"/>
+<SingleColumnEntry center="JEAN-RENÉ TRUDEL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LIGHTING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="VIRGINIE CINQ-MARS"/>
+<SingleColumnEntry center="VINCENT CLÉMENÇON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SPECIAL EFFECTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-RENÉ TRUDEL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MATTE PAINTING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BENOIT LADOUCEUR"/>
+<SingleColumnEntry center="JOHN BIGORGNE"/>
+<SingleColumnEntry center="OLIVIER MARTIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;STORYBOARDS &amp; ILLUSTRATIONS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STÉPHANE TURGEON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;COMPOSITING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARK KINKELIN"/>
+<SingleColumnEntry center="LOUISE MCDONALD"/>
+<SingleColumnEntry center="JIHANE GEADAH"/>
+<SingleColumnEntry center="JEAN-SÉBASTIEN SAVARD"/>
+<SingleColumnEntry center="PHILIPPE DÉSIRONT"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="MARKETING" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SENIOR INTERNATIONAL BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ÉRIC GALLANT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;INTERNATIONAL BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="EMMANUEL FAUCHEZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SENIOR INTERNATIONAL PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRE RÉMY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;INTERNATIONAL PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DIMITRI GOCHGARIAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSISTANT INTERNATIONAL PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JÉRÔME LECLERC-COUTURE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MARKETING INTERNS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SERGE BERIZIKY"/>
+<SingleColumnEntry center="ALEXANDRE BROCHU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SENIOR COMMUNITY DEVELOPER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LI C. KUO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;COMMUNITY DEVELOPER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRIS EASTON"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="UBISOFT UNITED STATES" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRESIDENT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LAURENT DETOC"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SVP SALES AND MARKETING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TONY KEY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MARKETING DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ADAM NOVICKAS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSOCIATE MARKETING DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SAM SALIBA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SENIOR BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TOM YU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSOCIATE BRAND MANAGER &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SHANE BIERWITH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SENIOR PR MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TIM CUMMINS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSOCIATE DIGITAL MARKETING MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RENELLY MOREL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WEBSITE PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SEVERIN SAULIERE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PURCHASING&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="KATRINA MEDEMA" right="EMMY LEE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;E-COMMERCE&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="BRENDA PANAGROSSI" right="CHIEH CHEN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;B2B SALES AND PARTNERSHIPS&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="ANDY SWANSON" right="JEFFREY DICKSTEIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROMOTIONS&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="MELANIE DESLIENS" right="KRISTINA FLUCKE"/>
+<DoubleColumnEntry left="LILY ATKINS" right="ADAM CHUN-AVILA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MEDIA&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="JOE RONGAVILLA" right="NATALIE OCHOA"/>
+<DoubleColumnEntry left="ADAM KRAUSE" right="DAVID HANDOG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CREATIVE SERVICES&lt;/u&gt;&lt;/b&gt;"/>
+<TripleColumnEntry left="BRIAN TIPPIE" center="RYAN MOLYNEAUX" right="SHARON ORTIZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOYALTY AND CRM&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="DAN MORRILL" right="THOMAS PADERES"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;RETAIL MARKETING&lt;/u&gt;&lt;/b&gt;"/>
+<TripleColumnEntry left="MIKE EISENBERG" center="CHERRIE CHIU" right="ELLEN LEE"/>
+<TripleColumnEntry left="LAURA WONG" center="CHRIS LYONS" right="GRAHAM RIOS"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="UBISOFT EMEA" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA EXECUTIVE DIRECTOR &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALAIN CORRE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA CHIEF OPERATING OFFICER &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STÉPHANIE  PEROTTI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA MARKETING DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JOHN PARKES"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA MARKETING GROUP MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SOPHIE COLSON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA SENIOR BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ÉRIC MOUTARDIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA ASSISTANT BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS-XAVIER DENIELE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;UNITED KINGDOM BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MATT BENSON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GERMANY BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MICHAEL THIELMANN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;FRANCE BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FLORENT GREFFE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SPAIN BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PABLO ABELLÁN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ITALY BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARCO CAPRELLI/ STEFANO RIGOLDI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;NETHERLANDS BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MICHIEL VERHEIJDT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BELGIUM BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="XANDER VALKIERS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DENMARK BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MORTEN RYBERG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SWITZERLAND BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GIL GRANJEAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;AUSTRIA BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="EUGEN KNIPPEL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;POLAND BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RAFAL ADASIAK"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;AUSTRALIA BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BEN TAYLOR / MATTHEW TANG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CHINA BRAND MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YVONNE CHAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SOUTH KOREA TERRITORY MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SAN KIM"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;JAPAN MARKETING MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SACHIKO MIYATA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA EMERGING MARKET MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAN GARDENER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA SENIOR PR SPECIALIST&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="JÉROME BENZADON" right="PETER HAMMER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA DIGITAL MARKETING MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GUILLAUME DE BUTLER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA TRADE MARKETING TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="DAMIEN NEYMARC" right="TAHAR HAMZAOUI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA PAPER PARTS TRAFFIC TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="BLANDINE VIEGAS" right="DIMITRI BISMUTH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA MANUFACTURING PLANNING  TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left=" SARIA SALEH" right="GUILLAUME MAMMI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA B2B SALES AND PARTNERSHIP TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<TripleColumnEntry left="AMY JENKINS" center=" CAROLINE LAMACHE" right="CAROLINE LUDMANN"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="CONSUMER AND MARKET KNOWLEDGE" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;HEAD OF CMK&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRÉDÉRIQUE BURLOT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CMK DIRECTOR, TRADITIONAL GAMES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHARLES DU RÉAU "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CONSUMER RESEARCH SENIOR ANALYST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SYLVAIN CONSTANTIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CONSUMER RESEARCH ANALYSTS&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="GRÉGOIRE LALOUX  " right="AMBRE LIZUREY"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="CAST" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MAIN CAST&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="MICHAEL IRONSIDE" right="as SAM FISHER"/>
+<DoubleColumnEntry left="LYNNE ADAMS" right="as PRESIDENT CALDWELL"/>
+<DoubleColumnEntry left="TYRONE BENSKIN" right="as LUCIAS GAILLARD"/>
+<DoubleColumnEntry left="CLAUDIA BESSO" right="as ANNA GRIMSDOTTIR"/>
+<DoubleColumnEntry left="MARIA BIRCHER" right="as DENISE MARTINEZ"/>
+<DoubleColumnEntry left="TEALE BISHOPRIC" right="as SARAH FISHER (YOUNG)"/>
+<DoubleColumnEntry left="DANNY BLANCO-HALL" right="as SHAWN ROBERTSON"/>
+<DoubleColumnEntry left="MARK CAMACHO" right="as VALENTIN LESOVSKY"/>
+<DoubleColumnEntry left="GRAHAM CUTHBERTSON" right="as CHARLIE FRYMAN"/>
+<DoubleColumnEntry left="LARRY DAY" right="as OSCAR LABOY &amp; V.P. CALVIN SAMSON"/>
+<DoubleColumnEntry left="DUSAN DUKIC" right="as SERGEI TORBINSKY"/>
+<DoubleColumnEntry left="KYLE GATEHOUSE" right="as WARREN VALENTINE"/>
+<DoubleColumnEntry left="AL GOULEM" right="as  DIMITRI GRAMKOS  &amp;  BORIS SYCHEV"/>
+<DoubleColumnEntry left="TREVOR HAYES" right="as COL. JEREMY PRENTISS"/>
+<DoubleColumnEntry left="ALEX IVANOVICI" right="as MIKAHIL LOSKOV KESTRAL"/>
+<DoubleColumnEntry left="DON JORDAN" right="as IRVING LAMBERT"/>
+<DoubleColumnEntry left="HOLLY O’BRIEN" right="as MAYA VALENTINA"/>
+<DoubleColumnEntry left="VICTORIA SANCHEZ" right="as SARAH FISHER"/>
+<DoubleColumnEntry left="TERRENCE SCAMELL" right="as BEN HANSEN"/>
+<DoubleColumnEntry left="HOWARD SIEGEL" right="as VICTOR COSTE"/>
+<DoubleColumnEntry left="ELIAS TOUFEXIS" right="as ANDREI KOBIN"/>
+<DoubleColumnEntry left="JAMES A. WOODS" right="as TOM REED"/>
+<DoubleColumnEntry left="EDWARD YANKIE" right="as JOHN DRAKE ARCHER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL CAST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEX BISPING"/>
+<SingleColumnEntry center="MICHELLE BOBACK"/>
+<SingleColumnEntry center="NICOLE BRABER "/>
+<SingleColumnEntry center="ADRIAN BURHOP "/>
+<SingleColumnEntry center="ALISON CÔTÉ"/>
+<SingleColumnEntry center="ROBERT CROOKS"/>
+<SingleColumnEntry center="LUCINDA DAVIS "/>
+<SingleColumnEntry center="FRÉDÉRICK DE GRANDPRÉ "/>
+<SingleColumnEntry center="HOLLY GAUTHIER-FRANKEL "/>
+<SingleColumnEntry center="TYLER HALL "/>
+<SingleColumnEntry center="GREGORY HLADY "/>
+<SingleColumnEntry center="MARK HAUSER "/>
+<SingleColumnEntry center="MATT HOLLAND "/>
+<SingleColumnEntry center="ANNA HOPKINS "/>
+<SingleColumnEntry center="MARCEL JEANNIN "/>
+<SingleColumnEntry center="STÉPHANE JULIEN"/>
+<SingleColumnEntry center="DOMINIC LACASSE"/>
+<SingleColumnEntry center="STEVEN LEBLANC"/>
+<SingleColumnEntry center="SARA LEGER "/>
+<SingleColumnEntry center="VITALI MAKAROV "/>
+<SingleColumnEntry center="CHADI MAROUF "/>
+<SingleColumnEntry center="LAITH MAROUF "/>
+<SingleColumnEntry center="HUGO MATTE"/>
+<SingleColumnEntry center="CARLO MESTRONI "/>
+<SingleColumnEntry center="MICHEL PERRON "/>
+<SingleColumnEntry center="NATHAN PRONYSHYN "/>
+<SingleColumnEntry center="BRADY MOFFATT RANDALL   "/>
+<SingleColumnEntry center="ANTONELLA RUFFALO"/>
+<SingleColumnEntry center="SAM STONE "/>
+<SingleColumnEntry center="TJ STORM"/>
+<SingleColumnEntry center="LEE VILLENEUVE"/>
+<SingleColumnEntry center="BRETT WATSON "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;KRAV MAGA SPECIALIST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="THIERRY CIMKAUSKAS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="AUDIO/VIDEO STUDIO" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR, AUDIO/VIDEO STUDIO&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JÉRÉMI VALIQUETTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TALENT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NANCY LAROCQUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MUSIC LICENSING COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEREMY BLECHET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;FOLEY ARTIST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TCHAE MEASROCH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SOUND EDITORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="KARL LAMOUREUX"/>
+<SingleColumnEntry center="RAYMOND LEGAULT"/>
+<SingleColumnEntry center="MARC LÉVEILLÉ"/>
+<SingleColumnEntry center="DENIS SAINDON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MUSIC EDITORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BÉNÉDICTE OUIMET"/>
+<SingleColumnEntry center="SIMON LANDRY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICES RECORDED IN MONTREAL BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="UBISOFT"/>
+<SingleColumnEntry center="WAVE GENERATION"/>
+<SingleColumnEntry center="POINT D’ORGUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICES MANAGED AND RECORDED IN L.A. BY &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BLINGLIGHT"/>
+<SingleColumnEntry center="LEV CHAPELSKY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARC CAMACHO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CASTING COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN BOUCHER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SOUND TECHNICIANS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GEOFFREY COTE"/>
+<SingleColumnEntry center="JOCELYN DAOUST"/>
+<SingleColumnEntry center="SHAUN-NICOLAS GALLAGHER"/>
+<SingleColumnEntry center="DIDIER GAGNON"/>
+<SingleColumnEntry center="SIMON LEDUC"/>
+<SingleColumnEntry center="EMMANUEL NOVERO"/>
+<SingleColumnEntry center="MATHIEU RODIER"/>
+<SingleColumnEntry center="GABRIEL RONDEAU"/>
+<SingleColumnEntry center="JEAN-CHRISTOPHE VERBERT"/>
+<SingleColumnEntry center="STUDIO POINT D'ORGUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MARKETING VIDEO COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SABRINA JACQUES"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MARKETING VIDEO EDITOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANEESAH CRAWLEY"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="C4" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ART DIRECTORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LUDGER SAINTELIEN"/>
+<SingleColumnEntry center="XAVIER THOMAS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SOPHIE CÔTÉ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;COMMUNICATION ARTISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEREMY DER"/>
+<SingleColumnEntry center="PASCAL DE SAMPAÏO"/>
+<SingleColumnEntry center="HUGO DESCHAMPS"/>
+<SingleColumnEntry center="ANTHONY GUEBELS"/>
+<SingleColumnEntry center="PATRICK HUDON"/>
+<SingleColumnEntry center="PHILIPPE MAGNIN"/>
+<SingleColumnEntry center="ÉRIC MAILHOT"/>
+<SingleColumnEntry center="MAXIME PROULX"/>
+<SingleColumnEntry center="ADAM STEEVES"/>
+<SingleColumnEntry center="ROBIN VERET"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="GAME-FILM / MARKETING TOOL PROGRAMMING TEAM" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="PIERRE BLAIZEAU"/>
+<SingleColumnEntry center="PATRICK SAUVAGEAU"/>
+<SingleColumnEntry center="JEAN-FRANÇOIS GAGNON"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="HUMAN RESOURCES" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SENIOR HR CONSULTANTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DOMINIQUE NOURRY"/>
+<SingleColumnEntry center="STÉPHANIE RAJOT-PEILLER"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="IT OPERATIONS" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DEPUTY DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GENEVIEVE DICAIRE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;HELP DESK&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GENEVIEVE MENARD"/>
+<SingleColumnEntry center="MICHEL TREMBLAY"/>
+<SingleColumnEntry center="MARTIN POIRIER"/>
+<SingleColumnEntry center="MARTIN BERNARD"/>
+<SingleColumnEntry center="BENOIT FILIATREAULT"/>
+<SingleColumnEntry center="ALEXANDRE DION"/>
+<SingleColumnEntry center="BUN LEANG CHHOUR"/>
+<SingleColumnEntry center="SONIA RODRIGUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL SUPPORT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-MAXIME BOISVERT"/>
+<SingleColumnEntry center="ALEX DANDURAND"/>
+<SingleColumnEntry center="WILLIAM LAMY"/>
+<SingleColumnEntry center="DOMINIC MASTRANGELO"/>
+<SingleColumnEntry center="PHILIPPE MOUSSIN"/>
+<SingleColumnEntry center="ERIC MURPHY"/>
+<SingleColumnEntry center="DENIS VERFAILLIE"/>
+<SingleColumnEntry center="LOUIS-PHILIPPE BRISSETTE"/>
+<SingleColumnEntry center="NICOLAS CHAMPAGNE"/>
+<SingleColumnEntry center="BENOIT EDE"/>
+<SingleColumnEntry center="RICHARD EWING"/>
+<SingleColumnEntry center="MARC-ANDRE FILLION"/>
+<SingleColumnEntry center="BENOIT FONTAINE"/>
+<SingleColumnEntry center="DANY LEPINE"/>
+<SingleColumnEntry center="CAROLINE TAILLEFER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="NIVEN COMILANG"/>
+<SingleColumnEntry center="AGOSTINO DEMARTINIS"/>
+<SingleColumnEntry center="CLAUDY DORELIEN"/>
+<SingleColumnEntry center="CEDRIK HUDON"/>
+<SingleColumnEntry center="MATHIEU LALIBERTE"/>
+<SingleColumnEntry center="FRANCOIS PICHE"/>
+<SingleColumnEntry center="CHRISTOPHE SICARD"/>
+<SingleColumnEntry center="MARTIN THERRIEN"/>
+<SingleColumnEntry center="FREDERIC TRUONG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;STORE&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MICHEL DURAND"/>
+<SingleColumnEntry center="LAURENT MALLETTE"/>
+<SingleColumnEntry center="ROGER SAINDON"/>
+<SingleColumnEntry center="JONATHAN VENNE"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="IT PRODUCTION" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DEPUTY DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FREDERIC BERNARD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROJECT MANAGERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SEBASTIEN HINSE"/>
+<SingleColumnEntry center="ANNIE MORNEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL ARCHITECT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANK ZHANG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DATA ANALYST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ERIC HAZAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOLS TESTER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LUC GAGNON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="OLIVIER L’HEUREUX"/>
+<SingleColumnEntry center="MARIUS UNGUREANU"/>
+<SingleColumnEntry center="FRANCOIS HUARD"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="LOCALIZATION" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR, MONTREAL LOCALIZATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FREDERIQUE FOURNY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION PROJECT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAVID COULOMBE"/>
+<SingleColumnEntry center="EMERIC LE JOUAN "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION INTEGRATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="UNAI GOMEZ ONRUBIA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;FRENCH VERSION BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AGNÈS LETOURNEUR "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TRANSLATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="OLIVIER COLLOMBAT"/>
+<SingleColumnEntry center="XAVIER KEMMLEIN"/>
+<SingleColumnEntry center="HÉLÈNE MANGIN"/>
+<SingleColumnEntry center="XAVIER VIBERT"/>
+<SingleColumnEntry center="FRANÇOIS YAIGRE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;AUDIO PROJECT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="OLIVIER RABAT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;RECORDING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AT"/>
+<SingleColumnEntry center="DUNE SOUND Studios - Paris"/>
+<SingleColumnEntry center="BY"/>
+<SingleColumnEntry center="JEAN-BAPTISTE SAINT-POL"/>
+<SingleColumnEntry center="JOHANN GRANDIN"/>
+<SingleColumnEntry center="FRANCOIS NAVARRO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL RECORDING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GAME ON AUDIO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE DIRECTION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIAL LE MINOUX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSISTED BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PASCAL QUILICHINI"/>
+<SingleColumnEntry center="XAVIER VIBERT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;POST PRODUCTION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-BAPTISTE SAINT-POL"/>
+<SingleColumnEntry center="YANN LAFERRERE"/>
+<SingleColumnEntry center="KEVIN KRUEGER"/>
+<SingleColumnEntry center="FRANCOIS NAVARRO"/>
+<SingleColumnEntry center="CLEMENT FAURE-BRAC "/>
+<SingleColumnEntry center="AND"/>
+<SingleColumnEntry center="POINT D'ORGUE"/>
+<SingleColumnEntry center="GAME ON AUDIO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CASTING MANAGEMENT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ISABELLE NORMAND"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE TALENT&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="ANTOINE ADRIEN" right="as LESOVSKY"/>
+<DoubleColumnEntry left="BENOIT ALLEMANE" right="as LUCIUS GALLIARD"/>
+<DoubleColumnEntry left="PATRICE BAUDRIER" right="as SERGEI"/>
+<DoubleColumnEntry left="DANIEL BERETTA" right="as SAM FISHER"/>
+<DoubleColumnEntry left="DAMIEN BOISSEAU" right="as ARCHER"/>
+<DoubleColumnEntry left="BERNARD BOLLET" right="as TOM REED"/>
+<DoubleColumnEntry left="PATRICK BORG" right="as VICTOR COSTE"/>
+<DoubleColumnEntry left="LAURENCE BREHERET" right="as DENISE MARTINEZ"/>
+<DoubleColumnEntry left="MARIE DIOT" right="as MAYA VALENTINA"/>
+<DoubleColumnEntry left="PASCAL GERMAIN" right="as COL JEREMY PRENTISS"/>
+<DoubleColumnEntry left="NATHALIE HOMS" right="as ANNA GRIMSDOTTIR"/>
+<DoubleColumnEntry left="EMMANUEL KARSEN" right="as ANDRIY KOBIN"/>
+<DoubleColumnEntry left="DANIEL LOBE" right="as SHAWN ROBERTSON"/>
+<DoubleColumnEntry left="CELINE MELLOUL" right="as SARAH FISHER"/>
+<DoubleColumnEntry left="CHRISTINE PARIS" right="as PRESIDENT CALDWELL"/>
+<DoubleColumnEntry left="ERIC PETER" right="as COL BYKHOV"/>
+<DoubleColumnEntry left="YANN PICHON" right="as DMITRI GRAMKOS"/>
+<DoubleColumnEntry left="BORIS RHELINGER" right="as KESTREL"/>
+<DoubleColumnEntry left="MATHIEU RIVOLIER" right="as GEN KERZHAKOV"/>
+<DoubleColumnEntry left="STEPHANE RONCHEWSKI" right="as OSCAR LABOY"/>
+<DoubleColumnEntry left="PHILIPPE SOLLIER" right="as TAGIZADE"/>
+<DoubleColumnEntry left="PIERRE TESSIER" right="as BEN HANSEN"/>
+<DoubleColumnEntry left="GABRIELLE THOUIN" right="as SARAH FISHER YOUNG"/>
+<DoubleColumnEntry left="ANTOINE TOME" right="as IRVING LAMBERT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL VOICES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CYRILLE ARTAUX"/>
+<SingleColumnEntry center="SOPHIE BARANES"/>
+<SingleColumnEntry center="EMMANUEL BONAMY"/>
+<SingleColumnEntry center="MARC BRETONNIERE"/>
+<SingleColumnEntry center="PASCALE CHEMIN"/>
+<SingleColumnEntry center="MARIE CHEVALOT"/>
+<SingleColumnEntry center="BENOIT DU PAC"/>
+<SingleColumnEntry center="CEDRIC DUMOND"/>
+<SingleColumnEntry center="ERIC ETCHEVERRY"/>
+<SingleColumnEntry center="XAVIER FAGNON"/>
+<SingleColumnEntry center="EMMANUEL GRADI"/>
+<SingleColumnEntry center="THOMAS GUITARD"/>
+<SingleColumnEntry center=" JOCHEN HAEGELE"/>
+<SingleColumnEntry center="THIERRY KAZAZIAN"/>
+<SingleColumnEntry center="DAVID KRUGER"/>
+<SingleColumnEntry center="MARTIAL LE MINOUX"/>
+<SingleColumnEntry center="BRUNO MAGNE"/>
+<SingleColumnEntry center="SEBASTIEN MAGNOUX"/>
+<SingleColumnEntry center="CYRILLE MONGE"/>
+<SingleColumnEntry center="CAROLINE MOZZONE"/>
+<SingleColumnEntry center="OLIVIER PEISSEL"/>
+<SingleColumnEntry center="JEAN-PASCAL QUILICHINI"/>
+<SingleColumnEntry center="EMANUEL RAUSENBERGER"/>
+<SingleColumnEntry center="PHILIPPE ROULLIER"/>
+<SingleColumnEntry center="STEPHANE ROUX"/>
+<SingleColumnEntry center="MARC SAEZ"/>
+<SingleColumnEntry center="SERGE THIRIET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SPANISH VERSION BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AGUA MASS MEDIA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROJECT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ESPERANZA HERNÁNDEZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;HISTORIC AND LINGUISTIC CONSULTANT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JAVIER NEGRETE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TRANSLATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TXUS PÉREZ"/>
+<SingleColumnEntry center="AURELIO SÁIZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ARTISTIC AND DUBBING DIRECTION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ESPERANZA HERNÁNDEZ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SOUND PRODUCTION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JESÚS LÁZARO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE TALENT&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="LICIA ALONSO" right="as PRESIDENT CALDWELL"/>
+<DoubleColumnEntry left="MAR BORDALLO" right="as SARAH FISHER"/>
+<DoubleColumnEntry left="OLGA CANO" right="as ANNA GRIMSDOTTIR"/>
+<DoubleColumnEntry left="HÉCTOR CANTOLLA" right="as JEREMY PRENTISS"/>
+<DoubleColumnEntry left="EDUARDO DEL HOYO" right="as BEN HANSEN"/>
+<DoubleColumnEntry left="FERNANDO DE LUIS" right="as ANDRYIN KOBIN"/>
+<DoubleColumnEntry left="JUAN ANTONIO GÁLVEZ" right="as LUCIUS GALLIARD"/>
+<DoubleColumnEntry left="JOSE ANGEL JUANES" right="as CALVIN SAMSON"/>
+<DoubleColumnEntry left="CARLOS KANIOWSKY" right="as SHAWN ROBERTSON"/>
+<DoubleColumnEntry left="JUAN LOGAR" right="as ARCHER"/>
+<DoubleColumnEntry left="ANA MARÍA MARÍ" right="as MAYA VALENTINA"/>
+<DoubleColumnEntry left="LUIS MÁS" right="as VICTOR COSTE"/>
+<DoubleColumnEntry left="IVÁN MUELAS" right="as KESTREL"/>
+<DoubleColumnEntry left="PEYO" right="as TOM REED"/>
+<DoubleColumnEntry left="LUIS PORCAR" right="as WARREN VALENTINE"/>
+<DoubleColumnEntry left="LUIS REINA" right="as DMITRI GRAMKOS"/>
+<DoubleColumnEntry left="PACO VAQUERO" right="as LESOVSKY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL VOICES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ABRAHAM AGUILAR"/>
+<SingleColumnEntry center="JUAN AMADOR"/>
+<SingleColumnEntry center="BEATRIZ BERCIANO"/>
+<SingleColumnEntry center="LORENZO BETERA"/>
+<SingleColumnEntry center="EDUARDO BOSCH"/>
+<SingleColumnEntry center="ROBERTO CUENCA"/>
+<SingleColumnEntry center="SAINZ DE LA MAZA"/>
+<SingleColumnEntry center="ROBERTO ENCINAS"/>
+<SingleColumnEntry center="ALEJANDRO GARCÍA"/>
+<SingleColumnEntry center="JUAN ANTONIO GARCÍA"/>
+<SingleColumnEntry center="ANA JIMÉNEZ"/>
+<SingleColumnEntry center="JUAN CARLOS LOZANO"/>
+<SingleColumnEntry center="LUIS MANUEL MARTÍN"/>
+<SingleColumnEntry center="ISACHA MENGÍBAR"/>
+<SingleColumnEntry center="ENRIQUE SANTARÉN"/>
+<SingleColumnEntry center="SILVIA SARMENTERA"/>
+<SingleColumnEntry center="CLAUDIO SERRANO"/>
+<SingleColumnEntry center="PEDRO TENA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ITALIAN VERSION BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ORANGE STUDIO SRL"/>
+<SingleColumnEntry center="GABRIELE VEGETTI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROJECT MANAGEMENT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GIAN MARIA BATTISTINI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TRANSLATION AND ADAPTATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANCESCA PEZZOLI"/>
+<SingleColumnEntry center="GIAN MARIA BATTISTINI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE DIRECTION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GIAN MARIA BATTISTINI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE DIRECTION ASSISTANT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ILARIA ZAMBONI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;STUDIO ENGINEERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STUDIO ARKÌ SRL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE TALENT&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="PIETRO BABINA" right="as BEN HANSEN"/>
+<DoubleColumnEntry left=" ANNAGIULIA BELLETTI" right="as ANNA GRIMSDOTTIR"/>
+<DoubleColumnEntry left="BEATRICE CAGGIULA" right="as SARAH FISHER YOUNG"/>
+<DoubleColumnEntry left="BEATRICE CAGGIULA" right="as SARAH FISHER"/>
+<DoubleColumnEntry left="PAOLO DE SANTIS" right="as TOM REED"/>
+<DoubleColumnEntry left="GABRIELE DUMA" right="as CALVIN SAMSON"/>
+<DoubleColumnEntry left="RENZO FERRINI" right="as DMITRI GRAMKOS"/>
+<DoubleColumnEntry left="GIANNI GAUDE" right="as LUCIUS GALLIARD"/>
+<DoubleColumnEntry left="LELLO LOMBARDI" right="as KESTREL"/>
+<DoubleColumnEntry left="MATTEO MARCHETTA" right="as RUSSIAN SOLDIER 1"/>
+<DoubleColumnEntry left="FRANCESCO MEI" right="as ANDRIY KOBIN"/>
+<DoubleColumnEntry left="DARIO OPPIDO" right="as SAM FISHER"/>
+<DoubleColumnEntry left="MASSIMO ANTONIO ROSSI" right="as VICTOR COSTE"/>
+<DoubleColumnEntry left="BRUNELLA ZACCHERINI" right="as MAYA VALENTINA"/>
+<DoubleColumnEntry left="MATTEO ZANOTTI" right="as ARCHER"/>
+<DoubleColumnEntry left="ALESSANDRO ZURLA" right="as RUSSIAN SOLDIER 2"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL VOICES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LUCA COMASTRI"/>
+<SingleColumnEntry center="GIOVANNA DEGLI ESPOSTI"/>
+<SingleColumnEntry center="DAVIDE DEL NINNO"/>
+<SingleColumnEntry center="ANDREA FUGARO"/>
+<SingleColumnEntry center="MASSIMO MALUCELLI"/>
+<SingleColumnEntry center="STEFANO POZZI"/>
+<SingleColumnEntry center="GIANNI QUILLICO"/>
+<SingleColumnEntry center="GIGI ROSA"/>
+<SingleColumnEntry center="FEDERICA TABORI"/>
+<SingleColumnEntry center="MASSIMILIANO TRADII"/>
+<SingleColumnEntry center="DARIO TURRINI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GERMAN VERSION BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PARTNERTRANS"/>
+<SingleColumnEntry center="PROJECT MANAGEMENT"/>
+<SingleColumnEntry center="MARKUS LUDOLF"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TRANSLATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEFFEN ANDERS"/>
+<SingleColumnEntry center="CHRISTIAN SCHNEIDER"/>
+<SingleColumnEntry center="DANIELA SZOMM"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;HISTORICAL AND LINGUISTIC DIRECTION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARKUS LUDOLF"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE RECORDING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RECORDED AT G&amp;G STUDIOS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;STUDIO ENGINEERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JORN FRIESE"/>
+<SingleColumnEntry center="RICHARD WESTERHAUS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE DIRECTION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EXECUTIVE VOICE DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRISTIAN SCHNEIDER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSISTANT VOICE DIRECTORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JORN FRIESE"/>
+<SingleColumnEntry center="RICHARD WESTERHAUS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE TALENT&lt;/u&gt;&lt;/b&gt;"/>
+<DoubleColumnEntry left="THOMAS BALOU-MARTIN" right="as KESTREL"/>
+<DoubleColumnEntry left="ROLF BERG" right="as VICTOR COSTE"/>
+<DoubleColumnEntry left="DANIELA BETTE" right="as SARAH FISHER"/>
+<DoubleColumnEntry left="PETRA GLUNZ-GROSCH" right="as MAYA VALENTINA"/>
+<DoubleColumnEntry left="MARKUS HAASE" right="as ARCHER"/>
+<DoubleColumnEntry left="GREGOR HOPPNER" right="as TOM REED"/>
+<DoubleColumnEntry left="TOM JACOBS" right="as BEN HANSEN"/>
+<DoubleColumnEntry left="MARTIN KESSLER" right="as SAM FISHER"/>
+<DoubleColumnEntry left="ANDREAS MEESE" right="as DMITRI GRAMKOS"/>
+<DoubleColumnEntry left="FRITZ ROTT" right="as ANDRIY KOBIN"/>
+<DoubleColumnEntry left="LAURA SCHLUTTER" right="as SARAH FISHER - YOUNG"/>
+<DoubleColumnEntry left="KARL-HEINZ TAFEL" right="as LUCIUS GALLIARD"/>
+<DoubleColumnEntry left="IJA WELTER" right="as ANNA GRIMSDOTTIR"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL VOICES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="VITTORIO ALFIERI"/>
+<SingleColumnEntry center="RENIER BAAKEN"/>
+<SingleColumnEntry center="HANS BAYER"/>
+<SingleColumnEntry center="SUSANNE DOBRUSSKIN"/>
+<SingleColumnEntry center="THOMAS FRIEBE"/>
+<SingleColumnEntry center="MATTHIAS HAASE"/>
+<SingleColumnEntry center="KIRSTIN HESSE"/>
+<SingleColumnEntry center="RICHARD HUCKE"/>
+<SingleColumnEntry center="MICHAELA KAMETZ"/>
+<SingleColumnEntry center="HANS-GERD KILBINGER"/>
+<SingleColumnEntry center="MICHAEL-CHE KOCH"/>
+<SingleColumnEntry center="FABIAN KÖRNER"/>
+<SingleColumnEntry center="THOMAS KRAUSE"/>
+<SingleColumnEntry center="BERND KUSCHMANN"/>
+<SingleColumnEntry center="THOMAS LANGNER"/>
+<SingleColumnEntry center="KORDULA LEISSE"/>
+<SingleColumnEntry center="KATJA LIEBING"/>
+<SingleColumnEntry center="JÜRG LÖW"/>
+<SingleColumnEntry center="DIETER MAISE"/>
+<SingleColumnEntry center="MOMME MOMMSEN"/>
+<SingleColumnEntry center="HEIKO OBERMÖLLER"/>
+<SingleColumnEntry center="MARKUS PFEIFFER"/>
+<SingleColumnEntry center="SIMON RODEN"/>
+<SingleColumnEntry center="PHILIPP SCHEPMANN"/>
+<SingleColumnEntry center="STEPHAN SCHLEBERGER"/>
+<SingleColumnEntry center="VOLKER WOLF"/>
+<SingleColumnEntry center="VANESSA WUNSCH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SPECIAL THANKS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTINA ECKERT"/>
+<SingleColumnEntry center="THOMAS GESELL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;JAPANESE VERSION BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="UBISOFT.K.K"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MANAGING DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEVE MILLER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MARKETING DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YOSHIHISA TSUJI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SALES MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AKIO KOSHIBA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SHUNSUKE SAIKI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FUMIKO AOYAMA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION ASSISTANT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AIKO SUGANO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TRANSLATION&amp;ADAPTATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SMARTECH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE RECORDING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AC CREATE CO, LTD"/>
+<SingleColumnEntry center="RYOICHI UCHIKOSHI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VOICE TALENT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TESSYO GENDA"/>
+<SingleColumnEntry center="NORIO WAKAMOTO"/>
+<SingleColumnEntry center="RIKIYA KOYAMA"/>
+<SingleColumnEntry center="ATSUKO TANAKA"/>
+<SingleColumnEntry center="RYOKO SHIRAISHI "/>
+<SingleColumnEntry center="HISAO EGAWA"/>
+<SingleColumnEntry center="KUNIHIRO KAWAMOTO"/>
+<SingleColumnEntry center="KENTA MIYAKE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL VOICES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NAOKI BANDO"/>
+<SingleColumnEntry center="MASATO FUNAKI"/>
+<SingleColumnEntry center="KENJI HAMADA"/>
+<SingleColumnEntry center="MASAYO HOSONO"/>
+<SingleColumnEntry center="KATSUHISA HOUKI"/>
+<SingleColumnEntry center="HAJIME IIJIMA"/>
+<SingleColumnEntry center="ATSUSHI IMARUOKA"/>
+<SingleColumnEntry center="YUICHI ISHIGAMI"/>
+<SingleColumnEntry center="YASUYUKI KASE"/>
+<SingleColumnEntry center="SHOUTO KASHII"/>
+<SingleColumnEntry center="KAORU KATAKAI"/>
+<SingleColumnEntry center="MACHIKO KAWANA"/>
+<SingleColumnEntry center="YASUHIRO MAMIYA"/>
+<SingleColumnEntry center="YUKIHIRO MISONO"/>
+<SingleColumnEntry center="MITSURU OGATA"/>
+<SingleColumnEntry center="MASAYUKI OMORO"/>
+<SingleColumnEntry center="JIRO SATO"/>
+<SingleColumnEntry center="KOICHI SAKAGUCHI"/>
+<SingleColumnEntry center="YOSHIMITSU SHIMOYAMA"/>
+<SingleColumnEntry center="GO SHINOMIYA"/>
+<SingleColumnEntry center="HIROSHI SHIROKUMA"/>
+<SingleColumnEntry center="SHIGENORI SOYA"/>
+<SingleColumnEntry center="AKIMITSU TAKASE"/>
+<SingleColumnEntry center="HANA TAKEDA"/>
+<SingleColumnEntry center="EIJI YANAGISAWA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TESTING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAISUKE NOGUCHI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TESTING x POLE TO WIN CO., LTD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NORIAKI ISHIDA"/>
+<SingleColumnEntry center="ITTA KAWAMURA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;KOREAN VERSION BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="Ubisoft Entertainment Korea"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TERRITORY MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SUE HONG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SAN KIM"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SAN KIM"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION VENDOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="www.NeoG.net"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TRANSLATION&amp;TESTING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="Egg Kim @ NEOG"/>
+<SingleColumnEntry center="Luie Han  @ NEOG"/>
+<SingleColumnEntry center="David Kho  @ NEOG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DUTCH VERSION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="U-TRAX M.M.L."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="DANISH VERSION"/>
+<SingleColumnEntry center="U-TRAX M.M.L."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="NORWEGIAN VERSION"/>
+<SingleColumnEntry center="U-TRAX M.M.L."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="SWEDISH VERSION"/>
+<SingleColumnEntry center="U-TRAX M.M.L."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="POLISH VERSION"/>
+<SingleColumnEntry center="GAMEKEEPER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="RUSSIAN VERSION"/>
+<SingleColumnEntry center="GAME FACTORY INTERACTIVE (PC)"/>
+<SingleColumnEntry center="VELLOD COMPANY (XBOX 360)"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="LOCALIZATION MANAGER"/>
+<SingleColumnEntry center="ALEXANDER SOMOV (GFI)"/>
+<SingleColumnEntry center="ANASTASIA MURATOVA (VELLOD)"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="TRANSLATION"/>
+<SingleColumnEntry center="TATIANA VRABIE"/>
+<SingleColumnEntry center="MICHAEL GOLOVKIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="PROOFREADING"/>
+<SingleColumnEntry center="TATIANA VRABIE"/>
+<SingleColumnEntry center="EKATERINA RYAKHINA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="CZECH VERSION"/>
+<SingleColumnEntry center="PLAYMAN S.R.O."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="LOCALIZATION MANAGER"/>
+<SingleColumnEntry center="VÁCLAV POLÁČEK"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="TRANSLATION"/>
+<SingleColumnEntry center="MICHAL FARNÍK"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="PROOFREADING"/>
+<SingleColumnEntry center="TEAM PLAYMAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ENZYME TESTING LABS™&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WORLDWIDE PRODUCTION DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CAROLLJO MAHER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;HEAD OF PRODUCTION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RÉMY JULITA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION PROJECT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TRINE S. JACOBSEN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD TESTERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAVID MCCOMB"/>
+<SingleColumnEntry center="TOMMY INDRIETS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LOCALIZATION TESTERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRENCH:"/>
+<SingleColumnEntry center="VIVIANE DESCOMBES"/>
+<SingleColumnEntry center="AURÉLIE TAUFFLIEB"/>
+<SingleColumnEntry center="PATRICE TCHA SENGNOU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="ITALIAN:"/>
+<SingleColumnEntry center="DANIELE CAPACCETTI"/>
+<SingleColumnEntry center="LUISIANA CASILLO"/>
+<SingleColumnEntry center="ALBERTO VACCARI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="GERMAN:"/>
+<SingleColumnEntry center="ULRIKE BARWISCH"/>
+<SingleColumnEntry center="CARSTEN DITTMANN"/>
+<SingleColumnEntry center="ERIC PRAWIT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="SPANISH:"/>
+<SingleColumnEntry center="SERGIO HERRENO"/>
+<SingleColumnEntry center="ESPERANZA HUARANGA PIO"/>
+<SingleColumnEntry center="PENELOPE TORRES"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="DUTCH:"/>
+<SingleColumnEntry center="PIM UBERT"/>
+<SingleColumnEntry center="PAUL VAN PELT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="NORWEGIAN:"/>
+<SingleColumnEntry center="JOHAN HELGOE"/>
+<SingleColumnEntry center="TERJE LINGAAS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="DANISH:"/>
+<SingleColumnEntry center="JONAS S. CHRISTENSEN"/>
+<SingleColumnEntry center="MADS OVE LOFT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="SWEDISH:"/>
+<SingleColumnEntry center="TOMAS ANDERSSON"/>
+<SingleColumnEntry center="BJÖRN FRANSSON-SEMB"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="POLISH:"/>
+<SingleColumnEntry center="KAROL PAWLIK"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="RUSSIAN:"/>
+<SingleColumnEntry center="OLGA LEVSHINA"/>
+<SingleColumnEntry center="PAVEL SHUKHMAN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="CZECH:"/>
+<SingleColumnEntry center="PETR KOLMAN"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="MOCAP STUDIO" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR, MOCAP STUDIO&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JACQUES DUSSAULT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MOCAP SUPERVISOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CLAUDE COMEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION ASSISTANT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHARLÈNE GILBERT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MOCAP TECHNICIANS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STÉPHAN CHABOT"/>
+<SingleColumnEntry center="LUC LOUBAT"/>
+<SingleColumnEntry center="MATHIEU PAQUIN"/>
+<SingleColumnEntry center="MARTIN PIGEON"/>
+<SingleColumnEntry center="KEVIN O’NEIL"/>
+<SingleColumnEntry center="BRUNO ROY"/>
+<SingleColumnEntry center="DANIEL VENEMA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MOCAP TRACKERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-FRANCOIS CARRIER"/>
+<SingleColumnEntry center="MARTIN COTÉ"/>
+<SingleColumnEntry center="PATRICK GRIMWOOD"/>
+<SingleColumnEntry center="PHILIPPE PARENT"/>
+<SingleColumnEntry center="MARC-OLIVIER SABOURIN"/>
+<SingleColumnEntry center="DANNY MENARD"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="PLAYTEST LAB" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR, PLAYTEST LAB&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARIE-PIERRE DYOTTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PLAYTEST LAB TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRE FOREST BOUCHER"/>
+<SingleColumnEntry center="NICHOLAS SWEENEY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PLAYTEST COORDINATORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN MAHEUX-LESSARD"/>
+<SingleColumnEntry center="PHILIPPE LEDUC"/>
+<SingleColumnEntry center="PHILIPPE RENAUD"/>
+<SingleColumnEntry center="JEAN-CHRISTOPHE RODRIGUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;OBSERVERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LYNE ARCHAMBAULT"/>
+<SingleColumnEntry center="PIERRE BOYER "/>
+<SingleColumnEntry center=" BENOIT BRIÈRE"/>
+<SingleColumnEntry center="MARC-ANDRÉ BURCIKAS"/>
+<SingleColumnEntry center="JONATHAN DANKOFF"/>
+<SingleColumnEntry center="ANTOINE FORTIER-AUCLAIR"/>
+<SingleColumnEntry center=" BENOIT GAGNON"/>
+<SingleColumnEntry center="NICHOLAS MAINVILLE"/>
+<SingleColumnEntry center="NIKOLAS SCHMIDT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PLAYTEST LAB ASSISTANT COORDINATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MIA SOLE-MAJOR"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="SECURITY GROUP" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR, SECURITY &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRE MAJOR"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SECURITY ANALYSTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SÉBASTIEN HARBEC"/>
+<SingleColumnEntry center="BRUNO LEBLANC"/>
+<SingleColumnEntry center="LUC WENDOVER"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="TECHNOLOGY GROUP" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNOLOGY GROUP DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="QUENTIN GALLET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNOLOGY GROUP DEPUTY DIRECTORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN LAVOIE"/>
+<SingleColumnEntry center="SYLVAIN TROTTIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MANAGEMENT TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MIDDLEWARE PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEVE DESJARLAIS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MIDDLEWARE ENGINEERING LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RIMA BREK"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ONLINE PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BERNARD DESMONS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ONLINE ENGINEERING LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JÉRÔME DUPLAIX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOLS PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="OLIVIER GUEYDON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOLS ENGINEERING LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NICOLAS BEAUFILS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATION PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JULIE TRUONG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JIMMY BOULIANNE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNOLOGY GROUP COORDINATORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PATRICK CARRIÈRE"/>
+<SingleColumnEntry center="LAURENT CORBIÈRE"/>
+<SingleColumnEntry center="DAVID LÉVESQUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SERVICE TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SERVICE TEAM PRODUCT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEPHANE GRENIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;QA TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DANY AUBUT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOL PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRÉDÉRIC JEAN"/>
+<SingleColumnEntry center="FRANÇOIS MESSIER"/>
+<SingleColumnEntry center="ALAIN MÉTIVIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DATA MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXIS TREMBLAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL WRITER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ROBERT MOLLON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;INTERFACE DESIGNER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STÉPHANE LÉVESQUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATION TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATION TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RONALD BEIROUTI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATION PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN BARETTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DARE TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DARE TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="HUGUES ROUSSEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DARE PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STÉPHANE BUREAU"/>
+<SingleColumnEntry center="ISRAEL PRINCE-BELIVEAU"/>
+<SingleColumnEntry center="OUAMER DAHMANI"/>
+<SingleColumnEntry center="ÉRIC DESJARDINS"/>
+<SingleColumnEntry center="LUDOVIC DUCAS"/>
+<SingleColumnEntry center="JEAN-FRANCOIS GUAY"/>
+<SingleColumnEntry center="PIERRE SARRAZIN"/>
+<SingleColumnEntry center="FRANCOIS VEILLEUX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DARESTUDIO TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS MARTEL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DARESTUDIO PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARC BAILLARGEON"/>
+<SingleColumnEntry center="ALEXANDRE BORGIA"/>
+<SingleColumnEntry center="SÉBASTIEN LACHANCE"/>
+<SingleColumnEntry center="ISABELLE LAFON"/>
+<SingleColumnEntry center="BENOÎT LARIVIÈRE"/>
+<SingleColumnEntry center="FRÉDÉRIC MARSOLAIS "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOL PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHARLES NEPTON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOL TESTERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN NADEAU"/>
+<SingleColumnEntry center="NICOLA FERA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;FIRE TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;FIRE TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JOCELYN VEILLEUX-NOLIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;FIRE ARCHITECT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YOHANN DOS SANTOS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GEAR TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CYRIL PERRIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ARCHITECT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SÉBASTIEN LUSSIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GEAR PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PIERRE-PAUL DELISLE"/>
+<SingleColumnEntry center="CYRILLE GAUCLIN"/>
+<SingleColumnEntry center="FRANCIS PAGE"/>
+<SingleColumnEntry center="JEAN-FRANCOIS RICHARD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOL PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YANNICK CHOLETTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;OASIS TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRE PICHÉ"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;OASIS PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS CHARTRAND"/>
+<SingleColumnEntry center="SÉBASTIEN HIVON"/>
+<SingleColumnEntry center="MARIE DUHAIME-MAJOR"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOL TESTERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAVID BRIDET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;OASIS PRODUCT SPECIALIST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALAIN &quot;A.J.&quot; ABBYAD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;OASIS CONCEPT DESIGNER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DANNY COUTURE"/>
+<SingleColumnEntry center="FABIEN NOËL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ONLINE TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ONLINE ARCHITECT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CARL DIONNE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ONLINE TEAM COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SHAYNE MITCHELL"/>
+<SingleColumnEntry center="JUSTIN WONG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;RENDEZ-VOUS PLATFORM TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEADS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALAIN CORMIER"/>
+<SingleColumnEntry center="MARC LABBÉ"/>
+<SingleColumnEntry center="JEAN-MARC PRUD’HOMME"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PATRICE BEAUVAIS"/>
+<SingleColumnEntry center="ÉRIC BERTRAND"/>
+<SingleColumnEntry center="MICHAEL CATANZARITI"/>
+<SingleColumnEntry center="DENIS DE ANDRADE"/>
+<SingleColumnEntry center="SYLVAIN DEMERS"/>
+<SingleColumnEntry center="PATRICK DRAPEAU"/>
+<SingleColumnEntry center="MATTHIEU GABRIAC"/>
+<SingleColumnEntry center="BELA KAMPIS"/>
+<SingleColumnEntry center="BEHRANG KHOSHNOOD "/>
+<SingleColumnEntry center="DAN LE VAN"/>
+<SingleColumnEntry center="ROBERT LE VAN MAO"/>
+<SingleColumnEntry center="ARTHUR MONTHE"/>
+<SingleColumnEntry center="FABIEN NINOLES"/>
+<SingleColumnEntry center="ÉRIC ROCHELEAU"/>
+<SingleColumnEntry center="EMMANUEL YAO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOL PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN ASNONG"/>
+<SingleColumnEntry center="JOEL LIEBERMAN"/>
+<SingleColumnEntry center="KEVIN MARTINET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MULTIPLAYER ENGINE TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SÉBASTIEN BESSETTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN CARRIER"/>
+<SingleColumnEntry center="COLIN HO"/>
+<SingleColumnEntry center="MATUS KIRCHMAYER"/>
+<SingleColumnEntry center="SYLVAIN LACASSE"/>
+<SingleColumnEntry center="SCOTT SCHMEISSER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ONLINE QC &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FABIEN EID"/>
+<SingleColumnEntry center="STÉPHANE LÉTOURNEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;OPERATION TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEAM LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ARNAUD CHEVRIOT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DBAS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SERGE ADOURIAN"/>
+<SingleColumnEntry center="JOY CHEN "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOL PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LAURENT BOUCHARD"/>
+<SingleColumnEntry center="PABLO CORZO"/>
+<SingleColumnEntry center="THANH LIEM TRAN"/>
+<SingleColumnEntry center="SON NGUYEN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOL TESTERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MIKE CHIH CHIANG CHAO"/>
+<SingleColumnEntry center="PATRICK THERRIEN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="Multiplayer Connectivity by Quazal"/>
+<SingleColumnEntry center="This product contains copyrighted material owned or distributed"/>
+<SingleColumnEntry center="under authority by Quazal Technologies, Inc."/>
+<SingleColumnEntry center="Copyright 1998-2009, Quazal Technologies Inc. All Rights Reserved."/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="UBISOFT DIGITAL ARTS" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANNE LE BOUYONNEC"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSOCIATE PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-JACQUES TREMBLAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MIGUEL ANGEL MARTIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ISABELLE BISMUTH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ART DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PASCAL BLANCHE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ILLUSTRATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="HENRY FONG"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ANIMATORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LAURENT BERNIER"/>
+<SingleColumnEntry center="MATHIEU DUFRESNE"/>
+<SingleColumnEntry center="GIANLUCA FRATELLINI"/>
+<SingleColumnEntry center="SENDY GAGNE"/>
+<SingleColumnEntry center="HELENE LAVERTU"/>
+<SingleColumnEntry center="HYTHAM MORSY"/>
+<SingleColumnEntry center="OMAR MORSY"/>
+<SingleColumnEntry center="PATRICK PELLETIER"/>
+<SingleColumnEntry center="QUOC-NGHI TRAN"/>
+<SingleColumnEntry center="ODRÉE VEILLETTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;COMPOSITING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JIHANE GEADAH"/>
+<SingleColumnEntry center="LOUISE MCDONALD"/>
+<SingleColumnEntry center="DOMINIC TREMBLAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;RIGGING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PHILIPPE DUGAS"/>
+<SingleColumnEntry center="SIMON HABIB"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LIGHTING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANDRE BASTIEN"/>
+<SingleColumnEntry center="CAROLINE BOULAY"/>
+<SingleColumnEntry center="VIRGINIE CINQ-MARS"/>
+<SingleColumnEntry center="DOMINIQUE GRANDMONT"/>
+<SingleColumnEntry center="SEBASTIEN HEBERT"/>
+<SingleColumnEntry center="SAMUEL JACQUES"/>
+<SingleColumnEntry center="MYRIAM LAFOREST"/>
+<SingleColumnEntry center="GUYLAINE RHÉAUME"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SPECIAL EFFECTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARC-ANDRE CARBONNEAU"/>
+<SingleColumnEntry center="PIERRE CATAFORD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;MODELERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MAXIMILIEN ALBERT"/>
+<SingleColumnEntry center="JEAN-FRANCOIS DUVAL"/>
+<SingleColumnEntry center="ALEXANDRE GAGNE"/>
+<SingleColumnEntry center="FRÉDÉRIC MADORE"/>
+<SingleColumnEntry center="GUILLAUME TIBERGHIEN"/>
+<SingleColumnEntry center="BRAD WADDINGHAM"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TEXTURING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEVE FRASER"/>
+<SingleColumnEntry center="ISABELLE GAGNON"/>
+<SingleColumnEntry center="CATHERINE LANGEVIN"/>
+<SingleColumnEntry center="JESSICA LARIVE"/>
+<SingleColumnEntry center="TRAM LUONG"/>
+<SingleColumnEntry center="LUC VEILLETTE"/>
+<SingleColumnEntry center="BRAD WADDINGHAM"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EDITING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PIERRE AYOTTE"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="UPLAY IN GAME" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANDRÉ ROY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GAEL GIRARD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRE ARCHAMBAULT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JULIE CAZZARO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GAME DESIGNER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ADRIEN BANET-RIVET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SERVICE TECHNICAL LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="AKRAM GHOUSSOUB"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHARLY BERTRAND"/>
+<SingleColumnEntry center="CHARLES-SIMON VIAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BROWSER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ERIC FORTIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANCOIS CANTIN"/>
+<SingleColumnEntry center="MICHEL GAUTHIER"/>
+<SingleColumnEntry center="ALEXANDRE DESCHAMPAS"/>
+<SingleColumnEntry center="ABEDENOUR AZZEDINE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;UI&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TECHNICAL LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LOUIS-PHILIPPE MAURICE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GRAPHIC ARTIST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GHINA EL-CHEMALI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ACTION SCRIPT DEVELOPERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="WANDI ZHANG"/>
+<SingleColumnEntry center="GINO FOREST"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOLS &amp; QA TECHNICAL LEAD&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="VICTOR ZACHEV"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DATA MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NEIL REGO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TOOLS PROGRAMMERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRISTOPHER YAP"/>
+<SingleColumnEntry center="DRAGOS CRISTIAN FILIPESCU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TESTER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN LANGLOIS"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="UPLAY .COM" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WEB SERVICE MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CYRIL BEAUDAUX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WEB PRODUCTION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GIOVANNI DEL POZZO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WEB PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CLEMENT LETZELTER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WEBMASTERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRE LOISEL"/>
+<SingleColumnEntry center="DAVID QUIQUEMPOIX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WEB APPLICATION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="EMMANUEL DRU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA DIGITAL MARKETING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEPHANE CATHERINE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA CRM MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAMIEN GLORIEUX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;COMMUNITY DEVELOPMENT MANAGERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PHILIP NAVIDAD"/>
+<SingleColumnEntry center="BRUNO GUÉRIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;US SENIOR MANAGER, CRM &amp; LOYALTY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SCOTT DIXON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;US MANAGER, CRM &amp; LOYALTY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAN MORRIL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;THE UPLAY TEAM WISHES TO THANK FOR THEIR CONSTANT SUPPORT:&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PHILIPPE GUAY, DENIS BERTRAND, ALEXANDRE ROUSSEAU AND THE GLOBAL NETWORK SERVICES TEAM"/>
+<SingleColumnEntry center="ÉRIC TREMBLAY, JONATHAN MOREAU AND THE QC TEAM"/>
+<SingleColumnEntry center="THE SPLINTER CELL DEVELOPMENT TEAM"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="QUALITY CONTROL" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;STUDIO MANAGER, QUALITY CONTROL&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JONATHAN MOREAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;QUALITY CONTROL PROJECT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-DOMINIC AUDET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;QUALITY CONTROL TEAM LEADER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS ROY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DEVELOPMENT TESTERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARC ANGERS"/>
+<SingleColumnEntry center="MARC-PHILIPPE AUBIN"/>
+<SingleColumnEntry center="JOCELYN BASTIEN"/>
+<SingleColumnEntry center="KARINE BÉLANGER"/>
+<SingleColumnEntry center="MICHAEL CAMIRE"/>
+<SingleColumnEntry center="ELIOT CANEPA"/>
+<SingleColumnEntry center="MIGUEL CANEPA"/>
+<SingleColumnEntry center="ADRIEN CANTIN-MCDUFF"/>
+<SingleColumnEntry center="YOAN CHAMPAGNE"/>
+<SingleColumnEntry center="ALEXANDRE FERLAND"/>
+<SingleColumnEntry center="YAN GAGNON"/>
+<SingleColumnEntry center="ALEXANDRE GÉLINAS"/>
+<SingleColumnEntry center="FRANCIS GIGUÈRE"/>
+<SingleColumnEntry center="ALEXANDRE GRIERSON"/>
+<SingleColumnEntry center="OLIVIER GUILBAULT"/>
+<SingleColumnEntry center="ALIA HANOUCH"/>
+<SingleColumnEntry center="NICOLAS HUCKLE"/>
+<SingleColumnEntry center="SYLVAIN LAPOINTE"/>
+<SingleColumnEntry center="MARTIN LECLERC"/>
+<SingleColumnEntry center="MARIE-HÉLÈNE LECOMPTE"/>
+<SingleColumnEntry center="DAVID LOISELLE"/>
+<SingleColumnEntry center="MARTIN MARCOUX"/>
+<SingleColumnEntry center="MARC-ANDRÉ MONGEAU"/>
+<SingleColumnEntry center="CHARLES NGUYEN"/>
+<SingleColumnEntry center="CHRISTINE OLSEN"/>
+<SingleColumnEntry center="PATRICK PARADIS"/>
+<SingleColumnEntry center="STEVEN PARENTEAU"/>
+<SingleColumnEntry center="NICOLAS PEDNAULT"/>
+<SingleColumnEntry center="LAURIE POIRIER"/>
+<SingleColumnEntry center="JIMMY POUJADE"/>
+<SingleColumnEntry center="OLIVIER RAMIREZ-LUSSIER"/>
+<SingleColumnEntry center="JONATHAN SAMSON"/>
+<SingleColumnEntry center="JOEY SHEEHY"/>
+<SingleColumnEntry center="VALÉRIE ST-JEAN"/>
+<SingleColumnEntry center="KARIN THIBAULT"/>
+<SingleColumnEntry center="NICOLAS THOMAS"/>
+<SingleColumnEntry center="ALLEN TREMBLAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt; QUALITY CONTROL COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MAXIME FAUCHER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LEAD COMPLIANCE SPECIALIST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-MARC  GOULET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;COMPLIANCE SPECIALISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LAURENT BERTRAND"/>
+<SingleColumnEntry center="JEAN-FRANÇOIS LEMAY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST QUALITY CONTROL STUDIO MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="GEORGE ENESCU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST QUALITY CONTROL COORDINATOR &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FLORIN IANCU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST QUALITY CONTROL LEAD TESTER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DRAGOS ROSCA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST FUNCTIONALITY TESTERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="STEFAN GEORGE BADESCU"/>
+<SingleColumnEntry center="ALEXANDRU BAJAN"/>
+<SingleColumnEntry center="CONSTANTIN VIOREL BANU"/>
+<SingleColumnEntry center="RAZVAN BELCEA"/>
+<SingleColumnEntry center="ANDREEA MADALINA BENU"/>
+<SingleColumnEntry center="IOANA BERBEC"/>
+<SingleColumnEntry center="ALEXANDRU BISERICANU"/>
+<SingleColumnEntry center="ALEXANDRU BONEA"/>
+<SingleColumnEntry center="NADIR BORAMET"/>
+<SingleColumnEntry center="HORATIU BRADEANU"/>
+<SingleColumnEntry center="ADRIAN BROTEA"/>
+<SingleColumnEntry center="DOINA TEODORA BULEARCA"/>
+<SingleColumnEntry center="ALEXANDRU CARP"/>
+<SingleColumnEntry center="COSMIN CIHODARIU-STANCU"/>
+<SingleColumnEntry center="CIPRIAN CONDURACHI"/>
+<SingleColumnEntry center="CODRUT COSMESCU"/>
+<SingleColumnEntry center="FLORIS LUCIAN COSTEA-STEFANESCU"/>
+<SingleColumnEntry center="ANCA ALEXANDRA CRACIUNESCU"/>
+<SingleColumnEntry center="ALEXANDRU CUDIN"/>
+<SingleColumnEntry center="GABRIEL CUSNIR"/>
+<SingleColumnEntry center="RAZVAN DICU"/>
+<SingleColumnEntry center="FLORIN DANIEL DUMBRAVEANU"/>
+<SingleColumnEntry center="ALEXANDRU COSMIN DUMITRACHE"/>
+<SingleColumnEntry center="ANDREI CRISTIAN DUMITRESCU"/>
+<SingleColumnEntry center="VLADIMIR GAITAN"/>
+<SingleColumnEntry center="GEORGE GATEJ"/>
+<SingleColumnEntry center="FLORIN GEORGESCU"/>
+<SingleColumnEntry center="MIHAI GEORGESCU"/>
+<SingleColumnEntry center="CLAUDIU BOGDAN GRIGORAS"/>
+<SingleColumnEntry center="ANDREI GRIGORESCU"/>
+<SingleColumnEntry center="BOGDAN GRIGORESCU"/>
+<SingleColumnEntry center="ALIN GURITA"/>
+<SingleColumnEntry center="ADRIAN IACOB"/>
+<SingleColumnEntry center="MADALIN ADRIAN ILIE"/>
+<SingleColumnEntry center="DRAGOS IOAN"/>
+<SingleColumnEntry center="MIHAI IOAN"/>
+<SingleColumnEntry center="ALEXANDRU IONUT IONITA"/>
+<SingleColumnEntry center="CATALIN IOSIF"/>
+<SingleColumnEntry center="ALEXANDRU IVANA"/>
+<SingleColumnEntry center="CATALIN MANEA"/>
+<SingleColumnEntry center="DANIEL MANOLACHE"/>
+<SingleColumnEntry center="BOGDAN NICU MIHAI"/>
+<SingleColumnEntry center="ALEXANDRU MARIUS MIHULIN"/>
+<SingleColumnEntry center="IONUT MILEA"/>
+<SingleColumnEntry center="RAZVAN DUMITRU MIREA"/>
+<SingleColumnEntry center="ALEXANDRU MIRESCU"/>
+<SingleColumnEntry center="LAURENTIU MARIUS MITREA"/>
+<SingleColumnEntry center="DANUT NEDELCU"/>
+<SingleColumnEntry center="ALBERT IONUT NICOLA"/>
+<SingleColumnEntry center="ALEXANDRU NICULAE"/>
+<SingleColumnEntry center="MIHAI NITA"/>
+<SingleColumnEntry center="OVIDIU NITU"/>
+<SingleColumnEntry center="FLORIN ONIU"/>
+<SingleColumnEntry center="CATALIN MARIAN POPA"/>
+<SingleColumnEntry center="ALEXANDRU POPESCU"/>
+<SingleColumnEntry center="GEORGE CIPRIAN ROIBU"/>
+<SingleColumnEntry center="GABRIEL CATALIN SANDU"/>
+<SingleColumnEntry center="ALEXANDRU SAVIN"/>
+<SingleColumnEntry center="ALINA SPRINTU"/>
+<SingleColumnEntry center="CATALIN STAN"/>
+<SingleColumnEntry center="LAURENTIU STINIGUTA"/>
+<SingleColumnEntry center="VALENTIN STOICA"/>
+<SingleColumnEntry center="DANIEL SUNEL"/>
+<SingleColumnEntry center="COSTIN MUGUREL TANASE"/>
+<SingleColumnEntry center="PETRE CONSTANTIN TANASOIU"/>
+<SingleColumnEntry center="REMUS TOMA"/>
+<SingleColumnEntry center="ADRIAN TRASCA"/>
+<SingleColumnEntry center="MARIUS TUDOR"/>
+<SingleColumnEntry center="OCTAVIAN ANDREI VASILIU"/>
+<SingleColumnEntry center="MARIUS VOICU"/>
+<SingleColumnEntry center="CATALIN ZAVOIANU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST  SPECIAL TESTS PERFORMED BY&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRU BONTU"/>
+<SingleColumnEntry center="RADU-EMANUEL CONSTANTIN"/>
+<SingleColumnEntry center="ANDREI CATALIN IONESCU"/>
+<SingleColumnEntry center="BOGDAN PREDA"/>
+<SingleColumnEntry center="ANDREI STANCIU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST - DATA MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARIUS PASARICA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST - IT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MIHAI MREANA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST - DESKTOP SERVICES MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BOGDAN ALEXANDRU MANIOSU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST - DESKTOP SERVICES TECHNICIANS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CATALIN BORANGIC"/>
+<SingleColumnEntry center="VALENTIN COSMIN ISTRATE"/>
+<SingleColumnEntry center="ADRIAN VALENTIN SIMION"/>
+<SingleColumnEntry center="ANDREI STRAMBEI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;BUCHAREST EPILEPSY TESTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANDREI BEGU"/>
+<SingleColumnEntry center="OCTAVIAN CONSTANTIN"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="ADDITIONAL CONTRIBUTIONS" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL MANAGEMENT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EXECUTIVE PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MATHIEU FERLAND"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DANY LEPAGE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSOCIATE PRODUCER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DANIEL ROY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL SCRIPT WRITING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="MARY DEMARLE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL DESIGN&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="THIÉRY ADAM"/>
+<SingleColumnEntry center="CHRISTINE BLONDEAU"/>
+<SingleColumnEntry center="PATRICK FORTIER"/>
+<SingleColumnEntry center="KEVIN LEUNG"/>
+<SingleColumnEntry center="GAUTHIER MALOU"/>
+<SingleColumnEntry center="LAURENT MASCHERPA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL LEVEL DESIGN&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<DoubleColumnEntry left="JACQUES-PATRICK AUDAIN" right="LORENZO AVI"/>
+<DoubleColumnEntry left="STEPHAN CARMIGNANI" right="ÉRIK DUFOUR"/>
+<DoubleColumnEntry left="ÉMILIE GARNIER" right="PATRICK GARON"/>
+<DoubleColumnEntry left="JULIEN HANTZ" right="WILLIAM KUO"/>
+<DoubleColumnEntry left="SIMON LOISEAU" right="OLIVIER PFLUG"/>
+<DoubleColumnEntry left="FALKO POIKER" right="BLAKE POLITESKI"/>
+<DoubleColumnEntry left="ERIC POROWSKI" right="OLIVIER RAYE-LALONDE"/>
+<DoubleColumnEntry left="PIERRE-LOUIS SAMSON" right="ÉRIC ST-JEAN"/>
+<DoubleColumnEntry left="BJORN SWENSON" right="  "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL SCRIPTED EVENTS INTEGRATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="AMY ALBERTSON"/>
+<SingleColumnEntry center="PATRICK CARROLL"/>
+<SingleColumnEntry center="HADRIEN GRANDRY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL PROGRAMMING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<DoubleColumnEntry left="FRÉDÉRIC BLAIS" right="EDDY BOXERMAN"/>
+<DoubleColumnEntry left="DAVID CHABOT" right="YANICK CHENARD"/>
+<DoubleColumnEntry left="SIMON CLAVET" right="JOSE COVATTA"/>
+<DoubleColumnEntry left="JEAN DUMAS DE RAULY" right="DARRYL HUDGIN"/>
+<DoubleColumnEntry left="CHEN KA" right="CHRISTOPH LUERIG"/>
+<DoubleColumnEntry left="JOHN MCCARTEN" right="JEAN-SÉBASTIEN MOURET"/>
+<DoubleColumnEntry left="MARC-ANDRÉ OSTIGUY" right="ARTHUR OUELLET"/>
+<DoubleColumnEntry left="ÉRIC ROBERT" right="ALEXANDRE SIMIONESCU"/>
+<DoubleColumnEntry left="FABRICE VENIARD" right="MICHAEL WALTER"/>
+<DoubleColumnEntry left="STEPHEN WATSON" right="DON WILLIAMSON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL QA&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="PHILIPPE DESHAIES"/>
+<SingleColumnEntry center="JEREMY LLOUBES"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL ANIMATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<DoubleColumnEntry left="RICHARD ARROYO" right="PATRICE BLANCHET"/>
+<DoubleColumnEntry left="SABRINA BURGEN" right="MARC-ANDRÉ CLERMONT"/>
+<DoubleColumnEntry left="YOUSSEF EL AAKOUCHI" right="FRÉDÉRIC FORTIER"/>
+<DoubleColumnEntry left="JOHN GEIGER" right="VINCENT GIARD"/>
+<DoubleColumnEntry left="COLIN GRAHAM" right="JOSÉE LUPIEN"/>
+<DoubleColumnEntry left="GIANNI MALPELI" right="SCOTT MITCHELL"/>
+<DoubleColumnEntry left="GUILLAUME PICARD" right="ALEXANDRE ST-LAURENT"/>
+<DoubleColumnEntry left="SÉBASTIEN TURENNE" right="  "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL ILLUSTRATION&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="MAXIME DESMETTRE"/>
+<SingleColumnEntry center="NAMWOO NOH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL STORYBOARDS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="STEFAN LEBLANC"/>
+<SingleColumnEntry center="DANIEL POCETTI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL ART&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<DoubleColumnEntry left="VINCENT COLLOMBEL" right="OLIVIER COUTURE"/>
+<DoubleColumnEntry left="JOCELYN DA PRATO" right="SIMON DESJARDINS"/>
+<DoubleColumnEntry left="ALINE DESRUISSEAUX" right="PATRICK DUBUC"/>
+<DoubleColumnEntry left="SIMON DUBUC-CHOUINARD" right="LINDSAY FARMER"/>
+<DoubleColumnEntry left="ALEXANDRE GAGNON" right="ALEXIS GRZYB"/>
+<DoubleColumnEntry left="MAX HULTQVIST" right="HAEJUN JHEE"/>
+<DoubleColumnEntry left="MICHEL LANOIE" right="NICOLAS LONGCHAMPS"/>
+<DoubleColumnEntry left="DANIEL LUKA" right="MARIE-ÈVE ROBIDOUX"/>
+<DoubleColumnEntry left="STÉPHANIE ROULEAU" right="SÉBASTIEN ROUSSEAU"/>
+<DoubleColumnEntry left="MATHIEU ROY" right="MIN-JIE WU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL CHARACTER MODELING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<DoubleColumnEntry left="PASCAL BEAULIEU" right="MATHIEU FABER"/>
+<DoubleColumnEntry left="JEFF GOSLAN" right="NICHOLAS MINNS"/>
+<DoubleColumnEntry left="CINDY NGAN" right="JEAN-MARIE SEZNEC"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL MARKETING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="LISA BIDDER"/>
+<SingleColumnEntry center="THOMAS GEFFROYD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL SENIOR HR CONSULTANT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="DANY POLIQUIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ADDITIONAL TESTING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<DoubleColumnEntry left="PEDRO ALBUQUERQUE" right="PHILIPPE AUDET"/>
+<DoubleColumnEntry left="GUILLAUME CORBEIL" right="JEAN-FRANÇOIS DESSUREAULT"/>
+<DoubleColumnEntry left="MARTIN FERLAND" right="MARC LAVALLÉE"/>
+<DoubleColumnEntry left="MARIANNE LECOUFFE" right="PASCAL MATHIEU"/>
+<DoubleColumnEntry left="DANIEL SARRAZIN" right="  "/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="UBISOFT MONTREAL" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;UBISOFT MONTREAL&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CHIEF EXECUTIVE OFFICER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YANNIS MALLAT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EXECUTIVE VICE-PRESIDENT, MANAGEMENT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRISTOPHE DERENNES"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CHIEF OPERATING OFFICER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="OLIVIER PARIS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VICE-PRESIDENT, HUMAN RESOURCES &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANCIS BALLET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR, PRODUCTION STUDIOS SERVICES &amp; IT &lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YVES JACQUIER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;ASSISTANT DIRECTOR – IT SERVICES&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRISTINE MONETTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SENIOR PRODUCER - MEDIA GROUP&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MATHIEU FERLAND"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR, COMMUNICATIONS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CÉDRIC ORVOINE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;DIRECTOR, FINANCE&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MARTIN LORANGER"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="PUBLISHER : UBISOFT ENTERTAINMENT" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRESIDENT &amp; CEO&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YVES GUILLEMOT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EXECUTIVE DIRECTOR, WORLWIDE STUDIOS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRISTINE BURGESS-QUEMARD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CHIEF CREATIVE OFFICER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SERGE HASCOËT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WORLWIDE CONTENT DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LIONEL RAYNAUD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION CONTENT DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JEAN-MARC GEFFROY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRE-PRODUCTION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRED MARKUS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GAME CONTENT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="LAURENT MALVILLE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;NEW IP &amp; UBI IP DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="TOMMY FRANÇOIS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;IP DEVELOPMENT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JULIEN CHARPENTIER"/>
+<SingleColumnEntry center="JULIAN GERIGHTY"/>
+<SingleColumnEntry center="XAVIER GUILBERT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SCENARIO DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXIS NOLENT"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GAMEPLAY ENGINEERING &amp; ENTERTAINMENT ANALYSIS DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CYRIL DEROUINEAU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WORLDWIDE LIVE DEVELOPMENT DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CYRIL MARCHAL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LIVE DEVELOPMENT MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JULIEN HUMMER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LIVE DEVELOPMENT ANALYST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CÉCILE RENAUD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PROCESS &amp; METHODS DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="MICHEL PIERFITTE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WORLDWIDE PRODUCTION COORDINATION DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANNE BLONDEL-JOUIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SENIOR PRODUCTION COORDINATION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="NICOLAS SCHOENER"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PRODUCTION COORDINATION MANAGERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BENJAMIN HADDAD"/>
+<SingleColumnEntry center="GREGORY SPIELMANN"/>
+<SingleColumnEntry center="DAVID CHADWICK"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;TRANSVERSAL PROJECTS COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALIX DE VALLOIS"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CERTIFICATION MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ÉTIENNE TARDIEU"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CERTIFICATION COORDINATOR - AGE RATING&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CÉLINE PAIVA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;EMEA CERTIFICATION SPECIALISTS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANIS BOUJAOUANE"/>
+<SingleColumnEntry center="GUILLAUME GAD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;US DIRECTOR PRODUCTION PLANNING &amp; CUSTOMER SUPPORT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="BRENT WILKINSON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;US PRODUCTION SPECIALIST&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="JOSH TAILLON"/>
+<SingleColumnEntry center="ADAM ZACHARY"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;US ESRB MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SHANNON KOKOSKA"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;US ESRB COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="EDWIN ZEE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;STUDIOS OPERATIONS DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="PIERRE ESCAICH"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GAMES LAB MANAGERS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ALEXANDRE DEBROUSSE"/>
+<SingleColumnEntry center="SEBASTIEN ODASSO"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;GAMES LAB COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="YVES ROBIN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PLAYTEST COORDINATORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CAMILLE BIGATA"/>
+<SingleColumnEntry center="YOHAN CAZAUX"/>
+<SingleColumnEntry center="JEAN-BAPTISTE HALLÉ"/>
+<SingleColumnEntry center="PAOLA JOYAUX"/>
+<SingleColumnEntry center="JULIEN LEFORESTIER"/>
+<SingleColumnEntry center="PHILIPPE PELLEFIGUE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;PLAYTEST ASSISTANT COORDINATORS&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="IVAN LEE"/>
+<SingleColumnEntry center="CORENTIN PUECH"/>
+<SingleColumnEntry center="NICOLAS ROUSSELOT"/>
+<SingleColumnEntry center="KEVIN POUPARD"/>
+<SingleColumnEntry center="AXEL WEIL"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;CHIEF MARKETING OFFICER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANNE GLEIZES"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;INTERNATIONAL BRAND STRATEGY DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="HÉLÈNE JUGUET"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;INTERNATIONAL BRAND GROUP MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="OLIVER GREEN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;VP LICENSING - WORLDWIDE&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="CHRISTIAN SALOMON"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WORLDWIDE LICENSING MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="SANDRINE MAINEMARE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LICENSING MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS DENOEUX"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LICENSE PROJECT COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANÇOIS JASPART"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LICENSE COORDINATOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ANNA SIBAI"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;LICENSING ASSISTANT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="RAPHAËL DOYEN"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WORLDWIDE MUSIC LICENSING MANAGER&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DIDIER LORD"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;WORLDWIDE QC DIRECTOR&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="ÉRIC TREMBLAY"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="SPECIAL THANKS" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<TripleColumnEntry left="ARNAUD JAMIN" center="BENSON G. MUNYAN" right="BLAKE FISHER"/>
+<TripleColumnEntry left="CRISTIAN PANA" center="DAVID GHOZLAND" right="DEREK LEBRERO"/>
+<TripleColumnEntry left="DMITRIY BULUCHEVSKIY" center="DOROTA KOWALSKA-SIMARD" right="ÉRIC BELLEFEUILLE"/>
+<TripleColumnEntry left="ÉRIC GIRARD" center="FILIP MARCUS ALEKSANDROW" right="FRANCIS LAVOIE-GRAVEL"/>
+<TripleColumnEntry left="GABRIEL DUBUC" center="GUY DANUS" right="HUGUES RICHER"/>
+<TripleColumnEntry left="ISSIE STEINBERG" center="JACKIE FIEST" right="JARKKO LEMPIAINEN"/>
+<TripleColumnEntry left="JEFFREY HATTEM" center="LOUIS-PHILIPPE DURAND" right="MARC-ANDRÉ COURNOYER"/>
+<TripleColumnEntry left="MARTIAL ANTOINE" center="MARTIN CANEPA" right="MARTIN LAUNIER"/>
+<TripleColumnEntry left="MATHIEU LEDUC" center="MATTHIAS BAILLET" right="MAXIME DUMAS"/>
+<TripleColumnEntry left="MAXIME PROULX" center="MIKE GRASSO" right="NICOLAS BABIN"/>
+<TripleColumnEntry left="NICOLAS OROC" center="PATRICK GRIMWOOD" right="PIERRE-FRANCIS LAFLEUR"/>
+<TripleColumnEntry left="ROSS O'DWYER" center="SÉBASTIEN BIBEAU" right="SÉBASTIEN MORIN"/>
+<TripleColumnEntry left="SÉBASTIEN TRUDEL" center="SIMON THERRIAULT" right="SOPHIE CODAIRE"/>
+<TripleColumnEntry left="YANN LE GUELLAUT" center="  " right="  "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;SCIERIE GAUTHIER LTÉE, LA BAIE (QUÉBEC)&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;XBOX ATG ENGINEERING SUPPORT&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="DAVID COOK"/>
+<SingleColumnEntry center="ZSOLT MATHE"/>
+<SingleColumnEntry center="CAMERON EGBERT"/>
+<SingleColumnEntry center="TOM MATTHEWS"/>
+<SingleColumnEntry center="MIKE MACE"/>
+<SingleColumnEntry center="DAN BLACK"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;XBOX AM TEAM&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="VIK LONG"/>
+<SingleColumnEntry center="NICHOLAS ROOKE"/>
+<SingleColumnEntry center="NANCY CLARK"/>
+<SingleColumnEntry center="RICHARD JONES"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="&lt;b&gt;&lt;u&gt;H5&lt;/u&gt;&lt;/b&gt;"/>
+<SingleColumnEntry center="FRANCOIS ALAUX"/>
+<SingleColumnEntry center="HERVE DE CRECY"/>
+<SingleColumnEntry center="NICOLAS ROZIER"/>
+<SingleColumnEntry center=" "/>
+</Section>
+<Section name="LEGAL NOTICES" fontscale="1.5" delay="0">
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="© 2010 Ubisoft Entertainment. All Rights Reserved. "/>
+<SingleColumnEntry fontscale="0.8" center="Splinter Cell, Splinter Cell Conviction, Sam Fisher, the Soldier Icon, Ubisoft and the Ubisoft logo"/>
+<SingleColumnEntry fontscale="0.8" center="are trademarks of Ubisoft Entertainment in the U.S. and/or other countries."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="{Img.CreditIcon.logo_bink}"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="Uses Bink Video. Copyright (C) 1997-2010 by RAD Game Tools, Inc."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="{Img.CreditIcon.logo_havok}"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="Havok™: ©Copyright 1999-2010 Havok.com Inc. (or its licensors). All Rights Reserved. "/>
+<SingleColumnEntry fontscale="0.8" center="See www.havok.com for details."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="{Img.CreditIcon.logo_scaleform}"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="Uses Scaleform GFx © 2009 Scaleform Corporation. All rights reserved"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="Ogg Vorbis Copyright (c) 2010, Xiph.Org Foundation All rights reserved."/>
+<SingleColumnEntry fontscale="0.8" center="Redistribution and use in source and binary forms, with or without modification, "/>
+<SingleColumnEntry fontscale="0.8" center="are permitted provided that the following conditions are met:"/>
+<SingleColumnEntry fontscale="0.8" center="Redistributions of source code must retain the above copyright notice,"/>
+<SingleColumnEntry fontscale="0.8" center="this list of conditions and the following disclaimer."/>
+<SingleColumnEntry fontscale="0.8" center="Redistributions in binary form must reproduce the above copyright notice, "/>
+<SingleColumnEntry fontscale="0.8" center="this list of conditions and the following disclaimer in the documentation"/>
+<SingleColumnEntry fontscale="0.8" center="and/or other materials provided with the distribution."/>
+<SingleColumnEntry fontscale="0.8" center="Neither the name of the University of California, Berkeley nor the names of its contributors "/>
+<SingleColumnEntry fontscale="0.8" center="may be used to endorse or promote products derived from this software "/>
+<SingleColumnEntry fontscale="0.8" center="without specific prior written permission."/>
+<SingleColumnEntry fontscale="0.8" center="THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS "/>
+<SingleColumnEntry fontscale="0.8" center="OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES "/>
+<SingleColumnEntry fontscale="0.8" center="OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. "/>
+<SingleColumnEntry fontscale="0.8" center="IN NO EVENT SHALL THE REGENTS AND CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, "/>
+<SingleColumnEntry fontscale="0.8" center="INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES "/>
+<SingleColumnEntry fontscale="0.8" center="(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; "/>
+<SingleColumnEntry fontscale="0.8" center="LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) "/>
+<SingleColumnEntry fontscale="0.8" center="HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, "/>
+<SingleColumnEntry fontscale="0.8" center="STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY "/>
+<SingleColumnEntry fontscale="0.8" center="OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="Facial animation software provided by Impersonator. "/>
+<SingleColumnEntry fontscale="0.8" center="© 2002-2004, OC3 Entertainment, Inc. and its licensors. All rights reserved."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="This product contains the Rendez-Vous, Net-Z and SyncSim softwares owned "/>
+<SingleColumnEntry fontscale="0.8" center="and/or distributed under authority by QUAZAL Technologies Inc. "/>
+<SingleColumnEntry fontscale="0.8" center="Copyright 1998-2008, QUAZAL Technologies Inc. All Rights Reserved."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="{Img.CreditIcon.logo_utech}"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="Unreal® Engine, Copyright 1998 – 2010, Epic Games, Inc. All rights reserved. "/>
+<SingleColumnEntry fontscale="0.8" center="Unreal is a registered trademark of Epic Games, Inc."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry fontscale="0.8" center="This game incorporates technology of Massive Incorporated (&quot;Massive&quot;), "/>
+<SingleColumnEntry fontscale="0.8" center="a wholly-owned subsidiary of Microsoft Corporation (&quot;Microsoft&quot;), "/>
+<SingleColumnEntry fontscale="0.8" center="that enables in-game advertising, and the display of other similar in-game objects, "/>
+<SingleColumnEntry fontscale="0.8" center="which are downloaded temporarily to your personal computer or game console "/>
+<SingleColumnEntry fontscale="0.8" center="and replaced during online game play.  As part of this process, "/>
+<SingleColumnEntry fontscale="0.8" center="Massive may collect some information about the game and the advertisements "/>
+<SingleColumnEntry fontscale="0.8" center="delivered to you, as well as standard information that is sent when your personal"/>
+<SingleColumnEntry fontscale="0.8" center="computer or game console connects to the Internet including your Internet protocol (IP) address.  "/>
+<SingleColumnEntry fontscale="0.8" center="Massive will use this information to transmit and measure in-game advertising, "/>
+<SingleColumnEntry fontscale="0.8" center="as well as to improve the products and services of Massive and its affiliates.  "/>
+<SingleColumnEntry fontscale="0.8" center="None of the information collected will be used to identify you."/>
+<SingleColumnEntry fontscale="0.8" center="For additional details regarding Massive’s in-game advertising practices,"/>
+<SingleColumnEntry fontscale="0.8" center="please see Massive's In-Game Advertising privacy statement at "/>
+<SingleColumnEntry fontscale="0.8" center="http://go.microsoft.com/fwlink/?LinkId=122085&amp;clcid=0x409 .  "/>
+<SingleColumnEntry fontscale="0.8" center="The trademarks and copyrighted material contained in all in-game advertising "/>
+<SingleColumnEntry fontscale="0.8" center="are the property of the respective owners.  "/>
+<SingleColumnEntry fontscale="0.8" center="Portions of this product are © 2008 Massive Incorporated.  All rights reserved."/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center="A Ubisoft Montreal Production 2010"/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+<SingleColumnEntry center=" "/>
+</Section>
+</Credits>

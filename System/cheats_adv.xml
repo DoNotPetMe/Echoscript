@@ -1,0 +1,164 @@
+<Cheats name="Cheats">
+  
+  <Page name="Merc Inventory" desc="Change the loadout of the MERC">
+    <Command name="Set Vision Mode: BATS" exec="ADD VISIONMODE BATS" />
+    <Command name="Set Vision Mode: RFD" exec="ADD VISIONMODE BATS" />
+	<Command name="Set Vision Mode: RADAR" exec="ADD VISIONMODE RADAR" />
+	<Command name="Set Ability: Survival Suit" exec="ADD TORSO SURVIVOR" />
+    <Command name="Set Ability: Drone" exec="ADD TORSO DRONE" />
+    <Command name="Set Ability: Disruptor" exec="ADD TORSO DISRUPTOR" />
+	<Command  name="Set Gadget: Frag grenade" exec="ADD  GRENADE FRAG" />
+    <Command  name="Set Gadget: Tear Gas grenade" exec="ADD  GRENADE TEARGAS" />
+    <Command  name="Set Gadget: Proximity Mine" exec="ADD GRENADE PROXYMINE" />
+	<Command  name="Set Gadget: Tagging Device" exec="ADD GRENADE TAGGINGDEVICE" />
+    <Command  name="Set Gadget: Ammo Pack" exec="ADD GRENADE AMMOPACK" />
+  </Page>	
+  
+  <Page name="Merc Weapons" desc="Change the weapons of the merc">
+    <Command name="Add Pistol: DesertEagle" exec="ADD WEAPONARCH ADV_Merc_Pistol_DesertEagle" />
+    <Command name="Add Pistol: Px4" exec="ADD WEAPONARCH ADV_Merc_Pistol_Px4" />
+    <Command name="Add Pistol: Makarov" exec="ADD WEAPONARCH ADV_Merc_Pistol_Makarov" />
+    <Command name="Add LMG: HKMG4" exec="ADD WEAPONARCH ADV_Merc_LMG_HKMG4" />
+    <Command name="Add LMG: M249" exec="ADD WEAPONARCH ADV_Merc_LMG_M249" />
+	<Command name="Add LMG: U100" exec="ADD WEAPONARCH ADV_Merc_LMG_U100" />
+    <Command name="Add Assault: ARX160" exec="ADD WEAPONARCH ADV_Merc_Assault_ARX160" />
+    <Command name="Add Assault: FAMASG2" exec="ADD WEAPONARCH ADV_Merc_Assault_FAMASG2" />
+    <Command name="Add Assault: Goblin" exec="ADD WEAPONARCH ADV_Merc_Assault_Goblin" />
+    <Command name="Add Assault: HoneyBadger" exec="ADD WEAPONARCH ADV_Merc_Assault_HoneyBadger" />
+    <Command name="Add Assault: AKS74U" exec="ADD WEAPONARCH ADV_Merc_Assault_AKS74U" />
+    <Command name="Add Assault: G36C" exec="ADD WEAPONARCH ADV_Merc_Assault_G36C" />
+    <Command name="Add Assault: SA58" exec="ADD WEAPONARCH ADV_Merc_Assault_SA58" />
+    <Command name="Add Assault: AK47" exec="ADD WEAPONARCH ADV_Merc_Assault_AK47" />
+    <Command name="Add Assault: M416" exec="ADD WEAPONARCH ADV_Merc_Assault_M416" />
+	<Command name="Add Assault: ACE" exec="ADD WEAPONARCH ADV_Merc_Assault_ACE" />
+    <Command name="Add Shotgun: AA12" exec="ADD WEAPONARCH ADV_Merc_Shotgun_AA12" />
+    <Command name="Add Shotgun: M1014" exec="ADD WEAPONARCH ADV_Merc_Shotgun_M1014" />
+    <Command name="Add Shotgun: Saiga12" exec="ADD WEAPONARCH ADV_Merc_Shotgun_Saiga12" />
+    <Command name="Add Shotgun: RMB93" exec="ADD WEAPONARCH ADV_Merc_Shotgun_RMB93" />
+  </Page>
+  
+  <Page name="Merc Weapon Attachments" desc="Change the weapon attachments of the merc">
+	<Command name="Add Sight: Holo" exec="ADD WEAPONUPGRADE ADV_FP_Assault_Sight_Holo" />
+	<Command name="Add Sight: Red Dot" exec="ADD WEAPONUPGRADE ADV_FP_Assault_Sight_RedDot" />
+	<Command name="Add Sight: ACOG" exec="ADD WEAPONUPGRADE ADV_FP_Assault_Sight_ScopeAcog" />
+	<Command name="Add Rifle Silencer" exec="ADD WEAPONUPGRADE ADV_FP_Assault_Silencer" />
+	<Command name="Add Rifle Muzzle Break" exec="ADD WEAPONUPGRADE ADV_FP_Assault_MuzzleBreak" />
+	<Command name="Add Pistol Silencer" exec="ADD WEAPONUPGRADE ADV_FP_Pistol_Silencer" />
+  </Page>
+  
+  <Page name="Spy Inventory" desc="Change the loadout of the SPY">
+    <Command name="Set Vision Mode: SONAR" exec="ADD VISIONMODE SONAR" />
+    <Command name="Set Vision Mode: EMF" exec="ADD VISIONMODE EMF" />
+    <Command name="Set Vision Mode: THERMAL" exec="ADD VISIONMODE THERMAL" />
+    <Command name="Set Vision Mode: NIGHT VISION" exec="ADD VISIONMODE NIGHT" />
+    <Command name="Set Ability: EMP Backpack " exec="ADD TORSO EMP" />
+    <Command name="Set Ability: Intel Suit" exec="ADD TORSO INTEL" />
+    <Command name="Set Ability: Cloak device" exec="ADD TORSO CLOAK" />
+    <Command name="Set Gadget: EMP grenade" exec="ADD GRENADE EMP" />
+    <Command name="Set Gadget: Flash grenade" exec="ADD GRENADE FLASH" />
+    <Command name="Set Gadget: Sticky Camera" exec="ADD STICKYCAM" />
+    <Command name="Set Gadget: Anti-Grenade System" exec="ADD GRENADE AGS" />
+    <Command name="Set Gadget: Smoke/ESC bomb/grenade" exec="ADD GRENADE ESCBOMB" />
+  </Page>
+  
+  <Page name="Spy Weapons" desc="Change the weapons of the spy">
+    <Command name="Add SMG: UMP45" exec="ADD WEAPONARCH ADV_Spy_SMG_UMP45" />
+    <Command name="Add SMG: Vector" exec="ADD WEAPONARCH ADV_Spy_SMG_Vector" />
+    <Command name="Add SMG: MP7" exec="ADD WEAPONARCH ADV_Spy_SMG_MP7" />
+    <Command name="Add SMG: MAC11" exec="ADD WEAPONARCH ADV_Spy_SMG_MAC11" />
+    <Command name="Add SMG: PP2000" exec="ADD WEAPONARCH ADV_Spy_SMG_PP2000" />
+    <Command name="Add SMG: PP19" exec="ADD WEAPONARCH ADV_Spy_SMG_PP19" />
+    <Command name="Add SMG: Scorpion" exec="ADD WEAPONARCH ADV_Spy_SMG_Scorpion" />
+    <Command name="Add SMG: MP5" exec="ADD WEAPONARCH ADV_Spy_SMG_MP5" />
+    <Command name="Add SMG: PROTO" exec="ADD WEAPONARCH ADV_Spy_SMG_Proto" />
+    <Command name="Add SMG: MP5" exec="ADD WEAPONARCH ADV_Spy_SMG_MP5" />
+    <Command name="Add Shotgun: PROTO" exec="ADD WEAPONARCH ADV_Spy_Shotgun_Proto" />
+    <Command name="Add Assault Rifle: PROTO" exec="ADD WEAPONARCH ADV_Spy_Assault_Proto" />
+    <Command name="Add Pistol: USP45" exec="ADD WEAPONARCH ADV_Spy_Pistol_USP45" />
+    <Command name="Add Pistol: FiveSeven" exec="ADD WEAPONARCH ADV_Spy_Pistol_FiveSeven" />
+    <Command name="Add Pistol: F40" exec="ADD WEAPONARCH ADV_Spy_Pistol_F40" />
+    <Command name="Add Pistol: CZ75" exec="ADD WEAPONARCH ADV_Spy_Pistol_CZ75" />
+    <Command name="Add Pistol: PROTO" exec="ADD WEAPONARCH ADV_Spy_Pistol_Proto" />
+    <Command name="Add Crossbow" exec="ADD WEAPONARCH ADV_Spy_CrossBow" />
+  </Page>
+  
+ 
+  <Page name="Spy Weapon Attachments" desc="Change the weapon attachments of the spy">
+	<Command name="Add Sight: Holo" exec="ADD WEAPONUPGRADE Optic_HoloSight" />
+	<Command name="Add Sight: Red Dot" exec="ADD WEAPONUPGRADE Optic_RedDot" />
+	<Command name="Add Rifle Suppressor" exec="ADD WEAPONUPGRADE SMG_Suppressor" />
+	<Command name="Add Pistol Silencer" exec="ADD WEAPONUPGRADE ADV_FP_Pistol_Silencer" />
+  </Page>
+  
+  <Page name="Gadgets NOW" desc="Spawn new gadgets">
+    <Command  name="Add Frag Grenades" exec="ADD NOW GRENADE FRAG" />
+    <Command  name="Add EMP Grenades" exec="ADD NOW GRENADE EMP" />
+    <Command  name="Add Flash Grenades" exec="ADD NOW GRENADE FLASH" />
+    <Command  name="Add Tear Gas Grenades" exec="ADD NOW GRENADE TEARGAS" />
+    <Command  name="Add Proximity Mines" exec="ADD NOW GRENADE PROXYMINE" />
+    <Command  name="Add Smoke Bombs" exec="ADD NOW GRENADE ESCBOMB" />
+    <Command  name="Add Anti Grenade Systems" exec="ADD NOW GRENADE AGS" />
+    <Command  name="Add Tagging Device" exec="ADD NOW GRENADE TAGGINGDEVICE" />
+    <Command  name="Add Ammo Pack" exec="ADD NOW GRENADE AMMOPACK" />
+    <Command  name="Add Sticky Camera" exec="ADD NOW STICKYCAM" />
+    <Tweak    name="EMP explosion occluded" vartype="bool" var="m_bOccludedEMPs" Owner="Echelon.GI_Adv_Grenade_EMP" />
+  </Page>
+
+  <Page name="HUD" desc="Enable and disable elements of the HUD ">
+    <Command name="Hide HUD" exec="UI HIDE" />
+    <Command name="Show HUD" exec="UI SHOW" />
+  </Page>
+  
+  <Page name="Merc 3C" desc="Modify and tweak the First-Person merc">
+    <Command name="Toggle Cam bob" exec="FPS_TOGGLECAMERABOB" />
+    <Command name="Call of Duty controls" exec="MP_CONTROLFPS"/>
+    <Command name="Splinter Cell controls" exec="MP_CONTROLSC6"/>
+    <Command name="Infinite run" exec="INFINITESPRINT" />
+    <Command name="Hipfire stance" exec="HIPFIRE" />
+  </Page>
+
+  <Page name="Marketing">
+    <Tweak name="Enable Marketing Tweaks" vartype="bool" var="m_bMarketing_EnableTweaks" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+    <Tweak name="Disable Particles" vartype="bool" var="m_bMarketing_DisableParticles" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+    <Command name="Marketing Merc HUD"     exec="ADVMARKET_UIHIDE MERC" />
+    <Command name="Hide all Merc HUD"      exec="ADVMARKET_UIHIDE MERC FULL" />
+    <Command name="Hide all Spy HUD"       exec="ADVMARKET_UIHIDE SPY" />
+    <Command name="Hide UI"       exec="UIHIDE ALL" />
+    <Command name="Hide UI"       exec="UIHIDE ALL" />
+    <Command name="Hide UI"       exec="UIHIDE ALL" />
+    <Command name="Show UI"       exec="UISHOW ALL" />
+    <Command name="Hide HUD"      exec="UIHIDE HUD" />
+    <Command name="Show HUD"      exec="UISHOW HUD" />
+    <Command name="Hide GEO"      exec="UIHIDE INTER" />
+    <Command name="Show GEO"      exec="UISHOW INTER" />
+    <Command name="Hide Waypoint" exec="UIHIDE WPT" />
+    <Command name="Show Waypoint" exec="UISHOW WPT" />
+    <Command name="Hide All Players"  exec="HIDE" />
+    <Command name="Hide Local Player" exec="HIDE LOCAL" />
+    <Tweak name="Enable VSync" vartype="bool" var="m_bMarketing_EnableVSync" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+    <Tweak name="Disable Depth of Field" vartype="bool" var="m_bMarketing_DisableDOF" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+    <Tweak  name="Invincible:" vartype="bool" var="m_bInvincible" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+    <Tweak  name="Invisible:" vartype="bool" var="bInvisible" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+    <Tweak  name="GOD! (Damage On, Can't die):" vartype="bool" var="m_bGodMode" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+  </Page>
+
+  <Page name="Misc" desc="Miscellaneous stuff (ghost, show other pawns, ...)">
+    <Command name="FSO Presentation" exec="FSOPRES" desc="Enable cheats for easy FSO feature reviews"/>
+    <Command name="Money + Tokens + Rank" exec="MPRICH" desc="Gives you money + tokens + max elite rank"/>
+    <Command name="Ghost mode" exec="EnableGhost" desc="Enable ghost mode without a keyboard"/>
+    <Command name="Change camera target" exec="ViewClass Pawn" desc="Change camera to target a new pawn"/>
+    <Command name="Tracking ON" exec="Tracking ON" desc="Enable online tracking (host only)"/>
+    <Command name="Tracking OFF" exec="Tracking OFF" desc="Disable online tracking (host only)"/>
+    <Command name="Infinite Time" exec="MP_TIMELIMIT 0" desc="Host only!"/>
+    <Tweak name="Distance Fog" desc="Toggle the red distance fog for LOS guideline" vartype="bool" var="bDistanceFog" Owner="Engine.ZoneInfo" />
+    <Command name="Show Framerate" exec="Stat FPS"/>
+    <Command name="Toggle Unlimited Inventory" exec="UnlimitedInventory"/>
+    <Command name="Toggle Infinite Ammo" exec="INFAMMO"/>
+    <Command name="Toggle Infinite Abilities" exec="INFABILITY"/>
+    <Command name="Create player clone" exec="MP_SPAWNCLONE" />
+    <Command name="Switch to clone" exec="MP_SWITCHCLONE" />
+    <Command name="Respawn" exec="TakeDownSam" />
+    <Command name="Change Team" exec="MP_CHANGETEAM" />
+  </Page>
+  
+</Cheats>
