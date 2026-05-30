@@ -229,12 +229,17 @@ void RenderMenu() {
         ImGui::InputScalar("ctor ptr off",   ImGuiDataType_U64, &L.node_ctor_ptr_off);
         ImGui::Checkbox("name is wide (UTF-16)", &L.name_is_wide);
 
-        if (ImGui::Button("Re-locate registry")) ObjectDumper::Init();
+        if (ImGui::Button("Auto-find GObjects/GNames")) ObjectDumper::AutoFindGlobals();
         ImGui::SameLine();
+        if (ImGui::Button("Re-locate registry")) ObjectDumper::Init();
+
         if (ImGui::Button("Dump types")) ObjectDumper::DumpAll();
         ImGui::SameLine();
         if (ImGui::Button("Resolve catalog")) ObjectDumper::ResolveProps();
 
+        // Live global addresses (0 until found).
+        ImGui::Text("GNames:   0x%08X", static_cast<unsigned>(ObjectDumper::GNamesPtr()));
+        ImGui::Text("GObjects: 0x%08X", static_cast<unsigned>(ObjectDumper::GObjectsPtr()));
         ImGui::Text("Resolved: %zu / %zu types",
                     PropDatabase::ResolvedCount(), PropDatabase::Entries().size());
         ImGui::TreePop();

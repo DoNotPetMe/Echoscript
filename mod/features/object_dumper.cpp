@@ -13,6 +13,8 @@
 #include <Windows.h>
 #include <cstdio>
 #include <cstring>
+#include <functional>
+#include <string>
 
 // -----------------------------------------------------------------------
 //  UE3 GObjects signature stubs — fill these via IDA/x64dbg once confirmed.
@@ -43,29 +45,74 @@ static constexpr const char* GNAMES_SIG =
 static constexpr int GNAMES_REL32_OFF     = 3;
 static constexpr int GNAMES_INSTR_SIZE    = 7;
 
-// Known UObject layout offsets in Blacklist (UE3 — tune these live).
-// These are the standard UE3 UObject fields:
-//   +0x00  VTable ptr
-//   +0x08  ObjectFlags (uint64 in 64-bit UE3)
-//   +0x10  Index (int32 in GObjects)
-//   +0x18  UClass* Class     ← the class node pointer we want
-//   +0x28  FName Name        ← {Index:int32, Number:int32}
-//   +0x30  UObject* Outer
-// All of the above are HYPOTHESES for Blacklist; tune live in the menu.
-struct UObjectOffsets {
-    size_t classPtr = 0x18;   // UClass* Class at this offset within UObject
-    size_t nameIdx  = 0x28;   // FName.Index (int32)
-};
-static UObjectOffsets s_ue3Off{};
+// -----------------------------------------------------------------------
+//  UE3 32-bit object model (Blacklist is a 32-bit UE3/LEAD build).
+//
+//  GObjects is a TArray in UE3: { UObject** Data; int Count; int Max; }
+//  Each UObject* has an FName at uobj_name_off (an int32 index into GNames)
+//  and a UClass* at uobj_class_off.
+//
+//  GNames is a TArray of FNameEntry*. An FNameEntry holds flags + index,
+//  then the inline ANSI name characters at fname_str_off. GNames[0] is
+//  ALWAYS "None" in UE3 — we use that as the validation anchor.
+//
+//  Offsets live in g_config.layout so they can be tuned in the menu if this
+//  particular build deviates from the common UDK layout.
+// -----------------------------------------------------------------------
 
 namespace ObjectDumper {
 
 Config g_config{};
 
-// Resolved registry walk root (first node), discovered in Init().
+// Resolved registry walk root (first node), legacy LEAD path.
 static uintptr_t g_registryHead = 0;
-// Resolved UE3 GObjects base pointer (TArray<FObjectItem>*), or 0.
+// Resolved UE3 GObjects TArray address, or 0.
 static uintptr_t g_gobjectsPtr  = 0;
+// Resolved UE3 GNames TArray address, or 0.
+static uintptr_t g_gnamesPtr    = 0;
+
+uintptr_t GNamesPtr()   { return g_gnamesPtr; }
+uintptr_t GObjectsPtr() { return g_gobjectsPtr; }
+
+// Read an ANSI string from a fixed address into out (bounded).
+static bool ReadAnsiAt(uintptr_t addr, std::string& out, int maxLen = 128) {
+    char buf[256]{};
+    int n = (maxLen < 255) ? maxLen : 255;
+    for (int i = 0; i < n; ++i) {
+        char c = 0;
+        if (!Memory::SafeRead(addr + i, c)) return false;
+        if (c == 0) { buf[i] = 0; break; }
+        // Reject non-printable: name entries are clean ASCII identifiers.
+        if (c < 0x20 || static_cast<unsigned char>(c) > 0x7E) return false;
+        buf[i] = c;
+    }
+    if (buf[0] == '\0') return false;
+    out = buf;
+    return true;
+}
+
+// Resolve an FName index to its string via the discovered GNames array.
+bool ResolveFName(int index, std::string& out) {
+    if (!g_gnamesPtr || index < 0) return false;
+    uintptr_t data = 0;   // FNameEntry** Data
+    if (!Memory::SafeRead(g_gnamesPtr, data) || !data) return false;
+    int count = 0;
+    if (!Memory::SafeRead(g_gnamesPtr + sizeof(uintptr_t), count) || index >= count)
+        return false;
+    uintptr_t entry = 0;  // FNameEntry*
+    if (!Memory::SafeRead(data + static_cast<uintptr_t>(index) * sizeof(uintptr_t), entry)
+        || !entry)
+        return false;
+    return ReadAnsiAt(entry + g_config.layout.fname_str_off, out);
+}
+
+// Read a UObject*'s name (resolving its FName through GNames).
+static bool ReadObjectName(uintptr_t obj, std::string& out) {
+    if (!obj) return false;
+    int nameIdx = 0;
+    if (!Memory::SafeRead(obj + g_config.layout.uobj_name_off, nameIdx)) return false;
+    return ResolveFName(nameIdx, out);
+}
 
 // -----------------------------------------------------------------------
 //  Find the address of a literal ANSI string inside the game module's
@@ -163,6 +210,171 @@ static bool ReadNodeName(uintptr_t node, std::string& out) {
 }
 
 // -----------------------------------------------------------------------
+//  AutoFindGlobals — locate GNames and GObjects without a byte signature.
+//
+//  Strategy (works on 32-bit UE3 with ASLR):
+//   1. Find the literal "None" string in the image (FNameEntry for index 0
+//      stores it inline). Then find a writable global (GNames TArray) whose
+//      Data[0] points at an FNameEntry whose inline string == "None".
+//   2. Validate GNames by resolving a few known names ("None", "Core",
+//      "Object", "Actor") to ensure the layout is right.
+//   3. Find GObjects: a writable global TArray whose Data[k] are pointers to
+//      objects whose name resolves and whose first object is named "Class" or
+//      whose names look like a real object table.
+//
+//  Everything is bounds-checked and __try-guarded via SafeRead, so a wrong
+//  guess just fails instead of crashing.
+// -----------------------------------------------------------------------
+static bool LooksLikeReadablePtr(uintptr_t p) {
+    if (p < 0x10000u || p > 0x7FFFFFFFu) return false;
+    int probe = 0;
+    return Memory::SafeRead(p, probe);
+}
+
+// Scan writable data sections for a TArray<T*> { Data, Count, Max } that
+// satisfies `validate(Data, Count)`. Returns the TArray address or 0.
+static uintptr_t FindTArray(bool (*validate)(uintptr_t data, int count)) {
+    HMODULE mod = GetModuleHandleW(nullptr);
+    if (!mod) return 0;
+    const auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(mod);
+    const auto* nt  = reinterpret_cast<IMAGE_NT_HEADERS*>(
+        reinterpret_cast<uintptr_t>(mod) + dos->e_lfanew);
+    const auto* sec = IMAGE_FIRST_SECTION(nt);
+
+    for (WORD i = 0; i < nt->FileHeader.NumberOfSections; ++i, ++sec) {
+        if (!(sec->Characteristics & IMAGE_SCN_MEM_READ)) continue;
+        if (!(sec->Characteristics & IMAGE_SCN_MEM_WRITE)) continue;  // globals live in .data
+        uintptr_t start = reinterpret_cast<uintptr_t>(mod) + sec->VirtualAddress;
+        size_t    size  = sec->Misc.VirtualSize;
+
+        for (size_t off = 0; off + 12 <= size; off += 4) {
+            uintptr_t cand = start + off;
+            uintptr_t data = 0; int count = 0, max = 0;
+            if (!Memory::SafeRead(cand, data) || !LooksLikeReadablePtr(data)) continue;
+            if (!Memory::SafeRead(cand + 4, count) || count <= 0 || count > 5'000'000) continue;
+            if (!Memory::SafeRead(cand + 8, max)   || max < count || max > 5'000'000) continue;
+            if (validate(cand, count)) return cand;
+        }
+    }
+    return 0;
+}
+
+// GNames validator: Data[0] -> FNameEntry whose inline string == "None".
+static bool ValidateGNames(uintptr_t arr, int count) {
+    uintptr_t data = 0;
+    if (!Memory::SafeRead(arr, data)) return false;
+    uintptr_t entry0 = 0;
+    if (!Memory::SafeRead(data, entry0) || !LooksLikeReadablePtr(entry0)) return false;
+    // Try a few plausible inline-string offsets; lock in the one that yields "None".
+    static const size_t kCandidates[] = { 0x10, 0x0C, 0x08, 0x14, 0x18 };
+    for (size_t fo : kCandidates) {
+        std::string s;
+        if (ReadAnsiAt(entry0 + fo, s) && s == "None") {
+            g_config.layout.fname_str_off = fo;
+            (void)count;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool AutoFindGlobals() {
+    g_gnamesPtr   = 0;
+    g_gobjectsPtr = 0;
+
+    // ---- GNames ----
+    uintptr_t gnames = FindTArray(&ValidateGNames);
+    if (!gnames) {
+        Logger::Warn("ObjectDumper: GNames not auto-found (no TArray with GNames[0]=='None').");
+        return false;
+    }
+    g_gnamesPtr = gnames;
+    Logger::Info("ObjectDumper: GNames @ 0x%08X (fname_str_off=0x%zX).",
+                 static_cast<unsigned>(gnames), g_config.layout.fname_str_off);
+
+    // Sanity: a handful of indices should resolve to clean identifiers.
+    {
+        std::string s0;
+        ResolveFName(0, s0);
+        Logger::Info("ObjectDumper: GNames[0] = \"%s\" (expect None).", s0.c_str());
+    }
+
+    // ---- GObjects ----
+    // Validate by reading Data[0..N] as UObject* and resolving their names; a
+    // real object table yields mostly-resolvable names. We also probe a couple
+    // of uobj_name_off candidates and lock in the best.
+    static const size_t kNameOffs[]  = { 0x2C, 0x28, 0x30, 0x34, 0x38 };
+    static const size_t kClassOffs[] = { 0x34, 0x30, 0x38, 0x3C, 0x40 };
+
+    HMODULE mod = GetModuleHandleW(nullptr);
+    const auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(mod);
+    const auto* nt  = reinterpret_cast<IMAGE_NT_HEADERS*>(
+        reinterpret_cast<uintptr_t>(mod) + dos->e_lfanew);
+    const auto* sec = IMAGE_FIRST_SECTION(nt);
+
+    uintptr_t bestArr = 0; int bestScore = 0;
+    size_t bestNameOff = 0x2C;
+
+    for (WORD i = 0; i < nt->FileHeader.NumberOfSections; ++i, ++sec) {
+        if (!(sec->Characteristics & IMAGE_SCN_MEM_READ)) continue;
+        if (!(sec->Characteristics & IMAGE_SCN_MEM_WRITE)) continue;
+        uintptr_t start = reinterpret_cast<uintptr_t>(mod) + sec->VirtualAddress;
+        size_t    size  = sec->Misc.VirtualSize;
+
+        for (size_t off = 0; off + 12 <= size; off += 4) {
+            uintptr_t cand = start + off;
+            uintptr_t data = 0; int count = 0, max = 0;
+            if (!Memory::SafeRead(cand, data) || !LooksLikeReadablePtr(data)) continue;
+            if (!Memory::SafeRead(cand + 4, count) || count < 1000 || count > 5'000'000) continue;
+            if (!Memory::SafeRead(cand + 8, max) || max < count || max > 5'000'000) continue;
+            if (cand == g_gnamesPtr) continue;
+
+            // Sample the first 24 object slots; score resolvable names.
+            for (size_t no : kNameOffs) {
+                int score = 0, sampled = 0;
+                for (int k = 0; k < 24 && k < count; ++k) {
+                    uintptr_t obj = 0;
+                    if (!Memory::SafeRead(data + static_cast<uintptr_t>(k) * 4, obj)) break;
+                    if (!LooksLikeReadablePtr(obj)) continue;
+                    ++sampled;
+                    int nameIdx = 0;
+                    if (!Memory::SafeRead(obj + no, nameIdx)) continue;
+                    std::string s;
+                    if (ResolveFName(nameIdx, s)) ++score;
+                }
+                if (sampled >= 8 && score > bestScore) {
+                    bestScore = score; bestArr = cand; bestNameOff = no;
+                }
+            }
+        }
+    }
+
+    if (bestArr && bestScore >= 8) {
+        g_gobjectsPtr = bestArr;
+        g_config.layout.uobj_name_off = bestNameOff;
+        // Pick a class offset that yields a readable pointer on the first object.
+        uintptr_t data = 0; Memory::SafeRead(bestArr, data);
+        uintptr_t obj0 = 0; Memory::SafeRead(data, obj0);
+        for (size_t co : kClassOffs) {
+            uintptr_t cls = 0;
+            if (Memory::SafeRead(obj0 + co, cls) && LooksLikeReadablePtr(cls)) {
+                g_config.layout.uobj_class_off = co; break;
+            }
+        }
+        Logger::Info("ObjectDumper: GObjects @ 0x%08X (count probe ok, "
+                     "uobj_name_off=0x%zX, uobj_class_off=0x%zX, score=%d/24).",
+                     static_cast<unsigned>(bestArr),
+                     g_config.layout.uobj_name_off,
+                     g_config.layout.uobj_class_off, bestScore);
+        return true;
+    }
+
+    Logger::Warn("ObjectDumper: GObjects not auto-found (GNames ok). "
+                 "Names resolve but no object table matched -- tune uobj offsets.");
+    return false;
+}
+
+// -----------------------------------------------------------------------
 //  TryScanUE3GObjects — attempt to locate GObjects via signature.
 //  Since Blacklist is UE3, this is the preferred path; it gives UClass*
 //  pointers directly.
@@ -209,8 +421,16 @@ static bool TryScanUE3GObjects() {
 bool Init() {
     g_registryHead = 0;
     g_gobjectsPtr  = 0;
+    g_gnamesPtr    = 0;
 
-    // Path 1: UE3 GObjects (preferred — standard UE3 structure).
+    // Path 0: heuristic auto-finder (no hardcoded signature needed — works on
+    // your specific build). This is the preferred route for Blacklist.
+    if (AutoFindGlobals()) {
+        Logger::Info("ObjectDumper: using auto-found UE3 GObjects/GNames path.");
+        return true;
+    }
+
+    // Path 1: UE3 GObjects via a hardcoded signature (if one is ever filled).
     if (TryScanUE3GObjects()) {
         g_registryHead = g_gobjectsPtr;  // reuse registryHead as the anchor
         Logger::Info("ObjectDumper: using UE3 GObjects path.");
@@ -256,7 +476,42 @@ bool IsUE3GObjectsActive() {
 //  DumpAll — walk the registry list and log every node's name + ptr.
 //  Falls back gracefully if the list link is invalid (logs what it got).
 // -----------------------------------------------------------------------
+// Walk the live GObjects array, invoking fn(objPtr, name) for each named
+// object. Returns the number of objects whose name resolved.
+static size_t ForEachObject(const std::function<void(uintptr_t, const std::string&)>& fn) {
+    uintptr_t data = 0; int count = 0;
+    if (!Memory::SafeRead(g_gobjectsPtr, data) ||
+        !Memory::SafeRead(g_gobjectsPtr + sizeof(uintptr_t), count))
+        return 0;
+    if (count > g_config.maxNodes) count = g_config.maxNodes;
+
+    size_t named = 0;
+    for (int k = 0; k < count; ++k) {
+        uintptr_t obj = 0;
+        if (!Memory::SafeRead(data + static_cast<uintptr_t>(k) * sizeof(uintptr_t), obj) || !obj)
+            continue;
+        std::string name;
+        if (ReadObjectName(obj, name)) { fn(obj, name); ++named; }
+    }
+    return named;
+}
+
 size_t DumpAll() {
+    // Preferred: walk the live GObjects array.
+    if (g_gobjectsPtr) {
+        FILE* f = nullptr;
+        if (g_config.dumpToFile) fopen_s(&f, g_config.dumpPath.c_str(), "w");
+        size_t count = ForEachObject([&](uintptr_t obj, const std::string& name) {
+            Logger::Info("[obj] 0x%08X  %s", static_cast<unsigned>(obj), name.c_str());
+            if (f) fprintf(f, "0x%08X\t%s\n", static_cast<unsigned>(obj), name.c_str());
+        });
+        if (f) fclose(f);
+        Logger::Info("ObjectDumper: dumped %zu named objects%s.", count,
+                     g_config.dumpToFile ? " (written to dump file)" : "");
+        return count;
+    }
+
+    // Legacy fallback: linked-list registry walk.
     if (!g_registryHead) {
         Logger::Warn("ObjectDumper: registry not located; run Init first.");
         return 0;
@@ -292,6 +547,20 @@ size_t DumpAll() {
 //  catalog entry, record its live node pointer in PropDatabase.
 // -----------------------------------------------------------------------
 size_t ResolveProps() {
+    // Preferred: match catalog names against live GObjects. For each catalog
+    // type name we want the UClass* (an object literally named the same in the
+    // 'Class' table), so we record the object whose own name matches.
+    if (g_gobjectsPtr) {
+        size_t resolved = 0;
+        ForEachObject([&](uintptr_t obj, const std::string& name) {
+            uint32_t id = PropDatabase::ResolveByName(name);
+            if (id != UINT32_MAX) { PropDatabase::SetTypeNode(id, obj); ++resolved; }
+        });
+        Logger::Info("ObjectDumper: resolved %zu / %zu catalog types via GObjects.",
+                     resolved, PropDatabase::Entries().size());
+        return resolved;
+    }
+
     if (!g_registryHead) return 0;
 
     size_t resolved = 0;
