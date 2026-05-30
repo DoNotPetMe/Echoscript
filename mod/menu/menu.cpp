@@ -92,7 +92,7 @@ void Render() {
         ImGuiWindowFlags_NoCollapse |
         ImGuiWindowFlags_NoScrollbar;
 
-    if (!ImGui::Begin("Splinter Cell: Blacklist — Mod Menu  [INSERT to close]",
+    if (!ImGui::Begin("Splinter Cell: Blacklist - Mod Menu  [INSERT to close]",
                       &g_menuOpen, flags)) {
         ImGui::End();
         return;
@@ -118,8 +118,8 @@ void Render() {
         ImGui::SliderFloat("Mouse Sensitivity", &FreeCam::g_config.lookSensitivity, 0.01f, 1.f, "%.3f");
 
         ImGui::Spacing();
-        ImGui::TextDisabled("W/S/A/D — move   Q/E — up/down   Shift — sprint");
-        ImGui::TextDisabled("Mouse — look around");
+        ImGui::TextDisabled("W/S/A/D = move   Q/E = up/down   Shift = sprint");
+        ImGui::TextDisabled("Mouse = look around");
 
         if (FreeCam::g_config.enabled) {
             ImGui::Spacing();
