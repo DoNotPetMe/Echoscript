@@ -99,7 +99,7 @@ void Render() {
     }
 
     // ---- Header ----
-    ImGui::TextDisabled("Controls: INSERT = toggle menu   F5 = toggle free-cam");
+    ImGui::TextDisabled("Controls: INSERT = toggle menu   F5 = toggle free-roam");
     ImGui::Separator();
     ImGui::Spacing();
 
@@ -114,54 +114,52 @@ void Render() {
             fc = FreeCam::g_config.enabled;
         }
 
-        ImGui::SliderFloat("Move Speed",    &FreeCam::g_config.moveSpeed,      0.5f, 200.f, "%.1f u/s");
+        ImGui::SliderFloat("Move Speed",    &FreeCam::g_config.moveSpeed,      0.5f, 2000.f, "%.1f u/s");
         ImGui::SliderFloat("Mouse Sensitivity", &FreeCam::g_config.lookSensitivity, 0.01f, 1.f, "%.3f");
 
         ImGui::Spacing();
-        ImGui::TextDisabled("W/S/A/D = move   Q/E = up/down   Shift = sprint");
-        ImGui::TextDisabled("Mouse = look around");
+        ImGui::TextDisabled("W/S = world X   A/D = world Y   Q/E = down/up   Shift = sprint");
 
-        if (FreeCam::g_config.enabled) {
-            ImGui::Spacing();
+        // --- Capture status ---
+        ImGui::Spacing();
+        uintptr_t base = FreeCam::CurrentBase();
+        if (base) {
+            ImGui::TextColored(ImVec4(0.4f, 1.0f, 0.4f, 1.0f),
+                               "Struct base captured: 0x%08X", static_cast<unsigned>(base));
             auto& st = FreeCam::g_state;
             ImGui::Text("Pos:  %.1f  %.1f  %.1f", st.position.x, st.position.y, st.position.z);
-            ImGui::Text("Rot:  pitch %.1f  yaw %.1f", st.pitch, st.yaw);
+        } else {
+            ImGui::TextColored(ImVec4(1.0f, 0.8f, 0.3f, 1.0f),
+                               "Waiting for capture -- load a level and move.");
         }
 
         ImGui::Spacing();
         ImGui::Separator();
-        ImGui::TextDisabled("Camera finder (if freecam shows 'pattern not found')");
+        ImGui::TextDisabled("Advanced (only if auto-capture fails)");
         ImGui::Spacing();
 
-        // --- Scan button ---
-        if (CamFinder::IsScanning()) {
-            ImGui::BeginDisabled();
-            ImGui::Button("Scanning... (check console)");
-            ImGui::EndDisabled();
-        } else {
-            if (ImGui::Button("Scan Memory for Camera")) {
-                CamFinder::Scan();
-            }
-            ImGui::SameLine();
-            ImGui::TextDisabled("(~3 sec, logs to console)");
-        }
-
-        // --- Force-base input ---
+        // --- Manual base override ---
         static char s_forceAddr[12] = "";
         ImGui::SetNextItemWidth(130.f);
         ImGui::InputText("##forcebase", s_forceAddr, sizeof(s_forceAddr),
                          ImGuiInputTextFlags_CharsHexadecimal);
         ImGui::SameLine();
-        if (ImGui::Button("Force Cam Base")) {
+        if (ImGui::Button("Force Base")) {
             uintptr_t addr = static_cast<uintptr_t>(
                 std::strtoul(s_forceAddr, nullptr, 16));
-            if (addr)
-                FreeCam::ForceBase(addr);
-            else
-                Logger::Warn("FreeCam: invalid address -- enter hex without 0x prefix.");
+            FreeCam::ForceBase(addr);  // 0 clears the override
         }
         ImGui::SameLine();
-        ImGui::TextDisabled("hex, no 0x");
+        ImGui::TextDisabled("hex, no 0x (blank=auto)");
+
+        // --- Legacy memory scanner (kept as a fallback) ---
+        if (CamFinder::IsScanning()) {
+            ImGui::BeginDisabled();
+            ImGui::Button("Scanning... (see console)");
+            ImGui::EndDisabled();
+        } else if (ImGui::Button("Scan Memory (fallback)")) {
+            CamFinder::Scan();
+        }
 
         ImGui::Unindent();
     }

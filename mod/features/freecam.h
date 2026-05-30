@@ -1,68 +1,78 @@
 #pragma once
 #include <Windows.h>
 #include <DirectXMath.h>
+#include <cstdint>
 
 // -----------------------------------------------------------------------
-// Free Camera for Splinter Cell: Blacklist (UE3-based, 64-bit build)
+// Free Camera / Free Roam for Splinter Cell: Blacklist (32-bit DX11 build)
 //
-// The camera matrix pointer is located at runtime via pattern scanning.
-// If the pattern breaks on a patch, update CAM_MATRIX_SIG below.
+// Reverse-engineering credit: the coordinate struct layout and injection
+// site below were derived from Paul44's Cheat Engine table (FearLess
+// Revolution, "SC Blacklist v2.2"). See CAMERA_OFFSETS.md.
 //
-// Memory layout of the in-game camera struct we care about:
-//   struct CameraState {
-//       float    viewMatrix[16];   // offset 0x00  (row-major 4x4)
-//       float    fov;              // offset 0x40
-//       float    position[3];      // offset 0x44
-//       float    rotation[3];      // offset 0x50  (pitch, yaw, roll in radians)
+// There is NO static pointer to the player/camera position struct. Instead
+// the game exposes it in the ESI register at a specific instruction. We
+// AOB-scan for that instruction, install a tiny trampoline that copies ESI
+// into g_structBase every time it runs, and then read/write the coordinates
+// directly:
+//
+//   struct PositionBlock {            // base == captured ESI
+//       ...
+//       float x;   // base + 0x9C
+//       float y;   // base + 0xA0
+//       float z;   // base + 0xA4
 //   };
+//
+// CE injection point (for reference):
+//   Blacklist_DX11_game.exe+95D6A6: F3 0F 10 86 9C 00 00 00
+//                                    movss xmm0,[esi+0000009C]
 // -----------------------------------------------------------------------
 
 namespace FreeCam {
 
     // ----------------------------------------------------------------
-    // Signatures (IDA-style, update if the game patches)
+    // Signatures (IDA-style). Update if the game patches.
     // ----------------------------------------------------------------
+    //
+    // COORD_SIG matches the player camera read at +95D6A6:
+    //   movss xmm0,[esi+0x9C]   (F3 0F 10 86 9C 00 00 00)
+    //   movss xmm1,[esi+0x250]  (F3 0F 10 8E 50 ...)
+    // The match address is the injection point; ESI there is the struct base.
+    static constexpr const char* COORD_SIG =
+        "F3 0F 10 86 9C 00 00 00 F3 0F 10 8E 50";
 
-    // Signature that leads to the camera state pointer, plus the offset of the
-    // 4-byte address field inside the matched instruction and (x64 only) the
-    // total instruction size. See REVERSE_ENGINEERING.md for how to find these.
-#ifdef _WIN64
-    // ---- 64-bit build (RIP-relative; e.g. `48 8B 0D <rel32>` mov rcx,[rip+x]) ----
-    static constexpr const char* CAM_MATRIX_SIG =
-        "48 8B 0D ?? ?? ?? ?? 48 85 C9 74 ?? F3 0F 11 41";
-    static constexpr int CAM_SIG_REL32_OFFSET = 3;   // offset of the rel32 inside the instruction
-    static constexpr int CAM_SIG_INSTR_SIZE   = 7;   // total instruction size
-#else
-    // ---- 32-bit build (absolute; e.g. `8B 0D <imm32>` mov ecx,[imm32]) ----
-    // PLACEHOLDER — replace with a real x86 pattern from your game. The bytes
-    // here will NOT match anything (freecam stays disabled until you fill it).
-    // REL32_OFFSET here means "offset of the 4-byte absolute address field".
-    static constexpr const char* CAM_MATRIX_SIG =
-        "00 00 00 00 00 00 00 00 00 00 00 00";
-    static constexpr int CAM_SIG_REL32_OFFSET = 2;   // operand offset (e.g. after `8B 0D`)
-    static constexpr int CAM_SIG_INSTR_SIZE   = 6;   // unused on x86, kept for the API
-#endif
+    // FREEROAM_SIG matches the engine's position-copy write at +18880E:
+    //   movq [ebx+0x9C],xmm0    (66 0F D6 83 9C 00 00 00)
+    //   mov  eax,[esi+08]       (8B 46 ...)
+    // EBX there is the struct base; we substitute our coords for the player's.
+    static constexpr const char* FREEROAM_SIG =
+        "66 0F D6 83 9C 00 00 00 8B 46";
+
+    // Offsets of the X/Y/Z position floats inside the captured struct.
+    static constexpr unsigned OFF_POS_X = 0x9C;
+    static constexpr unsigned OFF_POS_Y = 0xA0;
+    static constexpr unsigned OFF_POS_Z = 0xA4;
 
     // ----------------------------------------------------------------
     // Config knobs exposed to the mod menu
     // ----------------------------------------------------------------
     struct Config {
-        bool  enabled        = false;
-        float moveSpeed      = 5.0f;    // units/second
-        float lookSensitivity = 0.15f; // degrees per pixel
-        bool  freezeTime     = false;
+        bool  enabled         = false;
+        float moveSpeed       = 300.0f;  // units/second (UE units ~= cm)
+        float lookSensitivity = 0.15f;   // degrees per pixel (HUD only for now)
+        bool  freezeTime      = false;
     };
 
     extern Config g_config;
 
     // ----------------------------------------------------------------
-    // Camera state written each frame when free-cam is active
+    // Camera state mirrored each frame while free-cam is active
     // ----------------------------------------------------------------
     struct State {
-        DirectX::XMFLOAT3 position  {0, 0, 0};
-        float             pitch     = 0.0f;  // degrees
-        float             yaw       = 0.0f;  // degrees
-        float             roll      = 0.0f;  // degrees (usually kept 0)
+        DirectX::XMFLOAT3 position {0, 0, 0};  // x, y, z in world units
+        float             pitch    = 0.0f;     // degrees (HUD)
+        float             yaw      = 0.0f;     // degrees (HUD)
+        float             roll     = 0.0f;
     };
 
     extern State g_state;
@@ -70,26 +80,31 @@ namespace FreeCam {
     // ----------------------------------------------------------------
     // Lifecycle
     // ----------------------------------------------------------------
-    bool Init();            // called once after the game DLL is ready; scans patterns
-    void Update(float dt);  // called every frame; applies camera when enabled
+    bool Init();            // installs the ESI-capture trampoline
+    void Update(float dt);  // called every frame; writes coords when enabled
     void Toggle();
-    void Shutdown();
+    void Shutdown();        // removes the trampoline, restores original bytes
 
-    // Directly set the camera struct base (for testing cam_finder results).
-    // If the freecam position tracks your in-game position after calling this,
-    // the address is correct.  Use the 'Force Cam Base' box in the menu.
+    // True once the trampoline has run at least once (i.e. the game executed
+    // the hooked instruction and we captured a struct base). It only fires
+    // while you're actually in a loaded level.
+    bool HasCapturedBase();
+
+    // The currently active struct base (forced override if set, else captured).
+    uintptr_t CurrentBase();
+
+    // Manually override the struct base (the 'Force Cam Base' menu box). Pass 0
+    // to clear the override and fall back to the auto-captured base.
     void ForceBase(uintptr_t addr);
 
     // ----------------------------------------------------------------
-    //  Accessors used by the level editor's gizmo (world-to-screen).
-    //  All return false if the camera state pointer is not yet resolved.
+    //  Accessors used by the level editor's gizmo. Only position is
+    //  available from this struct; the view matrix / FOV are not, so those
+    //  return false (world-to-screen gizmo is disabled for this title).
     // ----------------------------------------------------------------
     bool GetViewMatrix(DirectX::XMMATRIX& out);
     bool GetCameraPosition(DirectX::XMFLOAT3& out);
     bool GetFov(float& outRadians);
-
-    // Builds view * projection. aspect comes from the caller (ImGui display
-    // size); near/far are reasonable defaults overridable here.
     bool GetViewProjection(DirectX::XMMATRIX& out, float aspect,
                            float nearZ = 1.0f, float farZ = 100000.0f);
 
