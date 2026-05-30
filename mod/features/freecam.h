@@ -34,12 +34,19 @@ namespace FreeCam {
     // Signatures (IDA-style). Update if the game patches.
     // ----------------------------------------------------------------
     //
-    // COORD_SIG matches:
+    // COORD_SIG matches the player camera read at +95D6A6:
     //   movss xmm0,[esi+0x9C]   (F3 0F 10 86 9C 00 00 00)
     //   movss xmm1,[esi+0x250]  (F3 0F 10 8E 50 ...)
     // The match address is the injection point; ESI there is the struct base.
     static constexpr const char* COORD_SIG =
         "F3 0F 10 86 9C 00 00 00 F3 0F 10 8E 50";
+
+    // FREEROAM_SIG matches the engine's position-copy write at +18880E:
+    //   movq [ebx+0x9C],xmm0    (66 0F D6 83 9C 00 00 00)
+    //   mov  eax,[esi+08]       (8B 46 ...)
+    // EBX there is the struct base; we substitute our coords for the player's.
+    static constexpr const char* FREEROAM_SIG =
+        "66 0F D6 83 9C 00 00 00 8B 46";
 
     // Offsets of the X/Y/Z position floats inside the captured struct.
     static constexpr unsigned OFF_POS_X = 0x9C;
