@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+
+	<FocusTransfer
+		Default="button1"
+	>
+	
+		<Item
+			Source="button1"
+			Transfer="down"
+			Target="button2"
+			Reverse="1"
+		/>
+		
+		<Item
+			Source="button2"
+			Transfer="down"
+			Target="button3"
+			Reverse="1"
+		/>
+		
+		<Item
+			Source="button3"
+			Transfer="down"
+			Target="button4"
+			Reverse="1"
+		/>
+		
+		<Item
+			Source="button4"
+			Transfer="down"
+			Target="listview1"
+			Reverse="1"
+		/>
+		
+		<Item
+			Source="listview1"
+			Transfer="down"
+			Target="dropdown1"
+			Reverse="1"
+		/>
+		
+		<Item
+			Source="dropdown1"
+			Transfer="down"
+			Target="label2.button5"
+			Reverse="1"
+		/>
+		
+		<Item
+			Source="label2.button5"
+			Transfer="down"
+			Target="label2.button6"
+			Reverse="1"
+		/>
+		
+		<Item
+			Source="label2.button6"
+			Transfer="down"
+			Target="button1"
+			Reverse="1"
+		/>
+	
+	</FocusTransfer>
+	
+	<Button
+		Name="button1"
+		PosX="50"
+		PosY="50"
+		Text="Button 1"
+		Alpha="50"
+		BlurX="1.5"
+		BlurY="1.7"
+		ScaleX="100"
+		ScaleY="100"
+		Visible="1"
+		RotationX="0"
+		RotationY="0"
+		RotationZ="0"
+		State="up"
+	>
+	
+		<Tweens>
+		
+			<Tween
+				Property="RotationX"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="2000"
+			/>
+		
+		</Tweens>
+		
+		<OnSelectPressed>
+		
+			<Command
+				Target="_PARENT"
+				Param1="StartTimer"
+			/>
+			
+			<CommandTween
+				Target="_PARENT.listview1"
+				Property="RotationZ"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+		</OnSelectPressed>
+		
+		<OnCancelPressed/>		
+		<OnStartPressed/>		
+		<OnBackPressed/>
+		<OnButtonXPressed/>
+		<OnButtonYPressed/>
+		<OnDPadUpPressed/>
+		<OnDPadDownPressed/>
+		<OnGainFocus/>
+		<OnLoseFocus/>
+		<OnLeftBumperPressed/>
+		<OnRightBumperPressed/>
+		<OnLeftTriggerPressed/>
+		<OnRightTriggerPressed/>
+		<OnUserSelection/>
+		<OnValueChanged/>
+		
+	</Button>
+	
+	<Button
+		Name="button2"
+		PosX="50"
+		PosY="100"
+		Text="Button 2"
+		Alpha="50"
+		BlurX="1.5"
+		BlurY="1.7"
+		ScaleX="100"
+		ScaleY="100"
+		Visible="1"
+		RotationX="0"
+		RotationY="0"
+		RotationZ="0"
+		State="up"
+	>
+	
+		<OnSelectPressed>
+		
+			<Command
+				Target="_PARENT"
+				Param1="ToggleSpinner"
+			/>
+			
+		</OnSelectPressed>
+		
+	</Button>
+	
+	<Button
+		Name="button3"
+		PosX="50"
+		PosY="150"
+		Text="Button 3"
+		Alpha="50"
+		BlurX="1.5"
+		BlurY="1.7"
+		ScaleX="100"
+		ScaleY="100"
+		Visible="1"
+		RotationX="0"
+		RotationY="0"
+		RotationZ="0"
+		State="up"
+	>
+	
+		<OnSelectPressed>
+		
+			<Command
+				Target="_PARENT"
+				Param1="StepProgress"
+			/>
+			
+			<CommandTween
+				Target="_PARENT.label1"
+				Property="PosX"
+				InitialValue="1000"
+				TargetValue="500"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+			<CommandTween
+				Target="_PARENT.label1"
+				Property="RotationZ"
+				InitialValue="720"
+				TargetValue="0"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+		</OnSelectPressed>
+		
+	</Button>
+	
+	<Button
+		Name="button4"
+		PosX="50"
+		PosY="200"
+		Text="Button 4"
+		Alpha="50"
+		BlurX="1.5"
+		BlurY="1.7"
+		ScaleX="100"
+		ScaleY="100"
+		Visible="1"
+		RotationX="0"
+		RotationY="0"
+		RotationZ="0"
+		State="up"
+	>
+	
+		<OnSelectPressed>
+		
+			<CommandTween
+				Target="_PARENT.button1"
+				Property="RotationZ"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="1000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+			<CommandTween
+				Target="_PARENT.button2"
+				Property="RotationZ"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="1000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+			<CommandTween
+				Target="_PARENT.button3"
+				Property="RotationZ"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="1000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+			<CommandTween
+				Target="_PARENT.button4"
+				Property="RotationZ"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="1000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+		</OnSelectPressed>
+		
+	</Button>
+	
+	<Label
+		Name="label1"
+		PosX="500"
+		PosY="50"
+		Text="Label 1"
+	>
+	
+		<Tweens>
+		
+			<Tween
+				Property="PosX"
+				InitialValue="500"
+				TargetValue="1000"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="2000"
+			/>
+			
+			<Tween
+				Property="RotationZ"
+				InitialValue="0"
+				TargetValue="720"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="2000"
+			/>
+		
+		</Tweens>
+	
+	</Label>	
+		
+	<ListView
+		Name="listview1"
+		PosX="40"
+		PosY="300"		
+		Width="300"
+		Height="200"
+		SelectedIndex="0"
+	>
+	
+		<Tweens>
+		
+			<Tween
+				Property="RotationX"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="500"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="2000"
+			/>
+			
+			<Tween
+				Property="RotationY"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="4000"
+			/>
+		
+		</Tweens>
+		
+		<Items>
+		
+			<Item Text="Item 1">
+			
+				<Item Text="Sub 1">
+		
+					<Item Text="Sub 2"/>
+				
+				</Item>
+				
+			</Item>
+			
+			<Item Text="Item 2">
+				
+				<Item Text="Sub 1" />
+				
+			</Item>
+		
+		<Item Text="Item 3"/>
+		
+		</Items>
+		
+		<Columns>
+		
+			<Column Width="100"/>
+			<Column Width="100"/>
+			<Column Width="100"/>
+		
+		</Columns>
+		
+		<OnSelectedIndexChanged>
+		
+			<CommandTween
+				Property="rotationy"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+		</OnSelectedIndexChanged>
+		
+	</ListView>	
+	
+	<DropDown
+		Name="dropdown1"
+		PosX="200"
+		PosY="450"
+		SelectedIndex="1"
+	>
+	
+		<Items>
+		
+			<Item Text="Item 1"/>
+			<Item Text="Item 2"/>
+			<Item Text="Item 3"/>
+		
+		</Items>
+		
+		<OnSelectedIndexChanged>
+		
+			<CommandTween
+				Property="RotationY"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+		</OnSelectedIndexChanged>
+		
+	</DropDown>
+	
+	<Label
+		Name="label2"
+		PosX="40"
+		PosY="550"
+		Text="Label 2"
+		Height="80"
+	>
+		
+		<Tweens>
+		
+			<Tween
+				Property="Alpha"
+				InitialValue="10"
+				TargetValue="100"
+				Milliseconds="2000"
+				Equation="EaseOut"
+				Transition="Sine"
+				DelayMs="2000"
+			/>
+		
+		</Tweens>
+		
+		<children>
+		
+			<Button
+				Name="button5"
+				PosX="0"
+				PosY="20"
+				Text="Button 5"
+			/>
+			
+			<Button
+				Name="button6"
+				PosX="0"
+				PosY="40"
+				Text="Button 6"
+			/>
+	
+		</children>			
+		
+	</Label>
+
+	<ProgressBar
+		Name="progressbar1"
+		PosX="400"
+		PosY="400"
+		Text=""
+		Min="0"
+		Max="100"
+		Step="3"
+		Current="9"
+	/>
+	
+	<ProgressGeneric
+		Asset="ProgressWheelSample"
+		ProgressFrameCount="100"
+		Name="progressgeneric1"
+		PosX="400"
+		PosY="500"
+		Text=""
+		Min="0"
+		Max="100"
+		Step="1"
+		Current="0"
+	/>
+	
+	<SpinnerGeneric
+		Asset="SpinnerSample"
+		Name="spinnergeneric1"
+		PosX="600"
+		PosY="500"
+	/>
+	
+	<TimerGeneric
+		Asset="TimerSample"
+		TimerFrameCount="100"
+		Name="timergeneric1"
+		PosX="800"
+		PosY="500"
+		Text=""
+		DurationMs="2000"
+	>
+	
+		<OnTimerFinished>
+		
+			<CommandTween
+				Target="_PARENT.dropdown1"
+				Property="RotationY"
+				InitialValue="0"
+				TargetValue="360"
+				Milliseconds="2000"
+				Equation="EaseIn"
+				Transition="Sine"
+				DelayMs="0"
+			/>
+			
+		</OnTimerFinished>
+		
+	</TimerGeneric>
+	
+</root>

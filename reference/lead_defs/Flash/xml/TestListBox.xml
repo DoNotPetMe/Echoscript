@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<FocusTransfer
+		Default="listbox">
+		
+		
+	</FocusTransfer>
+
+	<Label
+		Asset="Label_HUB"
+		Name="Header"
+		PosX="200"
+		PosY="100"
+		Text="Testing new listview"
+		ScaleX="150"
+		ScaleY="150"
+	>
+	</Label>
+	
+	
+	
+	<ListBox
+		Name="listbox"
+		PosX="00"
+		PosY="300"
+		NumSlots="10"
+		SelectedIndex="0"
+	>
+		<Items>			
+			<Item Text="Text 1" Style="Gamertag"/>
+			<Item Text="Header" Style="Header"/>
+			<Item Text="Text 3" Style="Gamertag"/>
+			<Item Text="Header" Style="Header"/>
+			<Item Text="Text 5" Style="Gamertag"/>
+			<Item Text="Text 6" Style="Gamertag"/>
+			<Item Text="Text 7" Style="Gamertag"/>
+			<Item Text="Header" Style="Header"/>
+			<Item Text="Text 9" Style="Gamertag"/>
+			<Item Text="Text 10" Style="Gamertag"/>
+			<Item Text="Text 11" Style="Header"/>
+			<Item Text="Text 12" Style="Gamertag"/>
+		</Items>
+		
+	</ListBox>
+
+	
+	
+</root>
