@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Rifle_Goblin" version="0">
+	<archetype name="EAIBARegular" />
+    <controller name="BARegularController" />
+	<inventory name="Coop_Rifle_Goblin" >
+		<weapon name="Rifle_Goblin" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

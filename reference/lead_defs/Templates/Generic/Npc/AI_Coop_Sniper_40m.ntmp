@@ -1,0 +1,10 @@
+<npc name="AI_Coop_Sniper_40m" version="0">
+	<archetype name="EAISniper" />
+	<controller name="EAISniperController_Short" />
+	<inventory name="Coop_Sniper_Short" >
+		<weapon name="Sniper_SVU">
+		    <attachment name="Rifle_LaserSight"/>
+		</weapon>
+		<weapon name="Pistol_Makarov" />
+	</inventory>
+</npc>

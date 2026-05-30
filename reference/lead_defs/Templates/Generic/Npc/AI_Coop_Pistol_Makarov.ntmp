@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Pistol_Makarov" version="0">
+	<archetype name="EAIBARegular" />
+    <controller name="BARegularController" />
+	<inventory name="Coop_Pistol_Makarov" >
+		<weapon name="Pistol_Makarov" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

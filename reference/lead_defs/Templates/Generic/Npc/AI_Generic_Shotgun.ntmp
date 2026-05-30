@@ -1,0 +1,7 @@
+<npc name="AI_Generic_Shotgun" version="0">
+	<archetype name="EAIBARegular" />
+	<controller name="BARegularController" />
+	<inventory name="Shotgun" >
+		<weapon name="Shotgun_Saiga12" />
+	</inventory>
+</npc>

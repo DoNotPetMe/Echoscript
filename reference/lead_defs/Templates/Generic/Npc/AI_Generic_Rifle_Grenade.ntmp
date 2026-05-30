@@ -1,0 +1,8 @@
+<npc name="AI_Generic_Rifle_Grenade" version="0">
+	<archetype name="EAIBARegular" />
+	<controller name="BARegularController" />
+	<inventory name="AK47_grenade" >
+		<weapon name="Rifle_AK47" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

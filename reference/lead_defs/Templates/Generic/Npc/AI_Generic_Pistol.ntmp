@@ -1,0 +1,7 @@
+<npc name="AI_Generic_Pistol" version="0">
+	<archetype name="EAIBARegular" />
+	<controller name="BARegularController" />
+	<inventory name="Pistol" >
+		<weapon name="Pistol_Makarov" />
+	</inventory>
+</npc>

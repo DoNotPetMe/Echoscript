@@ -1,0 +1,7 @@
+<npc name="AI_Coop_Tech" version="0">
+	<archetype name="EAITech" />
+	<controller name="EAITechController_Coop" />
+	<inventory name="Coop_TechPistol" >
+		<weapon name="Pistol_Makarov" />
+	</inventory>
+</npc>

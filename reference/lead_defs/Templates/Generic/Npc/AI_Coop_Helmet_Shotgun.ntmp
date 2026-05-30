@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Helmet_Shotgun" version="0">
+	<archetype name="EAIBARegular" />
+	<controller name="BARegularController_Helmet" />
+	<inventory name="Coop_Helmet_Shotgun_Inventory" >
+		<weapon name="Shotgun_Saiga12" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

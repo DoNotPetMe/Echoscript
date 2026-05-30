@@ -1,0 +1,7 @@
+<npc name="AI_Tech_Default" version="0">
+	<archetype name="EAITech" />
+	<controller name="EAITechController" />
+	<inventory name="TechPistol" >
+		<weapon name="Pistol_Makarov" />
+	</inventory>
+</npc>

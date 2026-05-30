@@ -1,0 +1,7 @@
+<npc name="AI_Coop_Heavy" version="0">
+	<archetype name="EAIHeavy" />
+	<controller name="EAIHeavyController" />
+	<inventory name="Coop_Heavy_Shotgun" >
+		<weapon name="Shotgun_RMB93" />
+	</inventory>
+</npc>

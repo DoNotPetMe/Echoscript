@@ -1,0 +1,4 @@
+<npc name="AI_ReconDrone_Default" version="0">
+	<archetype name="EAIReconDrone" />
+	<controller name="EAIReconDroneController" />
+</npc>
