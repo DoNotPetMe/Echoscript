@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_HT2_CloseSecondDoor" leveluid="3" streamedRandomID="1260989390">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001a13" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:000019d2" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="NewTask_0" data="UID:000019d3" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

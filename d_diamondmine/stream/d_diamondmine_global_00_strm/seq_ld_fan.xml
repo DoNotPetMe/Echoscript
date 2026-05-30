@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Fan" leveluid="2" streamedRandomID="1260989390">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001566" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326620" bv_a="-1028390912:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00001567" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326620" bv_a="-1028390912:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00001604" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326636" bv_a="-1028390912:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00001605" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326636" bv_a="-1028390912:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00001606" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326620" bv_a="-1028390912:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask" true="NewTask_0" sequence="LD_Fan"/>
+</Sequence>

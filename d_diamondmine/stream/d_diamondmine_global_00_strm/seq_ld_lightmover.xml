@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_LightMover" leveluid="2" streamedRandomID="1260989390">
+  <Task name="Mover" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000166f" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:000012ee" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Mover_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000166f" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:000012ef" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Mover_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000166f" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:000012f0" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Mover" true="Mover_0" sequence="LD_LightMover"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="Mover_0" true="Mover_1" sequence="LD_LightMover"/>
+  <Task name="Mover_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000166f" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:000012ef" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="Mover_1" true="Mover_2" sequence="LD_LightMover"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Mover_2" true="Mover" sequence="LD_LightMover"/>
+  <Task name="Mover_3" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001671" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:00001785" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Mover_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001671" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:00001786" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Mover_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001671" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:00001787" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Mover_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001671" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Move" duration="1.000000" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Target" data="UID:00001786" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="Mover_3" true="Mover_4" sequence="LD_LightMover"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Mover_4" true="Mover_5" sequence="LD_LightMover"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Mover_5" true="Mover_6" sequence="LD_LightMover"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Mover_6" true="Mover_3" sequence="LD_LightMover"/>
+</Sequence>

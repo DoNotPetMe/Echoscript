@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Cooptext" leveluid="2" streamedRandomID="1260989390">
+  <Task name="checking" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Show">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="checking" true="Show" data="UID:00001127" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <Task name="hideTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_2" start="Show" true="hideTask_2" data="UID:00001127" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_0" start="hideTask_2" true="checking" sequence="LD_Cooptext"/>
+  <Task name="checking_0" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Show_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="hideTask_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_3" start="checking_0" true="Show_0" data="UID:00001128" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_4" start="Show_0" true="hideTask_3" data="UID:00001128" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_1" start="hideTask_3" true="checking_0" sequence="LD_Cooptext"/>
+  <Task name="checking_other side" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Show_otherside">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="hideTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_5" start="checking_other side" true="Show_otherside" data="UID:00001532" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_6" start="Show_otherside" true="hideTask_4" data="UID:00001532" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_2" start="hideTask_4" true="checking_other side" sequence="LD_Cooptext"/>
+  <Task name="checking_other side_0" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Show_otherside_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="hideTask_5">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_7" start="checking_other side_0" true="Show_otherside_0" data="UID:00001533" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_8" start="Show_otherside_0" true="hideTask_5" data="UID:00001533" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_3" start="hideTask_5" true="checking_other side_0" sequence="LD_Cooptext"/>
+</Sequence>

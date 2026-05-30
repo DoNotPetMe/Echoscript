@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_ExplosiveBarrel" startup="1" leveluid="1" streamedRandomID="1260989390">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_ACT_D_DiamondMine_Facility_ConveyorDes_04_Ani" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:000006fb" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:000009c9" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Explosive1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_2" entity="UID:000006fb" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::List_ACT_D_DiamondMine_Facility_ConveyorDes_04_Ani" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::List_ACT_D_DiamondMine_Facility_ConveyorDes_04_Ani" TypeDeleted="List">
+        <Event name="NewEvent" start="0.010000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="MeshPlayAnim" entityStripped="1" dp_i="335544444" bv_a="1065353216" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="explosion!!!"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:000009c9" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="1" bv_i="67108868">
+            <ParameterInstance name="PhysType" data="Repository::Unreal::enums::EPhysics::PHYS_Havok" TypeDeleted="EPhysics"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="UID:0000097f" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="12.528170">
+          <CommandInstance name="PlaySound" duration="12.528170" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Mev_sfx_DeOps_OilCanExpl_Expl_ConMet" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="UID:00000980" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="3.041354">
+          <CommandInstance name="PlaySound" duration="3.041354" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_RubFall_DimdMine_1st" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="UID:00000981" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="3.517458">
+          <CommandInstance name="PlaySound" duration="3.517458" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_RubFall_DimdMine_2nd" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_7" entity="UID:00000982" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="3.219146">
+          <CommandInstance name="PlaySound" duration="3.219146" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_RubFall_DimdMine_3rd" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="UID:00000983" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="4.175416">
+          <CommandInstance name="PlaySound" duration="4.175416" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_SoilDebris" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="Explosive1" data="UID:000006e3" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="GI_EXPLOSION" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Initial_0" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_3" entity="UID:00000868" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="UID:00000867" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="UID:000002cf" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="UID:00000524" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Explosive1_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Concrete Explosion!!!"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:000002cf" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="UID:00000868" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="UID:00000524" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="UID:00000867" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="UID:000002cf" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="UID:00000868" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ReenableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="UID:00000867" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ReenableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:00000984" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="12.528170">
+          <CommandInstance name="PlaySound" duration="12.528170" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Mev_sfx_DeOps_OilCanExpl_Expl_ConMet" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_7" entity="UID:00000985" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="4.175416">
+          <CommandInstance name="PlaySound" duration="4.175416" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_SoilDebris" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="Initial_0" true="Explosive1_0" data="UID:000006db" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="GI_EXPLOSION" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000002d3" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000009ca" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000002d3" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000009ca" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000986" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="12.528170">
+          <CommandInstance name="PlaySound" duration="12.528170" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Mev_sfx_DeOps_OilCanExpl_Expl_ConMet" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000987" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="4.175416">
+          <CommandInstance name="PlaySound" duration="4.175416" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_SoilDebris" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:000002d3" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="UID:000009ca" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ReenableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="NewTask" true="NewTask_0" data="UID:000006eb" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="GI_EXPLOSION" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

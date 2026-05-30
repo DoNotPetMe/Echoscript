@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Lightcontroller" leveluid="2" streamedRandomID="1260989390">
+  <Task name="Inlevel" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_FirstSetLight" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="UID:00001018" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="0.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_35" entity="UID:000013e5" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" start="0.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="UID:000013e7" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" start="0.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="UID:0000102e" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="0.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="UID:00001019" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="0.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_12" entity="UID:000013e3" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" start="1.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_11" entity="UID:0000102c" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="1.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_13" entity="UID:000013e1" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" start="1.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_15" entity="UID:0000101a" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="1.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_16" entity="UID:00001032" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="1.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_17" entity="UID:00001026" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="3.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_18" entity="UID:00001015" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="3.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_19" entity="UID:00001016" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="6.000000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_20" entity="UID:0000101c" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="6.000000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_21" entity="UID:0000101d" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="6.000000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_22" entity="UID:00001017" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="8.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_23" entity="Repository::List_SecondSetLight02" TypeDeleted="List">
+        <Event name="NewEvent" start="1.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_24" entity="UID:00001028" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="3.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_26" entity="UID:00001027" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="6.000000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_28" entity="UID:00000c7d" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="6.000000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_29" entity="Repository::List_Redlight" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_30" entity="Repository::List_Lightingeffects" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_31" entity="Repository::List_Lightingeffects02" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_32" entity="Repository::List_FirstLightRay" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DeleteActor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_33" entity="Repository::List_SecLightRay" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_36" entity="UID:000013e8" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="5.915000">
+          <CommandInstance name="PlaySound" duration="5.915000" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_Sequencer_DeOps_DiamondMine_Alarm" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_Music" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_37" entity="UID:000013e2" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="5.915000">
+          <CommandInstance name="PlaySound" duration="5.915000" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_Sequencer_DeOps_DiamondMine_Alarm" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_Music" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_38" entity="UID:000013e4" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="5.915000">
+          <CommandInstance name="PlaySound" duration="5.915000" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_Sequencer_DeOps_DiamondMine_Alarm" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_Music" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_34" entity="UID:000013e6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="5.915000">
+          <CommandInstance name="PlaySound" duration="5.915000" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_Sequencer_DeOps_DiamondMine_Alarm" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_Music" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_39" entity="UID:00001501" InUnrealActors="1" TypeDeleted="LightSwitch">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetSwitchOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_40" entity="Repository::List_RedLensFlare" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_41" entity="UID:000015f8" InUnrealActors="1" TypeDeleted="LightSwitch">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetSwitchOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_42" entity="Repository::Sequences::SEQ_SetHeadLightStatus" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_44" entity="UID:00001782" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" start="0.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_45" entity="UID:00001783" InUnrealActors="1" TypeDeleted="LensFlare">
+        <Event name="NewEvent" start="0.500000" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>
