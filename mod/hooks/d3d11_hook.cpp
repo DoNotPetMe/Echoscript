@@ -52,12 +52,13 @@ static std::chrono::high_resolution_clock::time_point s_lastFrame{};
 // -----------------------------------------------------------------------
 
 static WNDPROC s_origWndProc = nullptr;
-extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND, UINT, WPARAM, LPARAM);
 
 static LRESULT CALLBACK HookedWndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
     if (g_imguiReady) {
-        // Let ImGui consume the event first
-        if (ImGui_ImplWin32_WndProcHandler(hwnd, msg, wp, lp))
+        // Let ImGui consume the event first. Qualify with :: so this resolves
+        // to the global handler declared by imgui_impl_win32.h, not a symbol
+        // inside namespace D3D11Hook.
+        if (::ImGui_ImplWin32_WndProcHandler(hwnd, msg, wp, lp))
             return 1;
 
         // Block keyboard/mouse from reaching the game when the menu is open
