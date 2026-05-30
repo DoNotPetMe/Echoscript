@@ -76,20 +76,12 @@ void Shutdown() {
 //  Spawn / delete / clear
 // -----------------------------------------------------------------------
 static EngineBridge::Vec3 SpawnPointInFront() {
+    // We don't have the camera's view direction (the view matrix isn't exposed
+    // for this title), so spawn at Sam's position nudged out along world +X by
+    // spawnDist. That keeps the prop near but not inside the player.
     XMFLOAT3 camPos{};
     FreeCam::GetCameraPosition(camPos);
-    XMMATRIX view;
-    EngineBridge::Vec3 out{ camPos.x, camPos.y, camPos.z };
-    if (FreeCam::GetViewMatrix(view)) {
-        // Forward vector is the 3rd row of the inverse-view; for a LookAtLH
-        // view matrix the camera forward is row 2 of its rotation transpose.
-        XMVECTOR fwd = XMVector3Normalize(XMVectorSet(
-            XMVectorGetZ(view.r[0]), XMVectorGetZ(view.r[1]), XMVectorGetZ(view.r[2]), 0));
-        out.x += XMVectorGetX(fwd) * g_config.spawnDist;
-        out.y += XMVectorGetY(fwd) * g_config.spawnDist;
-        out.z += XMVectorGetZ(fwd) * g_config.spawnDist;
-    }
-    return out;
+    return EngineBridge::Vec3{ camPos.x + g_config.spawnDist, camPos.y, camPos.z };
 }
 
 void SpawnSelected() {
@@ -310,6 +302,21 @@ void RenderMenu() {
             changed |= ImGui::DragFloat3("position", &p.position.x, 1.0f);
             changed |= ImGui::DragFloat3("rotation", &p.rotation.pitch, 0.5f);
             changed |= ImGui::DragFloat3("scale",    &p.scale.x, 0.01f, 0.01f, 100.f);
+
+            // Copy/paste Sam's live world position into this prop's position.
+            XMFLOAT3 sam{};
+            bool haveSam = FreeCam::GetCameraPosition(sam);
+            if (!haveSam) ImGui::BeginDisabled();
+            if (ImGui::Button("Copy Sam's pos")) {
+                p.position = EngineBridge::Vec3{ sam.x, sam.y, sam.z };
+                changed = true;
+            }
+            if (!haveSam) ImGui::EndDisabled();
+            ImGui::SameLine();
+            if (haveSam)
+                ImGui::TextDisabled("Sam: %.1f  %.1f  %.1f", sam.x, sam.y, sam.z);
+            else
+                ImGui::TextDisabled("(Sam pos unavailable -- enter a level)");
 
             if (changed && p.runtimeActor)
                 EngineBridge::SetActorTransform(p.runtimeActor, p.position, p.rotation, p.scale);

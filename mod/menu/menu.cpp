@@ -117,8 +117,16 @@ void Render() {
         ImGui::SliderFloat("Move Speed",    &FreeCam::g_config.moveSpeed,      0.5f, 2000.f, "%.1f u/s");
         ImGui::SliderFloat("Mouse Sensitivity", &FreeCam::g_config.lookSensitivity, 0.01f, 1.f, "%.3f");
 
+        ImGui::Checkbox("Move Sam's body with camera", &FreeCam::g_config.moveSam);
+        ImGui::SameLine();
+        ImGui::TextDisabled("(?)");
+        if (ImGui::IsItemHovered())
+            ImGui::SetTooltip("ON  = fly the player (reliable; Sam travels with you).\n"
+                              "OFF = detached camera (experimental; view flies free,\n"
+                              "      Sam stays put). Detached mode is still being tuned.");
+
         ImGui::Spacing();
-        ImGui::TextDisabled("Keyboard: W/S = X   A/D = Y   Q/E = down/up   Shift = sprint");
+        ImGui::TextDisabled("Keyboard: W/S = X   A/D = Y   Q/E = up/down   Shift = sprint");
         ImGui::TextDisabled("Gamepad: L-stick = move   LT/RT = down/up   A = sprint");
 
         // --- Capture status ---

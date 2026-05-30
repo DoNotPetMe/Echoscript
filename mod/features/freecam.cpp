@@ -298,13 +298,13 @@ void Update(float dt) {
 
     XMFLOAT3 p = g_state.position;
 
-    // Keyboard (digital).
+    // Keyboard (digital). Q = up, E = down.
     if (IsKeyHeld('W')) p.x += speed;
     if (IsKeyHeld('S')) p.x -= speed;
     if (IsKeyHeld('D')) p.y += speed;
     if (IsKeyHeld('A')) p.y -= speed;
-    if (IsKeyHeld('E')) p.z += speed;
-    if (IsKeyHeld('Q')) p.z -= speed;
+    if (IsKeyHeld('Q')) p.z += speed;
+    if (IsKeyHeld('E')) p.z -= speed;
 
     // Gamepad (analog): left-stick Y = forward/back (world X), left-stick X =
     // strafe (world Y), triggers = up/down (world Z).
@@ -316,15 +316,26 @@ void Update(float dt) {
 
     g_config.moveSpeed = std::clamp(g_config.moveSpeed, 0.5f, 5000.0f);
 
-    // Hand the desired coords to the write-hook (preferred), and if the hook
-    // didn't install, fall back to a direct per-frame write.
-    g_desired[0] = p.x;
-    g_desired[1] = p.y;
-    g_desired[2] = p.z;
-    g_freeRoamActive = 1;
+    if (g_config.moveSam) {
+        // Move-Sam mode: drive the player struct. The write-hook makes it
+        // stick; otherwise fall back to a direct per-frame write.
+        g_desired[0] = p.x;
+        g_desired[1] = p.y;
+        g_desired[2] = p.z;
+        g_freeRoamActive = 1;
 
-    if (!g_frHooked)
-        Memory::SafeWrite(base + OFF_POS_X, p);
+        if (!g_frHooked)
+            Memory::SafeWrite(base + OFF_POS_X, p);
+    } else {
+        // Detached-camera mode: leave the player struct alone (disengage the
+        // write-hook) and poke the static camera block instead, so the view
+        // flies free of Sam's body.
+        g_freeRoamActive = 0;
+        uintptr_t mod = reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
+        Memory::SafeWrite(mod + CAM_BLOCK_X, p.x);
+        Memory::SafeWrite(mod + CAM_BLOCK_Y, p.y);
+        Memory::SafeWrite(mod + CAM_BLOCK_Z, p.z);
+    }
 }
 
 // -----------------------------------------------------------------------

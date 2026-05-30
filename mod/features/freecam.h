@@ -53,6 +53,15 @@ namespace FreeCam {
     static constexpr unsigned OFF_POS_Y = 0xA0;
     static constexpr unsigned OFF_POS_Z = 0xA4;
 
+    // Module-relative static camera block (from Paul44's CE table, camera
+    // section @ +1AFDEEB). These are written for the "detached camera" mode
+    // so the view moves without dragging Sam's body. X/Y/Z are inferred;
+    // pitch (+30BACC4) is the one CE labelled. See CAMERA_OFFSETS.md.
+    static constexpr unsigned CAM_BLOCK_X     = 0x30BACB8;
+    static constexpr unsigned CAM_BLOCK_Y     = 0x30BACBC;
+    static constexpr unsigned CAM_BLOCK_Z     = 0x30BACC0;
+    static constexpr unsigned CAM_BLOCK_PITCH = 0x30BACC4;
+
     // ----------------------------------------------------------------
     // Config knobs exposed to the mod menu
     // ----------------------------------------------------------------
@@ -61,6 +70,10 @@ namespace FreeCam {
         float moveSpeed       = 300.0f;  // units/second (UE units ~= cm)
         float lookSensitivity = 0.15f;   // degrees per pixel (HUD only for now)
         bool  freezeTime      = false;
+        // When true (default) free-roam writes the player struct, so Sam's
+        // body travels with the camera (reliable). When false it writes the
+        // static camera block instead -- view detaches from Sam (experimental).
+        bool  moveSam         = true;
     };
 
     extern Config g_config;
