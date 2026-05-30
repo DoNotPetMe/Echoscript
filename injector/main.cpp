@@ -98,13 +98,16 @@ static std::wstring DllPathNextToInjector() {
     return path;
 }
 
-// Returns true if the target process is 32-bit (running under WOW64). The
-// injector and BlacklistMod.dll are built x64, so a 32-bit target is a hard
-// incompatibility: a 64-bit DLL cannot be loaded into a 32-bit process.
-static bool TargetIsWow64(HANDLE proc) {
-    BOOL wow64 = FALSE;
-    IsWow64Process(proc, &wow64);
-    return wow64 != FALSE;
+// Returns true if the target process has the same bitness as this injector.
+// A DLL can only be injected into a process of matching architecture (a 64-bit
+// DLL cannot load into a 32-bit process or vice versa), so the injector/DLL
+// must be built for the same architecture as the game.
+static bool TargetBitnessMatches(HANDLE proc) {
+    BOOL selfWow64   = FALSE;
+    BOOL targetWow64 = FALSE;
+    IsWow64Process(GetCurrentProcess(), &selfWow64);
+    IsWow64Process(proc, &targetWow64);
+    return selfWow64 == targetWow64;
 }
 
 // Returns true if a module with the given base name is loaded in the target.
@@ -138,12 +141,12 @@ static bool InjectDll(DWORD pid, const std::wstring& dllPath) {
 
     // Bail early on an architecture mismatch — it would otherwise look like a
     // mysterious "LoadLibrary returned NULL" failure.
-    if (TargetIsWow64(proc)) {
+    if (!TargetBitnessMatches(proc)) {
         std::wcerr <<
-            L"\nERROR: the game is a 32-bit process, but this injector and\n"
-            L"BlacklistMod.dll are 64-bit. A 64-bit DLL cannot be injected into\n"
-            L"a 32-bit game. The mod would have to be rebuilt for 32-bit (x86)\n"
-            L"to attach to this game.\n";
+            L"\nERROR: the game and the injector/DLL are different architectures\n"
+            L"(one is 32-bit, the other 64-bit). They must match. Rebuild the mod\n"
+            L"for the same architecture as the game (use '-A Win32' for a 32-bit\n"
+            L"game, '-A x64' for a 64-bit game).\n";
         CloseHandle(proc);
         return false;
     }
