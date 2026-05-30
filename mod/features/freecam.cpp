@@ -10,6 +10,7 @@
 #define NOMINMAX
 #endif
 #include <Windows.h>
+#include <Xinput.h>
 #include <DirectXMath.h>
 #include <algorithm>
 #include <cstdint>
@@ -123,6 +124,50 @@ __declspec(naked) static void FreeRoamStub() {
 // -----------------------------------------------------------------------
 static bool IsKeyHeld(int vk)    { return (GetAsyncKeyState(vk) & 0x8000) != 0; }
 static bool IsKeyPressed(int vk) { return (GetAsyncKeyState(vk) & 0x0001) != 0; }
+
+// Per-frame gamepad movement axes, normalized to [-1, 1] after deadzones.
+struct PadInput {
+    bool  connected = false;
+    float moveX     = 0.f;  // left stick X  -> world Y (strafe)
+    float moveY     = 0.f;  // left stick Y  -> world X (forward/back)
+    float upDown    = 0.f;  // triggers      -> world Z (RT up, LT down)
+    bool  sprint    = false; // A button (or stick click)
+};
+
+// Read the first connected controller. The game also reads this controller,
+// so we only *observe* it (no input grab) -- both move and fly work together.
+static PadInput ReadPad() {
+    PadInput out{};
+    XINPUT_STATE st{};
+    for (DWORD i = 0; i < XUSER_MAX_COUNT; ++i) {
+        if (XInputGetState(i, &st) != ERROR_SUCCESS) continue;
+        out.connected = true;
+        const auto& gp = st.Gamepad;
+
+        // Radial deadzone on the left stick.
+        float lx = static_cast<float>(gp.sThumbLX);
+        float ly = static_cast<float>(gp.sThumbLY);
+        constexpr float DZ = static_cast<float>(XINPUT_GAMEPAD_LEFT_THUMB_DEADZONE);
+        float mag = std::sqrt(lx * lx + ly * ly);
+        if (mag > DZ) {
+            float norm = std::min(mag, 32767.f);
+            float scaled = (norm - DZ) / (32767.f - DZ);   // 0..1 past deadzone
+            float inv = scaled / norm;
+            out.moveX = lx * inv;
+            out.moveY = ly * inv;
+        }
+
+        // Triggers (0..255) -> up/down, with a small threshold.
+        constexpr float TT = static_cast<float>(XINPUT_GAMEPAD_TRIGGER_THRESHOLD);
+        if (gp.bRightTrigger > TT) out.upDown += (gp.bRightTrigger - TT) / (255.f - TT);
+        if (gp.bLeftTrigger  > TT) out.upDown -= (gp.bLeftTrigger  - TT) / (255.f - TT);
+
+        // A button or left-stick click = sprint.
+        out.sprint = (gp.wButtons & (XINPUT_GAMEPAD_A | XINPUT_GAMEPAD_LEFT_THUMB)) != 0;
+        break;  // first active controller only
+    }
+    return out;
+}
 
 uintptr_t CurrentBase() {
     return g_forcedBase ? g_forcedBase : static_cast<uintptr_t>(g_structBase);
@@ -241,20 +286,31 @@ void Update(float dt) {
     g_state.yaw   += dx * g_config.lookSensitivity;
     g_state.pitch  = std::clamp(g_state.pitch + dy * g_config.lookSensitivity, -89.9f, 89.9f);
 
-    // ---- World-axis fly ----
-    // X/Y/Z are world coordinates. WASD moves in the world XY plane, Q/E up
-    // and down. Camera-relative movement needs the game yaw (static block,
-    // see CAMERA_OFFSETS.md) which isn't wired yet.
+    // ---- World-axis fly (keyboard + gamepad) ----
+    // X/Y/Z are world coordinates. WASD / left-stick move in the world XY
+    // plane, Q/E / triggers go up and down. Camera-relative movement needs the
+    // game yaw (static block, see CAMERA_OFFSETS.md) which isn't wired yet.
+    PadInput pad = ReadPad();
+
     float speed = g_config.moveSpeed * dt;
-    if (IsKeyHeld(VK_SHIFT)) speed *= 3.0f;
+    if (IsKeyHeld(VK_SHIFT) || pad.sprint) speed *= 3.0f;
 
     XMFLOAT3 p = g_state.position;
+
+    // Keyboard (digital).
     if (IsKeyHeld('W')) p.x += speed;
     if (IsKeyHeld('S')) p.x -= speed;
     if (IsKeyHeld('D')) p.y += speed;
     if (IsKeyHeld('A')) p.y -= speed;
     if (IsKeyHeld('E')) p.z += speed;
     if (IsKeyHeld('Q')) p.z -= speed;
+
+    // Gamepad (analog): left-stick Y = forward/back (world X), left-stick X =
+    // strafe (world Y), triggers = up/down (world Z).
+    p.x += pad.moveY  * speed;
+    p.y += pad.moveX  * speed;
+    p.z += pad.upDown * speed;
+
     g_state.position = p;
 
     g_config.moveSpeed = std::clamp(g_config.moveSpeed, 0.5f, 5000.0f);

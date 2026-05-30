@@ -118,7 +118,8 @@ void Render() {
         ImGui::SliderFloat("Mouse Sensitivity", &FreeCam::g_config.lookSensitivity, 0.01f, 1.f, "%.3f");
 
         ImGui::Spacing();
-        ImGui::TextDisabled("W/S = world X   A/D = world Y   Q/E = down/up   Shift = sprint");
+        ImGui::TextDisabled("Keyboard: W/S = X   A/D = Y   Q/E = down/up   Shift = sprint");
+        ImGui::TextDisabled("Gamepad: L-stick = move   LT/RT = down/up   A = sprint");
 
         // --- Capture status ---
         ImGui::Spacing();
