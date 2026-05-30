@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_ExtractionVO_Wave5" leveluid="1" streamedRandomID="1548649769">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Play VO 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.127584">
+          <CommandInstance name="SetDialog" duration="2.127584" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0500_COM::58419::149649" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="VO 1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Play VO 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.997458">
+          <CommandInstance name="SetDialog" duration="2.997458" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0500_COM::58419::149648" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="VO 2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Play VO 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.758021">
+          <CommandInstance name="SetDialog" duration="1.758021" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0500_COM::58419::149650" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="VO 3"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="Play VO 2" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_STAY_AND_FIGHT" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="Play VO 1" true="Play VO 3" sequence="LD_ExtractionVO_Wave5"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="Play VO 2" true="Play VO 1" sequence="LD_ExtractionVO_Wave5"/>
+</Sequence>

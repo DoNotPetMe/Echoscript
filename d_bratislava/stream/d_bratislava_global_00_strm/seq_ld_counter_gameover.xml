@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Counter_gameOver" leveluid="1" streamedRandomID="1548649769">
+  <Task name="timeplus">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_10" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Objective_Counter" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AddAssign" entityStripped="1">
+            <ParameterInstance name="Right">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="timeplus" true="NewTask_10" sequence="LD_Counter_gameOver"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="NewTask_10" true="timeplus" sequence="LD_Counter_gameOver"/>
+</Sequence>

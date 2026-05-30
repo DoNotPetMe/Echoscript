@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_IntroVO" leveluid="1" streamedRandomID="1548649769">
+  <Task name="Start Intro" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Enable Grimm 1P">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Enable Grimm 2P">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Grimm">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.210063">
+          <CommandInstance name="SetDialog" duration="2.210063" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17033::123492" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="sam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.765167">
+          <CommandInstance name="SetDialog" duration="3.765167" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17033::123493" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Grimm2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.835958">
+          <CommandInstance name="SetDialog" duration="4.835958" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17033::123494" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Sam2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.721167">
+          <CommandInstance name="SetDialog" duration="1.721167" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17033::123495" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="GrimmCoop">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.318334">
+          <CommandInstance name="SetDialog" duration="2.318334" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17034::123496" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Isaac">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.892271">
+          <CommandInstance name="SetDialog" duration="2.892271" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17034::123497" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="GrimmCoop2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.622896">
+          <CommandInstance name="SetDialog" duration="1.622896" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17034::123498" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="SamCoop">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="0.580667">
+          <CommandInstance name="SetDialog" duration="0.580667" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17034::123499" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="GrimmCoop3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.326729">
+          <CommandInstance name="SetDialog" duration="4.326729" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17034::123500" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Isaac2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.280083">
+          <CommandInstance name="SetDialog" duration="1.280083" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E03_BTS::0150_COM::17034::123501" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Start Intro" true="NewTask_0" sequence="LD_IntroVO"/>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="Enable Grimm 1P" false="Enable Grimm 2P">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_0" start="Enable Grimm 1P" true="Grimm" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="Grimm" true="sam" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="sam" true="Grimm2" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="Grimm2" true="Sam2" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Enable Grimm 2P" true="GrimmCoop" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="GrimmCoop" true="Isaac" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="Isaac" true="GrimmCoop2" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="GrimmCoop2" true="SamCoop" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="SamCoop" true="GrimmCoop3" sequence="LD_IntroVO"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="GrimmCoop3" true="Isaac2" sequence="LD_IntroVO"/>
+</Sequence>

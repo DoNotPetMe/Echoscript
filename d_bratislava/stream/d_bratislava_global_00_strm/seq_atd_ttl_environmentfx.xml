@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="ATD_TTL_EnvironmentFX" startup="1" leveluid="1" streamedRandomID="1548649769">
+  <Task name="TASK_StartTTLSnow_0" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="268435514">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TASK_StartTTLVolumeEnter" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="TASK_StopTTLSnow_0">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="201326648" bv_a="0" bv_i="67108866">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="TASK_StartTTLVolumeEnter" true="TASK_StopTTLSnow_0" data="UID:000009a9" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="TASK_StartTTLSnow_1">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="268435514">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="268435514">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="TASK_StopTTLSnow_0" true="TASK_StartTTLSnow_1" data="UID:000009a9" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="TASK_StartTTLVolumeEnter_0" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="TASK_StopTTLSnow_1">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="201326648" bv_a="0" bv_i="67108866">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TASK_StartTTLSnow_2">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="268435514">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="TASK_StartTTLVolumeEnter_0" true="TASK_StopTTLSnow_1" data="UID:000009aa" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_2" start="TASK_StopTTLSnow_1" true="TASK_StartTTLSnow_2" data="UID:000009aa" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="TASK_StartTTLVolumeEnter_1" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="TASK_StopTTLSnow_2">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="201326648" bv_a="0" bv_i="67108866">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TASK_StartTTLSnow_3">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="268435514">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TASK_StartTTLVolumeEnter_2" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="TASK_StopTTLSnow_3">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="201326648" bv_a="0" bv_i="67108866">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TASK_StartTTLSnow_4">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="268435514">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_3" start="TASK_StartTTLVolumeEnter_1" true="TASK_StopTTLSnow_2" data="UID:000009ab" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_4" start="TASK_StopTTLSnow_2" true="TASK_StartTTLSnow_3" data="UID:000009ab" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_5" start="TASK_StartTTLVolumeEnter_2" true="TASK_StopTTLSnow_3" data="UID:000009ac" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_6" start="TASK_StopTTLSnow_3" true="TASK_StartTTLSnow_4" data="UID:000009ac" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <VisualComment name="StreetCars" x="10.000000" y="30.000000" width="986.468384" height="103.272583" commentDate="14/05/2013 5:12:40 PM"/>
+  <VisualComment name="Wood Enclosure" x="7.733217" y="163.673630" width="984.173340" height="98.617462" commentDate="14/05/2013 5:14:16 PM"/>
+  <Task name="TASK_StartTTLVolumeEnter_3" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="TASK_StopTTLSnow_4">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="201326648" bv_a="0" bv_i="67108866">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TASK_StartTTLSnow_5">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="268435514">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TASK_StartTTLVolumeEnter_4" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="TASK_StopTTLSnow_5">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="201326648" bv_a="0" bv_i="67108866">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TASK_StartTTLSnow_6">
+    <Timeline name="NewTimeline">
+      <Track name="TRACK_TTLSnow" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="EVENT_TTLSnow" end="-1.000000">
+          <CommandInstance name="UIRainEvent" entityStripped="1" dp_i="268435514">
+            <ParameterInstance name="Settings">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Rain_SnowLight"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_7" start="TASK_StartTTLVolumeEnter_3" true="TASK_StopTTLSnow_4" data="UID:000009ae" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_8" start="TASK_StopTTLSnow_4" true="TASK_StartTTLSnow_5" data="UID:000009ae" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_9" start="TASK_StartTTLVolumeEnter_4" true="TASK_StopTTLSnow_5" data="UID:000009ad" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_10" start="TASK_StopTTLSnow_5" true="TASK_StartTTLSnow_6" data="UID:000009ad" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <VisualComment name="Embassy" x="2.782727" y="293.967590" width="987.790588" height="99.950531" commentDate="14/05/2013 5:18:31 PM"/>
+  <DependencyComplete name="NewDependencyComplete" start="TASK_StartTTLSnow_1" true="TASK_StartTTLVolumeEnter" sequence="ATD_TTL_EnvironmentFX"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="TASK_StartTTLSnow_2" true="TASK_StartTTLVolumeEnter_0" sequence="ATD_TTL_EnvironmentFX"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="TASK_StartTTLSnow_3" true="TASK_StartTTLVolumeEnter_1" sequence="ATD_TTL_EnvironmentFX"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="TASK_StartTTLSnow_4" true="TASK_StartTTLVolumeEnter_2" sequence="ATD_TTL_EnvironmentFX"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="TASK_StartTTLSnow_5" true="TASK_StartTTLVolumeEnter_3" sequence="ATD_TTL_EnvironmentFX"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="TASK_StartTTLSnow_6" true="TASK_StartTTLVolumeEnter_4" sequence="ATD_TTL_EnvironmentFX"/>
+</Sequence>
