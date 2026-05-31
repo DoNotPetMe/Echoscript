@@ -398,32 +398,63 @@ static int ScanRegionForNone(const char* p, const char* pEnd,
     return found;
 }
 
+// Generic SEH-guarded scan for a NUL-terminated ANSI string in a memory region.
+// Kept C-style (no unwinding objects) so __try is legal.
+static int ScanRegionForString(const char* p, const char* pEnd,
+                               const char* needle, int needleLen,
+                               uintptr_t* out, int outMax) {
+    int found = 0;
+    __try {
+        while (p < pEnd && found < outMax) {
+            const char* f = static_cast<const char*>(
+                std::memchr(p, needle[0], static_cast<size_t>(pEnd - p)));
+            if (!f) break;
+            if (f + needleLen + 1 <= pEnd &&
+                std::memcmp(f, needle, static_cast<size_t>(needleLen)) == 0 &&
+                f[needleLen] == '\0')
+                out[found++] = reinterpret_cast<uintptr_t>(f);
+            p = f + 1;
+        }
+    } __except (EXCEPTION_EXECUTE_HANDLER) {}
+    return found;
+}
 // -----------------------------------------------------------------------
-//  FindGNamesViaDoubleHop — correct two-level heap search for GNames.
+//  FindGNamesViaDoubleHop v3 — three root-causes addressed vs v2:
 //
-//  The previous mem-scan had a fundamental bug: it used entryPtr (the FNameEntry
-//  address) directly in the .data reverse-map lookup. GNames.Data in .data holds
-//  the HEAP ARRAY START address (H0), not the FNameEntry address. entryPtr is
-//  stored at H0 (= GNames.Data[0]), and H0 is what .data holds.
+//  FIX 1 — "None\0" 256 cap: "None\0" appears >256 times in heap (FStrings,
+//    config, object properties), so the real FNameEntry may be hit #300+.
+//    Use "ByteProperty\0" (GNames[1]) as primary anchor — essentially unique
+//    in the process (1–3 hits). When found, H1 = &Data[1], H0 = H1 − 4.
+//    Fall back to "None\0" with a 4096 cap if ByteProperty is absent.
 //
-//  Correct chain:
-//    "None\0" in heap at noneAddr
-//    → entryPtr = noneAddr - soff           (FNameEntry for "None")
-//    → H0 = heap address where entryPtr is stored = GNames.Data[0] address
-//    → .data slot holding H0 = GNames TArray base
+//  FIX 2 — EXE-only revMap: Phase 2 used GetModuleHandleW(nullptr) sections
+//    only.  GNames TArray may live in a DLL (Engine.dll, Core.dll etc.).
+//    Use VirtualQuery with mbi.Type == MEM_IMAGE to cover every loaded DLL.
 //
-//  This does a second heap scan (for entryPtr values) to discover H0, then
-//  uses the .data revMap to find the TArray that holds H0.
+//  FIX 3 — value floor too high: revMap dropped values < 0x100000.  GNames.Data
+//    may be an early heap allocation below 1 MB.  Floor lowered to 0x10000.
+//
+//  Phase 4 drops the mandatory count/max TArray shape check — "None" + score
+//  is a stronger discriminator, and it also handles raw-pointer GNames.
 // -----------------------------------------------------------------------
 static bool FindGNamesViaDoubleHop() {
-    Logger::Info("ObjectDumper: GNames double-hop scan (heap for 'None\\0', then for FNameEntry*)...");
+    Logger::Info("ObjectDumper: GNames double-hop v3 (ByteProperty anchor, all-DLL revMap)...");
 
-    // ---- Phase 1: scan heap for "None\0" ----
-    std::vector<uintptr_t> noneAddrs;
-    {
+    // ---- Phase 1: prefer "ByteProperty\0" (GNames[1]), fall back to "None\0" ----
+    static const char kBP[]   = "ByteProperty";
+    static const char kNone[] = "None";
+
+    const char* anchorStr = kBP;
+    int         anchorLen = 12;
+    int         anchorIdx = 1;   // GNames index this anchor corresponds to
+    int         anchorCap = 32;
+
+    std::vector<uintptr_t> anchorAddrs;
+    for (int pass = 0; pass < 2; ++pass) {
+        anchorAddrs.clear();
         MEMORY_BASIC_INFORMATION mbi{};
         uintptr_t addr = 0x10000u;
-        while (noneAddrs.size() < 256 &&
+        while ((int)anchorAddrs.size() < anchorCap &&
                VirtualQuery(reinterpret_cast<LPCVOID>(addr), &mbi, sizeof(mbi)) == sizeof(mbi)) {
             uintptr_t base = reinterpret_cast<uintptr_t>(mbi.BaseAddress);
             if (mbi.State == MEM_COMMIT && mbi.Type == MEM_PRIVATE &&
@@ -431,53 +462,65 @@ static bool FindGNamesViaDoubleHop() {
                 mbi.RegionSize <= 128u * 1024u * 1024u) {
                 const char* p    = reinterpret_cast<const char*>(base);
                 const char* pEnd = p + mbi.RegionSize;
-                uintptr_t hits[64];
-                int n = ScanRegionForNone(p, pEnd, hits, 64);
-                for (int i = 0; i < n && noneAddrs.size() < 256; ++i)
-                    noneAddrs.push_back(hits[i]);
+                uintptr_t hits[128];
+                int n = ScanRegionForString(p, pEnd, anchorStr, anchorLen, hits, 128);
+                for (int i = 0; i < n && (int)anchorAddrs.size() < anchorCap; ++i)
+                    anchorAddrs.push_back(hits[i]);
+            }
+            uintptr_t next = base + mbi.RegionSize;
+            if (next <= addr) break;
+            addr = next;
+        }
+        if (!anchorAddrs.empty()) break;
+        // Retry with "None\0" and a higher cap.
+        anchorStr = kNone; anchorLen = 4; anchorIdx = 0; anchorCap = 4096;
+        Logger::Info("ObjectDumper: 'ByteProperty' absent in MEM_PRIVATE heap; retrying with 'None' cap=4096.");
+    }
+    Logger::Info("ObjectDumper: phase-1: %zu '%s' occurrence(s) (gnames_idx=%d).",
+                 anchorAddrs.size(), anchorStr, anchorIdx);
+    if (anchorAddrs.empty()) return false;
+
+    // Compute candidate FNameEntry* for each anchor address.
+    // Try header sizes 0, 4, 6, 8, 10, 12, 16 bytes — covers all known UE3 variants.
+    static const uintptr_t kHdrSizes[] = { 4u, 8u, 0u, 6u, 10u, 12u, 16u };
+    std::vector<uintptr_t> entryPtrs;
+    entryPtrs.reserve(anchorAddrs.size() * 7);
+    for (uintptr_t aa : anchorAddrs)
+        for (uintptr_t h : kHdrSizes)
+            if (aa >= h) entryPtrs.push_back(aa - h);
+    std::sort(entryPtrs.begin(), entryPtrs.end());
+    entryPtrs.erase(std::unique(entryPtrs.begin(), entryPtrs.end()), entryPtrs.end());
+
+    // ---- Phase 2: revMap from ALL writable MEM_IMAGE pages (EXE + every DLL) ----
+    // Value floor 0x10000 (was 0x100000) catches early-heap GNames.Data addresses.
+    std::vector<std::pair<uintptr_t, uintptr_t>> revMap;
+    revMap.reserve(2'000'000);
+    {
+        MEMORY_BASIC_INFORMATION mbi{};
+        uintptr_t addr = 0x10000u;
+        while (VirtualQuery(reinterpret_cast<LPCVOID>(addr), &mbi, sizeof(mbi)) == sizeof(mbi)) {
+            uintptr_t base = reinterpret_cast<uintptr_t>(mbi.BaseAddress);
+            if (mbi.State == MEM_COMMIT && mbi.Type == MEM_IMAGE &&
+                !(mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)) &&
+                (mbi.Protect & (PAGE_READWRITE | PAGE_WRITECOPY |
+                                PAGE_EXECUTE_READWRITE | PAGE_EXECUTE_WRITECOPY)) &&
+                mbi.RegionSize <= 64u * 1024u * 1024u) {
+                size_t slots = mbi.RegionSize / 4;
+                for (size_t s = 0; s < slots; ++s) {
+                    uint32_t v = 0;
+                    if (!Memory::SafeRead(base + s * 4u, v)) continue;
+                    if (v >= 0x10000u && v < 0x80000000u)
+                        revMap.push_back({ static_cast<uintptr_t>(v), base + s * 4u });
+                }
             }
             uintptr_t next = base + mbi.RegionSize;
             if (next <= addr) break;
             addr = next;
         }
     }
-    Logger::Info("ObjectDumper: double-hop phase-1: %zu 'None' occurrence(s).", noneAddrs.size());
-    if (noneAddrs.empty()) return false;
-
-    // Candidate FNameEntry starts (str at +4 is canonical UE3; also try +8 for builds
-    // with an extra HashNext pointer before the flags field).
-    std::vector<uintptr_t> entryPtrs;
-    entryPtrs.reserve(noneAddrs.size() * 2);
-    for (uintptr_t na : noneAddrs) {
-        if (na >= 4) entryPtrs.push_back(na - 4u);
-        if (na >= 8) entryPtrs.push_back(na - 8u);
-    }
-    std::sort(entryPtrs.begin(), entryPtrs.end());
-    entryPtrs.erase(std::unique(entryPtrs.begin(), entryPtrs.end()), entryPtrs.end());
-
-    // ---- Phase 2: build .data revMap (stored value → .data address) ----
-    std::vector<std::pair<uintptr_t, uintptr_t>> revMap;
-    revMap.reserve(2'000'000);
-    {
-        HMODULE mod = GetModuleHandleW(nullptr);
-        const auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(mod);
-        const auto* nt  = reinterpret_cast<IMAGE_NT_HEADERS*>(
-            reinterpret_cast<uintptr_t>(mod) + dos->e_lfanew);
-        const auto* sec = IMAGE_FIRST_SECTION(nt);
-        for (WORD si = 0; si < nt->FileHeader.NumberOfSections; ++si, ++sec) {
-            if (!(sec->Characteristics & IMAGE_SCN_MEM_WRITE)) continue;
-            uintptr_t start = reinterpret_cast<uintptr_t>(mod) + sec->VirtualAddress;
-            size_t    sz    = sec->Misc.VirtualSize;
-            for (size_t off = 0; off + 4 <= sz; off += 4) {
-                uint32_t v = 0;
-                if (!Memory::SafeRead(start + off, v)) continue;
-                if (v >= 0x100000u && v < 0x80000000u)
-                    revMap.push_back({ static_cast<uintptr_t>(v), start + off });
-            }
-        }
-    }
     std::sort(revMap.begin(), revMap.end());
-    Logger::Info("ObjectDumper: double-hop phase-2: revMap %zu entries.", revMap.size());
+    Logger::Info("ObjectDumper: phase-2 revMap: %zu entries (all DLL+EXE writable sections).",
+                 revMap.size());
 
     auto LookupAll = [&](uintptr_t target, std::vector<uintptr_t>& out) {
         auto lo = std::lower_bound(revMap.begin(), revMap.end(),
@@ -486,143 +529,108 @@ static bool FindGNamesViaDoubleHop() {
             out.push_back(it->second);
     };
 
-    // ---- Phase 3: scan ALL committed pages for any entryPtr value → H0 ----
-    // H0 = the heap address where GNames.Data[0] is stored (= GNames.Data).
+    // ---- Phase 3: scan committed pages for entryPtr values → Hi candidate ----
+    // anchorIdx==1 (ByteProperty): Hi = &Data[1], H0 = Hi − 4 = &Data[0].
+    // anchorIdx==0 (None):         Hi = &Data[0] = H0.
     std::vector<uintptr_t> h0Candidates;
-    h0Candidates.reserve(1024);
+    h0Candidates.reserve(4096);
     {
         MEMORY_BASIC_INFORMATION mbi{};
         uintptr_t addr = 0x10000u;
-        while (h0Candidates.size() < 2048 &&
+        while (h0Candidates.size() < 16384u &&
                VirtualQuery(reinterpret_cast<LPCVOID>(addr), &mbi, sizeof(mbi)) == sizeof(mbi)) {
             uintptr_t base = reinterpret_cast<uintptr_t>(mbi.BaseAddress);
             if (mbi.State == MEM_COMMIT && !(mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)) &&
                 mbi.RegionSize <= 128u * 1024u * 1024u) {
                 size_t slots = mbi.RegionSize / 4;
-                for (size_t s = 0; s < slots && h0Candidates.size() < 2048; ++s) {
+                for (size_t s = 0; s < slots && h0Candidates.size() < 16384u; ++s) {
                     uint32_t v = 0;
                     if (!Memory::SafeRead(base + s * 4u, v)) continue;
-                    // Binary-search entryPtrs for this value
                     auto it = std::lower_bound(entryPtrs.begin(), entryPtrs.end(),
                                                static_cast<uintptr_t>(v));
-                    if (it != entryPtrs.end() && *it == v)
-                        h0Candidates.push_back(base + s * 4u);
+                    if (it != entryPtrs.end() && *it == v) {
+                        uintptr_t Hi = base + s * 4u;
+                        uintptr_t H0 = (anchorIdx == 1 && Hi >= 4u) ? Hi - 4u : Hi;
+                        h0Candidates.push_back(H0);
+                    }
                 }
             }
             uintptr_t next = base + mbi.RegionSize;
             if (next <= addr) break;
             addr = next;
         }
+        std::sort(h0Candidates.begin(), h0Candidates.end());
+        h0Candidates.erase(std::unique(h0Candidates.begin(), h0Candidates.end()),
+                           h0Candidates.end());
     }
-    Logger::Info("ObjectDumper: double-hop phase-3: %zu H0 candidates.", h0Candidates.size());
+    Logger::Info("ObjectDumper: phase-3: %zu H0 candidates (anchor='%s').",
+                 h0Candidates.size(), anchorStr);
     if (h0Candidates.empty()) return false;
 
-    // ---- Phase 4: for each H0, look in .data for H0 → GNames TArray ----
-    // H0 is the heap-array start.  Two sub-cases:
-    //
-    //   FLAT   (TArray<FNameEntry*>): .data = { Data→H0, Count, Max }
-    //          H0[0..N] are FNameEntry* values.
-    //
-    //   CHUNKED (TStaticIndirectArrayThreadSafeRead, late UE3 ≥ 2010):
-    //          .data = { NumElements, NumChunks, Chunks[0]=H0, Chunks[1], ... }
-    //          H0 is the FIRST CHUNK, an array of 16384 FNameEntry* values.
-    //          H0[0] = FNameEntry* for "None".
-    //          The .data slot holding H0 is at offset +8 from the struct base G.
-    //
+    // ---- Phase 4: for each H0, look in revMap for .data slot storing H0. ----
+    // Validate with "None" + 8-entry score; no mandatory count/max TArray check.
+    // Three layout cases: flat TArray, chunked struct, raw pointer (no wrapper).
     static const size_t kStrOffsCheck[] = { 0x04, 0x08, 0x00, 0x06, 0x0A, 0x0C, 0x10 };
 
     for (uintptr_t H0 : h0Candidates) {
-        std::vector<uintptr_t> tArrayCands;
-        LookupAll(H0, tArrayCands);
-        for (uintptr_t cand : tArrayCands) {
+        std::vector<uintptr_t> cands;
+        LookupAll(H0, cands);
+        for (uintptr_t cand : cands) {
 
-            // ---- Flat TArray check ----
-            {
-                int cnt = 0, maxv = 0;
-                if (Memory::SafeRead(cand + 4, cnt)  && cnt  >= 100 && cnt  <= 5'000'000 &&
-                    Memory::SafeRead(cand + 8, maxv) && maxv >= cnt  && maxv <= 5'000'000) {
+            // Read H0[0] = FNameEntry* for GNames[0].
+            uintptr_t e0 = 0;
+            if (!Memory::SafeRead(H0, e0) || !LooksLikeReadablePtr(e0)) continue;
+            size_t goodSoff = SIZE_MAX;
+            for (size_t soff : kStrOffsCheck) {
+                std::string s;
+                if (ReadAnsiAt(e0 + soff, s, 32) && (s == "None" || s == "none"))
+                    { goodSoff = soff; break; }
+            }
+            if (goodSoff == SIZE_MAX) continue;
 
-                    uintptr_t e0 = 0;
-                    if (Memory::SafeRead(H0, e0) && LooksLikeReadablePtr(e0)) {
-                        size_t goodSoff = SIZE_MAX;
-                        for (size_t soff : kStrOffsCheck) {
-                            std::string s;
-                            if (ReadAnsiAt(e0 + soff, s, 32) && (s == "None" || s == "none"))
-                                { goodSoff = soff; break; }
-                        }
-                        if (goodSoff != SIZE_MAX) {
-                            int score = 0;
-                            for (int k = 0; k < 8; ++k) {
-                                uintptr_t eN = 0;
-                                if (!Memory::SafeRead(H0 + static_cast<uintptr_t>(k) * 4u, eN)) break;
-                                if (!LooksLikeReadablePtr(eN)) continue;
-                                std::string s;
-                                if (ReadAnsiAt(eN + goodSoff, s, 64) && !s.empty()) ++score;
-                            }
-                            if (score >= 4) {
-                                g_gnamesPtr = cand;
-                                g_config.layout.fname_str_off   = goodSoff;
-                                g_config.layout.gnamesIsChunked = false;
-                                Logger::Info("ObjectDumper: GNames @ 0x%08X via double-hop FLAT "
-                                             "(str_off=0x%zX cnt=%d score=%d/8 H0=0x%08X e0=0x%08X)",
-                                             static_cast<unsigned>(cand), goodSoff, cnt, score,
-                                             static_cast<unsigned>(H0), static_cast<unsigned>(e0));
-                                return true;
-                            }
-                        }
-                    }
+            // Score first 8 entries of H0 as FNameEntry*'s.
+            int score = 0;
+            for (int k = 0; k < 8; ++k) {
+                uintptr_t eN = 0;
+                if (!Memory::SafeRead(H0 + static_cast<uintptr_t>(k) * 4u, eN)) break;
+                if (!LooksLikeReadablePtr(eN)) continue;
+                std::string s;
+                if (ReadAnsiAt(eN + goodSoff, s, 64) && !s.empty()) ++score;
+            }
+            if (score < 4) continue;
+
+            // Identify flat / chunked / raw.
+            bool     isFlat    = false;
+            bool     isChunked = false;
+            uintptr_t gnamesBase = cand;
+            int cnt = 0, maxv = 0;
+            if (Memory::SafeRead(cand + 4, cnt) && cnt >= 100 && cnt <= 5'000'000 &&
+                Memory::SafeRead(cand + 8, maxv) && maxv >= cnt && maxv <= 5'000'000)
+                isFlat = true;
+            if (!isFlat && cand >= 8u) {
+                int numElem = 0, numC = 0;
+                if (Memory::SafeRead(cand - 8u, numElem) && numElem >= 100 && numElem <= 2'000'000 &&
+                    Memory::SafeRead(cand - 4u, numC)    && numC    >= 1   && numC    <= 128) {
+                    isChunked = true; gnamesBase = cand - 8u;
                 }
             }
 
-            // ---- Chunked TStaticIndirectArrayThreadSafeRead check ----
-            // cand = .data address storing H0 = Chunks[0].
-            // The struct base G = cand - 8.  G+0=NumElements, G+4=NumChunks, G+8=Chunks[0].
-            if (cand >= 8u) {
-                int numElem = 0, numChunks_val = 0;
-                if (Memory::SafeRead(cand - 8u, numElem)       && numElem      >= 100 && numElem      <= 2'000'000 &&
-                    Memory::SafeRead(cand - 4u, numChunks_val) && numChunks_val >= 1   && numChunks_val <= 128) {
-
-                    // H0 is Chunk0; H0[0] should be FNameEntry* for "None".
-                    uintptr_t e0 = 0;
-                    if (Memory::SafeRead(H0, e0) && LooksLikeReadablePtr(e0)) {
-                        size_t goodSoff = SIZE_MAX;
-                        for (size_t soff : kStrOffsCheck) {
-                            std::string s;
-                            if (ReadAnsiAt(e0 + soff, s, 32) && (s == "None" || s == "none"))
-                                { goodSoff = soff; break; }
-                        }
-                        if (goodSoff != SIZE_MAX) {
-                            // Score: first 8 entries of Chunk0 should all resolve.
-                            int score = 0;
-                            for (int k = 0; k < 8; ++k) {
-                                uintptr_t eN = 0;
-                                if (!Memory::SafeRead(H0 + static_cast<uintptr_t>(k) * 4u, eN)) break;
-                                if (!LooksLikeReadablePtr(eN)) continue;
-                                std::string s;
-                                if (ReadAnsiAt(eN + goodSoff, s, 64) && !s.empty()) ++score;
-                            }
-                            if (score >= 4) {
-                                g_gnamesPtr = cand - 8u; // struct base (NumElements field)
-                                g_config.layout.fname_str_off   = goodSoff;
-                                g_config.layout.gnamesIsChunked = true;
-                                Logger::Info("ObjectDumper: GNames @ 0x%08X via double-hop CHUNKED "
-                                             "(str_off=0x%zX numElem=%d numChunks=%d score=%d/8 "
-                                             "Chunk0=0x%08X e0=0x%08X)",
-                                             static_cast<unsigned>(cand - 8u), goodSoff,
-                                             numElem, numChunks_val, score,
-                                             static_cast<unsigned>(H0), static_cast<unsigned>(e0));
-                                return true;
-                            }
-                        }
-                    }
-                }
-            }
+            g_gnamesPtr = gnamesBase;
+            g_config.layout.fname_str_off   = goodSoff;
+            g_config.layout.gnamesIsChunked = isChunked;
+            Logger::Info("ObjectDumper: GNames @ 0x%08X via double-hop %s "
+                         "(anchor='%s' str_off=0x%zX score=%d/8 H0=0x%08X e0=0x%08X)",
+                         static_cast<unsigned>(gnamesBase),
+                         isChunked ? "CHUNKED" : (isFlat ? "FLAT" : "RAW-PTR"),
+                         anchorStr, goodSoff, score,
+                         static_cast<unsigned>(H0), static_cast<unsigned>(e0));
+            return true;
         }
     }
 
-    Logger::Warn("ObjectDumper: double-hop: %zu H0 candidates, neither flat nor chunked matched. "
-                 "GNames may be in an unexpected region or uses an unusual layout.",
-                 h0Candidates.size());
+    Logger::Warn("ObjectDumper: double-hop v3: %zu H0 candidates, none validated. "
+                 "anchor='%s' revMap=%zu entries — GNames may be in a non-standard region.",
+                 h0Candidates.size(), anchorStr, revMap.size());
     return false;
 }
 
