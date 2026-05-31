@@ -11,10 +11,13 @@
 #define NOMINMAX
 #endif
 #include <Windows.h>
+#include <algorithm>
 #include <cstdio>
 #include <cstring>
 #include <functional>
 #include <string>
+#include <utility>
+#include <vector>
 
 // -----------------------------------------------------------------------
 //  UE3 GObjects signature stubs — fill these via IDA/x64dbg once confirmed.
@@ -264,46 +267,191 @@ static uintptr_t FindTArray(bool (*validate)(uintptr_t data, int count),
     return 0;
 }
 
-// GNames validator: Data[0] -> FNameEntry whose inline string == "None".
+// GNames validator: check Data[0..4] for an FNameEntry whose inline string == "None".
+// Some UE3 builds reserve Data[0] as a null sentinel; "None" may be at index 1.
 static bool ValidateGNames(uintptr_t arr, int count) {
     uintptr_t data = 0;
-    if (!Memory::SafeRead(arr, data)) return false;
-    uintptr_t entry0 = 0;
-    if (!Memory::SafeRead(data, entry0) || !LooksLikeReadablePtr(entry0)) return false;
+    if (!Memory::SafeRead(arr, data) || !LooksLikeReadablePtr(data)) return false;
 
     ++g_diagCandidates;
 
-    // Comprehensive list of plausible FNameEntry inline-string offsets for 32-bit UE3.
-    // Standard UDK layout: {int Index; FNameEntry* HashNext; char Name[]} → 0x08.
-    // Some builds add padding or extra fields → try 0x04..0x28.
-    static const size_t kCandidates[] = {
+    // Comprehensive FNameEntry inline-string offset candidates.
+    static const size_t kStrOffs[] = {
         0x00, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0E, 0x10, 0x12, 0x14, 0x16, 0x18, 0x1C, 0x20, 0x28
     };
 
-    // For first few shape-valid candidates, log the raw bytes so we can read the offset
-    // from the log even if none of our guesses match yet.
+    // Diagnostic: show the data pointer and the raw D[0..3] pointers + bytes at D[0].
     if (g_diagCandidates <= 8) {
-        char byteStr[96] = {};
-        int n = 0;
-        for (int bi = 0; bi < 24 && n + 4 < (int)sizeof(byteStr); ++bi) {
-            uint8_t b = 0;
-            Memory::SafeRead(entry0 + bi, b);
-            n += snprintf(byteStr + n, sizeof(byteStr) - n, "%02X ", b);
-        }
-        Logger::Info("ObjectDumper: GNamesCand#%d 0x%08X cnt=%d e0=0x%08X bytes=[%s]",
+        uintptr_t d[4] = {};
+        for (int i = 0; i < 4; ++i) Memory::SafeRead(data + static_cast<uintptr_t>(i) * 4, d[i]);
+        Logger::Info("ObjectDumper: GNamesCand#%d arr=0x%08X cnt=%d data=0x%08X "
+                     "D[0..3]=[0x%08X 0x%08X 0x%08X 0x%08X]",
                      g_diagCandidates, static_cast<unsigned>(arr), count,
-                     static_cast<unsigned>(entry0), byteStr);
+                     static_cast<unsigned>(data),
+                     static_cast<unsigned>(d[0]), static_cast<unsigned>(d[1]),
+                     static_cast<unsigned>(d[2]), static_cast<unsigned>(d[3]));
+        // Dump bytes at each non-null D[i] to help identify the string offset.
+        for (int i = 0; i < 4; ++i) {
+            if (!LooksLikeReadablePtr(d[i])) continue;
+            char byteStr[72] = {};
+            int n = 0;
+            for (int bi = 0; bi < 16 && n + 4 < (int)sizeof(byteStr); ++bi) {
+                uint8_t b = 0; Memory::SafeRead(d[i] + bi, b);
+                n += snprintf(byteStr + n, sizeof(byteStr) - n, "%02X ", b);
+            }
+            Logger::Info("ObjectDumper:   D[%d]=0x%08X bytes=[%s]", i, static_cast<unsigned>(d[i]), byteStr);
+        }
     }
 
-    for (size_t fo : kCandidates) {
-        std::string s;
-        // Accept both "None" (standard) and "none" (some builds lowercase it).
-        if (ReadAnsiAt(entry0 + fo, s, 32) && (s == "None" || s == "none")) {
-            g_config.layout.fname_str_off = fo;
-            (void)count;
-            return true;
+    // Try Data[0..4] with all candidate string offsets.
+    for (int idx = 0; idx <= 4; ++idx) {
+        uintptr_t entryN = 0;
+        if (!Memory::SafeRead(data + static_cast<uintptr_t>(idx) * 4, entryN)) break;
+        if (!LooksLikeReadablePtr(entryN)) continue;
+        for (size_t fo : kStrOffs) {
+            std::string s;
+            if (ReadAnsiAt(entryN + fo, s, 32) && (s == "None" || s == "none")) {
+                g_config.layout.fname_str_off = fo;
+                (void)count;
+                return true;
+            }
         }
     }
+    return false;
+}
+
+// -----------------------------------------------------------------------
+//  FindGNamesViaMemScan — last-resort path that doesn't assume TArray layout.
+//
+//  Strategy:
+//   1. Scan all MEM_PRIVATE committed heap pages with memchr for "None\0".
+//   2. Build a sorted reverse-lookup of every writable .data section value
+//      that looks like a pointer → its address.
+//   3. For each "None" at address X and each candidate string offset S:
+//        entryPtr = X - S  (start of the FNameEntry)
+//        dataArr  = entryPtr - idx*4  (if entry is at Data[idx])
+//      Find dataArr in the reverse map → get a TArray.Data field address.
+//      Validate with Count/Max plausibility + name-score.
+//
+//  This works whether GNames is a TArray<FNameEntry*>, a raw C-array, or
+//  any other structure — as long as something in .data holds the Data ptr.
+// -----------------------------------------------------------------------
+static bool FindGNamesViaMemScan() {
+    Logger::Info("ObjectDumper: mem-scan fallback: scanning heap for 'None\\0'...");
+
+    // ---- Phase 1: memchr scan of MEM_PRIVATE heap pages ----
+    std::vector<uintptr_t> noneAddrs;
+    {
+        MEMORY_BASIC_INFORMATION mbi{};
+        uintptr_t addr = 0x10000u;
+        while (noneAddrs.size() < 256 &&
+               VirtualQuery(reinterpret_cast<LPCVOID>(addr), &mbi, sizeof(mbi)) == sizeof(mbi)) {
+            uintptr_t base = reinterpret_cast<uintptr_t>(mbi.BaseAddress);
+            if (mbi.State == MEM_COMMIT && mbi.Type == MEM_PRIVATE &&
+                !(mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)) &&
+                mbi.RegionSize <= 128u * 1024u * 1024u) {
+                const char* p    = reinterpret_cast<const char*>(base);
+                const char* pEnd = p + mbi.RegionSize;
+                __try {
+                    while (p < pEnd) {
+                        const char* f = static_cast<const char*>(
+                            std::memchr(p, 'N', static_cast<size_t>(pEnd - p)));
+                        if (!f) break;
+                        if (f + 5 <= pEnd &&
+                            f[1]=='o' && f[2]=='n' && f[3]=='e' && f[4]=='\0')
+                            noneAddrs.push_back(reinterpret_cast<uintptr_t>(f));
+                        p = f + 1;
+                    }
+                } __except(EXCEPTION_EXECUTE_HANDLER) {}
+            }
+            uintptr_t next = base + mbi.RegionSize;
+            if (next <= addr) break;
+            addr = next;
+        }
+    }
+    Logger::Info("ObjectDumper: heap scan found %zu 'None' occurrence(s).", noneAddrs.size());
+    if (noneAddrs.empty()) return false;
+
+    // ---- Phase 2: build sorted reverse-lookup of writable .data values ----
+    // Maps (stored 32-bit value → address in .data section where it's stored).
+    std::vector<std::pair<uintptr_t, uintptr_t>> revMap;
+    revMap.reserve(2'000'000);
+    {
+        HMODULE mod = GetModuleHandleW(nullptr);
+        const auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(mod);
+        const auto* nt  = reinterpret_cast<IMAGE_NT_HEADERS*>(
+            reinterpret_cast<uintptr_t>(mod) + dos->e_lfanew);
+        const auto* sec = IMAGE_FIRST_SECTION(nt);
+        for (WORD si = 0; si < nt->FileHeader.NumberOfSections; ++si, ++sec) {
+            if (!(sec->Characteristics & IMAGE_SCN_MEM_WRITE)) continue;
+            uintptr_t start = reinterpret_cast<uintptr_t>(mod) + sec->VirtualAddress;
+            size_t    sz    = sec->Misc.VirtualSize;
+            for (size_t off = 0; off + 4 <= sz; off += 4) {
+                uint32_t v = 0;
+                if (!Memory::SafeRead(start + off, v)) continue;
+                if (v >= 0x10000u && v < 0x80000000u)
+                    revMap.push_back({ static_cast<uintptr_t>(v), start + off });
+            }
+        }
+    }
+    std::sort(revMap.begin(), revMap.end());
+    Logger::Info("ObjectDumper: revmap %zu ptr-valued entries.", revMap.size());
+
+    // Find all .data addresses that hold a given value.
+    auto LookupAll = [&](uintptr_t target, std::vector<uintptr_t>& out) {
+        auto lo = std::lower_bound(revMap.begin(), revMap.end(),
+                                    std::make_pair(target, uintptr_t{0}));
+        for (auto it = lo; it != revMap.end() && it->first == target; ++it)
+            out.push_back(it->second);
+    };
+
+    // ---- Phase 3: trace None → FNameEntry → Data[idx] → TArray ----
+    static const size_t kStrOffs[] = { 0x00, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0E, 0x10 };
+
+    for (uintptr_t noneAddr : noneAddrs) {
+        for (size_t soff : kStrOffs) {
+            if (noneAddr < soff) continue;
+            uintptr_t entryPtr = noneAddr - soff;  // expected FNameEntry start
+
+            // Try entry at Data[0], Data[1], Data[2] (handle null sentinel at index 0).
+            for (int idx = 0; idx <= 2; ++idx) {
+                if (entryPtr < static_cast<uintptr_t>(idx) * 4u) continue;
+                uintptr_t dataArr = entryPtr - static_cast<uintptr_t>(idx) * 4u;
+
+                std::vector<uintptr_t> tArrayCands;
+                LookupAll(dataArr, tArrayCands);
+                for (uintptr_t gnamesCand : tArrayCands) {
+                    int cnt = 0, maxv = 0;
+                    if (!Memory::SafeRead(gnamesCand + 4, cnt) || cnt < 100 || cnt > 5'000'000) continue;
+                    if (!Memory::SafeRead(gnamesCand + 8, maxv) || maxv < cnt || maxv > 5'000'000) continue;
+
+                    // Score: how many of Data[0..7] resolve to valid identifier strings.
+                    int score = 0;
+                    for (int k = 0; k < 8; ++k) {
+                        uintptr_t eN = 0;
+                        if (!Memory::SafeRead(dataArr + static_cast<uintptr_t>(k) * 4, eN)) break;
+                        if (!LooksLikeReadablePtr(eN)) continue;
+                        std::string s;
+                        if (ReadAnsiAt(eN + soff, s, 64) && !s.empty()) ++score;
+                    }
+                    if (score < 3) continue;
+
+                    g_gnamesPtr = gnamesCand;
+                    g_config.layout.fname_str_off = soff;
+                    Logger::Info("ObjectDumper: GNames @ 0x%08X via mem-scan "
+                                 "(str_off=0x%zX cnt=%d score=%d/8 none@0x%08X entry@0x%08X)",
+                                 static_cast<unsigned>(gnamesCand), soff, cnt, score,
+                                 static_cast<unsigned>(noneAddr),
+                                 static_cast<unsigned>(entryPtr));
+                    return true;
+                }
+            }
+        }
+    }
+
+    Logger::Warn("ObjectDumper: mem-scan traced %zu 'None' sites — GNames TArray not found. "
+                 "GNames may use raw C-array or chunk-table storage, not TArray.",
+                 noneAddrs.size());
     return false;
 }
 
@@ -324,11 +472,19 @@ bool AutoFindGlobals() {
         gnames = FindTArray(&ValidateGNames, /*requireWrite=*/false);
     }
     if (!gnames) {
-        Logger::Warn("ObjectDumper: GNames not auto-found "
-                     "(%d total shape-ok candidates across all sections). "
-                     "Check the diagnostic log lines (GNamesCand#N) for the "
-                     "actual byte layout and report the offset of 'None'.",
+        Logger::Info("ObjectDumper: PE section scans exhausted "
+                     "(%d total shape-ok candidates). Trying heap mem-scan...",
                      g_diagCandidates);
+        // Pass 3: scan heap memory directly for "None\0" and trace back to TArray.
+        // Handles cases where GNames is a raw C-array or chunk-table, not a TArray.
+        if (FindGNamesViaMemScan()) {
+            gnames = g_gnamesPtr;
+        }
+    }
+    if (!gnames) {
+        Logger::Warn("ObjectDumper: GNames not auto-found after all passes. "
+                     "GNames structure in this build is not yet understood — "
+                     "needs manual RE (look for 'FName::Init' or 'GNames' in IDA).");
         return false;
     }
     g_gnamesPtr = gnames;
