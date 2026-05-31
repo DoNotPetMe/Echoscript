@@ -74,14 +74,20 @@ static uintptr_t g_registryHead = 0;
 static uintptr_t g_gobjectsPtr  = 0;
 // Resolved UE3 GNames TArray address, or 0.
 static uintptr_t g_gnamesPtr    = 0;
+// Direct GNames.Data (FNameEntry** array base) when the global TArray wrapper
+// itself could not be located in a module section. When non-zero, ResolveFName
+// indexes this array directly instead of dereferencing g_gnamesPtr. (Flat only;
+// covers indices within the first chunk — adequate for type-name resolution.)
+static uintptr_t g_gnamesDataDirect = 0;
 // Diagnostic: how many TArray candidates passed the {data/count/max} shape check.
 static int g_diagCandidates = 0;
 
-uintptr_t GNamesPtr()   { return g_gnamesPtr; }
+uintptr_t GNamesPtr()   { return g_gnamesPtr ? g_gnamesPtr : g_gnamesDataDirect; }
 uintptr_t GObjectsPtr() { return g_gobjectsPtr; }
 
 void SetGNamesPtr(uintptr_t addr) {
     g_gnamesPtr = addr;
+    g_gnamesDataDirect = 0;   // manual address is a TArray wrapper, not direct data
     if (addr) Logger::Info("ObjectDumper: GNames manually set to 0x%08X.", static_cast<unsigned>(addr));
 }
 
@@ -112,7 +118,18 @@ static bool ReadAnsiAt(uintptr_t addr, std::string& out, int maxLen = 128) {
 
 // Resolve an FName index to its string via the discovered GNames array.
 bool ResolveFName(int index, std::string& out) {
-    if (!g_gnamesPtr || index < 0) return false;
+    if (index < 0) return false;
+
+    // Direct-data mode: g_gnamesDataDirect is the FNameEntry** array base.
+    if (g_gnamesDataDirect && !g_config.layout.gnamesIsChunked) {
+        uintptr_t entry = 0;
+        if (!Memory::SafeRead(g_gnamesDataDirect + static_cast<uintptr_t>(index) * 4u, entry)
+            || !entry)
+            return false;
+        return ReadAnsiAt(entry + g_config.layout.fname_str_off, out);
+    }
+
+    if (!g_gnamesPtr) return false;
 
     if (g_config.layout.gnamesIsChunked) {
         // Chunked layout: g_gnamesPtr → { NumElements(4), NumChunks(4), Chunks[0..127](4 each) }
@@ -378,26 +395,6 @@ static bool ValidateGNames(uintptr_t arr, int count) {
     return false;
 }
 
-// SEH-guarded scan of a single memory region for "None\0".
-// Writes found addresses into out[] (up to outMax); returns the count.
-// Kept free of C++ objects so __try is legal (no object unwinding).
-static int ScanRegionForNone(const char* p, const char* pEnd,
-                             uintptr_t* out, int outMax) {
-    int found = 0;
-    __try {
-        while (p < pEnd && found < outMax) {
-            const char* f = static_cast<const char*>(
-                std::memchr(p, 'N', static_cast<size_t>(pEnd - p)));
-            if (!f) break;
-            if (f + 5 <= pEnd &&
-                f[1] == 'o' && f[2] == 'n' && f[3] == 'e' && f[4] == '\0')
-                out[found++] = reinterpret_cast<uintptr_t>(f);
-            p = f + 1;
-        }
-    } __except (EXCEPTION_EXECUTE_HANDLER) {}
-    return found;
-}
-
 // Generic SEH-guarded scan for a NUL-terminated ANSI string in a memory region.
 // Kept C-style (no unwinding objects) so __try is legal.
 static int ScanRegionForString(const char* p, const char* pEnd,
@@ -480,16 +477,20 @@ static bool FindGNamesViaDoubleHop() {
                  anchorAddrs.size(), anchorStr, anchorIdx);
     if (anchorAddrs.empty()) return false;
 
-    // Compute candidate FNameEntry* for each anchor address.
-    // Try header sizes 0, 4, 6, 8, 10, 12, 16 bytes — covers all known UE3 variants.
-    static const uintptr_t kHdrSizes[] = { 4u, 8u, 0u, 6u, 10u, 12u, 16u };
-    std::vector<uintptr_t> entryPtrs;
-    entryPtrs.reserve(anchorAddrs.size() * 7);
+    // Compute candidate FNameEntry* for each anchor address, PAIRED with the
+    // header size (= fname_str_off) that produced it.  WIDE offset set — late
+    // UE3 FNameEntry puts the inline string anywhere from +0 to +0x28 depending
+    // on hash-table / index-width compile flags.
+    static const uintptr_t kHdrSizes[] = {
+        0u, 4u, 6u, 8u, 0x0Au, 0x0Cu, 0x0Eu, 0x10u, 0x12u, 0x14u, 0x16u, 0x18u, 0x1Cu, 0x20u, 0x28u
+    };
+    // Sorted (entryPtr → hdr) so a heap-slot value can be matched and its hdr recovered.
+    std::vector<std::pair<uintptr_t, uintptr_t>> entryMap;  // (entryPtr, hdr)
+    entryMap.reserve(anchorAddrs.size() * 15);
     for (uintptr_t aa : anchorAddrs)
         for (uintptr_t h : kHdrSizes)
-            if (aa >= h) entryPtrs.push_back(aa - h);
-    std::sort(entryPtrs.begin(), entryPtrs.end());
-    entryPtrs.erase(std::unique(entryPtrs.begin(), entryPtrs.end()), entryPtrs.end());
+            if (aa >= h) entryMap.push_back({ aa - h, h });
+    std::sort(entryMap.begin(), entryMap.end());
 
     // ---- Phase 2: revMap from ALL writable MEM_IMAGE pages (EXE + every DLL) ----
     // Value floor 0x10000 (was 0x100000) catches early-heap GNames.Data addresses.
@@ -529,108 +530,131 @@ static bool FindGNamesViaDoubleHop() {
             out.push_back(it->second);
     };
 
-    // ---- Phase 3: scan committed pages for entryPtr values → Hi candidate ----
-    // anchorIdx==1 (ByteProperty): Hi = &Data[1], H0 = Hi − 4 = &Data[0].
-    // anchorIdx==0 (None):         Hi = &Data[0] = H0.
-    std::vector<uintptr_t> h0Candidates;
-    h0Candidates.reserve(4096);
+    // ---- Phase 3: scan committed pages for any entryPtr value → (Hi, hdr) ----
+    // Hi is a heap slot holding the anchor's FNameEntry*. It may be the GNames
+    // array slot &Data[anchorIndex], OR an FName hash-table bucket, OR another
+    // reference. We do NOT assume the anchor's index here — Phase 4 walks back
+    // from each Hi to find the actual Data[0] ("None"). hdr is carried so the
+    // string-offset is self-consistent between anchor and "None".
+    std::vector<std::pair<uintptr_t, uintptr_t>> hiCandidates;  // (Hi, hdr)
+    hiCandidates.reserve(4096);
     {
         MEMORY_BASIC_INFORMATION mbi{};
         uintptr_t addr = 0x10000u;
-        while (h0Candidates.size() < 16384u &&
+        while (hiCandidates.size() < 16384u &&
                VirtualQuery(reinterpret_cast<LPCVOID>(addr), &mbi, sizeof(mbi)) == sizeof(mbi)) {
             uintptr_t base = reinterpret_cast<uintptr_t>(mbi.BaseAddress);
             if (mbi.State == MEM_COMMIT && !(mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)) &&
                 mbi.RegionSize <= 128u * 1024u * 1024u) {
                 size_t slots = mbi.RegionSize / 4;
-                for (size_t s = 0; s < slots && h0Candidates.size() < 16384u; ++s) {
+                for (size_t s = 0; s < slots && hiCandidates.size() < 16384u; ++s) {
                     uint32_t v = 0;
                     if (!Memory::SafeRead(base + s * 4u, v)) continue;
-                    auto it = std::lower_bound(entryPtrs.begin(), entryPtrs.end(),
-                                               static_cast<uintptr_t>(v));
-                    if (it != entryPtrs.end() && *it == v) {
-                        uintptr_t Hi = base + s * 4u;
-                        uintptr_t H0 = (anchorIdx == 1 && Hi >= 4u) ? Hi - 4u : Hi;
-                        h0Candidates.push_back(H0);
-                    }
+                    auto it = std::lower_bound(entryMap.begin(), entryMap.end(),
+                                               std::make_pair(static_cast<uintptr_t>(v), uintptr_t{0}));
+                    if (it != entryMap.end() && it->first == v)
+                        hiCandidates.push_back({ base + s * 4u, it->second });
                 }
             }
             uintptr_t next = base + mbi.RegionSize;
             if (next <= addr) break;
             addr = next;
         }
-        std::sort(h0Candidates.begin(), h0Candidates.end());
-        h0Candidates.erase(std::unique(h0Candidates.begin(), h0Candidates.end()),
-                           h0Candidates.end());
     }
-    Logger::Info("ObjectDumper: phase-3: %zu H0 candidates (anchor='%s').",
-                 h0Candidates.size(), anchorStr);
-    if (h0Candidates.empty()) return false;
+    Logger::Info("ObjectDumper: phase-3: %zu Hi candidates (anchor='%s').",
+                 hiCandidates.size(), anchorStr);
+    if (hiCandidates.empty()) return false;
 
-    // ---- Phase 4: for each H0, look in revMap for .data slot storing H0. ----
-    // Validate with "None" + 8-entry score; no mandatory count/max TArray check.
-    // Three layout cases: flat TArray, chunked struct, raw pointer (no wrapper).
-    static const size_t kStrOffsCheck[] = { 0x04, 0x08, 0x00, 0x06, 0x0A, 0x0C, 0x10 };
+    // ---- Phase 4: from each Hi, walk back to find Data[0] (resolves to "None") ----
+    // The anchor (ByteProperty) is a low intrinsic index, so Data[0] is within a
+    // few thousand slots BELOW Hi.  Two passes:
+    //   Pass A: require a real GNames wrapper (flat TArray or chunked struct) in
+    //           a module section (revMap) — the strongest, preferred result.
+    //   Pass B: if no wrapper anywhere, accept the best validated H0 as DIRECT
+    //           data (resolve via H0 as the FNameEntry** base).
+    const int kMaxBackWalk = 4096;  // intrinsic names live in a small low-index window
 
-    for (uintptr_t H0 : h0Candidates) {
-        std::vector<uintptr_t> cands;
-        LookupAll(H0, cands);
-        for (uintptr_t cand : cands) {
+    // Validate H0 as the array base: returns the corroboration score (>=4 good),
+    // or 0 if H0[0] is not "None" at +hdr.
+    auto ScoreH0 = [&](uintptr_t H0, uintptr_t hdr) -> int {
+        uintptr_t e0 = 0;
+        if (!Memory::SafeRead(H0, e0) || !LooksLikeReadablePtr(e0)) return 0;
+        std::string s0;
+        if (!ReadAnsiAt(e0 + hdr, s0, 32) || !(s0 == "None" || s0 == "none")) return 0;
+        int score = 1;
+        for (int j = 1; j < 8; ++j) {
+            uintptr_t eN = 0;
+            if (!Memory::SafeRead(H0 + static_cast<uintptr_t>(j) * 4u, eN)) break;
+            if (!LooksLikeReadablePtr(eN)) continue;
+            std::string s;
+            if (ReadAnsiAt(eN + hdr, s, 64) && !s.empty()) ++score;
+        }
+        return score;
+    };
 
-            // Read H0[0] = FNameEntry* for GNames[0].
-            uintptr_t e0 = 0;
-            if (!Memory::SafeRead(H0, e0) || !LooksLikeReadablePtr(e0)) continue;
-            size_t goodSoff = SIZE_MAX;
-            for (size_t soff : kStrOffsCheck) {
-                std::string s;
-                if (ReadAnsiAt(e0 + soff, s, 32) && (s == "None" || s == "none"))
-                    { goodSoff = soff; break; }
-            }
-            if (goodSoff == SIZE_MAX) continue;
-
-            // Score first 8 entries of H0 as FNameEntry*'s.
-            int score = 0;
-            for (int k = 0; k < 8; ++k) {
-                uintptr_t eN = 0;
-                if (!Memory::SafeRead(H0 + static_cast<uintptr_t>(k) * 4u, eN)) break;
-                if (!LooksLikeReadablePtr(eN)) continue;
-                std::string s;
-                if (ReadAnsiAt(eN + goodSoff, s, 64) && !s.empty()) ++score;
-            }
+    // Pass A — wrapper-backed.
+    for (auto& hc : hiCandidates) {
+        uintptr_t Hi = hc.first, hdr = hc.second;
+        for (int k = 0; k <= kMaxBackWalk && Hi >= static_cast<uintptr_t>(k) * 4u; ++k) {
+            uintptr_t H0 = Hi - static_cast<uintptr_t>(k) * 4u;
+            int score = ScoreH0(H0, hdr);
             if (score < 4) continue;
-
-            // Identify flat / chunked / raw.
-            bool     isFlat    = false;
-            bool     isChunked = false;
-            uintptr_t gnamesBase = cand;
-            int cnt = 0, maxv = 0;
-            if (Memory::SafeRead(cand + 4, cnt) && cnt >= 100 && cnt <= 5'000'000 &&
-                Memory::SafeRead(cand + 8, maxv) && maxv >= cnt && maxv <= 5'000'000)
-                isFlat = true;
-            if (!isFlat && cand >= 8u) {
-                int numElem = 0, numC = 0;
-                if (Memory::SafeRead(cand - 8u, numElem) && numElem >= 100 && numElem <= 2'000'000 &&
-                    Memory::SafeRead(cand - 4u, numC)    && numC    >= 1   && numC    <= 128) {
-                    isChunked = true; gnamesBase = cand - 8u;
+            std::vector<uintptr_t> cands;
+            LookupAll(H0, cands);
+            for (uintptr_t cand : cands) {
+                bool      isFlat = false, isChunked = false;
+                uintptr_t gnamesBase = cand;
+                int cnt = 0, maxv = 0;
+                if (Memory::SafeRead(cand + 4, cnt) && cnt >= 100 && cnt <= 5'000'000 &&
+                    Memory::SafeRead(cand + 8, maxv) && maxv >= cnt && maxv <= 5'000'000)
+                    isFlat = true;
+                if (!isFlat && cand >= 8u) {
+                    int numElem = 0, numC = 0;
+                    if (Memory::SafeRead(cand - 8u, numElem) && numElem >= 100 && numElem <= 2'000'000 &&
+                        Memory::SafeRead(cand - 4u, numC)    && numC    >= 1   && numC    <= 128) {
+                        isChunked = true; gnamesBase = cand - 8u;
+                    }
+                }
+                if (isFlat || isChunked) {
+                    g_gnamesPtr        = gnamesBase;
+                    g_gnamesDataDirect = 0;
+                    g_config.layout.fname_str_off   = hdr;
+                    g_config.layout.gnamesIsChunked = isChunked;
+                    Logger::Info("ObjectDumper: GNames @ 0x%08X via double-hop %s "
+                                 "(anchor='%s' str_off=0x%zX score=%d H0=0x%08X global=0x%08X)",
+                                 static_cast<unsigned>(gnamesBase), isChunked ? "CHUNKED" : "FLAT",
+                                 anchorStr, hdr, score, static_cast<unsigned>(H0),
+                                 static_cast<unsigned>(cand));
+                    return true;
                 }
             }
-
-            g_gnamesPtr = gnamesBase;
-            g_config.layout.fname_str_off   = goodSoff;
-            g_config.layout.gnamesIsChunked = isChunked;
-            Logger::Info("ObjectDumper: GNames @ 0x%08X via double-hop %s "
-                         "(anchor='%s' str_off=0x%zX score=%d/8 H0=0x%08X e0=0x%08X)",
-                         static_cast<unsigned>(gnamesBase),
-                         isChunked ? "CHUNKED" : (isFlat ? "FLAT" : "RAW-PTR"),
-                         anchorStr, goodSoff, score,
-                         static_cast<unsigned>(H0), static_cast<unsigned>(e0));
-            return true;
         }
     }
 
-    Logger::Warn("ObjectDumper: double-hop v3: %zu H0 candidates, none validated. "
-                 "anchor='%s' revMap=%zu entries — GNames may be in a non-standard region.",
-                 h0Candidates.size(), anchorStr, revMap.size());
+    // Pass B — DIRECT fallback: take the highest-scoring validated H0.
+    uintptr_t bestH0 = 0, bestHdr = 0; int bestScore = 0;
+    for (auto& hc : hiCandidates) {
+        uintptr_t Hi = hc.first, hdr = hc.second;
+        for (int k = 0; k <= kMaxBackWalk && Hi >= static_cast<uintptr_t>(k) * 4u; ++k) {
+            uintptr_t H0 = Hi - static_cast<uintptr_t>(k) * 4u;
+            int score = ScoreH0(H0, hdr);
+            if (score > bestScore) { bestScore = score; bestH0 = H0; bestHdr = hdr; }
+        }
+    }
+    if (bestScore >= 4 && bestH0) {
+        g_gnamesPtr        = 0;
+        g_gnamesDataDirect = bestH0;
+        g_config.layout.fname_str_off   = bestHdr;
+        g_config.layout.gnamesIsChunked = false;
+        Logger::Info("ObjectDumper: GNames via double-hop DIRECT "
+                     "(no module wrapper; data=0x%08X str_off=0x%zX score=%d anchor='%s')",
+                     static_cast<unsigned>(bestH0), bestHdr, bestScore, anchorStr);
+        return true;
+    }
+
+    Logger::Warn("ObjectDumper: double-hop v3: %zu Hi candidates, no Data[0] validated. "
+                 "anchor='%s' revMap=%zu — GNames may use an unusual FNameEntry layout.",
+                 hiCandidates.size(), anchorStr, revMap.size());
     return false;
 }
 
@@ -790,44 +814,44 @@ static int ProbeGObjectsNameOff(uintptr_t arr, size_t& outNameOff) {
 }
 
 bool AutoFindGlobals() {
-    g_gnamesPtr   = 0;
-    g_gobjectsPtr = 0;
+    g_gnamesPtr        = 0;
+    g_gnamesDataDirect = 0;
+    g_gobjectsPtr      = 0;
 
     // ---- GObjects pass 0: player-ptr bootstrap (requires freecam in-level) ----
     if (FreeCam::HasCapturedBase())
         FindGObjectsViaPlayerScan();
 
     // ---- GNames ----
-    // VerifyGNames: accept a candidate ONLY if GNames[0] actually resolves to
-    // "None" (UE3 invariant). This rejects the flat-scan false positives that
-    // plagued earlier builds (random .data slots whose shape looks like a TArray
-    // but whose Data[0] is garbage — they reported GNames[0]="").
-    auto VerifyGNames = [&](uintptr_t cand) -> bool {
-        if (!cand) return false;
-        uintptr_t saved = g_gnamesPtr;
-        g_gnamesPtr = cand;
+    g_gnamesDataDirect = 0;
+    g_config.layout.gnamesIsChunked = false;
+
+    // GNamesResolves: accept the CURRENT GNames state only if it resolves the
+    // UE3 invariant GNames[0]=="None" plus a clean GNames[1]. Works for every
+    // mode (flat wrapper, chunked wrapper, direct-data) because ResolveFName
+    // already dispatches on the globals. Rejects the blind-scan false positives.
+    auto GNamesResolves = [&]() -> bool {
         std::string s0, s1;
         bool ok0 = ResolveFName(0, s0) && (s0 == "None" || s0 == "none");
-        // Index 1 should also be a clean non-empty identifier in a real table.
         bool ok1 = ResolveFName(1, s1) && !s1.empty();
-        if (!(ok0 && ok1)) { g_gnamesPtr = saved; return false; }
-        return true;
+        return ok0 && ok1;
     };
 
-    // Pass 1: double-hop heap scan FIRST — it anchors on a real "None\0" byte
-    // sequence in the heap and walks back to the global, so it does not suffer
-    // the false positives of the blind .data sliding-window scan.
-    uintptr_t gnames = 0;
-    if (FindGNamesViaDoubleHop() && VerifyGNames(g_gnamesPtr)) {
-        gnames = g_gnamesPtr;
+    // Pass 1: double-hop heap scan FIRST — anchors on a real "ByteProperty\0"
+    // (or "None\0") byte sequence and walks back to the array base, so it does
+    // not suffer the false positives of the blind .data sliding-window scan.
+    bool gnamesFound = false;
+    if (FindGNamesViaDoubleHop() && GNamesResolves()) {
+        gnamesFound = true;
     } else {
         g_gnamesPtr = 0;
+        g_gnamesDataDirect = 0;
         g_config.layout.gnamesIsChunked = false;
     }
 
     // Pass 2/3: fall back to the PE-section TArray sliding-window scan, but only
-    // accept a candidate that passes VerifyGNames (GNames[0]=="None").
-    if (!gnames) {
+    // accept a candidate that passes GNamesResolves (GNames[0]=="None").
+    if (!gnamesFound) {
         Logger::Info("ObjectDumper: double-hop did not yield a verified GNames; "
                      "trying PE-section TArray scan as fallback.");
         g_diagCandidates = 0;
@@ -838,16 +862,23 @@ bool AutoFindGlobals() {
         }
         if (cand && g_config.layout.gnamesIsChunked && cand >= 8u)
             cand -= 8u;
-        if (VerifyGNames(cand)) {
-            gnames = cand;
-        } else if (cand) {
-            Logger::Warn("ObjectDumper: flat-scan candidate 0x%08X REJECTED "
-                         "(GNames[0] did not resolve to \"None\" — false positive).",
-                         static_cast<unsigned>(cand));
+        if (cand) {
+            g_gnamesPtr        = cand;
+            g_gnamesDataDirect = 0;
+            if (GNamesResolves()) {
+                gnamesFound = true;
+            } else {
+                Logger::Warn("ObjectDumper: flat-scan candidate 0x%08X REJECTED "
+                             "(GNames[0] did not resolve to \"None\" — false positive).",
+                             static_cast<unsigned>(cand));
+                g_gnamesPtr = 0;
+            }
         }
     }
 
-    if (!gnames) {
+    if (!gnamesFound) {
+        g_gnamesPtr = 0;
+        g_gnamesDataDirect = 0;
         Logger::Warn("ObjectDumper: GNames not auto-found after all passes. "
                      "GNames structure in this build is not yet understood — "
                      "needs manual RE (look for 'FName::Init' or 'GNames' in IDA).");
@@ -859,13 +890,14 @@ bool AutoFindGlobals() {
         }
         return false;
     }
-    g_gnamesPtr = gnames;
     {
         std::string s0;
         ResolveFName(0, s0);
-        Logger::Info("ObjectDumper: GNames @ 0x%08X VERIFIED (fname_str_off=0x%zX, "
+        unsigned shown = static_cast<unsigned>(g_gnamesPtr ? g_gnamesPtr : g_gnamesDataDirect);
+        Logger::Info("ObjectDumper: GNames %s 0x%08X VERIFIED (fname_str_off=0x%zX, "
                      "chunked=%d, GNames[0]=\"%s\").",
-                     static_cast<unsigned>(gnames), g_config.layout.fname_str_off,
+                     g_gnamesPtr ? "@" : "(direct data)", shown,
+                     g_config.layout.fname_str_off,
                      g_config.layout.gnamesIsChunked ? 1 : 0, s0.c_str());
     }
 
@@ -1020,9 +1052,10 @@ static bool TryScanUE3GObjects() {
 //  Init — try UE3 GObjects first, fall back to LEAD string-anchor.
 // -----------------------------------------------------------------------
 bool Init() {
-    g_registryHead = 0;
-    g_gobjectsPtr  = 0;
-    g_gnamesPtr    = 0;
+    g_registryHead     = 0;
+    g_gobjectsPtr      = 0;
+    g_gnamesPtr        = 0;
+    g_gnamesDataDirect = 0;
 
     // Path 0: heuristic auto-finder (no hardcoded signature needed — works on
     // your specific build). This is the preferred route for Blacklist.
