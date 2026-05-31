@@ -320,6 +320,26 @@ static bool ValidateGNames(uintptr_t arr, int count) {
     return false;
 }
 
+// SEH-guarded scan of a single memory region for "None\0".
+// Writes found addresses into out[] (up to outMax); returns the count.
+// Kept free of C++ objects so __try is legal (no object unwinding).
+static int ScanRegionForNone(const char* p, const char* pEnd,
+                             uintptr_t* out, int outMax) {
+    int found = 0;
+    __try {
+        while (p < pEnd && found < outMax) {
+            const char* f = static_cast<const char*>(
+                std::memchr(p, 'N', static_cast<size_t>(pEnd - p)));
+            if (!f) break;
+            if (f + 5 <= pEnd &&
+                f[1] == 'o' && f[2] == 'n' && f[3] == 'e' && f[4] == '\0')
+                out[found++] = reinterpret_cast<uintptr_t>(f);
+            p = f + 1;
+        }
+    } __except (EXCEPTION_EXECUTE_HANDLER) {}
+    return found;
+}
+
 // -----------------------------------------------------------------------
 //  FindGNamesViaMemScan — last-resort path that doesn't assume TArray layout.
 //
@@ -352,17 +372,10 @@ static bool FindGNamesViaMemScan() {
                 mbi.RegionSize <= 128u * 1024u * 1024u) {
                 const char* p    = reinterpret_cast<const char*>(base);
                 const char* pEnd = p + mbi.RegionSize;
-                __try {
-                    while (p < pEnd) {
-                        const char* f = static_cast<const char*>(
-                            std::memchr(p, 'N', static_cast<size_t>(pEnd - p)));
-                        if (!f) break;
-                        if (f + 5 <= pEnd &&
-                            f[1]=='o' && f[2]=='n' && f[3]=='e' && f[4]=='\0')
-                            noneAddrs.push_back(reinterpret_cast<uintptr_t>(f));
-                        p = f + 1;
-                    }
-                } __except(EXCEPTION_EXECUTE_HANDLER) {}
+                uintptr_t hits[64];
+                int n = ScanRegionForNone(p, pEnd, hits, 64);
+                for (int i = 0; i < n && noneAddrs.size() < 256; ++i)
+                    noneAddrs.push_back(hits[i]);
             }
             uintptr_t next = base + mbi.RegionSize;
             if (next <= addr) break;
