@@ -54,6 +54,13 @@ namespace ObjectDumper {
         size_t uobj_name_off  = 0x2C;  // FName.Index (int32) inside a UObject
         size_t uobj_class_off = 0x34;  // UClass* inside a UObject
         size_t fname_str_off  = 0x10;  // ANSI name chars inside an FNameEntry
+
+        // Late UE3 (post-2010) uses TStaticIndirectArrayThreadSafeRead instead
+        // of a flat TArray<FNameEntry*>.  In that layout the global in .data is:
+        //   { int32 NumElements; int32 NumChunks; FNameEntry** Chunks[MaxChunks]; }
+        // with MaxChunks=128 and ChunkSize=16384.  When this flag is true,
+        // ResolveFName uses the chunked access path.
+        bool   gnamesIsChunked = false;
     };
 
     struct Config {

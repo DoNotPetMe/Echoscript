@@ -113,6 +113,24 @@ static bool ReadAnsiAt(uintptr_t addr, std::string& out, int maxLen = 128) {
 // Resolve an FName index to its string via the discovered GNames array.
 bool ResolveFName(int index, std::string& out) {
     if (!g_gnamesPtr || index < 0) return false;
+
+    if (g_config.layout.gnamesIsChunked) {
+        // Chunked layout: g_gnamesPtr → { NumElements(4), NumChunks(4), Chunks[0..127](4 each) }
+        // Chunks[chunkIdx][entryIdx] = FNameEntry*
+        static constexpr int kChunkSize = 16384;
+        int chunkIdx = index / kChunkSize;
+        int entryIdx = index % kChunkSize;
+        uintptr_t chunkPtr = 0;
+        if (!Memory::SafeRead(g_gnamesPtr + 8u + static_cast<uintptr_t>(chunkIdx) * 4u, chunkPtr)
+            || !chunkPtr)
+            return false;
+        uintptr_t entry = 0;
+        if (!Memory::SafeRead(chunkPtr + static_cast<uintptr_t>(entryIdx) * 4u, entry) || !entry)
+            return false;
+        return ReadAnsiAt(entry + g_config.layout.fname_str_off, out);
+    }
+
+    // Flat TArray<FNameEntry*> layout.
     uintptr_t data = 0;   // FNameEntry** Data
     if (!Memory::SafeRead(g_gnamesPtr, data) || !data) return false;
     int count = 0;
@@ -317,7 +335,7 @@ static bool ValidateGNames(uintptr_t arr, int count) {
         }
     }
 
-    // Try Data[0..4] with all candidate string offsets.
+    // ---- Flat check: Data[0..4] are FNameEntry* with "None" at some offset ----
     for (int idx = 0; idx <= 4; ++idx) {
         uintptr_t entryN = 0;
         if (!Memory::SafeRead(data + static_cast<uintptr_t>(idx) * 4, entryN)) break;
@@ -325,9 +343,35 @@ static bool ValidateGNames(uintptr_t arr, int count) {
         for (size_t fo : kStrOffs) {
             std::string s;
             if (ReadAnsiAt(entryN + fo, s, 32) && (s == "None" || s == "none")) {
-                g_config.layout.fname_str_off = fo;
+                g_config.layout.fname_str_off   = fo;
+                g_config.layout.gnamesIsChunked = false;
                 (void)count;
                 return true;
+            }
+        }
+    }
+
+    // ---- Chunked check: data is Chunks[0] (first chunk), Chunks[0][0] = FNameEntry* ----
+    // Applies when the sliding window landed on G+8 inside a chunked GNames struct
+    // (so `data` is actually Chunk0, not a flat FNameEntry** array).
+    {
+        uintptr_t e0 = 0;
+        if (Memory::SafeRead(data, e0) && LooksLikeReadablePtr(e0)) {
+            for (size_t fo : kStrOffs) {
+                std::string s;
+                if (ReadAnsiAt(e0 + fo, s, 32) && (s == "None" || s == "none")) {
+                    // Verify G = arr-8 has plausible NumElements/NumChunks.
+                    if (arr >= 8u) {
+                        int numElem = 0, numC = 0;
+                        if (Memory::SafeRead(arr - 8u, numElem) && numElem >= 100 && numElem <= 2'000'000 &&
+                            Memory::SafeRead(arr - 4u, numC)    && numC    >= 1   && numC    <= 128) {
+                            g_config.layout.fname_str_off   = fo;
+                            g_config.layout.gnamesIsChunked = true;
+                            (void)count;
+                            return true;
+                        }
+                    }
+                }
             }
         }
     }
@@ -474,54 +518,110 @@ static bool FindGNamesViaDoubleHop() {
     if (h0Candidates.empty()) return false;
 
     // ---- Phase 4: for each H0, look in .data for H0 → GNames TArray ----
-    // H0 is the heap-array start (= GNames.Data value stored in .data TArray).
+    // H0 is the heap-array start.  Two sub-cases:
+    //
+    //   FLAT   (TArray<FNameEntry*>): .data = { Data→H0, Count, Max }
+    //          H0[0..N] are FNameEntry* values.
+    //
+    //   CHUNKED (TStaticIndirectArrayThreadSafeRead, late UE3 ≥ 2010):
+    //          .data = { NumElements, NumChunks, Chunks[0]=H0, Chunks[1], ... }
+    //          H0 is the FIRST CHUNK, an array of 16384 FNameEntry* values.
+    //          H0[0] = FNameEntry* for "None".
+    //          The .data slot holding H0 is at offset +8 from the struct base G.
+    //
     static const size_t kStrOffsCheck[] = { 0x04, 0x08, 0x00, 0x06, 0x0A, 0x0C, 0x10 };
 
     for (uintptr_t H0 : h0Candidates) {
         std::vector<uintptr_t> tArrayCands;
         LookupAll(H0, tArrayCands);
         for (uintptr_t cand : tArrayCands) {
-            int cnt = 0, maxv = 0;
-            if (!Memory::SafeRead(cand + 4, cnt)  || cnt  < 100 || cnt  > 5'000'000) continue;
-            if (!Memory::SafeRead(cand + 8, maxv) || maxv < cnt  || maxv > 5'000'000) continue;
 
-            // Read Data[0] = the FNameEntry* for "None".
-            uintptr_t e0 = 0;
-            if (!Memory::SafeRead(H0, e0) || !LooksLikeReadablePtr(e0)) continue;
+            // ---- Flat TArray check ----
+            {
+                int cnt = 0, maxv = 0;
+                if (Memory::SafeRead(cand + 4, cnt)  && cnt  >= 100 && cnt  <= 5'000'000 &&
+                    Memory::SafeRead(cand + 8, maxv) && maxv >= cnt  && maxv <= 5'000'000) {
 
-            // Find which soff gives "None" at e0.
-            size_t goodSoff = SIZE_MAX;
-            for (size_t soff : kStrOffsCheck) {
-                std::string s;
-                if (ReadAnsiAt(e0 + soff, s, 32) && (s == "None" || s == "none")) {
-                    goodSoff = soff; break;
+                    uintptr_t e0 = 0;
+                    if (Memory::SafeRead(H0, e0) && LooksLikeReadablePtr(e0)) {
+                        size_t goodSoff = SIZE_MAX;
+                        for (size_t soff : kStrOffsCheck) {
+                            std::string s;
+                            if (ReadAnsiAt(e0 + soff, s, 32) && (s == "None" || s == "none"))
+                                { goodSoff = soff; break; }
+                        }
+                        if (goodSoff != SIZE_MAX) {
+                            int score = 0;
+                            for (int k = 0; k < 8; ++k) {
+                                uintptr_t eN = 0;
+                                if (!Memory::SafeRead(H0 + static_cast<uintptr_t>(k) * 4u, eN)) break;
+                                if (!LooksLikeReadablePtr(eN)) continue;
+                                std::string s;
+                                if (ReadAnsiAt(eN + goodSoff, s, 64) && !s.empty()) ++score;
+                            }
+                            if (score >= 4) {
+                                g_gnamesPtr = cand;
+                                g_config.layout.fname_str_off   = goodSoff;
+                                g_config.layout.gnamesIsChunked = false;
+                                Logger::Info("ObjectDumper: GNames @ 0x%08X via double-hop FLAT "
+                                             "(str_off=0x%zX cnt=%d score=%d/8 H0=0x%08X e0=0x%08X)",
+                                             static_cast<unsigned>(cand), goodSoff, cnt, score,
+                                             static_cast<unsigned>(H0), static_cast<unsigned>(e0));
+                                return true;
+                            }
+                        }
+                    }
                 }
             }
-            if (goodSoff == SIZE_MAX) continue;
 
-            // Score: how many of H0[0..7] resolve to non-empty identifier strings.
-            int score = 0;
-            for (int k = 0; k < 8; ++k) {
-                uintptr_t eN = 0;
-                if (!Memory::SafeRead(H0 + static_cast<uintptr_t>(k) * 4u, eN)) break;
-                if (!LooksLikeReadablePtr(eN)) continue;
-                std::string s;
-                if (ReadAnsiAt(eN + goodSoff, s, 64) && !s.empty()) ++score;
+            // ---- Chunked TStaticIndirectArrayThreadSafeRead check ----
+            // cand = .data address storing H0 = Chunks[0].
+            // The struct base G = cand - 8.  G+0=NumElements, G+4=NumChunks, G+8=Chunks[0].
+            if (cand >= 8u) {
+                int numElem = 0, numChunks_val = 0;
+                if (Memory::SafeRead(cand - 8u, numElem)       && numElem      >= 100 && numElem      <= 2'000'000 &&
+                    Memory::SafeRead(cand - 4u, numChunks_val) && numChunks_val >= 1   && numChunks_val <= 128) {
+
+                    // H0 is Chunk0; H0[0] should be FNameEntry* for "None".
+                    uintptr_t e0 = 0;
+                    if (Memory::SafeRead(H0, e0) && LooksLikeReadablePtr(e0)) {
+                        size_t goodSoff = SIZE_MAX;
+                        for (size_t soff : kStrOffsCheck) {
+                            std::string s;
+                            if (ReadAnsiAt(e0 + soff, s, 32) && (s == "None" || s == "none"))
+                                { goodSoff = soff; break; }
+                        }
+                        if (goodSoff != SIZE_MAX) {
+                            // Score: first 8 entries of Chunk0 should all resolve.
+                            int score = 0;
+                            for (int k = 0; k < 8; ++k) {
+                                uintptr_t eN = 0;
+                                if (!Memory::SafeRead(H0 + static_cast<uintptr_t>(k) * 4u, eN)) break;
+                                if (!LooksLikeReadablePtr(eN)) continue;
+                                std::string s;
+                                if (ReadAnsiAt(eN + goodSoff, s, 64) && !s.empty()) ++score;
+                            }
+                            if (score >= 4) {
+                                g_gnamesPtr = cand - 8u; // struct base (NumElements field)
+                                g_config.layout.fname_str_off   = goodSoff;
+                                g_config.layout.gnamesIsChunked = true;
+                                Logger::Info("ObjectDumper: GNames @ 0x%08X via double-hop CHUNKED "
+                                             "(str_off=0x%zX numElem=%d numChunks=%d score=%d/8 "
+                                             "Chunk0=0x%08X e0=0x%08X)",
+                                             static_cast<unsigned>(cand - 8u), goodSoff,
+                                             numElem, numChunks_val, score,
+                                             static_cast<unsigned>(H0), static_cast<unsigned>(e0));
+                                return true;
+                            }
+                        }
+                    }
+                }
             }
-            if (score < 4) continue;
-
-            g_gnamesPtr = cand;
-            g_config.layout.fname_str_off = goodSoff;
-            Logger::Info("ObjectDumper: GNames @ 0x%08X via double-hop "
-                         "(str_off=0x%zX cnt=%d score=%d/8 H0=0x%08X e0=0x%08X)",
-                         static_cast<unsigned>(cand), goodSoff, cnt, score,
-                         static_cast<unsigned>(H0), static_cast<unsigned>(e0));
-            return true;
         }
     }
 
-    Logger::Warn("ObjectDumper: double-hop: %zu H0 candidates checked — GNames TArray not found. "
-                 "GNames may be in an unexpected memory region or uses an unusual layout.",
+    Logger::Warn("ObjectDumper: double-hop: %zu H0 candidates, neither flat nor chunked matched. "
+                 "GNames may be in an unexpected region or uses an unusual layout.",
                  h0Candidates.size());
     return false;
 }
@@ -668,16 +768,18 @@ bool AutoFindGlobals() {
         Logger::Info("ObjectDumper: GNames not in writable sections "
                      "(%d shape-ok candidates). Retrying all readable sections.",
                      g_diagCandidates);
-        // Pass 2: also search read-only sections — handles unusual section flags.
         g_diagCandidates = 0;
         gnames = FindTArray(&ValidateGNames, /*requireWrite=*/false);
     }
+    // If ValidateGNames detected chunked layout, FindTArray returned arr=G+8;
+    // fix up to point at the struct base G (where NumElements lives).
+    if (gnames && g_config.layout.gnamesIsChunked && gnames >= 8u)
+        gnames -= 8u;
+
     if (!gnames) {
         Logger::Info("ObjectDumper: PE section scans exhausted "
-                     "(%d total shape-ok candidates). Trying heap mem-scan...",
+                     "(%d total shape-ok candidates). Trying heap double-hop scan...",
                      g_diagCandidates);
-        // Pass 3: scan heap memory directly for "None\0" and trace back to TArray.
-        // Handles cases where GNames is a raw C-array or chunk-table, not a TArray.
         if (FindGNamesViaDoubleHop()) {
             gnames = g_gnamesPtr;
         }
