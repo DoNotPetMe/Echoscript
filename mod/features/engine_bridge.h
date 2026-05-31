@@ -88,6 +88,19 @@ namespace EngineBridge {
     uintptr_t ManualDestroyFn();
 
     // ------------------------------------------------------------------
+    //  GWorld auto-discovery — uses ObjectDumper's live GObjects array to
+    //  find the UWorld instance (class name "World"), then scans module
+    //  .data for the GWorld global pointer.  Call after ObjectDumper::Init().
+    //  On success: sets g_bridge.worldPtr; logs UWorld vtable entries so
+    //  the user can identify SpawnActor in IDA/x64dbg.
+    //  Returns true if the UWorld value was found (bridge still offline if
+    //  SpawnActor has not been set).
+    // ------------------------------------------------------------------
+    bool      AutoFindGWorld();
+    void      RefreshWorldPtr();     // re-read worldPtr from stored GWorld global
+    uintptr_t GWorldGlobalAddr();    // address of the GWorld global in .data (0 if unknown)
+
+    // ------------------------------------------------------------------
     //  Facade — the editor calls these.  Each guards on g_bridge.ready
     //  and wraps the raw call in __try/__except so a wrong-ABI call is
     //  contained instead of crashing the game.  Rotation-unit conversion

@@ -105,4 +105,17 @@ namespace ObjectDumper {
     // in the game's writable data sections. Populates GObjectsPtr() on success.
     bool ScanGObjectsFromPlayerPtr();
 
+    // GObjects search helpers — require GObjects + GNames to be active.
+
+    // Find the first UObject in GObjects whose UClass FName == className.
+    // Example: FindObjectByClassName("World") returns the live UWorld* instance.
+    uintptr_t FindObjectByClassName(const std::string& className);
+
+    // Find the last UClass object whose own FName == name.
+    // Filters to objects whose UClass.Name == "Class" (the meta-class), so the
+    // result is a UClass* (class descriptor), not an instance of the class.
+    // "Last" means the highest GObjects index, which tends to be the most-derived
+    // Echelon-specific class over a base Engine class with the same short name.
+    uintptr_t FindClassByName(const std::string& name);
+
 } // namespace ObjectDumper

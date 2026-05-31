@@ -1117,7 +1117,8 @@ static size_t ForEachObject(const std::function<void(uintptr_t, const std::strin
     if (!Memory::SafeRead(g_gobjectsPtr, data) ||
         !Memory::SafeRead(g_gobjectsPtr + sizeof(uintptr_t), count))
         return 0;
-    if (count > g_config.maxNodes) count = g_config.maxNodes;
+    // Hard cap only — maxNodes is for the legacy LEAD walk, not the full GObjects array.
+    if (count > 1'000'000) count = 1'000'000;
 
     size_t named = 0;
     for (int k = 0; k < count; ++k) {
@@ -1177,6 +1178,59 @@ size_t DumpAll() {
 }
 
 // -----------------------------------------------------------------------
+//  GObjects search helpers — exported for engine_bridge etc.
+// -----------------------------------------------------------------------
+uintptr_t FindObjectByClassName(const std::string& className) {
+    if (!g_gobjectsPtr) return 0;
+    uintptr_t data = 0; int count = 0;
+    if (!Memory::SafeRead(g_gobjectsPtr, data) ||
+        !Memory::SafeRead(g_gobjectsPtr + 4u, count) || count <= 0)
+        return 0;
+    if (count > 1'000'000) count = 1'000'000;
+
+    for (int k = 0; k < count; ++k) {
+        uintptr_t obj = 0;
+        if (!Memory::SafeRead(data + static_cast<uintptr_t>(k) * 4u, obj) || !obj)
+            continue;
+        uintptr_t cls = 0;
+        if (!Memory::SafeRead(obj + g_config.layout.uobj_class_off, cls) || !cls)
+            continue;
+        std::string clsName;
+        if (ReadObjectName(cls, clsName) && clsName == className)
+            return obj;
+    }
+    return 0;
+}
+
+uintptr_t FindClassByName(const std::string& name) {
+    if (!g_gobjectsPtr) return 0;
+    uintptr_t data = 0; int count = 0;
+    if (!Memory::SafeRead(g_gobjectsPtr, data) ||
+        !Memory::SafeRead(g_gobjectsPtr + 4u, count) || count <= 0)
+        return 0;
+    if (count > 1'000'000) count = 1'000'000;
+
+    uintptr_t result = 0;
+    for (int k = 0; k < count; ++k) {
+        uintptr_t obj = 0;
+        if (!Memory::SafeRead(data + static_cast<uintptr_t>(k) * 4u, obj) || !obj)
+            continue;
+        std::string objName;
+        if (!ReadObjectName(obj, objName) || objName != name)
+            continue;
+        // Filter: object must itself be a UClass (its UClass == "Class" meta-class).
+        uintptr_t cls = 0;
+        if (!Memory::SafeRead(obj + g_config.layout.uobj_class_off, cls) || !cls)
+            continue;
+        std::string clsName;
+        if (!ReadObjectName(cls, clsName) || clsName != "Class")
+            continue;
+        result = obj; // last match = highest-index = most-derived (e.g. Echelon.Pawn over Engine.Pawn)
+    }
+    return result;
+}
+
+// -----------------------------------------------------------------------
 //  ResolveProps — walk the registry and, for every name that matches a
 //  catalog entry, record its live node pointer in PropDatabase.
 // -----------------------------------------------------------------------
@@ -1188,7 +1242,17 @@ size_t ResolveProps() {
         size_t resolved = 0;
         ForEachObject([&](uintptr_t obj, const std::string& name) {
             uint32_t id = PropDatabase::ResolveByName(name);
-            if (id != UINT32_MAX) { PropDatabase::SetTypeNode(id, obj); ++resolved; }
+            if (id == UINT32_MAX) return;
+            // Require this to be a UClass object (meta-class check).
+            // A UClass's own UClass field points at the "Class" meta-class.
+            // Plain instances (e.g. a Pawn character in the world) have their
+            // UClass field pointing at "Pawn", not "Class", so they're skipped.
+            uintptr_t cls = 0;
+            if (!Memory::SafeRead(obj + g_config.layout.uobj_class_off, cls) || !cls) return;
+            std::string clsName;
+            if (!ReadObjectName(cls, clsName) || clsName != "Class") return;
+            PropDatabase::SetTypeNode(id, obj);
+            ++resolved;
         });
         Logger::Info("ObjectDumper: resolved %zu / %zu catalog types via GObjects.",
                      resolved, PropDatabase::Entries().size());

@@ -242,9 +242,19 @@ void RenderMenu() {
             ImGui::SetTooltip("Uses FreeCam's captured player pointer as an anchor\n"
                               "to locate GObjects. Must be in a loaded level.");
 
+        if (ImGui::Button("Find GWorld (from GObjects)")) EngineBridge::AutoFindGWorld();
+        ImGui::SameLine();
+        if (ImGui::Button("Refresh GWorld")) EngineBridge::RefreshWorldPtr();
+        if (ImGui::IsItemHovered())
+            ImGui::SetTooltip("Re-reads the UWorld* from the stored GWorld global address.\n"
+                              "Use after a level reload if the bridge drops offline.");
+
         // Live global addresses (0 until found).
         ImGui::Text("GNames:   0x%08X", static_cast<unsigned>(ObjectDumper::GNamesPtr()));
         ImGui::Text("GObjects: 0x%08X", static_cast<unsigned>(ObjectDumper::GObjectsPtr()));
+        ImGui::Text("GWorld:   0x%08X  (global @ 0x%08X)",
+                    static_cast<unsigned>(EngineBridge::ManualWorldPtr()),
+                    static_cast<unsigned>(EngineBridge::GWorldGlobalAddr()));
         ImGui::Text("Resolved: %zu / %zu types",
                     PropDatabase::ResolvedCount(), PropDatabase::Entries().size());
 
