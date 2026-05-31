@@ -752,6 +752,35 @@ bool ScanGObjectsFromPlayerPtr() {
     return false;
 }
 
+// Probe a GObjects TArray candidate: sample object slots and, for each
+// candidate uobj_name_off, count how many resolve to a clean name via the
+// (already-verified) GNames. Returns best score and writes the offset.
+// Requires g_gnamesPtr to be valid.
+static int ProbeGObjectsNameOff(uintptr_t arr, size_t& outNameOff) {
+    static const size_t kNameOffs[] = { 0x2C, 0x28, 0x30, 0x34, 0x38, 0x24, 0x40, 0x44, 0x48 };
+    uintptr_t data = 0; int count = 0;
+    if (!Memory::SafeRead(arr, data) || !LooksLikeReadablePtr(data)) return 0;
+    if (!Memory::SafeRead(arr + 4, count) || count <= 0) return 0;
+
+    int bestScore = 0; size_t bestOff = outNameOff;
+    for (size_t no : kNameOffs) {
+        int score = 0, sampled = 0;
+        for (int k = 0; k < 64 && k < count; ++k) {
+            uintptr_t obj = 0;
+            if (!Memory::SafeRead(data + static_cast<uintptr_t>(k) * 4, obj)) break;
+            if (!LooksLikeReadablePtr(obj)) continue;
+            ++sampled;
+            int nameIdx = 0;
+            if (!Memory::SafeRead(obj + no, nameIdx)) continue;
+            std::string s;
+            if (ResolveFName(nameIdx, s) && !s.empty()) ++score;
+        }
+        if (sampled >= 8 && score > bestScore) { bestScore = score; bestOff = no; }
+    }
+    outNameOff = bestOff;
+    return bestScore;
+}
+
 bool AutoFindGlobals() {
     g_gnamesPtr   = 0;
     g_gobjectsPtr = 0;
@@ -761,29 +790,55 @@ bool AutoFindGlobals() {
         FindGObjectsViaPlayerScan();
 
     // ---- GNames ----
-    // Pass 1: writable sections only (normal globals live in .data / .bss).
-    g_diagCandidates = 0;
-    uintptr_t gnames = FindTArray(&ValidateGNames, /*requireWrite=*/true);
-    if (!gnames) {
-        Logger::Info("ObjectDumper: GNames not in writable sections "
-                     "(%d shape-ok candidates). Retrying all readable sections.",
-                     g_diagCandidates);
-        g_diagCandidates = 0;
-        gnames = FindTArray(&ValidateGNames, /*requireWrite=*/false);
-    }
-    // If ValidateGNames detected chunked layout, FindTArray returned arr=G+8;
-    // fix up to point at the struct base G (where NumElements lives).
-    if (gnames && g_config.layout.gnamesIsChunked && gnames >= 8u)
-        gnames -= 8u;
+    // VerifyGNames: accept a candidate ONLY if GNames[0] actually resolves to
+    // "None" (UE3 invariant). This rejects the flat-scan false positives that
+    // plagued earlier builds (random .data slots whose shape looks like a TArray
+    // but whose Data[0] is garbage — they reported GNames[0]="").
+    auto VerifyGNames = [&](uintptr_t cand) -> bool {
+        if (!cand) return false;
+        uintptr_t saved = g_gnamesPtr;
+        g_gnamesPtr = cand;
+        std::string s0, s1;
+        bool ok0 = ResolveFName(0, s0) && (s0 == "None" || s0 == "none");
+        // Index 1 should also be a clean non-empty identifier in a real table.
+        bool ok1 = ResolveFName(1, s1) && !s1.empty();
+        if (!(ok0 && ok1)) { g_gnamesPtr = saved; return false; }
+        return true;
+    };
 
+    // Pass 1: double-hop heap scan FIRST — it anchors on a real "None\0" byte
+    // sequence in the heap and walks back to the global, so it does not suffer
+    // the false positives of the blind .data sliding-window scan.
+    uintptr_t gnames = 0;
+    if (FindGNamesViaDoubleHop() && VerifyGNames(g_gnamesPtr)) {
+        gnames = g_gnamesPtr;
+    } else {
+        g_gnamesPtr = 0;
+        g_config.layout.gnamesIsChunked = false;
+    }
+
+    // Pass 2/3: fall back to the PE-section TArray sliding-window scan, but only
+    // accept a candidate that passes VerifyGNames (GNames[0]=="None").
     if (!gnames) {
-        Logger::Info("ObjectDumper: PE section scans exhausted "
-                     "(%d total shape-ok candidates). Trying heap double-hop scan...",
-                     g_diagCandidates);
-        if (FindGNamesViaDoubleHop()) {
-            gnames = g_gnamesPtr;
+        Logger::Info("ObjectDumper: double-hop did not yield a verified GNames; "
+                     "trying PE-section TArray scan as fallback.");
+        g_diagCandidates = 0;
+        uintptr_t cand = FindTArray(&ValidateGNames, /*requireWrite=*/true);
+        if (!cand) {
+            g_diagCandidates = 0;
+            cand = FindTArray(&ValidateGNames, /*requireWrite=*/false);
+        }
+        if (cand && g_config.layout.gnamesIsChunked && cand >= 8u)
+            cand -= 8u;
+        if (VerifyGNames(cand)) {
+            gnames = cand;
+        } else if (cand) {
+            Logger::Warn("ObjectDumper: flat-scan candidate 0x%08X REJECTED "
+                         "(GNames[0] did not resolve to \"None\" — false positive).",
+                         static_cast<unsigned>(cand));
         }
     }
+
     if (!gnames) {
         Logger::Warn("ObjectDumper: GNames not auto-found after all passes. "
                      "GNames structure in this build is not yet understood — "
@@ -797,22 +852,45 @@ bool AutoFindGlobals() {
         return false;
     }
     g_gnamesPtr = gnames;
-    Logger::Info("ObjectDumper: GNames @ 0x%08X (fname_str_off=0x%zX).",
-                 static_cast<unsigned>(gnames), g_config.layout.fname_str_off);
-
-    // Sanity: a handful of indices should resolve to clean identifiers.
     {
         std::string s0;
         ResolveFName(0, s0);
-        Logger::Info("ObjectDumper: GNames[0] = \"%s\" (expect None).", s0.c_str());
+        Logger::Info("ObjectDumper: GNames @ 0x%08X VERIFIED (fname_str_off=0x%zX, "
+                     "chunked=%d, GNames[0]=\"%s\").",
+                     static_cast<unsigned>(gnames), g_config.layout.fname_str_off,
+                     g_config.layout.gnamesIsChunked ? 1 : 0, s0.c_str());
     }
 
     // ---- GObjects ----
-    // Skip if already found by player-ptr scan above.
+    // If the player-ptr scan already found a candidate, VERIFY it now against
+    // the verified GNames by probing for a uobj_name_off that resolves names.
+    // (The player-ptr scan only checked "neighbours are readable pointers", so
+    // the candidate could be a large non-GObjects buffer that happens to hold
+    // the player pointer. Name resolution is the real test.)
     if (g_gobjectsPtr) {
-        Logger::Info("ObjectDumper: GObjects already located (player-ptr path) — "
-                     "skipping section scan.");
-        return true;
+        size_t nameOff = g_config.layout.uobj_name_off;
+        int score = ProbeGObjectsNameOff(g_gobjectsPtr, nameOff);
+        if (score >= 8) {
+            g_config.layout.uobj_name_off = nameOff;
+            // Lock a class offset that yields a readable pointer on object 0.
+            uintptr_t data = 0; Memory::SafeRead(g_gobjectsPtr, data);
+            uintptr_t obj0 = 0; Memory::SafeRead(data, obj0);
+            for (size_t co : { 0x34u, 0x30u, 0x38u, 0x3Cu, 0x40u, 0x44u }) {
+                uintptr_t cls = 0;
+                if (Memory::SafeRead(obj0 + co, cls) && LooksLikeReadablePtr(cls)) {
+                    g_config.layout.uobj_class_off = co; break;
+                }
+            }
+            Logger::Info("ObjectDumper: GObjects @ 0x%08X (player-ptr path) VERIFIED via "
+                         "GNames (uobj_name_off=0x%zX score=%d/64).",
+                         static_cast<unsigned>(g_gobjectsPtr),
+                         g_config.layout.uobj_name_off, score);
+            return true;
+        }
+        Logger::Warn("ObjectDumper: player-ptr GObjects 0x%08X did NOT verify against "
+                     "GNames (best name score=%d) — discarding and running section scan.",
+                     static_cast<unsigned>(g_gobjectsPtr), score);
+        g_gobjectsPtr = 0;
     }
 
     // Validate by reading Data[0..N] as UObject* and resolving their names; a
