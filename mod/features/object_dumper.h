@@ -68,6 +68,11 @@ namespace ObjectDumper {
     uintptr_t GNamesPtr();
     uintptr_t GObjectsPtr();
 
+    // Manual address injection — paste from Cheat Engine when auto-discovery fails.
+    // Immediately updates the internal pointer; call ResolveProps() afterwards.
+    void SetGNamesPtr(uintptr_t addr);
+    void SetGObjectsPtr(uintptr_t addr);
+
     // Resolve a UE3 FName index to its string via the discovered GNames.
     // Returns false if GNames isn't located or the entry is unreadable.
     bool ResolveFName(int index, std::string& out);
@@ -86,5 +91,11 @@ namespace ObjectDumper {
     size_t ResolveProps();       // match registry names to PropDatabase, fill typeNodes
     bool   IsRegistryFound();    // true if either path succeeded
     bool   IsUE3GObjectsActive(); // true if the UE3 GObjects path is active
+
+    // Bootstrap GObjects using the player-struct pointer captured by FreeCam.
+    // Call this after entering a level (FreeCam::HasCapturedBase() == true).
+    // Scans committed memory for the player ptr value, traces back to a TArray
+    // in the game's writable data sections. Populates GObjectsPtr() on success.
+    bool ScanGObjectsFromPlayerPtr();
 
 } // namespace ObjectDumper

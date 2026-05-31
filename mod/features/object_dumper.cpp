@@ -1,5 +1,6 @@
 #include "object_dumper.h"
 #include "prop_database.h"
+#include "freecam.h"
 #include "../utils/logger.h"
 #include "../utils/memory.h"
 #include "../utils/pattern_scan.h"
@@ -78,6 +79,19 @@ static int g_diagCandidates = 0;
 
 uintptr_t GNamesPtr()   { return g_gnamesPtr; }
 uintptr_t GObjectsPtr() { return g_gobjectsPtr; }
+
+void SetGNamesPtr(uintptr_t addr) {
+    g_gnamesPtr = addr;
+    if (addr) Logger::Info("ObjectDumper: GNames manually set to 0x%08X.", static_cast<unsigned>(addr));
+}
+
+void SetGObjectsPtr(uintptr_t addr) {
+    g_gobjectsPtr = addr;
+    if (addr) {
+        g_registryHead = addr;
+        Logger::Info("ObjectDumper: GObjects manually set to 0x%08X.", static_cast<unsigned>(addr));
+    }
+}
 
 // Read an ANSI string from a fixed address into out (bounded).
 static bool ReadAnsiAt(uintptr_t addr, std::string& out, int maxLen = 128) {
@@ -468,9 +482,153 @@ static bool FindGNamesViaMemScan() {
     return false;
 }
 
+// -----------------------------------------------------------------------
+//  FindGObjectsViaPlayerScan — bootstrap GObjects from a confirmed live
+//  UObject pointer (the player/camera struct captured by FreeCam).
+//
+//  The captured ESI pointer is stored in GObjects.Data[k] for some k.
+//  Strategy:
+//   1. Scan all committed memory for the exact 4-byte value.
+//   2. For each hit H (candidate &Data[k]), try k=1..511:
+//      dataPtr = H - k*4 (candidate array start).
+//   3. Search writable .data sections for a slot holding dataPtr —
+//      that slot is the TArray.Data field of GObjects.
+//   4. Validate Count/Max plausibility and that entries near [k] are
+//      valid-looking pointers (score >= 5/9).
+//
+//  No GNames dependency — works independently as the first bootstrap step.
+// -----------------------------------------------------------------------
+static bool FindGObjectsViaPlayerScan() {
+    uintptr_t playerPtr = FreeCam::CurrentBase();
+    if (!playerPtr) {
+        Logger::Info("ObjectDumper: player-ptr scan skipped (not yet in a level).");
+        return false;
+    }
+    Logger::Info("ObjectDumper: player-ptr GObjects scan (ptr=0x%08X)...",
+                 static_cast<unsigned>(playerPtr));
+
+    // Phase 1 — scan committed pages for playerPtr value (4-byte aligned).
+    static uintptr_t hits[1024];
+    int nHits = 0;
+    {
+        MEMORY_BASIC_INFORMATION mbi{};
+        uintptr_t addr = 0x10000u;
+        while (nHits < 1024 &&
+               VirtualQuery(reinterpret_cast<LPCVOID>(addr), &mbi, sizeof(mbi)) == sizeof(mbi)) {
+            uintptr_t base = reinterpret_cast<uintptr_t>(mbi.BaseAddress);
+            if (mbi.State == MEM_COMMIT &&
+                !(mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)) &&
+                mbi.RegionSize <= 128u * 1024u * 1024u) {
+                size_t slots = mbi.RegionSize / 4;
+                for (size_t s = 0; s < slots && nHits < 1024; ++s) {
+                    uintptr_t v = 0;
+                    if (Memory::SafeRead(base + s * 4u, v) && v == playerPtr)
+                        hits[nHits++] = base + s * 4u;
+                }
+            }
+            uintptr_t next = base + mbi.RegionSize;
+            if (next <= addr) break;
+            addr = next;
+        }
+    }
+    Logger::Info("ObjectDumper: player-ptr scan: %d memory slot(s) hold 0x%08X.",
+                 nHits, static_cast<unsigned>(playerPtr));
+    if (!nHits) return false;
+
+    // Phase 2 — build sorted reverse map of writable .data pointer values.
+    // Maps stored_value → address_in_.data so we can ask "what .data slot
+    // holds pointer X?" in O(log n).
+    std::vector<std::pair<uintptr_t, uintptr_t>> revMap;
+    revMap.reserve(500000);
+    {
+        HMODULE mod = GetModuleHandleW(nullptr);
+        const auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(mod);
+        const auto* nt  = reinterpret_cast<IMAGE_NT_HEADERS*>(
+            reinterpret_cast<uintptr_t>(mod) + dos->e_lfanew);
+        const auto* sec = IMAGE_FIRST_SECTION(nt);
+        for (WORD si = 0; si < nt->FileHeader.NumberOfSections; ++si, ++sec) {
+            if (!(sec->Characteristics & IMAGE_SCN_MEM_WRITE)) continue;
+            uintptr_t start = reinterpret_cast<uintptr_t>(mod) + sec->VirtualAddress;
+            size_t    sz    = sec->Misc.VirtualSize;
+            for (size_t off = 0; off + 4 <= sz; off += 4) {
+                uint32_t v = 0;
+                if (!Memory::SafeRead(start + off, v)) continue;
+                if (v >= 0x10000u && v < 0x80000000u)
+                    revMap.push_back({ static_cast<uintptr_t>(v), start + off });
+            }
+        }
+    }
+    std::sort(revMap.begin(), revMap.end());
+
+    auto LookupAll = [&](uintptr_t target, std::vector<uintptr_t>& out) {
+        auto lo = std::lower_bound(revMap.begin(), revMap.end(),
+                                   std::make_pair(target, uintptr_t{0}));
+        for (auto it = lo; it != revMap.end() && it->first == target; ++it)
+            out.push_back(it->second);
+    };
+
+    // Phase 3 — trace hits back to GObjects TArray.
+    for (int h = 0; h < nHits; ++h) {
+        uintptr_t H = hits[h];
+        for (int k = 1; k < 512; ++k) {
+            if (H < static_cast<uintptr_t>(k) * 4u) break;
+            uintptr_t dataPtr = H - static_cast<uintptr_t>(k) * 4u;
+
+            std::vector<uintptr_t> cands;
+            LookupAll(dataPtr, cands);
+            for (uintptr_t cand : cands) {
+                int cnt = 0, maxv = 0;
+                if (!Memory::SafeRead(cand + 4, cnt)  || cnt  < 5000 || cnt  > 2'000'000) continue;
+                if (!Memory::SafeRead(cand + 8, maxv) || maxv < cnt  || maxv > 2'000'000) continue;
+                if (cand == g_gnamesPtr) continue;
+
+                // Validate: entries surrounding playerIdx should be non-null pointers.
+                int score = 0;
+                for (int dk = -4; dk <= 4; ++dk) {
+                    int idx = k + dk;
+                    if (idx < 0 || idx >= cnt) continue;
+                    uintptr_t obj = 0;
+                    if (Memory::SafeRead(dataPtr + static_cast<uintptr_t>(idx) * 4u, obj) &&
+                        LooksLikeReadablePtr(obj))
+                        ++score;
+                }
+                if (score < 5) continue;
+
+                g_gobjectsPtr = cand;
+                Logger::Info("ObjectDumper: GObjects @ 0x%08X via player-ptr bootstrap "
+                             "(playerIdx=%d cnt=%d score=%d/9 data=0x%08X).",
+                             static_cast<unsigned>(cand), k, cnt, score,
+                             static_cast<unsigned>(dataPtr));
+                return true;
+            }
+        }
+    }
+
+    Logger::Warn("ObjectDumper: player-ptr scan exhausted (%d hit slot(s)) — "
+                 "no GObjects TArray found. The player struct may not be directly "
+                 "in GObjects, or it is at an unusual index (>511). "
+                 "Try entering GObjects address manually from CE.",
+                 nHits);
+    return false;
+}
+
+bool ScanGObjectsFromPlayerPtr() {
+    if (FindGObjectsViaPlayerScan()) {
+        g_registryHead = g_gobjectsPtr;
+        Logger::Info("ObjectDumper: ScanGObjectsFromPlayerPtr succeeded — "
+                     "run 'Resolve catalog' to populate typeNodes.");
+        return true;
+    }
+    return false;
+}
+
 bool AutoFindGlobals() {
     g_gnamesPtr   = 0;
     g_gobjectsPtr = 0;
+
+    // ---- GObjects pass 0: player-ptr bootstrap (requires freecam in-level) ----
+    if (FreeCam::HasCapturedBase())
+        FindGObjectsViaPlayerScan();
 
     // ---- GNames ----
     // Pass 1: writable sections only (normal globals live in .data / .bss).
@@ -498,6 +656,12 @@ bool AutoFindGlobals() {
         Logger::Warn("ObjectDumper: GNames not auto-found after all passes. "
                      "GNames structure in this build is not yet understood — "
                      "needs manual RE (look for 'FName::Init' or 'GNames' in IDA).");
+        // If GObjects was found via player-ptr scan, report partial success.
+        if (g_gobjectsPtr) {
+            Logger::Info("ObjectDumper: partial success — GObjects located, GNames missing. "
+                         "Type names will not resolve until GNames is found.");
+            return true;
+        }
         return false;
     }
     g_gnamesPtr = gnames;
@@ -512,6 +676,13 @@ bool AutoFindGlobals() {
     }
 
     // ---- GObjects ----
+    // Skip if already found by player-ptr scan above.
+    if (g_gobjectsPtr) {
+        Logger::Info("ObjectDumper: GObjects already located (player-ptr path) — "
+                     "skipping section scan.");
+        return true;
+    }
+
     // Validate by reading Data[0..N] as UObject* and resolving their names; a
     // real object table yields mostly-resolvable names. We also probe a couple
     // of uobj_name_off candidates and lock in the best.
