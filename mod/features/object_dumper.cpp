@@ -79,6 +79,12 @@ static uintptr_t g_gnamesPtr    = 0;
 // indexes this array directly instead of dereferencing g_gnamesPtr. (Flat only;
 // covers indices within the first chunk — adequate for type-name resolution.)
 static uintptr_t g_gnamesDataDirect = 0;
+// Direct chunk-table base: when DIRECT mode lands on Chunks[0] (the first 16384
+// names) but the game's GNames is actually chunked, this points at the array of
+// chunk pointers (FNameEntry** Chunks[]) so ResolveFName can reach ANY index, not
+// just the first chunk. 0 = not found / single-chunk. Discovered by
+// TryUpgradeGNamesToChunked() after DIRECT verification.
+static uintptr_t g_gnamesChunkTable = 0;
 // Diagnostic: how many TArray candidates passed the {data/count/max} shape check.
 static int g_diagCandidates = 0;
 
@@ -88,6 +94,7 @@ uintptr_t GObjectsPtr() { return g_gobjectsPtr; }
 void SetGNamesPtr(uintptr_t addr) {
     g_gnamesPtr = addr;
     g_gnamesDataDirect = 0;   // manual address is a TArray wrapper, not direct data
+    g_gnamesChunkTable = 0;
     if (addr) Logger::Info("ObjectDumper: GNames manually set to 0x%08X.", static_cast<unsigned>(addr));
 }
 
@@ -120,7 +127,25 @@ static bool ReadAnsiAt(uintptr_t addr, std::string& out, int maxLen = 128) {
 bool ResolveFName(int index, std::string& out) {
     if (index < 0) return false;
 
-    // Direct-data mode: g_gnamesDataDirect is the FNameEntry** array base.
+    // Direct CHUNKED mode: g_gnamesChunkTable is the FNameEntry** Chunks[] array.
+    // name[i] = Chunks[i / 16384][i % 16384].  Covers every index across all chunks.
+    if (g_gnamesChunkTable) {
+        static constexpr int kChunkSize = 16384;
+        int chunkIdx = index / kChunkSize;
+        int entryIdx = index % kChunkSize;
+        uintptr_t chunkPtr = 0;
+        if (!Memory::SafeRead(g_gnamesChunkTable + static_cast<uintptr_t>(chunkIdx) * 4u, chunkPtr)
+            || !chunkPtr)
+            return false;
+        uintptr_t entry = 0;
+        if (!Memory::SafeRead(chunkPtr + static_cast<uintptr_t>(entryIdx) * 4u, entry) || !entry)
+            return false;
+        return ReadAnsiAt(entry + g_config.layout.fname_str_off, out);
+    }
+
+    // Direct FLAT mode: g_gnamesDataDirect is the FNameEntry** array base.
+    // Only reaches the first chunk (indices 0..16383). Class names with higher
+    // indices won't resolve until TryUpgradeGNamesToChunked() finds the table.
     if (g_gnamesDataDirect && !g_config.layout.gnamesIsChunked) {
         uintptr_t entry = 0;
         if (!Memory::SafeRead(g_gnamesDataDirect + static_cast<uintptr_t>(index) * 4u, entry)
@@ -813,9 +838,96 @@ static int ProbeGObjectsNameOff(uintptr_t arr, size_t& outNameOff) {
     return bestScore;
 }
 
+// Probe for uobj_class_off by name-validation: for each candidate offset, read
+// each object's class pointer and resolve THAT class object's own name. The
+// correct offset yields the most clean, resolvable class names. Requires
+// g_config.layout.uobj_name_off to already be correct. Writes best offset,
+// returns best score. Far more reliable than "first readable pointer".
+static int ProbeGObjectsClassOff(uintptr_t arr, size_t& outClassOff) {
+    static const size_t kClassOffs[] = { 0x34, 0x30, 0x38, 0x3C, 0x2C, 0x28, 0x40, 0x44, 0x48 };
+    uintptr_t data = 0; int count = 0;
+    if (!Memory::SafeRead(arr, data) || !LooksLikeReadablePtr(data)) return 0;
+    if (!Memory::SafeRead(arr + 4, count) || count <= 0) return 0;
+
+    const size_t nameOff = g_config.layout.uobj_name_off;
+    int bestScore = 0; size_t bestOff = outClassOff;
+    for (size_t co : kClassOffs) {
+        int score = 0, sampled = 0;
+        for (int k = 0; k < 64 && k < count; ++k) {
+            uintptr_t obj = 0;
+            if (!Memory::SafeRead(data + static_cast<uintptr_t>(k) * 4, obj)) break;
+            if (!LooksLikeReadablePtr(obj)) continue;
+            ++sampled;
+            uintptr_t cls = 0;
+            if (!Memory::SafeRead(obj + co, cls) || !LooksLikeReadablePtr(cls)) continue;
+            int clsNameIdx = 0;
+            if (!Memory::SafeRead(cls + nameOff, clsNameIdx)) continue;
+            std::string s;
+            if (ResolveFName(clsNameIdx, s) && !s.empty()) ++score;
+        }
+        if (sampled >= 8 && score > bestScore) { bestScore = score; bestOff = co; }
+    }
+    outClassOff = bestOff;
+    return bestScore;
+}
+
+// -----------------------------------------------------------------------
+//  TryUpgradeGNamesToChunked — when GNames was found in DIRECT FLAT mode,
+//  g_gnamesDataDirect points at Chunks[0] (the first 16384 names only). Most
+//  class names ("World", "Mesh", "Pawn") have higher indices in later chunks
+//  and won't resolve. Late-UE3 GNames is a TStaticIndirectArrayThreadSafeRead:
+//  an array of chunk pointers, Chunks[0..N], each a block of 16384 FNameEntry*.
+//
+//  We already know Chunks[0]'s value (g_gnamesDataDirect). Scan committed memory
+//  for the chunk-pointer table: a location T where T[0] == Chunks[0] AND T[1]
+//  points at a second chunk whose first FNameEntry resolves to a clean name.
+//  That confirms a multi-chunk table; store it so ResolveFName reaches any index.
+// -----------------------------------------------------------------------
+static bool TryUpgradeGNamesToChunked() {
+    if (!g_gnamesDataDirect || g_gnamesChunkTable) return false;
+    const uintptr_t chunk0 = g_gnamesDataDirect;
+    const uintptr_t hdr    = g_config.layout.fname_str_off;
+
+    MEMORY_BASIC_INFORMATION mbi{};
+    uintptr_t addr = 0x10000u;
+    while (VirtualQuery(reinterpret_cast<LPCVOID>(addr), &mbi, sizeof(mbi)) == sizeof(mbi)) {
+        uintptr_t base = reinterpret_cast<uintptr_t>(mbi.BaseAddress);
+        if (mbi.State == MEM_COMMIT && !(mbi.Protect & (PAGE_NOACCESS | PAGE_GUARD)) &&
+            mbi.RegionSize <= 128u * 1024u * 1024u) {
+            size_t slots = mbi.RegionSize / 4;
+            for (size_t s = 0; s + 1 < slots; ++s) {
+                uintptr_t v = 0;
+                if (!Memory::SafeRead(base + s * 4u, v) || v != chunk0) continue;
+                uintptr_t T = base + s * 4u;   // candidate &Chunks[0]
+                // Validate Chunks[1]: must point at a block whose first entry is a clean name.
+                uintptr_t c1 = 0;
+                if (!Memory::SafeRead(T + 4u, c1) || !LooksLikeReadablePtr(c1)) continue;
+                uintptr_t e1 = 0;
+                if (!Memory::SafeRead(c1, e1) || !LooksLikeReadablePtr(e1)) continue;
+                std::string s1;
+                if (!ReadAnsiAt(e1 + hdr, s1, 64) || s1.empty()) continue;
+                g_gnamesChunkTable = T;
+                Logger::Info("ObjectDumper: GNames chunk table @ 0x%08X "
+                             "(Chunks[0]=0x%08X Chunks[1]=0x%08X, chunk1[0]=\"%s\") — "
+                             "all name indices now resolvable.",
+                             static_cast<unsigned>(T), static_cast<unsigned>(chunk0),
+                             static_cast<unsigned>(c1), s1.c_str());
+                return true;
+            }
+        }
+        uintptr_t next = base + mbi.RegionSize;
+        if (next <= addr) break;
+        addr = next;
+    }
+    Logger::Warn("ObjectDumper: GNames chunk table not found — staying FLAT direct "
+                 "(only the first 16384 names resolve; many class names will be missing).");
+    return false;
+}
+
 bool AutoFindGlobals() {
     g_gnamesPtr        = 0;
     g_gnamesDataDirect = 0;
+    g_gnamesChunkTable = 0;
     g_gobjectsPtr      = 0;
 
     // ---- GObjects pass 0: player-ptr bootstrap (requires freecam in-level) ----
@@ -901,6 +1013,12 @@ bool AutoFindGlobals() {
                      g_config.layout.gnamesIsChunked ? 1 : 0, s0.c_str());
     }
 
+    // If GNames was found in DIRECT FLAT mode, it only covers the first 16384
+    // names. Upgrade to the full chunk table so high-index class names ("World",
+    // "Mesh", "Pawn") resolve — essential for catalog resolution and GWorld.
+    if (g_gnamesDataDirect && !g_gnamesChunkTable)
+        TryUpgradeGNamesToChunked();
+
     // ---- GObjects ----
     // If the player-ptr scan already found a candidate, VERIFY it now against
     // the verified GNames by probing for a uobj_name_off that resolves names.
@@ -912,19 +1030,16 @@ bool AutoFindGlobals() {
         int score = ProbeGObjectsNameOff(g_gobjectsPtr, nameOff);
         if (score >= 8) {
             g_config.layout.uobj_name_off = nameOff;
-            // Lock a class offset that yields a readable pointer on object 0.
-            uintptr_t data = 0; Memory::SafeRead(g_gobjectsPtr, data);
-            uintptr_t obj0 = 0; Memory::SafeRead(data, obj0);
-            for (size_t co : { 0x34u, 0x30u, 0x38u, 0x3Cu, 0x40u, 0x44u }) {
-                uintptr_t cls = 0;
-                if (Memory::SafeRead(obj0 + co, cls) && LooksLikeReadablePtr(cls)) {
-                    g_config.layout.uobj_class_off = co; break;
-                }
-            }
+            // Lock the class offset by name-validation (resolves class names).
+            size_t classOff = g_config.layout.uobj_class_off;
+            int clsScore = ProbeGObjectsClassOff(g_gobjectsPtr, classOff);
+            g_config.layout.uobj_class_off = classOff;
             Logger::Info("ObjectDumper: GObjects @ 0x%08X (player-ptr path) VERIFIED via "
-                         "GNames (uobj_name_off=0x%zX score=%d/64).",
+                         "GNames (uobj_name_off=0x%zX score=%d/64, "
+                         "uobj_class_off=0x%zX clsScore=%d/64).",
                          static_cast<unsigned>(g_gobjectsPtr),
-                         g_config.layout.uobj_name_off, score);
+                         g_config.layout.uobj_name_off, score,
+                         g_config.layout.uobj_class_off, clsScore);
             return true;
         }
         Logger::Warn("ObjectDumper: player-ptr GObjects 0x%08X did NOT verify against "
@@ -937,7 +1052,6 @@ bool AutoFindGlobals() {
     // real object table yields mostly-resolvable names. We also probe a couple
     // of uobj_name_off candidates and lock in the best.
     static const size_t kNameOffs[]  = { 0x2C, 0x28, 0x30, 0x34, 0x38 };
-    static const size_t kClassOffs[] = { 0x34, 0x30, 0x38, 0x3C, 0x40 };
 
     HMODULE mod = GetModuleHandleW(nullptr);
     const auto* dos = reinterpret_cast<IMAGE_DOS_HEADER*>(mod);
@@ -985,20 +1099,15 @@ bool AutoFindGlobals() {
     if (bestArr && bestScore >= 8) {
         g_gobjectsPtr = bestArr;
         g_config.layout.uobj_name_off = bestNameOff;
-        // Pick a class offset that yields a readable pointer on the first object.
-        uintptr_t data = 0; Memory::SafeRead(bestArr, data);
-        uintptr_t obj0 = 0; Memory::SafeRead(data, obj0);
-        for (size_t co : kClassOffs) {
-            uintptr_t cls = 0;
-            if (Memory::SafeRead(obj0 + co, cls) && LooksLikeReadablePtr(cls)) {
-                g_config.layout.uobj_class_off = co; break;
-            }
-        }
+        // Lock the class offset by name-validation (resolves class names).
+        size_t classOff = g_config.layout.uobj_class_off;
+        int clsScore = ProbeGObjectsClassOff(bestArr, classOff);
+        g_config.layout.uobj_class_off = classOff;
         Logger::Info("ObjectDumper: GObjects @ 0x%08X (count probe ok, "
-                     "uobj_name_off=0x%zX, uobj_class_off=0x%zX, score=%d/24).",
+                     "uobj_name_off=0x%zX, uobj_class_off=0x%zX clsScore=%d, score=%d/24).",
                      static_cast<unsigned>(bestArr),
                      g_config.layout.uobj_name_off,
-                     g_config.layout.uobj_class_off, bestScore);
+                     g_config.layout.uobj_class_off, clsScore, bestScore);
         return true;
     }
 
@@ -1056,6 +1165,7 @@ bool Init() {
     g_gobjectsPtr      = 0;
     g_gnamesPtr        = 0;
     g_gnamesDataDirect = 0;
+    g_gnamesChunkTable = 0;
 
     // Path 0: heuristic auto-finder (no hardcoded signature needed — works on
     // your specific build). This is the preferred route for Blacklist.
