@@ -15,6 +15,46 @@ namespace EngineBridge {
 
 Bridge g_bridge{};
 
+static uintptr_t s_manualWorldPtr   = 0;
+static uintptr_t s_manualSpawnFn    = 0;
+static uintptr_t s_manualSetTransFn = 0;
+static uintptr_t s_manualDestroyFn  = 0;
+
+void SetManualWorldPtr(uintptr_t addr)       { s_manualWorldPtr   = addr; }
+void SetManualSpawnFn(uintptr_t addr)        { s_manualSpawnFn    = addr; }
+void SetManualSetTransformFn(uintptr_t addr) { s_manualSetTransFn = addr; }
+void SetManualDestroyFn(uintptr_t addr)      { s_manualDestroyFn  = addr; }
+
+uintptr_t ManualWorldPtr()       { return s_manualWorldPtr; }
+uintptr_t ManualSpawnFn()        { return s_manualSpawnFn; }
+uintptr_t ManualSetTransformFn() { return s_manualSetTransFn; }
+uintptr_t ManualDestroyFn()      { return s_manualDestroyFn; }
+
+bool ApplyManualOverrides() {
+    if (!s_manualWorldPtr || !s_manualSpawnFn) {
+        Logger::Warn("EngineBridge: manual override needs GWorld + SpawnActor at minimum "
+                     "(world=0x%08X spawn=0x%08X).",
+                     static_cast<unsigned>(s_manualWorldPtr),
+                     static_cast<unsigned>(s_manualSpawnFn));
+        return false;
+    }
+    g_bridge = Bridge{};
+    g_bridge.worldPtr    = s_manualWorldPtr;
+    g_bridge.spawnByType = reinterpret_cast<SpawnByTypeFn>(s_manualSpawnFn);
+    if (s_manualSetTransFn)
+        g_bridge.setTransform = reinterpret_cast<SetTransformFn>(s_manualSetTransFn);
+    if (s_manualDestroyFn)
+        g_bridge.destroyActor = reinterpret_cast<DestroyActorFn>(s_manualDestroyFn);
+    g_bridge.ready = true;
+    Logger::Info("EngineBridge: MANUAL OVERRIDE active "
+                 "(world=0x%08X spawn=0x%08X setT=0x%08X dest=0x%08X).",
+                 static_cast<unsigned>(s_manualWorldPtr),
+                 static_cast<unsigned>(s_manualSpawnFn),
+                 static_cast<unsigned>(s_manualSetTransFn),
+                 static_cast<unsigned>(s_manualDestroyFn));
+    return true;
+}
+
 // -----------------------------------------------------------------------
 //  Rotation-unit conversion — the ONE place that knows how our degrees
 //  map to the engine's rotation format.  LEAD most likely uses Euler
@@ -34,6 +74,14 @@ static Rot3 ToEngineRotation(const Rot3& degrees) {
 bool Init() {
     g_bridge = Bridge{};   // reset
 
+    // Manual overrides (entered via Discovery panel) take priority over sigs.
+    if (s_manualWorldPtr && s_manualSpawnFn)
+        return ApplyManualOverrides();
+
+    // Signature path — all *_SIG values are placeholder wildcards until RE.
+    // GWORLD_SIG ("48 8B 05 ...") is a 64-bit REX instruction that will NEVER
+    // match in this 32-bit process; gwIns will always be 0.
+    // Use the manual address fields in Level Editor > Discovery to enable spawning.
     uintptr_t spawn = PatternScan::ScanGame(SPAWN_BY_TYPE_SIG);
     uintptr_t setT  = PatternScan::ScanGame(SET_TRANSFORM_SIG);
     uintptr_t dest  = PatternScan::ScanGame(DESTROY_ACTOR_SIG);
@@ -41,10 +89,10 @@ bool Init() {
 
     if (!spawn || !setT || !dest || !gwIns) {
         Logger::Warn("EngineBridge: signatures unresolved "
-                     "(spawn=%d setT=%d dest=%d gworld=%d).",
+                     "(spawn=%d setT=%d dest=%d gworld=%d). "
+                     "GWORLD_SIG is a 64-bit placeholder; it cannot match a 32-bit binary. "
+                     "Enter GWorld + SpawnActor hex addresses in Level Editor > Discovery.",
                      spawn != 0, setT != 0, dest != 0, gwIns != 0);
-        Logger::Warn("EngineBridge: spawning disabled. Use the Object Dumper to "
-                     "rediscover offsets, then fill the *_SIG values in engine_bridge.h.");
         return false;
     }
 

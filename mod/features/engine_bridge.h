@@ -69,6 +69,25 @@ namespace EngineBridge {
     bool IsReady();
 
     // ------------------------------------------------------------------
+    //  Manual address overrides — paste from Cheat Engine / IDA when
+    //  the *_SIG values are still wildcards.
+    //  worldPtr + spawnFn are the minimum required to go ONLINE.
+    //  setTransform and destroyFn may be 0 (those operations become no-ops).
+    //  Call ApplyManualOverrides() after setting, or call Init() —
+    //  it will detect non-zero overrides and skip signature scanning.
+    // ------------------------------------------------------------------
+    void      SetManualWorldPtr(uintptr_t addr);
+    void      SetManualSpawnFn(uintptr_t addr);
+    void      SetManualSetTransformFn(uintptr_t addr);
+    void      SetManualDestroyFn(uintptr_t addr);
+    bool      ApplyManualOverrides();
+
+    uintptr_t ManualWorldPtr();
+    uintptr_t ManualSpawnFn();
+    uintptr_t ManualSetTransformFn();
+    uintptr_t ManualDestroyFn();
+
+    // ------------------------------------------------------------------
     //  Facade — the editor calls these.  Each guards on g_bridge.ready
     //  and wraps the raw call in __try/__except so a wrong-ABI call is
     //  contained instead of crashing the game.  Rotation-unit conversion

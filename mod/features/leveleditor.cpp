@@ -237,11 +237,70 @@ void RenderMenu() {
         ImGui::SameLine();
         if (ImGui::Button("Resolve catalog")) ObjectDumper::ResolveProps();
 
+        if (ImGui::Button("Scan (player ptr)")) ObjectDumper::ScanGObjectsFromPlayerPtr();
+        if (ImGui::IsItemHovered())
+            ImGui::SetTooltip("Uses FreeCam's captured player pointer as an anchor\n"
+                              "to locate GObjects. Must be in a loaded level.");
+
         // Live global addresses (0 until found).
         ImGui::Text("GNames:   0x%08X", static_cast<unsigned>(ObjectDumper::GNamesPtr()));
         ImGui::Text("GObjects: 0x%08X", static_cast<unsigned>(ObjectDumper::GObjectsPtr()));
         ImGui::Text("Resolved: %zu / %zu types",
                     PropDatabase::ResolvedCount(), PropDatabase::Entries().size());
+
+        // ---- Manual address entry (CE / IDA fallback) ----
+        ImGui::Separator();
+        ImGui::TextDisabled("Manual addresses (hex, no '0x' prefix) — from CE/IDA:");
+
+        static char s_gnamesBuf[12]  = {};
+        static char s_gobjsBuf[12]   = {};
+        static char s_gworldBuf[12]  = {};
+        static char s_spawnBuf[12]   = {};
+        static char s_setTBuf[12]    = {};
+        static char s_destBuf[12]    = {};
+
+        auto fmtHex = [](char* buf, size_t sz, uintptr_t v) {
+            if (v && buf[0] == '\0') snprintf(buf, sz, "%08X", static_cast<unsigned>(v));
+        };
+        fmtHex(s_gnamesBuf,  sizeof(s_gnamesBuf),  ObjectDumper::GNamesPtr());
+        fmtHex(s_gobjsBuf,   sizeof(s_gobjsBuf),   ObjectDumper::GObjectsPtr());
+        fmtHex(s_gworldBuf,  sizeof(s_gworldBuf),  EngineBridge::ManualWorldPtr());
+        fmtHex(s_spawnBuf,   sizeof(s_spawnBuf),   EngineBridge::ManualSpawnFn());
+        fmtHex(s_setTBuf,    sizeof(s_setTBuf),    EngineBridge::ManualSetTransformFn());
+        fmtHex(s_destBuf,    sizeof(s_destBuf),    EngineBridge::ManualDestroyFn());
+
+        ImGui::PushItemWidth(110.f);
+        ImGui::InputText("GNames##m",      s_gnamesBuf, sizeof(s_gnamesBuf));
+        ImGui::SameLine();
+        ImGui::InputText("GObjects##m",    s_gobjsBuf,  sizeof(s_gobjsBuf));
+        ImGui::InputText("GWorld##m",      s_gworldBuf, sizeof(s_gworldBuf));
+        ImGui::SameLine();
+        ImGui::InputText("SpawnActor##m",  s_spawnBuf,  sizeof(s_spawnBuf));
+        ImGui::InputText("SetTransform##m",s_setTBuf,   sizeof(s_setTBuf));
+        ImGui::SameLine();
+        ImGui::InputText("DestroyActor##m",s_destBuf,   sizeof(s_destBuf));
+        ImGui::PopItemWidth();
+
+        if (ImGui::Button("Apply manual addresses")) {
+            auto parseHex = [](const char* s, uintptr_t& out) {
+                unsigned v = 0;
+                if (s[0] && sscanf_s(s, "%X", &v) == 1) out = static_cast<uintptr_t>(v);
+            };
+            uintptr_t gn=0, go=0, gw=0, sp=0, st=0, de=0;
+            parseHex(s_gnamesBuf, gn); parseHex(s_gobjsBuf, go);
+            parseHex(s_gworldBuf, gw); parseHex(s_spawnBuf,  sp);
+            parseHex(s_setTBuf,   st); parseHex(s_destBuf,   de);
+            if (gn) ObjectDumper::SetGNamesPtr(gn);
+            if (go) ObjectDumper::SetGObjectsPtr(go);
+            if (gw) EngineBridge::SetManualWorldPtr(gw);
+            if (sp) EngineBridge::SetManualSpawnFn(sp);
+            if (st) EngineBridge::SetManualSetTransformFn(st);
+            if (de) EngineBridge::SetManualDestroyFn(de);
+            EngineBridge::ApplyManualOverrides();
+        }
+        ImGui::SameLine();
+        ImGui::TextDisabled("(?) GWorld + SpawnActor needed for bridge ONLINE.");
+
         ImGui::TreePop();
     }
 
