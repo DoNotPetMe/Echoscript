@@ -40,20 +40,42 @@ namespace ObjectDumper {
 
     struct Layout {
         // Byte offsets within a LEAD type-registry node. HYPOTHESES — tune live.
+        // (Used only by the legacy string-anchor fallback path.)
         size_t node_name_ptr_off   = 0x00;  // char* / FString to the type name
         size_t node_parent_ptr_off = 0x08;  // pointer to parent type node
         size_t node_next_ptr_off   = 0x10;  // next node (if registry is a list)
         size_t node_ctor_ptr_off   = 0x18;  // constructor/factory fn (if present)
         bool   name_is_wide        = false; // wide vs ansi string in the node
+
+        // ---- UE3 32-bit object model (used by the GObjects path) ----
+        // Standard UDK/UE3 32-bit layout; Blacklist's LEAD build may differ
+        // slightly, so these are tunable live in the menu. Defaults are the
+        // common UDK values.
+        size_t uobj_name_off  = 0x2C;  // FName.Index (int32) inside a UObject
+        size_t uobj_class_off = 0x34;  // UClass* inside a UObject
+        size_t fname_str_off  = 0x10;  // ANSI name chars inside an FNameEntry
     };
 
     struct Config {
         Layout      layout;
         bool        dumpToFile = true;
         std::string dumpPath   = "blacklist_typedump.txt";
-        int         maxNodes   = 8192;       // safety cap on the walk
+        int         maxNodes   = 8192;       // safety cap on the legacy walk
     };
     extern Config g_config;
+
+    // Live discovered globals (0 if not found). Exposed for the menu readout.
+    uintptr_t GNamesPtr();
+    uintptr_t GObjectsPtr();
+
+    // Resolve a UE3 FName index to its string via the discovered GNames.
+    // Returns false if GNames isn't located or the entry is unreadable.
+    bool ResolveFName(int index, std::string& out);
+
+    // Heuristic auto-finder: scans the module's data for the global GNames and
+    // GObjects arrays without a hardcoded byte signature, validating GNames[0]
+    // == "None" and that object names resolve. Returns true if both found.
+    bool AutoFindGlobals();
 
     // Registry-anchor signature: located by searching data sections for the
     // literal type-name strings, then finding a node that points at one.
