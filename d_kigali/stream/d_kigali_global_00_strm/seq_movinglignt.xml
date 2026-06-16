@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="MovingLignt" leveluid="1" streamedRandomID="190391868">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+</Sequence>

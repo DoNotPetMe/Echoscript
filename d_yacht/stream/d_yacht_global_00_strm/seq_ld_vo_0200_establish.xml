@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0200_Establish" leveluid="1" streamedRandomID="32642577">
+  <Task name="B_MISS_0200_COM_01_01SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.727667">
+          <CommandInstance name="SetDialog" duration="2.727667" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0200_COM::16599::54726" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="LevelStartEventCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0200_COM_02_01SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.727667">
+          <CommandInstance name="SetDialog" duration="2.727667" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0200_COM::16600::54731" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0200_COM_01_02ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="7.399813">
+          <CommandInstance name="SetDialog" duration="6.399813" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0200_COM::16599::54727" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0200_COM_01_03SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="4.049271">
+          <CommandInstance name="SetDialog" duration="3.049271" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0200_COM::16599::54728" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0200_COM_01_04ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="5.972938">
+          <CommandInstance name="SetDialog" duration="4.972938" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0200_COM::16599::54729" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0200_COM_01_05SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.643750">
+          <CommandInstance name="SetDialog" duration="1.643750" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0200_COM::16599::54730" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0200_COM_02_02ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="7.745230">
+          <CommandInstance name="SetDialog" duration="6.745230" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0200_COM::16600::54732" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0200_COM_02_03ISAACB_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="4.255396">
+          <CommandInstance name="SetDialog" duration="3.255396" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0200_COM::16600::54733" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0200_COM_02_04ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="5.129188">
+          <CommandInstance name="SetDialog" duration="4.129188" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0200_COM_02_05ISAACB_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.714646">
+          <CommandInstance name="SetDialog" duration="1.714646" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="B_MISS_0200_COM_01_02ANNA_DRY" true="B_MISS_0200_COM_01_03SAM_DRY" sequence="LD_VO_0200_Establish"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="B_MISS_0200_COM_01_03SAM_DRY" true="B_MISS_0200_COM_01_04ANNA_DRY" sequence="LD_VO_0200_Establish"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="B_MISS_0200_COM_01_04ANNA_DRY" true="B_MISS_0200_COM_01_05SAM_DRY" sequence="LD_VO_0200_Establish"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="B_MISS_0200_COM_02_02ANNA_DRY" true="B_MISS_0200_COM_02_03ISAACB_DRY" sequence="LD_VO_0200_Establish"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="B_MISS_0200_COM_02_03ISAACB_DRY" true="B_MISS_0200_COM_02_04ANNA_DRY" sequence="LD_VO_0200_Establish"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="B_MISS_0200_COM_02_04ANNA_DRY" true="B_MISS_0200_COM_02_05ISAACB_DRY" sequence="LD_VO_0200_Establish"/>
+  <Task name="StopSequence_Single">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0200_Establish" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Coop">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0200_Establish" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="LevelStartEventCheck" true="B_MISS_0200_COM_01_01SAM_DRY" false="B_MISS_0200_COM_02_01SAM_DRY">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="B_MISS_0200_COM_01_01SAM_DRY" true="B_MISS_0200_COM_01_02ANNA_DRY" sequence="LD_VO_0200_Establish"/>
+  <DependencyComplete name="NewDependencyComplete_16" start="B_MISS_0200_COM_02_01SAM_DRY" true="B_MISS_0200_COM_02_02ANNA_DRY" sequence="LD_VO_0200_Establish"/>
+  <DependencyComplete name="NewDependencyComplete_17" start="B_MISS_0200_COM_01_05SAM_DRY" true="StopSequence_Single" sequence="LD_VO_0200_Establish"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="B_MISS_0200_COM_02_05ISAACB_DRY" true="StopSequence_Coop" sequence="LD_VO_0200_Establish"/>
+</Sequence>

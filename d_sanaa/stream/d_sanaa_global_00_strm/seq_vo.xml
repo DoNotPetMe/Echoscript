@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="VO" leveluid="1" streamedRandomID="15872874">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Dead Drop" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Dead Drop Enable Grim">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Dead Drop Sam 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.835938">
+          <CommandInstance name="SetDialog" duration="4.835938" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0300_COM::16981::123456" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Dead Drop Briggs 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.860396">
+          <CommandInstance name="SetDialog" duration="3.860396" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0300_COM::16982::123458" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Laptop" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Laptop Enable Grim">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Laptop Briggs 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.455583">
+          <CommandInstance name="SetDialog" duration="2.455583" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0400_COM::16987::123462" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Laptop Sam 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.305354">
+          <CommandInstance name="SetDialog" duration="3.305354" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0400_COM::16986::123460" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Dead Drop" true="Dead Drop Enable Grim" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="DEADDROP_PICKEDUP" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_CurrentPlayer"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_0" true="Dead Drop Sam 1" false="Dead Drop Briggs 1">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_CurrentPlayer" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyEvent name="NewDependencyEvent_0" start="Laptop" true="Laptop Enable Grim" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="LAPTOP_HACKED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_CurrentPlayer"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_1" true="Laptop Sam 1" false="Laptop Briggs 1">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_CurrentPlayer" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Dead Drop Sam 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_0" end="1.206542">
+          <CommandInstance name="SetDialog" duration="1.206542" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0300_COM::16981::123457" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="1.200000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Dead Drop Sam 1" true="Dead Drop Sam 2" sequence="VO"/>
+  <Task name="Dead Drop Briggs 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_0" end="1.197625">
+          <CommandInstance name="SetDialog" duration="1.197625" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0300_COM::16982::123459" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="1.200000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Laptop Sam 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_0" end="1.385188">
+          <CommandInstance name="SetDialog" duration="1.385188" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0400_COM::16986::123461" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="1.380000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Laptop Briggs 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent_0" end="1.629395">
+          <CommandInstance name="SetDialog" duration="1.629395" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::E01_YEM::0400_COM::16987::123463" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::B_PlayingSound" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="1.630000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="Dead Drop Briggs 1" true="Dead Drop Briggs 2" sequence="VO"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="Laptop Sam 1" true="Laptop Sam 2" sequence="VO"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Laptop Briggs 1" true="Laptop Briggs 2" sequence="VO"/>
+  <Task name="Disable Grim">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="Dead Drop Sam 2" true="Disable Grim" sequence="VO"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Dead Drop Briggs 2" true="Disable Grim" sequence="VO"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Laptop Sam 2" true="Disable Grim" sequence="VO"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Laptop Briggs 2" true="Disable Grim" sequence="VO"/>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Dead Drop Enable Grim" true="NewTask_0" false="Wait_For_Recheck">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::B_PlayingSound" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Wait_For_Recheck">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="Wait_For_Recheck" true="Dead Drop Enable Grim" sequence="VO"/>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_2" start="Laptop Enable Grim" true="NewTask_1" false="Wait_For_Recheck_0">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::B_PlayingSound" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Wait_For_Recheck_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="Wait_For_Recheck_0" true="Laptop Enable Grim" sequence="VO"/>
+</Sequence>

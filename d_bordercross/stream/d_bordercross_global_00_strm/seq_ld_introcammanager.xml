@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_IntroCamManager" leveluid="1" streamedRandomID="2038094029">
+  <Task name="LevelStartCheckPointCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="StartSequence_IntroCam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_11" entity="Repository::Sequences::SEQ_IntroCam" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1">
+            <ParameterInstance name="AlsoUpdate">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="No Intro Cam">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="LevelStartCheckPointCheck" true="StartSequence_IntroCam" false="No Intro Cam">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_CheckpointID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="-1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <VisualComment name="NewVisualComment" x="-135.911453" y="-53.155258" width="563.404236" height="220.713211" commentDate="11/28/2012 6:42:09 PM"/>
+</Sequence>

@@ -1,0 +1,8 @@
+<npc name="AI_Generic_Pistol_Grenade" version="0">
+	<archetype name="EAIBARegular" />
+	<controller name="BARegularController" />
+	<inventory name="Pistol_grenade" >
+		<weapon name="Pistol_Makarov" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

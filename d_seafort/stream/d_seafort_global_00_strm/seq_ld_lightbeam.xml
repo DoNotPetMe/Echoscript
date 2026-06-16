@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Lightbeam" leveluid="1" streamedRandomID="1217117223">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000829" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1112276992:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000324" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="1112276992:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

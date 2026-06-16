@@ -1,0 +1,67 @@
+<!--
+
+    This files defines the configuration data for the maps which will ship with the game.
+
+	See http://mdc-web-tomcat17.ubisoft.org/confluence/display/Blacklistprog/MapSetupMP
+    for useage information.
+
+-->
+
+<maps>
+  <map name="BUNKER" bbid="0" description="BunkerDesc" thumbnail="" file="_COOP\C03_DemoBunker.unr" linfile="C03_DemoBunker">
+
+    <!-- Game mode list -->
+    <mode name="CoopStory" enabled="1"/>
+    <mode name="Hunter" enabled="1"/>
+    <mode name="LastStand" enabled="1"/>
+    <mode name="Hunter" enabled="1"/>
+    <mode name="FaceOff" enabled="1"/>
+    <mode name="PureStealth" enabled="1"/>
+
+    <!-- Black box list -->
+    <!--
+    <blackbox name="Bunker00" bbid="0" description="Bunker01Desc" thumbnail="" file="_COOP\C03_DemoBunker.unr" linfile="C03_DemoBunker">
+    </blackbox>
+    
+    <blackbox name="Bunker01" bbid="1" description="Bunker01Desc" thumbnail="" file="_COOP\C03_DemoBunker.unr" linfile="C03_DemoBunker">
+    </blackbox>
+    
+    <blackbox name="Bunker02" bbid="2" description="Bunker02Desc" thumbnail="" file="_COOP\C03_DemoBunker.unr" linfile="C03_DemoBunker">
+    </blackbox>
+    
+    <blackbox name="Bunker03" bbid="3" description="Bunker03Desc" thumbnail="" file="_COOP\C03_DemoBunker.unr" linfile="C03_DemoBunker">
+    </blackbox>
+    
+    <blackbox name="Bunker04" bbid="4" description="Bunker04Desc" thumbnail="" file="_COOP\C03_DemoBunker.unr" linfile="C03_DemoBunker">
+    </blackbox>
+    -->
+  </map>
+
+  <map name="LUMBER MILL" bbid="0" description="LumberMillDesc" thumbnail="" file="_COOP\T01_LumberMill.unr" linfile="T01_LumberMill">
+
+    <!-- Game mode list -->
+    <mode name="Hunter" enabled="1"/>
+    <mode name="LastStand" enabled="1"/>
+    <mode name="Hunter" enabled="1"/>
+    <mode name="FaceOff" enabled="1"/>
+    <mode name="PureStealth" enabled="1"/>
+
+    <!-- Black box list -->
+    <!--
+    <blackbox name="LumberMill00" bbid="0" description="LumberMill00Desc" thumbnail="" file="_COOP\T01_LumberMill.unr" linfile="T01_LumberMill">
+    </blackbox>
+
+    <blackbox name="LumberMill01" bbid="1" description="LumberMill01Desc" thumbnail="" file="_COOP\T01_LumberMill.unr" linfile="T01_LumberMill">
+    </blackbox>
+
+    <blackbox name="LumberMill02" bbid="2" description="LumberMill02Desc" thumbnail="" file="_COOP\T01_LumberMill.unr" linfile="T01_LumberMill">
+    </blackbox>
+
+    <blackbox name="LumberMill03" bbid="3" description="LumberMill03Desc" thumbnail="" file="_COOP\T01_LumberMill.unr" linfile="T01_LumberMill">
+    </blackbox>
+
+    <blackbox name="LumberMill04" bbid="4" description="LumberMill04Desc" thumbnail="" file="_COOP\T01_LumberMill.unr" linfile="T01_LumberMill">
+    </blackbox>
+    -->
+  </map>
+</maps>

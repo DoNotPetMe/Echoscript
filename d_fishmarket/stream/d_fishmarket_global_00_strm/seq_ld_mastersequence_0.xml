@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_MasterSequence_0" startup="1" leveluid="4" streamedRandomID="571275100">
+  <Task name="Init" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00002082" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="LockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00002083" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="LockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Close First Door Check">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_3" entity="Repository::Sequences::LD_HT_UnlockFirstDoor" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_HT_CloseFirstDoor" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::Sequences::LD_HideTransitionMeshCheck" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::Sequences::LD_HT_OpenSecondDoor" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Init" true="Close First Door Check" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="HUNTER_BLACKBOX_COMPLETED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="BlackBoxID" data="Repository::BB0"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="CP=3, Hide Transition Mesh">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_HideTransitionMesh" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1">
+            <ParameterInstance name="AlsoUpdate">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="CP=3, Hide Transition Mesh" false="CP&lt;3, Show Mesh">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_CheckpointID_0" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="CP&lt;3, Show Mesh">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_ShowTransitionMesh" TypeDeleted="Sequence">
+        <Event name="Hack to hide some objects after both player arrive at bb2" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1">
+            <ParameterInstance name="AlsoUpdate">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <VisualComment name="NewVisualComment" x="-80.000000" y="160.000000" width="550.000000" height="200.000000" commentDate="05/03/2013 4:41:19 PM"/>
+  <Task name="NewTask_0" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="CP&gt;1, Open Door Check">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_2" entity="Repository::Sequences::LD_HT_OpenSecondDoor" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_0" true="CP&gt;1, Open Door Check" false="NewTask_2">
+    <CommandInstance name="GreaterThan">
+      <ParameterInstance name="Left" data="Repository::O_CheckpointID_0" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+</Sequence>

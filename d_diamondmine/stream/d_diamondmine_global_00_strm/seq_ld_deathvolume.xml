@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_DeathVolume" leveluid="1" streamedRandomID="1260989390">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="NewTask" data="UID:000006b4" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_PlayerPawnDead"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="Initial" true="NewTask_0" data="UID:000006b6" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_PlayerPawnDead"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_1" start="Initial" true="NewTask_1" data="UID:000006b5" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_PlayerPawnDead"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Is Sam Or Briggs">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Kill Sam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Pawn_0" TypeDeleted="Pawn">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Kill" entityStripped="1" dp_i="201326606"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Kill Briggs">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Pawn" TypeDeleted="Pawn">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Kill" entityStripped="1" dp_i="201326606"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Is Sam Or Briggs" true="Kill Sam" false="Kill Briggs">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_PlayerPawnDead" TypeDeleted="Pawn"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Pawn_0" TypeDeleted="Pawn"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask" true="Is Sam Or Briggs" sequence="LD_DeathVolume"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask_0" true="Is Sam Or Briggs" sequence="LD_DeathVolume"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_1" true="Is Sam Or Briggs" sequence="LD_DeathVolume"/>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_2" start="Initial" true="NewTask_2" data="UID:00000747" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_PlayerPawnDead"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_2" start="NewTask_2" true="Is Sam Or Briggs" sequence="LD_DeathVolume"/>
+  <Task name="Initial_NPC" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_3" start="Initial_NPC" true="NewTask_4" data="UID:00000a96" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_NPC_dead"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Kill NPC">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_NPC_dead" TypeDeleted="Pawn">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Kill" entityStripped="1" dp_i="201326606"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_6">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_7">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_4" start="Initial_NPC" true="NewTask_6" data="UID:00000a95" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_NPC_dead"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_5" start="Initial_NPC" true="NewTask_7" data="UID:00000a94" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_NPC_dead"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_3" start="NewTask_4" true="Kill NPC" sequence="LD_DeathVolume"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="NewTask_6" true="Kill NPC" sequence="LD_DeathVolume"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="NewTask_7" true="Kill NPC" sequence="LD_DeathVolume"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Kill NPC" true="Initial_NPC" sequence="LD_DeathVolume"/>
+</Sequence>

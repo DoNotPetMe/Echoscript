@@ -1,0 +1,832 @@
+<Cheats name="Cheats">
+    <Page name="Marketing">
+        <Tweak name="Enable Marketing Tweaks" vartype="bool" var="m_bMarketing_EnableTweaks" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+        <Tweak name="Passive AI (No reset back!)" vartype="bool" var="m_bMarketing_MakeAIPassive" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+        <Tweak name="Disable AI (No reset back!)" vartype="bool" var="m_bMarketing_DisableAI" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+        <Tweak name="Disable Particles" vartype="bool" var="m_bMarketing_DisableParticles" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+        <Tweak name="Hide LKP" vartype="bool" var="m_LKPInfo.m_bForceHideLKPDisplay" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Command name="Hide UI"       exec="UIHIDE ALL" />
+        <Command name="Show UI"       exec="UISHOW ALL" />
+        <Command name="Hide HUD"      exec="UIHIDE HUD" />
+        <Command name="Show HUD"      exec="UISHOW HUD" />
+        <Command name="Hide GEO"      exec="UIHIDE INTER" />
+        <Command name="Show GEO"      exec="UISHOW INTER" />
+        <Command name="Hide Waypoint" exec="UIHIDE WPT" />
+        <Command name="Show Waypoint" exec="UISHOW WPT" />
+        <Command name="Hide Cover2Cover" exec="UIHIDE COVER" />
+        <Command name="Show Cover2Cover" exec="UISHOW COVER" />
+        <Tweak  name="Hide Subtitles:" vartype="bool" var="bDisplaySubtitle" Owner="Engine.Engine" />
+        <Tweak name="Enable VSync" vartype="bool" var="m_bMarketing_EnableVSync" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+        <Tweak name="Disable Depth of Field" vartype="bool" var="m_bMarketing_DisableDOF" Owner="Echelon.ECamera" LoadValueFromInstance="true" />
+        <Tweak  name="Invincible:" vartype="bool" var="m_bInvincible" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Tweak  name="Invisible:" vartype="bool" var="bInvisible" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Tweak  name="GOD! (Damage On, Can't die):" vartype="bool" var="m_bGodMode" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Page name="Old Marketing">
+            <Tweak  name="Disable L&amp;S:" vartype="bool" var="m_bDisableLightAndShadowFilter" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+            <Command  name="Toggle Challenges display:" exec="CHALLENGES TOGGLE_DISPLAY" />
+            <Command  name="Toggle Challenges add points:" exec="CHALLENGES TOGGLE_POINTS" />
+            <Page name="DOF">
+                <Command  name="Enable DOF ALL:" exec="DOF=1" />
+                <Command  name="Disable DOF ALL:" exec="DOF=0" />
+                <Command  name="Enable DOF Foreground:" exec="DOF_FOREGROUND=1" />
+                <Command  name="Disable DOF Foreground:" exec="DOF_FOREGROUND=0" />
+                <Command  name="Enable DOF Background:" exec="DOF_BACKGROUND=1" />
+                <Command  name="Disable DOF Background:" exec="DOF_BACKGROUND=0" />
+            </Page>
+            <Command  name="Restore All Sound:" exec="SOUND" />
+            <Command  name="Remove All Sound (Except SFX):" exec="NO_SOUND_EXCEPT_SFX" />
+
+            <Command  name="CAMERA MARKETING (ON/OFF):" exec="MARKET" />
+            <Command  name="Update video tweak:" exec="UPDATEALLMARKETINGTWEAK" />
+            <Command  name="Sam Hide:" exec="HIDE_SAM" />
+            <Command  name="Sam Display:" exec="SHOW_SAM" />
+            <Command  name="Set Enemy Invincible" exec="ENEMY_INVINCIBLE" />
+            <Command  name="Set Enemy Vincible" exec="ENEMY_VINCIBLE" />
+            <Tweak  name="Game speed (%) :" vartype="float" var="m_fUpdatedFixedDeltaTimePercent" min="0" max="100" increment="1.0" Owner="Echelon.EchelonLevelInfo" />
+            <Command  name="Execute new game speed" exec="UDPATEGAMESPEED" />
+            <Tweak  name="No blood:" vartype="bool" var="NoBlood" Owner="Engine.GameInfo" />
+        </Page>
+    </Page>
+    <Page name="SAM (The player)">
+        <Tweak  name="Invincible:" vartype="bool" var="m_bInvincible" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Tweak  name="Invisible:" vartype="bool" var="m_bInvisible" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Tweak  name="GOD! (Damage On, Can't die):" vartype="bool" var="m_bGodMode" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Tweak  name="Infinite Ammo:" vartype="bool" var="m_bSamHaveInfiniteAmmo" Owner="Echelon.EchelonLevelInfo" LoadValueFromInstance="true" />
+        <Page name="Health">
+            <Command name="Health Debug" exec="TTAG DEBUGHP" />
+            <Command name="Set E3 Health" exec="PLAYERHEALTH DemoModeHealth" />
+            <Command name="Set Normal Health" exec="PLAYERHEALTH NormalModeHealth" />
+            <Command name="+50 Health" exec="PLAYERHEALTH IncreaseHealth" />
+            <Command name="-50 Health" exec="PLAYERHEALTH DecreaseHealth" />
+        </Page>
+        <Tweak  name="Enable Action Tip Interface:" vartype="bool" var="m_bUseNavigationTipInterface" Owner="EchelonPlayer.PlayerActionSelector" />
+        <Tweak  name="Bullet whizz radius squared:" vartype="float" min="0.0" max="50000.0" increment="10.0" var="m_fBulletPassByWhizzDistance" Owner="Engine.PlayerController" LoadValueFromInstance="true" />
+        <Tweak  name="Bullet warning whizz radius squared:" vartype="float" min="0.0" max="50000.0" increment="10.0" var="m_fBulletPassByWarningWhizzDistance" Owner="Engine.PlayerController" LoadValueFromInstance="true" />
+        <Tweak  name="Bullet death whizz radius squared:" vartype="float" min="0.0" max="50000.0" increment="10.0" var="m_fBulletPassByDeathWhizzDistance" Owner="Engine.PlayerController" LoadValueFromInstance="true" />
+        <Tweak  name="Infninite Execution Token:" vartype="bool" var="m_bCHEATInfiniteExecutionTokens" Owner="EchelonPlayer.EPLMarkManager" />
+        <Tweak  name="MAE always WOW:" vartype="bool" var="m_bMAEAlwaysWOW" Owner="EchelonPlayer.EPLMarkManager" />
+        <Tweak  name="Enable H2H Real:" vartype="bool" var="m_bEnableH2HReal" Owner="Echelon.EPlayerPawn"/>
+        <Command name="Reset challenges:" exec="RESETCHALLENGES" />
+        <Command name="Reset Tutorial" exec="RESET_TUTORIAL" />
+        <Tweak  name="Sonar doesn't discharge:" vartype="bool" var="m_bDontDischargeSonarGoggles" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Tweak  name="Sonar instant charge:" vartype="bool" var="m_bInstantChargeSonarGoggles" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Command name="Health Debug" exec="TTAG DEBUGHP" />
+        <Tweak  name="H2H Slow mo min:" vartype="float" min="0.01" max="1.0" increment="0.05" var="m_fMinAllowedSlowMotionRatio" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true"/>
+        <Tweak  name="Infinite ammo:" vartype="bool" var="m_bSamHaveInfiniteAmmo" Owner="Echelon.EchelonLevelInfo"/>
+        <Tweak  name="Infinite grenades:" vartype="bool" var="m_bSamHaveInfiniteGrenades" Owner="Echelon.EchelonLevelInfo"/>
+        <Command  name="Give Mark Grenades" exec="ADD GRENADE MARK"/>
+        <Tweak  name="Disguised:" vartype="bool" var="bIsDisguised" Owner="Echelon.EPlayerPawn" LoadValueFromInstance="true" />
+        <Tweak  name="SMI FullScreen:" vartype="bool" var="bFullscreen" Owner="Echelon.InteractiveSurface" LoadValueFromInstance="true" />
+    </Page>
+    <Page name="Economy">
+        <Command name="Millionaire!-Add $1000000" exec="CASH ADD=1000000"/>
+        <Command name="Spender!-Spend $10000" exec="CASH SPEND=10000"/>
+        <Command name="All DLC" exec="ALLDLC" />
+        <Page name="Plane Upgrades">
+            <Command name="HubCabin 1" exec="PURCHASE_HUB=HubCabin LEVEL=1" />
+            <Command name="HubCabin 2" exec="PURCHASE_HUB=HubCabin LEVEL=2" />
+            <Command name="HubCabin 3" exec="PURCHASE_HUB=HubCabin LEVEL=3" />
+
+            <Command name="HubCargoHold 1" exec="PURCHASE_HUB=HubCargoHold LEVEL=1" />
+            <Command name="HubCargoHold 2" exec="PURCHASE_HUB=HubCargoHold LEVEL=2" />
+            <Command name="HubCargoHold 3" exec="PURCHASE_HUB=HubCargoHold LEVEL=3" />
+
+            <Command name="HubCockpit 1" exec="PURCHASE_HUB=HubCockpit LEVEL=1" />
+            <Command name="HubCockpit 2" exec="PURCHASE_HUB=HubCockpit LEVEL=2" />
+            <Command name="HubCockpit 3" exec="PURCHASE_HUB=HubCockpit LEVEL=3" />
+
+            <Command name="HubCommand 1" exec="PURCHASE_HUB=HubCommand LEVEL=1" />
+            <Command name="HubCommand 2" exec="PURCHASE_HUB=HubCommand LEVEL=2" />
+            <Command name="HubCommand 3" exec="PURCHASE_HUB=HubCommand LEVEL=3" />
+
+            <Command name="HubMedic 1" exec="PURCHASE_HUB=HubMedic LEVEL=1" />
+            <Command name="HubMedic 2" exec="PURCHASE_HUB=HubMedic LEVEL=2" />
+            <Command name="HubMedic 3" exec="PURCHASE_HUB=HubMedic LEVEL=3" />
+
+            <Command name="HubQuarters 1" exec="PURCHASE_HUB=HubQuarters LEVEL=1" />
+            <Command name="HubQuarters 2" exec="PURCHASE_HUB=HubQuarters LEVEL=2" />
+            <Command name="HubQuarters 3" exec="PURCHASE_HUB=HubQuarters LEVEL=3" />
+
+            <Command name="HubVehicleBay 1" exec="PURCHASE_HUB=HubVehicleBay LEVEL=1" />
+            <Command name="HubVehicleBay 2" exec="PURCHASE_HUB=HubVehicleBay LEVEL=2" />
+            <Command name="HubVehicleBay 3" exec="PURCHASE_HUB=HubVehicleBay LEVEL=3" />
+
+            <Command name="HubWorkshop 1" exec="PURCHASE_HUB=HubWorkshop LEVEL=1" />
+            <Command name="HubWorkshop 2" exec="PURCHASE_HUB=HubWorkshop LEVEL=2" />
+            <Command name="HubWorkshop 3" exec="PURCHASE_HUB=HubWorkshop LEVEL=3" />
+        </Page>
+    </Page>
+  <Page name="Missions">
+    <Command  name="Unlock All" exec="MISSION UNLOCK ALL" />
+    <Page name="State">
+      <Command  name="Airforce Base"    exec="MISSION STATE NAME=S_AFB" />
+      <Command  name="Kobin"    exec="MISSION STATE NAME=S_KOB" />
+      <Command  name="Sadiq"    exec="MISSION STATE NAME=S_PRO" />
+      <Command  name="Consumption" exec="MISSION STATE NAME=S_CON" />
+      <Command  name="Nouri"    exec="MISSION STATE NAME=S_NOU" />
+      <Command  name="Chem Lab" exec="MISSION STATE NAME=S_CHE" />
+      <Command  name="QOD's"    exec="MISSION STATE NAME=S_QOD" />
+      <Command  name="Freedom" exec="MISSION STATE NAME=S_FRE" />
+      <Command  name="Detention" exec="MISSION STATE NAME=S_DET" />
+      <Command  name="AirStrip" exec="MISSION STATE NAME=S_AIR" />
+      <Command  name="Paladin" exec="MISSION STATE NAME=S_PAL" />
+      <Command  name="Fuel" exec="MISSION STATE NAME=S_FUE" />
+      <Command  name="Blood" exec="MISSION STATE NAME=S_BLO" />
+    </Page>
+    <Page name="Complete">
+      <Command  name="Airforce Base"    exec="MISSION COMPLETE NAME=S_AFB" />
+      <Command  name="Prologue" exec="MISSION COMPLETE NAME=S_PRO" />
+      <Command  name="Power"    exec="MISSION COMPLETE NAME=S_POW" />
+      <Command  name="Kobin"    exec="MISSION COMPLETE NAME=S_KOB" />
+      <Command  name="Sadiq"    exec="MISSION COMPLETE NAME=S_PRO" />
+      <Command  name="Consumption" exec="MISSION COMPLETE NAME=S_CON" />
+      <Command  name="Nouri"    exec="MISSION COMPLETE NAME=S_NOU" />
+      <Command  name="Chem Lab" exec="MISSION COMPLETE NAME=S_CHE" />
+      <Command  name="QOD's"    exec="MISSION COMPLETE NAME=S_QOD" />
+      <Command  name="Freedom" exec="MISSION COMPLETE NAME=S_FRE" />
+      <Command  name="Detention" exec="MISSION COMPLETE NAME=S_DET" />
+      <Command  name="AirStrip" exec="MISSION COMPLETE NAME=S_AIR" />
+      <Command  name="Paladin" exec="MISSION COMPLETE NAME=S_PAL" />
+      <Command  name="Fuel" exec="MISSION COMPLETE NAME=S_FUE" />
+      <Command  name="Blood" exec="MISSION COMPLETE NAME=S_BLO" />
+      <Command  name="C01" exec="MISSION COMPLETE NAME=C01" />
+      <Command  name="C02" exec="MISSION COMPLETE NAME=C02" />
+      <Command  name="C03" exec="MISSION COMPLETE NAME=C03" />
+      <Command  name="C04" exec="MISSION COMPLETE NAME=C04" />
+      <Command  name="E01" exec="MISSION COMPLETE NAME=E01" />
+      <Command  name="E02" exec="MISSION COMPLETE NAME=E02" />
+      <Command  name="E03" exec="MISSION COMPLETE NAME=E03" />
+      <Command  name="E04" exec="MISSION COMPLETE NAME=E04" />
+      <Command  name="G01" exec="MISSION COMPLETE NAME=G01" />
+      <Command  name="G02" exec="MISSION COMPLETE NAME=G02" />
+      <Command  name="G03" exec="MISSION COMPLETE NAME=G03" />
+      <Command  name="G04" exec="MISSION COMPLETE NAME=G04" />
+      <Command  name="H01" exec="MISSION COMPLETE NAME=H01" />
+      <Command  name="H02" exec="MISSION COMPLETE NAME=H02" />
+      <Command  name="H03" exec="MISSION COMPLETE NAME=H03" />
+      <Command  name="H04" exec="MISSION COMPLETE NAME=H04" />
+    </Page>
+    <Page name="New">
+      <Command  name="Airforce Base"    exec="MISSION NEW NAME=S_AFB" />
+      <Command  name="Prologue"     exec="MISSION NEW NAME=S_PRO" />
+      <Command  name="Power"        exec="MISSION NEW NAME=S_POW" />
+      <Command  name="Kobin"        exec="MISSION NEW NAME=S_KOB" />
+      <Command  name="Sadiq"        exec="MISSION NEW NAME=S_PRO" />
+      <Command  name="Consumption"  exec="MISSION NEW NAME=S_CON" />
+      <Command  name="Nouri"        exec="MISSION NEW NAME=S_NOU" />
+      <Command  name="Chem Lab"     exec="MISSION NEW NAME=S_CHE" />
+      <Command  name="QOD's"        exec="MISSION NEW NAME=S_QOD" />
+      <Command  name="Freedom"      exec="MISSION NEW NAME=S_FRE" />
+      <Command  name="Detention"    exec="MISSION NEW NAME=S_DET" />
+      <Command  name="AirStrip"     exec="MISSION NEW NAME=S_AIR" />
+      <Command  name="Paladin"      exec="MISSION NEW NAME=S_PAL" />
+      <Command  name="Fuel"         exec="MISSION NEW NAME=S_FUE" />
+      <Command  name="Blood"        exec="MISSION NEW NAME=S_BLO" />
+      <Command  name="C01"          exec="MISSION NEW NAME=C01" />
+      <Command  name="C02"          exec="MISSION NEW NAME=C02" />
+      <Command  name="C03"          exec="MISSION NEW NAME=C03" />
+      <Command  name="C04"          exec="MISSION NEW NAME=C04" />
+      <Command  name="E01"          exec="MISSION NEW NAME=E01" />
+      <Command  name="E02"          exec="MISSION NEW NAME=E02" />
+      <Command  name="E03"          exec="MISSION NEW NAME=E03" />
+      <Command  name="E04"          exec="MISSION NEW NAME=E04" />
+      <Command  name="G01"          exec="MISSION NEW NAME=G01" />
+      <Command  name="G02"          exec="MISSION NEW NAME=G02" />
+      <Command  name="G03"          exec="MISSION NEW NAME=G03" />
+      <Command  name="G04"          exec="MISSION NEW NAME=G04" />
+      <Command  name="H01"          exec="MISSION NEW NAME=H01" />
+      <Command  name="H02"          exec="MISSION NEW NAME=H02" />
+      <Command  name="H03"          exec="MISSION NEW NAME=H03" />
+      <Command  name="H04"          exec="MISSION NEW NAME=H04" />
+    </Page>
+    <Page name="Unlock">
+      <Command  name="Airforce Base"    exec="MISSION UNLOCK NAME=S_AFB" />
+      <Command  name="Prologue"     exec="MISSION UNLOCK NAME=S_PRO" />
+      <Command  name="Power"        exec="MISSION UNLOCK NAME=S_POW" />
+      <Command  name="Kobin"        exec="MISSION UNLOCK NAME=S_KOB" />
+      <Command  name="Sadiq"        exec="MISSION UNLOCK NAME=S_PRO" />
+      <Command  name="Consumption"  exec="MISSION UNLOCK NAME=S_CON" />
+      <Command  name="Nouri"        exec="MISSION UNLOCK NAME=S_NOU" />
+      <Command  name="Chem Lab"     exec="MISSION UNLOCK NAME=S_CHE" />
+      <Command  name="QOD's"        exec="MISSION UNLOCK NAME=S_QOD" />
+      <Command  name="Freedom"      exec="MISSION UNLOCK NAME=S_FRE" />
+      <Command  name="Detention"    exec="MISSION UNLOCK NAME=S_DET" />
+      <Command  name="AirStrip"     exec="MISSION UNLOCK NAME=S_AIR" />
+      <Command  name="Paladin"      exec="MISSION UNLOCK NAME=S_PAL" />
+      <Command  name="Fuel"         exec="MISSION UNLOCK NAME=S_FUE" />
+      <Command  name="Blood"        exec="MISSION UNLOCK NAME=S_BLO" />
+      <Command  name="C01"          exec="MISSION UNLOCK NAME=C01" />
+      <Command  name="C02"          exec="MISSION UNLOCK NAME=C02" />
+      <Command  name="C03"          exec="MISSION UNLOCK NAME=C03" />
+      <Command  name="C04"          exec="MISSION UNLOCK NAME=C04" />
+      <Command  name="E01"          exec="MISSION UNLOCK NAME=E01" />
+      <Command  name="E02"          exec="MISSION UNLOCK NAME=E02" />
+      <Command  name="E03"          exec="MISSION UNLOCK NAME=E03" />
+      <Command  name="E04"          exec="MISSION UNLOCK NAME=E04" />
+      <Command  name="G01"          exec="MISSION UNLOCK NAME=G01" />
+      <Command  name="G02"          exec="MISSION UNLOCK NAME=G02" />
+      <Command  name="G03"          exec="MISSION UNLOCK NAME=G03" />
+      <Command  name="G04"          exec="MISSION UNLOCK NAME=G04" />
+      <Command  name="H01"          exec="MISSION UNLOCK NAME=H01" />
+      <Command  name="H02"          exec="MISSION UNLOCK NAME=H02" />
+      <Command  name="H03"          exec="MISSION UNLOCK NAME=H03" />
+      <Command  name="H04"          exec="MISSION UNLOCK NAME=H04" />
+    </Page>
+    <Page name="Lock">
+      <Command  name="Airforce Base"    exec="MISSION LOCK NAME=S_AFB" />
+      <Command  name="Prologue"     exec="MISSION LOCK NAME=S_PRO" />
+      <Command  name="Power"        exec="MISSION LOCK NAME=S_POW" />
+      <Command  name="Kobin"        exec="MISSION LOCK NAME=S_KOB" />
+      <Command  name="Sadiq"        exec="MISSION LOCK NAME=S_PRO" />
+      <Command  name="Consumption"  exec="MISSION LOCK NAME=S_CON" />
+      <Command  name="Nouri"        exec="MISSION LOCK NAME=S_NOU" />
+      <Command  name="Chem Lab"     exec="MISSION LOCK NAME=S_CHE" />
+      <Command  name="QOD's"        exec="MISSION LOCK NAME=S_QOD" />
+      <Command  name="Freedom"      exec="MISSION LOCK NAME=S_FRE" />
+      <Command  name="Detention"    exec="MISSION LOCK NAME=S_DET" />
+      <Command  name="AirStrip"     exec="MISSION LOCK NAME=S_AIR" />
+      <Command  name="Paladin"      exec="MISSION LOCK NAME=S_PAL" />
+      <Command  name="Fuel"         exec="MISSION LOCK NAME=S_FUE" />
+      <Command  name="Blood"        exec="MISSION LOCK NAME=S_BLO" />
+      <Command  name="C01"          exec="MISSION LOCK NAME=C01" />
+      <Command  name="C02"          exec="MISSION LOCK NAME=C02" />
+      <Command  name="C03"          exec="MISSION LOCK NAME=C03" />
+      <Command  name="C04"          exec="MISSION LOCK NAME=C04" />
+      <Command  name="E01"          exec="MISSION LOCK NAME=E01" />
+      <Command  name="E02"          exec="MISSION LOCK NAME=E02" />
+      <Command  name="E03"          exec="MISSION LOCK NAME=E03" />
+      <Command  name="E04"          exec="MISSION LOCK NAME=E04" />
+      <Command  name="G01"          exec="MISSION LOCK NAME=G01" />
+      <Command  name="G02"          exec="MISSION LOCK NAME=G02" />
+      <Command  name="G03"          exec="MISSION LOCK NAME=G03" />
+      <Command  name="G04"          exec="MISSION LOCK NAME=G04" />
+      <Command  name="H01"          exec="MISSION LOCK NAME=H01" />
+      <Command  name="H02"          exec="MISSION LOCK NAME=H02" />
+      <Command  name="H03"          exec="MISSION LOCK NAME=H03" />
+      <Command  name="H04"          exec="MISSION LOCK NAME=H04" />
+    </Page>
+    <Command  name="List Mission Status to Logfile" exec="PROFILE LOADGAME" />
+    <Command  name="Lock All" exec="PROFILE LOADGAME" />
+  </Page>
+  <Page name="Localization">
+      <Command name="Show Localization IDs" exec="DISPLAYLOCALIZATIONID" />
+      <Command name="Toggle Localization Test" exec="LOCTEST" />
+      <Command name="Hide All Text Surfaces" exec="SEQPLAY PT_Hide" />
+      <Command name="Show All COOP Title Text Surfaces" exec="SEQPLAY PT_D_TITLE" />
+      <Command name="Show All COOP Nav Text Surfaces" exec="SEQPLAY PT_D_NAV" />
+      <Command name="Show All Airfield Text Surfaces" exec="SEQPLAY PT_AIRPAL" />
+      <Command name="Show All Sadiq Title Text Surfaces" exec="SEQPLAY PT_BAD" />
+      <Command name="Show All Blood Title Text Surfaces" exec="SEQPLAY PT_BLO" />
+      <Command name="Show All Chemlab Text Surfaces" exec="SEQPLAY PT_CHE" />
+      <Command name="Show All Consumption Text Surfaces" exec="SEQPLAY PT_CON" />
+      <Command name="Show All Detention Text Surfaces" exec="SEQPLAY PT_DET" />
+      <Command name="Show All Freedom Text Surfaces" exec="SEQPLAY PT_FRE" />
+      <Command name="Show All Fuel Text Surfaces" exec="SEQPLAY PT_FUE" />
+      <Command name="Show All Kobin Text Surfaces" exec="SEQPLAY PT_KOB" />
+      <Command name="Show All Nouri Text Surfaces" exec="SEQPLAY PT_NOU" />
+      <Command name="Show All Qods Text Surfaces" exec="SEQPLAY PT_QOD" />
+  </Page>
+  <Page name="Engine">
+        <Command name="Disable logs" exec="DISABLE_LOGS" />
+        <Command name="Show Localization IDs" exec="DISPLAYLOCALIZATIONID" />
+        <Command  name="No Customized Chars (restart level)" exec="CHALLENGES CCS_NONE" />
+        <Command  name="Customized Coop  (restart level)" exec="CHALLENGES CCS_IN_COOP" />
+        <Command  name="Customized SP  (restart level)" exec="CHALLENGES CCS_IN_SP" />
+    </Page>
+
+    <Page name="Team Vision">
+        <Page name="Hacking" desc="Settings for TeamVision hack gameplay">
+            <Tweak  name="Show Signal Radius:" vartype="bool" var="m_bDrawSignalRadii" Owner="Echelon.GI_TeamVision" LoadValueFromInstance="true" desc="Draw the signal radius"/>
+            <Tweak  name="1 Bar Radius:" vartype="float" min="0.0" max="5.0" increment="0.0125" var="m_fLowSignalRadius" Owner="Echelon.GI_TeamVision" LoadValueFromInstance="true" desc="Aiming radius to receive 1 bar of signal strength (in meters)"/>
+            <Tweak  name="2 Bar Radius:" vartype="float" min="0.0" max="5.0" increment="0.0125" var="m_fMedSignalRadius" Owner="Echelon.GI_TeamVision" LoadValueFromInstance="true" desc="Aiming radius to receive 2 bars of signal strength (in meters)"/>
+            <Tweak  name="3 Bar Radius:" vartype="float" min="0.0" max="5.0" increment="0.0125" var="m_fHighSignalRadius" Owner="Echelon.GI_TeamVision" LoadValueFromInstance="true" desc="Aiming radius to receive 3 bars of signal strength (in meters)"/>
+            <Tweak  name="1 Bar Tx Speed:" vartype="float" min="0.0" max="100.0" increment="0.5" var="m_fLowTransmitSpeed" Owner="Echelon.GI_TeamVision" LoadValueFromInstance="true" desc="Transmit speed with 1 bar of signal strength (in percent/sec)"/>
+            <Tweak  name="2 Bar Tx Speed:" vartype="float" min="0.0" max="100.0" increment="0.5" var="m_fMedTransmitSpeed" Owner="Echelon.GI_TeamVision" LoadValueFromInstance="true" desc="Transmit speed with 2 bar of signal strength (in percent/sec)"/>
+            <Tweak  name="3 Bar Tx Speed:" vartype="float" min="0.0" max="100.0" increment="0.5" var="m_fHighTransmitSpeed" Owner="Echelon.GI_TeamVision" LoadValueFromInstance="true" desc="Transmit speed with 3 bar of signal strength (in percent/sec)"/>
+        </Page>
+    </Page>
+
+ 
+    <Page name="Mark and execute">
+        <Tweak  name="Aim At Bone" vartype="enum" var="m_executeBone" Owner="EchelonPlayer.EPLMarkManager" />
+        <Tweak  name="Gauge Mode" vartype="enum" var="m_gaugeMode" Owner="EchelonPlayer.EPLMarkManager" />
+        <Tweak  name="Cinematic Hud" vartype="bool" var="m_bUseSpecialHUD" Owner="EchelonPlayer.EPLMarkManager" />
+        <Tweak  name="Draw Debug Lines:" vartype="bool" var="m_bDrawPartnerLines" Owner="EchelonPlayer.EPLMarkManager" desc="Used for sniper partner gameplay sequence"/>
+        <Page name="Gauge Settings" desc="">
+            <Tweak  name="Default Rate (per sec)" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_guageAutoFillRate" Owner="EchelonPlayer.EPLMarkManager" desc="The default rate at which the gauge fills" />
+            <Tweak  name="Exec Avail Level" vartype="float" min="0.0" max="1.0" increment="0.1" var="m_guageExecAvailLevel" Owner="EchelonPlayer.EPLMarkManager" desc="The gauge level required for an execute to become available"/>
+            <Tweak  name="Undetected Multiplier" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_guageUndetectedMult" Owner="EchelonPlayer.EPLMarkManager" desc="Fill rate multiplier, when undetected"/>
+            <Tweak  name="In-shadow Multiplier" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_guageShadowMult" Owner="EchelonPlayer.EPLMarkManager" desc="Fill rate multiplier, when in shadow"/>
+            <Tweak  name="3D Nav Multiplier" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_guage3DNavMult" Owner="EchelonPlayer.EPLMarkManager" desc="Fill rate multiplier, when in 3D Nav"/>
+            <Tweak  name="Kill Reward" vartype="float" min="0.0" max="1.0" increment="0.05" var="m_guageKillReward" Owner="EchelonPlayer.EPLMarkManager" desc="Gauge reward for a kill"/>
+            <Tweak  name="Stealth Kill Reward" vartype="float" min="0.0" max="1.0" increment="0.05" var="m_guageStealthKillReward" Owner="EchelonPlayer.EPLMarkManager" desc="Gauge reward for a stealth kill"/>
+            <Tweak  name="H2H Kill Reward" vartype="float" min="0.0" max="1.0" increment="0.05" var="m_guageH2HKillReward" Owner="EchelonPlayer.EPLMarkManager" desc="Gauge reward for a hand-to-hand kill"/>
+            <Tweak  name="Headshot Reward" vartype="float" min="0.0" max="1.0" increment="0.05" var="m_guageHeadshotReward" Owner="EchelonPlayer.EPLMarkManager" desc="Gauge reward for a headshot kill"/>
+            <Tweak  name="Dynamic Trap Reward" vartype="float" min="0.0" max="1.0" increment="0.05" var="m_guageDynamicTrapReward" Owner="EchelonPlayer.EPLMarkManager" desc="Gauge reward for taking down a dynamic trap"/>
+
+            <Presets>
+                <PresetGroup name="Defaults" desc="Reset to default (FSO specified) values">
+                    <PresetTweak var="m_guageAutoFillRate" value="0.0" />
+                    <PresetTweak var="m_guageExecAvailLevel" value="1.0" />
+                    <PresetTweak var="m_guageUndetectedMult" value="3.0" />
+                    <PresetTweak var="m_guageShadowMult" value="5.0" />
+                    <PresetTweak var="m_guage3DNavMult" value="2.0" />
+                    <PresetTweak var="m_guageKillReward" value="0.15" />
+                    <PresetTweak var="m_guageStealthKillReward" value="0.2" />
+                    <PresetTweak var="m_guageH2HKillReward" value="1.0" />
+                    <PresetTweak var="m_guageHeadshotReward" value="0.5" />
+                    <PresetTweak var="m_guageDynamicTrapReward" value="1.0" />
+                    <PresetTweak var="m_guageSlowMoDrain" value="2.0" />
+                    <PresetTweak var="m_timeDilationAmount" value="0.1" />
+                </PresetGroup>
+            </Presets>
+        </Page>
+
+        <Tweak  name="Multi-Mark Mode" vartype="bool" var="m_bMultiMarkMode" Owner="EchelonPlayer.BeginMarkTargetState" />
+        <Tweak  name="Infinite Distance" vartype="bool" var="m_bInfiniteExecuteDist" Owner="EchelonPlayer.EPLMarkManager"/>
+        <Tweak  name="Mark Within FOV" vartype="bool" var="m_bRestrictToFOV" Owner="EchelonPlayer.MultiMarkTargetState"/>
+        <Tweak  name="Automatic Execute" vartype="bool" var="m_bAutoExecute" Owner="EchelonPlayer.EPLMarkManager"/>
+        <Tweak  name="Infninite Execution Token:" vartype="bool" var="m_bCHEATInfiniteExecutionTokens" Owner="EchelonPlayer.EPLMarkManager" />
+        <Tweak  name="Retribution mode on:" vartype="bool" var="m_bRetributionMode" Owner="EchelonPlayer.EPLMarkManager" />
+        <Tweak  name="Use FIFO on:" vartype="bool" var="m_bUseFIFOMarking" Owner="EchelonPlayer.EPLMarkManager" />
+
+        <Page name="Realization">
+            <Tweak  name="Enable Slow motion:" vartype="bool" var="m_bAllowSlowMoExecutes" Owner="Echelon.EPlayerStatics" />
+            <Tweak  name="Slow motion factor:" vartype="float" min="0.1" max="1.0" increment="0.05" var="m_fSlowMotionFactor" Owner="EchelonPlayer.MarkExecutionIdleState" />
+            <Tweak  name="Slow motion blen IN steps:" vartype="int" min="0" max="10" increment="1" var="m_iSlowMotionBlendInSteps" Owner="EchelonPlayer.MarkExecutionIdleState" />
+            <Tweak  name="Slow motion blen OUT steps:" vartype="int" min="0" max="30" increment="1" var="m_iSlowMotionBlendOutSteps" Owner="EchelonPlayer.MarkExecutionIdleState" />
+            <Tweak  name="GF Post-Exec delay:" vartype="float" min="0.05" max="0.5" increment="0.05" var="m_fGrandFinalePostExecDelay" Owner="EchelonPlayer.MarkExecutionIdleState" />
+            <Page name="Post Effects">
+                <Tweak  name="Near Start offset:" vartype="float" min="-500.0" max="500.0" increment="10.0f" var="m_fDOF_NearStartOffset" Owner="EchelonPlayer.EPLMarkManager" />
+                <Tweak  name="Near End offset:" vartype="float" min="-500.0" max="500.0" increment="10.0f" var="m_fDOF_NearEndOffset" Owner="EchelonPlayer.EPLMarkManager" />
+                <Tweak  name="Near factor:" vartype="float" min="0.0" max="1.0" increment="0.05" var="m_fDOF_NearFactor" Owner="EchelonPlayer.EPLMarkManager" />
+                <Tweak  name="Far Start offset:" vartype="float" min="0.0" max="500.0" increment="10.0f" var="m_fDOF_FarStartOffset" Owner="EchelonPlayer.EPLMarkManager" />
+                <Tweak  name="Far End offset:" vartype="float" min="0.0" max="500.0" increment="10.0f" var="m_fDOF_FarEndOffset" Owner="EchelonPlayer.EPLMarkManager" />
+                <Tweak  name="Far factor:" vartype="float" min="0.0" max="1.0" increment="0.05" var="m_fDOF_FarFactor" Owner="EchelonPlayer.EPLMarkManager" />
+                <Tweak  name="DOF Fade In time:" vartype="float" min="0.01" max="1.0" increment="0.01" var="m_fDOF_FadeInTime" Owner="EchelonPlayer.EPLMarkManager" />
+                <Tweak  name="DOF Fade Out time:" vartype="float" min="0.01" max="1.0" increment="0.01" var="m_fDOF_FadeOutTime" Owner="EchelonPlayer.EPLMarkManager" />
+            </Page>
+        </Page>
+        <Page name="Marking">
+            <Tweak  name="Unmark all on hold" vartype="bool" var="m_bUseAlternateMarkControls" Owner="EchelonPlayer.EPLMarkManager" />
+            <Tweak  name="Mark delay:" vartype="float" min="0.2" max="2.0" increment="0.05" var="m_fUnmarkHoldDelay" Owner="EchelonPlayer.EPLMarkManager" />
+            <Tweak  name="Unmark target on press" vartype="bool" var="m_bEnableUnmarkOnPress" Owner="EchelonPlayer.EPLMarkManager" />
+        </Page>
+        <Tweak  name="Max slot:" vartype="int" min="0" max="9" increment="1" var="m_iMaxSlots" Owner="Echelon.EMarkManager" LoadValueFromInstance="true"/>
+        <Tweak  name="Execution order mode:" vartype="enum" var="m_eExecutionOrder" Owner="EchelonPlayer.EPLMarkManager" />
+        <Page name="More M and E tweakables">
+            <Tweak  name="Full Sticky controls:" vartype="bool" var="m_bFullSticky" Owner="EchelonPlayer.MarkExecutionState" />
+            <Tweak  name="Mark shoot mode:" vartype="enum" var="m_eShootMode" Owner="EchelonPlayer.EPLMarkManager" />
+        </Page>
+        <Presets>
+            <PresetGroup name="Legacy SC5" desc="Normal settings from SC5">
+                <PresetTweak var="m_gaugeMode" value="0" />
+                <PresetTweak var="m_bMultiMarkMode" value="false" />
+                <PresetTweak var="m_bRestrictToFOV" value="false" />
+                <PresetTweak var="m_bAutoExecute" value="false" />
+            </PresetGroup>
+            <PresetGroup name="MultiMark (Man)" desc="Mark all enemies within range (manual execution)">
+                <PresetTweak var="m_gaugeMode" value="0" />
+                <PresetTweak var="m_bMultiMarkMode" value="true" />
+                <PresetTweak var="m_bRestrictToFOV" value="0" />
+                <PresetTweak var="m_bAutoExecute" value="false" />
+            </PresetGroup>
+            <PresetGroup name="MultiMark (Man, FOV)" desc="Mark all enemies within range and FOV (manual execution)">
+                <PresetTweak var="m_gaugeMode" value="0" />
+                <PresetTweak var="m_bMultiMarkMode" value="true" />
+                <PresetTweak var="m_bRestrictToFOV" value="1" />
+                <PresetTweak var="m_bAutoExecute" value="false" />
+            </PresetGroup>
+            <PresetGroup name="MultiMark (Auto)" desc="Mark all enemies within range (auto execute)">
+                <PresetTweak var="m_gaugeMode" value="0" />
+                <PresetTweak var="m_bMultiMarkMode" value="true" />
+                <PresetTweak var="m_bRestrictToFOV" value="0" />
+                <PresetTweak var="m_bAutoExecute" value="true" />
+            </PresetGroup>
+            <PresetGroup name="MultiMark (Auto, FOV)" desc="Mark all enemies within range and FOV (auto execute)">
+                <PresetTweak var="m_gaugeMode" value="0" />
+                <PresetTweak var="m_bMultiMarkMode" value="true" />
+                <PresetTweak var="m_bRestrictToFOV" value="1" />
+                <PresetTweak var="m_bAutoExecute" value="1" />
+            </PresetGroup>
+            <PresetGroup name="Gauge (Auto)" desc="On-screen guage, can mark/exec all enemies within range (auto execute)">
+                <PresetTweak var="m_gaugeMode" value="1" />
+                <PresetTweak var="m_bMultiMarkMode" value="true" />
+                <PresetTweak var="m_bRestrictToFOV" value="false" />
+                <PresetTweak var="m_bAutoExecute" value="true" />
+            </PresetGroup>
+            <PresetGroup name="Gauge (Auto, FOV)" desc="On-screen guage, cannot mark/exec until full. Marks all enemies in range and FOV (auto execute)">
+                <PresetTweak var="m_gaugeMode" value="1" />
+                <PresetTweak var="m_bMultiMarkMode" value="true" />
+                <PresetTweak var="m_bRestrictToFOV" value="true" />
+                <PresetTweak var="m_bAutoExecute" value="true" />
+            </PresetGroup>
+            <PresetGroup name="Gauge (Manual)"  desc="On-screen guage, cannot mark/exec until full. Marks all enemies in range (manual execute)">
+                <PresetTweak var="m_gaugeMode" value="1" />
+                <PresetTweak var="m_bMultiMarkMode" value="true" />
+                <PresetTweak var="m_bRestrictToFOV" value="false" />
+                <PresetTweak var="m_bAutoExecute" value="false" />
+            </PresetGroup>
+            <PresetGroup name="Gauge (Manual, FOV)" desc="On-screen guage, cannot mark/exec until full. Marks all enemies in range and FOV (manual execute)">
+                <PresetTweak var="m_gaugeMode" value="1" />
+                <PresetTweak var="m_bMultiMarkMode" value="true" />
+                <PresetTweak var="m_bRestrictToFOV" value="true" />
+                <PresetTweak var="m_bAutoExecute" value="false" />
+            </PresetGroup>
+            <PresetGroup name="Gauge SC5" desc="On-screen guage, cannot execute until full. Normal SC5 selection marking">
+                <PresetTweak var="m_gaugeMode" value="1" />
+                <PresetTweak var="m_bMultiMarkMode" value="false" />
+                <PresetTweak var="m_bRestrictToFOV" value="false" />
+                <PresetTweak var="m_bAutoExecute" value="false" />
+            </PresetGroup>
+        </Presets>
+
+    </Page>
+    <Page name="Controller">
+        <Tweak  name="X Button Press Record:" vartype="bool" var="m_bRecordPressDelays" Owner="EchelonPlayer.PlayerActionSelector" />
+        <Tweak  name="Control Scheme" vartype="enum" var="m_eDesiredActionMapping" Owner="Echelon.EPlayerPawn" />
+    </Page>
+    <Page name="Camera">
+        <Tweak  name="Invert Look Axis:" vartype="bool" var="m_reverseLookAxis" Owner="Echelon.ECamera" />
+        <Tweak  name="Invert Turn Axis:" vartype="bool" var="m_reverseTurnAxis" Owner="Echelon.ECamera" />
+        <Tweak  name="Force Ideal Collision Location:" vartype="bool" var="m_ForceIdealCollisionLocation" Owner="Echelon.ECamera" />
+        <Tweak  name="Force Secure Collision Location:" vartype="bool" var="m_ForceSecureCollisionLocation" Owner="Echelon.ECamera" />
+        <Tweak  name="Disable Camera Tick On Pause:" vartype="bool" var="m_pauseCameraOnPause" Owner="Echelon.ECamera" />
+        <Tweak  name="Use RayCast Optimization:" vartype="bool" var="m_testCollisionAlgo" Owner="Echelon.ECamera" />
+        <Tweak  name="Play Camera Shakes:" vartype="bool" var="m_playCameraShakes" Owner="Echelon.ECamera" />
+        <Tweak  name="Enable Transparency Sphere:" vartype="bool" var="m_UseTransparencySphere" Owner="Echelon.ECamera" />
+        <Tweak  name="Transparency Sphere Radius:" vartype="float" min="0.0" max="100.0" increment="1.0" var="m_transparencySphereRadius" Owner="Echelon.ECamera" />
+        <Page name="Textual Debug">
+            <Tweak  name="Show General Infos:" vartype="bool" var="m_bdebugCameraGeneralInfo" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Relative Infos:" vartype="bool" var="m_bdebugCameraRelativeInfo" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Reticle Infos:" vartype="bool" var="m_bdebugCameraReticleInfo" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Collision Infos:" vartype="bool" var="m_bdebugCameraCollisionInfo" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Entity Infos:" vartype="bool" var="m_bdebugCameraEntityInfo" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Shake Infos:" vartype="bool" var="m_bdebugCameraShakeInfo" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Player Infos:" vartype="bool" var="m_bdebugCameraPlayerInfo" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Animation Infos:" vartype="bool" var="m_bdebugCameraAnimationInfo" Owner="Echelon.ECamera" />
+        </Page>
+        <Page name="Visual Debug">
+            <Tweak  name="Show Player Visuals:" vartype="bool" var="m_bdebugCameraPlayerVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Reticle Visuals:" vartype="bool" var="m_bdebugCameraReticleVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Bone Trail Visuals:" vartype="bool" var="m_bdebugCameraBoneTrailVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Location Trail Visuals:" vartype="bool" var="m_bdebugCameraLocationTrailVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show MarkHit Trail Visuals:" vartype="bool" var="m_bdebugCameraMarkHitTrailVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Assistance Visuals:" vartype="bool" var="m_bdebugCameraAssistanceVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Spotting Visuals:" vartype="bool" var="m_bdebugCameraSpottingVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Lock Visuals:" vartype="bool" var="m_bdebugCameraLockVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Visuals Index:" vartype="int" min="0" max="3" increment="1" var="m_idebugCameraVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Collision Visuals:" vartype="bool" var="m_bdebugCameraCollisionVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Workspace Visuals:" vartype="bool" var="m_bdebugCameraWorkspaceVisual" Owner="Echelon.ECamera" />
+            <Tweak  name="Show Entity Visuals:" vartype="bool" var="m_bdebugCameraEntityVisual" Owner="Echelon.ECamera" />
+        </Page>
+    </Page>
+    <Page name="AI">
+        <Page name="Reactions">
+            <Tweak  name="Use new reactions:" vartype="bool" var="m_bUseNewReactions" Owner="Echelon.EAIManager" />
+        </Page>
+        <Page name="LKP">
+            <Tweak  name="Debug LKP:" vartype="bool" var="m_bDebugLKP" Owner="Echelon.EAIManager" />
+        </Page>
+        <Page name="TEAS">
+            <Tweak  name="Show TEAS Status:" vartype="bool" var="m_bDebugShowTeasStatus" Owner="Echelon.EAIManager" />
+            <Tweak  name="Show TEAS debug info:" vartype="bool" var="m_bRenderTEASInfo" Owner="Echelon.EPlayerPawn" />
+        </Page>
+        <Page name="Accuracy">
+            <Tweak  name="Delay Before I Can Hit Sam Upon Visible:" vartype="float" min="0.0" max="30.0" increment="0.5" var="m_fDelayBeforeICanHitSamUponVisible" Owner="EchelonAI.EGoal_Shoot_SC5" />
+            <Tweak  name="Min Initial Delay:" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_fMinInitialDelay" Owner="EchelonAI.EGoal_Shoot_SC5" />
+            <Tweak  name="Max Initial Delay:" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_fMaxInitialDelay" Owner="EchelonAI.EGoal_Shoot_SC5" />
+        </Page>
+        <Page name="Goal Shoot">
+            <Tweak  name="DistanceModifier(Amplitude)" vartype="float" min="0.0" max="5000.0" increment="1.0" var="m_astDistanceModifier_Amplitude" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="DistanceModifier(Factor)" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_astDistanceModifier_Factor" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="CoverageModifier(Amplitude)" vartype="float" min="0.0" max="5000.0" increment="1.0" var="m_astCoverageModifier_Amplitude" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="CoverageModifier(Factor)" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_astCoverageModifier_Factor" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+
+            <Tweak  name="MoveModifier(Angle)" vartype="float" min="0.0" max="360.0" increment="1.0" var="m_astMoveModifier_Angle" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="MoveModifier(Speed)" vartype="float" min="0.0" max="500.0" increment="1.0" var="m_astMoveModifier_Speed" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="MoveModifier(Factor)" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_astMoveModifier_Factor" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+
+            <Tweak  name="MoveModifier_chaser(Angle)" vartype="float" min="0.0" max="360.0" increment="1.0" var="m_astMoveModifier_chaser_Angle" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="MoveModifier_chaser(Speed)" vartype="float" min="0.0" max="500.0" increment="1.0" var="m_astMoveModifier_chaser_Speed" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="MoveModifier_chaser(Factor)" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_astMoveModifier_chaser_Factor" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+
+            <Tweak  name="DistanceModifier_chaser(Amplitude)" vartype="float" min="0.0" max="5000.0" increment="1.0" var="m_astDistanceModifier_chaser_Amplitude" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="DistanceModifier_chaser(Factor)" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_astDistanceModifier_chaser_Factor" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+
+            <Tweak  name="CoverageModifier_chaser(Amplitude)" vartype="float" min="0.0" max="5000.0" increment="1.0" var="m_astCoverageModifier_chaser_Amplitude" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+            <Tweak  name="CoverageModifier_chaser(Factor)" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_astCoverageModifier_chaser_Factor" Owner="EchelonAI.ETweakMenu" IsArray="true" />
+        </Page>
+        <Page name="Flank">
+            <Tweak  name="Time To Suppress:" vartype="float" min="0.0" max="100.0" increment="0.5" var="m_fTimeToSuppress" Owner="Echelon.EAIController" />
+        </Page>
+        <Page name="Shooting">
+            <Tweak  name="LKP Pop To Reset Shooting Delay (in cm):" vartype="float" min="0.0" max="300.0" increment="1.0" var="m_fLKPPopToResetShootingDelay" Owner="Echelon.EAIManager" />
+            <Tweak  name="Timeout Sam Not Seen To Reset Shooting Delay:" varty-pe="float" min="0.0" max="10.0" increment="0.25" var="m_fTimeoutSamNotSeenToResetShootingDelay" Owner="Echelon.EAIManager" />
+            <Tweak  name="Sam Starts Dodging Anim If He Will Be Hit In X Seconds:" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_fSamStartsDodgingAnimIfHeWillBeHitInXSeconds" Owner="Echelon.EAIManager" />
+            <Tweak  name="Time To Go Back To Patrol (in sec.):" vartype="float" min="0.0" max="40.0" increment="0.5" var="m_fTimeToGoBackToPatrol" Owner="Echelon.EAIManager" />
+            <Tweak  name="Max Critical Shoot Misses:" vartype="float" min="0.0" max="15.0" increment="1.0" var="m_iMaxCriticalShootMisses" Owner="Echelon.EAIManager" />
+            <Tweak  name="Player have Infinite Ammo:" vartype="bool" var="m_bSamHaveInfiniteAmmo" Owner="Echelon.EchelonLevelInfo" />
+        </Page>
+        <Page name="Combat">
+            <Tweak  name="Min AI Combat Range (in cm):" vartype="int" min="0" max="5000" increment="1" var="m_AIMinCombatRange" Owner="Echelon.BasicWeapon" />
+            <Tweak  name="Max AI Combat (in cm):" vartype="int" min="0" max="5000" increment="1" var="m_AIMaxCombatRange" Owner="Echelon.BasicWeapon" />
+        </Page>
+        <Page name="Stealth (visibility cheat) ">
+        </Page>
+
+        <Page name="6Th Sense">
+            <Tweak  name="Enable 6th sense:" vartype="bool" var="m_bVision6SenseEnable" Owner="Echelon.EAIManager" />
+            <Tweak  name="Debug info 6th sense:" vartype="bool" var="m_bDebugVision6Sense" Owner="Echelon.EAIManager" />
+        </Page>
+        <Page name="Detection">
+            <Tweak  name="Detection vision type:" vartype="enum" var="m_eVisionConeCheckType" Owner="EchelonAI.EEnemyVision" />
+            <Tweak  name="Debug Detection Context:" vartype="bool" var="m_bDetectionContextShowHud" Owner="Echelon.EAIManager" />
+            <Tweak  name="Pause On Detection:" vartype="bool" var="m_bDetectionContextPause" Owner="Echelon.EAIManager" />
+            <Tweak  name="Hud Display Time:" vartype="float" min="-1.0" max="100000.0" increment="1.0" var="m_fDetectionContextTimeout" Owner="Echelon.EAIManager" />
+            <Command  name="Toggle HUD visibility" exec="TOGGLE_DETECTION_HUD_VIS" />
+            <Command  name="Toggle HUD implementation" exec="TOGGLE_DETECTION_HUD_IMPL" />
+        </Page>
+
+        <Page name="Avoidance">
+            <Tweak  name="Use Hysteresis Tweaks-1" vartype="bool" var="m_bUseHysteresisTweaks" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Nb Of Radius Separation At Start-1" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_fNumberOfRadiusSeparationAtStart" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Nb Of Radius Separation At End-1" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_fNumberOfRadiusSeparationAtEnd" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Distance Tweak Min ETA-1" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_fDistanceTweakMinETA" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Distance Tweak Max ETA-1" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_fDistanceTweakMaxETA" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Distance Tweak Min Speed-1" vartype="float" min="0.5" max="1000.0" increment="5.0" var="m_fDistanceTweakMinSpeed" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Distance Tweak Max Speed-1" vartype="float" min="0.5" max="1000.0" increment="5.0" var="m_fDistanceTweakMaxSpeed" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Time To Start When Slow-1" vartype="float" min="0.1" max="10.0" increment="0.1" var="m_fTimeToStartWhenSlow" Owner="Echelon.EAvoidance" />
+
+            <Tweak  name="Use Lateral Majority Resultant-2" vartype="bool" var="m_bUseLateralMajorityResultant" Owner="Echelon.EAvoidance" />
+
+            <Tweak  name="Use PhysVsAnim Speed Criteria-4" vartype="bool" var="m_bUsePhysVsAnimSpeedCriteria" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Time To Pause Navigation (sec)-4" vartype="float" min="0.1" max="10.0" increment="0.1" var="m_fTimeToPauseNavigation" Owner="Echelon.EAvoidance" />
+
+            <Tweak  name="Blend Steer Components With Distance-5" vartype="bool" var="m_bBlendSteerComponentsWithDistance" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Blend Steer Min Avoidance Weigth-5" vartype="float" min="0.0" max="1.0" increment="0.1" var="m_fBlendSteerMinAvoidanceWeigth" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Blend Steer Max Avoidance Weigth-5" vartype="float" min="0.0" max="1.0" increment="0.1" var="m_fBlendSteerMaxAvoidanceWeigth" Owner="Echelon.EAvoidance" />
+
+            <Tweak  name="Exchange Speeds-6" vartype="bool" var="m_bExchangeSpeeds" Owner="Echelon.EAvoidance" />
+
+            <Tweak  name="Steer Toward Fixed Position Beside Blocker-7" vartype="bool" var="m_bSteerTowardFixedPositionBesideBlocker" Owner="Echelon.EAvoidance" />
+            <Tweak  name="Nb Of Radius Separation At Fixed Position-7" vartype="float" min="0.0" max="10.0" increment="0.1" var="m_fNumberOfRadiusSeparationAtFixedPosition" Owner="Echelon.EAvoidance" />
+
+            <Tweak  name="Allow Bumping By Running Player-8" vartype="bool" var="m_bAllowBumpingByRunningPlayer" Owner="Echelon.EAICitizenPawn" />
+            <Tweak  name="Allow Bumping Other Citizens-8" vartype="bool" var="m_bAllowBumpingOtherCitizens" Owner="Echelon.EAICitizenPawn" />
+            <Tweak  name="Bump Time-8" vartype="float" min="0.0" max="2.0" increment="0.05" var="m_fBumpTime" Owner="Echelon.EAICitizenPawn" />
+
+        </Page>
+
+    </Page>
+
+    <Page name="GD Tweakable Values" >
+        <Page name="Damage">
+            <Tweak  name="Min Dist for fall damage:" vartype="float" min="0.0" max="100000.0" increment="10.0" var="m_fMinDistanceForFallDamage" Owner="EchelonPlayer.GenericFallState" />
+            <Tweak  name="Min Dist for fall medium:" vartype="float" min="0.0" max="100000.0" increment="10.0" var="m_fMinDistanceForFallMedium" Owner="EchelonPlayer.GenericFallState" />
+            <Tweak  name="Min Dist for fall hard:" vartype="float" min="0.0" max="100000.0" increment="10.0" var="m_fMinDistanceForFallHard" Owner="EchelonPlayer.GenericFallState" />
+            <Tweak  name="Min Dist for fall kill:" vartype="float" min="0.0" max="100000.0" increment="10.0" var="m_fMinDistanceForFallKill" Owner="EchelonPlayer.GenericFallState" />
+        </Page>
+        <Page name="Navigation 2D">
+            <Tweak  name="Use New AutoNav:" vartype="bool" var="m_bUseNewAutoNav" Owner="EchelonPlayer.EPLMovementDriver" />
+            <Tweak  name="Max Standing Speed [m]:" vartype="float" min="1.0" max="450.00" increment="10.0" var="m_fMaxStandNavSpeed" Owner="EchelonPlayer.MovementState" />
+            <Tweak  name="Max Crouched Speed [m]:" vartype="float" min="1.0" max="450.00" increment="10.0" var="m_fMaxCrouchNavSpeed" Owner="EchelonPlayer.MovementState" />
+            <Tweak  name="Dot Alignment for Shooting:" vartype="float" min="0.0" max="1.0" increment="0.001" var="m_fGunInAimDirectionMinAngle" Owner="EchelonPlayer.MovementState" />
+            <Tweak  name="Run on right bumper:" vartype="bool" var="m_bUseBumperToRun" Owner="EchelonPlayer.MovementState" />
+            <Tweak  name="Use full running gun up:" vartype="bool" var="m_bUseFullJogGunUp" Owner="EchelonPlayer.MovementState" />
+
+        </Page>
+        <Page name="Navigation 3D">
+            <Tweak  name="Max Jump Distance Slow(cm):" vartype="float" min="0.0" max="500.0" increment="1.0" var="m_SlowTweak.m_fDistance" Owner="EchelonPlayer.GeoJumpState" />
+            <Tweak  name="Max Jump Distance Walking(cm):" vartype="float" min="0.0" max="500.0" increment="1.0" var="m_WalkingTweak.m_fDistance" Owner="EchelonPlayer.GeoJumpState" />
+            <Tweak  name="Max Jump Distance Running(cm):" vartype="float" min="0.0" max="500.0" increment="1.0" var="m_RunningTweak.m_fDistance" Owner="EchelonPlayer.GeoJumpState" />
+            <Tweak  name="Geo Height Tolerance(cm):" vartype="float" min="0.0" max="96.0" increment="1.0" var="m_fMaxGeoHeightVariation" Owner="EchelonPlayer.GeoJumpState" />
+        </Page>
+        <Page name="Guns">
+            <Command  name="Render debug bullet spread" exec="TRACETAG GUNDD" />
+            <Tweak  name="Disable Bullet Spread" vartype="bool" var="m_bDisableSpread" Owner="Echelon.BasicWeapon" />
+            <Page name="MuzzleLight">
+                <Tweak  name="Enable MuzzleLight" vartype="bool" var="m_bMuzzleLightActive" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Light Duration" vartype="float" min="0.0" max="100.0" increment="0.1" var="m_fMuzzleLightDuration" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Diffuse Radius" vartype="float" min="0.0" max="10000.0" increment="5.0" var="m_fMuzzleLight_DiffuseRadius" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Specular Radius" vartype="float" min="0.0" max="10000.0" increment="5.0" var="m_fMuzzleLight_SpecularRadius" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="HDR LightBrightness" vartype="float" min="0.0" max="100.0" increment="0.1" var="m_fMuzzleLight_HDR_LightBrightness" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Max Distance" vartype="float" min="0.0" max="10000.0" increment="5.0" var="m_fMuzzleLight_MaxDistance" Owner="Echelon.EPlayerPawn" />
+            </Page>
+        </Page>
+        <Page name="Projectile" >
+            <Tweak  name="Grenade choose target on press:" vartype="bool" var="m_bChooseTargetOnPress" Owner="EchelonPlayer.ThrowGrenadeState" />
+            <Tweak  name="Min. Pitch Straight Velocity :" vartype="float" min="0.0" max="6000.0" increment="100.0" var="m_fPitchMinStraightVelocity" Owner="Echelon.EPlayerPawn" />
+            <Tweak  name="Mid. Pitch Straight Velocity :" vartype="float" min="0.0" max="6000.0" increment="100.0" var="m_fPitchMidStraightVelocity" Owner="Echelon.EPlayerPawn" />
+            <Tweak  name="Max. Pitch Straight Velocity :" vartype="float" min="0.0" max="6000.0" increment="100.0" var="m_fPitchMaxStraightVelocity" Owner="Echelon.EPlayerPawn" />
+            <Tweak  name="Min. Pitch ThrowGrenade Distance :" vartype="float" min="0.0" max="6000.0" increment="100.0" var="m_fPitchMinThrowDistance" Owner="EchelonPlayer.ThrowGrenadeState" />
+            <Tweak  name="Mid. Pitch ThrowGrenade Distance :" vartype="float" min="0.0" max="6000.0" increment="100.0" var="m_fPitchMidThrowDistance" Owner="EchelonPlayer.ThrowGrenadeState" />
+            <Tweak  name="Max. Pitch ThrowGrenade Distance :" vartype="float" min="0.0" max="6000.0" increment="100.0" var="m_fPitchMaxThrowDistance" Owner="EchelonPlayer.ThrowGrenadeState" />
+            <Tweak  name="Grenade Hit Vert. Velocity Damping :" vartype="float" min="0.0" max="3.0" increment="0.05" var="m_fVerticalVelocityDamping" Owner="Echelon.EGrenade" />
+            <Tweak  name="Grenade Hit Hor. Velocity Damping :" vartype="float" min="0.0" max="3.0" increment="0.05" var="m_fHorizontalVelocityDamping" Owner="Echelon.EGrenade" />
+            <Tweak  name="Grenade ballistic simulation (put anything except NONE for debug display):" vartype="enum" var="m_iButtonActionTipID" Owner="EchelonPlayer.ThrowGrenadeState" />
+        </Page>
+        <Page name="SnakeCam" >
+            <Tweak  name="Mirror View Z Distance :" vartype="float" min="1.0" max="30.0" increment="0.25" var="m_fMirrorViewZDistance" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Mirror View X Scale :" vartype="float" min="0.0" max="20.0" increment="0.01" var="m_fMirrorViewScaleX" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Mirror View Y Scale :" vartype="float" min="0.0" max="20.0" increment="0.01" var="m_fMirrorViewScaleY" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Mirror View X Bias :" vartype="float" min="-5.0" max="5.0" increment="0.01" var="m_fMirrorViewBiasX" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Mirror View Y Bias :" vartype="float" min="-5.0" max="5.0" increment="0.01" var="m_fMirrorViewBiasY" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Mirror View Z Bias :" vartype="float" min="-5.0" max="5.0" increment="0.01" var="m_fMirrorViewBiasZ" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Snake View Z Distance :" vartype="float" min="1.0" max="30.0" increment="0.25" var="m_fSnakeViewZDistance" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Snake View X Scale :" vartype="float" min="0.0" max="20.0" increment="0.01" var="m_fSnakeViewScaleX" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Snake View Y Scale :" vartype="float" min="0.0" max="20.0" increment="0.01" var="m_fSnakeViewScaleY" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Snake View X Bias :" vartype="float" min="-5.0" max="5.0" increment="0.01" var="m_fSnakeViewBiasX" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Snake View Y Bias :" vartype="float" min="-5.0" max="5.0" increment="0.01" var="m_fSnakeViewBiasY" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Snake View Z Bias :" vartype="float" min="-5.0" max="5.0" increment="0.01" var="m_fSnakeViewBiasZ" Owner="EchelonPlayer.EPLGameplayManager" />
+        </Page>
+        <Page name="FilmingCam" >
+            <Tweak  name="Test New FilmingCam" vartype="bool" var="m_bHackEnabled" Owner="EchelonPlayer.UseFilmingCameraState" />
+        </Page>
+        <Page name="TurretCam" >
+            <Tweak  name="Test New TurretCam" vartype="bool" var="m_bHackEnabled" Owner="EchelonPlayer.UseRemoteTurretState" />
+        </Page>
+        <Page name="Inventory" >
+            <Command  name="Add 5 Frag Grenades" exec="ADD GRENADE FRAG" />
+            <Command  name="Add 5 EMP Grenades" exec="ADD GRENADE EMP" />
+            <Command  name="Add 5 Sticky Grenades" exec="ADD GRENADE STICKY" />
+            <Command  name="Add 5 Flashbang Grenades" exec="ADD GRENADE FLASH" />
+            <Command  name="Add 5 Sticky Cameras" exec="ADD STICKYCAM" />
+            <Command  name="Add 5 Proximity Mines" exec="ADD PROX" />
+            <Command  name="Add Portable EMP" exec="ADD PORTABLE EMP" />
+            <Command  name="Add Snake Camera" exec="ADD SNAKECAM" />
+            <Command  name="Add Mine Detonator" exec="ADD DETONATOR" />
+            <Command  name="Add Sonar Goggles" exec="ADD SONARGOGGLES" />
+            <Command  name="Add HVR Upgrade" exec="ADD WEAPONUPGRADE HVR" />
+            <Command  name="Add Hollow Point Ammo Upgrade" exec="ADD WEAPONUPGRADE HOLLOWPOINTAMMO" />
+            <Command  name="Add Laser Sight Upgrade" exec="ADD WEAPONUPGRADE LASERSIGHT" />
+            <Command  name="Add Reflex Sight Upgrade" exec="ADD WEAPONUPGRADE REFLEXSIGHT" />
+            <Command  name="Add Pistol Reflex Sight Upgrade" exec="ADD WEAPONUPGRADE PISTOLREFLEXSIGHT" />
+            <Command  name="Add Suppressor Upgrade" exec="ADD WEAPONUPGRADE SUPPRESSOR" />
+            <Command  name="Add Extended Magazine Upgrade" exec="ADD WEAPONUPGRADE EXTENDEDMAGAZINE" />
+            <Command  name="Add Scope 2X Upgrade" exec="ADD WEAPONUPGRADE SCOPE2X" />
+            <Command  name="Add Scope 4X Upgrade" exec="ADD WEAPONUPGRADE SCOPE4X" />
+            <Command  name="Add Match Grade Ammo Upgrade" exec="ADD WEAPONUPGRADE MATCHGRADEAMMO" />
+            <Command  name="Add Gun Stock Upgrade" exec="ADD WEAPONUPGRADE GUNSTOCK" />
+        </Page>
+        <Page name="PEC">
+            <Command  name="Add 1000 points" exec="CHALLENGES ADDPOINTS" />
+            <Tweak  name="Affordable cheat" vartype="bool" var="m_bAffordableCheat" Owner="EchelonPlayer.EPLArmoryPage" />
+            <Tweak  name="All weapons and gadgets cheat" vartype="bool" var="m_bUnlockAllWeapons" Owner="EchelonPlayer.EPLArmoryPage" />
+        </Page>
+        <Page name="Aiming Assistance">
+            <Tweak  name="Enable Aiming Assistance:" vartype="bool" var="m_UseAimingAssistance" Owner="Echelon.ECamera" />
+            <Page name="Assistance Input Factors">
+                <Tweak  name="Max %2dec input pushing hard while idle:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceSteadyHiLower" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2inc input pushing hard while idle:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceSteadyHiUpper" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2dec input pushing med while idle:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceSteadyMedLower" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2inc input pushing med while idle:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceSteadyMedUpper" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2dec input pushing soft while idle:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceSteadyLowLower" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2inc input pushing soft while idle:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceSteadyLowUpper" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2dec input pushing hard with movement:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceMovingHiLower" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2inc input pushing hard with movement:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceMovingHiUpper" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2dec input pushing med with movement:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceMovingMedLower" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2inc input pushing med with movement:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceMovingMedUpper" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2dec input pushing soft with movement:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceMovingLowLower" Owner="Echelon.ECamera" />
+                <Tweak  name="Max %2inc input pushing soft with movement:" vartype="float" min="0.0" max="1.0" increment="0.01" var="m_assistanceMovingLowUpper" Owner="Echelon.ECamera" />
+            </Page>
+        </Page>
+        <Page name="H2H" >
+            <Tweak  name="Throw attractor debug display:" vartype="bool" var="m_bThrowTargetingDebugDisplay" Owner="EchelonPlayer.EPLGameplayManager" />
+            <Tweak  name="Disable Bashes" vartype="bool" var="m_bForceThrowOnly" Owner="EchelonPlayer.HumanShieldThrowState" />
+            <Tweak  name="H2H Attack animated CAM:" vartype="bool" var="m_bAllowAnimatedCam" Owner="EchelonPlayer.StealthKillState" />
+        </Page>
+        <Page name="Roll">
+            <Tweak  name="Time Between Rolls:" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_fTimeBufferBetweenRolls" Owner="EchelonPlayer.RollState" />
+            <Tweak  name="Roll Steering Angular Speed (Degrees Per Second)" vartype="float" min="0.0" max="360.0" increment="10.0" var="m_fRollSteerAngularSpeed" Owner="EchelonPlayer.RollState" />
+        </Page>
+        <Page name="Take Cover" >
+            <Page name="Take Cover Entrance" >
+                <Tweak  name="Test Distance" vartype="float" min="0.0" max="500.0" increment="1.0" var="m_fB2WTestDistance" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Take Cover Angle" vartype="float" min="0.0" max="180.0" increment="1.0" var="m_fTakeCoverAngle" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Take Cover In Peek Min Angle" vartype="float" min="0.0" max="180.0" increment="1.0" var="m_fTakeCoverPeekAngle" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Press Joystick Push % To Enter Cover" vartype="float" min="0.0" max="1.0" increment="0.1" var="m_fJoystickPressNeededToEnterCover" Owner="EchelonPlayer.CoverNavStartState" />
+            </Page>
+            <Page name="Take Cover Exit" >
+                <Tweak  name="Press Away From Wall Exit Timer" vartype="float" min="-1.0" max="5.0" increment="0.1" var="m_ExitCoverTime" Owner="Echelon.CharacterControl" />
+                <Tweak  name="Press Away From Wall Exit Angle" vartype="float" min="0.0" max="180.0" increment="1.0" var="m_ExitCoverAngle" Owner="Echelon.CharacterControl" />
+                <Tweak  name="PC Away From Wall Exit Angle" vartype="float" min="0.0" max="180.0" increment="1.0" var="m_ExitCoverAnglePC" Owner="Echelon.CharacterControl" />
+                <Tweak  name="Press Away Joystick Push %" vartype="float" min="0.0" max="1.0" increment="0.1" var="m_fJoystickPressNeededToExitCover" Owner="Echelon.CharacterControl" />
+            </Page>
+            <Page name="Corner Turn" >
+                <Tweak  name="Corner Turn Push Angle" vartype="float" min="0.0" max="180.0" increment="1.0" var="m_fCornerTurnPushAngle" Owner="EchelonPlayer.CoverNavState" />
+            </Page>
+            <Page name="Sticky Corners" >
+                <Tweak  name="ON/OFF" vartype="bool" var="m_bStickyCornerMode" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Sticky Corner Offset" vartype="float" min="0.0" max="200.0" increment="1.0" var="m_fCheckForStickyOffset" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Exit Towards Peek Time" vartype="float" min="0.0" max="60.0" increment="0.1" var="m_fPushTowardsPeekDirectionTime" Owner="EchelonPlayer.CoverNavState" />
+            </Page>
+            <Page name="Dead Zone" >
+                <Tweak  name="High Wall Dead Zone" vartype="float" min="0.0" max="90.0" increment="0.5" var="m_fHighWallDeadZoneAngle" Owner="EchelonPlayer.CoverNavState" />
+                <Tweak  name="Low Wall Dead Zone" vartype="float" min="0.0" max="90.0" increment="0.5" var="m_fLowWallDeadZoneAngle" Owner="EchelonPlayer.CoverNavState" />
+            </Page>
+            <Page name="Push Up To StandShoot" >
+                <Tweak  name="Joystick To Wall Angle To Stand" vartype="float" min="0.0" max="90.0" increment="0.5" var="m_fB2WPushUpToStand_JPushToWallFrontAngle" Owner="Echelon.EPlayerPawn" />
+                <Tweak  name="Cam To Wall Angle To Stand" vartype="float" min="0.0" max="90.0" increment="0.5" var="m_fB2WPushUpToStand_CamToWallFrontAngle" Owner="Echelon.EPlayerPawn" />
+            </Page>
+            <Page name="Cover to Cover" >
+                <Tweak  name="Next Cover to Cam Direction Max Angle" vartype="float" min="0.0" max="180.0" increment="1.0" var="m_fNextCoverToCamDirMaxAngle" Owner="Echelon.EPlayerPawn" />
+            </Page>
+        </Page>
+        <Page name="Doors" >
+            <Tweak  name="Targeting Angle" vartype="float" min="0.0" max="360.0" increment="1.0" var="m_fToleratedTargetingAngle" Owner="EchelonPlayer.UseDoorState" />
+            <Tweak  name="OpenSide Targeting Distance" vartype="float" min="0.0" max="1000.0" increment="5.0" var="m_fOpenSideInteractionDist" Owner="EchelonPlayer.UseDoorState" />
+            <Tweak  name="WrongSide Targeting Distance" vartype="float" min="0.0" max="1000.0" increment="5.0" var="m_fWrongSideInteractionDist" Owner="EchelonPlayer.UseDoorState" />
+        </Page>
+        <Page name="EMP" >
+            <Tweak  name="Modulo Flicker Optim" vartype="int" min="1" max="100" increment="1" var="m_iModuloFlicker" Owner="Echelon.EGameplayObjectLight" />
+            <Tweak  name="Light Modulo Flicker Optim" vartype="int" min="1" max="100" increment="1" var="m_iLightModuloFlicker" Owner="Echelon.EGameplayObjectLight" />
+            <Tweak  name="Flicker duration on low EMP received" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_fFlickerTimeReceiveLowEMP" Owner="Echelon.EGameplayObjectLight" />
+            <Tweak  name="Flicker duration on low EMP recovery" vartype="float" min="0.0" max="5.0" increment="0.1" var="m_fFlickerTimeRecoverLowEMP" Owner="Echelon.EGameplayObjectLight" />
+        </Page>
+    </Page>
+    <Page name="CORE Navigation Logic">
+        <Tweak  name="New PhysWalking Player:" vartype="bool" var="NewPhysWalkingPlayer" Owner="Engine.GameInfo" />
+        <Tweak  name="New PhysWalking NPC:" vartype="bool" var="NewPhysWalkingNPC" Owner="Engine.GameInfo" />
+    </Page>
+    <Page name="Sound">
+        <Command  name="Mute All Sound" exec="NO_SOUND" />
+        <Command  name="Restore All Sound" exec="SOUND" />
+        <Command  name="Mute Music" exec="SMUTE MUSIC" />
+        <Command  name="Restore Music" exec="SENABLE MUSIC" />
+        <Command  name="Solo Music" exec="SSOLO MUSIC" />
+        <Command  name="Mute Ambiance" exec="SMUTE AMBIANCE" />
+        <Command  name="Restore Ambiance" exec="SENABLE AMBIANCE" />
+        <Command  name="Solo Ambiance" exec="SSOLO AMBIANCE" />
+        <Command  name="Mute SFX" exec="SMUTE SFX" />
+        <Command  name="Restore SFX" exec="SENABLE SFX" />
+        <Command  name="Solo SFX" exec="SSOLO SFX" />
+        <Command  name="Mute Foley" exec="SMUTE FOLEY" />
+        <Command  name="Restore Foley" exec="SENABLE FOLEY" />
+        <Command  name="Solo Foley" exec="SSOLO FOLEY" />
+        <Command  name="Mute Voice" exec="SMUTE VOICE" />
+        <Command  name="Restore Voice" exec="SENABLE VOICE" />
+        <Command  name="Solo Voice" exec="SSOLO VOICE" />
+        <Tweak  name="Situation ID:" vartype="int" min="0" max="15" increment="1" var="SituationIDForTweak" Owner="Echelon.EchelonLevelInfo" />
+        <Command  name="Add DynMix Situation" exec="ADDSITUATION" />
+        <Command  name="Remove DynMix Situation" exec="REMOVESITUATION" />
+    </Page>
+    <Page name ="Graphics">
+        <Tweak  name="Brightness:" vartype="float" min="0" max="1.0" increment="0.05" var="fGlobalBrightness" Owner="Engine.Engine" LoadValueFromInstance="true"/>
+        <Command  name="Save Settings" exec="l3d-save-settings" />
+        <Command name="Toggle AO" exec="l3d-toggle-ao" />
+        <Command name="Enable VSync:" exec="l3d-toggle-vsync" />
+        <Command name="Enable VSync20:" exec="l3d-toggle-vsync20" />
+    </Page>
+    <Page name ="FX">
+        <Tweak  name="Tweak FX:" vartype="bool" var="m_bTweakFX" Owner="Echelon.EPlayerPawn" />
+        <Command  name="Toggle LKP SFX" exec="TOGGLELKPSFX" />
+    </Page>
+    <Page name ="Animation">
+        <Page name="Doors">
+            <Tweak  name="Transition speed" vartype="float" min="100.0f" max="1080.0" increment="1.0" var="m_fTransitionSpeed" Owner="Echelon.Door" />
+            <Tweak  name="Ease in Accel" vartype="float" min="100.0f" max="1080.0" increment="10.0" var="m_fEaseInAccel" Owner="Echelon.Door" />
+            <Tweak  name="Ease out Decel" vartype="float" min="100.0f" max="1080.0" increment="10.0" var="m_fEaseOutDecel" Owner="Echelon.Door" />
+            <Tweak  name="Start decel at:" vartype="float" min="1.0f" max="100.0" increment="1.0" var="m_fStartDecelAt" Owner="Echelon.Door" />
+            <Tweak  name="Ease out min speed:" vartype="float" min="1.0f" max="360.0" increment="1.0" var="m_fEaseOutMinSpeed" Owner="Echelon.Door" />
+        </Page>
+        <Page name="Undetected animations (higher crouch)">
+            <Tweak  name="Use undetected animations:" vartype="bool" var="m_bUseUndetectedAnims" Owner="EchelonPlayer.MovementState" />
+            <Tweak  name="Use low crouch close to cover:" vartype="bool" var="m_bLowCrouchClose2Cover" Owner="EchelonPlayer.MovementState" />
+            <Tweak  name="B2W Detectionradius:" vartype="float" min="200.0" max="500.0" increment="50.0" var="m_fB2WDetectionRadius" Owner="Echelon.EPlayerPawn" />
+            <Tweak  name="Cooldown time after detection end:" vartype="float" min="0.0" max="10.0" increment="0.5" var="m_fDetectionCooldownDelay" Owner="EchelonPlayer.MovementState" />
+        </Page>
+        <Page name="Layered idles">
+            <Tweak  name="Enable layers:" vartype="bool" var="m_bEnableIdleLayers" Owner="Echelon.EPlayerPawn" />
+            <Tweak  name="Nav speed threshold:" vartype="float" min="0.0" max="500.0" increment="10.0" var="m_fSpeedThreshold" Owner="EchelonPlayer.IdleLayerState" />
+            <Tweak  name="B2W Nav speed threshold:" vartype="float" min="0.0" max="500.0" increment="10.0" var="m_fB2WSpeedThreshold" Owner="EchelonPlayer.IdleLayerState" />
+            <Tweak  name="B2W allow layers during transitions:" vartype="bool" var="m_bB2WAllowLayersDuringTransitions" Owner="EchelonPlayer.IdleLayerState" />
+            <Tweak  name="Enable RT arm splice:" vartype="bool" var="m_bEnableRTWeightSmooting" Owner="EchelonPlayer.IdleLayerState" />
+            <Tweak  name="Force narrative ID:" vartype="int" min="-1" max="20" increment="1" var="m_iNarrativeIdleID" Owner="Echelon.EPlayerPawn" />
+        </Page>
+        <Page name="Look at">
+            <Tweak  name="Enable Player look at:" vartype="bool" var="m_bEnablePlayerLookAt" Owner="EchelonPlayer.EPLGameplayManager" />
+        </Page>
+        <Page name="Feet IK">
+            <Tweak  name="Use feet IK in crouch:" vartype="bool" var="m_bUseCrouchFeetIK" Owner="EchelonPlayer.MovementState" />
+        </Page>
+    </Page>
+    <Page name="Coop">
+        <Page name="Gating" >
+            <Tweak  name="Activate projection of partner viewport." vartype="bool" var="m_bRenderPartnerViewport" Owner="Echelon.ECoopGateHoldVolume" />
+        </Page>
+        <Command  name="Toggle PvP" exec="PLAYERVERSUS" />
+    </Page>
+    <Page name="Challenges">
+        <Command name="Display Progress Messages" exec="TTAG CHALLENGES" />
+        <Command name="Toggle Debug Screen" exec="DEBUGCHALLENGE_TOGGLEMODE" />
+        <Page name="Container" >
+            <Command name="Global" exec="DEBUGCHALLENGE_CONTAINER=Global" />
+            <Command name="Map" exec="DEBUGCHALLENGE_CONTAINER=Map" />
+        </Page>
+    </Page>
+    <Page name="Save and Player Profiles">
+        <Command  name="Save Game" exec="PROFILE SAVEGAME" />
+        <Command  name="Load Game" exec="PROFILE LOADGAME" />
+    </Page>
+</Cheats>

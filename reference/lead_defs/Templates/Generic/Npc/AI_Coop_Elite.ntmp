@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Elite" version="0">
+	<archetype name="EAIElite" />
+	<controller name="EAIEliteController" />
+	<inventory name="Coop_Elite_Inventory" >
+			<weapon name="SMG_Scorpion" />
+		<gadget name="GI_Grenade_Smoke" quantity="1" />
+	</inventory>
+</npc>

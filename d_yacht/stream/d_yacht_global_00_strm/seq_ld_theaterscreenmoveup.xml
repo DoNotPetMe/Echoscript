@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_TheaterScreenMoveUp" leveluid="1" streamedRandomID="32642577">
+  <Task name="Startingpoint" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="MoveUp">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000059a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="2.000000" condition="1">
+          <CommandInstance name="Move" duration="2.000000" entityStripped="1" bv_a="0" bv_i="67108868">
+            <ParameterInstance name="Target" data="UID:00000a50" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Moveup"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Startingpoint" true="MoveUp"/>
+  <Task name="HideColl">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="MoveUp" true="HideColl" sequence="LD_TheaterScreenMoveUp"/>
+  <Task name="MoveDown">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000059a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="2.000000" condition="1">
+          <CommandInstance name="Move" duration="2.000000" entityStripped="1" bv_a="0" bv_i="67108868">
+            <ParameterInstance name="Target" data="UID:00000a51" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Movedown"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="HideColl" true="MoveDown"/>
+  <Task name="CollBack">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="MoveDown" true="CollBack" sequence="LD_TheaterScreenMoveUp"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="CollBack" true="Startingpoint" sequence="LD_TheaterScreenMoveUp"/>
+</Sequence>

@@ -1,0 +1,7 @@
+<npc name="AI_Vehicle_Puppet" version="0">
+	<archetype name="EAIVehiclePuppet" />
+	<controller name="EAIVehiclePuppetController" />
+	<inventory name="Vehicle_Rifle_AK47_AIRSTRIPCUSTOM" >
+		<weapon name="Rifle_AK47_AIRSTRIPCUSTOM" />
+	</inventory>
+</npc>

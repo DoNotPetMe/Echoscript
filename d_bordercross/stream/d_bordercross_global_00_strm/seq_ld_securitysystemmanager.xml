@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_SecuritySystemManager" leveluid="1" streamedRandomID="2038094029">
+  <Task name="SecuritySystemInteractionCheck" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_SecuritySystem_Beat3_ChiefRoom" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_SecuritySystem_Beat3_LockerRoom" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <VisualComment name="NewVisualComment" x="-116.352280" y="106.349686" width="546.050415" height="187.967361" commentDate="9/27/2012 12:17:12 AM"/>
+</Sequence>

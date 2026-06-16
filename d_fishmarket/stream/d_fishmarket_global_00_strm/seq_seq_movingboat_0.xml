@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SEQ_MovingBoat_0" leveluid="2" streamedRandomID="571275100">
+  <Task name="Ship Moving" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_ACT_D_FishMarket_Bazaar_ShipIn_Ani" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="MeshPlayAnim" entityStripped="1" dp_i="335544444" bv_a="1065353216" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_CoopObjectiveManager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Ship Start Moving***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Ship Reach Deck">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_CoopObjectiveManager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="56.667500" condition="1">
+          <CommandInstance name="Wait" duration="56.667500" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Ship Moving" true="Ship Reach Deck" sequence="SEQ_MovingBoat_0"/>
+  <Task name="Ship Stop Moving">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000e3a" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000f88" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::List_ACT_D_FishMarket_Bazaar_ShipLoop_Ani" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="MeshPlayAnim" entityStripped="1" dp_i="268435576" bv_a="1065353216:1065353216" bv_i="134217734"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="Ship Reach Deck" true="Ship Stop Moving" sequence="SEQ_MovingBoat_0"/>
+</Sequence>

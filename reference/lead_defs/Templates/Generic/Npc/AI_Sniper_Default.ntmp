@@ -1,0 +1,10 @@
+<npc name="AI_Sniper_Default" version="0">
+	<archetype name="EAISniper" />
+	<controller name="EAISniperController" />
+	<inventory name="Sniper_Default" >
+		<weapon name="Sniper_SVU">
+		    <attachment name="Rifle_LaserSight"/>
+		</weapon>
+		<weapon name="Pistol_Makarov" />
+	</inventory>
+</npc>

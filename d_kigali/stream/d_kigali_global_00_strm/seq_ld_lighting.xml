@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Lighting" leveluid="1" streamedRandomID="190391868">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Lightning Flash">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000001c7" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000367" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00000368" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="UID:00000369" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_7" entity="UID:00000398" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="UID:00000399" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_11" entity="UID:0000039a" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.500000" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_15" entity="UID:000001c7" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="0.150000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.150000" entityStripped="1" dp_i="268435576" bv_a="1:1069547520" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_0" start="0.150000" end="0.350000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="335544444" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_5" start="0.700000" end="0.900000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1053609165" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_2" start="1.000000" end="1.200000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1058642330" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_6" start="1.300000" end="1.500000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1056964608" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_7" start="1.600000" end="1.800000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1050253722" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_8" start="1.800000" end="2.000000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1045220557" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_9" start="2.300000" end="3.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="1.000000" entityStripped="1" dp_i="268435576" bv_a="1:0" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_10" start="2.000000" end="2.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.300000" entityStripped="1" dp_i="268435576" bv_a="1:1036831949" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_16" entity="UID:00000398" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="0.150000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.150000" entityStripped="1" dp_i="268435576" bv_a="1:1069547520" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_0" start="0.150000" end="0.350000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="335544444" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_5" start="0.700000" end="0.900000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1053609165" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_2" start="1.000000" end="1.200000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1058642330" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_6" start="1.300000" end="1.500000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1056964608" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_7" start="1.600000" end="1.800000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1050253722" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_8" start="1.800000" end="2.000000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1045220557" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_10" start="2.000000" end="2.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.300000" entityStripped="1" dp_i="268435576" bv_a="1:1036831949" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_9" start="2.300000" end="3.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="1.000000" entityStripped="1" dp_i="268435576" bv_a="1:0" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_17" entity="UID:00000399" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="0.150000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.150000" entityStripped="1" dp_i="268435576" bv_a="1:1069547520" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_0" start="0.150000" end="0.350000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="335544444" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_5" start="0.700000" end="0.900000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1053609165" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_2" start="1.000000" end="1.200000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1058642330" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_6" start="1.300000" end="1.500000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1056964608" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_7" start="1.600000" end="1.800000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1050253722" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_8" start="1.800000" end="2.000000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1045220557" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_10" start="2.000000" end="2.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.300000" entityStripped="1" dp_i="268435576" bv_a="1:1036831949" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_9" start="2.300000" end="3.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="1.000000" entityStripped="1" dp_i="268435576" bv_a="1:0" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_18" entity="UID:0000039a" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="0.150000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.150000" entityStripped="1" dp_i="268435576" bv_a="1:1069547520" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_0" start="0.150000" end="0.350000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="335544444" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_5" start="0.700000" end="0.900000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1053609165" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_2" start="1.000000" end="1.200000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1058642330" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_6" start="1.300000" end="1.500000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1056964608" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_7" start="1.600000" end="1.800000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1050253722" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_8" start="1.800000" end="2.000000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1045220557" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_10" start="2.000000" end="2.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.300000" entityStripped="1" dp_i="268435576" bv_a="1:1036831949" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_9" start="2.300000" end="3.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="1.000000" entityStripped="1" dp_i="268435576" bv_a="1:0" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_19" entity="UID:00000367" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="0.150000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.150000" entityStripped="1" dp_i="268435576" bv_a="1:1069547520" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_0" start="0.150000" end="0.350000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="335544444" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_5" start="0.700000" end="0.900000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1053609165" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_2" start="1.000000" end="1.200000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1058642330" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_6" start="1.300000" end="1.500000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1056964608" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_7" start="1.600000" end="1.800000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1050253722" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_8" start="1.800000" end="2.000000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1045220557" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_10" start="2.000000" end="2.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.300000" entityStripped="1" dp_i="268435576" bv_a="1:1036831949" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_9" start="2.300000" end="3.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="1.000000" entityStripped="1" dp_i="268435576" bv_a="1:0" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_20" entity="UID:00000368" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="0.150000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.150000" entityStripped="1" dp_i="268435576" bv_a="1:1069547520" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_0" start="0.150000" end="0.350000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="335544444" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_5" start="0.700000" end="0.900000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1053609165" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_2" start="1.000000" end="1.200000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1058642330" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_6" start="1.300000" end="1.500000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1056964608" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_7" start="1.600000" end="1.800000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1050253722" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_8" start="1.800000" end="2.000000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1045220557" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_10" start="2.000000" end="2.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.300000" entityStripped="1" dp_i="268435576" bv_a="1:1036831949" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_9" start="2.300000" end="3.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="1.000000" entityStripped="1" dp_i="268435576" bv_a="1:0" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_21" entity="UID:00000369" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="0.150000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.150000" entityStripped="1" dp_i="268435576" bv_a="1:1069547520" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_0" start="0.150000" end="0.350000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="335544444" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_5" start="0.700000" end="0.900000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1053609165" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_2" start="1.000000" end="1.200000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1058642330" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_6" start="1.300000" end="1.500000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1056964608" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_7" start="1.600000" end="1.800000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1050253722" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_8" start="1.800000" end="2.000000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.200000" entityStripped="1" dp_i="268435576" bv_a="1:1045220557" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_10" start="2.000000" end="2.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="0.300000" entityStripped="1" dp_i="268435576" bv_a="1:1036831949" bv_i="134217734"/>
+        </Event>
+        <Event name="NewEvent_9" start="2.300000" end="3.300000" condition="1">
+          <CommandInstance name="LightSetBrightness" duration="1.000000" entityStripped="1" dp_i="268435576" bv_a="1:0" bv_i="134217734"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ThunderSound">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:0000080b" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="17.512480">
+          <CommandInstance name="PlaySound" duration="17.512480" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Extraction_Kigali_3D_SeqThunders" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Initial" true="Lightning Flash" sequence="LD_Lighting"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="Initial" true="ThunderSound" sequence="LD_Lighting"/>
+  <Task name="Wait B">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="8.000000"/>
+            </ParameterInstance>
+            <ParameterInstance name="Max">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="25.000000"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="ThunderSound" true="Wait B" sequence="LD_Lighting"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="Wait B" true="Initial" sequence="LD_Lighting"/>
+</Sequence>

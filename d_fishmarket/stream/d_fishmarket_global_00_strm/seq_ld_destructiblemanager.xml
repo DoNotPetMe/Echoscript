@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_DestructibleManager" leveluid="3" streamedRandomID="571275100">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000013db" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000019b8" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00001457" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::List_BrokenPlanks" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:000019b9" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Damaged">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000013db" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000019b8" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:000019b8" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" start="0.150000" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="1" bv_i="67108868">
+            <ParameterInstance name="PhysType" data="Repository::Unreal::enums::EPhysics::PHYS_Havok" TypeDeleted="EPhysics"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:000019b9" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+        <Event name="NewEvent_0" start="10.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00001457" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="67108868" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="UID:0000180a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="Repository::List_BrokenPlanks" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::List_BrokenPlanks" TypeDeleted="List">
+        <Event name="NewEvent" start="0.100000" end="1.100000" condition="1">
+          <CommandInstance name="MeshPlayAnim" duration="1.000000" entityStripped="1" dp_i="335544444" bv_a="1065353216" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_7" entity="UID:00001be6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="1.145000">
+          <CommandInstance name="PlaySound" duration="1.145000" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_Expl_Met" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="UID:00001beb" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="4.659584">
+          <CommandInstance name="PlaySound" duration="4.659584" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_MetFall_FishMarketCar_Close" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="UID:00001bec" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="4.659584">
+          <CommandInstance name="PlaySound" duration="4.659584" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_MetFall_FishMarketCar_Close" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="UID:00001be9" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="3.189333">
+          <CommandInstance name="PlaySound" duration="3.189333" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_MetFall_FishMarketCar_Far" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_11" entity="UID:00001bea" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="3.189333">
+          <CommandInstance name="PlaySound" duration="3.189333" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_MetFall_FishMarketCar_Far" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_12" entity="UID:00001bed" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="3.804458">
+          <CommandInstance name="PlaySound" duration="3.804458" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_MetFall_FishMarketUmbrella" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_13" entity="UID:00001be8" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="5.054250">
+          <CommandInstance name="PlaySound" duration="5.054250" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_MetFall_FishMarketWeapons" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_14" entity="UID:00001be7" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="5.288917">
+          <CommandInstance name="PlaySound" duration="5.288917" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_SoilDebris_FishMarket" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="Damaged" data="UID:00001a87" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="GI_DESTROYED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

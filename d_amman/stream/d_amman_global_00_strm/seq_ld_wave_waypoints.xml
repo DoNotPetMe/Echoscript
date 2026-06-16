@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Wave_Waypoints" startup="1" leveluid="1" streamedRandomID="1659803003">
+  <Task name="InitialCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="CheckWave">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="InitialCheck" true="CheckWave" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_WAVE_STARTED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="WaveId" data="Repository::B_StartWaveID"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand" start="CheckWave" true="Foyer Enable" false="NewTask">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask" true="Foyer Enable_0" false="NewTask_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_3" true="Foyer Enable_1" false="NewTask_6">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_3" start="NewTask_4" true="InitialCheck" sequence="LD_Wave_Waypoints"/>
+  <Task name="Backdoor Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Back_Door_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Backdoor Disable">
+    <Timeline name="NewTimeline">
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Foyer Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Foyer Disable">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_0">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Backdoor Enable" true="Wait" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Wait" true="Backdoor Disable" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Foyer Enable" true="Wait_0" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Wait_0" true="Foyer Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="Upstairs Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a12" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Upstairs_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Upstairs Disable">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a12" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_1">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="Upstairs Enable" true="Wait_1" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="Wait_1" true="Upstairs Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="NewTask_6">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_2" start="NewTask_6" true="Backdoor Enable" false="NewTask_7">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_7">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_3" start="NewTask_7" true="Upstairs &amp; Backdoor &amp; Foyer Enable" false="NewTask_8">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_4" start="NewTask_8" true="Foyer Enable_2" false="NewTask_9">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="6.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_5" start="NewTask_9" true="Backdoor &amp; Foyer Enable" false="NewTask_10">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="7.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_10">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_6" start="NewTask_10" true="Foyer Enable_3" false="NewTask_11">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="8.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_11">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_7" start="NewTask_11" true="Hall" false="NewTask_12">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_12">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_8" start="NewTask_12" true="Upstairs &amp; Backdoor &amp; Foyer Enable_0" false="NewTask_13">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_13">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_9" start="NewTask_13" true="Lobby &amp; Back Enable_1" false="NewTask_14">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="11.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_14">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_10" start="NewTask_14" true="Upstairs Enable" false="NewTask_15">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="12.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_15">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_11" start="NewTask_15" true="Hall Enable_2" false="NewTask_16">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="13.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_16">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_12" start="NewTask_16" true="Backdoor Enable_3" false="NewTask_17">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="14.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_17">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_13" start="NewTask_17" true="Upstairs &amp; Backdoor Enable" false="NewTask_18">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="15.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_18">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_14" start="NewTask_18" true="Foyer Enable_4" false="NewTask_19">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="16.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_19">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_15" start="NewTask_19" true="Foyer Enable_5" false="NewTask_20">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="17.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_20">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_16" start="NewTask_20" true="Backdoor Enable_6" false="NewTask_21">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="18.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_21">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_17" start="NewTask_21" true="Everywhere Enable_2" false="NewTask_22">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="19.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_22">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_18" start="NewTask_22" true="Upstairs &amp; Backdoor Enable_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="20.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Foyer Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Foyer Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_2">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_9" start="Foyer Enable_0" true="Wait_2" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="Wait_2" true="Foyer Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="NewTask_23">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_11" start="NewTask_23" true="NewTask_4" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_12" start="Foyer Disable" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_13" start="Foyer Disable_0" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_14" start="Backdoor Disable" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_15" start="Upstairs Disable" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <Task name="Foyer Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Foyer Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_3">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_16" start="Foyer Enable_1" true="Wait_3" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_17" start="Wait_3" true="Foyer Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Foyer Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Foyer Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_4">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_18" start="Foyer Enable_2" true="Wait_4" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_19" start="Wait_4" true="Foyer Disable_2" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_20" start="Foyer Disable_1" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <Task name="Upstairs &amp; Backdoor &amp; Foyer Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Upstairs &amp; Backdoor &amp; Foyer Disable">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_5">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_21" start="Upstairs &amp; Backdoor &amp; Foyer Enable" true="Wait_5" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_22" start="Wait_5" true="Upstairs &amp; Backdoor &amp; Foyer Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="Backdoor &amp; Foyer Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Back_Door_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Backdoor &amp; Foyer Disable">
+    <Timeline name="NewTimeline">
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_6">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_23" start="Backdoor &amp; Foyer Enable" true="Wait_6" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_24" start="Wait_6" true="Backdoor &amp; Foyer Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="Foyer Enable_3">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Foyer Disable_3">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_7">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_25" start="Foyer Enable_3" true="Wait_7" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_26" start="Wait_7" true="Foyer Disable_3" sequence="LD_Wave_Waypoints"/>
+  <Task name="Hall">
+    <Timeline name="NewTimeline">
+      <Track name="Hall" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a25" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Hall_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_8">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Hall Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Hall" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a25" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_27" start="Hall" true="Wait_8" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_28" start="Wait_8" true="Hall Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Upstairs &amp; Backdoor &amp; Foyer Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Upstairs &amp; Backdoor &amp; Foyer Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_9">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_29" start="Upstairs &amp; Backdoor &amp; Foyer Enable_0" true="Wait_9" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_30" start="Wait_9" true="Upstairs &amp; Backdoor &amp; Foyer Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="Lobby &amp; Back Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="LOBBY" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Back_Door_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_10">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Lobby &amp; Back Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_31" start="Lobby &amp; Back Enable_1" true="Wait_10" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_32" start="Wait_10" true="Lobby &amp; Back Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Hall Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="Hall" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a25" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Hall_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_11">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Hall Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="Hall" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a25" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_33" start="Hall Enable_2" true="Wait_11" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_34" start="Wait_11" true="Hall Disable_2" sequence="LD_Wave_Waypoints"/>
+  <Task name="Backdoor Enable_3">
+    <Timeline name="NewTimeline">
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Back_Door_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_12">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Backdoor Disable_3">
+    <Timeline name="NewTimeline">
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_35" start="Backdoor Enable_3" true="Wait_12" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_36" start="Wait_12" true="Backdoor Disable_3" sequence="LD_Wave_Waypoints"/>
+  <Task name="Upstairs &amp; Backdoor Enable">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Upstairs &amp; Backdoor Disable">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_13">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_37" start="Upstairs &amp; Backdoor Enable" true="Wait_13" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_38" start="Wait_13" true="Upstairs &amp; Backdoor Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="Foyer Enable_4">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Foyer Disable_4">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_14">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_39" start="Foyer Enable_4" true="Wait_14" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_40" start="Wait_14" true="Foyer Disable_4" sequence="LD_Wave_Waypoints"/>
+  <Task name="Foyer Enable_5">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Foyer Disable_5">
+    <Timeline name="NewTimeline">
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_15">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_41" start="Foyer Enable_5" true="Wait_15" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_42" start="Wait_15" true="Foyer Disable_5" sequence="LD_Wave_Waypoints"/>
+  <Task name="Backdoor Enable_6">
+    <Timeline name="NewTimeline">
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Back_Door_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Backdoor Disable_6">
+    <Timeline name="NewTimeline">
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_16">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_43" start="Backdoor Enable_6" true="Wait_16" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_44" start="Wait_16" true="Backdoor Disable_6" sequence="LD_Wave_Waypoints"/>
+  <Task name="Everywhere Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a12" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Upstairs_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Hall" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a25" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Hall_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="LOBBY" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Foyer_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Amman_Back_Door_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Upstairs Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a12" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a11" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Foyer" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a10" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="Hall" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000a25" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_17">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_45" start="Everywhere Enable_2" true="Wait_17" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_46" start="Wait_17" true="Upstairs Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="Upstairs &amp; Backdoor Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Upstairs &amp; Backdoor Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="Upstairs" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+      <Track name="Backdoor" entity="Repository::Ref_Sam" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_18">
+    <Timeline name="NewTimeline">
+      <Track name="Wait" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::TimingNumber" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::TimingNumber" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_47" start="Upstairs &amp; Backdoor Enable_0" true="Wait_18" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_48" start="Wait_18" true="Upstairs &amp; Backdoor Disable_0" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_49" start="Upstairs &amp; Backdoor &amp; Foyer Disable" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_50" start="Foyer Disable_2" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_51" start="Backdoor &amp; Foyer Disable" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_52" start="Foyer Disable_3" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_53" start="Hall Disable_1" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_54" start="Upstairs &amp; Backdoor &amp; Foyer Disable_0" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_55" start="Lobby &amp; Back Disable_1" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_56" start="Hall Disable_2" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_57" start="Backdoor Disable_3" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_58" start="Upstairs &amp; Backdoor Disable" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_59" start="Foyer Disable_4" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_60" start="Foyer Disable_5" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_61" start="Backdoor Disable_6" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_62" start="Upstairs Disable_0" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_63" start="Upstairs &amp; Backdoor Disable_0" true="NewTask_23" sequence="LD_Wave_Waypoints"/>
+</Sequence>

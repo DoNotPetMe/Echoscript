@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SEQ_Headlight" leveluid="2" streamedRandomID="1260989390">
+  <Task name="check" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Left Light Destroyed">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::bLight_Left_Destroyed" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="check" true="Left Light Destroyed" data="UID:000015ef" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_DESTROYED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="check_1" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Right Light Destroyed">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::bLight_Right_Destroyed" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="check_1" true="Right Light Destroyed" data="UID:000015f0" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_DESTROYED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Check Head Light Status">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::SEQ_SetHeadLightStatus" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="check_2" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="L EMPed">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000102d" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:0000171e" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:0000171f" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::bEMP_InProgress" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="check_2" true="L EMPed" data="UID:000015ef" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <Task name="check_3" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="R EMPed">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000102d" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:0000171e" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:0000171f" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetLightOn" entityStripped="1" dp_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::bEMP_InProgress" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_2" start="check_3" true="R EMPed" data="UID:000015f0" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_2" entity="Repository::bEMP_InProgress" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_3" start="L EMPed" true="NewTask_8" data="UID:000015ef" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_8" true="Check Head Light Status" sequence="SEQ_Headlight"/>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_2" entity="Repository::bEMP_InProgress" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_4" start="R EMPed" true="NewTask_9" data="UID:000015f0" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_2" start="NewTask_9" true="Check Head Light Status" sequence="SEQ_Headlight"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="NewTask_8" true="check_2" sequence="SEQ_Headlight"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="NewTask_9" true="check_3" sequence="SEQ_Headlight"/>
+  <DependencyCommand name="NewDependencyCommand" start="Left Light Destroyed" true="Check Head Light Status" false="NewTask">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::bEMP_InProgress" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="Right Light Destroyed" true="Check Head Light Status" false="NewTask_10">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::bEMP_InProgress" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_10">
+    <Timeline name="NewTimeline"/>
+  </Task>
+</Sequence>

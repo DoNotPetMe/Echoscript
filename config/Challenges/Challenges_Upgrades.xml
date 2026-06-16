@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+  <!-- Weapons : Fully upgrade [1] primary pistol -->
+  <Challenge Name="LocID_SNN_OD_UpgradePrimaryPistol" Desc="LocID_SNDES_OD_UpgradePrimaryPistolDesc" Reset="Never" Guid="199" ShortDesc="LocId_SNSD_OD_UpgradePrimaryPistol" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <WeaponAttachmentPurchased>
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Pistol" />
+            <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+          </WeaponAttachmentPurchased>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Weapons : Fully upgrade [1] Black market pistol -->
+  <Challenge Name="LocId_SNN_OD_UpgradePrimaryPistolBM" Desc="LocId_SNDES_OD_UpgradePrimaryPistolBMDesc" Reset="Never" Guid="200" ShortDesc="LocId_SNSD_OD_UpgradePistolBM" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <WeaponAttachmentPurchased>
+            <WeaponArchetype Op="Equal" ValueGroup="Weapons_Pistol_BM" />
+            <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+          </WeaponAttachmentPurchased>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Weapons : Fully upgrade [1] secondary weapon -->
+  <Challenge Name="LocId_SNN_OD_UpgradeSecondaryWeapon" Desc="LocId_SNDES_OD_UpgradeSecondaryWeaponDesc" Reset="Never" Guid="202" ShortDesc="LocId_SNSD_OD_UpgradeSecondaryWeapon" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_Assault" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_SMG" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_Shotgun" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_Sniper" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+      </Any>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Weapons : Fully upgrade [1] Black market secondary weapon -->
+  <Challenge Name="LocId_SNN_OD_UpgradeSecondaryWeaponBM" Desc="LocId_SNDES_OD_UpgradeSecondaryWeaponBMDesc" Reset="Never" Guid="203" ShortDesc="LocId_SNSD_OD_UpgradeSecondaryWeaponBM" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_Assault_BM" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_SMG_BM" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_Shotgun_BM" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" ValueGroup="Weapons_Sniper_BM" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+      </Any>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Weapons : Fully upgrade all prototype secondary weapons -->
+  <Challenge Name="LocId_SNN_OD_UpgradeSecondaryWeaponProto" Desc="LocId_SNDES_OD_UpgradeSecondaryWeaponProtoDesc" Reset="Never" Guid="204" ShortDesc="LocId_SNSD_OD_UpgradeSecondaryWeaponProto" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Rifle_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="SMG_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Shotgun_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Sniper_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Weapons : Fully upgrade all Black market weapons -->
+  <Challenge Name="LocId_SNN_OD_UpgradeAllBlackMarketWeapons" Desc="LocId_SNDES_OD_UpgradeAllBlackMarketWeaponsDesc" Reset="Never" Guid="205" ShortDesc="LocId_SNSD_OD_UpgradeAllBlackMarketWeapons" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Pistol_DesertEagle" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Pistol_Makarov" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Rifle_AK47" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Rifle_AKS74U" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Rifle_Goblin" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="SMG_MAC11" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="SMG_PP2000" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="SMG_Scorpion" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Shotgun_RMB93" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Shotgun_Saiga12" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Sniper_SVU" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Sniper_VSS" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Weapons : Fully upgrade all Prototype weapons -->
+  <Challenge Name="LocId_SNN_OD_UpgradeAllPrototypeWeapons" Desc="LocId_SNDES_OD_UpgradeAllPrototypeWeaponsDesc" Reset="Never" Guid="206" ShortDesc="LocId_SNSD_OD_UpgradeAllPrototypeWeapons" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Pistol_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Rifle_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="SMG_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Shotgun_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <WeaponAttachmentPurchased>
+              <WeaponArchetype Op="Equal" Value="Sniper_Proto" />
+              <IsWeaponFullyUpgraded Op="Equal" Value="true" />
+            </WeaponAttachmentPurchased>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadgets : Fully upgrade Lethal gadget (FRAG, Incendiary, Door Breach, Proxy Mine, Sticky Cam) -->
+  <!--
+  <Challenge Name="LocId_SNN_OD_UpgradeLethalGadget" Desc="LocId_SNDES_OD_UpgradeLethalGadgetDesc" Reset="Never" Guid="207" ShortDesc="LocId_SNSD_OD_UpgradeLethalGadget" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GadgetUpgradePurchased>
+            <GadgetName Op="Equal">
+              <Value>GI_Grenade_Frag</Value>
+              <Value>GI_Grenade_Incendiary</Value>
+              <Value>GI_DoorBreach</Value>
+              <Value>GI_Proximity_Mine</Value>
+              <Value>GI_Sticky_Camera</Value>
+              <Value>GI_Quadrocopter</Value>
+            </GadgetName>
+            <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+          </GadgetUpgradePurchased>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Gadgets : Fully upgrade Non-Lethal gadget (Smoke, EMP, Flashbang, Sleeping Gas, Tear Gas) -->
+  <!--
+  <Challenge Name="LocId_SNN_OD_UpgradeNonLethalGadget" Desc="LocId_SNDES_OD_UpgradeNonLethalGadgetDesc" Reset="Never" Guid="208" ShortDesc="LocId_SNSD_OD_UpgradeNonLethalGadget" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GadgetUpgradePurchased>
+            <GadgetName Op="Equal">
+              <Value>GI_Grenade_Smoke</Value>
+              <Value>GI_Grenade_EMP</Value>
+              <Value>GI_Grenade_Flashbang</Value>
+              <Value>GI_Grenade_SleepingGas</Value>
+              <Value>GI_Grenade_TearGas</Value>
+              <Value>GI_Proximity_Shocker_Mine</Value>
+            </GadgetName>
+            <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+          </GadgetUpgradePurchased>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Gadgets : Fully Upgrade Tri-Rotor -->
+  <Challenge Name="LocId_SNN_OD_UpgradeTriRotor" Desc="LocId_SNDES_OD_UpgradeTriRotorDesc" Reset="Never" Guid="209" ShortDesc="LocId_SNSD_OD_UpgradeTriRotor" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GadgetUpgradePurchased>
+            <GadgetName Op="Equal" Value="GI_Quadrocopter" />
+            <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+          </GadgetUpgradePurchased>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadgets : Fully Upgrade Goggles -->
+  <Challenge Name="LocId_SNN_OD_UpgradeGoggles" Desc="LocId_SNDES_OD_UpgradeGogglesDesc" Reset="Never" Guid="210" ShortDesc="LocId_SNSD_OD_UpgradeGoggles" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GadgetUpgradePurchased>
+            <GadgetName Op="Equal" Value="GI_ThermalGoggles" />
+            <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+          </GadgetUpgradePurchased>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadgets : Upgrade every Gadget (Goggles + Gadget Cat) -->
+  <!--
+  <Challenge Name="LocId_SNN_OD_UpgradeAllGadgets" Desc="LocId_SNDES_OD_UpgradeAllGadgetsDesc" Reset="Never" Guid="211" ShortDesc="LocId_SNSD_OD_UpgradeAllGadgets" Category="ChallengeGear" Map="SCREEN_LOADOUT">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Grenade_Frag" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Grenade_Incendiary" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_DoorBreach" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Proximity_Mine" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Sticky_Camera" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Grenade_Smoke" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Grenade_EMP" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Grenade_Flashbang" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Grenade_SleepingGas" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Grenade_TearGas" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Proximity_Shocker_Mine" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_Quadrocopter" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <GadgetUpgradePurchased>
+              <GadgetName Op="Equal" Value="GI_ThermalGoggles" />
+              <IsGadgetFullyUpgraded Op="Equal" Value="true" />
+            </GadgetUpgradePurchased>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- HUB : Fully upgrade any interior room -->
+  <!--
+  <Challenge Name="LocId_SNN_OD_UpgradeInteriorRoom" Desc="LocId_SNDES_OD_UpgradeInteriorRoomDesc" Reset="Never" Guid="212" ShortDesc="LocId_SNSD_OD_UpgradeInteriorRoom" Category="ChallengeGear" Map="SCREEN_PLANEUPGRADE">
+    <Definition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" ValueGroup="InteriorRooms" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="3" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <HUBRoomUpgraded>
+              <UpgradableThingId Op="Equal" Value="eUpgradableHubVehicleBay" />
+              <UpgradeLevel Op="GreaterOrEqual" Value="2" />
+            </HUBRoomUpgraded>
+          </Event>
+        </GameEvent>
+      </Any>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- HUB : Upgrade [33%] of the entire interior -->
+  <Challenge Name="LocId_SNN_OD_UpgradeInteriorProgressA" Desc="LocId_SNDES_OD_UpgradeInteriorProgressADesc" Reset="Never" Guid="213" ShortDesc="LocId_SNSD_OD_UpgradeInteriorProgress" Category="ChallengeGear" Map="SCREEN_PLANEUPGRADE">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <HUBRoomUpgraded>
+            <InteriorProgress Op="GreaterOrEqual" Value="0.33" />
+          </HUBRoomUpgraded>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- HUB : Upgrade [66%] of the entire interior -->
+  <Challenge Name="LocId_SNN_OD_UpgradeInteriorProgressB" Desc="LocID_SNDES_OD_UpgradeInteriorProgressBDesc" Reset="Never" Guid="214" ShortDesc="LocId_SNSD_OD_UpgradeInteriorProgress" Category="ChallengeGear" Map="SCREEN_PLANEUPGRADE">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <HUBRoomUpgraded>
+            <InteriorProgress Op="GreaterOrEqual" Value="0.66" />
+          </HUBRoomUpgraded>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- HUB : Fully upgrade the entire interior -->
+  <Challenge Name="LocID_SNN_OD_UpgradeInteriorCompleted" Desc="LocID_SNDES_OD_UpgradeInteriorCompletedDesc" Reset="Never" Guid="215" ShortDesc="LocId_SNSD_OD_UpgradeInteriorProgress" Category="ChallengeGear" Map="SCREEN_PLANEUPGRADE">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <HUBRoomUpgraded>
+            <InteriorProgress Op="GreaterOrEqual" Value="1.0" />
+          </HUBRoomUpgraded>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="UpgradeInteriorComplete" />
+    </StepReward>
+  </Challenge>
+</Challenges>

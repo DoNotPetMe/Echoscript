@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_WindMillSpin" leveluid="1" streamedRandomID="1136646976">
+  <Task name="WindMillTurn" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000008cf" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="-1049624576:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000008d0" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326644" bv_a="-1049624576:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="DeleteWindmil">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_WindMillSpin" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="WindMillTurn" true="DeleteWindmil" data="UID:0000021a" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

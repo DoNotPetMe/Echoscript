@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Rifle_AKS74U" version="0">
+	<archetype name="EAIBARegular" />
+    <controller name="BARegularController" />
+	<inventory name="Coop_Rifle_AKS74U" >
+		<weapon name="Rifle_AKS74U" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

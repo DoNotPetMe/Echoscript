@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_CeilingFans" leveluid="1" streamedRandomID="15872874">
+  <Task name="13 Fan" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_13" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="13 EMP">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_13" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="Rotate Fans" entity="UID:00000d07" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="268435510" bv_a="1" bv_i="67108872">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="EMP!!!!!!!"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="13 Re">
+    <Timeline name="NewTimeline">
+      <Track name="Rotate Fans" entity="UID:00000d07" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="13 Fan" true="13 EMP" data="UID:00000d07" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_3" start="13 EMP" true="13 Re" data="UID:00000d07" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="13 Re" true="13 Fan" sequence="LD_CeilingFans"/>
+  <Task name="19 Fan" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_19" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="19 EMP">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_19" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="Rotate Fans" entity="UID:00000d08" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="268435510" bv_a="1" bv_i="67108872">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="19 Re">
+    <Timeline name="NewTimeline">
+      <Track name="Rotate Fans" entity="UID:00000d08" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_4" start="19 Fan" true="19 EMP" data="UID:00000d08" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_5" start="19 EMP" true="19 Re" data="UID:00000d08" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_1" start="19 Re" true="19 Fan" sequence="LD_CeilingFans"/>
+  <Task name="21 Fan" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_21" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="21 EMP">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_21" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="Rotate Fans" entity="UID:00000d0a" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="268435510" bv_a="1" bv_i="67108872">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="21 Re">
+    <Timeline name="NewTimeline">
+      <Track name="Rotate Fans" entity="UID:00000d0a" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_6" start="21 Fan" true="21 EMP" data="UID:00000d0a" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_7" start="21 EMP" true="21 Re" data="UID:00000d0a" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_2" start="21 Re" true="21 Fan" sequence="LD_CeilingFans"/>
+  <Task name="25 Fan" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_25" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="25 EMP">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_25" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="Rotate Fans" entity="UID:00000d0b" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="268435510" bv_a="1" bv_i="67108872">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="25 Re">
+    <Timeline name="NewTimeline">
+      <Track name="Rotate Fans" entity="UID:00000d0b" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_8" start="25 Fan" true="25 EMP" data="UID:00000d0b" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_9" start="25 EMP" true="25 Re" data="UID:00000d0b" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_3" start="25 Re" true="25 Fan" sequence="LD_CeilingFans"/>
+  <Task name="20 Fan" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_CeilingFan_20" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="20 EMP">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_CeilingFan_20" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="Rotate Fans" entity="UID:00000d09" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="268435510" bv_a="1" bv_i="67108872">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="20 Re">
+    <Timeline name="NewTimeline">
+      <Track name="Rotate Fans" entity="UID:00000d09" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1119092736:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1127481344:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1132920832:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326644" bv_a="1135869952:1" bv_i="134217738">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_10" start="20 Fan" true="20 EMP" data="UID:00000d09" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_11" start="20 EMP" true="20 Re" data="UID:00000d09" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_4" start="20 Re" true="20 Fan" sequence="LD_CeilingFans"/>
+</Sequence>

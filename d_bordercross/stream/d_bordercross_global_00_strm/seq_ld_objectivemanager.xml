@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_ObjectiveManager" leveluid="1" streamedRandomID="2038094029">
+  <Task name="ObjectiveCheck1" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="CheckFinishedOrNot_Beat1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="ObjectiveCheck1" true="CheckFinishedOrNot_Beat1" data="UID:00000cdd" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bMainObjectiveComplete_Beat1"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="ObjectiveCheck2" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="CheckFinishedOrNot_Beat2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="ObjectiveCheck2" true="CheckFinishedOrNot_Beat2" data="UID:00000bbe" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bMainObjectiveComplete_Beat2"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="ObjectiveCheck3" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="CheckFinishedOrNot_Beat3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="ObjectiveCheck3" true="CheckFinishedOrNot_Beat3" data="UID:00000c31" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bMainObjectiveComplete_Beat3"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="AllObjectiveFinishCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="EnableCoopExit">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopActivateCoopExit" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="CoopExitEnterCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="EndMission">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetMissionComplete" entityStripped="1">
+            <ParameterInstance name="MissionID">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="G02"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopEndMission" entityStripped="1" dp_i="134217734" bv_a="1" bv_i="67108872">
+            <ParameterInstance name="Instigator"/>
+            <ParameterInstance name="EndReason" data="Repository::Unreal::enums::ECoopMissionEndReason::CoopMissionEndReason_Success" TypeDeleted="ECoopMissionEndReason"/>
+            <ParameterInstance name="Detector"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StartSequence_VO_0450_Exfil">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0450_Exfil" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StartSequence_VO_0450_Exfil_Coop">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0450_Exfil_Coop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="WaitVOPlayed_0450_Exfil_Coop">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="11.000000" condition="1">
+          <CommandInstance name="Wait" duration="11.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_2" start="StartSequence_VO_0450_Exfil_Coop" true="WaitVOPlayed_0450_Exfil_Coop" sequence="LD_ObjectiveManager"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="WaitVOPlayed_0450_Exfil_Coop" true="EndMission" sequence="LD_ObjectiveManager"/>
+  <Task name="ObjFinishedCount++">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::B_Var_ObjFinishedCount" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="increment" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <VisualComment name="NewVisualComment" x="-209.316223" y="-468.152588" width="802.888245" height="277.689270" commentDate="3/19/2013 3:35:09 PM"/>
+  <VisualComment name="NewVisualComment_0" x="-194.106598" y="426.028381" width="928.809265" height="190.197632" commentDate="9/27/2012 12:05:28 AM"/>
+  <VisualComment name="NewVisualComment_1" x="-196.392715" y="656.504211" width="931.084351" height="242.188477" commentDate="9/27/2012 12:05:59 AM"/>
+  <Task name="StartSequence_VO_0400_ObjCountdown3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0400_ObjCountdown3" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="EnableCoopExit" true="StartSequence_VO_0400_ObjCountdown3" sequence="LD_ObjectiveManager"/>
+  <Task name="WaitVOPlayed_0400_ObjCountdown3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="11.000000" condition="1">
+          <CommandInstance name="Wait" duration="11.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="StartSequence_VO_0400_ObjCountdown3" true="WaitVOPlayed_0400_ObjCountdown3" sequence="LD_ObjectiveManager"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="WaitVOPlayed_0400_ObjCountdown3" true="StartSequence_VO_0450_Exfil" sequence="LD_ObjectiveManager"/>
+  <Task name="NetLog_Beat3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Obj 3 Interaction Canceled"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_11" start="NetLog_Beat3" true="ObjFinishedCount++" sequence="LD_ObjectiveManager"/>
+  <Task name="StopEnvSound">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequenceByName" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="SequenceName">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LD_SoundTriggerManager"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_12" start="NetLog_Beat3" true="StopEnvSound" sequence="LD_ObjectiveManager"/>
+  <DependencyEvent name="NewDependencyEvent_2" start="AllObjectiveFinishCheck" true="EnableCoopExit" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="COOP_ALL_PRIMARY_OBJECTIVES_COMPLETE" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_3" start="CoopExitEnterCheck" true="StartSequence_VO_0450_Exfil_Coop" data="UID:00000248" InUnrealActors="1" TypeDeleted="CoopVolume">
+    <ExternalEventInstance name="ALL_PLAYERS_IN_COOPVOLUME" data=""/>
+  </DependencyEvent>
+  <Task name="FinishObjective1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopObjectiveComplete" entityStripped="1">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective1" TypeDeleted="Objective"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Obj 1 Interaction Complete"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_VO_0800_ObjStart1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="FinishObjective1" true="ObjFinishedCount++" sequence="LD_ObjectiveManager"/>
+  <DependencyCommand name="NewDependencyCommand" start="CheckFinishedOrNot_Beat1" true="FinishObjective1" false="AnimationCanceled_Beat1">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bMainObjectiveComplete_Beat1" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="AnimationCanceled_Beat1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Obj 1 Interaction Canceled"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_13" start="AnimationCanceled_Beat1" true="ObjectiveCheck1" sequence="LD_ObjectiveManager"/>
+  <Task name="FinishObjective2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopObjectiveComplete" entityStripped="1">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective2" TypeDeleted="Objective"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Obj 2 Interaction Complete"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_VO_0850_ObjStart2" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="AnimationCanceled_Beat2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Obj 2 Interaction Canceled"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="CheckFinishedOrNot_Beat2" true="FinishObjective2" false="AnimationCanceled_Beat2">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bMainObjectiveComplete_Beat2" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_14" start="FinishObjective2" true="ObjFinishedCount++" sequence="LD_ObjectiveManager"/>
+  <DependencyComplete name="NewDependencyComplete_15" start="AnimationCanceled_Beat2" true="ObjectiveCheck2" sequence="LD_ObjectiveManager"/>
+  <VisualComment name="NewVisualComment_2" x="-207.449371" y="-177.458191" width="803.680725" height="263.203857" commentDate="3/19/2013 3:35:04 PM"/>
+  <Task name="FinishObjective3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopObjectiveComplete" entityStripped="1">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective3" TypeDeleted="Objective"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Obj 3 Interaction Complete"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_VO_0900_ObjStart3" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="AnimationCanceled_Beat3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Obj 3 Interaction Canceled"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_1" start="CheckFinishedOrNot_Beat3" true="FinishObjective3" false="AnimationCanceled_Beat3">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bMainObjectiveComplete_Beat3" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_16" start="FinishObjective3" true="NetLog_Beat3" sequence="LD_ObjectiveManager"/>
+  <DependencyComplete name="NewDependencyComplete_17" start="AnimationCanceled_Beat3" true="ObjectiveCheck3" sequence="LD_ObjectiveManager"/>
+  <VisualComment name="NewVisualComment_3" x="-207.817291" y="117.949738" width="807.157593" height="257.818665" commentDate="3/19/2013 3:39:17 PM"/>
+  <VisualComment name="NewVisualComment_4" x="615.020813" y="-242.324326" width="376.155029" height="203.273651" commentDate="3/19/2013 3:41:14 PM"/>
+  <VisualComment name="NewVisualComment_5" x="619.558594" y="70.006378" width="378.590271" height="177.622131" commentDate="3/19/2013 3:42:55 PM"/>
+</Sequence>

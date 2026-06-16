@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_HT2_UnlockFirstDoor" leveluid="3" streamedRandomID="1260989390">
+  <Task name="Initial Check" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_CurrentBlackBoxID_1" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignNumber" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Area Clear">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000019d7" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000019d8" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial Check" true="Area Clear" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="HUNTER_BLACKBOX_COMPLETED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="BlackBoxID" data="Repository::Ref_CurrentBlackBoxID_1"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

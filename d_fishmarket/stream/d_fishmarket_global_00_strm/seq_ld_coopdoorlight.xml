@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_CoopDoorLight" leveluid="3" streamedRandomID="571275100">
+  <Task name="Start Checking" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Show Text">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_CoopProjectedLight" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState"/>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Show" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Start Checking" true="Show Text" data="UID:0000179d" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <Task name="Hide Text">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_CoopProjectedLight" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState"/>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="Show Text" true="Hide Text" data="UID:0000179d" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISEMPTY" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="Hide Text" true="Start Checking" sequence="LD_CoopDoorLight"/>
+</Sequence>

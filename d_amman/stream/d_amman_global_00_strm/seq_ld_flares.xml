@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Flares" startup="1" leveluid="1" streamedRandomID="1659803003">
+  <Task name="Extract Waves" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Check Wave">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager" TypeDeleted="ObjectiveManager"/>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Extract Waves" true="Check Wave" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_WAVE_END" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="WaveId" data="Repository::B_EndWaveID"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Enable Flares">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a16" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000a15" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Check Wave" true="Enable Flares" false="NewTask_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_EndWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Disable Flares">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a16" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000a15" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="Disable Flares Waves" true="NewTask_5" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_WAVE_BRIEFING_STARTED" data=""/>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_2" true="Enable Flares_0" false="NewTask_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_EndWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_3" true="Enable Flares_1" false="NewTask_4">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_EndWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="15.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_2" start="NewTask_4" true="Enable Flares_2" false="NewTask_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_EndWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="20.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Enable Flares" true="NewTask_0" sequence="LD_Flares"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask_14" true="NewTask_1" sequence="LD_Flares"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_1" true="Extract Waves" sequence="LD_Flares"/>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_5">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_3" start="NewTask_5" true="Disable Flares" false="NewTask_7">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Disable Flares Waves" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Enable Flares_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a16" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000a15" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Enable Flares_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a16" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000a15" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerEnable" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Enable Flares_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a16" InUnrealActors="1" TypeDeleted="ParticleSpawner"/>
+      <Track name="NewTrack_0" entity="UID:00000a15" InUnrealActors="1" TypeDeleted="ParticleSpawner"/>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_2" start="Enable Flares_0" true="NewTask_0" sequence="LD_Flares"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="Enable Flares_1" true="NewTask_0" sequence="LD_Flares"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Enable Flares_2" true="NewTask_0" sequence="LD_Flares"/>
+  <Task name="Disable Flares_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a16" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000a15" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_7">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_4" start="NewTask_7" true="Disable Flares_0" false="NewTask_8">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Disable Flares_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a16" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000a15" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_5" start="NewTask_8" true="Disable Flares_1" false="Disable Flares_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::B_StartWaveID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="15.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="Disable Flares_1" true="NewTask" sequence="LD_Flares"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Disable Flares_0" true="NewTask" sequence="LD_Flares"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="Disable Flares" true="NewTask" sequence="LD_Flares"/>
+  <Task name="Disable Flares Stay &amp; Fight" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="Disable Flares Stay &amp; Fight" true="Disable Flares_2" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_STAY_AND_FIGHT" data=""/>
+  </DependencyEvent>
+  <Task name="Disable Flares_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a16" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000a15" InUnrealActors="1" TypeDeleted="ParticleSpawner">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+        <Event name="NewEvent_0" start="2.000000" end="-1.000000">
+          <CommandInstance name="ParticleSpawnerDisable" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_14">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_15" start="NewTask_0" true="NewTask_14" sequence="LD_Flares"/>
+  <Task name="Disable Flares_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_16" start="Disable Flares_3" true="NewTask" sequence="LD_Flares"/>
+  <DependencyComplete name="NewDependencyComplete_17" start="NewTask" true="Disable Flares Waves" sequence="LD_Flares"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="Disable Flares_2" true="Disable Flares Stay &amp; Fight" sequence="LD_Flares"/>
+</Sequence>

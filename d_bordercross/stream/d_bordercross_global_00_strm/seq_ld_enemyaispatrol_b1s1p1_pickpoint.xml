@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_EnemyAIsPatrol_B1S1P1_PickPoint" leveluid="1" streamedRandomID="2038094029">
+  <Task name="B1S1P1_PickPoint_Initialization" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="ScreenLog_PickPoint_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 1 (PP6)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="B1S1P1_PickPoint_Initialization" true="NewTask_0" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="ScreenLog_PickPoint_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="ScreenLog_PickPoint_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 2 (PP7)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 3 (PP8)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 4 (PP9)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 5 (PP10)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 6 (PP66)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_7">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 7 (PP0)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_8">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 8 (PP1)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_9">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 9 (PP2)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_10">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 10 (PP3)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_11">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 11 (PP4)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_12">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B1S1P1_PickPoint = 12 (PP5)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_0" true="ScreenLog_PickPoint_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_0" true="ScreenLog_PickPoint_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_2" start="NewTask_0" true="ScreenLog_PickPoint_4">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_3" start="NewTask_0" true="ScreenLog_PickPoint_5">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_4" start="NewTask_0" true="ScreenLog_PickPoint_6">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="6.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_5" start="NewTask_0" true="ScreenLog_PickPoint_7">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="7.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_6" start="NewTask_0" true="ScreenLog_PickPoint_8">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="8.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_7" start="NewTask_0" true="ScreenLog_PickPoint_9">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_8" start="NewTask_0" true="ScreenLog_PickPoint_10">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_9" start="NewTask_0" true="ScreenLog_PickPoint_11">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="11.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_10" start="NewTask_0" true="ScreenLog_PickPoint_12">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B1S1P1" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="12.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="TeleportOnActor_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001a2" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001a3" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001a4" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001a5" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001a6" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000548" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_7">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001a7" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_8">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001a8" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_9">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001a9" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_10">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001aa" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_11">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001ab" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_12">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000019c" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:000001ac" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="ScreenLog_PickPoint_1" true="TeleportOnActor_1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="ScreenLog_PickPoint_2" true="TeleportOnActor_2" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="ScreenLog_PickPoint_3" true="TeleportOnActor_3" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="ScreenLog_PickPoint_4" true="TeleportOnActor_4" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="ScreenLog_PickPoint_5" true="TeleportOnActor_5" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="ScreenLog_PickPoint_6" true="TeleportOnActor_6" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="ScreenLog_PickPoint_7" true="TeleportOnActor_7" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="ScreenLog_PickPoint_8" true="TeleportOnActor_8" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="ScreenLog_PickPoint_9" true="TeleportOnActor_9" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="ScreenLog_PickPoint_10" true="TeleportOnActor_10" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="ScreenLog_PickPoint_11" true="TeleportOnActor_11" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_11" start="ScreenLog_PickPoint_12" true="TeleportOnActor_12" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <VisualComment name="NewVisualComment" x="-357.445496" y="-212.434906" width="1080.417236" height="899.006226" commentDate="12/4/2012 4:39:07 PM"/>
+  <Task name="EnableNPCs_Beat1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_12" start="TeleportOnActor_1" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_13" start="TeleportOnActor_2" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_14" start="TeleportOnActor_3" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_15" start="TeleportOnActor_4" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_16" start="TeleportOnActor_5" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_17" start="TeleportOnActor_6" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="TeleportOnActor_7" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_19" start="TeleportOnActor_8" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_20" start="TeleportOnActor_9" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_21" start="TeleportOnActor_10" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_22" start="TeleportOnActor_11" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_23" start="TeleportOnActor_12" true="EnableNPCs_Beat1" sequence="LD_EnemyAIsPatrol_B1S1P1_PickPoint"/>
+</Sequence>

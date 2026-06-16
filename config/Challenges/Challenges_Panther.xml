@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+  <!-- Mark & Execute OTM : Perform [n] successful Execute actions in motion and successfully avoid detection (ALKP, or taking damage) within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_MAEInMotionUndetected" Desc="LocId_SNDES_OD_MAEInMotionUndetectedDesc" Reset="Never" Guid="184" ShortDesc="LocId_SNSD_OD_MAEInMotionUndetected" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <MAEPawnExecuted>
+            <IsTargetAnyNPC Op="Equal" Value="true" />
+            <IsPlayerLocal Op="Equal" Value="true" />            
+            <IsSuccessful Op="Equal" Value="true" />
+            <IsInMotion Op="Equal" Value="true" />
+          </MAEPawnExecuted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="15">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="40">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- H2H Lethal : Perform [n] lethal Hand to Hand actions without being detected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_H2HLethalKillsUndetected" Desc="LocId_SNDES_OD_H2HLethalKillsUndetectedDesc" Reset="Never" Guid="185" ShortDesc="LocId_SNSD_OD_H2HLethalKillsUndetected" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="false" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="40">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- H2H Lethal : Perform [n] lethal Hand to Hand actions in a row without being detected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_H2HLethalKillsUndetectedInRow" Desc="LocId_SNDES_OD_H2HLethalKillsUndetectedInRowDesc" Reset="Never" Guid="186" ShortDesc="LocId_SNSD_OD_H2HLethalKillsUndetectedInRow" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="false" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <IsNonLethal Op="Equal" Value="true" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <AwarenessLevel Op="Equal" ValueGroup="AIState_Combat" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsPawnLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilledType>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <FromH2H Op="Equal" Value="false" />
+            </PawnKilledType>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionRestarted />
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionStarted />
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- H2H Lethal : Take Out [n] Heavies using lethal Hand to Hand actions without being detected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_H2HLethalKillsHeavyUndetected" Desc="LocId_SNDES_OD_H2HLethalKillsHeavyUndetectedDesc" Reset="Never" Guid="187" ShortDesc="LocId_SNSD_OD_H2HLethalKillsHeavyUndetected" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnH2HDamage>
+            <Pawn Op="Equal">
+              <Value>Heavy</Value>
+              <Value>ShieldedHeavy</Value>
+            </Pawn>
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="false" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="3">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="30">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Climbing, Hanging Ledge Navigation : Perform a Death From Above action on [n] Heavies without being detected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_DFAHeavyUndetected" Desc="LocId_SNDES_OD_DFAHeavyUndetectedDesc" Reset="Never" Guid="188" ShortDesc="LocId_SNSD_OD_DFAHeavyUndetected" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnGeoAttackDamage>
+            <Pawn Op="Equal">
+              <Value>Heavy</Value>
+              <Value>ShieldedHeavy</Value>
+            </Pawn>
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsDFA Op="Equal" Value="true" />
+          </PawnGeoAttackDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="2">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="30">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Climbing, Hanging Ledge Navigation : Pull [n] enemies in a row from a ledge, while successfully avoiding detection for [x]sec -->
+  <Challenge Name="LocId_SNN_OD_PullFromLedgeUndetectedInRow" Desc="LocId_SNDES_OD_PullFromLedgeUndetectedInRowDesc" Reset="Never" Guid="189" ShortDesc="LocId_SNSD_OD_PullFromLedgeInRow" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnPhysicsDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsGrabFromLedge Op="Equal" Value="true" />
+          </PawnPhysicsDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <PawnPhysicsDamage>
+              <IsGrabFromLedge Op="Equal" Value="false" />
+            </PawnPhysicsDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <AwarenessLevel Op="Equal" ValueGroup="AIState_Combat" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsPawnLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilledType>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <FromPhysics Op="Equal" Value="false" />
+            </PawnKilledType>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionRestarted />
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionStarted />
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="3">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- Climbing, Hanging Ledge Navigation : Perform [n] Inverted Neck Snaps undetected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_InvNeckSnapUndetected" Desc="LocId_SNDES_OD_InvNeckSnapUndetectedDesc" Reset="Never" Guid="193" ShortDesc="LocId_SNSD_OD_InvNeckSnapUndetected" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnGeoAttackDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsHPipeNeckSnap Op="Equal" Value="true" />
+          </PawnGeoAttackDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="2">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Zip Line : Perform [n] Death From Above actions while ziplining -->
+  <Challenge Name="LocId_SNN_OD_ZipLineDFA" Desc="LocId_SNDES_OD_ZipLineDFADesc" Reset="Never" Guid="194" ShortDesc="LocId_SNSD_OD_ZipLineDFA" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnGeoAttackDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsZipLineAttack Op="Equal" Value="true" />
+          </PawnGeoAttackDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="15">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Gadget Nav : Execute [n] enemies marked with the tri-rotor -->
+  <Challenge Name="LocId_SNN_OD_TriRotorMarkKills" Desc="LocId_SNDES_OD_TriRotorMarkKillsDesc" Reset="Never" Guid="195" ShortDesc="LocId_SNSD_OD_TriRotorMarkKills" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <MAEPawnExecuted>
+            <IsTargetAnyNPC Op="Equal" Value="true" />
+            <IsPlayerLocal Op="Equal" Value="true" />
+            <IsSuccessful Op="Equal" Value="true" />
+            <MarkedFromGadgetType Op="Equal" Value="eInventoryGroupType_QUADROCOPTER" />
+          </MAEPawnExecuted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="2">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- Flash Bang Enemies : Kill [n] enemy that is stunned a Flash Bang  -->
+  <Challenge Name="LocId_SNN_OD_FlashBangKills" Desc="LocId_SNDES_OD_FlashBangKillsDesc" Reset="Never" Guid="196" ShortDesc="LocId_SNSD_OD_FlashBangKills" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnKilled>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsFlashed Op="Equal" Value="true" />
+            <IsLethal Op="Equal" Value="true" />
+          </PawnKilled>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- HIDDEN CAMERA : Kill [X] enemies marked with your sticky cam -->
+  <Challenge Name="LocId_SNN_OD_StickyCamMarkKills" Desc="LocId_SNDES_OD_StickyCamMarkKillsDesc" Reset="Never" Guid="197" ShortDesc="LocId_SNSD_OD_StickyCamMarkKills" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <MAEPawnExecuted>
+            <IsTargetAnyNPC Op="Equal" Value="true" />
+            <IsPlayerLocal Op="Equal" Value="true" />
+            <IsSuccessful Op="Equal" Value="true" />
+            <MarkedFromGadgetType Op="Equal" Value="eInventoryGroupType_STICKYCAM" />
+          </MAEPawnExecuted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- HIDDEN CAMERA : Use Sticky Cam to Mark [n] enemies before Executing all [n] in motion -->
+  <Challenge Name="LocId_SNN_OD_StickyCamMarkKillsInMotion" Desc="LocId_SNDES_OD_StickyCamMarkKillsInMotionDesc" Reset="Never" Guid="198" ShortDesc="LocId_SNSD_OD_StickyCamMarkKillsInMotion" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <MAEPawnExecuted>
+            <IsTargetAnyNPC Op="Equal" Value="true" />
+            <IsPlayerLocal Op="Equal" Value="true" />
+            <IsSuccessful Op="Equal" Value="true" />
+            <IsInMotion Op="Equal" Value="true" />
+            <MarkedFromGadgetType Op="Equal" Value="eInventoryGroupType_STICKYCAM" />
+          </MAEPawnExecuted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <GameEvent>
+        <Event>
+          <MAEExecuteCycleCompleted>
+            <Player Op="Equal" Value="LocalPlayer" />
+          </MAEExecuteCycleCompleted>
+        </Event>
+      </GameEvent>
+    </RestartDefinition>
+    <StepReward Count="3">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+  </Challenge>
+
+  <!-- Make noise to distract an NPC and then perform a DFA [x] seconds -->
+  <Challenge Name="LocId_SNN_OD_DFADistractNPCThenDFA" Desc="LocId_SNDES_OD_DFADistractNPCThenDFA" Reset="Never" Guid="216" ShortDesc="LocId_SNSD_OD_DFADistractNPCThenDFA" Category="ChallengePanther" Icon="panther" Map="H_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <Event>
+          <PawnGeoAttackDamage>
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsInvestigatingWhistle Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsDFA Op="Equal" Value="true" />
+          </PawnGeoAttackDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+  </Challenge>
+  
+</Challenges>

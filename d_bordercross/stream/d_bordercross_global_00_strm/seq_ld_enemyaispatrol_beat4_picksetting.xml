@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_EnemyAIsPatrol_Beat4_PickSetting" leveluid="1" streamedRandomID="2038094029">
+  <Task name="Beat4PatrolSettingInitialization" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="DisableNPCs_Beat1a">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="ScreenLog_PickSetting_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 PickSetting = 1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickSetting_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 PickSetting = 2"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickSetting_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Beat4 PickSetting = 3"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StartSequence_ConRatio">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_EnemyAIsPatrol_Beat4_ConRatio" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NpcAssignSet_Setting_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000001a1" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat4_EAIBARegular_01"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NpcAssignSet_Setting_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_2" entity="UID:000001a1" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat4_EAIBARegular_01"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NpcAssignSet_Setting_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_2" entity="UID:000001a1" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat4_EAIBARegular_01"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="DisableNPCs_Beat4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000001a1" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="DisableNPCs_Beat1a" true="ScreenLog_PickSetting_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolSettingNumber" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_0" start="DisableNPCs_Beat1a" true="ScreenLog_PickSetting_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolSettingNumber" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="DisableNPCs_Beat1a" true="ScreenLog_PickSetting_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolSettingNumber" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_0" start="ScreenLog_PickSetting_1" true="NpcAssignSet_Setting_1" sequence="LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="ScreenLog_PickSetting_2" true="NpcAssignSet_Setting_2" sequence="LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="ScreenLog_PickSetting_3" true="NpcAssignSet_Setting_3" sequence="LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="NpcAssignSet_Setting_1" true="StartSequence_ConRatio" sequence="LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="NpcAssignSet_Setting_2" true="StartSequence_ConRatio" sequence="LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="NpcAssignSet_Setting_3" true="StartSequence_ConRatio" sequence="LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+  <DependencyComplete name="NewDependencyComplete" start="Beat4PatrolSettingInitialization" true="DisableNPCs_Beat4" sequence="LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="DisableNPCs_Beat4" true="DisableNPCs_Beat1a" sequence="LD_EnemyAIsPatrol_Beat4_PickSetting"/>
+  <VisualComment name="NewVisualComment" x="-419.906586" y="-160.374603" width="935.605103" height="447.998352" commentDate="1/23/2013 2:13:05 PM"/>
+</Sequence>

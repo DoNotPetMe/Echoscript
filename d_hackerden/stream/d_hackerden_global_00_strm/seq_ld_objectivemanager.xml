@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_ObjectiveManager" leveluid="1" streamedRandomID="447719282">
+  <Task name="CheckIfAllCompleted" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="ActivateExtraction">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopActivateCoopExit" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_3" start="CheckIfAllCompleted" true="ActivateExtraction" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="COOP_ALL_PRIMARY_OBJECTIVES_COMPLETE" data=""/>
+  </DependencyEvent>
+</Sequence>

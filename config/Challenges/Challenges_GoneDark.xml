@@ -1,0 +1,3138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 1
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_1" Desc="LocID_SNDES_ReminderGoneDark_1" Guid="150010" ShortDesc="LocID_SNSD_ReminderGoneDark_1" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150010" PosX="265" PosY="435" Resource="GD_Briggs_001" title="LocID_C_INT_1_Title" loc="LocID_C_INT_1_Loc_0" desc="LocID_C_INT_1_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150010" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150011" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd1" Desc="" Guid="150011" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150010" PosX="794" PosY="652" Resource="GD_Charlie_003" loc="LocID_C_INT_1_Loc_1" desc="LocID_C_INT_1_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150011" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150012" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd1" Desc="" Guid="150012" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150010" PosX="136" PosY="785" Resource="GD_Briggs_007" loc="LocID_C_INT_1_Loc_2" desc="LocID_C_INT_1_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150012" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150013" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd1" Desc="" Guid="150013" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150010" PosX="95" PosY="561" Resource="GD_Briggs_002" loc="LocID_C_INT_1_Loc_3" desc="LocID_C_INT_1_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150013" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150014" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd1" Desc="" Guid="150014" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150010" PosX="192" PosY="379" Resource="GD_Grim_008" loc="LocID_C_INT_1_Loc_4" desc="LocID_C_INT_1_Desc_5" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150014" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150015" />
+        <ID val="150016" />
+        <ID val="150017" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd1" Desc="" Guid="150015" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150010" PosX="757" PosY="661" Resource="GD_Briggs_113" Type="Final" loc="LocID_C_INT_1_Loc_Final" desc="LocID_C_INT_1_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd1" Desc="" Guid="150016" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150010" Resource="GD_Briggs_113" opt="LocID_C_INT_1_Option_A" out="LocID_C_INT_1_Outcome_A" cost="25000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150016" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd1" Desc="" Guid="150017" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150010" Resource="GD_Grim_113" opt="LocID_C_INT_1_Option_B" out="LocID_C_INT_1_Outcome_B" cost="25000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150017" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0"/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 2
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_2" Desc="LocID_SNDES_ReminderGoneDark_2" Guid="150020" ShortDesc="LocID_SNSD_ReminderGoneDark_2" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150020" PosX="312" PosY="884" Resource="GD_Grim_002" title="LocID_C_INT_2_Title" loc="LocID_C_INT_2_Loc_0" desc="LocID_C_INT_2_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150020" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150021" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd2" Desc="" Guid="150021" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150020" PosX="218" PosY="337" Resource="GD_Briggs_008" loc="LocID_C_INT_2_Loc_1" desc="LocID_C_INT_2_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150021" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150022" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd2" Desc="" Guid="150022" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150020" PosX="582" PosY="227" Resource="GD_Charlie_005" loc="LocID_C_INT_2_Loc_2" desc="LocID_C_INT_2_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150022" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150023" />
+        <ID val="150024" />
+        <ID val="150025" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd2" Desc="" Guid="150023" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150020" PosX="752" PosY="344" Resource="GD_Grim_101" Type="Final" loc="LocID_C_INT_2_Loc_Final" desc="LocID_C_INT_2_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd2" Desc="" Guid="150024" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150020" Resource="GD_Briggs_101" opt="LocID_C_INT_2_Option_A" out="LocID_C_INT_2_Outcome_A" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150024" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd2" Desc="" Guid="150025" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150020" Resource="GD_Briggs_101" opt="LocID_C_INT_2_Option_B" out="LocID_C_INT_2_Outcome_B" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150025" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 3
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_3" Desc="LocID_SNDES_ReminderGoneDark_3" Guid="150030" ShortDesc="LocID_SNSD_ReminderGoneDark_3" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150030" PosX="251" PosY="439" Resource="GD_Grim_006" title="LocID_C_INT_3_Title" loc="LocID_C_INT_3_Loc_0" desc="LocID_C_INT_3_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150030" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150031" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd3" Desc="" Guid="150031" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150030" PosX="209" PosY="374" Resource="GD_Charlie_007" loc="LocID_C_INT_3_Loc_1" desc="LocID_C_INT_3_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150031" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150032" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd3" Desc="" Guid="150032" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150030" PosX="312" PosY="382" Resource="GD_Briggs_003" loc="LocID_C_INT_3_Loc_2" desc="LocID_C_INT_3_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150032" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150033" />
+        <ID val="150034" />
+        <ID val="150035" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd3" Desc="" Guid="150033" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150030" PosX="531" PosY="713" Resource="GD_Briggs_108" Type="Final" loc="LocID_C_INT_3_Loc_Final" desc="LocID_C_INT_3_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd3" Desc="" Guid="150034" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150030" Resource="GD_Grim_108" opt="LocID_C_INT_3_Option_A" out="LocID_C_INT_3_Outcome_A" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150034" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd3" Desc="" Guid="150035" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150030" Resource="GD_Grim_108" opt="LocID_C_INT_3_Option_B" out="LocID_C_INT_3_Outcome_B" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150035" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 4
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_4" Desc="LocID_SNDES_ReminderGoneDark_4" Guid="150040" ShortDesc="LocID_SNSD_ReminderGoneDark_4" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150040" PosX="264" PosY="591" Resource="GD_Charlie_004" title="LocID_C_INT_4_Title" loc="LocID_C_INT_4_Loc_0" desc="LocID_C_INT_4_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150040" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150041" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd4" Desc="" Guid="150041" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150040" PosX="338" PosY="600" Resource="GD_Briggs_008" loc="LocID_C_INT_4_Loc_1" desc="LocID_C_INT_4_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150041" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150042" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd4" Desc="" Guid="150042" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150040" PosX="343" PosY="900" Resource="GD_Grim_007" loc="LocID_C_INT_4_Loc_2" desc="LocID_C_INT_4_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150042" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150043" />
+        <ID val="150044" />
+        <ID val="150045" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd4" Desc="" Guid="150043" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150040" PosX="286" PosY="728" Resource="GD_Briggs_103" Type="Final" loc="LocID_C_INT_4_Loc_Final" desc="LocID_C_INT_4_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd4" Desc="" Guid="150044" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150040" Resource="GD_Grim_103" opt="LocID_C_INT_4_Option_A" out="LocID_C_INT_4_Outcome_A" cost="25000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150044" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd4" Desc="" Guid="150045" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150040" Resource="GD_Grim_103" opt="LocID_C_INT_4_Option_B" out="LocID_C_INT_4_Outcome_B" cost="25000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150045" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 5
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_5" Desc="LocID_SNDES_ReminderGoneDark_5" Guid="150050" ShortDesc="LocID_SNSD_ReminderGoneDark_5" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150050" PosX="278" PosY="484" Resource="GD_Grim_005" title="LocID_C_INT_5_Title" loc="LocID_C_INT_5_Loc_0" desc="LocID_C_INT_5_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150050" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150051" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd5" Desc="" Guid="150051" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150050" PosX="541" PosY="887" Resource="GD_Grim_001" loc="LocID_C_INT_5_Loc_1" desc="LocID_C_INT_5_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150051" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150052" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd5" Desc="" Guid="150052" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150050" PosX="173" PosY="278" Resource="GD_Charlie_008" loc="LocID_C_INT_5_Loc_2" desc="LocID_C_INT_5_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150052" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150053" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd5" Desc="" Guid="150053" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150050" PosX="794" PosY="652" Resource="GD_Grim_003" loc="LocID_C_INT_5_Loc_3" desc="LocID_C_INT_5_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150053" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150054" />
+        <ID val="150055" />
+        <ID val="150056" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd5" Desc="" Guid="150054" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150050" PosX="664" PosY="434" Resource="GD_Grim_117" Type="Final" loc="LocID_C_INT_5_Loc_Final" desc="LocID_C_INT_5_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd5" Desc="" Guid="150055" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150050" Resource="GD_Briggs_117" opt="LocID_C_INT_5_Option_A" out="LocID_C_INT_5_Outcome_A" cost="10000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150055" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd5" Desc="" Guid="150056" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150050" Resource="GD_Grim_117" opt="LocID_C_INT_5_Option_B" out="LocID_C_INT_5_Outcome_B" cost="10000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150056" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 6
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_6" Desc="LocID_SNDES_ReminderGoneDark_6" Guid="150060" ShortDesc="LocID_SNSD_ReminderGoneDark_6" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150060" PosX="200" PosY="455" Resource="GD_Charlie_003" title="LocID_C_INT_6_Title" loc="LocID_C_INT_6_Loc_0" desc="LocID_C_INT_6_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150060" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150061" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd6" Desc="" Guid="150061" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150060" PosX="140" PosY="278" Resource="GD_Briggs_002" loc="LocID_C_INT_6_Loc_1" desc="LocID_C_INT_6_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150061" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150062" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd6" Desc="" Guid="150062" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150060" PosX="343" PosY="899" Resource="GD_Charlie_001" loc="LocID_C_INT_6_Loc_2" desc="LocID_C_INT_6_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150062" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150063" />
+        <ID val="150064" />
+        <ID val="150065" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd6" Desc="" Guid="150063" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150060" PosX="285" PosY="633" Resource="GD_Grim_119" Type="Final" loc="LocID_C_INT_6_Loc_Final" desc="LocID_C_INT_6_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd6" Desc="" Guid="150064" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150060" Resource="GD_Briggs_119" opt="LocID_C_INT_6_Option_A" out="LocID_C_INT_6_Outcome_A" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150064" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd6" Desc="" Guid="150065" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150060" Resource="GD_Grim_119" opt="LocID_C_INT_6_Option_B" out="LocID_C_INT_6_Outcome_B" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150065" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 7
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_7" Desc="LocID_SNDES_ReminderGoneDark_7" Guid="150070" ShortDesc="LocID_SNSD_ReminderGoneDark_7" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150070" PosX="288" PosY="426" Resource="GD_Grim_007" title="LocID_C_INT_7_Title" loc="LocID_C_INT_7_Loc_0" desc="LocID_C_INT_7_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150070" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150071" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd7" Desc="" Guid="150071" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150070" PosX="476" PosY="334" Resource="GD_Briggs_004" loc="LocID_C_INT_7_Loc_1" desc="LocID_C_INT_7_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150071" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150072" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd7" Desc="" Guid="150072" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150070" PosX="878" PosY="880" Resource="GD_Charlie_003" loc="LocID_C_INT_7_Loc_2" desc="LocID_C_INT_7_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150072" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150073" />
+        <ID val="150074" />
+        <ID val="150075" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd7" Desc="" Guid="150073" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150070" PosX="836" PosY="756" Resource="GD_Grim_116" Type="Final" loc="LocID_C_INT_7_Loc_Final" desc="LocID_C_INT_7_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd7" Desc="" Guid="150074" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150070" Resource="GD_Grim_116" opt="LocID_C_INT_7_Option_A" out="LocID_C_INT_7_Outcome_A" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150074" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd7" Desc="" Guid="150075" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150070" Resource="GD_Charlie_116" opt="LocID_C_INT_7_Option_B" out="LocID_C_INT_7_Outcome_B" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150075" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 8
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_8" Desc="LocID_SNDES_ReminderGoneDark_8" Guid="150080" ShortDesc="LocID_SNSD_ReminderGoneDark_8" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150080" PosX="258" PosY="442" Resource="GD_Briggs_008" title="LocID_C_INT_8_Title" loc="LocID_C_INT_8_Loc_0" desc="LocID_C_INT_8_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150080" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150081" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd8" Desc="" Guid="150081" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150080" PosX="535" PosY="290" Resource="GD_Grim_005" loc="LocID_C_INT_8_Loc_1" desc="LocID_C_INT_8_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150081" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150082" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd8" Desc="" Guid="150082" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150080" PosX="632" PosY="704" Resource="GD_Briggs_007" loc="LocID_C_INT_8_Loc_2" desc="LocID_C_INT_8_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150082" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150083" />
+        <ID val="150084" />
+        <ID val="150085" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd8" Desc="" Guid="150083" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150080" PosX="470" PosY="439" Resource="GD_Grim_105" Type="Final" loc="LocID_C_INT_8_Loc_Final" desc="LocID_C_INT_8_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd8" Desc="" Guid="150084" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150080" Resource="GD_Grim_105" opt="LocID_C_INT_8_Option_A" out="LocID_C_INT_8_Outcome_A" cost="10000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150084" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd8" Desc="" Guid="150085" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150080" Resource="GD_Briggs_105" opt="LocID_C_INT_8_Option_B" out="LocID_C_INT_8_Outcome_B" cost="10000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150085" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 9
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_9" Desc="LocID_SNDES_ReminderGoneDark_9" Guid="150090" ShortDesc="LocID_SNSD_ReminderGoneDark_9" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150090" PosX="234" PosY="356" Resource="GD_Charlie_008" title="LocID_C_INT_9_Title" loc="LocID_C_INT_9_Loc_0" desc="LocID_C_INT_9_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150090" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150091" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd9" Desc="" Guid="150091" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150090" PosX="192" PosY="380" Resource="GD_Grim_003" loc="LocID_C_INT_9_Loc_1" desc="LocID_C_INT_9_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150091" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150092" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd9" Desc="" Guid="150092" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150090" PosX="478" PosY="269" Resource="GD_Grim_006" loc="LocID_C_INT_9_Loc_2" desc="LocID_C_INT_9_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150092" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150093" />
+        <ID val="150094" />
+        <ID val="150095" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd9" Desc="" Guid="150093" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150090" PosX="222" PosY="456" Resource="GD_Briggs_120" Type="Final" loc="LocID_C_INT_9_Loc_Final" desc="LocID_C_INT_9_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd9" Desc="" Guid="150094" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150090" Resource="GD_Briggs_120" opt="LocID_C_INT_9_Option_A" out="LocID_C_INT_9_Outcome_A" cost="12000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150094" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd9" Desc="" Guid="150095" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150090" Resource="GD_Briggs_120" opt="LocID_C_INT_9_Option_B" out="LocID_C_INT_9_Outcome_B" cost="12000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150095" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 10
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_10" Desc="LocID_SNDES_ReminderGoneDark_10" Guid="150100" ShortDesc="LocID_SNSD_ReminderGoneDark_10" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150100" PosX="216" PosY="326" Resource="GD_Grim_006" title="LocID_C_INT_10_Title" loc="LocID_C_INT_10_Loc_0" desc="LocID_C_INT_10_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150100" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150101" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd10" Desc="" Guid="150101" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150100" PosX="311" PosY="607" Resource="GD_Briggs_002" loc="LocID_C_INT_10_Loc_1" desc="LocID_C_INT_10_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150101" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150102" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd10" Desc="" Guid="150102" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150100" PosX="362" PosY="833" Resource="GD_Briggs_005" loc="LocID_C_INT_10_Loc_2" desc="LocID_C_INT_10_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150102" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150103" />
+        <ID val="150104" />
+        <ID val="150105" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd10" Desc="" Guid="150103" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150100" PosX="300" PosY="760" Resource="GD_Charlie_112" Type="Final" loc="LocID_C_INT_10_Loc_Final" desc="LocID_C_INT_10_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd10" Desc="" Guid="150104" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150100" Resource="GD_Grim_112" opt="LocID_C_INT_10_Option_A" out="LocID_C_INT_10_Outcome_A" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150104" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd10" Desc="" Guid="150105" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150100" Resource="GD_Briggs_112" opt="LocID_C_INT_10_Option_B" out="LocID_C_INT_10_Outcome_B" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150105" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 11
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_11" Desc="LocID_SNDES_ReminderGoneDark_11" Guid="150110" ShortDesc="LocID_SNSD_ReminderGoneDark_11" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150110" PosX="814" PosY="448" Resource="GD_Grim_001" title="LocID_C_INT_11_Title" loc="LocID_C_INT_11_Loc_0" desc="LocID_C_INT_11_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150110" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150111" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd11" Desc="" Guid="150111" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150110" PosX="848" PosY="461" Resource="GD_Grim_005" loc="LocID_C_INT_11_Loc_1" desc="LocID_C_INT_11_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150111" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150112" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd11" Desc="" Guid="150112" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150110" PosX="145" PosY="263" Resource="GD_Charlie_004" loc="LocID_C_INT_11_Loc_2" desc="LocID_C_INT_11_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150112" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150113" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd11" Desc="" Guid="150113" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150110" PosX="522" PosY="661" Resource="GD_Briggs_008" loc="LocID_C_INT_11_Loc_3" desc="LocID_C_INT_11_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150113" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150114" />
+        <ID val="150115" />
+        <ID val="150116" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd11" Desc="" Guid="150114" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150110" PosX="528" PosY="124" Resource="GD_Grim_114" Type="Final" loc="LocID_C_INT_11_Loc_Final" desc="LocID_C_INT_11_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd11" Desc="" Guid="150115" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150110" Resource="GD_Briggs_114" opt="LocID_C_INT_11_Option_A" out="LocID_C_INT_11_Outcome_A" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150115" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd11" Desc="" Guid="150116" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150110" Resource="GD_Charlie_114" opt="LocID_C_INT_11_Option_B" out="LocID_C_INT_11_Outcome_B" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150116" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 12
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_12" Desc="LocID_SNDES_ReminderGoneDark_12" Guid="150120" ShortDesc="LocID_SNSD_ReminderGoneDark_12" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150120" PosX="528" PosY="468" Resource="GD_Grim_003" title="LocID_C_INT_12_Title" loc="LocID_C_INT_12_Loc_0" desc="LocID_C_INT_12_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150120" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150121" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd12" Desc="" Guid="150121" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150120" PosX="329" PosY="487" Resource="GD_Briggs_004" loc="LocID_C_INT_12_Loc_1" desc="LocID_C_INT_12_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150121" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150122" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd12" Desc="" Guid="150122" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150120" PosX="210" PosY="441" Resource="GD_Briggs_005" loc="LocID_C_INT_12_Loc_2" desc="LocID_C_INT_12_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150122" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150123" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd12" Desc="" Guid="150123" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150120" PosX="195" PosY="489" Resource="GD_Charlie_001" loc="LocID_C_INT_12_Loc_3" desc="LocID_C_INT_12_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150123" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150124" />
+        <ID val="150125" />
+        <ID val="150126" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd12" Desc="" Guid="150124" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150120" PosX="382" PosY="817" Resource="GD_Briggs_108" Type="Final" loc="LocID_C_INT_12_Loc_Final" desc="LocID_C_INT_12_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd12" Desc="" Guid="150125" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150120" Resource="GD_Charlie_108" opt="LocID_C_INT_12_Option_A" out="LocID_C_INT_12_Outcome_A" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150125" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd12" Desc="" Guid="150126" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150120" Resource="GD_Briggs_108" opt="LocID_C_INT_12_Option_B" out="LocID_C_INT_12_Outcome_B" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150126" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 13
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_13" Desc="LocID_SNDES_ReminderGoneDark_13" Guid="150130" ShortDesc="LocID_SNSD_ReminderGoneDark_13" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150130" PosX="625" PosY="529" Resource="GD_Charlie_002" title="LocID_C_INT_13_Title" loc="LocID_C_INT_13_Loc_0" desc="LocID_C_INT_13_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150130" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150131" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd13" Desc="" Guid="150131" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150130" PosX="570" PosY="502" Resource="GD_Briggs_006" loc="LocID_C_INT_13_Loc_1" desc="LocID_C_INT_13_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150131" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150132" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd13" Desc="" Guid="150132" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150130" PosX="543" PosY="674" Resource="GD_Briggs_001" loc="LocID_C_INT_13_Loc_2" desc="LocID_C_INT_13_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150132" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150133" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd13" Desc="" Guid="150133" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150130" PosX="613" PosY="799" Resource="GD_Charlie_004" loc="LocID_C_INT_13_Loc_3" desc="LocID_C_INT_13_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150133" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150134" />
+        <ID val="150135" />
+        <ID val="150136" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd13" Desc="" Guid="150134" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150130" PosX="613" PosY="662" Resource="GD_Briggs_111" Type="Final" loc="LocID_C_INT_13_Loc_Final" desc="LocID_C_INT_13_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd13" Desc="" Guid="150135" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150130" Resource="GD_Grim_111" opt="LocID_C_INT_13_Option_A" out="LocID_C_INT_13_Outcome_A" cost="25000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150135" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd13" Desc="" Guid="150136" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150130" Resource="GD_Briggs_111" opt="LocID_C_INT_13_Option_B" out="LocID_C_INT_13_Outcome_B" cost="25000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150136" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 14
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_14" Desc="LocID_SNDES_ReminderGoneDark_14" Guid="150140" ShortDesc="LocID_SNSD_ReminderGoneDark_14" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150140" PosX="878" PosY="739" Resource="GD_Charlie_005" title="LocID_C_INT_14_Title" loc="LocID_C_INT_14_Loc_0" desc="LocID_C_INT_14_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150140" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150141" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd14" Desc="" Guid="150141" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150140" PosX="878" PosY="882" Resource="GD_Grim_001" loc="LocID_C_INT_14_Loc_1" desc="LocID_C_INT_14_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150141" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150142" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd14" Desc="" Guid="150142" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150140" PosX="343" PosY="129" Resource="GD_Grim_002" loc="LocID_C_INT_14_Loc_2" desc="LocID_C_INT_14_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150142" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150143" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd14" Desc="" Guid="150143" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150140" PosX="523" PosY="314" Resource="GD_Grim_004" loc="LocID_C_INT_14_Loc_3" desc="LocID_C_INT_14_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150143" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150144" />
+        <ID val="150145" />
+        <ID val="150146" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd14" Desc="" Guid="150144" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150140" PosX="552" PosY="279" Resource="GD_Briggs_115" Type="Final" loc="LocID_C_INT_14_Loc_Final" desc="LocID_C_INT_14_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd14" Desc="" Guid="150145" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150140" Resource="GD_Briggs_115" opt="LocID_C_INT_14_Option_A" out="LocID_C_INT_14_Outcome_A" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150145" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd14" Desc="" Guid="150146" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150140" Resource="GD_Charlie_115" opt="LocID_C_INT_14_Option_B" out="LocID_C_INT_14_Outcome_B" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150146" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 15
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_15" Desc="LocID_SNDES_ReminderGoneDark_15" Guid="150150" ShortDesc="LocID_SNSD_ReminderGoneDark_15" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150150" PosX="847" PosY="412" Resource="GD_Grim_008" title="LocID_C_INT_15_Title" loc="LocID_C_INT_15_Loc_0" desc="LocID_C_INT_15_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150150" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150151" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd15" Desc="" Guid="150151" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150150" PosX="805" PosY="532" Resource="GD_Briggs_005" loc="LocID_C_INT_15_Loc_1" desc="LocID_C_INT_15_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150151" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150152" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd15" Desc="" Guid="150152" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150150" PosX="770" PosY="614" Resource="GD_Charlie_006" loc="LocID_C_INT_15_Loc_2" desc="LocID_C_INT_15_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150152" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150153" />
+        <ID val="150154" />
+        <ID val="150155" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd15" Desc="" Guid="150153" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150150" PosX="707" PosY="507" Resource="GD_Charlie_102" Type="Final" loc="LocID_C_INT_15_Loc_Final" desc="LocID_C_INT_15_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd15" Desc="" Guid="150154" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150150" Resource="GD_Charlie_102" opt="LocID_C_INT_15_Option_A" out="LocID_C_INT_15_Outcome_A" cost="10000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150154" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd15" Desc="" Guid="150155" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150150" Resource="GD_Briggs_102" opt="LocID_C_INT_15_Option_B" out="LocID_C_INT_15_Outcome_B" cost="10000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150155" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 16
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_16" Desc="LocID_SNDES_ReminderGoneDark_16" Guid="150160" ShortDesc="LocID_SNSD_ReminderGoneDark_16" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150160" PosX="263" PosY="434" Resource="GD_Charlie_001" title="LocID_C_INT_16_Title" loc="LocID_C_INT_16_Loc_0" desc="LocID_C_INT_16_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150160" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150161" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd16" Desc="" Guid="150161" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150160" PosX="433" PosY="464" Resource="GD_Briggs_002" loc="LocID_C_INT_16_Loc_1" desc="LocID_C_INT_16_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150161" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150162" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd16" Desc="" Guid="150162" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150160" PosX="382" PosY="821" Resource="GD_Briggs_006" loc="LocID_C_INT_16_Loc_2" desc="LocID_C_INT_16_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150162" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150163" />
+        <ID val="150164" />
+        <ID val="150165" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd16" Desc="" Guid="150163" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150160" PosX="324" PosY="797" Resource="GD_Briggs_109" Type="Final" loc="LocID_C_INT_16_Loc_Final" desc="LocID_C_INT_16_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd16" Desc="" Guid="150164" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150160" Resource="GD_Briggs_109" opt="LocID_C_INT_16_Option_A" out="LocID_C_INT_16_Outcome_A" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150164" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd16" Desc="" Guid="150165" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150160" Resource="GD_Charlie_109" opt="LocID_C_INT_16_Option_B" out="LocID_C_INT_16_Outcome_B" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150165" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 17
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_17" Desc="LocID_SNDES_ReminderGoneDark_17" Guid="150170" ShortDesc="LocID_SNSD_ReminderGoneDark_17" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150170" PosX="478" PosY="460" Resource="GD_Grim_002" title="LocID_C_INT_17_Title" loc="LocID_C_INT_17_Loc_0" desc="LocID_C_INT_17_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150170" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150171" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd17" Desc="" Guid="150171" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150170" PosX="284" PosY="491" Resource="GD_Charlie_007" loc="LocID_C_INT_17_Loc_1" desc="LocID_C_INT_17_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150171" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150172" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd17" Desc="" Guid="150172" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150170" PosX="492" PosY="282" Resource="GD_Briggs_004" loc="LocID_C_INT_17_Loc_2" desc="LocID_C_INT_17_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150172" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150173" />
+        <ID val="150174" />
+        <ID val="150175" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd17" Desc="" Guid="150173" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150170" PosX="526" PosY="323" Resource="GD_Grim_104" Type="Final" loc="LocID_C_INT_17_Loc_Final" desc="LocID_C_INT_17_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd17" Desc="" Guid="150174" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150170" Resource="GD_Charlie_104" opt="LocID_C_INT_17_Option_A" out="LocID_C_INT_17_Outcome_A" cost="10000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150174" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd17" Desc="" Guid="150175" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150170" Resource="GD_Briggs_104" opt="LocID_C_INT_17_Option_B" out="LocID_C_INT_17_Outcome_B" cost="10000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150175" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 18
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_18" Desc="LocID_SNDES_ReminderGoneDark_18" Guid="150180" ShortDesc="LocID_SNSD_ReminderGoneDark_18" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150180" PosX="770" PosY="598" Resource="GD_Grim_007" title="LocID_C_INT_18_Title" loc="LocID_C_INT_18_Loc_0" desc="LocID_C_INT_18_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150180" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150181" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd18" Desc="" Guid="150181" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150180" PosX="816" PosY="435" Resource="GD_Grim_006" loc="LocID_C_INT_18_Loc_1" desc="LocID_C_INT_18_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150181" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150182" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd18" Desc="" Guid="150182" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150180" PosX="887" PosY="275" Resource="GD_Charlie_008" loc="LocID_C_INT_18_Loc_2" desc="LocID_C_INT_18_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150182" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150183" />
+        <ID val="150184" />
+        <ID val="150185" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd18" Desc="" Guid="150183" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150180" PosX="584" PosY="319" Resource="GD_Briggs_112" Type="Final" loc="LocID_C_INT_18_Loc_Final" desc="LocID_C_INT_18_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd18" Desc="" Guid="150184" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150180" Resource="GD_Briggs_112" opt="LocID_C_INT_18_Option_A" out="LocID_C_INT_18_Outcome_A" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150184" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd18" Desc="" Guid="150185" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150180" Resource="GD_Grim_112" opt="LocID_C_INT_18_Option_B" out="LocID_C_INT_18_Outcome_B" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150185" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 19
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_19" Desc="LocID_SNDES_ReminderGoneDark_19" Guid="150190" ShortDesc="LocID_SNSD_ReminderGoneDark_19" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150190" PosX="480" PosY="472" Resource="GD_Charlie_006" title="LocID_C_INT_19_Title" loc="LocID_C_INT_19_Loc_0" desc="LocID_C_INT_19_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150190" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150191" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd19" Desc="" Guid="150191" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150190" PosX="496" PosY="600" Resource="GD_Briggs_001" loc="LocID_C_INT_19_Loc_1" desc="LocID_C_INT_19_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150191" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150192" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd19" Desc="" Guid="150192" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150190" PosX="451" PosY="573" Resource="GD_Charlie_002" loc="LocID_C_INT_19_Loc_2" desc="LocID_C_INT_19_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150192" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150193" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd19" Desc="" Guid="150193" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150190" PosX="512" PosY="675" Resource="GD_Briggs_007" loc="LocID_C_INT_19_Loc_3" desc="LocID_C_INT_19_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150193" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150194" />
+        <ID val="150195" />
+        <ID val="150196" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd19" Desc="" Guid="150194" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150190" PosX="347" PosY="651" Resource="GD_Grim_106" Type="Final" loc="LocID_C_INT_19_Loc_Final" desc="LocID_C_INT_19_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd19" Desc="" Guid="150195" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150190" Resource="GD_Grim_106" opt="LocID_C_INT_19_Option_A" out="LocID_C_INT_19_Outcome_A" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150195" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd19" Desc="" Guid="150196" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150190" Resource="GD_Briggs_106" opt="LocID_C_INT_19_Option_B" out="LocID_C_INT_19_Outcome_B" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150196" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 20
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_20" Desc="LocID_SNDES_ReminderGoneDark_20" Guid="150200" ShortDesc="LocID_SNSD_ReminderGoneDark_20" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150200" PosX="262" PosY="397" Resource="GD_Grim_004" title="LocID_C_INT_20_Title" loc="LocID_C_INT_20_Loc_0" desc="LocID_C_INT_20_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150200" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150201" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd20" Desc="" Guid="150201" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150200" PosX="237" PosY="567" Resource="GD_Grim_006" loc="LocID_C_INT_20_Loc_1" desc="LocID_C_INT_20_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150201" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150202" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd20" Desc="" Guid="150202" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150200" PosX="286" PosY="629" Resource="GD_Briggs_008" loc="LocID_C_INT_20_Loc_2" desc="LocID_C_INT_20_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150202" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150203" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd20" Desc="" Guid="150203" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150200" PosX="314" PosY="894" Resource="GD_Briggs_003" loc="LocID_C_INT_20_Loc_3" desc="LocID_C_INT_20_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150203" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150204" />
+        <ID val="150205" />
+        <ID val="150206" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd20" Desc="" Guid="150204" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150200" PosX="318" PosY="622" Resource="GD_Briggs_102" Type="Final" loc="LocID_C_INT_20_Loc_Final" desc="LocID_C_INT_20_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd20" Desc="" Guid="150205" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150200" Resource="GD_Briggs_102" opt="LocID_C_INT_20_Option_A" out="LocID_C_INT_20_Outcome_A" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150205" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd20" Desc="" Guid="150206" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150200" Resource="GD_Grim_102" opt="LocID_C_INT_20_Option_B" out="LocID_C_INT_20_Outcome_B" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150206" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 21
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_21" Desc="LocID_SNDES_ReminderGoneDark_21" Guid="150210" ShortDesc="LocID_SNSD_ReminderGoneDark_21" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150210" PosX="211" PosY="480" Resource="GD_Grim_003" title="LocID_C_INT_21_Title" loc="LocID_C_INT_21_Loc_0" desc="LocID_C_INT_21_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150210" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150211" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd21" Desc="" Guid="150211" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150210" PosX="350" PosY="897" Resource="GD_Briggs_002" loc="LocID_C_INT_21_Loc_1" desc="LocID_C_INT_21_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150211" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150212" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd21" Desc="" Guid="150212" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150210" PosX="286" PosY="684" Resource="GD_Briggs_005" loc="LocID_C_INT_21_Loc_2" desc="LocID_C_INT_21_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150212" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150213" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd21" Desc="" Guid="150213" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150210" PosX="381" PosY="780" Resource="GD_Grim_004" loc="LocID_C_INT_21_Loc_3" desc="LocID_C_INT_21_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150213" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150214" />
+        <ID val="150215" />
+        <ID val="150216" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd21" Desc="" Guid="150214" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150210" PosX="308" PosY="547" Resource="GD_Grim_116" Type="Final" loc="LocID_C_INT_21_Loc_Final" desc="LocID_C_INT_21_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd21" Desc="" Guid="150215" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150210" Resource="GD_Grim_116" opt="LocID_C_INT_21_Option_A" out="LocID_C_INT_21_Outcome_A" cost="17500" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150215" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd21" Desc="" Guid="150216" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150210" Resource="GD_Charlie_116" opt="LocID_C_INT_21_Option_B" out="LocID_C_INT_21_Outcome_B" cost="17500" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150216" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 22
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_22" Desc="LocID_SNDES_ReminderGoneDark_22" Guid="150220" ShortDesc="LocID_SNSD_ReminderGoneDark_22" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150220" PosX="85" PosY="555" Resource="GD_Grim_001" title="LocID_C_INT_22_Title" loc="LocID_C_INT_22_Loc_0" desc="LocID_C_INT_22_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150220" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150221" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd22" Desc="" Guid="150221" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150220" PosX="822" PosY="734" Resource="GD_Charlie_007" loc="LocID_C_INT_22_Loc_1" desc="LocID_C_INT_22_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150221" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150222" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd22" Desc="" Guid="150222" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150220" PosX="743" PosY="655" Resource="GD_Charlie_006" loc="LocID_C_INT_22_Loc_2" desc="LocID_C_INT_22_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150222" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150223" />
+        <ID val="150224" />
+        <ID val="150225" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd22" Desc="" Guid="150223" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150220" PosX="809" PosY="592" Resource="GD_Grim_107" Type="Final" loc="LocID_C_INT_22_Loc_Final" desc="LocID_C_INT_22_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd22" Desc="" Guid="150224" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150220" Resource="GD_Briggs_107" opt="LocID_C_INT_22_Option_A" out="LocID_C_INT_22_Outcome_A" cost="25000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150224" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd22" Desc="" Guid="150225" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150220" Resource="GD_Charlie_107" opt="LocID_C_INT_22_Option_B" out="LocID_C_INT_22_Outcome_B" cost="25000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150225" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 23
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_23" Desc="LocID_SNDES_ReminderGoneDark_23" Guid="150230" ShortDesc="LocID_SNSD_ReminderGoneDark_23" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150230" PosX="483" PosY="436" Resource="GD_Grim_005" title="LocID_C_INT_23_Title" loc="LocID_C_INT_23_Loc_0" desc="LocID_C_INT_23_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150230" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150231" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd23" Desc="" Guid="150231" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150230" PosX="651" PosY="395" Resource="GD_Charlie_004" loc="LocID_C_INT_23_Loc_1" desc="LocID_C_INT_23_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150231" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150232" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd23" Desc="" Guid="150232" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150230" PosX="582" PosY="312" Resource="GD_Briggs_002" loc="LocID_C_INT_23_Loc_2" desc="LocID_C_INT_23_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150232" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150233" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd23" Desc="" Guid="150233" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150230" PosX="809" PosY="595" Resource="GD_Briggs_008" loc="LocID_C_INT_23_Loc_3" desc="LocID_C_INT_23_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150233" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150234" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd23" Desc="" Guid="150234" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150230" PosX="329" PosY="880" Resource="GD_Charlie_003" loc="LocID_C_INT_23_Loc_4" desc="LocID_C_INT_23_Desc_5" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150234" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150235" />
+        <ID val="150236" />
+        <ID val="150237" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd23" Desc="" Guid="150235" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150230" PosX="297" PosY="530" Resource="GD_Briggs_115" Type="Final" loc="LocID_C_INT_23_Loc_Final" desc="LocID_C_INT_23_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd23" Desc="" Guid="150236" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150230" Resource="GD_Grim_115" opt="LocID_C_INT_23_Option_A" out="LocID_C_INT_23_Outcome_A" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150236" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd23" Desc="" Guid="150237" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150230" Resource="GD_Briggs_115" opt="LocID_C_INT_23_Option_B" out="LocID_C_INT_23_Outcome_B" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150237" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 24
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_24" Desc="LocID_SNDES_ReminderGoneDark_24" Guid="150240" ShortDesc="LocID_SNSD_ReminderGoneDark_24" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150240" PosX="498" PosY="642" Resource="GD_Briggs_006" title="LocID_C_INT_24_Title" loc="LocID_C_INT_24_Loc_0" desc="LocID_C_INT_24_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150240" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150241" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd24" Desc="" Guid="150241" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150240" PosX="578" PosY="569" Resource="GD_Briggs_007" loc="LocID_C_INT_24_Loc_1" desc="LocID_C_INT_24_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150241" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150242" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd24" Desc="" Guid="150242" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150240" PosX="608" PosY="761" Resource="GD_Grim_001" loc="LocID_C_INT_24_Loc_2" desc="LocID_C_INT_24_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150242" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150243" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd24" Desc="" Guid="150243" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150240" PosX="561" PosY="827" Resource="GD_Grim_004" loc="LocID_C_INT_24_Loc_3" desc="LocID_C_INT_24_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150243" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150244" />
+        <ID val="150245" />
+        <ID val="150246" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd24" Desc="" Guid="150244" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150240" PosX="760" PosY="669" Resource="GD_Briggs_104" Type="Final" loc="LocID_C_INT_24_Loc_Final" desc="LocID_C_INT_24_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd24" Desc="" Guid="150245" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150240" Resource="GD_Grim_104" opt="LocID_C_INT_24_Option_A" out="LocID_C_INT_24_Outcome_A" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150245" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd24" Desc="" Guid="150246" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150240" Resource="GD_Charlie_104" opt="LocID_C_INT_24_Option_B" out="LocID_C_INT_24_Outcome_B" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150246" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 25
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_25" Desc="LocID_SNDES_ReminderGoneDark_25" Guid="150250" ShortDesc="LocID_SNSD_ReminderGoneDark_25" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150250" PosX="669" PosY="367" Resource="GD_Briggs_003" title="LocID_C_INT_25_Title" loc="LocID_C_INT_25_Loc_0" desc="LocID_C_INT_25_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150250" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150251" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd25" Desc="" Guid="150251" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150250" PosX="657" PosY="493" Resource="GD_Charlie_005" loc="LocID_C_INT_25_Loc_1" desc="LocID_C_INT_25_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150251" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150252" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd25" Desc="" Guid="150252" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150250" PosX="498" PosY="584" Resource="GD_Grim_002" loc="LocID_C_INT_25_Loc_2" desc="LocID_C_INT_25_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150252" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150253" />
+        <ID val="150254" />
+        <ID val="150255" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd25" Desc="" Guid="150253" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150250" PosX="554" PosY="792" Resource="GD_Briggs_120" Type="Final" loc="LocID_C_INT_25_Loc_Final" desc="LocID_C_INT_25_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd25" Desc="" Guid="150254" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150250" Resource="GD_Charlie_120" opt="LocID_C_INT_25_Option_A" out="LocID_C_INT_25_Outcome_A" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150254" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd25" Desc="" Guid="150255" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150250" Resource="GD_Briggs_120" opt="LocID_C_INT_25_Option_B" out="LocID_C_INT_25_Outcome_B" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150255" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 26
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_26" Desc="LocID_SNDES_ReminderGoneDark_26" Guid="150260" ShortDesc="LocID_SNSD_ReminderGoneDark_26" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150260" PosX="137" PosY="273" Resource="GD_Grim_008" title="LocID_C_INT_26_Title" loc="LocID_C_INT_26_Loc_0" desc="LocID_C_INT_26_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150260" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150261" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd26" Desc="" Guid="150261" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150260" PosX="590" PosY="780" Resource="GD_Briggs_004" loc="LocID_C_INT_26_Loc_1" desc="LocID_C_INT_26_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150261" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150262" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd26" Desc="" Guid="150262" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150260" PosX="524" PosY="710" Resource="GD_Briggs_006" loc="LocID_C_INT_26_Loc_2" desc="LocID_C_INT_26_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150262" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150263" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd26" Desc="" Guid="150263" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150260" PosX="645" PosY="804" Resource="GD_Charlie_001" loc="LocID_C_INT_26_Loc_3" desc="LocID_C_INT_26_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150263" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150264" />
+        <ID val="150265" />
+        <ID val="150266" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd26" Desc="" Guid="150264" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150260" PosX="535" PosY="290" Resource="GD_Grim_113" Type="Final" loc="LocID_C_INT_26_Loc_Final" desc="LocID_C_INT_26_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd26" Desc="" Guid="150265" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150260" Resource="GD_Briggs_113" opt="LocID_C_INT_26_Option_A" out="LocID_C_INT_26_Outcome_A" cost="22500" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150265" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd26" Desc="" Guid="150266" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150260" Resource="GD_Grim_113" opt="LocID_C_INT_26_Option_B" out="LocID_C_INT_26_Outcome_B" cost="22500" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150266" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 27
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_27" Desc="LocID_SNDES_ReminderGoneDark_27" Guid="150270" ShortDesc="LocID_SNSD_ReminderGoneDark_27" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150270" PosX="589" PosY="311" Resource="GD_Briggs_007" title="LocID_C_INT_27_Title" loc="LocID_C_INT_27_Loc_0" desc="LocID_C_INT_27_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150270" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150271" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd27" Desc="" Guid="150271" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150270" PosX="672" PosY="425" Resource="GD_Grim_005" loc="LocID_C_INT_27_Loc_1" desc="LocID_C_INT_27_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150271" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150272" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd27" Desc="" Guid="150272" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150270" PosX="671" PosY="348" Resource="GD_Grim_002" loc="LocID_C_INT_27_Loc_2" desc="LocID_C_INT_27_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150272" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150273" />
+        <ID val="150274" />
+        <ID val="150275" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd27" Desc="" Guid="150273" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150270" PosX="666" PosY="531" Resource="GD_Grim_114" Type="Final" loc="LocID_C_INT_27_Loc_Final" desc="LocID_C_INT_27_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd27" Desc="" Guid="150274" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150270" Resource="GD_Grim_114" opt="LocID_C_INT_27_Option_A" out="LocID_C_INT_27_Outcome_A" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150274" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd27" Desc="" Guid="150275" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150270" Resource="GD_Briggs_114" opt="LocID_C_INT_27_Option_B" out="LocID_C_INT_27_Outcome_B" cost="20000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150275" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 28
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_28" Desc="LocID_SNDES_ReminderGoneDark_28" Guid="150280" ShortDesc="LocID_SNSD_ReminderGoneDark_28" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150280" PosX="465" PosY="643" Resource="GD_Grim_004" title="LocID_C_INT_28_Title" loc="LocID_C_INT_28_Loc_0" desc="LocID_C_INT_28_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150280" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150281" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd28" Desc="" Guid="150281" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150280" PosX="191" PosY="368" Resource="GD_Charlie_006" loc="LocID_C_INT_28_Loc_1" desc="LocID_C_INT_28_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150281" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150282" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd28" Desc="" Guid="150282" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150280" PosX="197" PosY="493" Resource="GD_Briggs_003" loc="LocID_C_INT_28_Loc_2" desc="LocID_C_INT_28_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150282" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150283" />
+        <ID val="150284" />
+        <ID val="150285" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd28" Desc="" Guid="150283" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150280" PosX="847" PosY="463" Resource="GD_Charlie_110" Type="Final" loc="LocID_C_INT_28_Loc_Final" desc="LocID_C_INT_28_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd28" Desc="" Guid="150284" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150280" Resource="GD_Briggs_110" opt="LocID_C_INT_28_Option_A" out="LocID_C_INT_28_Outcome_A" cost="27500" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150284" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd28" Desc="" Guid="150285" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150280" Resource="GD_Charlie_110" opt="LocID_C_INT_28_Option_B" out="LocID_C_INT_28_Outcome_B" cost="27500" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150285" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 29
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_29" Desc="LocID_SNDES_ReminderGoneDark_29" Guid="150290" ShortDesc="LocID_SNSD_ReminderGoneDark_29" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150290" PosX="254" PosY="357" Resource="GD_Charlie_002" title="LocID_C_INT_29_Title" loc="LocID_C_INT_29_Loc_0" desc="LocID_C_INT_29_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150290" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150291" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd29" Desc="" Guid="150291" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150290" PosX="268" PosY="144" Resource="GD_Briggs_007" loc="LocID_C_INT_29_Loc_1" desc="LocID_C_INT_29_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150291" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150292" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd29" Desc="" Guid="150292" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150290" PosX="571" PosY="213" Resource="GD_Briggs_001" loc="LocID_C_INT_29_Loc_2" desc="LocID_C_INT_29_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150292" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150293" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd29" Desc="" Guid="150293" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150290" PosX="611" PosY="483" Resource="GD_Grim_008" loc="LocID_C_INT_29_Loc_3" desc="LocID_C_INT_29_Desc_4" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150293" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150294" />
+        <ID val="150295" />
+        <ID val="150296" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd29" Desc="" Guid="150294" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150290" PosX="472" PosY="514" Resource="GD_Briggs_111" Type="Final" loc="LocID_C_INT_29_Loc_Final" desc="LocID_C_INT_29_Desc_Final" Result="A" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd29" Desc="" Guid="150295" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150290" Resource="GD_Briggs_111" opt="LocID_C_INT_29_Option_A" out="LocID_C_INT_29_Outcome_A" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150295" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd29" Desc="" Guid="150296" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150290" Resource="GD_Charlie_111" opt="LocID_C_INT_29_Option_B" out="LocID_C_INT_29_Outcome_B" cost="15000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150296" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <!-- 
+  ////////////////////////////////////////////////////////////////////
+  // Gone Dark 30
+  ////////////////////////////////////////////////////////////////////
+  -->
+  <Challenge Name="LocID_SNN_ReminderGoneDark_30" Desc="LocID_SNDES_ReminderGoneDark_30" Guid="150300" ShortDesc="LocID_SNSD_ReminderGoneDark_30" Category="OnlineChallengeGoneDarkHeader">
+    <GoneDark id="150300" PosX="789" PosY="875" Resource="GD_Briggs_001" title="LocID_C_INT_30_Title" loc="LocID_C_INT_30_Loc_0" desc="LocID_C_INT_30_Desc_1" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150300" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150301" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd30" Desc="" Guid="150301" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150300" PosX="687" PosY="723" Resource="GD_Grim_003" loc="LocID_C_INT_30_Loc_1" desc="LocID_C_INT_30_Desc_2" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150301" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150302" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd30" Desc="" Guid="150302" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150300" PosX="648" PosY="798" Resource="GD_Charlie_004" loc="LocID_C_INT_30_Loc_2" desc="LocID_C_INT_30_Desc_3" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150302" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <UnlockChallenge>
+        <ID val="150303" />
+        <ID val="150304" />
+        <ID val="150305" />
+      </UnlockChallenge>
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd30" Desc="" Guid="150303" ShortDesc="" Category="OnlineChallengeGoneDark">
+    <GoneDark id="150300" PosX="644" PosY="541" Resource="GD_Grim_118" Type="Final" loc="LocID_C_INT_30_Loc_Final" desc="LocID_C_INT_30_Desc_Final" Result="B" />
+    <Definition>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd30" Desc="" Guid="150304" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeA">
+    <GoneDark id="150300" Resource="GD_Charlie_118" opt="LocID_C_INT_30_Option_A" out="LocID_C_INT_30_Outcome_A" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150304" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier Value="0" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="gd30" Desc="" Guid="150305" ShortDesc="" Category="OnlineCHallengeGoneDarkOutComeB">
+    <GoneDark id="150300" Resource="GD_Grim_118" opt="LocID_C_INT_30_Option_B" out="LocID_C_INT_30_Outcome_B" cost="30000" />
+    <Definition>
+      <GameEvent>
+        <Event>
+          <GoneDarkUI>
+            <ID Op="Equal" Value="150305" />
+          </GoneDarkUI>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <EconomyMultiplier/>
+    </StepReward>
+  </Challenge>
+</Challenges>

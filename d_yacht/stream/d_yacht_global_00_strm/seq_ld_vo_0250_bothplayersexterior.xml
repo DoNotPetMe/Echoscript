@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0250_BothPlayersExterior" leveluid="1" streamedRandomID="32642577">
+  <Task name="VolumnEnterEventCheck_Front" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="VolumnEnterEventCheck_LeftUp" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="VolumnEnterEventCheck_RightUp" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_2">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="VolumnEnterEventCheck_Front" true="NewTask_2" data="UID:000005be" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="VolumnEnterEventCheck_LeftUp" true="NewTask_3" data="UID:000005bf" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="VolumnEnterEventCheck_RightUp" true="NewTask_4" data="UID:000005c0" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="DisableSideVolumn">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000005bc" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000005bd" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="VolumnOccupyEventCheckLeft" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="VolumnOccupyEventCheckRight" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_2" start="VolumnOccupyEventCheckLeft" true="NewTask_8" data="UID:000005bc" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_3" start="VolumnOccupyEventCheckRight" true="NewTask_9" data="UID:000005bd" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <Task name="NewTask_10" logicor="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask_2" true="NewTask_10" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask_3" true="NewTask_10" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_4" true="NewTask_10" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="NewTask_10" true="DisableSideVolumn" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0250_BothPlayersExterior" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="DisableSideVolumn" true="StopSequence" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <Task name="NewTask_12" logicand="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="NewTask_8" true="NewTask_12" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="NewTask_9" true="NewTask_12" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <Task name="B_MISS_0250_COM_01_01SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.176229">
+          <CommandInstance name="SetDialog" duration="1.176229" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0250_COM::16601::54736" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0250_COM_01_02ISAACB_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Briggs_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="3.765479">
+          <CommandInstance name="SetDialog" duration="2.765479" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0250_COM::16601::54737" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0250_COM_01_03SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.456146">
+          <CommandInstance name="SetDialog" duration="1.456146" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::GUL_YAT::0250_COM::16601::54738" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Single">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0250_BothPlayersExterior" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_6" start="B_MISS_0250_COM_01_01SAM_DRY" true="B_MISS_0250_COM_01_02ISAACB_DRY" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="B_MISS_0250_COM_01_02ISAACB_DRY" true="B_MISS_0250_COM_01_03SAM_DRY" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="B_MISS_0250_COM_01_03SAM_DRY" true="StopSequence_Single" sequence="LD_VO_0250_BothPlayersExterior"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="NewTask_12" true="B_MISS_0250_COM_01_01SAM_DRY" sequence="LD_VO_0250_BothPlayersExterior"/>
+</Sequence>

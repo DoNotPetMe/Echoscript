@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeadDrops>
+  <DeadDrop Map="S_BAD_Global" SeqAudio="HUB_DD_Sadiq" Achievement="1" />
+  <DeadDrop Map="S_BLO_Global" SeqAudio="HUB_DD_Blood" Achievement="1" />  
+  <DeadDrop Map="S_CHE_Global" SeqAudio="HUB_DD_Chemical" Achievement="1" />  
+  <DeadDrop Map="S_CON_Global" SeqAudio="HUB_DD_Consumption" Achievement="1" />
+  <DeadDrop Map="S_DET_Global" SeqAudio="HUB_DD_Detention" Achievement="1" />
+  <DeadDrop Map="S_FRE_Global" SeqAudio="HUB_DD_Freedom" Achievement="1" />
+  <DeadDrop Map="S_FUE_Global" SeqAudio="HUB_DD_Fuel" Achievement="1" />
+  <DeadDrop Map="S_KOB_Global" SeqAudio="HUB_DD_Kobin" Achievement="1" />
+  <DeadDrop Map="S_NOU_Global" SeqAudio="HUB_DD_Nouri" Achievement="1" />
+  <DeadDrop Map="S_QOD_Global" SeqAudio="HUB_DD_QODs" Achievement="1" />  
+  <DeadDrop Map="D_Bangalore_Global" SeqAudio="HUB_DD_BriggsBangalore" Achievement="1" />
+  <DeadDrop Map="D_Chittagong_Global" SeqAudio="HUB_DD_BriggsChittagong" Achievement="1" />
+  <DeadDrop Map="D_Kargil_Global" SeqAudio="HUB_DD_BriggsKargil" Achievement="1" />
+  <DeadDrop Map="D_Koltsovo_Global" SeqAudio="HUB_DD_BriggsKoltsovo" Achievement="1" />
+  <DeadDrop Map="D_DiamondMine_Global" SeqAudio="HUB_DD_KobinDiamondMine" Achievement="1" />
+  <DeadDrop Map="D_FPP_Global" SeqAudio="HUB_DD_KobinAralSea" />
+  <DeadDrop Map="D_FishMarket_Global" SeqAudio="HUB_DD_KobinFishMarket" Achievement="1" />
+  <DeadDrop Map="D_OpiumFarm_Global" SeqAudio="HUB_DD_KobinOpiumFarm" Achievement="1" />
+  <DeadDrop Map="D_BorderCross_Global" SeqAudio="HUB_DD_GrimBorderCrossing" Achievement="1" />
+  <DeadDrop Map="D_HackerDen_Global" SeqAudio="HUB_DD_GrimHackerDen" Achievement="1" />
+  <DeadDrop Map="D_SeaFort_Global" SeqAudio="HUB_DD_GrimSeaFort" Achievement="1" />
+  <DeadDrop Map="D_Yacht_Global" SeqAudio="HUB_DD_GrimYacht" />
+  <DeadDrop Map="D_Amman_Global" SeqAudio="HUB_DD_CharlieAmman" Achievement="1" />
+  <DeadDrop Map="D_Bratislava_Global" SeqAudio="HUB_DD_CharlieBratislava" Achievement="1" />
+  <DeadDrop Map="D_Kigali_Global" SeqAudio="HUB_DD_CharlieKigali" Achievement="1" />
+  <DeadDrop Map="D_Sanaa_Global" SeqAudio="HUB_DD_CharlieSanaa" Achievement="1" />
+</DeadDrops>

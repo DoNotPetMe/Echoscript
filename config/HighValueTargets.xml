@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HighValueTargets>
+  <HighValueTarget Map="S_AIR_Global" Achievement="1" />
+  <HighValueTarget Map="S_BAD_Global" Achievement="1" />
+  <HighValueTarget Map="S_BLO_Global" Achievement="1" />
+  <HighValueTarget Map="S_CHE_Global" Achievement="1" />
+  <HighValueTarget Map="S_CON_Global" Achievement="1" />
+  <HighValueTarget Map="S_FRE_Global" Achievement="1" />
+  <HighValueTarget Map="S_FUE_Global" Achievement="1" />
+  <HighValueTarget Map="S_KOB_Global" Achievement="1" />
+  <HighValueTarget Map="S_NOU_Global" Achievement="1" />
+  <HighValueTarget Map="S_QOD_Global" Achievement="1" />
+  <HighValueTarget Map="D_Bangalore_Global" Achievement="1" />
+  <HighValueTarget Map="D_Chittagong_Global" Achievement="1" />
+  <HighValueTarget Map="D_Kargil_Global" Achievement="1" />
+  <HighValueTarget Map="D_Koltsovo_Global" Achievement="1" />
+  <HighValueTarget Map="D_DiamondMine_Global" Achievement="1" />
+  <HighValueTarget Map="D_FPP_Global" />
+  <HighValueTarget Map="D_FishMarket_Global" Achievement="1" />
+  <HighValueTarget Map="D_OpiumFarm_Global" Achievement="1" />
+  <HighValueTarget Map="D_BorderCross_Global" Achievement="1" />
+  <HighValueTarget Map="D_HackerDen_Global" Achievement="1" />
+  <HighValueTarget Map="D_SeaFort_Global" Achievement="1" />
+  <HighValueTarget Map="D_Yacht_Global" />
+ </HighValueTargets>

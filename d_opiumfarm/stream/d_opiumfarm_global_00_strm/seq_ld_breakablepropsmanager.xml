@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_BreakablePropsManager" leveluid="3" streamedRandomID="1136646976">
+  <Task name="Init Generator" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_Breakable_StartGenerator" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Generator Broken">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::O_CoopObjectiveManager_0" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Generator Broken!"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_Breakable_StartGenerator" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::Sequences::LD_Breakable_StopGenerator" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="Set Bool After Call the Stop Sequence" entity="Repository::bGeneratorBroken" TypeDeleted="Boolean">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_2" start="Init Generator" true="Generator Broken" data="UID:000016b9" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_DESTROYED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="EMP Check_0" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Deactivated_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObjectiveManager_0" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Generator Got EMPed! deactivated sound!"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::Sequences::LD_Breakable_StopGenerator" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_Breakable_StartGenerator" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Recovered_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObjectiveManager_0" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Generator Recovered!"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_Breakable_StartGenerator" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_3" start="EMP Check_0" true="Deactivated_0" data="UID:000016b9" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_DEACTIVATED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_4" start="Deactivated_0" true="Recovered_0" data="UID:000016b9" InUnrealActors="1" TypeDeleted="GOLight">
+    <ExternalEventInstance name="GI_EMP_RECOVERED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_0" start="Recovered_0" true="EMP Check_0" sequence="LD_BreakablePropsManager"/>
+</Sequence>

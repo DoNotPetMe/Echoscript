@@ -1,0 +1,21 @@
+<!--
+
+    This files defines the configuration data for gyms and will NOT be loaded in the 
+    RETAIL version of the game.
+
+	See http://mdc-web-tomcat17.ubisoft.org/confluence/display/Blacklistprog/MapSetupMP
+    for useage information.
+
+-->
+	
+<maps>
+  <map name="ANTONOV" bbid="0" description="Antonov" thumbnail="" file="_COOP\C05_Antonov.unr" linfile="C05_Antonov">
+
+    <!-- Game mode list -->
+    <mode name="CoopStory" enabled="1"/>
+
+    <blackbox name="ANTONOV_1" bbid="0" description="Antonov" thumbnail="" file="_COOP\C05_Antonov.unr" linfile="C05_Antonov" IsChapter="1">
+    </blackbox>
+  </map>
+
+</maps>

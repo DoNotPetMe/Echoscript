@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GEDValueGroups>
+
+  <EconomyRewards>
+    <EconomyReward Name="StandardTier1" Value="10000" />
+    <EconomyReward Name="StandardTier2" Value="30000" />
+    <EconomyReward Name="StandardTier3" Value="100000" />
+	<EconomyReward Name="StandardTier4" Value="200000" />
+	<EconomyReward Name="StandardTier5" Value="300000" />
+	<EconomyReward Name="WeaponTier1" Value="10000" />
+    <EconomyReward Name="WeaponTier2" Value="20000" />
+    <EconomyReward Name="WeaponTier3" Value="30000" />
+    <EconomyReward Name="WeaponTier4" Value="50000" />
+    <EconomyReward Name="WeaponTier5" Value="100000" />
+    <EconomyReward Name="SingleSmall" Value="10000" />
+    <EconomyReward Name="SingleLarge" Value="20000" />
+    <EconomyReward Name="UpgradeLarge" Value="30000" />
+    <EconomyReward Name="UpgradeInteriorComplete" Value="30000" />
+    <EconomyReward Name="CoopSmall" Value="10000" />
+    <EconomyReward Name="CoopLarge" Value="30000" />
+	<EconomyReward Name="CoopScoreLarge" Value="50000" />
+	<EconomyReward Name="DailyLarge" Value="100000" />
+	<EconomyReward Name="WeeklyLarge" Value="150000" />
+	<EconomyReward Name="Friend" Value="20000" />
+  </EconomyRewards>
+
+  <!-- HumanPlayer -> Refers to any valid Human player -->
+  <ValueGroup Name="HumanPlayer">
+    <Value>LocalPlayer</Value>
+    <Value>CoopPartner</Value>
+  </ValueGroup>
+
+  <!-- AnyNPC -> Refers to any valid NPC archetype -->
+  <ValueGroup Name="AnyNPC">
+    <Value>Grunt</Value>
+    <Value>Heavy</Value>
+    <Value>ShieldedHeavy</Value>
+    <Value>Dog</Value>
+    <Value>ReconDrone</Value>
+    <Value>MachineGunner</Value>
+    <Value>Tech</Value>
+    <Value>Sniper</Value>
+    <Value>Elite</Value>
+    <Value>VehiclePuppet</Value>
+    <Value>Cop</Value>
+  </ValueGroup>
+  
+  <!-- SearchBehavior -> Refers to any behavior that is searching/investigating related -->
+  <ValueGroup Name="SearchBehavior">
+    <Value>ebidDogSearchBegin</Value>
+    <Value>ebidDogSearch</Value>
+    <Value>ebidDogSearchInfinite</Value>
+    <Value>ebidDogSearchLookAround</Value>
+    <Value>ebidDogSearchScentTrail</Value>
+    <Value>ebidDogSearchHidingSpot</Value>
+    <Value>ebidReconDroneSearch</Value>
+    <Value>ebidReconDroneSearchHidingSpot</Value>
+    <Value>ebidReconDroneSearchLookAround</Value>
+    <Value>ebidReconDroneSearchInfinite</Value>
+    <Value>ebidMachineGunnerSearchScan</Value>
+    <Value>ebidTechSearch</Value>
+    <Value>ebidTechDroneSearch</Value>
+    <Value>ebidEliteSearch</Value>
+    <Value>ebidSniperSearch</Value>
+    <Value>ebidSearchBegin</Value>
+    <Value>ebidSearch</Value>
+    <Value>ebidSearchConverge</Value>
+    <Value>ebidSearchConvergeWait</Value>
+    <Value>ebidSearchEvent</Value>
+    <Value>ebidSearchReached</Value>
+    <Value>ebidSearchReaction</Value>
+    <Value>ebidSearchHoldPosition</Value>
+    <Value>ebidSearchInfinite</Value>
+    <Value>ebidSearchLookAround</Value>
+    <Value>ebidSearchHidingSpot</Value>
+    <Value>ebidSearchSet</Value>
+    <Value>ebidSearchOwnerPissed</Value>
+    <Value>ebidSearchScanGeo</Value>
+    <Value>ebidHvySearch</Value>
+    <Value>ebidHvySearchInfinite</Value>
+    <Value>ebidHvySearchHidingSpot</Value>
+    <Value>ebidHvySearchClearTable</Value>
+    <Value>ebidHvySearchKickCover</Value>
+    <Value>ebidShldHvySearch</Value>
+    <Value>ebidShldHvySearchInfinite</Value>
+    <Value>ebidShldHvySearchDefensePoint</Value>
+  </ValueGroup>
+  
+  <!-- AI State: Idle (and Investigation) -->
+  <ValueGroup Name="AIState_Idle">
+    <Value>AL_DEFAULT</Value>
+    <Value>AL_INVESTIGATE</Value>
+  </ValueGroup>
+
+  <!-- AI State: Search -->
+  <ValueGroup Name="AIState_Search">
+    <Value>AL_SEARCH</Value>
+    <Value>AL_APPROXIMATE_LKP</Value>
+  </ValueGroup>
+
+  <!-- AI State: Combat -->
+  <ValueGroup Name="AIState_Combat">
+    <Value>AL_REAL_LKP</Value>
+    <Value>AL_VISION</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: Pistols -->
+  <ValueGroup Name="Weapons_Pistol">
+    <Value>Pistol_5-7</Value>
+    <Value>ADV_Spy_Pistol_FiveSeven</Value>
+    <Value>Pistol_USP45</Value>
+    <Value>ADV_Spy_Pistol_USP45</Value>
+    <Value>Pistol_PX4</Value>
+    <Value>ADV_Merc_Pistol_Px4</Value>
+    <Value>Pistol_F40</Value>
+    <Value>ADV_Spy_Pistol_F40</Value>
+    <Value>Pistol_Proto</Value>
+    <Value>ADV_Spy_Pistol_Proto</Value>
+    <Value>Pistol_DesertEagle</Value>
+    <Value>ADV_Merc_Pistol_DesertEagle</Value>
+    <Value>Pistol_Makarov</Value>
+    <Value>ADV_Merc_Pistol_Makarov</Value>
+    <Value>Pistol_CZ75</Value>
+    <Value>ADV_Spy_Pistol_CZ75</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: Pistols BlackMarket -->
+  <ValueGroup Name="Weapons_Pistol_BM">
+    <Value>Pistol_DesertEagle</Value>
+    <Value>ADV_Merc_Pistol_DesertEagle</Value>
+    <Value>Pistol_Makarov</Value>
+    <Value>ADV_Merc_Pistol_Makarov</Value>
+    <Value>Pistol_CZ75</Value>
+    <Value>ADV_Spy_Pistol_CZ75</Value>
+  </ValueGroup>
+  
+  <!-- Weapon List: Assault -->
+  <ValueGroup Name="Weapons_Assault">
+    <Value>Rifle_FAMAS</Value>
+    <Value>ADV_Merc_Assault_FAMASG2</Value>
+    <Value>Rifle_G36C</Value>
+    <Value>ADV_Merc_Assault_G36C</Value>
+    <Value>Rifle_M416</Value>
+    <Value>ADV_Merc_Assault_M416</Value>
+    <Value>Rifle_HoneyBadger</Value>
+    <Value>ADV_Merc_Assault_HoneyBadger</Value>
+    <Value>Rifle_Proto</Value>
+    <Value>Rifle_ARX</Value>
+    <Value>ADV_Merc_Assault_ARX160</Value>
+    <Value>Rifle_AK47</Value>
+    <Value>ADV_Merc_Assault_AK47</Value>
+    <Value>Rifle_AKS74U</Value>
+    <Value>Rifle_SA58</Value>
+    <Value>ADV_Merc_Assault_SA58</Value>
+    <Value>Rifle_Goblin</Value>
+    <Value>ADV_Merc_Assault_Goblin</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: Assault -->
+  <ValueGroup Name="Weapons_UAV">
+    <Value>RemoteSniper</Value>
+    <Value>RemoteSniperAuto</Value>
+    <Value>RemoteSniperGrenade</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: Assault BlackMarket -->
+  <ValueGroup Name="Weapons_Assault_BM">
+    <Value>Rifle_AK47</Value>
+    <Value>ADV_Merc_Assault_AK47</Value>
+    <Value>Rifle_AKS74U</Value>
+    <Value>Rifle_SA58</Value>
+    <Value>ADV_Merc_Assault_SA58</Value>
+    <Value>Rifle_Goblin</Value>
+    <Value>ADV_Merc_Assault_Goblin</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: SMG -->
+  <ValueGroup Name="Weapons_SMG">
+    <Value>SMG_MP7A2</Value>
+    <Value>ADV_Spy_SMG_MP7</Value>
+    <Value>SMG_Vector</Value>
+    <Value>ADV_Spy_SMG_Vector</Value>
+    <Value>SMG_UMP45</Value>
+    <Value>ADV_Spy_SMG_UMP45</Value>
+    <Value>SMG_Proto</Value>
+    <Value>ADV_Spy_SMG_Proto</Value>
+    <Value>SMG_MP5</Value>
+    <Value>ADV_Spy_SMG_MP5</Value>
+    <Value>SMG_MAC11</Value>
+    <Value>ADV_Spy_SMG_MAC11</Value>
+    <Value>SMG_PP19</Value>
+    <Value>ADV_Spy_SMG_PP19</Value>
+    <Value>SMG_PP2000</Value>
+    <Value>ADV_Spy_SMG_PP2000</Value>
+    <Value>SMG_Scorpion</Value>
+    <Value>ADV_Spy_SMG_Scorpion</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: SMG BlackMarket -->
+  <ValueGroup Name="Weapons_SMG_BM">
+    <Value>SMG_MAC11</Value>
+    <Value>ADV_Spy_SMG_MAC11</Value>
+    <Value>SMG_PP19</Value>
+    <Value>SMG_PP2000</Value>
+    <Value>ADV_Spy_SMG_PP2000</Value>
+    <Value>SMG_Scorpion</Value>
+    <Value>ADV_Spy_SMG_Scorpion</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: Shotguns -->
+  <ValueGroup Name="Weapons_Shotgun">
+    <Value>Shotgun_M1014</Value>
+    <Value>ADV_Merc_Shotgun_M1014</Value>
+    <Value>Shotgun_Proto</Value>
+    <Value>Shotgun_RMB93</Value>
+    <Value>ADV_Merc_Shotgun_RMB93</Value>
+    <Value>Shotgun_Saiga12</Value>
+    <Value>ADV_Merc_Shotgun_Saiga12</Value>
+    <Value>Shotgun_AA12</Value>
+    <Value>ADV_Merc_Shotgun_AA12</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: Shotguns BlackMarket -->
+  <ValueGroup Name="Weapons_Shotgun_BM">
+    <Value>Shotgun_RMB93</Value>
+    <Value>ADV_Merc_Shotgun_RMB93</Value>
+    <Value>Shotgun_Saiga12</Value>
+    <Value>ADV_Merc_Shotgun_Saiga12</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: Sniper Rifles -->
+  <ValueGroup Name="Weapons_Sniper">
+    <Value>Sniper_SR25</Value>
+    <Value>Sniper_Proto</Value>
+    <Value>Sniper_SVU</Value>
+    <Value>Sniper_VSS</Value>
+  </ValueGroup>
+
+  <!-- Weapon List: Sniper Rifles BlackMarket -->
+  <ValueGroup Name="Weapons_Sniper_BM">
+    <Value>Sniper_SVU</Value>
+    <Value>Sniper_VSS</Value>
+  </ValueGroup>
+  
+  <!-- Weapon List: LMG -->
+  <ValueGroup Name="Weapons_LMG">
+    <Value>ADV_Merc_LMG_HKMG4</Value>
+    <Value>ADV_Merc_LMG_M249</Value>
+  </ValueGroup>
+
+  <!-- Interior HUB rooms -->
+  <ValueGroup Name="InteriorRooms">
+    <Value>eUpgradableHubCabin</Value>
+    <Value>eUpgradableHubCockpit</Value>
+    <Value>eUpgradableHubCommand</Value>
+    <Value>eUpgradableHubMedic</Value>
+    <Value>eUpgradableHubQuarters</Value>
+    <Value>eUpgradableHubVehicleBay</Value>
+    <Value>eUpgradableHubWorkshop</Value>
+  </ValueGroup>
+
+  <!-- Exterior HUB rooms -->
+  <ValueGroup Name="ExteriorRooms">
+    <Value>eUpgradableHubExtEngine</Value>
+    <Value>eUpgradableHubExtWings</Value>
+    <Value>eUpgradableHubExtNose</Value>
+    <Value>eUpgradableHubExtTail</Value>
+    <Value>eUpgradableHubExtWeapon</Value>
+  </ValueGroup>
+  
+</GEDValueGroups>

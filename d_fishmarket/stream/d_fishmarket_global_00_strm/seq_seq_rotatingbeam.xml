@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SEQ_RotatingBeam" startup="1" leveluid="0" streamedRandomID="571275100">
+  <Task name="Move Right" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_0" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="5.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="5.000000" entityStripped="1" dp_i="201326620" bv_a="1090519040:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Camera" TypeDeleted="Camera">
+        <Event name="NewEvent" end="0.600000" condition="1">
+          <CommandInstance name="Wait" duration="0.600000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Move Right" true="Wait" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="Move Back" true="Move Right" sequence="SEQ_RotatingBeam"/>
+  <Task name="Move Left">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_0" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="10.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="10.000000" entityStripped="1" dp_i="201326620" bv_a="-1056964608:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_2" start="Wait" true="Move Left" sequence="SEQ_RotatingBeam"/>
+  <Task name="Wait_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Camera" TypeDeleted="Camera">
+        <Event name="NewEvent" end="0.600000" condition="1">
+          <CommandInstance name="Wait" duration="0.600000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="Move Left" true="Wait_0" sequence="SEQ_RotatingBeam"/>
+  <Task name="Move Back">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_0" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="5.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="5.000000" entityStripped="1" dp_i="201326620" bv_a="1090519040:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="Wait_0" true="Move Back" sequence="SEQ_RotatingBeam"/>
+  <Task name="Move Right_0" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_1" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="4.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="4.000000" entityStripped="1" dp_i="201326620" bv_a="-1055916032:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Camera" TypeDeleted="Camera">
+        <Event name="NewEvent" end="0.700000" condition="1">
+          <CommandInstance name="Wait" duration="0.700000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move Left_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_1" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="8.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="8.000000" entityStripped="1" dp_i="201326620" bv_a="1091567616:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Camera" TypeDeleted="Camera">
+        <Event name="NewEvent" end="0.700000" condition="1">
+          <CommandInstance name="Wait" duration="0.700000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move Back_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_1" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="4.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="4.000000" entityStripped="1" dp_i="201326620" bv_a="-1055916032:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="Move Right_0" true="Wait_1" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Move Back_0" true="Move Right_0" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="Wait_1" true="Move Left_0" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="Move Left_0" true="Wait_2" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="Wait_2" true="Move Back_0" sequence="SEQ_RotatingBeam"/>
+  <Task name="Move Right_1" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_5" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="5.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="5.000000" entityStripped="1" dp_i="201326620" bv_a="-1056964608:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Camera" TypeDeleted="Camera">
+        <Event name="NewEvent" end="0.600000" condition="1">
+          <CommandInstance name="Wait" duration="0.600000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move Left_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_5" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="10.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="10.000000" entityStripped="1" dp_i="201326620" bv_a="1090519040:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Camera" TypeDeleted="Camera">
+        <Event name="NewEvent" end="0.600000" condition="1">
+          <CommandInstance name="Wait" duration="0.600000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move Back_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_5" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="5.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="5.000000" entityStripped="1" dp_i="201326620" bv_a="-1056964608:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_10" start="Move Right_1" true="Wait_3" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_11" start="Move Back_1" true="Move Right_1" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_12" start="Wait_3" true="Move Left_1" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_13" start="Move Left_1" true="Wait_4" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_14" start="Wait_4" true="Move Back_1" sequence="SEQ_RotatingBeam"/>
+  <Task name="Move Right_2" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_4" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="4.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="4.000000" entityStripped="1" dp_i="201326620" bv_a="1091567616:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Camera" TypeDeleted="Camera">
+        <Event name="NewEvent" end="0.700000" condition="1">
+          <CommandInstance name="Wait" duration="0.700000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move Left_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_4" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="8.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="8.000000" entityStripped="1" dp_i="201326620" bv_a="-1055916032:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Camera" TypeDeleted="Camera">
+        <Event name="NewEvent" end="0.700000" condition="1">
+          <CommandInstance name="Wait" duration="0.700000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Move Back_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="GI_NonInteractiveDynActor_4" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="4.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="4.000000" entityStripped="1" dp_i="201326620" bv_a="1091567616:1" bv_i="134217762">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_15" start="Move Right_2" true="Wait_5" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_16" start="Move Back_2" true="Move Right_2" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_17" start="Wait_5" true="Move Left_2" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="Move Left_2" true="Wait_6" sequence="SEQ_RotatingBeam"/>
+  <DependencyComplete name="NewDependencyComplete_19" start="Wait_6" true="Move Back_2" sequence="SEQ_RotatingBeam"/>
+</Sequence>

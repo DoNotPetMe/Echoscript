@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Breakable_StopGenerator" leveluid="3" streamedRandomID="1136646976">
+  <Task name="Stop Rotating">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:000016bc" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326636" bv_a="1137180672:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326636" bv_a="1128792064:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326636" bv_a="1120403456:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_2" start="1.500000" end="2.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="1.000000" entityStripped="1" dp_i="201326636" bv_a="1109393408:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:000016b7" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="MeshPlayAnim" duration="1.000000" entityStripped="1" dp_i="402653310"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Check if Broken" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Check if Broken" true="Stop Rotating">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::bGeneratorBroken" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+</Sequence>

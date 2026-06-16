@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0200_Gate_Coop" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="MISS_0200_COM_04_01">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="MISS_0200_COM_04_01" data="UID:00000f5b" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_TRIGGERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

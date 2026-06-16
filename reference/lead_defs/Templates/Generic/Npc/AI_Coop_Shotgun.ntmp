@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Shotgun" version="0">
+	<archetype name="EAIBARegular" />
+    <controller name="BARegularController" />
+	<inventory name="Coop_Shotgun_RMB93" >
+		<weapon name="Shotgun_RMB93" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

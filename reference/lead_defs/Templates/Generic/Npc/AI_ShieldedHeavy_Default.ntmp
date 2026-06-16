@@ -1,0 +1,7 @@
+<npc name="AI_ShieldedHeavy_Default" version="0">
+	<archetype name="EAIShieldedHeavy" />
+	<controller name="EAIShieldedHeavyController" />
+	<inventory name="Pistol_DE" >
+		<weapon name="Pistol_DesertEagle" />
+	</inventory>
+</npc>

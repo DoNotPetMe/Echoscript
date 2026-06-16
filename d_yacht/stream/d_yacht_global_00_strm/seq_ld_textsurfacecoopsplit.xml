@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_TextSurfaceCoopSplit" leveluid="1" streamedRandomID="32642577">
+  <Task name="VolumeOccupiedCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="DisplayTextSurface">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000778" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Show" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000779" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Show" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="VolumeOccupiedCheck" true="DisplayTextSurface" data="UID:000005f9" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <Task name="HideTextSurface">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000778" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000779" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="DisplayTextSurface" true="HideTextSurface" data="UID:000005f8" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISEMPTY" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="HideTextSurface" true="VolumeOccupiedCheck" sequence="LD_TextSurfaceCoopSplit"/>
+  <Task name="CoopSplitCompleteLeft" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="CoopSplitCompleteLeft" true="NewTask" data="UID:00000e48" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bCoopSplitCompleteLeft"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="CoopSplitCompleteRight" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_2" start="CoopSplitCompleteRight" true="NewTask_0" data="UID:00000e46" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data="Repository::B_Var_bCoopSplitCompleteRight"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="NewTask_1" logicor="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="HideTextForever">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000778" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000779" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask" true="NewTask_1" false="NewTask_3">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bCoopSplitCompleteLeft" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask_3" true="CoopSplitCompleteLeft" sequence="LD_TextSurfaceCoopSplit"/>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_0" true="NewTask_1" false="NewTask_4">
+    <CommandInstance name="EqualBoolean">
+      <ParameterInstance name="Left" data="Repository::B_Var_bCoopSplitCompleteRight" TypeDeleted="Boolean"/>
+      <ParameterInstance name="Right">
+        <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_4" true="CoopSplitCompleteRight" sequence="LD_TextSurfaceCoopSplit"/>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_TextSurfaceCoopSplit" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_2" start="HideTextForever" true="StopSequence" sequence="LD_TextSurfaceCoopSplit"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="NewTask_1" true="HideTextForever" sequence="LD_TextSurfaceCoopSplit"/>
+</Sequence>

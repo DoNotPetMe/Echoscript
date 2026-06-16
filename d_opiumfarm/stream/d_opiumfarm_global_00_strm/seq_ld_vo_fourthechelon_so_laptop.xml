@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_FourthEchelon_SO_Laptop" leveluid="3" streamedRandomID="1136646976">
+  <Task name="VO_SO_Laptop" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Assign" entityStripped="1">
+            <ParameterInstance name="Right" data="Repository::O_Sam_Character_2" TypeDeleted="Character"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Briggs_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Assign" entityStripped="1">
+            <ParameterInstance name="Right" data="Repository::O_Briggs_Character_2" TypeDeleted="Character"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="VO_SAM">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="3.966417">
+          <CommandInstance name="SetDialog" duration="3.966417" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0700_COM::42208::111436" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="VO_SAM" false="VO_Briggs">
+    <CommandInstance name="Equal">
+      <ParameterInstance name="Left" data="Repository::Ref_CurrentPlayer_0" TypeDeleted="Character"/>
+      <ParameterInstance name="Right" data="Repository::O_Sam_Character_2" TypeDeleted="Character"/>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="VO_Briggs">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character_2" TypeDeleted="Character">
+        <Event name="NewEvent" end="5.320437">
+          <CommandInstance name="SetDialog" duration="5.320437" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H01_OFM::0700_COM::42209::111437" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="VO_SO_Laptop" true="NewTask_0" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="LAPTOP_HACKED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_CurrentPlayer_0"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

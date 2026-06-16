@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Helmet_Rifle" version="0">
+	<archetype name="EAIBARegular" />
+	<controller name="BARegularController_Helmet" />
+	<inventory name="Coop_Helmet_Rifle_Inventory" >
+		<weapon name="Rifle_AK47" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

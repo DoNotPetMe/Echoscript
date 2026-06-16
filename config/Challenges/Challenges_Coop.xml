@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+  <!-- Score : Partner up to and score [n] points in a COOP campaign -->
+  <Challenge Name="LocId_SNN_OD_LargeCoopScore" Desc="LocId_SNDES_OD_LargeCoopScoreDesc" Reset="Never" Guid="100" ShortDesc="LocId_SNSD_OD_LargeCoopScore" Category="ChallengeCoop" Icon="ghost" Map="COOP_RAND" SequenceRequirement="13000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal">
+              <Value>C01</Value>
+              <Value>C02</Value>
+              <Value>C03</Value>
+              <Value>C04</Value>
+              <Value>E01</Value>
+              <Value>E02</Value>
+              <Value>E03</Value>
+              <Value>E04</Value>
+              <Value>G01</Value>
+              <Value>G02</Value>
+              <Value>G03</Value>
+              <Value>G04</Value>
+              <Value>H01</Value>
+              <Value>H02</Value>
+              <Value>H03</Value>
+              <Value>H04</Value>
+            </SC6MissionName>
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="13000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Score : Partner up to and score [n] points on [each COOP map] -->
+  <Challenge Name="LocId_SNN_OD_CoopScore_C01" Desc="LocId_SNDES_OD_CoopScore_C01Desc" Reset="Never" Guid="101" ShortDesc="LocId_SNSD_OD_CoopScore_C01" Icon="ghost" Category="ChallengeCoop" Map="C01" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="C01" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_C02" Desc="LocId_SNDES_OD_CoopScore_C02Desc" Reset="Never" Guid="102" ShortDesc="LocId_SNSD_OD_CoopScore_C02" Icon="ghost" Category="ChallengeCoop" Map="C02" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="C02" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_C03" Desc="LocId_SNDES_OD_CoopScore_C03Desc" Reset="Never" Guid="103" ShortDesc="LocId_SNSD_OD_CoopScore_C03" Icon="ghost" Category="ChallengeCoop" Map="C03" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="C03" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_C04" Desc="LocId_SNDES_OD_CoopScore_C04Desc" Reset="Never" Guid="104" ShortDesc="LocId_SNSD_OD_CoopScore_C04" Icon="ghost" Category="ChallengeCoop" Map="C04" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="C04" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_E01" Desc="LocId_SNDES_OD_CoopScore_E01Desc" Reset="Never" Guid="105" ShortDesc="LocId_SNSD_OD_CoopScore_E01" Icon="ghost" Category="ChallengeCoop" Map="E01" SequenceRequirement="15000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="E01" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="15000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_E02" Desc="LocId_SNDES_OD_CoopScore_E02Desc" Reset="Never" Guid="106" ShortDesc="LocId_SNSD_OD_CoopScore_E02" Icon="ghost" Category="ChallengeCoop" Map="E02" SequenceRequirement="15000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="E02" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="15000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_E03" Desc="LocId_SNDES_OD_CoopScore_E03Desc" Reset="Never" Guid="107" ShortDesc="LocId_SNSD_OD_CoopScore_E03" Icon="ghost" Category="ChallengeCoop" Map="E03" SequenceRequirement="15000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="E03" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="15000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_E04" Desc="LocId_SNDES_OD_CoopScore_E04Desc" Reset="Never" Guid="108" ShortDesc="LocId_SNSD_OD_CoopScore_E04" Icon="ghost" Category="ChallengeCoop" Map="E04" SequenceRequirement="15000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="E04" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="15000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_G01" Desc="LocId_SNDES_OD_CoopScore_G01Desc" Reset="Never" Guid="109" ShortDesc="LocId_SNSD_OD_CoopScore_G01" Icon="ghost" Category="ChallengeCoop" Map="G01" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="G01" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_G02" Desc="LocId_SNDES_OD_CoopScore_G02Desc" Reset="Never" Guid="110" ShortDesc="LocId_SNSD_OD_CoopScore_G02" Icon="ghost" Category="ChallengeCoop" Map="G02" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="G02" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_G03" Desc="LocId_SNDES_OD_CoopScore_G03Desc" Reset="Never" Guid="111" ShortDesc="LocId_SNSD_OD_CoopScore_G03" Icon="ghost" Category="ChallengeCoop" Map="G03" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="G03" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_G04" Desc="LocId_SNDES_OD_CoopScore_G04Desc" Reset="Never" Guid="112" ShortDesc="LocId_SNSD_OD_CoopScore_G04" Icon="ghost" Category="ChallengeCoop" Map="G04" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="G04" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_H01" Desc="LocId_SNDES_OD_CoopScore_H01Desc" Reset="Never" Guid="113" ShortDesc="LocId_SNSD_OD_CoopScore_H01" Icon="ghost" Category="ChallengeCoop" Map="H01" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="H01" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_H02" Desc="LocId_SNDES_OD_CoopScore_H02Desc" Reset="Never" Guid="114" ShortDesc="LocId_SNSD_OD_CoopScore_H02" Icon="ghost" Category="ChallengeCoop" Map="H02" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="H02" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_H03" Desc="LocId_SNDES_OD_CoopScore_H03Desc" Reset="Never" Guid="115" ShortDesc="LocId_SNSD_OD_CoopScore_H03" Icon="ghost" Category="ChallengeCoop" Map="H03" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="H03" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <Challenge Name="LocId_SNN_OD_CoopScore_H04" Desc="LocId_SNDES_OD_CoopScore_H04Desc" Reset="Never" Guid="116" ShortDesc="LocId_SNSD_OD_CoopScore_H04" Icon="ghost" Category="ChallengeCoop" Map="H04" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal" Value="H04" />
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <TotalScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Score : Achieve [n] Ghost Points with a partner -->
+  <Challenge Name="LocId_SNN_OD_CoopScore_Ghost" Desc="LocId_SNDES_OD_CoopScore_GhostDesc" Reset="Never" Guid="117" ShortDesc="LocId_SNSD_OD_CoopScore_Ghost" Icon="ghost" Category="ChallengeCoop" Map="G_RAND" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal">
+              <Value>C01</Value>
+              <Value>C02</Value>
+              <Value>C03</Value>
+              <Value>C04</Value>
+              <Value>E01</Value>
+              <Value>E02</Value>
+              <Value>E03</Value>
+              <Value>E04</Value>
+              <Value>G01</Value>
+              <Value>G02</Value>
+              <Value>G03</Value>
+              <Value>G04</Value>
+              <Value>H01</Value>
+              <Value>H02</Value>
+              <Value>H03</Value>
+              <Value>H04</Value>
+            </SC6MissionName>
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <GhostScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Score : Achieve [n] Killer Points with a partner -->
+  <Challenge Name="LocId_SNN_OD_CoopScore_Panther" Desc="LocId_SNDES_OD_CoopScore_PantherDesc" Reset="Never" Guid="118" ShortDesc="LocId_SNSD_OD_CoopScore_Panther" Icon="assault" Category="ChallengeCoop" Map="E_RAND" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal">
+              <Value>C01</Value>
+              <Value>C02</Value>
+              <Value>C03</Value>
+              <Value>C04</Value>
+              <Value>E01</Value>
+              <Value>E02</Value>
+              <Value>E03</Value>
+              <Value>E04</Value>
+              <Value>G01</Value>
+              <Value>G02</Value>
+              <Value>G03</Value>
+              <Value>G04</Value>
+              <Value>H01</Value>
+              <Value>H02</Value>
+              <Value>H03</Value>
+              <Value>H04</Value>
+            </SC6MissionName>
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <PantherScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Score : Achieve [n] Panther Points with a partner -->
+  <Challenge Name="LocId_SNN_OD_CoopScore_Killer" Desc="LocId_SNDES_OD_CoopScore_KillerDesc" Reset="Never" Guid="119" ShortDesc="LocId_SNSD_OD_CoopScore_Killer" Category="ChallengeCoop" Map="H_RAND" SequenceRequirement="10000">
+    <Definition>
+      <GameEvent>
+        <Event>
+          <MissionCompleted>
+            <SC6MissionName Op="Equal">
+              <Value>C01</Value>
+              <Value>C02</Value>
+              <Value>C03</Value>
+              <Value>C04</Value>
+              <Value>E01</Value>
+              <Value>E02</Value>
+              <Value>E03</Value>
+              <Value>E04</Value>
+              <Value>G01</Value>
+              <Value>G02</Value>
+              <Value>G03</Value>
+              <Value>G04</Value>
+              <Value>H01</Value>
+              <Value>H02</Value>
+              <Value>H03</Value>
+              <Value>H04</Value>
+            </SC6MissionName>
+            <Success Op="Equal" Value="true" />
+            <WithCoopPartner Op="Equal" Value="true" />
+            <KillerScore Op="GreaterOrEqual" Value="10000" />
+          </MissionCompleted>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  <!-- Dual Mark & Execute : Dual Mark & Execute [n] enemies with a partner -->
+  <!--
+  <Challenge Name="LocId_SNN_OD_CoopDualExecute" Desc="LocId_SNDES_OD_CoopDualExecuteDesc" Reset="Never" Guid="120" ShortDesc="LocId_SNSD_OD_CoopDualExecute" Category="ChallengeCoop" Map="H_RAND">
+    <Definition>
+      <All>
+        <GameEvent>
+          <Event>
+            <MAEPawnExecuted>
+              <IsTargetAnyNPC Op="Equal" Value="true" />
+              <IsSuccessful Op="Equal" Value="true" />
+              <IsDualExecute Op="Equal" Value="true" />
+            </MAEPawnExecuted>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="CoopSmall" />
+    </StepReward>
+    <StepReward Count="15">
+      <Economy ValueTag="CoopLarge" />
+    </StepReward>
+    <StepReward Count="30">
+      <Economy ValueTag="CoopScoreLarge" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Dual Mark & Execute : Kill [n] enemies using a dual execute -->
+  <!--
+  <Challenge Name="LocId_SNN_OD_CoopDualExecuteSingle" Desc="LocId_SNDES_OD_CoopDualExecuteSingleDesc" Reset="Never" Guid="121" ShortDesc="LocId_SNSD_OD_CoopDualExecuteSingle" Category="ChallengeCoop" SimultaneousRequirement="6" Map="H_RAND">
+    <Definition>
+      <All>
+        <GameEvent>
+          <RepeatComponent Count="6" />
+          <Event>
+            <MAEPawnExecuted>
+              <IsTargetAnyNPC Op="Equal" Value="true" />
+              <IsSuccessful Op="Equal" Value="true" />
+              <IsDualExecute Op="Equal" Value="true" />
+            </MAEPawnExecuted>
+          </Event>
+        </GameEvent>
+      </All>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <MAEExecuteCycleCompleted>
+              <Player Op="Equal" Value="HumanPlayer" />
+            </MAEExecuteCycleCompleted>
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="6">
+      <Economy ValueTag="CoopLarge" />
+    </StepReward>
+  </Challenge>
+-->
+</Challenges>

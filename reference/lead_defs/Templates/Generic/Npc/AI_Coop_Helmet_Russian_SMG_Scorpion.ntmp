@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Helmet_Russian_SMG_Scorpion" version="0">
+	<archetype name="EAIBARegular" />
+    <controller name="BARegularController_Helmet_Russian" />
+	<inventory name="Coop_Helmet_Russian_SMG_Scorpion" >
+		<weapon name="SMG_Scorpion" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

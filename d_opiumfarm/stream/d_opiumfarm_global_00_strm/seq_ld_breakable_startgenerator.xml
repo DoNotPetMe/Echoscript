@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Breakable_StartGenerator" leveluid="3" streamedRandomID="1136646976">
+  <Task name="Generator Initial">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_ACT_D_OpiumFarm_CavedVillage_Generator_Ani" TypeDeleted="List">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="MeshPlayAnim" duration="1.000000" entityStripped="1" dp_i="268435576" bv_a="1065353216:1065353216" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:000016bc" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RotateActor" entityStripped="1" dp_i="201326636" bv_a="1144258560:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Check If it&apos;s Broken" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Check If it&apos;s Broken" true="Generator Initial">
+    <CommandInstance name="EqualBoolean" dp_i="67108866">
+      <ParameterInstance name="Left" data="Repository::bGeneratorBroken" TypeDeleted="Boolean"/>
+    </CommandInstance>
+  </DependencyCommand>
+</Sequence>

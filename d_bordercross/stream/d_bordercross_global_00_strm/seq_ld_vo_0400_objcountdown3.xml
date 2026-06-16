@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0400_ObjCountdown3" leveluid="1" streamedRandomID="2038094029">
+  <Task name="AllObjDoneEventCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0400_COM_03_01ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="2.000000" end="6.178376">
+          <CommandInstance name="SetDialog" duration="4.178376" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0400_COM::16571::54637" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_VO_0400_ObjCountdown3" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="AllObjDoneEventCheck" true="B_MISS_0400_COM_03_01ANNA_DRY" sequence="LD_VO_0400_ObjCountdown3"/>
+  <Task name="B_MISS_0400_COM_03_02SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.943000">
+          <CommandInstance name="SetDialog" duration="1.943000" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0400_COM::16571::54638" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="B_MISS_0400_COM_03_01ANNA_DRY" true="B_MISS_0400_COM_03_02SAM_DRY" sequence="LD_VO_0400_ObjCountdown3"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="B_MISS_0400_COM_03_02SAM_DRY" true="StopSequence" sequence="LD_VO_0400_ObjCountdown3"/>
+  <VisualComment name="NewVisualComment" x="183.437088" y="283.515900" width="728.822510" height="196.605957" commentDate="9/27/2012 12:34:03 AM"/>
+</Sequence>

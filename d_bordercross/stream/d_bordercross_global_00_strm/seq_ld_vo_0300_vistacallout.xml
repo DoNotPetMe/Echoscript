@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0300_VistaCallout" leveluid="1" streamedRandomID="2038094029">
+  <Task name="VolumnEnteringEventCheck_B1B2M" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Establish_GetPlayers_Wait" logicor="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="B_MISS_0300_COM_01_01SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.678000">
+          <CommandInstance name="SetDialog" duration="1.678000" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0300_COM::16567::54629" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***SP VistaCallout VO 1***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0300_COM_02_01ISAACB_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Briggs_Character" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="3.069396">
+          <CommandInstance name="SetDialog" duration="2.069396" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0300_COM::16568::54632" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Coop VistaCallout VO 1***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0300_COM_01_02ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="6.869771">
+          <CommandInstance name="SetDialog" duration="5.869771" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0300_COM::16567::54630" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***SP VistaCallout VO 2***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0300_COM_01_03SAM_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="2.575271">
+          <CommandInstance name="SetDialog" duration="1.575271" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0300_COM::16567::54631" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***SP VistaCallout VO 3***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0300_COM_02_02ANNA_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="6.778959">
+          <CommandInstance name="SetDialog" duration="5.778959" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0300_COM::16568::54633" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Coop VistaCallout VO 2***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="B_MISS_0300_COM_02_03ISAACB_DRY">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Briggs_Character" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="5.973500">
+          <CommandInstance name="SetDialog" duration="4.973500" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G02_BDC::0300_COM::16568::54634" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Coop VistaCallout VO 3***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Single">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0300_VistaCallout" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***SP VistaCallout VO sequencer disable***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopSequence_Coop">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_0300_VistaCallout" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StopSequence" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Coop VistaCallout VO sequencer disable***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Establish_GetPlayers_Wait" true="B_MISS_0300_COM_01_01SAM_DRY" false="B_MISS_0300_COM_02_01ISAACB_DRY">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="B_MISS_0300_COM_01_01SAM_DRY" true="B_MISS_0300_COM_01_02ANNA_DRY" sequence="LD_VO_0300_VistaCallout"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="B_MISS_0300_COM_01_02ANNA_DRY" true="B_MISS_0300_COM_01_03SAM_DRY" sequence="LD_VO_0300_VistaCallout"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="B_MISS_0300_COM_02_01ISAACB_DRY" true="B_MISS_0300_COM_02_02ANNA_DRY" sequence="LD_VO_0300_VistaCallout"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="B_MISS_0300_COM_02_02ANNA_DRY" true="B_MISS_0300_COM_02_03ISAACB_DRY" sequence="LD_VO_0300_VistaCallout"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="B_MISS_0300_COM_01_03SAM_DRY" true="StopSequence_Single" sequence="LD_VO_0300_VistaCallout"/>
+  <DependencyEvent name="NewDependencyEvent" start="VolumnEnteringEventCheck_B1B2M" true="Establish_GetPlayers_Wait" data="UID:0000069a" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_6" start="B_MISS_0300_COM_02_03ISAACB_DRY" true="StopSequence_Coop" sequence="LD_VO_0300_VistaCallout"/>
+  <VisualComment name="NewVisualComment" x="-491.249268" y="-81.609535" width="1118.193726" height="434.098145" commentDate="9/27/2012 12:25:32 AM"/>
+  <Task name="VolumnEnteringEventCheck_B1B2S" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="VolumnEnteringEventCheck_B4B2M" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="VolumnEnteringEventCheck_B3B2M" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="VolumnEnteringEventCheck_B1B2S" true="Establish_GetPlayers_Wait" data="UID:00000bc2" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_1" start="VolumnEnteringEventCheck_B4B2M" true="Establish_GetPlayers_Wait" data="UID:00000bc3" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_2" start="VolumnEnteringEventCheck_B3B2M" true="Establish_GetPlayers_Wait" data="UID:00000bc4" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

@@ -1,0 +1,7 @@
+<npc name="AI_Cop_Default" version="0">
+	<archetype name="EAICop" />
+	<controller name="EAICopController" />
+	<inventory name="Cop_AK47" >
+		<weapon name="Rifle_AK47" />
+	</inventory>
+</npc>

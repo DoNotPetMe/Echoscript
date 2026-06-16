@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_TextSurfaceDisplay_Beat1_CoopDoor" leveluid="1" streamedRandomID="2038094029">
+  <Task name="DisplayTextSurface_CoopDoor">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000078d" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Show" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="VolumnOccupyEventCheck" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000078d" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="HideTextSurface_CoopDoor">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000078d" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="VolumnOccupyEventCheck" true="DisplayTextSurface_CoopDoor" data="UID:000006bf" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_0" start="DisplayTextSurface_CoopDoor" true="HideTextSurface_CoopDoor" data="UID:000006bf" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISEMPTY" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_0" start="HideTextSurface_CoopDoor" true="VolumnOccupyEventCheck" sequence="LD_TextSurfaceDisplay_Beat1_CoopDoor"/>
+  <VisualComment name="NewVisualComment" x="-324.886536" y="-0.000001" width="738.000000" height="214.000000" commentDate="10/11/2012 11:04:54 AM"/>
+  <Task name="DisplayTextSurface_CoopDoor_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000cda" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Show" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="VolumnOccupyEventCheck_0" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000cda" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="HideTextSurface_CoopDoor_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000cda" InUnrealActors="1" TypeDeleted="Light">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TextChangeState" entityStripped="1">
+            <ParameterInstance name="NewState">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value=""/>
+            </ParameterInstance>
+            <ParameterInstance name="State" data="Repository::Unreal::enums::ESurfaceState::ESS_Hide" TypeDeleted="ESurfaceState"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="VolumnOccupyEventCheck_0" true="DisplayTextSurface_CoopDoor_0" data="UID:00000cd9" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_2" start="DisplayTextSurface_CoopDoor_0" true="HideTextSurface_CoopDoor_0" data="UID:00000cd9" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISEMPTY" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_1" start="HideTextSurface_CoopDoor_0" true="VolumnOccupyEventCheck_0" sequence="LD_TextSurfaceDisplay_Beat1_CoopDoor"/>
+  <VisualComment name="NewVisualComment_0" x="-324.211029" y="235.636230" width="739.557617" height="221.681900" commentDate="1/23/2013 11:51:58 AM"/>
+</Sequence>

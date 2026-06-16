@@ -1,0 +1,4 @@
+<npc name="AI_Dog" version="0">
+	<archetype name="EAIDog" />
+	<controller name="EAIDogController" />
+</npc>

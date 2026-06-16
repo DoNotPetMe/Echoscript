@@ -1,0 +1,7 @@
+<npc name="AI_Generic_Rifle" version="0">
+	<archetype name="EAIBARegular" />
+	<controller name="BARegularController" />
+	<inventory name="AK47" >
+		<weapon name="Rifle_AK47" />
+	</inventory>
+</npc>

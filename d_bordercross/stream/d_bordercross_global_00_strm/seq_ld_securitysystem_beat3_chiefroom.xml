@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_SecuritySystem_Beat3_ChiefRoom" leveluid="1" streamedRandomID="2038094029">
+  <Task name="InteractionCheck_Beat3ChiefRoom" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="DisableLaser">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000030e" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:0000030b" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000311" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000314" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::List_SecuritySystem_Beat3_CR_Door" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="UID:0000060b" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_7" entity="UID:00000734" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="UnlockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="UID:00000749" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisablePowerBox" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="EnableLaser">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000030b" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000311" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000314" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:0000030e" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::List_SecuritySystem_Beat3_CR_Door" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::List_SecuritySystem_Beat3_AR_Door" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="UID:0000060b" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Close" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_7" entity="UID:00000734" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Close" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="UID:0000060b" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="LockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="UID:00000734" InUnrealActors="1" TypeDeleted="Door">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="LockDoor" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="UID:00000749" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisablePowerBox" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="InteractionCheck_Beat3ChiefRoom" true="DisableLaser" data="UID:000007a6" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="EnableLaser" true="InteractionCheck_Beat3ChiefRoom" sequence="LD_SecuritySystem_Beat3_ChiefRoom"/>
+  <DependencyEvent name="NewDependencyEvent_0" start="DisableLaser" true="EnableLaser" data="UID:000007a6" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <VisualComment name="NewVisualComment" x="-225.223816" y="-85.713539" width="831.464050" height="256.424438" commentDate="10/29/2012 8:00:35 PM"/>
+  <Task name="PowerBoxDestroyedEventCheck" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="DeactivateSwitch">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000007a6" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Deactivate" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="PowerBoxDestroyedEventCheck" true="DeactivateSwitch" data="UID:00000749" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="GI_DESTROYED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <VisualComment name="NewVisualComment_0" x="-224.000000" y="190.000000" width="829.000000" height="191.000000" commentDate="3/21/2013 4:20:43 PM"/>
+</Sequence>

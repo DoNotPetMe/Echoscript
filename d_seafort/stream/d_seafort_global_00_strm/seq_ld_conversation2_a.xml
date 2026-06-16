@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Conversation2_A" leveluid="1" streamedRandomID="1217117223">
+  <Task name="NewTask_0" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d35" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask_0" true="NewTask_1" data="UID:00000979" InUnrealActors="1" TypeDeleted="AttractionPoint">
+    <ExternalEventInstance name="ATTRACTIONPOINT_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Enable Collision">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d35" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask_1" true="Enable Collision" sequence="LD_Conversation2_A"/>
+  <Task name="Start Script">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000008c8" InUnrealActors="1" TypeDeleted="EAreaProperty">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="PlaySysScript" entityStripped="1">
+            <ParameterInstance name="ScriptName">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="GenericConversation_1000_A"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Conversation: Start Script***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask_1" true="Start Script" sequence="LD_Conversation2_A"/>
+  <Task name="Start Conversation">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:000008c8" InUnrealActors="1" TypeDeleted="EAreaProperty">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SendSysScriptEvent" entityStripped="1">
+            <ParameterInstance name="EventName">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="StartConversation"/>
+            </ParameterInstance>
+            <ParameterInstance name="ScriptName">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="GenericConversation_1000_A"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="***Conversation: Start Conversation***"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="30.000000" condition="1">
+          <CommandInstance name="Wait" duration="30.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_0" start="Enable Collision" true="Start Conversation" data="UID:00000d35" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_1" start="Start Conversation" true="NewTask_0" sequence="LD_Conversation2_A"/>
+</Sequence>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="_SUB_DiamondMine_Facility" startup="1" leveluid="1" streamedRandomID="1260989390">
+  <Task name="Init_Facility" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_TextSuface" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_VO_Crushers" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Sequences::LD_VO_Laptop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::Sequences::LD_VO_TwoRoutes" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::Sequences::LD_VO_Fastrope" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="Repository::Sequences::LD_DeathVolume" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_6" entity="Repository::Sequences::LD_Rotate_Conv_ends" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_7" entity="Repository::Sequences::LD_Beat_1_Patrols" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="Repository::Sequences::LD_Rotate_Crusher_inside" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="Repository::Ref_Grimm" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Assign" entityStripped="1">
+            <ParameterInstance name="Right" data="Repository::O_Grimm" TypeDeleted="AI"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="Repository::Ref_Grimm" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableNPC" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_11" entity="Repository::Ref_Grimm" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcSetResponsive" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_12" entity="Repository::Sequences::LD_ExplorationBonus" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_13" entity="UID:00000867" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_14" entity="UID:00000868" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_15" entity="UID:000009ca" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_16" entity="UID:000002d3" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ReenableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_17" entity="UID:000002cf" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ReenableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="CP=-1. Intro Cam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_7" entity="Repository::Sequences::SEQ_IntroCam" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Init_Facility" true="CP=-1. Intro Cam" false="No Intro Cam">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_CheckpointID_0" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="-1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="No Intro Cam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000742" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

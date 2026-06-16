@@ -1,0 +1,7 @@
+<npc name="AI_Heavy_Default" version="0">
+	<archetype name="EAIHeavy" />
+	<controller name="EAIHeavyController" />
+	<inventory name="Heavy_Shotgun" >
+		<weapon name="Shotgun_AA12" />
+	</inventory>
+</npc>

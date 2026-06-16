@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Patrol_A_Enemies_SetPatrol" leveluid="2" streamedRandomID="571275100">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Set Patrol [A] - Enemy 2+ 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000848" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_2_[A]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:0000084a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="6.000000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_3_[A]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::O_CoopObjectiveManager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Conversation Finished"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_0" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask_0" true="Set Patrol [A] - Enemy 2+ 3" data="UID:000010ba" InUnrealActors="1" TypeDeleted="ConversationPoint">
+    <ExternalEventInstance name="CONVERSATION_FINISHED" data=""/>
+  </DependencyEvent>
+</Sequence>

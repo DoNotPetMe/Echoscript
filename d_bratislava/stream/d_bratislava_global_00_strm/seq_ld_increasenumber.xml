@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_IncreaseNumber" leveluid="1" streamedRandomID="1548649769">
+  <Task name="Add" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Time_Counter2" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AddAssign" entityStripped="1">
+            <ParameterInstance name="Right">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Add" true="NewTask_0" sequence="LD_IncreaseNumber"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask_0" true="NewTask_1" sequence="LD_IncreaseNumber"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_1" true="Add" sequence="LD_IncreaseNumber"/>
+</Sequence>

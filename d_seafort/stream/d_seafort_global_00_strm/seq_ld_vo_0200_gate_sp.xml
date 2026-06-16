@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_0200_Gate_SP" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="MISS_0200_COM_01_01">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="0.500000" end="7.733604">
+          <CommandInstance name="SetDialog" duration="7.233604" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0200_COM::16545::54563" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_01_02">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="6.005688">
+          <CommandInstance name="SetDialog" duration="5.005688" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0200_COM::16545::54564" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_01_03">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" start="1.000000" end="1.473479">
+          <CommandInstance name="SetDialog" duration="0.473479" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::G01_SFT::0200_COM::16545::54565" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="MISS_0200_COM_04_01">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial" true="NewTask_0" data="UID:00000643" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="MISS_0200_COM_01_01" true="MISS_0200_COM_01_02" sequence="LD_VO_0200_Gate_SP"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="MISS_0200_COM_01_02" true="MISS_0200_COM_01_03" sequence="LD_VO_0200_Gate_SP"/>
+  <Task name="Enable Fake Grim">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="Enable Fake Grim" false="MISS_0200_COM_04_01">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_1" start="Enable Fake Grim" true="MISS_0200_COM_01_01" sequence="LD_VO_0200_Gate_SP"/>
+</Sequence>

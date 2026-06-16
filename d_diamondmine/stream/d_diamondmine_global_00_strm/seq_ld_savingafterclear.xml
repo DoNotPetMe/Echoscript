@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_SavingAfterClear" leveluid="0" streamedRandomID="1260989390">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::O_Sam_Character" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="PlayerTriggerSaveCheckpointVolume" entityStripped="1">
+            <ParameterInstance name="SaveVolume" data="ECoopSaveTriggerVolume_1" InUnrealActors="1" TypeDeleted="ESaveTriggerVolume"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

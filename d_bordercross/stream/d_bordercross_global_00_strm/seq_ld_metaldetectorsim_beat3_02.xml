@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_MetalDetectorSim_Beat3_02" leveluid="1" streamedRandomID="2038094029">
+  <Task name="VolumeOccupyEventCheck" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:0000136a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:0000136b" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00001369" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="SetWarningLightOn">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:0000136a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:0000136b" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00001369" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="PlayWarningSound">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000b57" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="PlaySound" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_Sfx_CameraDetectsPlayer" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="SetWarningLightOff">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:0000136a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" start="2.000000" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:0000136b" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" start="2.000000" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00001369" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" start="2.000000" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopWarningSound">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000b57" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" start="2.000000" end="-1.000000">
+          <CommandInstance name="StopSound" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Sound" data="Play_Sfx_CameraDetectsPlayer" InUnrealSounds="1" TypeDeleted="Sound"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_7">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_8">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="StartCombatWithLKP">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::List_EnemyAIs_Beat3_OfficeHall" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetApproximateLKP" entityStripped="1" dp_i="67108872" bv_a="1" bv_i="67108880">
+            <ParameterInstance name="PositionActor" data="UID:0000076d" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="OptionalPlayer"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::List_EnemyAIs_Beat3_OfficeHall" TypeDeleted="List">
+        <Event name="NewEvent" start="1.000000" end="-1.000000">
+          <CommandInstance name="StartCombat" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="VolumeOccupyEventCheck" true="NewTask_0" data="UID:00000729" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask_0" true="SetWarningLightOn" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask_0" true="PlayWarningSound" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_4" true="SetWarningLightOff" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="NewTask_4" true="StopWarningSound" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="SetWarningLightOn" true="NewTask_7" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="PlayWarningSound" true="NewTask_7" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyEvent name="NewDependencyEvent_0" start="NewTask_7" true="NewTask_4" data="UID:00000729" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISEMPTY" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_5" start="SetWarningLightOff" true="NewTask_8" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="StopWarningSound" true="NewTask_8" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="NewTask_8" true="VolumeOccupyEventCheck" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="NewTask_0" true="StartCombatWithLKP" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="StartCombatWithLKP" true="NewTask_7" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <VisualComment name="NewVisualComment" x="-8.115564" y="-71.294754" width="1102.998535" height="365.550903" commentDate="10/18/2012 7:03:02 PM"/>
+  <Task name="VolumeOccupyEventCheck_0" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:0000136a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:0000136b" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00001369" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="SetWarningLightOn_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:0000136a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:0000136b" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00001369" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="PlayWarningSound_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000b57" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="PlaySound" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_Sfx_CameraDetectsPlayer" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_10">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="SetWarningLightOff_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_1" entity="UID:0000136a" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" start="2.000000" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:0000136b" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" start="2.000000" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00001369" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" start="2.000000" end="-1.000000">
+          <CommandInstance name="SetVisible" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="StopWarningSound_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000b57" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" start="2.000000" end="-1.000000">
+          <CommandInstance name="StopSound" entityStripped="1" dp_i="67108868">
+            <ParameterInstance name="Sound" data="Play_Sfx_CameraDetectsPlayer" InUnrealSounds="1" TypeDeleted="Sound"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_11">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_12">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="VolumeOccupyEventCheck_0" true="NewTask_9" data="UID:0000072c" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISOCCUPIED" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_10" start="NewTask_9" true="SetWarningLightOn_0" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_11" start="NewTask_9" true="PlayWarningSound_0" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_12" start="NewTask_10" true="SetWarningLightOff_0" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_13" start="NewTask_10" true="StopWarningSound_0" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_14" start="SetWarningLightOn_0" true="NewTask_11" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_15" start="PlayWarningSound_0" true="NewTask_11" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyEvent name="NewDependencyEvent_2" start="NewTask_11" true="NewTask_10" data="UID:0000072c" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ISEMPTY" data=""/>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_16" start="SetWarningLightOff_0" true="NewTask_12" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_17" start="StopWarningSound_0" true="NewTask_12" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="NewTask_12" true="VolumeOccupyEventCheck_0" sequence="LD_MetalDetectorSim_Beat3_02"/>
+  <VisualComment name="NewVisualComment_0" x="17.903221" y="349.870941" width="1062.903198" height="354.516083" commentDate="10/18/2012 7:03:29 PM"/>
+</Sequence>

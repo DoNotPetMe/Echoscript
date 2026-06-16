@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="EMP_FanStop" leveluid="1" streamedRandomID="190391868">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000a2e" InUnrealActors="1" TypeDeleted="GOLight">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326636" bv_a="1131413504:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_0" start="0.500000" end="1.000000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326636" bv_a="1123024896:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+        <Event name="NewEvent_1" start="1.000000" end="1.500000" condition="1">
+          <CommandInstance name="RotateActor" duration="0.500000" entityStripped="1" dp_i="201326636" bv_a="1114636288:1" bv_i="134217746">
+            <ParameterInstance name="ETarget"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

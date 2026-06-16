@@ -1,0 +1,2638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Starting generated section; SC6StatTableWarpingPlayground on 2013-6-25_at_11h47m3s -->
+<Statistics version="1">
+    <EventTypes>
+        <Event Property="m_Kills" Event="PawnKilled" Handler="KillHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_Deaths" Event="PlayerKilled" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <!-- CALCULATED <Event Property="m_KDRatio" Event="" Handler="" LocalAggregationType="Calculate"/>  -->
+        <Event Property="m_Assists" Event="KillReward" Handler="AssistHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_ShotsFired" Event="LocalPlayerShotFired" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_ShotsHit" Event="LocalPlayerShotHit" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <!-- CALCULATED <Event Property="m_Accuracy" Event="" Handler="" LocalAggregationType="Calculate"/>  -->
+        <Event Property="m_Headshots" Event="LocalPlayerHeadshot" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <!-- CALCULATED <Event Property="m_HeadshotPercentage" Event="" Handler="" LocalAggregationType="Calculate"/>  -->
+        <Event Property="m_NumTimesUsed" Event="LocalPlayerGameItemUsed" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_h2hLethal" Event="PawnH2HDamage" Handler="PawnH2HLethalDamageHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_h2hNonLethal" Event="PawnH2HDamage" Handler="PawnH2HNonLethalDamageHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_DeathFromAbove" Event="LocalDeathFromAboveKill" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_MarkAndExecute" Event="LocalPlayerMAEPawnKilled" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_GamesStarted" Event="MissionStarted" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_GamesCompleted" Event="GamesCompletedHandler" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_Wins" Event="MissionCompleted" Handler="AdvWinHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_Ties" Event="MissionCompleted" Handler="AdvTieHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_Losses" Event="MissionCompleted" Handler="AdvLossHandler" LocalAggregationType="Add"/> <!--  -->
+        <!-- CALCULATED <Event Property="m_WLRatio" Event="" Handler="" LocalAggregationType="Calculate"/>  -->
+        <Event Property="m_TotalTime" Event="MissionCompleted" Handler="MissionTimeHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_TotalScore" Event="TotalScore" Handler="HighScoreHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_TotalEarnings" Event="TotalScore" Handler="TotalEarningsHandler" LocalAggregationType="Add"/> <!--  -->
+        <Event Property="m_W2GSuitGoggles" Event="" Handler="" LocalAggregationType="Add"/> <!-- W2G: Use to Unlock W2GSuitGoggles -->
+        <Event Property="m_W2GSuitBoots" Event="" Handler="" LocalAggregationType="Add"/> <!-- W2G: Use to Unlock W2GSuitBoots -->
+        <Event Property="m_W2GSuitGloves" Event="" Handler="" LocalAggregationType="Add"/> <!-- W2G: Use to Unlock W2GSuitGloves -->
+        <Event Property="m_W2GTransfer" Event="" Handler="" LocalAggregationType="Add"/> <!-- W2G: Used to pass an amount of currency to the game -->
+        <Event Property="m_Logins" Event="RDVLogin" Handler="IncrementHandler" LocalAggregationType="Add"/> <!--  -->
+        <!-- TYPE_DateTime <Event Property="m_LastStatWrite" Event="" Handler="" LocalAggregationType="Overwrite"/> Managed by a backend process on rdv for caching purposes -->
+        <Event Property="m_Experience" Event="XPEarned" Handler="XPEarnedHandler" LocalAggregationType="Overwrite"/> <!-- A simple mirror to pass this info to the website -->
+        <Event Property="m_AdvTokensOnHand" Event="TokensOnHand" Handler="TokensOnHandHandler" LocalAggregationType="Overwrite"/> <!-- A simple mirror to pass this info to the website -->
+        <Event Property="m_AdvTokensEarned" Event="TokensEarned" Handler="TokensEarnedHandler" LocalAggregationType="Add"/> <!-- A simple mirror to pass this info to the website -->
+        <Event Property="m_AdvTokensSpent" Event="TokensSpent" Handler="TokensSpentHandler" LocalAggregationType="Add"/> <!-- A simple mirror to pass this info to the website -->
+        <Event Property="m_CashOnHand" Event="EconomyCurrencyChanged" Handler="EconomyChangedHandler" LocalAggregationType="Overwrite"/> <!-- A simple mirror to pass this info to the website -->
+        <Event Property="m_CashEarned" Event="EconomyCurrencyEarned" Handler="CashEarnedHandler" LocalAggregationType="Add"/> <!-- A simple mirror to pass this info to the website -->
+        <Event Property="m_CashSpent" Event="EconomyCurrencySpent" Handler="CashSpentHandler" LocalAggregationType="Add"/> <!-- A simple mirror to pass this info to the website -->
+        <Event Property="m_HighScore" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about High Scores and Best Times -->
+        <Event Property="m_BestTime" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about High Scores and Best Times -->
+        <Event Property="m_HSBT_Score" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about High Scores and Best Times -->
+        <Event Property="m_HSBT_Time" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about High Scores and Best Times -->
+        <Event Property="m_HSBT_Difficulty" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about High Scores and Best Times -->
+        <Event Property="m_HSBT_GhostComponent" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about High Scores and Best Times -->
+        <Event Property="m_HSBT_PantherComponent" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about High Scores and Best Times -->
+        <Event Property="m_HSBT_AssaultComponent" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about High Scores and Best Times -->
+        <Event Property="m_LM_MissionID" Event="MissionContextID" Handler="MissionContextIDHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about the Last Mission played -->
+        <Event Property="m_LM_Score" Event="TotalScore" Handler="HighScoreHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about the Last Mission played -->
+        <Event Property="m_LM_Time" Event="MissionCompleted" Handler="MissionCompletedTimeHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about the Last Mission played -->
+        <Event Property="m_LM_Difficulty" Event="MissionCompleted" Handler="DifficultyHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about the Last Mission played -->
+        <Event Property="m_LM_GhostComponent" Event="MissionCompleted" Handler="GhostScoreHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about the Last Mission played -->
+        <Event Property="m_LM_PantherComponent" Event="MissionCompleted" Handler="PantherScoreHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about the Last Mission played -->
+        <Event Property="m_LM_AssaultComponent" Event="MissionCompleted" Handler="TankScoreHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Used to store info about the Last Mission played -->
+        <Event Property="m_HighestDifficulty" Event="MissionCompleted" Handler="DifficultyHandler" LocalAggregationType="Maximum"/> <!-- SnC: used for scorekeeping. Do not use for Adv -->
+        <Event Property="m_GPA_HighestEverGhost" Event="MissionCompleted" Handler="GhostScoreHandler" LocalAggregationType="Maximum"/> <!-- SnC: To record highest ever GPA component scores -->
+        <Event Property="m_GPA_HighestEverPanther" Event="MissionCompleted" Handler="PantherScoreHandler" LocalAggregationType="Maximum"/> <!-- SnC: To record highest ever GPA component scores -->
+        <Event Property="m_GPA_HighestEverAssault" Event="MissionCompleted" Handler="TankScoreHandler" LocalAggregationType="Maximum"/> <!-- SnC: To record highest ever GPA component scores -->
+        <Event Property="m_GPA_AccumulatedGhost" Event="MissionCompleted" Handler="GhostScoreHandler" LocalAggregationType="Add"/> <!-- SnC: To record a running total of GPA component scores -->
+        <Event Property="m_GPA_AccumulatedPanther" Event="MissionCompleted" Handler="PantherScoreHandler" LocalAggregationType="Add"/> <!-- SnC: To record a running total of GPA component scores -->
+        <Event Property="m_GPA_AccumulatedAssault" Event="MissionCompleted" Handler="TankScoreHandler" LocalAggregationType="Add"/> <!-- SnC: To record a running total of GPA component scores -->
+        <Event Property="m_SecondaryObjectivesCount" Event="" Handler="" LocalAggregationType="Overwrite"/> <!-- SnC: The sum total of all secondary ovjectives collected -->
+        <Event Property="m_SO_HVTCaptured" Event="HVTCaptured" Handler="IncrementHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Numer of HVTCaptured objectives collected -->
+        <Event Property="m_SO_LaptopHacked" Event="LaptopHacked" Handler="IncrementHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Numer of LaptopHacked objectives collected -->
+        <Event Property="m_SO_DeadDropPickedUp" Event="DeadDropPickedUp" Handler="IncrementHandler" LocalAggregationType="Overwrite"/> <!-- SnC: Numer of DeadDropPickedUp objectives collected -->
+        <Event Property="m_AdvObjectivesCount" Event="ObjectiveCount" Handler="ObjectiveCountHandler" LocalAggregationType="Add"/> <!-- Adv: The sum total of all objectives completed -->
+        <Event Property="m_AO_CTI_Captures" Event="ObjectiveReward" Handler="AdvCTICaptureHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Capture objectives in CTI -->
+        <Event Property="m_AO_CTI_Resets" Event="ObjectiveReward" Handler="AdvCTIResetHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Reset objectives in CTI -->
+        <Event Property="m_AO_FLD_Captures" Event="ObjectiveReward" Handler="AdvFLDCaptureHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Capture objectives in FLD -->
+        <Event Property="m_AO_FLD_Defends" Event="ObjectiveReward" Handler="AdvFLCDefendsHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Defend objectives in FLD -->
+        <Event Property="m_AO_SVM_Hacks" Event="ObjectiveReward" Handler="AdvSvMHackHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Hack objectives in SVM -->
+        <Event Property="m_AO_SVM_Disrupts" Event="AdvSvmHackerKiller" Handler="AdvSvmHackerKillerHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Disruption objectives in SVM -->
+        <Event Property="m_TimeSpentAlive" Event="PlayerKilled" Handler="TimeAliveHandler" LocalAggregationType="Add"/> <!-- Adv: Send last life time and RDV will aggregate -->
+        <Event Property="m_LongestLife" Event="PlayerKilled" Handler="TimeAliveHandler" LocalAggregationType="Maximum"/> <!-- Adv: Send last life time and RDV will aggregate -->
+        <Event Property="m_ShortestLife" Event="PlayerKilled" Handler="TimeAliveHandler" LocalAggregationType="Minimum"/> <!-- Adv: Send last life time and RDV will aggregate -->
+        <Event Property="m_Spawns" Event="PlayerSpawned" Handler="IncrementHandler" LocalAggregationType="Add"/> <!-- Adv: Number of times spawned is very different from deaths -->
+        <!-- CALCULATED <Event Property="m_AverageLife" Event="" Handler="" LocalAggregationType="Calculate"/> Adv: Calculated by RDV -->
+        <Event Property="m_LongestKillstreak" Event="KillStreak" Handler="KillStreakHandler" LocalAggregationType="Maximum"/> <!-- Adv: Send killstreaks and RDV will take care of the aggregation -->
+        <Event Property="m_LongestDeathstreak" Event="DeathStreak" Handler="DeathStreakHandler" LocalAggregationType="Maximum"/> <!-- Adv: Send deathstreaks and RDV will take care of the aggregation -->
+        <Event Property="m_FarthestKill" Event="PawnKilled" Handler="KillDistanceHandler" LocalAggregationType="Maximum"/> <!-- Adv: Send kill distance and RDV will take care of the aggregation -->
+        <Event Property="m_FarthestHeadshot" Event="LocalPlayerHeadshot" Handler="HeadshotDistanceHandler" LocalAggregationType="Maximum"/> <!-- Adv: Send headshot distance and RDV will take care of the aggregation -->
+        <Event Property="m_AMPG_Kills" Event="StatsAdvPerGame" Handler="AMPGKillsHandler" LocalAggregationType="Maximum"/> <!-- Adv: Most Kills in a single game -->
+        <Event Property="m_AMPG_Score" Event="TotalScore" Handler="HighScoreHandler" LocalAggregationType="Maximum"/> <!-- Adv: Most Score in a single game -->
+        <Event Property="m_AMPG_Earnings" Event="TotalScore" Handler="TotalEarningsHandler" LocalAggregationType="Maximum"/> <!-- Adv: Most Earnings in a single game -->
+        <Event Property="m_AMPG_KDR" Event="StatsAdvPerGame" Handler="AMPGKDRatioHandler" LocalAggregationType="Maximum"/> <!-- Adv: Best Kill Death Ratio in a single game -->
+        <Event Property="m_AMPG_Acc" Event="StatsAdvPerGame" Handler="AMPGAccuracyHandler" LocalAggregationType="Maximum"/> <!-- Adv: Best Accuracy in a single game -->
+        <Event Property="m_AMPG_Ojectives" Event="ObjectiveCount" Handler="ObjectiveCountHandler" LocalAggregationType="Maximum"/> <!-- Adv: Most Ojectives in a single game -->
+        <Event Property="m_AMPG_h2h" Event="StatsAdvPerGame" Handler="AMPGH2HKillsHandler" LocalAggregationType="Maximum"/> <!-- Adv: Most h2h kills in a single game -->
+        <Event Property="m_AMPG_DFA" Event="StatsAdvPerGame" Handler="AMPGDFAHandler" LocalAggregationType="Maximum"/> <!-- Adv: Most DFA kills in a single game -->
+        <Event Property="m_Medal_Weapon" Event="KillReward" Handler="AdvMedalWeaponHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Weapon Medals -->
+        <Event Property="m_Medal_Frag" Event="KillReward" Handler="AdvMedalFragHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Frag Medals -->
+        <Event Property="m_Medal_ProxyMine" Event="KillReward" Handler="AdvMedalProxyMineHandler" LocalAggregationType="Add"/> <!-- Adv: Number of ProxyMine Medals -->
+        <Event Property="m_Medal_TearGas" Event="KillReward" Handler="AdvMedalTearGasHandler" LocalAggregationType="Add"/> <!-- Adv: Number of TearGas Medals -->
+        <Event Property="m_Medal_Incendiary" Event="KillReward" Handler="AdvMedalIncendiaryHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Incendiary Medals -->
+        <Event Property="m_Medal_Cam" Event="KillReward" Handler="AdvMedalCamHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Cam Medals -->
+        <Event Property="m_Medal_Drone" Event="KillReward" Handler="AdvMedalDroneHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Drone Medals -->
+        <Event Property="m_Medal_Melee" Event="KillReward" Handler="AdvMedalMeleeHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Melee Medals -->
+        <Event Property="m_Medal_LedgeGrab" Event="KillReward" Handler="AdvMedalLedgeGrabHandler" LocalAggregationType="Add"/> <!-- Adv: Number of LedgeGrab Medals -->
+        <Event Property="m_Medal_DeathFromAbove" Event="KillReward" Handler="AdvMedalDeathFromAboveHandler" LocalAggregationType="Add"/> <!-- Adv: Number of DeathFromAbove Medals -->
+        <Event Property="m_Medal_CoverGrab" Event="KillReward" Handler="AdvMedalCoverGrabHandler" LocalAggregationType="Add"/> <!-- Adv: Number of CoverGrab Medals -->
+        <Event Property="m_Medal_NeckSnap" Event="KillReward" Handler="AdvMedalNeckSnapHandler" LocalAggregationType="Add"/> <!-- Adv: Number of NeckSnap Medals -->
+        <Event Property="m_Medal_Assist" Event="KillReward" Handler="AdvMedalAssistHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Assist Medals -->
+        <Event Property="m_Medal_MajorAssist" Event="KillReward" Handler="AdvMedalMajorAssistHandler" LocalAggregationType="Add"/> <!-- Adv: Number of MajorAssist Medals -->
+        <Event Property="m_Medal_CoopKill" Event="KillReward" Handler="AdvMedalCoopKillHandler" LocalAggregationType="Add"/> <!-- Adv: Number of CoopKill Medals -->
+        <Event Property="m_Medal_TagAssist" Event="KillReward" Handler="AdvMedalTagAssistHandler" LocalAggregationType="Add"/> <!-- Adv: Number of TagAssist Medals -->
+        <Event Property="m_Medal_DisruptorAssist" Event="KillReward" Handler="AdvMedalDisruptorAssistHandler" LocalAggregationType="Add"/> <!-- Adv: Number of DisruptorAssist Medals -->
+        <Event Property="m_Medal_EMPAssist" Event="KillReward" Handler="AdvMedalEMPAssistHandler" LocalAggregationType="Add"/> <!-- Adv: Number of EMPAssist Medals -->
+        <Event Property="m_Medal_FlashbangAssist" Event="KillReward" Handler="AdvMedalFlashbangAssistHandler" LocalAggregationType="Add"/> <!-- Adv: Number of FlashbangAssist Medals -->
+        <Event Property="m_Medal_StunAssist" Event="KillReward" Handler="AdvMedalStunAssistHandler" LocalAggregationType="Add"/> <!-- Adv: Number of StunAssist Medals -->
+        <Event Property="m_Medal_DroneDestroyed" Event="KillReward" Handler="AdvMedalDroneDestroyedHandler" LocalAggregationType="Add"/> <!-- Adv: Number of DroneDestroyed Medals -->
+        <Event Property="m_Medal_Headshot" Event="KillReward" Handler="AdvMedalHeadshotHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Headshot Medals -->
+        <Event Property="m_Medal_Killstreak3" Event="KillReward" Handler="AdvMedalKillstreak3Handler" LocalAggregationType="Add"/> <!-- Adv: Number of Killstreak3 Medals -->
+        <Event Property="m_Medal_Killstreak5" Event="KillReward" Handler="AdvMedalKillstreak5Handler" LocalAggregationType="Add"/> <!-- Adv: Number of Killstreak5 Medals -->
+        <Event Property="m_Medal_Killstreak10" Event="KillReward" Handler="AdvMedalKillstreak10Handler" LocalAggregationType="Add"/> <!-- Adv: Number of Killstreak10 Medals -->
+        <Event Property="m_Medal_Killstreak15" Event="KillReward" Handler="AdvMedalKillstreak15Handler" LocalAggregationType="Add"/> <!-- Adv: Number of Killstreak15 Medals -->
+        <Event Property="m_Medal_Killstreak20" Event="KillReward" Handler="AdvMedalKillstreak20Handler" LocalAggregationType="Add"/> <!-- Adv: Number of Killstreak20 Medals -->
+        <Event Property="m_Medal_Comeback" Event="KillReward" Handler="AdvMedalComebackHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Comeback Medals -->
+        <Event Property="m_Medal_Defender" Event="KillReward" Handler="AdvMedalDefenderHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Defender Medals -->
+        <Event Property="m_Medal_HackerKiller" Event="KillReward" Handler="AdvMedalHackerKillerHandler" LocalAggregationType="Add"/> <!-- Adv: Number of HackerKiller Medals -->
+        <Event Property="m_Medal_CourierKiller" Event="KillReward" Handler="AdvMedalCourierKillerHandler" LocalAggregationType="Add"/> <!-- Adv: Number of CourierKiller Medals -->
+        <Event Property="m_Medal_LongShot" Event="KillReward" Handler="AdvMedalLongShotHandler" LocalAggregationType="Add"/> <!-- Adv: Number of LongShot Medals -->
+        <Event Property="m_Medal_KillstreakDisruption" Event="KillReward" Handler="AdvMedalKillstreakDisruptionHandler" LocalAggregationType="Add"/> <!-- Adv: Number of KillstreakDisruption Medals -->
+        <Event Property="m_Medal_FromTheGrave" Event="KillReward" Handler="AdvMedalFromTheGraveHandler" LocalAggregationType="Add"/> <!-- Adv: Number of FromTheGrave Medals -->
+        <Event Property="m_Medal_GhostKill" Event="KillReward" Handler="AdvMedalGhostKillHandler" LocalAggregationType="Add"/> <!-- Adv: Number of GhostKill Medals -->
+        <Event Property="m_Medal_HangedKill" Event="KillReward" Handler="AdvMedalHangedKillHandler" LocalAggregationType="Add"/> <!-- Adv: Number of HangedKill Medals -->
+        <Event Property="m_Medal_FirstBlood" Event="KillReward" Handler="AdvMedalFirstBloodHandler" LocalAggregationType="Add"/> <!-- Adv: Number of FirstBlood Medals -->
+        <Event Property="m_Medal_DoubleKill" Event="KillReward" Handler="AdvMedalDoubleKillHandler" LocalAggregationType="Add"/> <!-- Adv: Number of DoubleKill Medals -->
+        <Event Property="m_Medal_TripleKill" Event="KillReward" Handler="AdvMedalTripleKillHandler" LocalAggregationType="Add"/> <!-- Adv: Number of TripleKill Medals -->
+        <Event Property="m_Medal_MultiKill" Event="KillReward" Handler="AdvMedalMultiKillHandler" LocalAggregationType="Add"/> <!-- Adv: Number of MultiKill Medals -->
+        <Event Property="m_Medal_Avenger" Event="KillReward" Handler="AdvMedalAvengerHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Avenger Medals -->
+        <Event Property="m_Medal_Nemesis" Event="KillReward" Handler="AdvMedalNemesisHandler" LocalAggregationType="Add"/> <!-- Adv: Number of Nemesis Medals -->
+        <Event Property="m_Medal_BlindKill" Event="KillReward" Handler="AdvMedalBlindKillHandler" LocalAggregationType="Add"/> <!-- Adv: Number of BlindKill Medals -->
+        <!-- I would like to remind you that this file is generated; -->
+        <!-- Changes made here will BREAK THE STATS SYSTEM -->
+    </EventTypes>
+    <Calculations>
+        <Calc Statboard="sb_SoloOverview" Property="m_HeadshotPercentage" Type="Divide" LocalAggregationType="Overwrite">
+            <Value Statboard="sb_SoloOverview" Property="m_Headshots"/>
+            <Value Statboard="sb_SoloOverview" Property="m_ShotsFired"/>
+        </Calc>
+        <Calc Statboard="sb_SoloOverview" Property="m_Accuracy" Type="Divide" LocalAggregationType="Overwrite">
+            <Value Statboard="sb_SoloOverview" Property="m_ShotsHit"/>
+            <Value Statboard="sb_SoloOverview" Property="m_ShotsFired"/>
+        </Calc>
+        <Calc Statboard="sb_CoopOverview" Property="m_HeadshotPercentage" Type="Divide" LocalAggregationType="Overwrite">
+            <Value Statboard="sb_CoopOverview" Property="m_Headshots"/>
+            <Value Statboard="sb_CoopOverview" Property="m_ShotsFired"/>
+        </Calc>
+        <Calc Statboard="sb_CoopOverview" Property="m_Accuracy" Type="Divide" LocalAggregationType="Overwrite">
+            <Value Statboard="sb_CoopOverview" Property="m_ShotsHit"/>
+            <Value Statboard="sb_CoopOverview" Property="m_ShotsFired"/>
+        </Calc>
+        <Calc Statboard="sb_SoloAndCoopPerWeapon" Property="m_HeadshotPercentage" Type="Divide" LocalAggregationType="Overwrite">
+            <Value Statboard="sb_SoloAndCoopPerWeapon" Property="m_Headshots"/>
+            <Value Statboard="sb_SoloAndCoopPerWeapon" Property="m_ShotsFired"/>
+        </Calc>
+        <Calc Statboard="sb_SoloAndCoopPerWeapon" Property="m_Accuracy" Type="Divide" LocalAggregationType="Overwrite">
+            <Value Statboard="sb_SoloAndCoopPerWeapon" Property="m_ShotsHit"/>
+            <Value Statboard="sb_SoloAndCoopPerWeapon" Property="m_ShotsFired"/>
+        </Calc>
+    </Calculations>
+    <Tables>
+        <Table Statboard="sb_GlobalServer" Authority="Remote">
+            <UpdateConstraints/>
+        </Table>
+        <Table Statboard="sb_GlobalLocal" Authority="Local">
+            <UpdateConstraints/>
+        </Table>
+        <Table Statboard="sb_AdvPerGameMode" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="AdvClassic">
+                    <AllowedValue>SetToClassic</AllowedValue>
+                    <AllowedValue>Unset</AllowedValue>
+                </Constraint>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGameMode" Context="cxt_TDM_Standard" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="AdvClassic">
+                    <AllowedValue>Unset</AllowedValue>
+                </Constraint>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGameMode" Context="cxt_SvM_Standard" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="AdvClassic">
+                    <AllowedValue>Unset</AllowedValue>
+                </Constraint>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGameMode" Context="cxt_CTI_Standard" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="AdvClassic">
+                    <AllowedValue>Unset</AllowedValue>
+                </Constraint>
+                <Constraint Type="GameMode">
+                    <AllowedValue>CTI</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGameMode" Context="cxt_FLD_Standard" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="AdvClassic">
+                    <AllowedValue>Unset</AllowedValue>
+                </Constraint>
+                <Constraint Type="GameMode">
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGameMode" Context="cxt_SVM_Classic" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="AdvClassic">
+                    <AllowedValue>SetToClassic</AllowedValue>
+                </Constraint>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Pistol_DesertEagle" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Pistol_DesertEagle</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Pistol_Makarov" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Pistol_Makarov</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Pistol_Px4" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Pistol_Px4</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_AK47" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_AK47</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_ACE" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_ACE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_ARX160" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_ARX160</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_FAMASG2" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_FAMASG2</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_G36C" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_G36C</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_Goblin" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_Goblin</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_HoneyBadger" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_HoneyBadger</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_M416" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_M416</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Assault_SA58" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Assault_SA58</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_LMG_HKMG4" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_LMG_HKMG4</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_LMG_U100" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_LMG_U100</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Shotgun_AA12" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Shotgun_AA12</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Shotgun_M1014" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Shotgun_M1014</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Shotgun_RMB93" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Shotgun_RMB93</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Merc_Shotgun_Saiga12" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Merc_Shotgun_Saiga12</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_MP5" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_MP5</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_Pistol_F40" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_Pistol_F40</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_Pistol_FiveSeven" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_Pistol_FiveSeven</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_Pistol_Proto" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_Pistol_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_Pistol_USP45" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_Pistol_USP45</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_Assault_Proto" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_Assault_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_Shotgun_Proto" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_Shotgun_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_MAC11" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_MAC11</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_MP7" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_MP7</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_PP19" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_PP19</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_PP2000" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_PP2000</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_Proto" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_Scorpion" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_Scorpion</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_UMP45" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_UMP45</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_SMG_Vector" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_SMG_Vector</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerWeapon" Context="cxt_ADV_Spy_CrossBow" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>ADV_Spy_CrossBow</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_Grenade_Flashbang" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_Grenade_Flashbang</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_Sticky_Camera" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_Sticky_Camera</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_Grenade_EMP" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_Grenade_EMP</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_AntiGrenadeSystem" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_AntiGrenadeSystem</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_EscBomb" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_EscBomb</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_Grenade_Concussion" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_Grenade_Concussion</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_Grenade_Frag" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_Grenade_Frag</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_Grenade_TearGas" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_Grenade_TearGas</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_AmmoPack" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_AmmoPack</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_Proximity_Mine" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_Proximity_Mine</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvPerGadget" Context="cxt_GI_Adv_TaggingDevice" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Adv_TaggingDevice</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_AdvMedals" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>TeamDM</AllowedValue>
+                    <AllowedValue>SpyVSMerc</AllowedValue>
+                    <AllowedValue>CTI</AllowedValue>
+                    <AllowedValue>FrontlineDom</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_Ladder" Context="cxt_Ladder_1" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="LadderIndex">
+                    <AllowedValue>1</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_Ladder" Context="cxt_Ladder_2" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="LadderIndex">
+                    <AllowedValue>2</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_Ladder" Context="cxt_Ladder_3" Authority="Remote">
+            <UpdateConstraints>
+                <Constraint Type="LadderIndex">
+                    <AllowedValue>3</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloOverview" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_AFB" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_AFB</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_KOB" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_KOB</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_BAD" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_BAD</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_CON" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_CON</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_NOU" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_NOU</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_CHE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_CHE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_QOD" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_QOD</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_FRE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_FRE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_DET" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_DET</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_AIR" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_AIR</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_PAL" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_PAL</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_FUE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_FUE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloPerMission" Context="cxt_S_BLO" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_BLO</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_AFB" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_AFB</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_KOB" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_KOB</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_BAD" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_BAD</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_CON" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_CON</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_NOU" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_NOU</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_CHE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_CHE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_QOD" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_QOD</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_FRE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_FRE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_DET" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_DET</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_AIR" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_AIR</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_PAL" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_PAL</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_FUE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_FUE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloHighScore" Context="cxt_S_BLO" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_BLO</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_AFB" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_AFB</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_KOB" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_KOB</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_BAD" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_BAD</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_CON" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_CON</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_NOU" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_NOU</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_CHE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_CHE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_QOD" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_QOD</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_FRE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_FRE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_DET" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_DET</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_AIR" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_AIR</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_PAL" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_PAL</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_FUE" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_FUE</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloBestTime" Context="cxt_S_BLO" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>S_BLO</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopOverview" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_C01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_C02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_C03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_C04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_E01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_E02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_E03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_E04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_G01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_G02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_G03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_G04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_H01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>					
+                    <AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_H02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_H03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopPerMission" Context="cxt_H04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_C01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_C02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_C03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_C04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_E01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_E02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_E03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_E04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_G01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_G02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_G03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_G04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_H01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_H02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_H03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopHighScore" Context="cxt_H04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_C01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_C02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_C03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_C04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>C04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_E01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_E02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_E03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_E04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>E04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_G01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_G02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_G03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_G04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>G04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_H01" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H01</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_H02" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H02</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_H03" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H03</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_CoopBestTime" Context="cxt_H04" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Level">
+                    <AllowedValue>H04</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Pistol_FiveSeven" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Pistol_5-7</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Pistol_CZ75" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Pistol_CZ75</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Pistol_DesertEagle" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Pistol_DesertEagle</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Pistol_F40" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Pistol_F40</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Pistol_Makarov" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Pistol_Makarov</AllowedValue>
+					<AllowedValue>Pistol_Makarov_AFBCustom</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Pistol_Proto" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Pistol_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Pistol_PX4" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Pistol_PX4</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Pistol_USP45" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Pistol_USP45</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_AK47" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_AK47</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_AKS74U" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_AKS74U</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_ARX" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_ARX</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_FAMAS" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_FAMAS</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_G36C" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_G36C</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_Goblin" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_Goblin</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_HoneyBadger" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_HoneyBadger</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_M416" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_M416</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_Proto" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Rifle_SA58" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Rifle_SA58</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Shotgun_AA12" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Shotgun_AA12</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Shotgun_M1014" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Shotgun_M1014</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Shotgun_Proto" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Shotgun_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Shotgun_RMB93" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Shotgun_RMB93</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Shotgun_Saiga12" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Shotgun_Saiga12</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_MAC11" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_MAC11</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_MP5" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_MP5</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_MP7A2" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_MP7A2</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_PP19" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_PP19</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_PP2000" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_PP2000</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_Proto" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_Scorpion" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_Scorpion</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_UMP45" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_UMP45</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_SMG_Vector" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>SMG_Vector</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Sniper_Proto" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Sniper_Proto</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Sniper_SR25" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Sniper_SR25</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Sniper_SVU" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Sniper_SVU</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Sniper_VSS" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Sniper_VSS</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Crossbow_1H" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Crossbow_1H</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerWeapon" Context="cxt_SnCW_Tazer" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>Tazer</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Sticky_Camera" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Sticky_Camera</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Quadrocopter" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Quadrocopter</AllowedValue>
+                    <AllowedValue>Trirotor_Dart</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_DoorBreach" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_DoorBreach</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_SnakeCamera" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_SnakeCamera</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Proximity_Mine" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Proximity_Mine</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Proximity_Shocker_Mine" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Proximity_Shocker_Mine</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Grenade_Frag" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Grenade_Frag</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Grenade_Incendiary" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Grenade_Incendiary</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Grenade_EMP" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Grenade_EMP</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Grenade_Flashbang" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Grenade_Flashbang</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Grenade_Smoke" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Grenade_Smoke</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Grenade_SleepingGas" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Grenade_SleepingGas</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Grenade_TearGas" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Grenade_TearGas</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_SoloAndCoopPerGadget" Context="cxt_GI_Sticky_Noisemaker" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+                <Constraint Type="Weapon">
+                    <AllowedValue>GI_Sticky_Noisemaker</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+        <Table Statboard="sb_LastMission" Authority="Local">
+            <UpdateConstraints>
+                <Constraint Type="GameMode">
+                    <AllowedValue>SinglePlayer</AllowedValue>
+                    <AllowedValue>Ghost</AllowedValue>
+                    <AllowedValue>Extraction</AllowedValue>
+                    <AllowedValue>CombinedOps</AllowedValue>
+					<AllowedValue>Hunter</AllowedValue>
+                </Constraint>
+            </UpdateConstraints>
+        </Table>
+    </Tables>
+</Statistics>

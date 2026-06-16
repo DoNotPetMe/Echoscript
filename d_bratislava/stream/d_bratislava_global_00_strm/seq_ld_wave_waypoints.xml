@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Wave_Waypoints" startup="1" leveluid="1" streamedRandomID="1548649769">
+  <Task name="Initial Check" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Wave ID check">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Embassy Enable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_4">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_5">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Initial Check" true="Wave ID check" data="Repository::_GlobalEventListener" TypeDeleted="GlobalEvent">
+    <ExternalEventInstance name="EXTRACTION_WAVE_STARTED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="WaveId" data="Repository::O_WaveStartID"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_0" start="NewTask" true="NewTask_0" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="NewTask_0" true="Initial Check" sequence="LD_Wave_Waypoints"/>
+  <DependencyCommand name="NewDependencyCommand" start="Wave ID check" true="Embassy Enable" false="NewTask_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_10" start="NewTask_3" true="North Enable" false="NewTask_4">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_11" start="NewTask_4" true="East Enable" false="NewTask_5">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_12" start="NewTask_5" true="West &amp; East Enable" false="NewTask_7">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Embassy Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="Embassy Enable" true="Wait" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Wait" true="Embassy Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="North Enable">
+    <Timeline name="NewTimeline">
+      <Track name="North" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_North_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="North Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="North Enable" true="Wait_0" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_4" start="Wait_0" true="North Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="East Enable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_East_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="East Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_5" start="East Enable" true="Wait_1" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Wait_1" true="East Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="West &amp; East Enable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_West_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="East" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_East_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="West &amp; East Disable">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="East" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_7" start="West &amp; East Enable" true="Wait_2" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="Wait_2" true="West &amp; East Disable" sequence="LD_Wave_Waypoints"/>
+  <Task name="West Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_West_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="West Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="NewTask_7">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_9">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_14" start="NewTask_9" true="North Enable_0" false="NewTask_13">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="7.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_11">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_15" start="NewTask_11" true="East Enable_0" false="NewTask_9">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="6.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_13">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_16" start="NewTask_13" true="Embassy Enable_1" false="NewTask_15">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="8.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_15">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_17" start="NewTask_15" true="West Enable_0" false="NewTask_17">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_17">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_18" start="NewTask_17" true="North &amp; West Enable_1" false="NewTask_19">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="10.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_19">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_19" start="NewTask_19" true="Embassy &amp; East Enable_2" false="NewTask_21">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="11.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_21">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_20" start="NewTask_21" true="Embassy Enable_2" false="NewTask_23">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="12.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_23">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_21" start="NewTask_23" true="North &amp; West 7 East Enable_2" false="NewTask_25">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="13.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_25">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_22" start="NewTask_25" true="Embassy Enable_3" false="NewTask_27">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="14.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_27">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_23" start="NewTask_27" true="Embassy &amp; North Enable_4" false="NewTask_29">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="15.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_29">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_24" start="NewTask_29" true="West &amp; East Enable_0" false="NewTask_31">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="16.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_31">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_25" start="NewTask_31" true="North Enable_1" false="NewTask_33">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="17.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_33">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_26" start="NewTask_33" true="Embassy Enable_4" false="NewTask_35">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="18.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_35">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_27" start="NewTask_35" true="North &amp; West &amp; East &amp; Embassy Enable_3" false="NewTask_37">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="19.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_37">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_28" start="NewTask_37" true="North Enable_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="20.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="Embassy Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Embassy Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager"/>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_9" start="Embassy Enable_0" true="Wait_3" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="Wait_3" true="Embassy Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="East Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_East_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="East Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_11" start="East Enable_0" true="Wait_4" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_12" start="Wait_4" true="East Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="North Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="North" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_North_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="North Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_5">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_13" start="North Enable_0" true="Wait_5" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_14" start="Wait_5" true="North Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="Embassy Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Embassy Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_6">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_15" start="Embassy Enable_1" true="Wait_6" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_16" start="Wait_6" true="Embassy Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Wait_7">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_17" start="West Enable_0" true="Wait_7" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="Wait_7" true="West Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="North &amp; West Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="North" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+      <Track name="West" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="North &amp; West Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_8">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_19" start="North &amp; West Enable_1" true="Wait_8" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_20" start="Wait_8" true="North &amp; West Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Embassy &amp; East Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_East_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Embassy &amp; East Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_9">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_21" start="Embassy &amp; East Enable_2" true="Wait_9" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_22" start="Wait_9" true="Embassy &amp; East Disable_2" sequence="LD_Wave_Waypoints"/>
+  <Task name="Embassy Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Embassy Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_10">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_23" start="Embassy Enable_2" true="Wait_10" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_24" start="Wait_10" true="Embassy Disable_2" sequence="LD_Wave_Waypoints"/>
+  <Task name="North &amp; West 7 East Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="North" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_North_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="West" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_West_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_East_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="North &amp; West &amp; East Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_11">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_25" start="North &amp; West 7 East Enable_2" true="Wait_11" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_26" start="Wait_11" true="North &amp; West &amp; East Disable_2" sequence="LD_Wave_Waypoints"/>
+  <Task name="Embassy Enable_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Embassy Disable_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_12">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_27" start="Embassy Enable_3" true="Wait_12" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_28" start="Wait_12" true="Embassy Disable_3" sequence="LD_Wave_Waypoints"/>
+  <Task name="Embassy &amp; North Enable_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+      <Track name="North" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Embassy &amp; North Disable_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_13">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_29" start="Embassy &amp; North Enable_4" true="Wait_13" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_30" start="Wait_13" true="Embassy &amp; North Disable_4" sequence="LD_Wave_Waypoints"/>
+  <Task name="West &amp; East Enable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_West_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="East" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_East_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="West &amp; East Disable_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="East" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_14">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_31" start="West &amp; East Enable_0" true="Wait_14" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_32" start="Wait_14" true="West &amp; East Disable_0" sequence="LD_Wave_Waypoints"/>
+  <Task name="North Enable_1">
+    <Timeline name="NewTimeline">
+      <Track name="North" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_North_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="North Disable_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_15">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_33" start="North Enable_1" true="Wait_15" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_34" start="Wait_15" true="North Disable_1" sequence="LD_Wave_Waypoints"/>
+  <Task name="Embassy Enable_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Embassy Disable_4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_16">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_35" start="Embassy Enable_4" true="Wait_16" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_36" start="Wait_16" true="Embassy Disable_4" sequence="LD_Wave_Waypoints"/>
+  <Task name="North &amp; West &amp; East &amp; Embassy Enable_3">
+    <Timeline name="NewTimeline">
+      <Track name="North" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_North_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="West" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_West_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_East_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorAddLocator" entityStripped="1" dp_i="604012480" bv_a="1148846080" bv_i="67108896">
+            <ParameterInstance name="Tag"/>
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Red" TypeDeleted="EWaypointType"/>
+            <ParameterInstance name="Title">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Bratislava_Embassy_Title"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="North &amp; West &amp; East &amp; Embassy Disable_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000864" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000865" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000866" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ActorRemoveLocator" entityStripped="1">
+            <ParameterInstance name="Actor" data="UID:00000867" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait_17">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_37" start="North &amp; West &amp; East &amp; Embassy Enable_3" true="Wait_17" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_38" start="Wait_17" true="North &amp; West &amp; East &amp; Embassy Disable_3" sequence="LD_Wave_Waypoints"/>
+  <Task name="North Enable_2">
+    <Timeline name="NewTimeline">
+      <Track name="North" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="North Disable_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character"/>
+    </Timeline>
+  </Task>
+  <Task name="Wait_18">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Obj_Manager_0" TypeDeleted="ObjectiveManager">
+        <Event name="NewEvent" end="-1.000000" indeterminate="1">
+          <CommandInstance name="RandomWait" entityStripped="1">
+            <ParameterInstance name="Min" data="Repository::Timing Number" TypeDeleted="number"/>
+            <ParameterInstance name="Max" data="Repository::Timing Number" TypeDeleted="number"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_39" start="North Enable_2" true="Wait_18" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_40" start="Wait_18" true="North Disable_2" sequence="LD_Wave_Waypoints"/>
+  <Task name="NewTask_38">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_41" start="North Disable_2" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_42" start="North &amp; West &amp; East &amp; Embassy Disable_3" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_43" start="Embassy Disable_4" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_44" start="North Disable_1" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_45" start="West &amp; East Disable_0" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_46" start="Embassy &amp; North Disable_4" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_47" start="Embassy Disable_3" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_48" start="North &amp; West &amp; East Disable_2" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_49" start="Embassy Disable_2" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_50" start="Embassy &amp; East Disable_2" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_51" start="North &amp; West Disable_1" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_52" start="West Disable_0" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_53" start="Embassy Disable_1" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_54" start="North Disable_0" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_55" start="East Disable_0" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_56" start="Embassy Disable_0" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_57" start="West &amp; East Disable" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_58" start="East Disable" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_59" start="North Disable" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <DependencyComplete name="NewDependencyComplete_60" start="Embassy Disable" true="NewTask_38" sequence="LD_Wave_Waypoints"/>
+  <Task name="NewTask_39">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_61" start="NewTask_38" true="NewTask_39" sequence="LD_Wave_Waypoints"/>
+  <DependencyCommand name="NewDependencyCommand_29" start="NewTask_7" true="Embassy Enable_0" false="NewTask_11">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_WaveStartID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_62" start="NewTask_39" true="NewTask" sequence="LD_Wave_Waypoints"/>
+</Sequence>

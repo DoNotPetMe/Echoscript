@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="SEQ_SOUND_OnStartCombat" leveluid="2" streamedRandomID="571275100">
+  <Task name="Start" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Play Sound">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_2" entity="UID:000007bc" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="InstantPlaySound" entityStripped="1" dp_i="67108872">
+            <ParameterInstance name="Sound" data="Play_AMB_DeOps_Hunter_FishMarket_3D_Alley_BabyCry" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Start" true="Play Sound" data="UID:000002dc" InUnrealActors="1" TypeDeleted="ECoopSpawner">
+    <ExternalEventInstance name="ECOOPSPAWNER_SPAWNED_REINFORCEMENTS" data=""/>
+  </DependencyEvent>
+</Sequence>

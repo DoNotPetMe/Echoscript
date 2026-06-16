@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_AIManager" leveluid="2" streamedRandomID="1260989390">
+  <Task name="check" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="ChangeLight">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_Lightcontroller" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::bCombatStarted" TypeDeleted="Boolean">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AssignBoolean" entityStripped="1">
+            <ParameterInstance name="Right">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="check" true="ChangeLight" data="UID:00000c8c" InUnrealActors="1" TypeDeleted="ECoopSpawner">
+    <ExternalEventInstance name="ECOOPSPAWNER_SPAWNED_REINFORCEMENTS" data=""/>
+  </DependencyEvent>
+</Sequence>

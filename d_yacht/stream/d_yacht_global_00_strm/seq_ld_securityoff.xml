@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Securityoff" leveluid="1" streamedRandomID="32642577">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="TurnOffSecurity">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_Laserbeams" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="UID:00000e45" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="3.471875">
+          <CommandInstance name="PlaySound" duration="3.471875" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_Sequencer_DeOps_Yacht_SecurityOff" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_5" entity="Repository::Power_boxes" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisablePowerBox" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="TurnOffSecurity" data="UID:00000e45" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

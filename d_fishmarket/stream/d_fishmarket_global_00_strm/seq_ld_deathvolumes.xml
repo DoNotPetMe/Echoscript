@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_DeathVolumes" leveluid="3" streamedRandomID="571275100">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Pawn_0" TypeDeleted="Pawn">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Kill" entityStripped="1" dp_i="201326606"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="NewTask_0" data="Repository::List_DeathVolumes" TypeDeleted="List">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data="Repository::Ref_Pawn_0"/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask_0" true="NewTask" sequence="LD_DeathVolumes"/>
+</Sequence>

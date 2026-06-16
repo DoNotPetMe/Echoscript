@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_ExplosiveBarrels" leveluid="1" streamedRandomID="1136646976">
+  <Task name="Barrel 2" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Barrel 1 - Sounds">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000824" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="12.528170">
+          <CommandInstance name="PlaySound" duration="12.528170" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Mev_sfx_DeOps_OilCanExpl_Expl_Wood_Small" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000825" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="4.175416">
+          <CommandInstance name="PlaySound" duration="4.175416" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_SoilDebris" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Barrel 2 Sounds">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000826" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="12.528170">
+          <CommandInstance name="PlaySound" duration="12.528170" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Mev_sfx_DeOps_OilCanExpl_Expl_Wood_Small" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000827" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="4.175416">
+          <CommandInstance name="PlaySound" duration="4.175416" entityStripped="1" dp_i="134217752">
+            <ParameterInstance name="Sound" data="Play_sfx_DeOps_OilCanExpl_SoilDebris" InUnrealSounds="1" TypeDeleted="Sound"/>
+            <ParameterInstance name="Flag" data="Repository::Unreal::enums::ESoundSlot::SLOT_SFX" TypeDeleted="ESoundSlot"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Barrel 1" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Barrel 1" true="Barrel 1 - Sounds" data="UID:00000702" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="GI_DESTROYED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_0" start="Barrel 2" true="Barrel 2 Sounds" data="UID:000006fa" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="GI_DESTROYED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

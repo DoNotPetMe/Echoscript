@@ -1,0 +1,8 @@
+<npc name="AI_Coop_Voron" version="0">
+	<archetype name="EAIBARegular" />
+    <controller name="BARegularController_Voron" />
+	<inventory name="Voron_SMG_PP2000" >
+		<weapon name="SMG_PP2000" />
+		<gadget name="GI_Grenade_Frag" quantity="1" />
+	</inventory>
+</npc>

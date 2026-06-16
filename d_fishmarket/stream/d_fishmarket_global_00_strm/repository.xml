@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<core version="10">
+  <repository>
+    <List name="Repository" mutable="1" listtype="data">
+      <View name="O_MainView" usercreated="1" scoped="1" type="Operator" secondarytype="View">
+        <CommandInstance name="GetCinematicView" dp_i="67108865"/>
+      </View>
+      <Camera name="O_Camera" usercreated="1" scoped="1" type="Operator" secondarytype="Camera">
+        <CommandInstance name="GetCamera">
+          <ParameterInstance name="View" data="Repository::O_MainView" TypeDeleted="View"/>
+        </CommandInstance>
+      </Camera>
+      <Character name="O_Sam_Character" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Pawn name="O_Sam_Pawn" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <ObjectiveManager name="O_Obj_Manager" usercreated="1" scoped="1" type="Operator" secondarytype="ObjectiveManager">
+        <CommandInstance name="GetObjectiveManager">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character" TypeDeleted="Character"/>
+        </CommandInstance>
+      </ObjectiveManager>
+      <eInputType name="Ref_Controller_Action" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="eInputType" value=""/>
+      <Character name="Ref_Sam" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Camera name="Ref_Camera" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Camera" value=""/>
+      <Actor name="Ref_SamPawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Actor" value=""/>
+      <SequenceList name="Sequences">
+        <file name="seq_LD_SaveCheckPoint"/>
+        <file name="seq_LD_SaveInitCheckpoint"/>
+        <file name="seq_SEQ_RotatingBeam"/>
+        <file name="seq_SEQ_MovingBoat"/>
+        <file name="seq_SND_DetectedDockAMB"/>
+        <file name="seq_SND_StopDockAMB"/>
+        <file name="seq_SEQ_TextSurface"/>
+        <file name="seq_SEQ_VO"/>
+        <file name="seq_SEQ_MasterSequence"/>
+        <file name="seq_SEQ_Hunter_Blackbox_Completed"/>
+        <file name="seq_SEQ_IntroCam"/>
+        <file name="seq_SEQ_DeathVolumes"/>
+        <file name="seq_SEQ_LightSwitch"/>
+        <file name="seq_LD_Patrol_Randomizer_BB1"/>
+        <file name="seq_LD_Patrol_C_Enemies_SetPatrol"/>
+        <file name="seq_LD_Patrol_B_Enemies_SetPatrol"/>
+        <file name="seq_SEQ_VO_Intro"/>
+        <file name="seq_LD_Patrol_X_Enemies_SetPatrol"/>
+        <file name="seq_SEQ_SOUND_OnStartCombat"/>
+        <file name="seq_SEQ_MovingBoat_0"/>
+        <file name="seq_SEQ_Headlight"/>
+        <file name="seq_LD_Patrol_A_Enemies_SetPatrol"/>
+        <file name="seq_LD_ExploreVolume"/>
+        <file name="seq_LD_MasterSequence"/>
+        <file name="seq_LD_VO_WeaponsDeal"/>
+        <file name="seq_LD_VO_DeadDrop"/>
+        <file name="seq_LD_VO_HVT"/>
+        <file name="seq_SEQ_Hunter_BlackBox Completed"/>
+        <file name="seq_LD_CoopDoorLight"/>
+        <file name="seq_LD_DeathVolumes"/>
+        <file name="seq_LD_Unlock_Doors_Transition"/>
+        <file name="seq_LD_Patrol_Randomizer_BB2"/>
+        <file name="seq_LD_Patrol_C_Enemies_SetPatrol_0"/>
+        <file name="seq_LD_Patrol_B_Enemies_SetPatrol_0"/>
+        <file name="seq_LD_DestructibleManager"/>
+        <file name="seq_LD_Sniper_SetPosition"/>
+        <file name="seq_LD_Patrol_WeaponsDeal_SetPatrol"/>
+        <file name="seq_LD_SFX_NPCWorking_Dock"/>
+        <file name="seq_LD_DestroySpotlight"/>
+        <file name="seq_SEQ_Headlight_0"/>
+        <file name="seq_SEQ_RotatingLenseFlare"/>
+        <file name="seq_LD_RatSpawn_System"/>
+        <file name="seq_LD_Patrol_A_Enemies_SetPatrol_0"/>
+        <file name="seq_LD_ExploreVolume_0"/>
+        <file name="seq_LD_MasterSequence_0"/>
+        <file name="seq_LD_HT_UnlockFirstDoor"/>
+        <file name="seq_LD_HT_OpenSecondDoor"/>
+        <file name="seq_LD_HT_CloseFirstDoor"/>
+        <file name="seq_SEQ_VO_0"/>
+        <file name="seq_LD_HideTransitionMeshCheck"/>
+        <file name="seq_LD_HideTransitionMesh"/>
+        <file name="seq_LD_ShowTransitionMesh"/>
+      </SequenceList>
+      <List name="List_Boats" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_2" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_3" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_29" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_31" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_33" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_35" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_37" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_39" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_41" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::GI_NonInteractiveDynActor_43" type2="GameItem"/>
+      </List>
+      <View name="O_MainView_0" usercreated="1" scoped="1" type="Operator" secondarytype="View">
+        <CommandInstance name="GetCinematicView" dp_i="67108865"/>
+      </View>
+      <Camera name="O_Camera_0" usercreated="1" scoped="1" type="Operator" secondarytype="Camera">
+        <CommandInstance name="GetCamera">
+          <ParameterInstance name="View" data="Repository::O_MainView_0" TypeDeleted="View"/>
+        </CommandInstance>
+      </Camera>
+      <Character name="O_Sam_Character_0" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Pawn name="O_Sam_Pawn_0" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <ObjectiveManager name="O_Obj_Manager_0" usercreated="1" scoped="1" type="Operator" secondarytype="ObjectiveManager">
+        <CommandInstance name="GetObjectiveManager">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+        </CommandInstance>
+      </ObjectiveManager>
+      <eInputType name="Ref_Controller_Action_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="eInputType" value=""/>
+      <Character name="Ref_Sam_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Camera name="Ref_Camera_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Camera" value=""/>
+      <Actor name="Ref_SamPawn_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Actor" value=""/>
+      <Boolean name="NewBoolean" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Character name="O_Sam_Character_1" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Character name="O_Briggs_Character" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" bv_a="1073741824" bv_i="67108865"/>
+      </Character>
+      <Character name="Ref_Character" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <number name="Ref_CurrentBlackBoxID" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <number name="O_RandomNumber" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <Character name="Ref_Sam_1" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Character name="Ref_Briggs" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Camera name="Ref_Camera_1" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Camera" value=""/>
+      <View name="O_MainView_1" usercreated="1" scoped="1" type="Operator" secondarytype="View">
+        <CommandInstance name="GetCinematicView" dp_i="67108865"/>
+      </View>
+      <Camera name="O_Camera_1" usercreated="1" scoped="1" type="Operator" secondarytype="Camera">
+        <CommandInstance name="GetCamera">
+          <ParameterInstance name="View" data="Repository::O_MainView_1" TypeDeleted="View"/>
+        </CommandInstance>
+      </Camera>
+      <Pawn name="Ref_Pawn" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Pawn" value=""/>
+      <Pawn name="O_Sam_Pawn_1" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_1" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <Pawn name="O_Briggs_Pawn" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Briggs_Character" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <Character name="O_CurrentPlayer" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="MPGetLocalPlayer"/>
+      </Character>
+      <number name="O_CheckpointID" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="GetCheckPointID"/>
+      </number>
+      <List name="List_LightSwitches" mutable="1" usercreated="1" scoped="1" listtype="Actor">
+        <element name="Repository::Unreal::Actors::UID:00000879" type2="LightSwitch"/>
+        <element name="Repository::Unreal::Actors::UID:00000b84" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00000b96" type2="AttractionPoint"/>
+        <element name="Repository::Unreal::Actors::UID:00000b9c" type2="LightSwitch"/>
+        <element name="Repository::Unreal::Actors::UID:00000b9d" type2="LightSwitch"/>
+        <element name="Repository::Unreal::Actors::UID:00000b9e" type2="LightSwitch"/>
+        <element name="Repository::Unreal::Actors::UID:00000b9f" type2="LightSwitch"/>
+      </List>
+      <number name="O_Dice" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <CoopObjectiveManager name="O_CoopObjectiveManager" usercreated="1" scoped="1" type="Operator" secondarytype="CoopObjectiveManager">
+        <CommandInstance name="CoopGetCoopObjectiveManager"/>
+      </CoopObjectiveManager>
+      <Boolean name="JoinInProgress" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <AI name="NPC_Trigger" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="AI" value=""/>
+      <AI name="O_Grim" usercreated="1" scoped="1" type="Operator" secondarytype="AI">
+        <CommandInstance name="CoopGetNPCFromTag" bv_a="1092616192" bv_i="67108865"/>
+      </AI>
+      <AI name="Ref_Grim" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="AI" value=""/>
+      <number name="numPlayers" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <List name="List_ACT_D_FishMarket_Bazaar_ShipIn_Ani" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:0000116b" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:0000116c" type2="GameItem"/>
+      </List>
+      <List name="List_ACT_D_FishMarket_Bazaar_ShipLoop_Ani" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:00000f89" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:00000f8a" type2="GameItem"/>
+      </List>
+      <List name="List_HeadLights" mutable="1" usercreated="1" scoped="1" listtype="Actor">
+        <element name="Repository::Unreal::Actors::UID:000008da" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:0000104d" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:0000104e" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00001050" type2="GOLight"/>
+        <element name="Repository::Unreal::Actors::UID:00001051" type2="GOLight"/>
+      </List>
+      <Boolean name="bLight_Left_Destroyed" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="bLight_Right_Destroyed" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="bEMP_InProgress" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <View name="O_MainView_2" usercreated="1" scoped="1" type="Operator" secondarytype="View">
+        <CommandInstance name="GetCinematicView" dp_i="67108865"/>
+      </View>
+      <Camera name="O_Camera_2" usercreated="1" scoped="1" type="Operator" secondarytype="Camera">
+        <CommandInstance name="GetCamera">
+          <ParameterInstance name="View" data="Repository::O_MainView_2" TypeDeleted="View"/>
+        </CommandInstance>
+      </Camera>
+      <Character name="O_Sam_Character_2" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Pawn name="O_Sam_Pawn_2" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_2" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <ObjectiveManager name="O_Obj_Manager_1" usercreated="1" scoped="1" type="Operator" secondarytype="ObjectiveManager">
+        <CommandInstance name="GetObjectiveManager">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_2" TypeDeleted="Character"/>
+        </CommandInstance>
+      </ObjectiveManager>
+      <eInputType name="Ref_Controller_Action_1" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="eInputType" value=""/>
+      <Character name="Ref_Sam_2" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <Camera name="Ref_Camera_2" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Camera" value=""/>
+      <Actor name="Ref_SamPawn_1" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Actor" value=""/>
+      <Character name="O_Briggs_Character_0" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" bv_a="1073741824" bv_i="67108865"/>
+      </Character>
+      <number name="Ref_CurrentBlackBoxID_0" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <Character name="Ref_Character_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Character" value=""/>
+      <List name="List_CoopProjectedLight" mutable="1" usercreated="1" scoped="1" listtype="Light">
+        <element name="Repository::Unreal::Actors::UID:0000179c" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:0000179e" type2="Light"/>
+      </List>
+      <List name="List_DeathVolumes" mutable="1" usercreated="1" scoped="1" listtype="TriggerVolume">
+        <element name="Repository::Unreal::Actors::UID:00001822" type2="TriggerVolume"/>
+        <element name="Repository::Unreal::Actors::UID:00001823" type2="TriggerVolume"/>
+        <element name="Repository::Unreal::Actors::UID:00001824" type2="TriggerVolume"/>
+      </List>
+      <Pawn name="O_Briggs_Pawn_0" usercreated="1" scoped="1" type="Operator" secondarytype="Pawn">
+        <CommandInstance name="GetPawn">
+          <ParameterInstance name="Character" data="Repository::O_Briggs_Character_0" TypeDeleted="Character"/>
+        </CommandInstance>
+      </Pawn>
+      <Pawn name="Ref_Pawn_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="Pawn" value=""/>
+      <CoopObjectiveManager name="O_Coop_Obj_Manager" usercreated="1" scoped="1" type="Operator" secondarytype="CoopObjectiveManager">
+        <CommandInstance name="CoopGetCoopObjectiveManager"/>
+      </CoopObjectiveManager>
+      <number name="O_Dice_0" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="Random">
+          <ParameterInstance name="Min">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Max">
+            <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+          </ParameterInstance>
+          <ParameterInstance name="Whole">
+            <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+          </ParameterInstance>
+        </CommandInstance>
+      </number>
+      <List name="List_BrokenPlanks" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:000019ba" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:000019bb" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:000019bc" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:000019bd" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:000019be" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:000019bf" type2="GameItem"/>
+        <element name="Repository::Unreal::Actors::UID:000019c0" type2="GameItem"/>
+      </List>
+      <Boolean name="bLight_Left_Destroyed_0" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="bLight_Right_Destroyed_0" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <List name="List_SoundTriggers" mutable="1" usercreated="1" scoped="1" listtype="Actor">
+        <element name="Repository::Unreal::Actors::UID:000014fa" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001505" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001a63" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001b44" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001be6" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001be7" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001be8" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001be9" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001bea" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001beb" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001bec" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001bed" type2="Actor"/>
+      </List>
+      <List name="List_HeadLights_0" mutable="1" usercreated="1" scoped="1" listtype="Actor">
+        <element name="Repository::Unreal::Actors::UID:00001c4d" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00001c4e" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:000013b7" type2="Light"/>
+        <element name="Repository::Unreal::Actors::UID:00001a41" type2="GOLight"/>
+        <element name="Repository::Unreal::Actors::UID:00001a42" type2="GOLight"/>
+      </List>
+      <Boolean name="bLight_Left_Destroyed_1" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="bLight_Right_Destroyed_1" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <Boolean name="bEMP_InProgress_0" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <List name="List_RotatingLenseFlares" mutable="1" usercreated="1" scoped="1" listtype="LensFlare">
+        <element name="Repository::Unreal::Actors::UID:0000165e" type2="LensFlare"/>
+        <element name="Repository::Unreal::Actors::UID:0000165f" type2="LensFlare"/>
+        <element name="Repository::Unreal::Actors::UID:00001660" type2="LensFlare"/>
+        <element name="Repository::Unreal::Actors::UID:00001661" type2="LensFlare"/>
+      </List>
+      <List name="List_ACT_LegoKit_Door_Metal_Double" mutable="1" usercreated="1" scoped="1" listtype="GameItem">
+        <element name="Repository::Unreal::Actors::UID:000018d2" type2="Door"/>
+        <element name="Repository::Unreal::Actors::UID:000018d3" type2="Door"/>
+      </List>
+      <Boolean name="B_PlayingSound" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <number name="PlayerNumber" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <ObjectiveManager name="O_Obj_Manager_2" usercreated="1" scoped="1" type="Operator" secondarytype="ObjectiveManager">
+        <CommandInstance name="GetObjectiveManager">
+          <ParameterInstance name="Character" data="Repository::O_Sam_Character_3" TypeDeleted="Character"/>
+        </CommandInstance>
+      </ObjectiveManager>
+      <Character name="O_Sam_Character_3" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Character name="O_Sam_Character_4" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" dp_i="67108865"/>
+      </Character>
+      <Character name="O_Briggs_Character_1" usercreated="1" scoped="1" type="Operator" secondarytype="Character">
+        <CommandInstance name="GetPlayerFromStart" bv_a="1073741824" bv_i="67108865"/>
+      </Character>
+      <number name="BB0" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <AI name="O_Grim_0" usercreated="1" scoped="1" type="Operator" secondarytype="AI">
+        <CommandInstance name="CoopGetNPCFromTag" bv_a="1093664768" bv_i="67108865"/>
+      </AI>
+      <AI name="Ref_Grim_0" mutable="1" usercreated="1" scoped="1" type="Reference" secondarytype="AI" value=""/>
+      <Boolean name="BB2Loaded" mutable="1" usercreated="1" scoped="1" value="0"/>
+      <List name="List_HideAfterBB2" mutable="1" usercreated="1" scoped="1" listtype="Actor">
+        <element name="Repository::Unreal::Actors::UID:00001f77" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f80" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f81" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f82" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f83" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f84" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f85" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f86" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f87" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f88" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f89" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f8a" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f8b" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f8c" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f8d" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f8e" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f8f" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f90" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f91" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f92" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f93" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f94" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f95" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f96" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00001f97" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00002067" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:000020d6" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:000020e9" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00002133" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:00002134" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:0000214b" type2="Actor"/>
+        <element name="Repository::Unreal::Actors::UID:0000214c" type2="Actor"/>
+      </List>
+      <number name="PlayerNumberInBB2Gate" mutable="1" usercreated="1" scoped="1" value="0.000000"/>
+      <number name="O_CheckpointID_0" usercreated="1" scoped="1" type="Operator" secondarytype="number">
+        <CommandInstance name="GetCheckPointID"/>
+      </number>
+    </List>
+  </repository>
+</core>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Sniper_SetPosition" leveluid="3" streamedRandomID="571275100">
+  <Task name="NewTask" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00001916" InUnrealActors="1" TypeDeleted="SniperAttractor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableSniperAttractor" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="NewTask" true="NewTask_0" data="UID:00001a26" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+</Sequence>

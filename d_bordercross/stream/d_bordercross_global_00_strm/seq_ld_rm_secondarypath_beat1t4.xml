@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_RM_SecondaryPath_Beat1t4" leveluid="1" streamedRandomID="2038094029">
+  <Task name="VolumeEnterEventCheck_Sam" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="DisplayBonusMessage">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TriggerExplorationBonus" entityStripped="1" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="VolumeEnterEventCheck_Sam" true="DisplayBonusMessage" data="UID:0000135e" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <VisualComment name="NewVisualComment" x="-397.000000" y="-56.000000" width="631.000000" height="156.000000" commentDate="5/6/2013 3:56:19 PM"/>
+</Sequence>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_MasterSequence" startup="1" leveluid="1" streamedRandomID="1217117223">
+  <Task name="Task" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_Lightbeam" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Sequences::LD_ObjectiveManager" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopAddPrimaryObjective" entityStripped="1" dp_i="67108872">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective1" TypeDeleted="Objective"/>
+            <ParameterInstance name="Locator"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopAddPrimaryObjective" entityStripped="1" dp_i="67108872">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective2" TypeDeleted="Objective"/>
+            <ParameterInstance name="Locator"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopAddPrimaryObjective" entityStripped="1" dp_i="67108872">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective3" TypeDeleted="Objective"/>
+            <ParameterInstance name="Locator"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_4" entity="Repository::Sequences::LD_LaserSwitch" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_8" entity="Repository::Sequences::LD_RoofLightSystem" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_9" entity="Repository::Sequences::LD_VO_0200_Gate_SP" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_10" entity="Repository::Sequences::LD_VO_0400_Objective_Countdown_1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_11" entity="Repository::Sequences::LD_VO_0400_Objective_Countdown_3" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_12" entity="Repository::Sequences::LD_VO_0400_Objective_Countdown_2" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_13" entity="Repository::Sequences::LD_VO_0300_Sam_Briggs_Kills_Dog" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_14" entity="Repository::Sequences::LD_VO_0600_Objective_Laptop_Sam_Briggs" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_15" entity="Repository::Sequences::LD_VO_0700_Dead_Drop_Sam_Briggs" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_16" entity="Repository::Sequences::LD_VO_0500_HVT_Sam_Briggs" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_17" entity="Repository::Sequences::LD_VO_0450_Exfil_Sam_Briggs" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_18" entity="UID:00000650" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_19" entity="Repository::Sequences::LD_DeathZone" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_27" entity="Repository::Sequences::LD_VO_0200_Gate_Sam_Briggs" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_28" entity="Repository::Sequences::LD_VO_0200_Gate_Coop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_29" entity="Repository::Sequences::LD_VO_0250_Post_Gate_Coop" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_31" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopObjectiveAddLocator" entityStripped="1" dp_i="469787616" bv_a="-1069547520:-1035468800:1084227584" bv_i="201333760">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective1" TypeDeleted="Objective"/>
+            <ParameterInstance name="Tag">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Sea_Fort_Router_Tag"/>
+            </ParameterInstance>
+            <ParameterInstance name="Actor" data="UID:000007be" InUnrealActors="1" TypeDeleted="GameItem"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Green" TypeDeleted="EWaypointType"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_32" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopObjectiveAddLocator" entityStripped="1" dp_i="469787616" bv_a="-1040187392:1108869120:1094713344" bv_i="201333760">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective2" TypeDeleted="Objective"/>
+            <ParameterInstance name="Tag">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Sea_Fort_Phone_Tag"/>
+            </ParameterInstance>
+            <ParameterInstance name="Actor" data="UID:000007bf" InUnrealActors="1" TypeDeleted="GameItem"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Green" TypeDeleted="EWaypointType"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_33" entity="Repository::O_CoopObj_Manager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="CoopObjectiveAddLocator" entityStripped="1" dp_i="604008416" bv_a="1114636288" bv_i="67112960">
+            <ParameterInstance name="sObjective" data="Repository::B_PrimaryObjective3" TypeDeleted="Objective"/>
+            <ParameterInstance name="Tag">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="LocID_WAY_Sea_Fort_Comms_Tag"/>
+            </ParameterInstance>
+            <ParameterInstance name="Actor" data="UID:000007c1" InUnrealActors="1" TypeDeleted="GameItem"/>
+            <ParameterInstance name="WaypointAsset" data="Repository::Unreal::enums::EWaypointType::Waypoint_Green" TypeDeleted="EWaypointType"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_34" entity="Repository::Sequences::LD_ProjectedTextLight_CoopDoor_1" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_35" entity="Repository::Sequences::LD_ProjectedTextLight_CoopDoor_2" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_38" entity="Repository::Sequences::LD_AssignPatrol" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_39" entity="Repository::Sequences::LD_VO_0800_Objective_A" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_40" entity="Repository::Sequences::LD_VO_0850_Objective_B" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_41" entity="Repository::Sequences::LD_VO_0900_Objective_C" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_42" entity="Repository::Sequences::LD_RotatingWindMeter" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_43" entity="Repository::Sequences::LD_Conversation2_A" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_44" entity="Repository::Sequences::LD_Conversation2_B" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_45" entity="Repository::Sequences::LD_ExplorationBonus" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Assign" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Ref_Sam_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Assign" entityStripped="1">
+            <ParameterInstance name="Right" data="Repository::O_Sam_Character_0" TypeDeleted="Character"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="Repository::Ref_Briggs_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="Assign" entityStripped="1">
+            <ParameterInstance name="Right" data="Repository::O_Briggs_Character_0" TypeDeleted="Character"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:000007c5" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:000007c0" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Intro Cam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_38" entity="Repository::Sequences::SEQ_IntroCam" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="No Intro Cam">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000878" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="1.000000" condition="1">
+          <CommandInstance name="Wait" duration="1.000000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Task" true="Intro Cam" false="No Intro Cam">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_CheckpointID" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="-1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+</Sequence>

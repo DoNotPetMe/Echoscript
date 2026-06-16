@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_VO_Mapstart" leveluid="1" streamedRandomID="1260989390">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="sam_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.750937">
+          <CommandInstance name="SetDialog" duration="1.750937" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16514::54822" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="C_Sam_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.688417">
+          <CommandInstance name="SetDialog" duration="1.688417" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16515::54828" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand" start="Initial" true="sam_1" false="C_Sam_1">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <VisualComment name="Single" x="340.000000" y="-100.000000" width="593.000000" height="90.000000" commentDate="9/6/2012 4:11:50 PM"/>
+  <Task name="Grimm_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.084249">
+          <CommandInstance name="SetDialog" duration="2.084249" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16514::54823" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="sam_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.436937">
+          <CommandInstance name="SetDialog" duration="4.436937" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16514::54824" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="sam_1" true="Grimm_1" sequence="LD_VO_Mapstart"/>
+  <Task name="sam_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="1.497833">
+          <CommandInstance name="SetDialog" duration="1.497833" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16514::54826" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Grimm_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.228479">
+          <CommandInstance name="SetDialog" duration="4.228479" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16514::54827" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="C_Grimm_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.341084">
+          <CommandInstance name="SetDialog" duration="2.341084" entityStripped="1" dp_i="402653660" bv_a="1" bv_i="67108896">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16515::54829" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="Grimm_1" true="sam_2" sequence="LD_VO_Mapstart"/>
+  <Task name="Grimm_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="7.158625">
+          <CommandInstance name="SetDialog" duration="7.158625" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16514::54825" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_1" start="sam_2" true="Grimm_2" sequence="LD_VO_Mapstart"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Grimm_2" true="sam_3" sequence="LD_VO_Mapstart"/>
+  <DependencyComplete name="NewDependencyComplete_3" start="sam_3" true="Grimm_3" sequence="LD_VO_Mapstart"/>
+  <Task name="C_Sam_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.615583">
+          <CommandInstance name="SetDialog" duration="4.615583" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16515::54830" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="C_Grimm_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="7.480229">
+          <CommandInstance name="SetDialog" duration="7.480229" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16515::54831" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="C_Briggs_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Briggs_Character" TypeDeleted="Character">
+        <Event name="NewEvent" end="2.928750">
+          <CommandInstance name="SetDialog" duration="2.928750" entityStripped="1" dp_i="402653564" bv_a="1" bv_i="67108992">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16515::54832" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="C_Sam_1" true="C_Grimm_1" sequence="LD_VO_Mapstart"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="C_Grimm_1" true="C_Sam_2" sequence="LD_VO_Mapstart"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="C_Sam_2" true="C_Grimm_2" sequence="LD_VO_Mapstart"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="C_Grimm_2" true="C_Briggs_1" sequence="LD_VO_Mapstart"/>
+  <Task name="C_Grimm_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_0" TypeDeleted="Character">
+        <Event name="NewEvent" end="4.853792">
+          <CommandInstance name="SetDialog" duration="4.853792" entityStripped="1" dp_i="469762556">
+            <ParameterInstance name="DialogOasis" data="Repository::Unreal::Oasis::H03_DMD::0150_COM::16515::54833" TypeDeleted="OasisDialog"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_8" start="C_Briggs_1" true="C_Grimm_3" sequence="LD_VO_Mapstart"/>
+  <VisualComment name="NewVisualComment" x="340.000000" y="40.000000" width="594.000000" height="90.000000" commentDate="9/6/2012 4:51:56 PM"/>
+</Sequence>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_EnemyAIsPatrol_B2S1P3_PickPoint" leveluid="1" streamedRandomID="2038094029">
+  <Task name="B2S1P3_PickPoint_Initialization" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_0">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="ScreenLog_PickPoint_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B2S1P3_PickPoint = 1 (PP60)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B2S1P3_PickPoint = 2 (PP224)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="ScreenLog_PickPoint_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="Repository::Ref_Sam" TypeDeleted="Character">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="B2S1P3_PickPoint = 3 (PP123)"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000b3d" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000679" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000b3d" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000683" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="TeleportOnActor_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000b3d" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000682" InUnrealActors="1" TypeDeleted="AttractionPoint"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="EnableNPCs_B2S1P3">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete" start="B2S1P3_PickPoint_Initialization" true="NewTask_0" sequence="LD_EnemyAIsPatrol_B2S1P3_PickPoint"/>
+  <DependencyCommand name="NewDependencyCommand" start="NewTask_0" true="ScreenLog_PickPoint_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B2S1P3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_0" start="NewTask_0" true="ScreenLog_PickPoint_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B2S1P3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="NewTask_0" true="ScreenLog_PickPoint_3">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Var_nPatrolPoint_B2S1P3" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete_0" start="ScreenLog_PickPoint_1" true="TeleportOnActor_1" sequence="LD_EnemyAIsPatrol_B2S1P3_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="ScreenLog_PickPoint_2" true="TeleportOnActor_2" sequence="LD_EnemyAIsPatrol_B2S1P3_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="ScreenLog_PickPoint_3" true="TeleportOnActor_3" sequence="LD_EnemyAIsPatrol_B2S1P3_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="TeleportOnActor_1" true="EnableNPCs_B2S1P3" sequence="LD_EnemyAIsPatrol_B2S1P3_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="TeleportOnActor_2" true="EnableNPCs_B2S1P3" sequence="LD_EnemyAIsPatrol_B2S1P3_PickPoint"/>
+  <DependencyComplete name="NewDependencyComplete_11" start="TeleportOnActor_3" true="EnableNPCs_B2S1P3" sequence="LD_EnemyAIsPatrol_B2S1P3_PickPoint"/>
+  <VisualComment name="NewVisualComment" x="-194.541077" y="75.151466" width="1046.536621" height="353.841248" commentDate="1/23/2013 2:17:44 PM"/>
+</Sequence>

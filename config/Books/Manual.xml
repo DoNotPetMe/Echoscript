@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Books xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Book Id="Manual" Header="LocID_IGMAN_Title" SubHeader="LocID_IGMAN_Subtitle">
+		<Section Id="Story" Title="LocID_IGMAN_Section_Story" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Story" SubHeading="LocID_IGMAN_Page_Background_Subhead" Layout="3" Body="LocID_IGMAN_Page_Background_Text" Image="SC6SMIManual_SMI_MAN_Story" />
+		</Section>
+		<Section Id="Interface" Title="LocID_IGMAN_Section_Interface" UnlockId="">
+		</Section>
+		<Section Id="Controls" Title="LocID_IGMAN_Section_Controls" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="2" Body="LocID_IGMAN_Page_Controls_Campaign_Text_1" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="2" Body="LocID_IGMAN_Page_Controls_Campaign_Text_2" Image="" Platform="Xbox" />			
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="4" Body="LocID_IGMAN_Page_Controls_Campaign_Text_3_Xbox" Image="SC6SMIManual_SMI_MAN_ControlerMenu" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="2" Body="LocID_IGMAN_Page_Controls_Campaign_Text_1_PS3" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="2" Body="LocID_IGMAN_Page_Controls_Campaign_Text_2_PS3" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="4" Body="LocID_IGMAN_Page_Controls_Campaign_Text_3" Image="SC6SMIManual_SMI_MAN_ControlerMenu_PS3" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="2" Body="LocID_IGMAN_Page_Controls_Campaign_Text_1_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="2" Body="LocID_IGMAN_Page_Controls_Campaign_Text_2_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="4" Body="LocID_IGMAN_Page_Controls_Campaign_Text_3" Image="SC6SMIManual_SMI_MAN_ControlerMenu" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="2" Body="LocID_IGMAN_Page_Controls_Campaign_Text_1" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="2" Body="LocID_IGMAN_Page_Controls_Campaign_Text_2" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls" SubHeading="LocID_IGMAN_Page_Controls_Campaign_Subhead" Layout="4" Body="LocID_IGMAN_Page_Controls_Campaign_Text_3_PC" Image="SC6SMIManual_SMI_MAN_ControlerMenu_PC" Platform="PCKeyboard" />			
+		</Section>
+		<Section Id="SelectionWheel" Title="LocID_IGMAN_Section_Wheel" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Overview_Subhead" Layout="4" Body="LocID_IGMAN_Page_Wheel_Overview_Text" Image="SC6SMIManual_SMI_MAN_SelWheel1" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Toggles_Subhead" Layout="3" Body="LocID_IGMAN_Page_Wheel_Toggles_Text" Image="SC6SMIManual_SMI_MAN_SelWheel2" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Fire_Subhead" Layout="3" Body="LocID_IGMAN_Page_Wheel_Fire_Text" Image="SC6SMIManual_SMI_MAN_SelWheel2" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Overview_Subhead" Layout="4" Body="LocID_IGMAN_Page_Wheel_Overview_Text" Image="SC6SMIManual_SMI_MAN_SelWheel1_PS3" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Toggles_Subhead" Layout="3" Body="LocID_IGMAN_Page_Wheel_Toggles_Text" Image="SC6SMIManual_SMI_MAN_SelWheel2_PS3" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Fire_Subhead" Layout="3" Body="LocID_IGMAN_Page_Wheel_Fire_Text" Image="SC6SMIManual_SMI_MAN_SelWheel2_PS3" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Overview_Subhead" Layout="4" Body="LocID_IGMAN_Page_Wheel_Overview_Text" Image="SC6SMIManual_SMI_MAN_SelWheel1" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Toggles_Subhead" Layout="3" Body="LocID_IGMAN_Page_Wheel_Toggles_Text" Image="SC6SMIManual_SMI_MAN_SelWheel2" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Fire_Subhead" Layout="3" Body="LocID_IGMAN_Page_Wheel_Fire_Text" Image="SC6SMIManual_SMI_MAN_SelWheel2" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Overview_Subhead" Layout="4" Body="LocID_IGMAN_Page_Wheel_Overview_Text_PC" Image="SC6SMIManual_SMI_MAN_SelWheel1_PC" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Toggles_Subhead" Layout="3" Body="LocID_IGMAN_Page_Wheel_Toggles_Text_PC" Image="SC6SMIManual_SMI_MAN_SelWheel2_PC" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Wheel" SubHeading="LocID_IGMAN_Page_Wheel_Fire_Subhead" Layout="3" Body="LocID_IGMAN_Page_Wheel_Fire_Text_PC" Image="SC6SMIManual_SMI_MAN_SelWheel2_PC" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="Detection" Title="LocID_IGMAN_Section_Detection" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Detection" SubHeading="LocID_IGMAN_Page_Detection_Warning_Subhead" Layout="3" Body="LocID_IGMAN_Page_Detection_Warning_Text" Image="SC6SMIManual_SMI_MAN_Warning" />
+			<Page MainHeading="LocID_IGMAN_Section_Detection" SubHeading="LocID_IGMAN_Page_Detection_Detected_Subhead" Layout="4" Body="LocID_IGMAN_Page_Detection_Detected_Text" Image="SC6SMIManual_SMI_MAN_Detected" />
+			<Page MainHeading="LocID_IGMAN_Section_Detection" SubHeading="LocID_IGMAN_Page_Detection_LKP_Subhead" Layout="4" Body="LocID_IGMAN_Page_Detection_LKP_Text" Image="SC6SMIManual_SMI_MAN_LKP" />
+		</Section>
+		<Section Id="MarkExecute" Title="LocID_IGMAN_Section_MnE" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_MnE" SubHeading="LocID_IGMAN_Page_MnE_Marks_Subhead" Layout="3" Body="LocID_IGMAN_Page_MnE_Marks_Text" Image="SC6SMIManual_SMI_MAN_MarkEx" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_MnE" SubHeading="LocID_IGMAN_Page_MnE_Marks_Subhead" Layout="3" Body="LocID_IGMAN_Page_MnE_Marks_Text" Image="SC6SMIManual_SMI_MAN_MarkEx_PS3" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_MnE" SubHeading="LocID_IGMAN_Page_MnE_Marks_Subhead" Layout="3" Body="LocID_IGMAN_Page_MnE_Marks_Text" Image="SC6SMIManual_SMI_MAN_MarkEx" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_MnE" SubHeading="LocID_IGMAN_Page_MnE_Marks_Subhead" Layout="3" Body="LocID_IGMAN_Page_MnE_Marks_Text" Image="SC6SMIManual_SMI_MAN_MarkEx_PC" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_MnE" SubHeading="LocID_IGMAN_Page_MnE_Gauge_Subhead" Layout="3" Body="LocID_IGMAN_Page_MnE_Gauge_Text" Image="SC6SMIManual_SMI_MAN_MarkExEarn" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_MnE" SubHeading="LocID_IGMAN_Page_MnE_Gauge_Subhead" Layout="3" Body="LocID_IGMAN_Page_MnE_Gauge_Text" Image="SC6SMIManual_SMI_MAN_MarkExEarn_PS3" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_MnE" SubHeading="LocID_IGMAN_Page_MnE_Gauge_Subhead" Layout="3" Body="LocID_IGMAN_Page_MnE_Gauge_Text" Image="SC6SMIManual_SMI_MAN_MarkExEarn" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_MnE" SubHeading="LocID_IGMAN_Page_MnE_Gauge_Subhead" Layout="3" Body="LocID_IGMAN_Page_MnE_Gauge_Text" Image="SC6SMIManual_SMI_MAN_MarkExEarn_PC" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="Radar" Title="LocID_IGMAN_Section_Radar" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Radar" SubHeading="LocID_IGMAN_Page_Radar_Subhead" Layout="3" Body="LocID_IGMAN_Page_Radar_Text" Image="SC6SMIManual_SMI_MAN_Radar" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Radar" SubHeading="LocID_IGMAN_Page_Radar_Subhead" Layout="3" Body="LocID_IGMAN_Page_Radar_Text" Image="SC6SMIManual_SMI_MAN_Radar" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Radar" SubHeading="LocID_IGMAN_Page_Radar_Subhead" Layout="3" Body="LocID_IGMAN_Page_Radar_Text_PC" Image="SC6SMIManual_SMI_MAN_Radar" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Radar" SubHeading="LocID_IGMAN_Page_Radar_Subhead" Layout="3" Body="LocID_IGMAN_Page_Radar_Text_PC" Image="SC6SMIManual_SMI_MAN_Radar" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="Gameplay" Title="LocID_IGMAN_Section_Gameplay" UnlockId="">
+		</Section>
+		<Section Id="Difficulty" Title="LocID_IGMAN_Section_Difficulty" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Difficulty" SubHeading="LocID_IGMAN_Page_Difficulty_Subhead" layout="2" body="LocID_IGMAN_Page_Difficulty_Text" Image="" />
+		</Section>
+		<Section Id="StealthTactics" Title="LocID_IGMAN_Section_Stealth" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Shadow_Subhead" layout="4" body="LocID_IGMAN_Page_Stealth_Shadow_Text" Image="SC6SMIManual_SMI_MAN_StealthTac01" />
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Sound_Subhead" layout="3" body="LocID_IGMAN_Page_Stealth_Sound_Text" Image="SC6SMIManual_SMI_MAN_StealthTac02" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Sound_Subhead" layout="3" body="LocID_IGMAN_Page_Stealth_Sound_Text" Image="SC6SMIManual_SMI_MAN_StealthTac02" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Sound_Subhead" layout="3" body="LocID_IGMAN_Page_Stealth_Sound_Text" Image="SC6SMIManual_SMI_MAN_StealthTac02" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Sound_Subhead" layout="3" body="LocID_IGMAN_Page_Stealth_Sound_Text_PC" Image="SC6SMIManual_SMI_MAN_StealthTac02" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Bodies_Subhead" layout="3" body="LocID_IGMAN_Page_Stealth_Bodies_Text" Image="SC6SMIManual_SMI_MAN_StealthTac03" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Bodies_Subhead" layout="3" body="LocID_IGMAN_Page_Stealth_Bodies_Text" Image="SC6SMIManual_SMI_MAN_StealthTac03" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Bodies_Subhead" layout="3" body="LocID_IGMAN_Page_Stealth_Bodies_Text" Image="SC6SMIManual_SMI_MAN_StealthTac03" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Stealth" SubHeading="LocID_IGMAN_Page_Stealth_Bodies_Subhead" layout="3" body="LocID_IGMAN_Page_Stealth_Bodies_Text_PC" Image="SC6SMIManual_SMI_MAN_StealthTac03" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="CombatTactics" Title="LocID_IGMAN_Section_Combat" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Combat" SubHeading="LocID_IGMAN_Page_Combat_Gunplay_Subhead" layout="3" body="LocID_IGMAN_Page_Combat_Gunplay_Text" Image="SC6SMIManual_SMI_MAN_CombatTac01" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Combat" SubHeading="LocID_IGMAN_Page_Combat_Gunplay_Subhead" layout="3" body="LocID_IGMAN_Page_Combat_Gunplay_Text" Image="SC6SMIManual_SMI_MAN_CombatTac01" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Combat" SubHeading="LocID_IGMAN_Page_Combat_Gunplay_Subhead" layout="3" body="LocID_IGMAN_Page_Combat_Gunplay_Text" Image="SC6SMIManual_SMI_MAN_CombatTac01" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Combat" SubHeading="LocID_IGMAN_Page_Combat_Gunplay_Subhead" layout="3" body="LocID_IGMAN_Page_Combat_Gunplay_Text_PC" Image="SC6SMIManual_SMI_MAN_CombatTac01" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Combat" SubHeading="LocID_IGMAN_Page_Combat_Survival_Subhead" layout="4" body="LocID_IGMAN_Page_Combat_Survival_Text" Image="SC6SMIManual_SMI_MAN_CombatTac02" />
+			<Page MainHeading="LocID_IGMAN_Section_Combat" SubHeading="LocID_IGMAN_Page_Combat_Advanced_Subhead" layout="3" body="LocID_IGMAN_Page_Combat_Advanced_Text" Image="SC6SMIManual_SMI_MAN_CombatTac03" />
+		</Section>
+		<Section Id="HandToHand" Title="LocID_IGMAN_Section_H2H" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Basics_Subhead" layout="3" body="LocID_IGMAN_Page_H2H_Basics_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand01" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Basics_Subhead" layout="3" body="LocID_IGMAN_Page_H2H_Basics_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand01" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Basics_Subhead" layout="3" body="LocID_IGMAN_Page_H2H_Basics_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand01" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Basics_Subhead" layout="3" body="LocID_IGMAN_Page_H2H_Basics_Text_PC" Image="SC6SMIManual_SMI_MAN_Hand2Hand01" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Abductions_Subhead" layout="4" body="LocID_IGMAN_Page_H2H_Abductions_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand02" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Abductions_Subhead" layout="4" body="LocID_IGMAN_Page_H2H_Abductions_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand02" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Abductions_Subhead" layout="4" body="LocID_IGMAN_Page_H2H_Abductions_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand02" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Abductions_Subhead" layout="4" body="LocID_IGMAN_Page_H2H_Abductions_Text_PC" Image="SC6SMIManual_SMI_MAN_Hand2Hand02" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Advanced_Subhead" layout="3" body="LocID_IGMAN_Page_H2H_Advanced_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand03" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Advanced_Subhead" layout="3" body="LocID_IGMAN_Page_H2H_Advanced_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand03" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Advanced_Subhead" layout="3" body="LocID_IGMAN_Page_H2H_Advanced_Text" Image="SC6SMIManual_SMI_MAN_Hand2Hand03" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_H2H" SubHeading="LocID_IGMAN_Page_H2H_Advanced_Subhead" layout="3" body="LocID_IGMAN_Page_H2H_Advanced_Text_PC" Image="SC6SMIManual_SMI_MAN_Hand2Hand03" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="COOP" Title="LocID_IGMAN_Section_COOP" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Execute_Subhead" layout="3" body="LocID_IGMAN_Page_COOP_Execute_Text" Image="SC6SMIManual_SMI_MAN_COOP01" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Downed_Subhead" layout="3" body="LocID_IGMAN_Page_COOP_Downed_Text" Image="SC6SMIManual_SMI_MAN_COOP02" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Revive_Subhead" layout="4" body="LocID_IGMAN_Page_COOP_Revive_Text" Image="SC6SMIManual_SMI_MAN_COOP03" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Revive_Subhead" layout="4" body="LocID_IGMAN_Page_COOP_Revive_Text" Image="SC6SMIManual_SMI_MAN_COOP03" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Revive_Subhead" layout="4" body="LocID_IGMAN_Page_COOP_Revive_Text" Image="SC6SMIManual_SMI_MAN_COOP03" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Revive_Subhead" layout="4" body="LocID_IGMAN_Page_COOP_Revive_Text_PC" Image="SC6SMIManual_SMI_MAN_COOP03" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Hostage_Subhead" layout="3" body="LocID_IGMAN_Page_COOP_Hostage_Text" Image="SC6SMIManual_SMI_MAN_COOP04" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Hostage_Subhead" layout="3" body="LocID_IGMAN_Page_COOP_Hostage_Text" Image="SC6SMIManual_SMI_MAN_COOP04" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Hostage_Subhead" layout="3" body="LocID_IGMAN_Page_COOP_Hostage_Text" Image="SC6SMIManual_SMI_MAN_COOP04" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_COOP" SubHeading="LocID_IGMAN_Page_COOP_Hostage_Subhead" layout="3" body="LocID_IGMAN_Page_COOP_Hostage_Text_PC" Image="SC6SMIManual_SMI_MAN_COOP04" Platform="PCKeyboard" />
+		</Section>		
+		<Section Id="SecondaryObjectives" Title="LocID_IGMAN_Section_Secondary_Objectives" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_HVT_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_HVT_Text" Image="SC6SMIManual_SMI_MAN_SecObjHVT" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Dead_Drop_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_Dead_Drop_Text" Image="SC6SMIManual_SMI_MAN_SecObjDeadDrops" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Dead_Drop_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_Dead_Drop_Text" Image="SC6SMIManual_SMI_MAN_SecObjDeadDrops" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Dead_Drop_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_Dead_Drop_Text" Image="SC6SMIManual_SMI_MAN_SecObjDeadDrops" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Dead_Drop_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_Dead_Drop_Text_PC" Image="SC6SMIManual_SMI_MAN_SecObjDeadDrops" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Laptop_Subhead" layout="4" body="LocID_IGMAN_Page_Objective_Laptop_Text" Image="SC6SMIManual_SMI_MAN_SecObjLaptop" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Laptop_Subhead" layout="4" body="LocID_IGMAN_Page_Objective_Laptop_Text" Image="SC6SMIManual_SMI_MAN_SecObjLaptop" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Laptop_Subhead" layout="4" body="LocID_IGMAN_Page_Objective_Laptop_Text" Image="SC6SMIManual_SMI_MAN_SecObjLaptop" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Laptop_Subhead" layout="4" body="LocID_IGMAN_Page_Objective_Laptop_Text_PC" Image="SC6SMIManual_SMI_MAN_SecObjLaptop" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Collecting_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_Collecting_Text" Image="SC6SMIManual_SMI_MAN_SecObjAll" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Collecting_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_Collecting_Text" Image="SC6SMIManual_SMI_MAN_SecObjAll" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Collecting_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_Collecting_Text" Image="SC6SMIManual_SMI_MAN_SecObjAll" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Secondary_Objectives" SubHeading="LocID_IGMAN_Page_Objective_Collecting_Subhead" layout="3" body="LocID_IGMAN_Page_Objective_Collecting_Text_PC" Image="SC6SMIManual_SMI_MAN_SecObjAll" Platform="PCKeyboard" />
+		</Section>		
+		<Section Id="Scoring" Title="LocID_IGMAN_Section_Scoring" UnlockId="">
+		</Section>		
+		<Section Id="Economy" Title="LocID_IGMAN_Section_Economy" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Economy" SubHeading="LocID_IGMAN_Page_Econ_Styles_Subhead" layout="3" body="LocID_IGMAN_Page_Econ_Styles_Text" Image="SC6SMIManual_SMI_MAN_EconPlaystyles" />
+			<Page MainHeading="LocID_IGMAN_Section_Economy" SubHeading="LocID_IGMAN_Page_Econ_AAR_Subhead" layout="4" body="LocID_IGMAN_Page_Econ_AAR_Text" Image="SC6SMIManual_SMI_MAN_EconAAR" />
+			<Page MainHeading="LocID_IGMAN_Section_Economy" SubHeading="LocID_IGMAN_Page_Econ_Money_Subhead" layout="3" body="LocID_IGMAN_Page_Econ_Money_Text" Image="SC6SMIManual_SMI_MAN_EconEarnSpend" />
+		</Section>		
+		<Section Id="StyleGhost" Title="LocID_IGMAN_Section_Ghost" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Ghost" SubHeading="LocID_IGMAN_Page_Ghost_Style_Subhead" layout="4" body="LocID_IGMAN_Page_Ghost_Style_Text" Image="SC6SMIManual_SMI_MAN_Ghost01" />
+			<Page MainHeading="LocID_IGMAN_Section_Ghost" SubHeading="LocID_IGMAN_Page_Ghost_Strategy_Subhead" layout="3" body="LocID_IGMAN_Page_Ghost_Strategy_Text" Image="SC6SMIManual_SMI_MAN_Ghost02" />
+		</Section>
+		<Section Id="StylePanther" Title="LocID_IGMAN_Section_Panther" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Panther" SubHeading="LocID_IGMAN_Page_Panther_Style_Subhead" layout="4" body="LocID_IGMAN_Page_Panther_Style_Text" Image="SC6SMIManual_SMI_MAN_Panther01" />
+			<Page MainHeading="LocID_IGMAN_Section_Panther" SubHeading="LocID_IGMAN_Page_Panther_Strategy_Subhead" layout="3" body="LocID_IGMAN_Page_Panther_Strategy_Text" Image="SC6SMIManual_SMI_MAN_Panther02" />
+		</Section>
+		<Section Id="StyleAssault" Title="LocID_IGMAN_Section_Assault" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Assault" SubHeading="LocID_IGMAN_Page_Assault_Style_Subhead" layout="4" body="LocID_IGMAN_Page_Assault_Style_Text" Image="SC6SMIManual_SMI_MAN_Assault01" />
+			<Page MainHeading="LocID_IGMAN_Section_Assault" SubHeading="LocID_IGMAN_Page_Assault_Strategy_Subhead" layout="3" body="LocID_IGMAN_Page_Assault_Strategy_Text" Image="SC6SMIManual_SMI_MAN_Assault02" />
+		</Section>
+		<Section Id="Efficiency" Title="LocID_IGMAN_Section_Efficiency" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Efficiency" SubHeading="LocID_IGMAN_Page_Efficiency_Subhead" layout="3" body="LocID_IGMAN_Page_Efficiency_Text" Image="SC6SMIManual_SMI_MAN_Efficiency" />
+		</Section>
+		<Section Id="Bonuses" Title="LocID_IGMAN_Section_Bonuses" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Bonuses" SubHeading="LocID_IGMAN_Page_Bonus_SP-COOP_Subhead" layout="3" body="LocID_IGMAN_Page_Bonus_SP-COOP_Text" Image="SC6SMIManual_SMI_MAN_BonusesSPCoop" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Bonuses" SubHeading="LocID_IGMAN_Page_Bonus_SP-COOP_Subhead" layout="3" body="LocID_IGMAN_Page_Bonus_SP-COOP_Text" Image="SC6SMIManual_SMI_MAN_BonusesSPCoop" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Bonuses" SubHeading="LocID_IGMAN_Page_Bonus_SP-COOP_Subhead" layout="3" body="LocID_IGMAN_Page_Bonus_SP-COOP_Text" Image="SC6SMIManual_SMI_MAN_BonusesSPCoop" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Bonuses" SubHeading="LocID_IGMAN_Page_Bonus_SP-COOP_Subhead" layout="3" body="LocID_IGMAN_Page_Bonus_SP-COOP_Text_PC" Image="SC6SMIManual_SMI_MAN_BonusesSPCoop" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Bonuses" SubHeading="LocID_IGMAN_Page_Bonus_Charlie_Subhead" layout="3" body="LocID_IGMAN_Page_Bonus_Charlie_Text" Image="SC6SMIManual_SMI_MAN_4EChrlie" />
+			<Page MainHeading="LocID_IGMAN_Section_Bonuses" SubHeading="LocID_IGMAN_Page_Bonus_Grim_Subhead" layout="3" body="LocID_IGMAN_Page_Bonus_Grim_Text" Image="SC6SMIManual_SMI_MAN_4EGrimm" />
+			<Page MainHeading="LocID_IGMAN_Section_Bonuses" SubHeading="LocID_IGMAN_Page_Bonus_Kobin_Subhead" layout="3" body="LocID_IGMAN_Page_Bonus_Kobin_Text" Image="SC6SMIManual_SMI_MAN_4EKobin" />
+		</Section>
+		<Section Id="Paladin" Title="LocID_IGMAN_Section_Paladin" UnlockId="">
+		</Section>
+		<Section Id="HQ" Title="LocID_IGMAN_Section_HQ" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_HQ" SubHeading="LocID_IGMAN_Page_HQ_Plane_Subhead" layout="4" body="LocID_IGMAN_Page_HQ_Plane_Text" Image="SC6SMIManual_SMI_MAN_Plane01" />
+			<Page MainHeading="LocID_IGMAN_Section_HQ" SubHeading="LocID_IGMAN_Page_HQ_Map_Subhead" layout="3" body="LocID_IGMAN_Page_HQ_Map_Text" Image="SC6SMIManual_SMI_MAN_Plane02" />
+			<Page MainHeading="LocID_IGMAN_Section_HQ" SubHeading="LocID_IGMAN_Page_HQ_Upgrading_Subhead" layout="3" body="LocID_IGMAN_Page_HQ_Upgrading_Text" Image="SC6SMIManual_SMI_MAN_Plane03" />
+		</Section>
+		<Section Id="SMI" Title="LocID_IGMAN_Section_SMI" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_Overview_Text" Image="SC6SMIManual_SMI_MAN_SMI01" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Map_Subhead" layout="4" body="LocID_IGMAN_Page_SMI_Map_Text" Image="SC6SMIManual_SMI_MAN_SMI02" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Map_Subhead" layout="4" body="LocID_IGMAN_Page_SMI_Map_Text" Image="SC6SMIManual_SMI_MAN_SMI02" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Map_Subhead" layout="4" body="LocID_IGMAN_Page_SMI_Map_Text" Image="SC6SMIManual_SMI_MAN_SMI02" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Map_Subhead" layout="4" body="LocID_IGMAN_Page_SMI_Map_Text_PC" Image="SC6SMIManual_SMI_MAN_SMI02" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Modes_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_Modes_Text" Image="SC6SMIManual_SMI_MAN_SMI03" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Details_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_Details_Text" Image="SC6SMIManual_SMI_MAN_SMI04" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Details_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_Details_Text" Image="SC6SMIManual_SMI_MAN_SMI04" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Details_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_Details_Text" Image="SC6SMIManual_SMI_MAN_SMI04" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_Details_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_Details_Text_PC" Image="SC6SMIManual_SMI_MAN_SMI04" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_GDark_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_GDark_Text" Image="SC6SMIManual_SMI_MAN_SMI05" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_GDark_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_GDark_Text" Image="SC6SMIManual_SMI_MAN_SMI05" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_GDark_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_GDark_Text" Image="SC6SMIManual_SMI_MAN_SMI05" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_SMI" SubHeading="LocID_IGMAN_Page_SMI_GDark_Subhead" layout="3" body="LocID_IGMAN_Page_SMI_GDark_Text_PC" Image="SC6SMIManual_SMI_MAN_SMI05" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="ShadowNet" Title="LocID_IGMAN_Section_ShadowNet" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_About_Subhead" layout="4" body="LocID_IGMAN_Page_SN_About_Text" Image="SC6SMIManual_SMI_MAN_SNet01" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_About_Subhead" layout="4" body="LocID_IGMAN_Page_SN_About_Text" Image="SC6SMIManual_SMI_MAN_SNet01" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_About_Subhead" layout="4" body="LocID_IGMAN_Page_SN_About_Text" Image="SC6SMIManual_SMI_MAN_SNet01" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_About_Subhead" layout="4" body="LocID_IGMAN_Page_SN_About_Text_PC" Image="SC6SMIManual_SMI_MAN_SNet01" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Home_Subhead" layout="4" body="LocID_IGMAN_Page_SN_Home_Text" Image="SC6SMIManual_SMI_MAN_SNet02" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Home_Subhead" layout="4" body="LocID_IGMAN_Page_SN_Home_Text" Image="SC6SMIManual_SMI_MAN_SNet02" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Home_Subhead" layout="4" body="LocID_IGMAN_Page_SN_Home_Text_PC" Image="SC6SMIManual_SMI_MAN_SNet02" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Home_Subhead" layout="4" body="LocID_IGMAN_Page_SN_Home_Text_PC" Image="SC6SMIManual_SMI_MAN_SNet02" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Profile_Subhead" layout="3" body="LocID_IGMAN_Page_SN_Profile_Text" Image="SC6SMIManual_SMI_MAN_SNet03" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Challenges_Subhead" layout="2" body="LocID_IGMAN_Page_SN_Challenges_Text" Image="" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Friends_Subhead" layout="2" body="LocID_IGMAN_Page_SN_Friends_Text" Image="" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Cell_Subhead" layout="2" body="LocID_IGMAN_Page_SN_Cell_Text" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_ShadowNet" SubHeading="LocID_IGMAN_Page_SN_Cell_Subhead" layout="2" body="LocID_IGMAN_Page_SN_Cell_Text" Image="" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="4E" Title="LocID_IGMAN_Section_4E" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_4E" SubHeading="LocID_IGMAN_Page_4E_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_4E_Overview_Text" Image="SC6SMIManual_SMI_MAN_4ESoloCoop" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_4E" SubHeading="LocID_IGMAN_Page_4E_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_4E_Overview_Text" Image="SC6SMIManual_SMI_MAN_4ESoloCoop" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_4E" SubHeading="LocID_IGMAN_Page_4E_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_4E_Overview_Text_PC" Image="SC6SMIManual_SMI_MAN_4ESoloCoop" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_4E" SubHeading="LocID_IGMAN_Page_4E_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_4E_Overview_Text_PC" Image="SC6SMIManual_SMI_MAN_4ESoloCoop" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_4E" SubHeading="LocID_IGMAN_Page_4E_Briggs_Subhead" layout="3" body="LocID_IGMAN_Page_4E_Briggs_Text" Image="SC6SMIManual_SMI_MAN_4EBriggs" />
+			<Page MainHeading="LocID_IGMAN_Section_4E" SubHeading="LocID_IGMAN_Page_4E_Charlie_Subhead" layout="2" body="LocID_IGMAN_Page_4E_Charlie_Text" Image="" />
+			<Page MainHeading="LocID_IGMAN_Section_4E" SubHeading="LocID_IGMAN_Page_4E_Grim_Subhead" layout="2" body="LocID_IGMAN_Page_4E_Grim_Text" Image="" />
+			<Page MainHeading="LocID_IGMAN_Section_4E" SubHeading="LocID_IGMAN_Page_4E_Kobin_Subhead" layout="3" body="LocID_IGMAN_Page_4E_Kobin_Text" Image="SC6SMIManual_SMI_MAN_4EKobin" />
+		</Section>
+		<Section Id="Online" Title="LocID_IGMAN_Section_Online" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Permissions_Subhead" layout="3" body="LocID_IGMAN_Page_Online_Permissions_Text_PS3" Image="SC6SMIManual_SMI_MAN_OnlinePerm" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Access_Subhead_Xbox" layout="2" body="LocID_IGMAN_Page_Online_Access_Text_Xbox" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Access_Subhead" layout="2" body="LocID_IGMAN_Page_Online_Access_Text" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Access_Subhead" layout="2" body="LocID_IGMAN_Page_Online_Access_Text_PC" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Access_Subhead" layout="2" body="LocID_IGMAN_Page_Online_Access_Text_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Friends_Subhead" layout="3" body="LocID_IGMAN_Page_Online_Friends_Text" Image="SC6SMIManual_SMI_MAN_OnlineFriends" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Friends_Subhead" layout="3" body="LocID_IGMAN_Page_Online_Friends_Text" Image="SC6SMIManual_SMI_MAN_OnlineFriends_PS3" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Friends_Subhead" layout="3" body="LocID_IGMAN_Page_Online_Friends_Text_PC" Image="SC6SMIManual_SMI_MAN_OnlineFriends" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Friends_Subhead" layout="3" body="LocID_IGMAN_Page_Online_Friends_Text_PC" Image="SC6SMIManual_SMI_MAN_OnlineFriends" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Party_Subhead" layout="2" body="LocID_IGMAN_Page_Online_Party_Text_Xbox" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Party_Subhead" layout="2" body="LocID_IGMAN_Page_Online_Party_Text" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Party_Subhead" layout="2" body="LocID_IGMAN_Page_Online_Party_Text_PC" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Online" SubHeading="LocID_IGMAN_Page_Online_Party_Subhead" layout="2" body="LocID_IGMAN_Page_Online_Party_Text_PC" Image="" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="Customization" Title="LocID_IGMAN_Section_Customization" UnlockId="">
+		</Section>
+		<Section Id="Loadout" Title="LocID_IGMAN_Section_Loadout" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Loadout" SubHeading="LocID_IGMAN_Page_Loadout_Overview_Subhead" layout="2" body="LocID_IGMAN_Page_Loadout_Overview_Text" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Loadout" SubHeading="LocID_IGMAN_Page_Loadout_Overview_Subhead" layout="2" body="LocID_IGMAN_Page_Loadout_Overview_Text" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Loadout" SubHeading="LocID_IGMAN_Page_Loadout_Overview_Subhead" layout="2" body="LocID_IGMAN_Page_Loadout_Overview_Text_PC" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Loadout" SubHeading="LocID_IGMAN_Page_Loadout_Overview_Subhead" layout="2" body="LocID_IGMAN_Page_Loadout_Overview_Text_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Loadout" SubHeading="LocID_IGMAN_Page_Loadout_Slots_Subhead" layout="3" body="LocID_IGMAN_Page_Loadout_Slots_Text" Image="SC6SMIManual_SMI_MAN_LoadoutSlots" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Loadout" SubHeading="LocID_IGMAN_Page_Loadout_Slots_Subhead" layout="3" body="LocID_IGMAN_Page_Loadout_Slots_Text" Image="SC6SMIManual_SMI_MAN_LoadoutSlots" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Loadout" SubHeading="LocID_IGMAN_Page_Loadout_Slots_Subhead" layout="3" body="LocID_IGMAN_Page_Loadout_Slots_Text_PC" Image="SC6SMIManual_SMI_MAN_LoadoutSlots" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Loadout" SubHeading="LocID_IGMAN_Page_Loadout_Slots_Subhead" layout="3" body="LocID_IGMAN_Page_Loadout_Slots_Text_PC" Image="SC6SMIManual_SMI_MAN_LoadoutSlots" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="Weapons" Title="LocID_IGMAN_Section_Weapons" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Weapons" SubHeading="LocID_IGMAN_Page_Weapon_Types_Subhead" layout="3" body="LocID_IGMAN_Page_Weapon_Types_Text" Image="SC6SMIManual_SMI_MAN_WeaponTypes" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Weapons" SubHeading="LocID_IGMAN_Page_Weapon_Types_Subhead" layout="3" body="LocID_IGMAN_Page_Weapon_Types_Text" Image="SC6SMIManual_SMI_MAN_WeaponTypes" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Weapons" SubHeading="LocID_IGMAN_Page_Weapon_Types_Subhead" layout="3" body="LocID_IGMAN_Page_Weapon_Types_Text_PC" Image="SC6SMIManual_SMI_MAN_WeaponTypes" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Weapons" SubHeading="LocID_IGMAN_Page_Weapon_Types_Subhead" layout="3" body="LocID_IGMAN_Page_Weapon_Types_Text_PC" Image="SC6SMIManual_SMI_MAN_WeaponTypes" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Weapons" SubHeading="LocID_IGMAN_Page_Weapon_Stats_Subhead" layout="2" body="LocID_IGMAN_Page_Weapon_Stats_Text" Image="" />
+			<Page MainHeading="LocID_IGMAN_Section_Weapons" SubHeading="LocID_IGMAN_Page_Weapon_Special_Subhead" layout="2" body="LocID_IGMAN_Page_Weapon_Special_Text" Image="" />
+		</Section>
+		<Section Id="Gadgets" Title="LocID_IGMAN_Section_Gadgets" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Gadgets" SubHeading="LocID_IGMAN_Page_Gadgets_Subhead" layout="3" body="LocID_IGMAN_Page_Gadgets_Text" Image="SC6SMIManual_SMI_MAN_Gadgets" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Gadgets" SubHeading="LocID_IGMAN_Page_Gadgets_Subhead" layout="3" body="LocID_IGMAN_Page_Gadgets_Text" Image="SC6SMIManual_SMI_MAN_Gadgets" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Gadgets" SubHeading="LocID_IGMAN_Page_Gadgets_Subhead" layout="3" body="LocID_IGMAN_Page_Gadgets_Text" Image="SC6SMIManual_SMI_MAN_Gadgets" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Gadgets" SubHeading="LocID_IGMAN_Page_Gadgets_Subhead" layout="3" body="LocID_IGMAN_Page_Gadgets_Text_PC" Image="SC6SMIManual_SMI_MAN_Gadgets" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="Goggles" Title="LocID_IGMAN_Section_Goggles" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Goggles" SubHeading="LocID_IGMAN_Page_Goggles_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_Goggles_Overview_Text" Image="SC6SMIManual_SMI_MAN_GooglesModes" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Goggles" SubHeading="LocID_IGMAN_Page_Goggles_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_Goggles_Overview_Text" Image="SC6SMIManual_SMI_MAN_GooglesModes" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Goggles" SubHeading="LocID_IGMAN_Page_Goggles_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_Goggles_Overview_Text_PC" Image="SC6SMIManual_SMI_MAN_GooglesModes" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Goggles" SubHeading="LocID_IGMAN_Page_Goggles_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_Goggles_Overview_Text_PC" Image="SC6SMIManual_SMI_MAN_GooglesModes" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Goggles" SubHeading="LocID_IGMAN_Page_Goggles_Sonar_Subhead" layout="4" body="LocID_IGMAN_Page_Goggles_Sonar_Text" Image="SC6SMIManual_SMI_MAN_GooglesSonar" />
+		</Section>
+		<Section Id="OpsSuit" Title="LocID_IGMAN_Section_Ops_Suit" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Ops_Suit" SubHeading="LocID_IGMAN_Page_Suit_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_Suit_Overview_Text" Image="SC6SMIManual_SMI_MAN_OPSSuit01" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Ops_Suit" SubHeading="LocID_IGMAN_Page_Suit_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_Suit_Overview_Text" Image="SC6SMIManual_SMI_MAN_OPSSuit01" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Ops_Suit" SubHeading="LocID_IGMAN_Page_Suit_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_Suit_Overview_Text_PC" Image="SC6SMIManual_SMI_MAN_OPSSuit01" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Ops_Suit" SubHeading="LocID_IGMAN_Page_Suit_Overview_Subhead" layout="3" body="LocID_IGMAN_Page_Suit_Overview_Text_PC" Image="SC6SMIManual_SMI_MAN_OPSSuit01" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Ops_Suit" SubHeading="LocID_IGMAN_Page_Suit_Stats_Subhead" layout="3" body="LocID_IGMAN_Page_Suit_Stats_Text" Image="SC6SMIManual_SMI_MAN_OPSSuit02" />
+		</Section>
+	</Book>
+	
+	<Book Id="ManualSvM" Header="LocID_IGMAN_Title_SvM" SubHeader="LocID_IGMAN_Subtitle_SvM">
+		<Section Id="MultiModes" Title="LocID_IGMAN_Section_Multi_Modes" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Multi_Modes" SubHeading="LocID_IGMAN_Page_Mode_Multi_Subhead" layout="3" body="LocID_IGMAN_Page_Mode_Multi_Text" Image="SC6SMIManual_SMI_MAN_MPOverview" />
+			<Page MainHeading="LocID_IGMAN_Section_Multi_Modes" SubHeading="LocID_IGMAN_Page_Mode_SvM_Subhead" layout="2" body="LocID_IGMAN_Page_Mode_SvM_Text" Image="" />
+			<Page MainHeading="LocID_IGMAN_Section_Multi_Modes" SubHeading="LocID_IGMAN_Page_Mode_Classic_Subhead" layout="4" body="LocID_IGMAN_Page_Mode_Classic_Text" Image="SC6SMIManual_SMI_MAN_MPSvMc" />
+			<Page MainHeading="LocID_IGMAN_Section_Multi_Modes" SubHeading="LocID_IGMAN_Page_Mode_CTI_Subhead" layout="4" body="LocID_IGMAN_Page_Mode_CTI_Text" Image="SC6SMIManual_SMI_MAN_MPIntel" />
+			<Page MainHeading="LocID_IGMAN_Section_Multi_Modes" SubHeading="LocID_IGMAN_Page_Mode_Frontline_Subhead" layout="4" body="LocID_IGMAN_Page_Mode_Frontline_Text" Image="SC6SMIManual_SMI_MAN_MPFDom" />
+			<Page MainHeading="LocID_IGMAN_Section_Multi_Modes" SubHeading="LocID_IGMAN_Page_Mode_TDM_Subhead" layout="4" body="LocID_IGMAN_Page_Mode_TDM_Text" Image="SC6SMIManual_SMI_MAN_MPTDM" />
+		</Section>
+		<Section Id="Spy" Title="LocID_IGMAN_Section_Spy" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Spy" SubHeading="LocID_IGMAN_Page_Spy_Overview_Subhead" layout="4" body="LocID_IGMAN_Page_Spy_Overview_Text" Image="SC6SMIManual_SMI_MAN_SpyOverview" />
+			<Page MainHeading="LocID_IGMAN_Section_Spy" SubHeading="LocID_IGMAN_Page_Spy_Classes_Subhead" layout="2" body="LocID_IGMAN_Page_Spy_Classes_Text" Image="" />
+			<Page MainHeading="LocID_IGMAN_Section_Spy" SubHeading="LocID_IGMAN_Page_Spy_Vision_Subhead" layout="3" body="LocID_IGMAN_Page_Spy_Vision_Text" Image="SC6SMIManual_SMI_MAN_SpiesVision" />
+			<Page MainHeading="LocID_IGMAN_Section_Spy" SubHeading="LocID_IGMAN_Page_Spy_Gadgets_Subhead" layout="2" body="LocID_IGMAN_Page_Spy_Gadgets_Text" Image="" />
+		</Section>
+		<Section Id="Merc" Title="LocID_IGMAN_Section_Merc" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Merc" SubHeading="LocID_IGMAN_Page_Merc_Overview_Subhead" layout="4" body="LocID_IGMAN_Page_Merc_Overview_Text" Image="SC6SMIManual_SMI_MAN_MercOverview" />
+			<Page MainHeading="LocID_IGMAN_Section_Merc" SubHeading="LocID_IGMAN_Page_Merc_Classes_Subhead" layout="2" body="LocID_IGMAN_Page_Merc_Classes_Text" Image="" />
+			<Page MainHeading="LocID_IGMAN_Section_Merc" SubHeading="LocID_IGMAN_Page_Merc_Vision_Subhead" layout="3" body="LocID_IGMAN_Page_Merc_Vision_Text" Image="SC6SMIManual_SMI_MAN_MercsVision" />
+			<Page MainHeading="LocID_IGMAN_Section_Merc" SubHeading="LocID_IGMAN_Page_Merc_Gadgets_Subhead" layout="2" body="LocID_IGMAN_Page_Merc_Gadgets_Text" Image="" />
+		</Section>
+		<Section Id="ControlsMulti" Title="LocID_IGMAN_Section_Controls_Multi" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Multi_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Multi_Text_1" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Multi_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Multi_Text_2" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Shooter_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Shooter_Text_1" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Shooter_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Shooter_Text_2" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Stealth_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Stealth_Text_1" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Stealth_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Stealth_Text_2" Image="" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Multi_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Multi_Text_1_PS3" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Multi_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Multi_Text_2_PS3" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Shooter_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Shooter_Text_1_PS3" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Shooter_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Shooter_Text_2_PS3" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Stealth_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Stealth_Text_1_PS3" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Stealth_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Stealth_Text_2_PS3" Image="" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Multi_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Multi_Text_1" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Multi_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Multi_Text_2" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Shooter_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Shooter_Text_1" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Shooter_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Shooter_Text_2" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Stealth_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Stealth_Text_1" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Stealth_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Stealth_Text_2" Image="" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Multi_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Multi_Text_1_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Multi_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Multi_Text_2_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Shooter_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Shooter_Text_1_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Shooter_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Shooter_Text_2_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Stealth_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Stealth_Text_1_PC" Image="" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Controls_Multi" SubHeading="LocID_IGMAN_Page_Controls_Stealth_Subhead" layout="2" body="LocID_IGMAN_Page_Controls_Stealth_Text_2_PC" Image="" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="Performance" Title="LocID_IGMAN_Section_Performance" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Performance" SubHeading="LocID_IGMAN_Page_Performance_Scoring_Subhead" layout="3" body="LocID_IGMAN_Page_Performance_Scoring_Text" Image="SC6SMIManual_SMI_MAN_MPPerfAAR" />
+			<Page MainHeading="LocID_IGMAN_Section_Performance" SubHeading="LocID_IGMAN_Page_Performance_Levels_Subhead" layout="3" body="LocID_IGMAN_Page_Performance_Levels_Text" Image="SC6SMIManual_SMI_MAN_MPEliteGear" />
+		</Section>
+		<Section Id="Matches" Title="LocID_IGMAN_Section_Matches" UnlockId="">
+			<Page MainHeading="LocID_IGMAN_Section_Matches" SubHeading="LocID_IGMAN_Page_Match_Public_Subhead" layout="4" body="LocID_IGMAN_Page_Match_Public_Text_Xbox" Image="SC6SMIManual_SMI_MAN_MPQuickmatch" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Matches" SubHeading="LocID_IGMAN_Page_Match_Public_Subhead" layout="4" body="LocID_IGMAN_Page_Match_Public_Text" Image="SC6SMIManual_SMI_MAN_MPQuickmatch" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Matches" SubHeading="LocID_IGMAN_Page_Match_Public_Subhead" layout="4" body="LocID_IGMAN_Page_Match_Public_Text" Image="SC6SMIManual_SMI_MAN_MPQuickmatch" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Matches" SubHeading="LocID_IGMAN_Page_Match_Public_Subhead" layout="4" body="LocID_IGMAN_Page_Match_Public_Text" Image="SC6SMIManual_SMI_MAN_MPQuickmatch" Platform="PCKeyboard" />
+			<Page MainHeading="LocID_IGMAN_Section_Matches" SubHeading="LocID_IGMAN_Page_Match_Private_Subhead" layout="3" body="LocID_IGMAN_Page_Match_Private_Text_Xbox" Image="SC6SMIManual_SMI_MAN_MPPanel" Platform="Xbox" />
+			<Page MainHeading="LocID_IGMAN_Section_Matches" SubHeading="LocID_IGMAN_Page_Match_Private_Subhead" layout="3" body="LocID_IGMAN_Page_Match_Private_Text" Image="SC6SMIManual_SMI_MAN_MPPanel" Platform="PS3" />
+			<Page MainHeading="LocID_IGMAN_Section_Matches" SubHeading="LocID_IGMAN_Page_Match_Private_Subhead" layout="3" body="LocID_IGMAN_Page_Match_Private_Text_PC" Image="SC6SMIManual_SMI_MAN_MPPanel" Platform="PCGamepad" />
+			<Page MainHeading="LocID_IGMAN_Section_Matches" SubHeading="LocID_IGMAN_Page_Match_Private_Subhead" layout="3" body="LocID_IGMAN_Page_Match_Private_Text_PC" Image="SC6SMIManual_SMI_MAN_MPPanel" Platform="PCKeyboard" />
+		</Section>
+	</Book>
+	
+	<Book Id="Database" Header="LocID_DBASE_Title" SubHeader="LocID_DBASE_Subtitle" >
+		<Section Id="Archetypes" Title="LocID_DBASE_Section_Archetypes" UnlockId="">
+		</Section>
+		<Section Id="ArchetypeBasic" Title="LocID_DBASE_Section_Archetype_Basic" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Basic" SubHeading="LocID_DBASE_Page_Arch_Basic_Subhead" layout="4" body="LocID_DBASE_Page_Arch_Basic_Text" Image="SC6SMIManual_DBASE_Arch_Basic" />
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Basic" SubHeading="LocID_DBASE_Page_Arch_Helmet_Subhead" layout="3" body="LocID_DBASE_Page_Arch_Helmet_Text" Image="SC6SMIManual_DBASE_Arch_Helmet" />
+		</Section>
+		<Section Id="ArchetypeDog" Title="LocID_DBASE_Section_Archetype_Dog" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Dog" SubHeading="LocID_DBASE_Page_Arch_Dog_Subhead" layout="3" body="LocID_DBASE_Page_Arch_Dog_Text" Image="SC6SMIManual_DBASE_Arch_Dog" />
+		</Section>
+		<Section Id="ArchetypeHeavy" Title="LocID_DBASE_Section_Archetype_Heavy" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Heavy" SubHeading="LocID_DBASE_Page_Arch_Heavy_Subhead" layout="3" body="LocID_DBASE_Page_Arch_Heavy_Text_1" Image="SC6SMIManual_DBASE_Arch_Heavy01" />
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Heavy" SubHeading="LocID_DBASE_Page_Arch_Heavy_Subhead" layout="3" body="LocID_DBASE_Page_Arch_Heavy_Text_2" Image="SC6SMIManual_DBASE_Arch_Heavy02" />
+		</Section>
+		<Section Id="ArchetypeSniper" Title="LocID_DBASE_Section_Archetype_Sniper" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Sniper" SubHeading="LocID_DBASE_Page_Arch_Sniper_Subhead" layout="3" body="LocID_DBASE_Page_Arch_Sniper_Text" Image="SC6SMIManual_DBASE_Arch_Sniper" />
+		</Section>
+		<Section Id="ArchetypeTech" Title="LocID_DBASE_Section_Archetype_Tech" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Tech" SubHeading="LocID_DBASE_Page_Arch_Tech_Subhead" layout="3" body="LocID_DBASE_Page_Arch_Tech_Text" Image="SC6SMIManual_DBASE_Arch_Tech" />
+		</Section>
+		<Section Id="ArchetypeElite" Title="LocID_DBASE_Section_Archetype_Elite" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Elite" SubHeading="LocID_DBASE_Page_Arch_Elite_Subhead" layout="3" body="LocID_DBASE_Page_Arch_Elite_Text" Image="SC6SMIManual_DBASE_Arch_Elite" />
+		</Section>
+		<Section Id="ArchetypePolice" Title="LocID_DBASE_Section_Archetype_Police" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Archetype_Police" SubHeading="LocID_DBASE_Page_Arch_Police_Subhead" layout="3" body="LocID_DBASE_Page_Arch_Police_Text" Image="SC6SMIManual_DBASE_Arch_Cop" />
+		</Section>
+		<Section Id="KeyGear" Title="LocID_DBASE_Section_Key_Gear" UnlockId="">
+		</Section>
+		<Section Id="KeyPaladin" Title="LocID_DBASE_Section_Paladin" UnlockId="S_AFB">
+			<Page MainHeading="LocID_DBASE_Section_Paladin" SubHeading="LocID_DBASE_Page_Paladin_Subhead" layout="4" body="LocID_DBASE_Page_Paladin_Text" Image="SC6SMIManual_SMI_MAN_Plane01" />
+		</Section>
+		<Section Id="KeySMI" Title="LocID_DBASE_Section_SMI" UnlockId="S_AFB">
+			<Page MainHeading="LocID_DBASE_Section_SMI" SubHeading="LocID_DBASE_Page_SMI_Subhead" layout="3" body="LocID_DBASE_Page_SMI_Text" Image="SC6SMIManual_SMI_MAN_SMI01" />
+		</Section>
+		<Section Id="VisionModes" Title="LocID_DBASE_Section_Vision" UnlockId="">
+		</Section>
+		<Section Id="GI_ThermalGoggles" Title="LocID_DBASE_Section_Vision_NVG" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Vision_NVG" SubHeading="LocID_DBASE_Page_Vision_NVG_Subhead" layout="4" body="LocID_DBASE_Page_Vision_NVG_Text" Image="SC6SMIManual_DBASE_Vision_NVG" />
+		</Section>
+		<Section Id="GI_SonarGoggles" Title="LocID_DBASE_Section_Vision_Sonar" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Vision_Sonar" SubHeading="LocID_DBASE_Page_Vision_Sonar_Subhead" layout="4" body="LocID_DBASE_Page_Vision_Sonar_Text_1" Image="SC6SMIManual_DBASE_Vision_Sonar01" />
+			<Page MainHeading="LocID_DBASE_Section_Vision_Sonar" SubHeading="LocID_DBASE_Page_Vision_Sonar_Subhead" layout="4" body="LocID_DBASE_Page_Vision_Sonar_Text_2" Image="SC6SMIManual_DBASE_Vision_Sonar02" />
+		</Section>	
+		<Section Id="DBGadgets" Title="LocID_DBASE_Section_Gadgets" UnlockId="">
+		</Section>
+		<Section Id="GI_Sticky_Noisemaker" Title="LocID_DBASE_Section_Gadget_Noisemaker" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Noisemaker" SubHeading="LocID_DBASE_Page_Gadget_Noisemaker_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Noisemaker_Text_Xbox" Image="SC6SMIManual_DBASE_Gadget_Noisemaker" Platform="Xbox" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Noisemaker" SubHeading="LocID_DBASE_Page_Gadget_Noisemaker_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Noisemaker_Text" Image="SC6SMIManual_DBASE_Gadget_Noisemaker" Platform="PS3" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Noisemaker" SubHeading="LocID_DBASE_Page_Gadget_Noisemaker_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Noisemaker_Text" Image="SC6SMIManual_DBASE_Gadget_Noisemaker" Platform="PCGamepad" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Noisemaker" SubHeading="LocID_DBASE_Page_Gadget_Noisemaker_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Noisemaker_Text" Image="SC6SMIManual_DBASE_Gadget_Noisemaker" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="GI_Sticky_Camera" Title="LocID_DBASE_Section_Gadget_Sticky_Cam" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Sticky_Cam" SubHeading="LocID_DBASE_Page_Gadget_Sticky_Cam_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Sticky_Cam_Text" Image="SC6SMIManual_DBASE_Gadget_Sticky_Cam" Platform="Xbox" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Sticky_Cam" SubHeading="LocID_DBASE_Page_Gadget_Sticky_Cam_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Sticky_Cam_Text" Image="SC6SMIManual_DBASE_Gadget_Sticky_Cam" Platform="PS3" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Sticky_Cam" SubHeading="LocID_DBASE_Page_Gadget_Sticky_Cam_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Sticky_Cam_Text" Image="SC6SMIManual_DBASE_Gadget_Sticky_Cam" Platform="PCGamepad" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Sticky_Cam" SubHeading="LocID_DBASE_Page_Gadget_Sticky_Cam_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Sticky_Cam_Text_PC" Image="SC6SMIManual_DBASE_Gadget_Sticky_Cam" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="GI_Grenade_EMP" Title="LocID_DBASE_Section_Gadget_EMP" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_EMP" SubHeading="LocID_DBASE_Page_Gadget_EMP_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_EMP_Text" Image="SC6SMIManual_DBASE_Gadget_EMP" />
+		</Section>
+		<Section Id="GI_Quadrocopter" Title="LocID_DBASE_Section_Gadget_Tri-Rotor" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Tri-Rotor" SubHeading="LocID_DBASE_Page_Gadget_Tri-Rotor_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Tri-Rotor_Text" Image="SC6SMIManual_DBASE_Gadget_TriRotor" Platform="Xbox" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Tri-Rotor" SubHeading="LocID_DBASE_Page_Gadget_Tri-Rotor_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Tri-Rotor_Text" Image="SC6SMIManual_DBASE_Gadget_TriRotor" Platform="PS3" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Tri-Rotor" SubHeading="LocID_DBASE_Page_Gadget_Tri-Rotor_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Tri-Rotor_Text" Image="SC6SMIManual_DBASE_Gadget_TriRotor" Platform="PCGamepad" />
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Tri-Rotor" SubHeading="LocID_DBASE_Page_Gadget_Tri-Rotor_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Tri-Rotor_Text_PC" Image="SC6SMIManual_DBASE_Gadget_TriRotor" Platform="PCKeyboard" />
+		</Section>
+		<Section Id="GI_Grenade_Smoke" Title="LocID_DBASE_Section_Gadget_Smoke" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Smoke" SubHeading="LocID_DBASE_Page_Gadget_Smoke_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Smoke_Text" Image="SC6SMIManual_DBASE_Gadget_Smoke" />
+		</Section>
+		<Section Id="GI_Grenade_TearGas" Title="LocID_DBASE_Section_Gadget_Tear" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Tear" SubHeading="LocID_DBASE_Page_Gadget_Tear_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Tear_Text" Image="SC6SMIManual_DBASE_Gadget_Tear" />
+		</Section>
+		<Section Id="GI_Grenade_SleepingGas" Title="LocID_DBASE_Section_Gadget_Sleep" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Sleep" SubHeading="LocID_DBASE_Page_Gadget_Sleep_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Sleep_Text" Image="SC6SMIManual_DBASE_Gadget_Sleep" />
+		</Section>
+		<Section Id="GI_Grenade_Flashbang" Title="LocID_DBASE_Section_Gadget_Flashbang" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Flashbang" SubHeading="LocID_DBASE_Page_Gadget_Flashbang_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Flashbang_Text" Image="SC6SMIManual_DBASE_Gadget_Flash" />
+		</Section>
+		<Section Id="GI_Grenade_Frag" Title="LocID_DBASE_Section_Gadget_Frag" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Frag" SubHeading="LocID_DBASE_Page_Gadget_Frag_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Frag_Text" Image="SC6SMIManual_DBASE_Gadget_Frag" />
+		</Section>
+		<Section Id="GI_Grenade_Incendiary" Title="LocID_DBASE_Section_Gadget_Incendiary" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Incendiary" SubHeading="LocID_DBASE_Page_Gadget_Incendiary_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Incendiary_Text" Image="SC6SMIManual_DBASE_Gadget_Incendiary" />
+		</Section>
+		<Section Id="GI_DoorBreach" Title="LocID_DBASE_Section_Gadget_Breach" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Breach" SubHeading="LocID_DBASE_Page_Gadget_Breach_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Breach_Text" Image="SC6SMIManual_DBASE_Gadget_Breach" />
+		</Section>
+		<Section Id="GI_Proximity_Shocker_Mine" Title="LocID_DBASE_Section_Gadget_Shock_Mine" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Shock_Mine" SubHeading="LocID_DBASE_Page_Gadget_Shock_Mine_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Shock_Mine_Text" Image="SC6SMIManual_DBASE_Gadget_Shock_Mine" />
+		</Section>
+		<Section Id="GI_Proximity_Mine" Title="LocID_DBASE_Section_Gadget_Mine" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Gadget_Mine" SubHeading="LocID_DBASE_Page_Gadget_Mine_Subhead" layout="4" body="LocID_DBASE_Page_Gadget_Mine_Text" Image="SC6SMIManual_DBASE_Gadget_Mine" />
+		</Section>
+		<Section Id="Missions" Title="LocID_DBASE_Section_Missions" UnlockId="">
+		</Section>
+		<Section Id="MissionAFB" Title="LocID_DBASE_Section_Mission_AFB" UnlockId="S_AFB">
+			<Page MainHeading="LocID_DBASE_Section_Mission_AFB" SubHeading="LocID_DBASE_Page_Mission_AFB_Subhead" layout="3" body="LocID_DBASE_Page_Mission_AFB_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS1_AFB" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_AFB" SubHeading="LocID_DBASE_Page_Mission_AFB_Subhead" layout="3" body="LocID_DBASE_Page_Mission_AFB_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS1_AFB" />
+		</Section>
+		<Section Id="MissionKOB" Title="LocID_DBASE_Section_Mission_KOB" UnlockId="S_KOB">
+			<Page MainHeading="LocID_DBASE_Section_Mission_KOB" SubHeading="LocID_DBASE_Page_Mission_KOB_Subhead" layout="3" body="LocID_DBASE_Page_Mission_KOB_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS3_KOB" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_KOB" SubHeading="LocID_DBASE_Page_Mission_KOB_Subhead" layout="3" body="LocID_DBASE_Page_Mission_KOB_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS3_KOB" />
+		</Section>
+		<Section Id="MissionSAD" Title="LocID_DBASE_Section_Mission_SAD" UnlockId="S_BAD">
+			<Page MainHeading="LocID_DBASE_Section_Mission_SAD" SubHeading="LocID_DBASE_Page_Mission_SAD_Subhead" layout="3" body="LocID_DBASE_Page_Mission_SAD_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS4_BAD" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_SAD" SubHeading="LocID_DBASE_Page_Mission_SAD_Subhead" layout="3" body="LocID_DBASE_Page_Mission_SAD_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS4_BAD" />
+		</Section>
+		<Section Id="MissionCON" Title="LocID_DBASE_Section_Mission_CON" UnlockId="S_CON">
+			<Page MainHeading="LocID_DBASE_Section_Mission_CON" SubHeading="LocID_DBASE_Page_Mission_CON_Subhead" layout="3" body="LocID_DBASE_Page_Mission_CON_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS5_CON" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_CON" SubHeading="LocID_DBASE_Page_Mission_CON_Subhead" layout="3" body="LocID_DBASE_Page_Mission_CON_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS5_CON" />
+		</Section>
+		<Section Id="MissionNOU" Title="LocID_DBASE_Section_Mission_NOU" UnlockId="S_NOU">
+			<Page MainHeading="LocID_DBASE_Section_Mission_NOU" SubHeading="LocID_DBASE_Page_Mission_NOU_Subhead" layout="3" body="LocID_DBASE_Page_Mission_NOU_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS6_NOU" />
+		</Section>
+		<Section Id="MissionCHE" Title="LocID_DBASE_Section_Mission_CHE" UnlockId="S_CHE">
+			<Page MainHeading="LocID_DBASE_Section_Mission_CHE" SubHeading="LocID_DBASE_Page_Mission_CHE_Subhead" layout="3" body="LocID_DBASE_Page_Mission_CHE_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS7_CHE" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_CHE" SubHeading="LocID_DBASE_Page_Mission_CHE_Subhead" layout="3" body="LocID_DBASE_Page_Mission_CHE_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS7_CHE" />
+		</Section>
+		<Section Id="MissionQOD" Title="LocID_DBASE_Section_Mission_QOD" UnlockId="S_QOD">
+			<Page MainHeading="LocID_DBASE_Section_Mission_QOD" SubHeading="LocID_DBASE_Page_Mission_QOD_Subhead" layout="3" body="LocID_DBASE_Page_Mission_QOD_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS8_QOD" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_QOD" SubHeading="LocID_DBASE_Page_Mission_QOD_Subhead" layout="3" body="LocID_DBASE_Page_Mission_QOD_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS8_QOD" />
+		</Section>
+		<Section Id="MissionFRE" Title="LocID_DBASE_Section_Mission_FRE" UnlockId="S_FRE">
+			<Page MainHeading="LocID_DBASE_Section_Mission_FRE" SubHeading="LocID_DBASE_Page_Mission_FRE_Subhead" layout="3" body="LocID_DBASE_Page_Mission_FRE_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS9_FRE" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_FRE" SubHeading="LocID_DBASE_Page_Mission_FRE_Subhead" layout="3" body="LocID_DBASE_Page_Mission_FRE_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS9_FRE" />
+		</Section>
+		<Section Id="MissionDET" Title="LocID_DBASE_Section_Mission_DET" UnlockId="S_DET">
+			<Page MainHeading="LocID_DBASE_Section_Mission_DET" SubHeading="LocID_DBASE_Page_Mission_DET_Subhead" layout="3" body="LocID_DBASE_Page_Mission_DET_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS10_DET" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_DET" SubHeading="LocID_DBASE_Page_Mission_DET_Subhead" layout="3" body="LocID_DBASE_Page_Mission_DET_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS10_DET" />
+		</Section>
+		<Section Id="MissionAIR" Title="LocID_DBASE_Section_Mission_AIR" UnlockId="S_AIR">
+			<Page MainHeading="LocID_DBASE_Section_Mission_AIR" SubHeading="LocID_DBASE_Page_Mission_AIR_Subhead" layout="3" body="LocID_DBASE_Page_Mission_AIR_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS11_AIR" />
+		</Section>
+		<Section Id="MissionPAL" Title="LocID_DBASE_Section_Mission_PAL" UnlockId="S_PAL">
+			<Page MainHeading="LocID_DBASE_Section_Mission_PAL" SubHeading="LocID_DBASE_Page_Mission_PAL_Subhead" layout="3" body="LocID_DBASE_Page_Mission_PAL_Text_1" Image="SC6SMIManual_SMI_Details_S_HUB" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_PAL" SubHeading="LocID_DBASE_Page_Mission_PAL_Subhead" layout="3" body="LocID_DBASE_Page_Mission_PAL_Text_2" Image="SC6SMIManual_SMI_Details_S_HUB" />
+		</Section>
+		<Section Id="MissionFUE" Title="LocID_DBASE_Section_Mission_FUE" UnlockId="S_FUE">
+			<Page MainHeading="LocID_DBASE_Section_Mission_FUE" SubHeading="LocID_DBASE_Page_Mission_FUE_Subhead" layout="3" body="LocID_DBASE_Page_Mission_FUE_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS13_FUE" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_FUE" SubHeading="LocID_DBASE_Page_Mission_FUE_Subhead" layout="3" body="LocID_DBASE_Page_Mission_FUE_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS13_FUE" />
+		</Section>
+		<Section Id="MissionBLO" Title="LocID_DBASE_Section_Mission_BLO" UnlockId="S_BLO">
+			<Page MainHeading="LocID_DBASE_Section_Mission_BLO" SubHeading="LocID_DBASE_Page_Mission_BLO_Subhead" layout="3" body="LocID_DBASE_Page_Mission_BLO_Text_1" Image="SC6SMIManual_SMI_Details_S_MIS14_BLO" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_BLO" SubHeading="LocID_DBASE_Page_Mission_BLO_Subhead" layout="3" body="LocID_DBASE_Page_Mission_BLO_Text_2" Image="SC6SMIManual_SMI_Details_S_MIS14_BLO" />
+			<Page MainHeading="LocID_DBASE_Section_Mission_BLO" SubHeading="LocID_DBASE_Page_Mission_BLO_Subhead" layout="3" body="LocID_DBASE_Page_Mission_BLO_Text_3" Image="SC6SMIManual_SMI_Details_S_MIS14_BLO" />
+		</Section>
+		<Section Id="MissionDUS" Title="LocID_DBASE_Section_Mission_DUS" UnlockId="S_DUS">
+			<Page MainHeading="LocID_DBASE_Section_Mission_DUS" SubHeading="LocID_DBASE_Page_Mission_DUS_Subhead" layout="3" body="LocID_DBASE_Page_Mission_DUS_Text_1" Image="SC6SMIManual_DBASE_Unknown" />
+		</Section>
+		<Section Id="MissionC01" Title="LocID_DBASE_Section_Mission_C01" UnlockId="C01">
+			<Page MainHeading="LocID_DBASE_Section_Mission_C01" SubHeading="LocID_DBASE_Page_Mission_C01_Subhead" layout="3" body="LocID_DBASE_Page_Mission_C01_Text" Image="SC6SMIManual_SMI_Details_B01_Briggs1" />
+		</Section>
+		<Section Id="MissionC02" Title="LocID_DBASE_Section_Mission_C02" UnlockId="C02">
+			<Page MainHeading="LocID_DBASE_Section_Mission_C02" SubHeading="LocID_DBASE_Page_Mission_C02_Subhead" layout="3" body="LocID_DBASE_Page_Mission_C02_Text" Image="SC6SMIManual_SMI_Details_B02_Briggs2" />
+		</Section>
+		<Section Id="MissionC03" Title="LocID_DBASE_Section_Mission_C03" UnlockId="C03">
+			<Page MainHeading="LocID_DBASE_Section_Mission_C03" SubHeading="LocID_DBASE_Page_Mission_C03_Subhead" layout="3" body="LocID_DBASE_Page_Mission_C03_Text" Image="SC6SMIManual_SMI_Details_B03_Briggs3" />
+		</Section>
+		<Section Id="MissionC04" Title="LocID_DBASE_Section_Mission_C04" UnlockId="C04">
+			<Page MainHeading="LocID_DBASE_Section_Mission_C04" SubHeading="LocID_DBASE_Page_Mission_C04_Subhead" layout="3" body="LocID_DBASE_Page_Mission_C04_Text" Image="SC6SMIManual_SMI_Details_B04_Briggs4" />
+		</Section>
+		<Section Id="MissionG01" Title="LocID_DBASE_Section_Mission_G01" UnlockId="G01">
+			<Page MainHeading="LocID_DBASE_Section_Mission_G01" SubHeading="LocID_DBASE_Page_Mission_G01_Subhead" layout="3" body="LocID_DBASE_Page_Mission_G01_Text" Image="SC6SMIManual_SMI_Details_G01_Grim1" />
+		</Section>
+		<Section Id="MissionG02" Title="LocID_DBASE_Section_Mission_G02" UnlockId="G02">
+			<Page MainHeading="LocID_DBASE_Section_Mission_G02" SubHeading="LocID_DBASE_Page_Mission_G02_Subhead" layout="3" body="LocID_DBASE_Page_Mission_G02_Text" Image="SC6SMIManual_SMI_Details_G02_Grim2" />
+		</Section>
+		<Section Id="MissionG03" Title="LocID_DBASE_Section_Mission_G03" UnlockId="G03">
+			<Page MainHeading="LocID_DBASE_Section_Mission_G03" SubHeading="LocID_DBASE_Page_Mission_G03_Subhead" layout="3" body="LocID_DBASE_Page_Mission_G03_Text" Image="SC6SMIManual_SMI_Details_G03_Grim3" />
+		</Section>
+		<Section Id="MissionG04" Title="LocID_DBASE_Section_Mission_G04" UnlockId="G04">
+			<Page MainHeading="LocID_DBASE_Section_Mission_G04" SubHeading="LocID_DBASE_Page_Mission_G04_Subhead" layout="3" body="LocID_DBASE_Page_Mission_G04_Text" Image="SC6SMIManual_SMI_Details_G04_Grim4" />
+		</Section>
+		<Section Id="MissionE01" Title="LocID_DBASE_Section_Mission_E01" UnlockId="E01">
+			<Page MainHeading="LocID_DBASE_Section_Mission_E01" SubHeading="LocID_DBASE_Page_Mission_E01_Subhead" layout="4" body="LocID_DBASE_Page_Mission_E01_Text" Image="SC6SMIManual_SMI_Details_C01_Charlie1" />
+		</Section>
+		<Section Id="MissionE02" Title="LocID_DBASE_Section_Mission_E02" UnlockId="E02">
+			<Page MainHeading="LocID_DBASE_Section_Mission_E02" SubHeading="LocID_DBASE_Page_Mission_E02_Subhead" layout="4" body="LocID_DBASE_Page_Mission_E02_Text" Image="SC6SMIManual_SMI_Details_C02_Charlie2" />
+		</Section>
+		<Section Id="MissionE03" Title="LocID_DBASE_Section_Mission_E03" UnlockId="E03">
+			<Page MainHeading="LocID_DBASE_Section_Mission_E03" SubHeading="LocID_DBASE_Page_Mission_E03_Subhead" layout="4" body="LocID_DBASE_Page_Mission_E03_Text" Image="SC6SMIManual_SMI_Details_C03_Charlie3" />
+		</Section>
+		<Section Id="MissionE04" Title="LocID_DBASE_Section_Mission_E04" UnlockId="E04">
+			<Page MainHeading="LocID_DBASE_Section_Mission_E04" SubHeading="LocID_DBASE_Page_Mission_E04_Subhead" layout="4" body="LocID_DBASE_Page_Mission_E04_Text" Image="SC6SMIManual_SMI_Details_C04_Charlie4" />
+		</Section>
+		<Section Id="MissionH01" Title="LocID_DBASE_Section_Mission_H01" UnlockId="H01">
+			<Page MainHeading="LocID_DBASE_Section_Mission_H01" SubHeading="LocID_DBASE_Page_Mission_H01_Subhead" layout="3" body="LocID_DBASE_Page_Mission_H01_Text" Image="SC6SMIManual_SMI_Details_H01_Kobin1" />
+		</Section>
+		<Section Id="MissionH02" Title="LocID_DBASE_Section_Mission_H02" UnlockId="H02">
+			<Page MainHeading="LocID_DBASE_Section_Mission_H02" SubHeading="LocID_DBASE_Page_Mission_H02_Subhead" layout="3" body="LocID_DBASE_Page_Mission_H02_Text" Image="SC6SMIManual_SMI_Details_H02_Kobin2" />
+		</Section>
+		<Section Id="MissionH03" Title="LocID_DBASE_Section_Mission_H03" UnlockId="H03">
+			<Page MainHeading="LocID_DBASE_Section_Mission_H03" SubHeading="LocID_DBASE_Page_Mission_H03_Subhead" layout="3" body="LocID_DBASE_Page_Mission_H03_Text" Image="SC6SMIManual_SMI_Details_H03_Kobin3" />
+		</Section>
+		<Section Id="MissionH04" Title="LocID_DBASE_Section_Mission_H04" UnlockId="H04">
+			<Page MainHeading="LocID_DBASE_Section_Mission_H04" SubHeading="LocID_DBASE_Page_Mission_H04_Subhead" layout="3" body="LocID_DBASE_Page_Mission_H04_Text" Image="SC6SMIManual_SMI_Details_H04_Kobin4" />
+		</Section>
+		<Section Id="Bios" Title="LocID_DBASE_Section_Bios" UnlockId="">
+		</Section>
+		<Section Id="BioSam" Title="LocID_DBASE_Section_Bio_Sam" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Sam" SubHeading="LocID_DBASE_Page_Bio_Sam_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Sam_Text_1" Image="SC6SMIManual_SMI_MAN_4ESam" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Sam" SubHeading="LocID_DBASE_Page_Bio_Sam_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Sam_Text_2" Image="SC6SMIManual_SMI_MAN_4ESam" />			
+		</Section>
+		<Section Id="BioGrim" Title="LocID_DBASE_Section_Bio_Grim" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Grim" SubHeading="LocID_DBASE_Page_Bio_Grim_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Grim_Text_1" Image="SC6SMIManual_SMI_MAN_4EGrimm" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Grim" SubHeading="LocID_DBASE_Page_Bio_Grim_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Grim_Text_2" Image="SC6SMIManual_SMI_MAN_4EGrimm" />
+		</Section>
+		<Section Id="BioCharlie" Title="LocID_DBASE_Section_Bio_Charlie" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Charlie" SubHeading="LocID_DBASE_Page_Bio_Charlie_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Charlie_Text_1" Image="SC6SMIManual_SMI_MAN_4EChrlie" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Charlie" SubHeading="LocID_DBASE_Page_Bio_Charlie_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Charlie_Text_2" Image="SC6SMIManual_SMI_MAN_4EChrlie" />
+		</Section>
+		<Section Id="BioBriggs" Title="LocID_DBASE_Section_Bio_Briggs" UnlockId="S_AFB">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Briggs" SubHeading="LocID_DBASE_Page_Bio_Briggs_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Briggs_Text_1" Image="SC6SMIManual_SMI_MAN_4EBriggs" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Briggs" SubHeading="LocID_DBASE_Page_Bio_Briggs_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Briggs_Text_2" Image="SC6SMIManual_SMI_MAN_4EBriggs" />
+		</Section>
+		<Section Id="BioCoste" Title="LocID_DBASE_Section_Bio_Coste" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Coste" SubHeading="LocID_DBASE_Page_Bio_Coste_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Coste_Text_1" Image="SC6SMIManual_DBASE_Bio_Coste" />
+		</Section>
+		<Section Id="BioKobin" Title="LocID_DBASE_Section_Bio_Kobin" UnlockId="S_KOB">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Kobin" SubHeading="LocID_DBASE_Page_Bio_Kobin_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Kobin_Text_1" Image="SC6SMIManual_SMI_MAN_4EKobin" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Kobin" SubHeading="LocID_DBASE_Page_Bio_Kobin_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Kobin_Text_2" Image="SC6SMIManual_SMI_MAN_4EKobin" />
+		</Section>
+		<Section Id="BioSadiq" Title="LocID_DBASE_Section_Bio_Sadiq" UnlockId="S_BAD">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Sadiq" SubHeading="LocID_DBASE_Page_Bio_Sadiq_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Sadiq_Text_1" Image="SC6SMIManual_DBASE_Bio_Sadiq" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Sadiq" SubHeading="LocID_DBASE_Page_Bio_Sadiq_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Sadiq_Text_2" Image="SC6SMIManual_DBASE_Bio_Sadiq" />
+		</Section>
+		<Section Id="BioJadid" Title="LocID_DBASE_Section_Bio_Jadid" UnlockId="S_BAD">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Jadid" SubHeading="LocID_DBASE_Page_Bio_Jadid_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Jadid_Text_1" Image="SC6SMIManual_DBASE_Bio_Jadid" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Jadid" SubHeading="LocID_DBASE_Page_Bio_Jadid_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Jadid_Text_2" Image="SC6SMIManual_DBASE_Bio_Jadid" />
+		</Section>
+		<Section Id="BioNouri" Title="LocID_DBASE_Section_Bio_Nouri" UnlockId="S_NOU">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Nouri" SubHeading="LocID_DBASE_Page_Bio_Nouri_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Nouri_Text" Image="SC6SMIManual_DBASE_Bio_Nouri" />
+		</Section>
+		<Section Id="BioQodsGeneral" Title="LocID_DBASE_Section_Bio_Qods_General" UnlockId="S_QOD">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Qods_General" SubHeading="LocID_DBASE_Page_Bio_Qods_General_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Qods_General_Text" Image="SC6SMIManual_DBASE_Bio_Qods_General" />
+		</Section>
+		<Section Id="BioCherski" Title="LocID_DBASE_Section_Bio_Cherski" UnlockId="C03">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Cherski" SubHeading="LocID_DBASE_Page_Bio_Cherski_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Cherski_Text" Image="SC6SMIManual_DBASE_Bio_Cherski" />
+		</Section>
+		<Section Id="BioSarah" Title="LocID_DBASE_Section_Bio_Sarah" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Sarah" SubHeading="LocID_DBASE_Page_Bio_Sarah_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Sarah_Text" Image="SC6SMIManual_DBASE_Bio_Sarah" />
+		</Section>
+		<Section Id="BioCaldwell" Title="LocID_DBASE_Section_Bio_Caldwell" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Caldwell" SubHeading="LocID_DBASE_Page_Bio_Caldwell_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Caldwell_Text_1" Image="SC6SMIManual_DBASE_Bio_Caldwell" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Caldwell" SubHeading="LocID_DBASE_Page_Bio_Caldwell_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Caldwell_Text_2" Image="SC6SMIManual_DBASE_Bio_Caldwell" />
+		</Section>
+		<Section Id="BioSecDef" Title="LocID_DBASE_Section_Bio_SecDef" UnlockId="S_BLO">
+			<Page MainHeading="LocID_DBASE_Section_Bio_SecDef" SubHeading="LocID_DBASE_Page_Bio_SecDef_Subhead" layout="3" body="LocID_DBASE_Page_Bio_SecDef_Text" Image="SC6SMIManual_DBASE_Bio_SecDef" />
+		</Section>
+		<Section Id="BioKestrel" Title="LocID_DBASE_Section_Bio_Kestrel" UnlockId="C04">
+			<Page MainHeading="LocID_DBASE_Section_Bio_Kestrel" SubHeading="LocID_DBASE_Page_Bio_Kestrel_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Kestrel_Text_1" Image="SC6SMIManual_DBASE_Bio_Kestrel" />
+			<Page MainHeading="LocID_DBASE_Section_Bio_Kestrel" SubHeading="LocID_DBASE_Page_Bio_Kestrel_Subhead" layout="3" body="LocID_DBASE_Page_Bio_Kestrel_Text_2" Image="SC6SMIManual_DBASE_Bio_Kestrel" />
+		</Section>
+		<Section Id="Orgs" Title="LocID_DBASE_Section_Orgs" UnlockId="">
+		</Section>
+		<Section Id="Org4E" Title="LocID_DBASE_Section_Org_4E" UnlockId="S_AFB">
+			<Page MainHeading="LocID_DBASE_Section_Org_4E" SubHeading="LocID_DBASE_Page_Org_4E_Subhead" layout="3" body="LocID_DBASE_Page_Org_4E_Text" Image="SC6SMIManual_DBASE_Org_4E" />
+		</Section>
+		<Section Id="OrgEngineers" Title="LocID_DBASE_Section_Org_Engineers" UnlockId="S_AFB">
+			<Page MainHeading="LocID_DBASE_Section_Org_Engineers" SubHeading="LocID_DBASE_Page_Org_Engineers_Subhead" layout="3" body="LocID_DBASE_Page_Org_Engineers_Text_1" Image="SC6SMIManual_DBASE_Org_Engineers" />
+			<Page MainHeading="LocID_DBASE_Section_Org_Engineers" SubHeading="LocID_DBASE_Page_Blacklist_Subhead" layout="4" body="LocID_DBASE_Page_Blacklist_Text" Image="SC6SMIManual_DBASE_Blacklist" />
+		</Section>
+		<Section Id="Org3E" Title="LocID_DBASE_Section_Org_3E" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Org_3E" SubHeading="LocID_DBASE_Page_Org_3E_Subhead" layout="3" body="LocID_DBASE_Page_Org_3E_Text_1" Image="SC6SMIManual_DBASE_Org_3E" />
+			<Page MainHeading="LocID_DBASE_Section_Org_3E" SubHeading="LocID_DBASE_Page_Org_3E_Subhead" layout="3" body="LocID_DBASE_Page_Org_3E_Text_2" Image="SC6SMIManual_DBASE_Org_3E" />
+		</Section>
+		<Section Id="OrgVORON" Title="LocID_DBASE_Section_Org_VORON" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Org_VORON" SubHeading="LocID_DBASE_Page_Org_VORON_Subhead" layout="3" body="LocID_DBASE_Page_Org_VORON_Text" Image="SC6SMIManual_DBASE_Org_VORON" />
+		</Section>
+		<Section Id="OrgP9" Title="LocID_DBASE_Section_Org_P9" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Org_P9" SubHeading="LocID_DBASE_Page_Org_P9_Subhead" layout="3" body="LocID_DBASE_Page_Org_P9_Text" Image="SC6SMIManual_DBASE_Org_P9" />
+		</Section>
+		<Section Id="OrgMegiddo" Title="LocID_DBASE_Section_Org_Megiddo" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Org_Megiddo" SubHeading="LocID_DBASE_Page_Org_Megiddo_Subhead" layout="3" body="LocID_DBASE_Page_Org_Megiddo_Text" Image="SC6SMIManual_DBASE_Unknown" />
+		</Section>
+		<Section Id="Org12" Title="LocID_DBASE_Section_Org_12" UnlockId="S_BLO">
+			<Page MainHeading="LocID_DBASE_Section_Org_12" SubHeading="LocID_DBASE_Page_Org_12_Subhead" layout="3" body="LocID_DBASE_Page_Org_12_Text" Image="SC6SMIManual_DBASE_Unknown" />
+		</Section>
+		<Section Id="Principles" Title="LocID_DBASE_Section_Principles" UnlockId="">
+		</Section>
+		<Section Id="FifthFreedom" Title="LocID_DBASE_Section_5th_Freedom" UnlockId="S_AFB">
+			<Page MainHeading="LocID_DBASE_Section_5th_Freedom" SubHeading="LocID_DBASE_Page_5th_Freedom_Subhead" layout="3" body="LocID_DBASE_Page_5th_Freedom_Text" Image="SC6SMIManual_SMI_MAN_Story" />
+		</Section>
+		<Section Id="SadiqManifesto" Title="LocID_DBASE_Section_Sadiq_Manifesto" UnlockId="AllCoreDeadDrops">
+			<Page MainHeading="LocID_DBASE_Section_Sadiq_Manifesto" SubHeading="LocID_DBASE_Page_Sadiq_Manifesto_Subhead" layout="3" body="LocID_DBASE_Page_Sadiq_Manifesto_Text" Image="SC6SMIManual_DBASE_Bio_Sadiq" />
+		</Section>
+		<Section Id="Events" Title="LocID_DBASE_Section_Events" UnlockId="">
+		</Section>
+		<Section Id="EventDC" Title="LocID_DBASE_Section_Event_DC" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Event_DC" SubHeading="LocID_DBASE_Page_Event_DC_Subhead" layout="3" body="LocID_DBASE_Page_Event_DC_Text_1" Image="SC6SMIManual_DBASE_Event_DC" />
+			<Page MainHeading="LocID_DBASE_Section_Event_DC" SubHeading="LocID_DBASE_Page_Event_DC_Subhead" layout="3" body="LocID_DBASE_Page_Event_DC_Text_2" Image="SC6SMIManual_DBASE_Event_DC" />
+		</Section>
+		<Section Id="EventVienna" Title="LocID_DBASE_Section_Event_Vienna" UnlockId="S_BAD">
+			<Page MainHeading="LocID_DBASE_Section_Event_Vienna" SubHeading="LocID_DBASE_Page_Event_Vienna_Subhead" layout="3" body="LocID_DBASE_Page_Event_Vienna_Text" Image="SC6SMIManual_DBASE_Unknown" />
+		</Section>
+		<Section Id="EventLambert" Title="LocID_DBASE_Section_Event_Lambert" UnlockId="">
+			<Page MainHeading="LocID_DBASE_Section_Event_Lambert" SubHeading="LocID_DBASE_Page_Event_Lambert_Subhead" layout="3" body="LocID_DBASE_Page_Event_Lambert_Text" Image="SC6SMIManual_DBASE_Event_Lambert" />
+		</Section>
+	</Book>
+	
+	<Book Id="Concept_Art" Header="LocID_C_ART_Title" SubHeader="LocID_C_ART_Subtitle">
+		<Section Id="CArtAbout" Title="LocID_C_ART_Section_About" UnlockId="">
+			<Page MainHeading="LocID_C_ART_Section_About" SubHeading="LocID_C_ART_Page_About_Subhead" layout="2" body="LocID_C_ART_Page_About_Text" Image="" />
+		</Section>
+		<Section Id="CArtAFB" Title="LocID_C_ART_Section_AFB" UnlockId="USBKey_1">
+			<Page MainHeading="LocID_C_ART_Section_AFB" SubHeading="LocID_C_ART_Page_AFB_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_AFB_Helicopter" />
+			<Page MainHeading="LocID_C_ART_Section_AFB" SubHeading="LocID_C_ART_Page_AFB_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_PRO_helicrash" />
+			<Page MainHeading="LocID_C_ART_Section_AFB" SubHeading="LocID_C_ART_Page_AFB_Subhead_3" layout="1" body="" Image="SC6SMIManual_Concept_AFB_Presidential" />
+		</Section>
+		<Section Id="CArtKOB" Title="LocID_C_ART_Section_KOB" UnlockId="USBKey_2">
+			<Page MainHeading="LocID_C_ART_Section_KOB" SubHeading="LocID_C_ART_Page_KOB_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_KOBIN_Market" />
+			<Page MainHeading="LocID_C_ART_Section_KOB" SubHeading="LocID_C_ART_Page_KOB_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_KOBIN_Safehouse" />
+		</Section>
+		<Section Id="CArtSAD" Title="LocID_C_ART_Section_SAD" UnlockId="USBKey_3">
+			<Page MainHeading="LocID_C_ART_Section_SAD" SubHeading="LocID_C_ART_Page_SAD_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_SAD_midvillage" />
+			<Page MainHeading="LocID_C_ART_Section_SAD" SubHeading="LocID_C_ART_Page_SAD_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_SAD_DestructionRUN" />
+			<Page MainHeading="LocID_C_ART_Section_SAD" SubHeading="LocID_C_ART_Page_SAD_Subhead_3" layout="1" body="" Image="SC6SMIManual_Concept_Char_Sadiq" />
+		</Section>
+		<Section Id="CArtCON" Title="LocID_C_ART_Section_CON" UnlockId="USBKey_4">
+			<Page MainHeading="LocID_C_ART_Section_CON" SubHeading="LocID_C_ART_Page_CON_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_Cons_benchmark" />
+			<Page MainHeading="LocID_C_ART_Section_CON" SubHeading="LocID_C_ART_Page_CON_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_Cons_waterfront" />
+		</Section>
+		<Section Id="CArtNOU" Title="LocID_C_ART_Section_NOU" UnlockId="USBKey_5">
+			<Page MainHeading="LocID_C_ART_Section_NOU" SubHeading="LocID_C_ART_Page_NOU_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_NOU_Escape" />
+			<Page MainHeading="LocID_C_ART_Section_NOU" SubHeading="LocID_C_ART_Page_NOU_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_NOU_Dock" />
+		</Section>
+		<Section Id="CArtCHE" Title="LocID_C_ART_Section_CHE" UnlockId="USBKey_6">
+			<Page MainHeading="LocID_C_ART_Section_CHE" SubHeading="LocID_C_ART_Page_CHE_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_CHEM_Light" />
+			<Page MainHeading="LocID_C_ART_Section_CHE" SubHeading="LocID_C_ART_Page_CHE_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_CHEM_ChemLab" />
+		</Section>
+		<Section Id="CArtQOD" Title="LocID_C_ART_Section_QOD" UnlockId="USBKey_7">
+			<Page MainHeading="LocID_C_ART_Section_QOD" SubHeading="LocID_C_ART_Page_QOD_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_QOD_facade" />
+			<Page MainHeading="LocID_C_ART_Section_QOD" SubHeading="LocID_C_ART_Page_QOD_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_QOD_garden" />
+		</Section>
+		<Section Id="CArtFRE" Title="LocID_C_ART_Section_FRE" UnlockId="USBKey_8">
+			<Page MainHeading="LocID_C_ART_Section_FRE" SubHeading="LocID_C_ART_Page_FRE_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_Fre_homeless_tunnel" />
+			<Page MainHeading="LocID_C_ART_Section_FRE" SubHeading="LocID_C_ART_Page_FRE_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_Fre_roundhouse" />
+		</Section>
+		<Section Id="CArtDET" Title="LocID_C_ART_Section_AIR" UnlockId="USBKey_9">
+			<Page MainHeading="LocID_C_ART_Section_AIR" SubHeading="LocID_C_ART_Page_DET_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_Det_rec_area" />
+			<Page MainHeading="LocID_C_ART_Section_AIR" SubHeading="LocID_C_ART_Page_DET_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_Det_coast_exit" />
+			<Page MainHeading="LocID_C_ART_Section_AIR" SubHeading="LocID_C_ART_Page_AIR_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_AIR_Night" />
+			<Page MainHeading="LocID_C_ART_Section_AIR" SubHeading="LocID_C_ART_Page_AIR_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_AIR_FireFightChase" />
+		</Section>
+		<Section Id="CArtPAL" Title="LocID_C_ART_Section_PAL" UnlockId="USBKey_10">
+			<Page MainHeading="LocID_C_ART_Section_PAL" SubHeading="LocID_C_ART_Page_PAL_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_HUB_CenterLv2" />
+			<Page MainHeading="LocID_C_ART_Section_PAL" SubHeading="LocID_C_ART_Page_PAL_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_HUB_holdingcell" />
+		</Section>
+		<Section Id="CArtFUE" Title="LocID_C_ART_Section_FUE" UnlockId="USBKey_11">
+			<Page MainHeading="LocID_C_ART_Section_FUE" SubHeading="LocID_C_ART_Page_FUE_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_Fue_zipline" />
+			<Page MainHeading="LocID_C_ART_Section_FUE" SubHeading="LocID_C_ART_Page_FUE_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_Fue_fire_path" />
+		</Section>
+		<Section Id="CArtBLO" Title="LocID_C_ART_Section_BLO" UnlockId="USBKey_12">
+			<Page MainHeading="LocID_C_ART_Section_BLO" SubHeading="LocID_C_ART_Page_BLO_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_BLO_WeatherStation" />
+			<Page MainHeading="LocID_C_ART_Section_BLO" SubHeading="LocID_C_ART_Page_BLO_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_BLO_bunker_entrance" />
+		</Section>
+		<Section Id="CArtCOOP" Title="LocID_C_ART_Section_COOP" UnlockId="C04">
+			<Page MainHeading="LocID_C_ART_Section_COOP" SubHeading="LocID_C_ART_Section_C01" layout="1" body="" Image="SC6SMIManual_Concept_COOP_SmugglersDen" />
+			<Page MainHeading="LocID_C_ART_Section_COOP" SubHeading="LocID_C_ART_Section_G01" layout="1" body="" Image="SC6SMIManual_Concept_COOP_SeaFort" />
+			<Page MainHeading="LocID_C_ART_Section_COOP" SubHeading="LocID_C_ART_Section_E03" layout="1" body="" Image="SC6SMIManual_Concept_COOP_EgyptianEmbassy" />
+			<Page MainHeading="LocID_C_ART_Section_COOP" SubHeading="LocID_C_ART_Section_H04" layout="1" body="" Image="SC6SMIManual_Concept_COOP_DeadCoast" />
+			<Page MainHeading="LocID_C_ART_Section_COOP" SubHeading="LocID_C_ART_Page_Kestrel_Subhead" layout="1" body="" Image="SC6SMIManual_Concept_Char_Opsuit_Kestrel" />
+		</Section>
+		<Section Id="CArtMulti" Title="LocID_C_ART_Section_Multi" UnlockId="">
+			<Page MainHeading="LocID_C_ART_Section_Multi" SubHeading="LocID_C_ART_Page_Multi_Subhead_Cartel" layout="1" body="" Image="SC6SMIManual_Concept_ADV_Drug_Cartel" />
+			<Page MainHeading="LocID_C_ART_Section_Multi" SubHeading="LocID_C_ART_Page_Multi_Subhead_Hadron" layout="1" body="" Image="SC6SMIManual_Concept_ADV_Hadron_Collider" />
+			<Page MainHeading="LocID_C_ART_Section_Multi" SubHeading="LocID_C_ART_Page_Multi_Subhead_Hospital" layout="1" body="" Image="SC6SMIManual_Concept_ADV_Lebanese_Hospital" />
+			<Page MainHeading="LocID_C_ART_Section_Multi" SubHeading="LocID_C_ART_Page_Multi_Subhead_Silo" layout="1" body="" Image="SC6SMIManual_Concept_ADV_Silo" />
+			<Page MainHeading="LocID_C_ART_Section_Multi" SubHeading="LocID_C_ART_Page_Multi_Subhead_Mine" layout="1" body="" Image="SC6SMIManual_Concept_ADV_Uranium_Mine" />
+			<Page MainHeading="LocID_C_ART_Section_Multi" SubHeading="LocID_C_ART_Page_Multi_Subhead_Vault" layout="1" body="" Image="SC6SMIManual_Concept_ADV_Virus_Vault" />
+		</Section>		
+		<Section Id="CArtSuits" Title="LocID_C_ART_Section_Suits" UnlockId="">
+			<Page MainHeading="LocID_C_ART_Section_Suits" SubHeading="LocID_C_ART_Page_Suits_Subhead_Wetsuit" layout="1" body="" Image="SC6SMIManual_Concept_Char_Opsuit_Sam" />
+			<Page MainHeading="LocID_C_ART_Section_Suits" SubHeading="LocID_C_ART_Page_Suits_Subhead_HUB" layout="1" body="" Image="SC6SMIManual_Concept_Char_Opsuit_HubSam" />
+		</Section>		
+		<Section Id="CArtGadgets" Title="LocID_C_ART_Section_Gadgets" UnlockId="">
+			<Page MainHeading="LocID_C_ART_Section_Gadgets" SubHeading="LocID_C_ART_Page_Gadgets_Subhead_Goggles1" layout="1" body="" Image="SC6SMIManual_Concept_Gad_Goggles1" />
+			<Page MainHeading="LocID_C_ART_Section_Gadgets" SubHeading="LocID_C_ART_Page_Gadgets_Subhead_Goggles2" layout="1" body="" Image="SC6SMIManual_Concept_Gad_Goggles2" />
+			<Page MainHeading="LocID_C_ART_Section_Gadgets" SubHeading="LocID_C_ART_Page_Gadgets_Subhead_Goggles3" layout="1" body="" Image="SC6SMIManual_Concept_Gad_Goggles3" />
+			<Page MainHeading="LocID_C_ART_Section_Gadgets" SubHeading="LocID_C_ART_Page_Gadgets_Subhead_Trirotor" layout="1" body="" Image="SC6SMIManual_Concept_Gad_Trirotor" />
+		</Section>
+		<Section Id="CArtWeapons" Title="LocID_C_ART_Section_Weapons" UnlockId="">
+			<Page MainHeading="LocID_C_ART_Section_Weapons" SubHeading="LocID_C_ART_Page_Weapons_Subhead_Pistol" layout="1" body="" Image="SC6SMIManual_Concept_Gad_4Epistol" />
+			<Page MainHeading="LocID_C_ART_Section_Weapons" SubHeading="LocID_C_ART_Page_Weapons_Subhead_SMG" layout="1" body="" Image="SC6SMIManual_Concept_Gad_4Esmg" />
+			<Page MainHeading="LocID_C_ART_Section_Weapons" SubHeading="LocID_C_ART_Page_Weapons_Subhead_Rifle" layout="1" body="" Image="SC6SMIManual_Concept_Gad_4Erifle" />
+			<Page MainHeading="LocID_C_ART_Section_Weapons" SubHeading="LocID_C_ART_Page_Weapons_Subhead_Shotgun" layout="1" body="" Image="SC6SMIManual_Concept_Gad_4Eshotgun" />
+			<Page MainHeading="LocID_C_ART_Section_Weapons" SubHeading="LocID_C_ART_Page_Weapons_Subhead_Sniper" layout="1" body="" Image="SC6SMIManual_Concept_Gad_4Esniper" />
+		</Section>
+		<Section Id="CArtPRO" Title="LocID_C_ART_Section_PRO" UnlockId="S_BLO">
+			<Page MainHeading="LocID_C_ART_Section_PRO" SubHeading="LocID_C_ART_Page_PRO_Subhead_1" layout="1" body="" Image="SC6SMIManual_Concept_PRO_start" />
+			<Page MainHeading="LocID_C_ART_Section_PRO" SubHeading="LocID_C_ART_Page_PRO_Subhead_2" layout="1" body="" Image="SC6SMIManual_Concept_PRO_underbridge" />
+			<Page MainHeading="LocID_C_ART_Section_PRO" SubHeading="LocID_C_ART_Page_PRO_Subhead_3" layout="1" body="" Image="SC6SMIManual_Concept_PRO_village" />
+			<Page MainHeading="LocID_C_ART_Section_PRO" SubHeading="LocID_C_ART_Page_PRO_Subhead_4" layout="1" body="" Image="SC6SMIManual_Concept_PRO_medicalhut" />
+		</Section>		
+	</Book>
+</Books>

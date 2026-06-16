@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+    
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+  
+
+  <!-- Security Systems : Temporarily disable [n] security systems with EMP gadgets while remaining undetected for [x] seconds after each -->
+  <Challenge Name="LocId_SNN_OD_EMPSecuritySystems" Desc="LocId_SNDES_OD_EMPSecuritySystemsDesc" Reset="Never" Guid="123" ShortDesc="LocId_SNSD_OD_EMPSecuritySystems" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <GameItemHitByEMP>
+            <GameItem Op="Equal">
+              <Value>Laser</Value>
+              <Value>Camera</Value>
+              <Value>PowerBox</Value>
+              <Value>MotionDetector</Value>
+            </GameItem>
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsAdversarial Op="Equal" Value="false" />
+          </GameItemHitByEMP>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>  
+  <!-- Stealth Nav Combat : Takedown [n] enemies using Non Lethal H2H without being detected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_H2HNonLethalKillsUndetected" Desc="LocId_SNDES_OD_H2HNonLethalKillsUndetectedDesc" Reset="Never" Guid="125" ShortDesc="LocId_SNSD_OD_H2HNonLethalKillsUndetected" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="true" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="40">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Stealth Nav Combat : Takedown [n] enemies in a row using Non Lethal H2H without being detected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_H2HNonLethalKillsUndetectedInRow" Desc="LocId_SNDES_OD_H2HNonLethalKillsUndetectedInRowDesc" Reset="Never" Guid="126" ShortDesc="LocId_SNSD_OD_H2HNonLethalKillsUndetectedInRow" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="true" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <IsNonLethal Op="Equal" Value="false" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <AwarenessLevel Op="Equal" ValueGroup="AIState_Combat" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsPawnLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilledType>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <FromH2H Op="Equal" Value="false" />
+            </PawnKilledType>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionRestarted />
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionStarted />
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>  
+  <Challenge Name="LocId_SNN_OD_SleepingGasKillsUndetected_SingleB" Desc="LocId_SNDES_OD_SleepingGasKillsUndetected_SingleADesc" Reset="Never" Guid="129" ShortDesc="LocId_SNSD_OD_SleepingGasKillsUndetected_SingleA" Category="ChallengeGhost" SimultaneousRequirement="3" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <All>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <All>
+          <TimeComponent Max="3.0" />
+          <GameEvent>
+            <RepeatComponent Count="3" />
+            <Event>
+              <PawnOtherDamage>
+                <IsPawnAnyNPC Op="Equal" Value="true" />
+                <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+                <IsSleepingGas Op="Equal" Value="true" />
+                <IsDead Op="Equal" Value="true" />
+              </PawnOtherDamage>
+            </Event>
+          </GameEvent>
+        </All>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>  
+  <!-- Sticky Shock : Sticky Shock [n] enemies without being detected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_StickyShockUndetected" Desc="LocId_SNDES_OD_StickyShockUndetectedDesc" Reset="Never" Guid="131" ShortDesc="LocId_SNSD_OD_StickyShockUndetected" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnElectricDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+          </PawnElectricDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="150">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>  
+  <Challenge Name="LocId_SNN_OD_StickyShockUndetected_SingleB" Desc="LocId_SNDES_OD_StickyShockUndetected_SingleBDesc" Reset="Never" Guid="133" ShortDesc="LocId_SNSD_OD_StickyShockUndetected_Single" Category="ChallengeGhost" SimultaneousRequirement="3" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <All>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <All>
+          <FrameComponent Max="1" />
+          <GameEvent>
+            <RepeatComponent Count="3" />
+            <Event>
+              <PawnElectricDamage>
+                <IsPawnAnyNPC Op="Equal" Value="true" />
+                <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+                <IsDead Op="Equal" Value="true" />
+              </PawnElectricDamage>
+            </Event>
+          </GameEvent>
+        </All>
+      </All>
+    </Definition>
+    <StepReward Count="1">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!--
+  <Challenge Name="LocId_SNN_OD_StickyShockUndetected_SingleC" Desc="LocId_SNDES_OD_StickyShockUndetected_SingleCDesc" Reset="Never" Guid="134" ShortDesc="LocId_SNSD_OD_StickyShockUndetected_Single" Category="ChallengeGhost" SimultaneousRequirement="5" Map="G_RAND">
+    <Definition>
+      <All>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <All>
+          <FrameComponent Max="1" />
+          <GameEvent>
+            <RepeatComponent Count="5" />
+            <Event>
+              <PawnElectricDamage>
+                <IsPawnAnyNPC Op="Equal" Value="true" />
+                <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+                <IsDead Op="Equal" Value="true" />
+              </PawnElectricDamage>
+            </Event>
+          </GameEvent>
+        </All>
+      </All>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  -->
+  <!-- Abductions : Abduct and non lethally takedown [n] enemies from cover without being detected within [x] seconds after -->
+  <Challenge Name="LocId_SNN_OD_AbductKillsUndetected" Desc="LocId_SNDES_OD_AbductKillsUndetectedDesc" Reset="Never" Guid="135" ShortDesc="LocId_SNSD_OD_AbductKillsUndetected" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="true" />
+            <IsFromCover Op="Equal" Value="true" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Abductions : Abduct and non lethally takedown [n] enemies in a row from cover without being detected within [x] seconds after each abduction -->
+  <Challenge Name="LocId_SNN_OD_AbductKillsUndetectedInRow" Desc="LocId_SNDES_OD_AbductKillsUndetectedInRowDesc" Reset="Never" Guid="136" ShortDesc="LocId_SNSD_OD_AbductKillsUndetectedInRow" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <PawnH2HDamage>
+            <IsPawnAnyNPC Op="Equal" Value="true" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+            <IsNonLethal Op="Equal" Value="true" />
+            <IsFromCover Op="Equal" Value="true" />
+          </PawnH2HDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <RestartDefinition>
+      <Any>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <IsNonLethal Op="Equal" Value="false" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <IsFromCover Op="Equal" Value="false" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnH2HDamage>
+              <AwarenessLevel Op="Equal" ValueGroup="AIState_Combat" />
+            </PawnH2HDamage>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilled>
+              <IsPawnLocalPlayer Op="Equal" Value="true" />
+            </PawnKilled>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <PawnKilledType>
+              <IsPawnAnyNPC Op="Equal" Value="true" />
+              <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+              <FromH2H Op="Equal" Value="false" />
+            </PawnKilledType>
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionRestarted />
+          </Event>
+        </GameEvent>
+        <GameEvent>
+          <Event>
+            <MissionStarted />
+          </Event>
+        </GameEvent>
+      </Any>
+    </RestartDefinition>
+    <StepReward Count="3">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+  </Challenge>
+  <!-- Distractions : Takedown [n] enemies that are investiaging a disturbance undetected within [x] seconds -->
+  <Challenge Name="LocId_SNN_OD_TakedownInvestigatingNPCUndetected" Desc="LocId_SNDES_OD_TakedownInvestigatingNPCUndetectedDesc" Reset="Never" Guid="137" ShortDesc="LocId_SNSD_OD_TakedownInvestigatingNPCUndetected" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <All>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Any>
+          <GameEvent>
+            <Event>
+              <PawnH2HDamage>
+                <IsPawnAnyNPC Op="Equal" Value="true" />
+                <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+                <IsDead Op="Equal" Value="true" />
+                <IsNonLethal Op="Equal" Value="true" />
+                <AwarenessLevel Op="Equal" Value="AL_INVESTIGATE" />
+              </PawnH2HDamage>
+            </Event>
+          </GameEvent>
+          <GameEvent>
+            <Event>
+              <PawnGeoAttackDamage>
+                <IsPawnAnyNPC Op="Equal" Value="true" />
+                <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+                <IsDead Op="Equal" Value="true" />
+                <IsNonLethal Op="Equal" Value="true" />
+                <AwarenessLevel Op="Equal" Value="AL_INVESTIGATE" />
+              </PawnGeoAttackDamage>
+            </Event>
+          </GameEvent>
+        </Any>
+      </All>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="25">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Distractions : Shoot out [n] lights with a silenced weapon undetected within [x] seconds -->
+  <Challenge Name="LocId_SNN_OD_ShootLightsUndetected" Desc="LocId_SNDES_OD_ShootLightsUndetectedDesc" Reset="Never" Guid="138" ShortDesc="LocId_SNSD_OD_ShootLightsUndetected" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <GameItemDestroyed>
+            <GameItem Op="Equal" Value="Light" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsWeaponSilenced Op="Equal" Value="true" />
+            <IsAdversarial Op="Equal" Value="false" />
+          </GameItemDestroyed>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="10">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="30">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="100">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Distractions : Shoot out [n] Cameras with a silenced weapon undetected within [x] seconds -->
+  <Challenge Name="LocId_SNN_OD_ShootCamerasUndetected" Desc="LocId_SNDES_OD_ShootCamerasUndetectedDesc" Reset="Never" Guid="139" ShortDesc="LocId_SNSD_OD_ShootCamerasUndetected" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <ClassComponent Name="Echelon.ECustomChallenge_Detection" Op="Not" Gate="true" />
+        <DelayComponent Duration="3.0" />
+        <Event>
+          <GameItemDestroyed>
+            <GameItem Op="Equal" Value="Camera" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsWeaponSilenced Op="Equal" Value="true" />
+            <IsAdversarial Op="Equal" Value="false" />
+          </GameItemDestroyed>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="15">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="40">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+  <!-- Dog : DSPCA: Put [n] dogs to sleep -->
+  <Challenge Name="LocId_SNN_OD_DSPCA" Desc="LocId_SNDES_OD_DSPCADesc" Reset="Never" Guid="140" ShortDesc="LocId_SNSD_OD_DSPCA" Category="ChallengeGhost" Icon="ghost" Map="G_RAND">
+    <Definition>
+      <GameEvent>
+        <ClassComponent Name="Echelon.ECustomChallenge_MapScoringEnabled" Op="Equal" Gate="true" />
+        <Event>
+          <PawnOtherDamage>
+            <Pawn Op="Equal" Value="Dog" />
+            <IsInstigatorLocalPlayer Op="Equal" Value="true" />
+            <IsSleepingGas Op="Equal" Value="true" />
+            <IsDead Op="Equal" Value="true" />
+          </PawnOtherDamage>
+        </Event>
+      </GameEvent>
+    </Definition>
+    <StepReward Count="5">
+      <Economy ValueTag="StandardTier1" />
+    </StepReward>
+    <StepReward Count="20">
+      <Economy ValueTag="StandardTier2" />
+    </StepReward>
+    <StepReward Count="50">
+      <Economy ValueTag="StandardTier3" />
+    </StepReward>
+  </Challenge>
+</Challenges>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_LaserControl" leveluid="1" streamedRandomID="447719282">
+  <Task name="Laser_Kickoff_1" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Turn_Off_Lasers_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_Lasergroup_B2F2" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000f0c" InUnrealActors="1" TypeDeleted="EEnvironmentCamera">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableCamTurret" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000cab" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisablePowerBox" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Laser_Kickoff_3" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Turn_Off_Lasers_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_Lasergroup_B3F2" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000cac" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisablePowerBox" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_1" start="Laser_Kickoff_3" true="Turn_Off_Lasers_3" data="UID:000006e2" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <Task name="Turn_On_Lasers_1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_Lasergroup_B2F2" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000f0c" InUnrealActors="1" TypeDeleted="EEnvironmentCamera">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableCamTurret" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000cab" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisablePowerBox" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Laser_Kickoff_1" true="Turn_Off_Lasers_1" data="UID:000006e1" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_4" start="Turn_Off_Lasers_1" true="Turn_On_Lasers_1" data="UID:000006e1" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete" start="Turn_On_Lasers_1" true="Laser_Kickoff_1" sequence="LD_LaserControl"/>
+  <Task name="Turn_On_Lasers_3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_Lasergroup_B3F2" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000cac" InUnrealActors="1" TypeDeleted="GameItem">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisablePowerBox" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent_5" start="Turn_Off_Lasers_3" true="Turn_On_Lasers_3" data="UID:000006e2" InUnrealActors="1" TypeDeleted="GameItem">
+    <ExternalEventInstance name="OBJECT_INTERACTION_COMPLETE" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Character" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_0" info="Object" data=""/>
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance_1" info="Success" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyComplete name="NewDependencyComplete_0" start="Turn_On_Lasers_3" true="Laser_Kickoff_3" sequence="LD_LaserControl"/>
+  <Task name="DeactivateLasersB3F1" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::List_LaserSetB3F1" TypeDeleted="List">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="EnableLaser" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_HideTransitionMeshCheck" leveluid="4" streamedRandomID="571275100">
+  <Task name="Checking Volume" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Count Plus">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::PlayerNumberInBB2Gate" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AddAssign" entityStripped="1">
+            <ParameterInstance name="Right">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Check Volume" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Count Minus">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::PlayerNumberInBB2Gate" TypeDeleted="number">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="AddAssign" entityStripped="1">
+            <ParameterInstance name="Right">
+              <number name="Newnumber" mutable="1" scoped="1" auto="1" value="-1.000000"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Initial Check" first="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Is Single Player">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Is Coop Player">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="Wait 0.5s">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_3" TypeDeleted="Character">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Wait 0.5s_2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_Sam_Character_3" TypeDeleted="Character">
+        <Event name="NewEvent" end="0.500000" condition="1">
+          <CommandInstance name="Wait" duration="0.500000" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyEvent name="NewDependencyEvent" start="Checking Volume" true="Count Plus" data="UID:00002198" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_ENTERED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyEvent name="NewDependencyEvent_0" start="Check Volume" true="Count Minus" data="UID:00002198" InUnrealActors="1" TypeDeleted="TriggerVolume">
+    <ExternalEventInstance name="VOLUME_EXITED" data="">
+      <ExternalEventInfoInstance name="NewExternalEventInfoInstance" info="Instigator" data=""/>
+    </ExternalEventInstance>
+  </DependencyEvent>
+  <DependencyCommand name="NewDependencyCommand" start="Initial Check" true="Is Single Player" false="Is Coop Player">
+    <CommandInstance name="IsSinglePlayer"/>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_0" start="Is Single Player" true="Hide Transition Mesh" false="Wait 0.5s">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::PlayerNumberInBB2Gate" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_1" start="Is Coop Player" true="Hide Transition Mesh" false="Wait 0.5s_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::PlayerNumberInBB2Gate" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="Count Plus" true="Checking Volume" sequence="LD_HideTransitionMeshCheck"/>
+  <DependencyComplete name="NewDependencyComplete_0" start="Count Minus" true="Check Volume" sequence="LD_HideTransitionMeshCheck"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="Wait 0.5s" true="Initial Check" sequence="LD_HideTransitionMeshCheck"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Wait 0.5s_2" true="Initial Check" sequence="LD_HideTransitionMeshCheck"/>
+  <Task name="Hide Transition Mesh">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::Sequences::LD_HideTransitionMesh" TypeDeleted="Sequence">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="StartSequence" entityStripped="1">
+            <ParameterInstance name="AlsoUpdate">
+              <Boolean name="NewBoolean" mutable="1" scoped="1" auto="1" value="1"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+</Sequence>

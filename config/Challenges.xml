@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Challenges>
+
+  <Include Path="../../Data/Config/Challenges/Challenges_Killer.xml" />
+  <Include Path="../../Data/Config/Challenges/Challenges_Panther.xml" />
+  <Include Path="../../Data/Config/Challenges/Challenges_Ghost.xml" />
+  <Include Path="../../Data/Config/Challenges/Challenges_Weapons.xml" />
+  <Include Path="../../Data/Config/Challenges/Challenges_Upgrades.xml" />
+  <Include Path="../../Data/Config/Challenges/Challenges_Coop.xml" />
+  <Include Path="../../Data/Config/Challenges/Challenges_Objectives.xml" />
+  <Include Path="../../Data/Config/Challenges/Challenges_ADV.xml" />
+
+</Challenges>

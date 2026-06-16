@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sequence name="LD_Patrol_Randomizer_BB1" leveluid="2" streamedRandomID="571275100">
+  <Task name="Initial" first="1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d68" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000d4b" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Debug - Dice Result = A">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObjectiveManager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Debug - Patrol Set Dice Result = A"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Debug - Dice Result = B">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObjectiveManager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Debug - Patrol Set Dice Result = B"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Debug - Dice Result = C">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="Repository::O_CoopObjectiveManager" TypeDeleted="CoopObjectiveManager">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DebugNetScreenLog" entityStripped="1" dp_i="67108866">
+            <ParameterInstance name="Text">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="Debug - Patrol Set Dice Result = C"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [A] - Enemy 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000b0a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d57" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:00000b0a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_1_[A]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [A] - Enemy 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000848" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d56" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:00000848" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_2_[A start]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [A] - Enemy 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:0000084a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d55" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:0000084a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_3_[A start]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_0" start="Debug - Dice Result = A" true="Patrol [A] - Enemy 1" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_1" start="Debug - Dice Result = A" true="Patrol [A] - Enemy 2" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_2" start="Debug - Dice Result = A" true="Patrol [A] - Enemy 3" sequence="LD_Patrol_Randomizer_BB1"/>
+  <Task name="Patrol [A] - Enemy 4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000b0b" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d54" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack" entity="UID:00000b0b" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_4_[A]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_3" start="Debug - Dice Result = A" true="Patrol [A] - Enemy 4" sequence="LD_Patrol_Randomizer_BB1"/>
+  <Task name="Patrol [B] - Enemy 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000b0a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d4f" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000b0a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_1_[B start]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [B] - Enemy 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000848" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d4e" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000848" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_2_[B start]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [B] - Enemy 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000084a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d4d" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:0000084a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_3_[B start]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [B] - Enemy 4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000b0b" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d4c" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000b0b" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_4_[B]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [C] - Enemy 1">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000b0a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d53" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000b0a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_1_[C start]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [C] - Enemy 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000848" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d52" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000848" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_2_[C start]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [C] - Enemy 3">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:0000084a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d51" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:0000084a" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_3_[C start]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <Task name="Patrol [C] - Enemy 4">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000b0b" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="TeleportOnActor" entityStripped="1">
+            <ParameterInstance name="destinationActor" data="UID:00000d50" InUnrealActors="1" TypeDeleted="Target"/>
+          </CommandInstance>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000b0b" InUnrealActors="1" TypeDeleted="AI">
+        <Event name="NewEvent" start="0.100000" end="-1.000000">
+          <CommandInstance name="NpcAssignSet" entityStripped="1">
+            <ParameterInstance name="Set">
+              <Text name="NewText" mutable="1" scoped="1" auto="1" value="P_Beat_1_Patrol_4_[C]"/>
+            </ParameterInstance>
+          </CommandInstance>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_4" start="Debug - Dice Result = B" true="Patrol [B] - Enemy 1" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_5" start="Debug - Dice Result = B" true="Patrol [B] - Enemy 2" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_6" start="Debug - Dice Result = B" true="Patrol [B] - Enemy 3" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_7" start="Debug - Dice Result = B" true="Patrol [B] - Enemy 4" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_8" start="Debug - Dice Result = C" true="Patrol [C] - Enemy 1" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_9" start="Debug - Dice Result = C" true="Patrol [C] - Enemy 2" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_10" start="Debug - Dice Result = C" true="Patrol [C] - Enemy 3" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_11" start="Debug - Dice Result = C" true="Patrol [C] - Enemy 4" sequence="LD_Patrol_Randomizer_BB1"/>
+  <Task name="Enable_VolumeTrigger [B]">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack_0" entity="UID:00000d68" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_12" start="Debug - Dice Result = B" true="Enable_VolumeTrigger [B]" sequence="LD_Patrol_Randomizer_BB1"/>
+  <Task name="Enable_VolumeTrigger [C]">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d4b" InUnrealActors="1" TypeDeleted="TriggerVolume">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_13" start="Debug - Dice Result = C" true="Enable_VolumeTrigger [C]" sequence="LD_Patrol_Randomizer_BB1"/>
+  <Task name="Set_CarHood &gt; Open 2">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d6e" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000d6e" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="CarHood_SetState" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_14" start="Debug - Dice Result = B" true="Set_CarHood &gt; Open 2" sequence="LD_Patrol_Randomizer_BB1"/>
+  <Task name="Set_CarHood &gt; Closed">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d6e" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000d6e" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="CarHood_SetState" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="ReenableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_15" start="Debug - Dice Result = C" true="Set_CarHood &gt; Closed" sequence="LD_Patrol_Randomizer_BB1"/>
+  <Task name="Set_CarHood &gt; Open">
+    <Timeline name="NewTimeline">
+      <Track name="NewTrack" entity="UID:00000d6e" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" dp_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_0" entity="UID:00000d6e" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" bv_a="0:1" bv_i="134217734"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_1" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="SetHide" entityStripped="1" bv_a="1" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_2" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="CarHood_SetState" end="-1.000000">
+          <CommandInstance name="SetCollision" entityStripped="1" dp_i="67108868" bv_a="0" bv_i="67108866"/>
+        </Event>
+      </Track>
+      <Track name="NewTrack_3" entity="UID:00000dc6" InUnrealActors="1" TypeDeleted="Actor">
+        <Event name="NewEvent" end="-1.000000">
+          <CommandInstance name="DisableActorGEOs" entityStripped="1"/>
+        </Event>
+      </Track>
+    </Timeline>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_16" start="Debug - Dice Result = A" true="Set_CarHood &gt; Open" sequence="LD_Patrol_Randomizer_BB1"/>
+  <Task name="NewTask_0" logicor="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyComplete name="NewDependencyComplete_17" start="NewTask_0" true="Debug - Dice Result = A" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyCommand name="NewDependencyCommand_2" start="Initial" true="NewTask_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="1.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_3" start="Initial" true="NewTask_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="2.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_4" start="Initial" true="NewTask_0">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="3.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <Task name="NewTask_1" logicor="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <Task name="NewTask_2" logicor="1">
+    <Timeline name="NewTimeline"/>
+  </Task>
+  <DependencyCommand name="NewDependencyCommand_5" start="Initial" true="NewTask_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="4.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_6" start="Initial" true="NewTask_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="5.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_7" start="Initial" true="NewTask_1">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="6.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand" start="Initial" true="NewTask_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="7.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_8" start="Initial" true="NewTask_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="8.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyCommand name="NewDependencyCommand_9" start="Initial" true="NewTask_2">
+    <CommandInstance name="EqualNumber">
+      <ParameterInstance name="Left" data="Repository::O_Dice" TypeDeleted="number"/>
+      <ParameterInstance name="Right">
+        <number name="Newnumber" mutable="1" scoped="1" auto="1" value="9.000000"/>
+      </ParameterInstance>
+    </CommandInstance>
+  </DependencyCommand>
+  <DependencyComplete name="NewDependencyComplete" start="NewTask_1" true="Debug - Dice Result = B" sequence="LD_Patrol_Randomizer_BB1"/>
+  <DependencyComplete name="NewDependencyComplete_18" start="NewTask_2" true="Debug - Dice Result = C" sequence="LD_Patrol_Randomizer_BB1"/>
+</Sequence>
